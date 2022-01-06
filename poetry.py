@@ -1,16 +1,15 @@
-from email.message import EmailMessage
-import smtplib
-import random
 import regex as re
-import glob, os
+import glob
 import json
 import time
-import calendar
-from datetime import datetime
+import smtplib
 import numpy as np
 import pandas as pd
-import smtplib
+
+from datetime import datetime
 from dateutil.easter import *
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 
 class Poetizer:
@@ -299,10 +298,6 @@ class Poetizer:
         """     
         
     def send_poem(self, recipient, tag=''):
-        
-        import smtplib
-        from email.mime.multipart import MIMEMultipart
-        from email.mime.text import MIMEText
 
         message = MIMEMultipart('alternative')
         message.attach(MIMEText(self.poem_html, 'html'))

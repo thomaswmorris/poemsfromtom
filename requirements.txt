@@ -1,11 +1,8 @@
-email
 smtplib
-random
 regex
 glob
 json
 time
-calendar
 datetime
 numpy
 pandas
