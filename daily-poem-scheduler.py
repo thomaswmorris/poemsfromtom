@@ -6,7 +6,8 @@ from poetry import Poetizer
 poetizer = Poetizer()
 schedule = BlockingScheduler()
 
-@schedule.scheduled_job('cron', day_of_week='mon-sun', hour=7)
+#@schedule.scheduled_job('cron', day_of_week='mon-sun', hour=7)
+@schedule.scheduled_job('interval', minutes=1)
 def send_daily_poem():
     print('This job is run every day at 7 AM.')
 
@@ -38,7 +39,8 @@ def send_daily_poem():
             except:
                 time.sleep(60)
                 fails += 1
-sched.start()
+                
+schedule.start()
 
     
 
