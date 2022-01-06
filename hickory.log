@@ -1,0 +1,992 @@
+1       Poems from Tom |         poemsfromtom @ gmail.com           
+2        Thomas Morris |        tomwillmorris @ gmail.com           
+3        Thomas Morris |         thomasmorris @ princeton.edu       
+4    Christian Schmidt |  Schmidt.e.christian @ gmail.com           
+5         Zach Bampton |      zachary.bampton @ gmail.com           
+Namespace(address='poemsfromtom@gmail.com', poet='random', title='random', tag='Poem of the Day | ')
+
+rilke, THE ANGELS
+--------------------------------
+sending to poemsfromtom@gmail.com
+
+
+Namespace(address='listserv.txt', poet='random', title='random', tag='Poem of the Day | ')
+
+moore, TO A CHAMELEON
+--------------------------------
+sending to listserv.txt
+
+Poems from Tom     |         poemsfromtom @ gmail.com           
+Thomas Morris      |        tomwillmorris @ gmail.com           
+Christian Schmidt  |  Schmidt.e.christian @ gmail.com           
+Zach Bampton       |      zachary.bampton @ gmail.com           
+Violeta Rosenthal  |    violeta.rosenthal @ gmail.com           
+Stephen Morris     |             semorris @ mit.edu             
+Dee-Dee Huang      |        deedeehuang98 @ gmail.com           
+Bilal Mubarack     |           bamubarack @ gmail.com           
+Marah Sakkal       |            Marah1998 @ gmail.com           
+Marah Sakkal       |               mxs701 @ students.jefferson.edu
+
+Namespace(address='listserv.txt', poet='random', title='random', tag='Poem of the Day | ', n=1)
+
+lowell, HOMECOMING
+--------------------------------
+sending to listserv.txt
+
+Poems from Tom     |         poemsfromtom @ gmail.com           
+Thomas Morris      |        tomwillmorris @ gmail.com           
+Christian Schmidt  |  Schmidt.e.christian @ gmail.com           
+Zach Bampton       |      zachary.bampton @ gmail.com           
+Violeta Rosenthal  |    violeta.rosenthal @ gmail.com           
+Stephen Morris     |             semorris @ mit.edu             
+Dee-Dee Huang      |        deedeehuang98 @ gmail.com           
+Bilal Mubarack     |           bamubarack @ gmail.com           
+Marah Sakkal       |            Marah1998 @ gmail.com           
+Marah Sakkal       |               mxs701 @ students.jefferson.edu
+Rui Diaz-Pacheco   |               ruidpr @ gmail.com           
+Traceback (most recent call last):
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 398, in getreply
+    line = self.file.readline(_MAXLINE + 1)
+  File "/Users/thomas/mambaforge/lib/python3.9/socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "/Users/thomas/mambaforge/lib/python3.9/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/Users/thomas/mambaforge/lib/python3.9/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/distribute.py", line 112, in <module>
+    send_poem.send(to, poet, title, tag)
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/send_poem.py", line 101, in send
+    send_email(address, subject=subject, message=msg)
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/send_poem.py", line 30, in send_email
+    server.login(GMAIL_USER, GMAIL_PASSWORD)
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 714, in login
+    self.ehlo_or_helo_if_needed()
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 611, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 452, in ehlo
+    (code, msg) = self.getreply()
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 401, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed: "
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed: [Errno 54] Connection reset by peer
+
+scheduled for 11/25 : updike,    RELATIVES
+
+updike,    RELATIVES
+--------------------------------
+sending to listserv.txt
+
+Traceback (most recent call last):
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/distribute.py", line 138, in <module>
+    send_poem.send(email, poet, title, tag)
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/send_poem.py", line 65, in send
+    poem = poet_dict[title]
+KeyError: '   RELATIVES'
+
+eliot, RHAPSODY ON A WINDY NIGHT
+--------------------------------
+sending to listserv.txt
+
+sent to Poems from Tom     |         poemsfromtom @ gmail.com           
+sent to Thomas Morris      |        tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |  Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |      zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |    violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |             semorris @ mit.edu             
+sent to Dee-Dee Huang      |        deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |           bamubarack @ gmail.com           
+
+huxley, ITALY
+--------------------------------
+sending to listserv.txt
+
+sent to Poems from Tom     |         poemsfromtom @ gmail.com           
+sent to Thomas Morris      |        tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |  Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |      zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |    violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |             semorris @ mit.edu             
+sent to Dee-Dee Huang      |        deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |           bamubarack @ gmail.com           
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 398, in getreply
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 398, in getreply
+    line = self.file.readline(_MAXLINE + 1)
+    line = self.file.readline(_MAXLINE + 1)
+  File "/Users/thomas/mambaforge/lib/python3.9/socket.py", line 704, in readinto
+  File "/Users/thomas/mambaforge/lib/python3.9/socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "/Users/thomas/mambaforge/lib/python3.9/ssl.py", line 1241, in recv_into
+    return self._sock.recv_into(b)
+  File "/Users/thomas/mambaforge/lib/python3.9/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+    return self.read(nbytes, buffer)
+  File "/Users/thomas/mambaforge/lib/python3.9/ssl.py", line 1099, in read
+  File "/Users/thomas/mambaforge/lib/python3.9/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/distribute.py", line 138, in <module>
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/distribute.py", line 138, in <module>
+    send_poem.send(email, poet, title, tag)
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/send_poem.py", line 101, in send
+    send_poem.send(email, poet, title, tag)
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/send_poem.py", line 101, in send
+    send_email(address, subject=subject, message=msg)
+    send_email(address, subject=subject, message=msg)
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/send_poem.py", line 30, in send_email
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/send_poem.py", line 30, in send_email
+    server.login(GMAIL_USER, GMAIL_PASSWORD)
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 714, in login
+    server.login(GMAIL_USER, GMAIL_PASSWORD)
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 714, in login
+    self.ehlo_or_helo_if_needed()
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 611, in ehlo_or_helo_if_needed
+    self.ehlo_or_helo_if_needed()
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 611, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 452, in ehlo
+    if not (200 <= self.ehlo()[0] <= 299):
+    (code, msg) = self.getreply()
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 452, in ehlo
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 401, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed: "
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed: [Errno 54] Connection reset by peer
+    (code, msg) = self.getreply()
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 401, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed: "
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed: [Errno 54] Connection reset by peer
+
+lowell, WAKING IN THE BLUE
+--------------------------------
+sending to listserv.txt
+
+sent to Poems from Tom     |         poemsfromtom @ gmail.com           
+sent to Thomas Morris      |        tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |  Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |      zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |    violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |             semorris @ mit.edu             
+sent to Dee-Dee Huang      |        deedeehuang98 @ gmail.com           
+Traceback (most recent call last):
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 398, in getreply
+    line = self.file.readline(_MAXLINE + 1)
+  File "/Users/thomas/mambaforge/lib/python3.9/socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "/Users/thomas/mambaforge/lib/python3.9/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/Users/thomas/mambaforge/lib/python3.9/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/distribute.py", line 137, in <module>
+    send_poem.send(email, poet, title, tag)
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/send_poem.py", line 101, in send
+    send_email(address, subject=subject, message=msg)
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/send_poem.py", line 30, in send_email
+    server.login(GMAIL_USER, GMAIL_PASSWORD)
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 714, in login
+    self.ehlo_or_helo_if_needed()
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 611, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 452, in ehlo
+    (code, msg) = self.getreply()
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 401, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed: "
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed: [Errno 54] Connection reset by peer
+
+dickinson, THE SEA
+--------------------------------
+sending to listserv.txt
+
+sent to Poems from Tom     |         poemsfromtom @ gmail.com           
+sent to Thomas Morris      |        tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |  Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |      zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |    violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |             semorris @ mit.edu             
+sent to Dee-Dee Huang      |        deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |           bamubarack @ gmail.com           
+Traceback (most recent call last):
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 398, in getreply
+    line = self.file.readline(_MAXLINE + 1)
+  File "/Users/thomas/mambaforge/lib/python3.9/socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "/Users/thomas/mambaforge/lib/python3.9/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/Users/thomas/mambaforge/lib/python3.9/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/distribute.py", line 137, in <module>
+    send_poem.send(email, poet, title, tag)
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/send_poem.py", line 101, in send
+    send_email(address, subject=subject, message=msg)
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/send_poem.py", line 30, in send_email
+    server.login(GMAIL_USER, GMAIL_PASSWORD)
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 714, in login
+    self.ehlo_or_helo_if_needed()
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 611, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 452, in ehlo
+    (code, msg) = self.getreply()
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 401, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed: "
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed: [Errno 54] Connection reset by peer
+
+lawrence, FLAPPER
+--------------------------------
+sending to listserv.txt
+
+sent to Poems from Tom     |         poemsfromtom @ gmail.com           
+sent to Thomas Morris      |        tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |  Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |      zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |    violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |             semorris @ mit.edu             
+sent to Dee-Dee Huang      |        deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |           bamubarack @ gmail.com           
+sent to Marah Sakkal       |            Marah1998 @ gmail.com           
+sent to Marah Sakkal       |               mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |               ruidpr @ gmail.com           
+sent to Danna Hargett      |              dlynnh5 @ gmail.com           
+
+
+pushkin, THE GYPSIES
+--------------------------------
+sending to listserv.txt
+
+sent to Poems from Tom     |         poemsfromtom @ gmail.com           
+sent to Thomas Morris      |        tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |  Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |      zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |    violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |             semorris @ mit.edu             
+sent to Dee-Dee Huang      |        deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |           bamubarack @ gmail.com           
+sent to Marah Sakkal       |            Marah1998 @ gmail.com           
+sent to Marah Sakkal       |               mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |               ruidpr @ gmail.com           
+sent to Danna Hargett      |              dlynnh5 @ gmail.com           
+
+
+milosz, ACCOUNT
+--------------------------------
+sending to listserv.txt
+
+sent to Poems from Tom     |         poemsfromtom @ gmail.com           
+sent to Thomas Morris      |        tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |  Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |      zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |    violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |             semorris @ mit.edu             
+sent to Dee-Dee Huang      |        deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |           bamubarack @ gmail.com           
+Traceback (most recent call last):
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 398, in getreply
+    line = self.file.readline(_MAXLINE + 1)
+  File "/Users/thomas/mambaforge/lib/python3.9/socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "/Users/thomas/mambaforge/lib/python3.9/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/Users/thomas/mambaforge/lib/python3.9/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/distribute.py", line 137, in <module>
+    send_poem.send(email, poet, title, tag)
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/send_poem.py", line 101, in send
+    send_email(address, subject=subject, message=msg)
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/send_poem.py", line 30, in send_email
+    server.login(GMAIL_USER, GMAIL_PASSWORD)
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 714, in login
+    self.ehlo_or_helo_if_needed()
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 611, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 452, in ehlo
+    (code, msg) = self.getreply()
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 401, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed: "
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed: [Errno 54] Connection reset by peer
+
+bishop, IN THE WAITING ROOM
+--------------------------------
+sending to listserv.txt
+
+sent to Poems from Tom     |         poemsfromtom @ gmail.com           
+sent to Thomas Morris      |        tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |  Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |      zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |    violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |             semorris @ mit.edu             
+sent to Dee-Dee Huang      |        deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |           bamubarack @ gmail.com           
+Traceback (most recent call last):
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 398, in getreply
+    line = self.file.readline(_MAXLINE + 1)
+  File "/Users/thomas/mambaforge/lib/python3.9/socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "/Users/thomas/mambaforge/lib/python3.9/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/Users/thomas/mambaforge/lib/python3.9/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+ConnectionResetError: [Errno 54] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/distribute.py", line 137, in <module>
+    send_poem.send(email, poet, title, tag)
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/send_poem.py", line 101, in send
+    send_email(address, subject=subject, message=msg)
+  File "/Users/thomas/Desktop/poetry/poemsfromtom/send_poem.py", line 30, in send_email
+    server.login(GMAIL_USER, GMAIL_PASSWORD)
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 714, in login
+    self.ehlo_or_helo_if_needed()
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 611, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 452, in ehlo
+    (code, msg) = self.getreply()
+  File "/Users/thomas/mambaforge/lib/python3.9/smtplib.py", line 401, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed: "
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed: [Errno 54] Connection reset by peer
+
+yeats, THE DEATH OF CUCHULAIN
+--------------------------------
+sending to listserv.txt
+
+sent to Poems from Tom     |         poemsfromtom @ gmail.com           
+sent to Thomas Morris      |        tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |  Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |      zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |    violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |             semorris @ mit.edu             
+sent to Dee-Dee Huang      |        deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |           bamubarack @ gmail.com           
+sent to Marah Sakkal       |            Marah1998 @ gmail.com           
+sent to Marah Sakkal       |               mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |               ruidpr @ gmail.com           
+sent to Danna Hargett      |              dlynnh5 @ gmail.com           
+sent to Sergio Leos        | sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |           reedmorgan @ g.Harvard.edu       
+sent to Owen Duke          |            owenbduke @ gmail.com           
+
+sent to Poems from Tom     |         poemsfromtom @ gmail.com           
+sent to Thomas Morris      |           tomachitom @ gmail.com           
+sent to Thomas Morris      |             tomwmorr @ gmail.com           
+sent to Thomas Morris      |          termismerrs @ gmail.com           
+sent to Poems from Tom     |         poemsfromtom @ gmail.com           
+sent to Thomas Morris      |           tomachitom @ gmail.com           
+sent to Thomas Morris      |             tomwmorr @ gmail.com           
+sent to Thomas Morris      |          termismerrs @ gmail.com           
+sent to Poems from Tom     |         poemsfromtom @ gmail.com           
+sent to Thomas Morris      |           tomachitom @ gmail.com           
+sent to Thomas Morris      |             tomwmorr @ gmail.com           
+sent to Thomas Morris      |          termismerrs @ gmail.com           
+
+sent to Poems from Tom     |         poemsfromtom @ gmail.com           
+sent to Thomas Morris      |        tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |  Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |      zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |    violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |             semorris @ mit.edu             
+sent to Dee-Dee Huang      |        deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |           bamubarack @ gmail.com           
+sent to Marah Sakkal       |            Marah1998 @ gmail.com           
+sent to Marah Sakkal       |               mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |               ruidpr @ gmail.com           
+sent to Danna Hargett      |              dlynnh5 @ gmail.com           
+sent to Sergio Leos        | sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |           reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |            owenbduke @ gmail.com           
+sent to Peter Morris       |             morrisp1 @ aol.com             
+sent to Hope Kean          |             hopekean @ mit.edu             
+sent to Poems from Tom     |         poemsfromtom @ gmail.com           
+sent to Thomas Morris      |        tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |  Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |      zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |    violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |             semorris @ mit.edu             
+sent to Dee-Dee Huang      |        deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |           bamubarack @ gmail.com           
+sent to Marah Sakkal       |            Marah1998 @ gmail.com           
+sent to Marah Sakkal       |               mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |               ruidpr @ gmail.com           
+sent to Danna Hargett      |              dlynnh5 @ gmail.com           
+sent to Sergio Leos        | sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |           reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |            owenbduke @ gmail.com           
+sent to Peter Morris       |             morrisp1 @ aol.com             
+sent to Hope Kean          |             hopekean @ mit.edu             
+sent to Poems from Tom     |         poemsfromtom @ gmail.com           
+sent to Thomas Morris      |        tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |  Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |      zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |    violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |             semorris @ mit.edu             
+sent to Dee-Dee Huang      |        deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |           bamubarack @ gmail.com           
+sent to Marah Sakkal       |            Marah1998 @ gmail.com           
+sent to Marah Sakkal       |               mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |               ruidpr @ gmail.com           
+sent to Danna Hargett      |              dlynnh5 @ gmail.com           
+sent to Sergio Leos        | sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |           reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |            owenbduke @ gmail.com           
+sent to Peter Morris       |             morrisp1 @ aol.com             
+sent to Hope Kean          |             hopekean @ mit.edu             
+sent to Grant Barthelmes   |             gbart583 @ gmail.com           
+
+thomas THE SONG OF THE MISCHIEVOUS DOG
+################################################################
+
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+
+ashbery ALCOVE
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+
+2021-12-13T07:44:59.364637 ashbery THE NEW HIGHER
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+
+2021-12-14T08:11:23.255708 rilke THE ANGELS
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+
+2021-12-15T07:08:35.459218 eliot LA FIGLIA CHE PIANGE
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+
+2021-12-16T08:28:50.480840 lawrence WINTER IN THE BOULEVARD
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+
+2021-12-17T07:53:54.307101 milosz LATE RIPENESS
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+
+2021-12-18T07:00:09.535818 owen A TERRE
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+
+2021-12-19T07:37:55.605693 lewis CLICHE CAME OUT OF ITS CAGE
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+
+2021-12-20T07:01:57.852323 macneice HOUSE ON A CLIFF
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+
+2021-12-21T07:15:58.846787 moore GEORGE MOORE
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+
+2021-12-23T08:03:01.791140 nash MORNING PRAYER
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+poet "chesterton" was sent too recently!
+
+2021-12-24T08:00:07.568748 mccrae THE DEAD MASTER
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+['winter', 'saturday', 'december', 'christmas', 'ordinary time']
+
+2021-12-25T08:35:03.372987 chesterton THE HOUSE OF CHRISTMAS
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+['winter', 'sunday', 'december', 'no holiday', 'ordinary time']
+
+2021-12-26T08:00:05.714720 péguy FREEDOM
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+['winter', 'monday', 'december', 'no holiday', 'ordinary time']
+
+2021-12-27T08:10:55.589272 millay ELAINE
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+['winter', 'tuesday', 'december', 'no holiday', 'ordinary time']
+poet "gibran" was sent too recently! (7.99 days ago)
+
+2021-12-28T08:01:51.711176 yeats THE LAMENTATION OF THE OLD PENSIONER
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+['winter', 'wednesday', 'december', 'no holiday', 'ordinary time']
+
+2021-12-29T08:24:38.852077 huxley TWO REALITIES
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+['winter', 'thursday', 'december', 'no holiday', 'ordinary time']
+
+2021-12-30T08:15:04.030411 macneice SOAP SUDS
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+['winter', 'friday', 'december', 'no holiday', 'ordinary time']
+
+2021-12-31T08:00:09.481801 auden THE MORE LOVING ONE
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Marah Sakkal       |                   mxs701 @ students.jefferson.edu
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+['winter', 'monday', 'january', 'no holiday', 'epiphany']
+
+2022-01-03T07:00:27.521834 pasternak WET PAINT
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+['winter', 'tuesday', 'january', 'no holiday', 'epiphany']
+
+2022-01-04T07:17:24.333176 shelley ART THOU PALE FOR WEARINESS
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
+['winter', 'wednesday', 'january', 'no holiday', 'epiphany']
+
+2022-01-05T09:18:57.546371 day-lewis TEMPT ME NO MORE
+################################################################
+
+sent to Poems from Tom     |             poemsfromtom @ gmail.com           
+sent to Christian Schmidt  |      Schmidt.e.christian @ gmail.com           
+sent to Zach Bampton       |          zachary.bampton @ gmail.com           
+sent to Violeta Rosenthal  |        violeta.rosenthal @ gmail.com           
+sent to Stephen Morris     |                 semorris @ mit.edu             
+sent to Dee-Dee Huang      |            deedeehuang98 @ gmail.com           
+sent to Bilal Mubarack     |               bamubarack @ gmail.com           
+sent to Marah Sakkal       |                Marah1998 @ gmail.com           
+sent to Rui Diaz-Pacheco   |                   ruidpr @ gmail.com           
+sent to Danna Hargett      |                  dlynnh5 @ gmail.com           
+sent to Sergio Leos        |    sergio.leos.sepulveda @ gmail.com           
+sent to Reed Morgan        |               reedmorgan @ g.harvard.edu       
+sent to Owen Duke          |                owenbduke @ gmail.com           
+sent to Peter Morris       |                 morrisp1 @ aol.com             
+sent to Hope Kean          |                 hopekean @ mit.edu             
+sent to Grant Barthelmes   |                 gbart583 @ gmail.com           
+sent to Joaquim Brooks     |            joaquimbrooks @ gmail.com           
+sent to Thomas Morris      |            tomwillmorris @ gmail.com           
