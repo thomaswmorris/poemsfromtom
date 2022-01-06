@@ -1,11 +1,4 @@
-from email.message import EmailMessage
-import smtplib
-import os
-import random
-import glob, os
-import json
 import time
-import calendar
 from datetime import datetime
 
 import smtplib
