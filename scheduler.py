@@ -43,6 +43,7 @@ def send_daily_poem():
     for entry in entries:
         name, email = entry.split(' : ')
         done = False; fails = 0
+        print(name,email)
         while (not done) and (fails < 12):
             try:
                 poetizer.send_poem(email,tag=args.tag + ': ')
