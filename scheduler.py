@@ -38,6 +38,8 @@ def send_daily_poem():
         write_historical=args.wh,
         )
 
+    print(poetizer.poet,poetizer.title)
+
     for entry in entries:
         name, email = entry.split(' : ')
         done = False; fails = 0
