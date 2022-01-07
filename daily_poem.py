@@ -25,12 +25,10 @@ title = 'random'
 #    this_program, address, poet, title = sys.argv
     
 import argparse, sys
-
 parser = argparse.ArgumentParser()
 parser.add_argument('--address', type=str, help='Where to send the poem',default='listserv.txt')
 parser.add_argument('--poet', type=str, help='Which poet to send', default='random')
 parser.add_argument('--title', type=str, help='Which poem to send', default='random')
-
 args = parser.parse_args()
 
 address   = args.address
