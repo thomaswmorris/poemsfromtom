@@ -295,23 +295,25 @@ class Poetizer:
         </html>
         """     
         
-    def send_poem(self, recipient, tag=''):
 
+
+    def send(self, html, recipient, subject=''):
         message = MIMEMultipart('alternative')
-        message.attach(MIMEText(self.poem_html, 'html'))
+        message.attach(MIMEText(html, 'html'))
         message['From']    = self.username
         message['To']      = recipient
-        message['Subject'] = tag + self.header
+        message['Subject'] = subject
 
         server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-        #context = ssl.create_default_context()
-        #server.ehlo()                               
-        #server.starttls(context=context)            
-        #server.ehlo() 
         server.login(self.username, self.password)
         server.send_message(message)
         server.quit()
 
+    def send_poem(self, recipient, tag=''):
+        self.send(self.poem_html, recipient, subject=tag+': '+self.header)
+
+    def send_history(self, recipient, n=10):
+        self.send(self.history.iloc[-n:].to_html(), recipient, subject=f'HISTORY for {datetime.fromtimestamp(int(time.time())).isoformat()}')
         
 #poetizer = Poetizer()
 #poetizer.load_poem(poet='random',title='random')

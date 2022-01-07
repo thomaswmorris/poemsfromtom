@@ -21,8 +21,10 @@ args = parser.parse_args()
 #@schedule.scheduled_job('interval', minutes=1, max_instances=10)
 def send_daily_poem():
     print(f'This job is run every day at {args.hour}:00.')
-    with open(args.address,'r+') as f:
-        entries = [entry for entry in f.read().split('\n') if len(entry) > 0]
+    if '.txt' in args.address:
+        with open(args.address,'r+') as f:
+            entries = [entry for entry in f.read().split('\n') if len(entry) > 0]
+    else: entries = [': ' + args.address]
 
     # Choose a poem that meets the supplied conditions
     poetizer.load_poem(
@@ -43,10 +45,9 @@ def send_daily_poem():
     for entry in entries:
         name, email = entry.split(' : ')
         done = False; fails = 0
-        print(name,email)
         while (not done) and (fails < 12):
             try:
-                poetizer.send_poem(email,tag=args.tag + ': ')
+                poetizer.send_poem(email,tag=args.tag)
                 done = True
                 a,b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
             except Exception as e:
