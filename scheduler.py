@@ -18,7 +18,7 @@ parser.add_argument('--hour', type=str, help='Hour of the day to send', default=
 
 args = parser.parse_args()
 #@schedule.scheduled_job('cron', day_of_week='mon,tue,wed,thu,fri,sat,sun', hour=args.hour)
-@schedule.scheduled_job('interval', minutes=1/6)
+@schedule.scheduled_job('interval', minutes=1/6, max_instances=2)
 def send_daily_poem():
     print(f'This job is run every day at {args.hour}:00.')
     with open(args.address,'r+') as f:
