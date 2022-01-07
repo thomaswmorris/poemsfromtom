@@ -18,7 +18,7 @@ class Poetizer:
                 
         self.dict = {}
         self.username = 'poemsfromtom@gmail.com'
-        self.password = 'notdarkyet'
+        self.password = 'becauseidonothopetoturnagain'
         self.history = pd.read_csv('history.csv',index_col=0)
         
         self.poets, self.titles, self.pt_keys = [], [], []
