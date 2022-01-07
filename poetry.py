@@ -303,11 +303,11 @@ class Poetizer:
         message['To']      = recipient
         message['Subject'] = tag + self.header
 
-        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-        context = ssl.create_default_context()
-        server.ehlo()                               
-        server.starttls(context=context)            
-        server.ehlo() 
+        server = smtplib.SMTP_SSL('smtp.gmail.com', 587)
+        #context = ssl.create_default_context()
+        #server.ehlo()                               
+        #server.starttls(context=context)            
+        #server.ehlo() 
         server.login(self.username, self.password)
         server.send_message(message)
         server.quit()
