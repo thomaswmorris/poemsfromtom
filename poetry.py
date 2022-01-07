@@ -2,7 +2,7 @@ import regex as re
 import glob
 import json
 import time
-import smtplib, ssl
+import smtplib
 import numpy as np
 import pandas as pd
 
