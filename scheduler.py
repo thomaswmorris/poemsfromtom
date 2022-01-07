@@ -1,6 +1,8 @@
 import time
 from apscheduler.schedulers.blocking import BlockingScheduler
+from poetry import Poetizer
 
+poetizer = Poetizer()
 schedule = BlockingScheduler()
 
 import argparse, sys
