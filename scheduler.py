@@ -56,9 +56,9 @@ def send_daily_poem():
 
     print('done')
 
-send_daily_poem()
+#send_daily_poem()
 
-#schedule.start()
+schedule.start()
 
     
 
