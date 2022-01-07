@@ -2,7 +2,7 @@ import regex as re
 import glob
 import json
 import time
-import smtplib
+import smtplib, ssl
 import numpy as np
 import pandas as pd
 
@@ -191,8 +191,6 @@ class Poetizer:
                   very_verbose=False,
                   html_color='Black'):
         
-        
-        
         if (not poet in self.poets) and (not poet=='random'):
             raise(Exception(f'The poet \"{poet}\" is not in the database!'))
         if (not title in self.titles) and (not title=='random'):
@@ -306,6 +304,10 @@ class Poetizer:
         message['Subject'] = tag + self.header
 
         server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        context = ssl.create_default_context()
+        server.ehlo()                               
+        server.starttls(context=context)            
+        server.ehlo() 
         server.login(self.username, self.password)
         server.send_message(message)
         server.quit()

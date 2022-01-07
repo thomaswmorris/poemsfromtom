@@ -1,8 +1,6 @@
 import time
 from apscheduler.schedulers.blocking import BlockingScheduler
-from poetry import Poetizer
 
-poetizer = Poetizer()
 schedule = BlockingScheduler()
 
 import argparse, sys
@@ -17,8 +15,8 @@ parser.add_argument('--tag', type=str, help='Email subject prefix', default='Poe
 parser.add_argument('--hour', type=str, help='Hour of the day to send', default=7)
 
 args = parser.parse_args()
-#@schedule.scheduled_job('cron', day_of_week='mon,tue,wed,thu,fri,sat,sun', hour=args.hour)
-@schedule.scheduled_job('interval', minutes=1)
+@#schedule.scheduled_job('cron', day_of_week='mon,tue,wed,thu,fri,sat,sun', hour=args.hour)
+@schedule.scheduled_job('interval', minutes=1, job_defaults)
 def send_daily_poem():
     print(f'This job is run every day at {args.hour}:00.')
     with open(args.address,'r+') as f:
@@ -46,9 +44,12 @@ def send_daily_poem():
                 poetizer.send_poem(email,tag=args.tag + ': ')
                 done = True
                 a,b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
-            except:
+            except Exception as e:
+                print(e)
                 time.sleep(60)
                 fails += 1
+
+    
 
 schedule.start()
 
