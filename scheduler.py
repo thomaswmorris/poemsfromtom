@@ -59,8 +59,8 @@ def send_daily_poem():
                 time.sleep(60)
                 fails += 1
 
-send_daily_poem()
-#schedule.start()
+#send_daily_poem()
+schedule.start()
 
     
 
