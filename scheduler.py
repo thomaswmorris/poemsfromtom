@@ -24,7 +24,7 @@ def send_daily_poem():
     if '.txt' in args.address:
         with open(args.address,'r+') as f:
             entries = [entry for entry in f.read().split('\n') if len(entry) > 0]
-    else: entries = [': ' + args.address]
+    else: entries = ['* : ' + args.address]
 
     # Choose a poem that meets the supplied conditions
     poetizer.load_poem(
