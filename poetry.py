@@ -315,6 +315,9 @@ class Poetizer:
 
     def send_history(self, recipient, n=10):
         self.send(self.history.iloc[-n:].to_html(), recipient, subject=f'HISTORY for {datetime.fromtimestamp(int(time.time())).isoformat()}')
+    
+    def send_stats(self, recipient):
+        self.send(self.get_stats.to_html(), recipient, subject=f'STATS for {datetime.fromtimestamp(int(time.time())).isoformat()}')
         
 #poetizer = Poetizer()
 #poetizer.load_poem(poet='random',title='random')
