@@ -3,7 +3,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 from poetry import Poetizer
 
 poetizer = Poetizer()
-schedule = BlockingScheduler()
+schedule = BlockingScheduler(timezone='America/New_York')
 
 import argparse, sys
 parser = argparse.ArgumentParser()
