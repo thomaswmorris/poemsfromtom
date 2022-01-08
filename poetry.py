@@ -5,6 +5,8 @@ import time
 import smtplib
 import numpy as np
 import pandas as pd
+import github as gh
+from io import StringIO
 
 from datetime import datetime
 from dateutil.easter import *
@@ -13,13 +15,23 @@ from email.mime.text import MIMEText
 
 
 class Poetizer:
-    def __init__(self):
+    def __init__(self,use_repo=False):
                 
         self.dict = {}
         self.username = 'poemsfromtom@gmail.com'
+        self.use_repo = use_repo
+
+        # these are secret!!! go away!!!
         self.password = 'becauseidonothopetoturnagain'
-        self.history = pd.read_csv('history.csv',index_col=0)
-        
+        if not self.use_repo:
+            self.history = pd.read_csv('history.csv',index_col=0)
+        else:
+            self.token = "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"
+            self.g = gh.Github(self.token)
+            self.repo = self.g.get_user().get_repo('poetry')
+            self.repo_history_contents = self.repo.get_contents('history.csv')
+            self.history = pd.read_csv(StringIO(self.repo_history_contents.decoded_content.decode()),index_col=0)
+
         self.poets, self.titles, self.pt_keys = [], [], []
         fns = np.sort([fn for fn in glob.glob('./_json/*.json')])
         for fn in fns:
@@ -184,6 +196,7 @@ class Poetizer:
                   poet_latency=0,
                   title_latency=0,
                   contextual=False,
+                  tag_historical='',
                   read_historical=False,
                   write_historical=False,
                   verbose=True,
@@ -266,14 +279,21 @@ class Poetizer:
 
         # Put the attributes of the poem into the class
         self.tag, self.name, self.birth, self.death, self.link = self.dict[self.poet]['metadata'].split('|')
-        if verbose: print(f'chose poem {self.title} by {self.name}')
-
+        output = f'chose poem \"{self.title}\" by {self.name}'
+    
         if write_historical:
-            now = int(time.time()); now_string = ' '.join(datetime.fromtimestamp(time.time()).isoformat()[:19].split('T'))
-            self.history.loc[len(self.history)] = self.poet, self.title, now_string, now
-            self.history.to_csv('history.csv')
-            print(f'wrote poem {self.title} by {self.poet} to history')
-        
+            now = int(time.time()); now_date, now_time = datetime.fromtimestamp(now).isoformat()[:19].split('T')
+            self.history.loc[len(self.history)] = self.poet, self.title, tag_historical, now_date, now_time, now
+            if not self.use_repo:
+                self.history.to_csv('history.csv')
+                output += ' (wrote to local history)'
+            else:
+                f = self.repo.update_file('history.csv', 'poem log', self.history.to_csv(), sha=self.repo_history_contents.sha, branch='master')
+                output += ' (wrote to repo)'
+            
+        if verbose: print(output)
+
+        # Make an html version (for nicely formatted emails)
         html_body = '\n' + self.poem
         html_body = html_body.replace('—', '-')
         html_body = html_body.replace(' ', '&nbsp;')
