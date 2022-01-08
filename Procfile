@@ -1,8 +1,7 @@
-daily-poem: python scheduler.py --address 'listserv.csv' --context true --wh true --rh true --hour 7
+daily-poem: python scheduler.py --address 'listserv.csv' --subj_tag 'Poem of the Day: ' --context true --wh true --rh true --hist_tag 'daily' --hour '7'
 
-daily-history: python diagnostics.py --address 'poemsfromtom@gmail.com' --what 'history' --hour 12
+test: python scheduler.py --address 'testserv.csv' --subj_tag '(TEST): ' --wh true --hist_tag 'test' --hour '0-23' 
 
-daily-stats: python diagnostics.py --address 'poemsfromtom@gmail.com' --what 'stats' --hour 12
 
-test: python scheduler.py --address 'testserv.csv' --tag '(TEST)' --hour '0-23' --wh true
+
 

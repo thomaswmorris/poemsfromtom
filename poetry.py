@@ -335,7 +335,7 @@ class Poetizer:
         server.quit()
 
     def send_poem(self, recipient, tag=''):
-        self.send(self.poem_html, recipient, subject=tag+': '+self.header)
+        self.send(self.poem_html, recipient, subject=tag+self.header)
 
     def send_history(self, recipient, n=10):
         self.send(self.history.iloc[-n:].to_html(), recipient, subject=f'HISTORY for {datetime.fromtimestamp(int(time.time())).isoformat()}')
