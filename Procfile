@@ -4,5 +4,5 @@ daily-history: python diagnostics.py --address 'poemsfromtom@gmail.com' --what '
 
 daily-stats: python diagnostics.py --address 'poemsfromtom@gmail.com' --what 'stats' --hour 12
 
-test: python scheduler.py --address 'poemsfromtom@gmail.com' --tag '(TEST)' --hour '0-23'
+test: python scheduler.py --address 'poemsfromtom@gmail.com' --tag '(TEST)' --hour '0-23' --wh true
 
