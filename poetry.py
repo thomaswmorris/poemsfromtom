@@ -13,7 +13,6 @@ from email.mime.text import MIMEText
 
 
 class Poetizer:
-    
     def __init__(self):
                 
         self.dict = {}
@@ -274,10 +273,10 @@ class Poetizer:
         if verbose: print(f'chose poem {self.title} by {self.name}')
         
         html_body = '\n' + self.poem
-        html_body = html_body.replace('\n', '<br>')
         html_body = html_body.replace('—', '-')
-        html_body = html_body.replace('--', '&#8211;')
         html_body = html_body.replace(' ', '&nbsp;')
+        html_body = html_body.replace('\n', '<br>')
+        html_body = html_body.replace('--', '&#8211;')
         
         while html_body.count('_') > 1:
             try:

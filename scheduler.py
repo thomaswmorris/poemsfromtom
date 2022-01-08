@@ -1,4 +1,5 @@
 import time
+import pandas as pd
 from apscheduler.schedulers.blocking import BlockingScheduler
 from poetry import Poetizer
 
@@ -21,10 +22,11 @@ args = parser.parse_args()
 #@schedule.scheduled_job('interval', minutes=1, max_instances=10)
 def send_daily_poem():
     print(f'This job is run every day at {args.hour}:00UTC')
-    if '.txt' in args.address:
+    if '.csv' in args.address:
         with open(args.address,'r+') as f:
-            entries = [entry for entry in f.read().split('\n') if len(entry) > 0]
-    else: entries = ['* : ' + args.address]
+            entries = pd.read_csv(args.address,index_col=0)
+            #[entry for entry in f.read().split('\n') if len(entry) > 0]
+    else: entries = pd.DataFrame(columns=['name','email']); entries.loc[0] = '*', args.address
 
     # Choose a poem that meets the supplied conditions
     poetizer.load_poem(
@@ -41,8 +43,7 @@ def send_daily_poem():
         verbose=True,
         )
 
-    for entry in entries:
-        name, email = entry.split(' : ')
+    for name, email in zip(entries['name'],entries['email']):
         done = False; fails = 0
         while (not done) and (fails < 12):
             try:
