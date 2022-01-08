@@ -1,6 +1,8 @@
 import warnings
 def ignore_deprecated():
     warnings.warn("deprecated", DeprecationWarning)
+    warnings.warn("pytz", PytzUsageWarning)
+    
 
 with warnings.catch_warnings():
     warnings.simplefilter("ignore"); ignore_deprecated()
