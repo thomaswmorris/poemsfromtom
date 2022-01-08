@@ -272,7 +272,6 @@ class Poetizer:
             raise(Exception(f'No poem with the requirements was found in the database!'))
 
         self.tag, self.name, self.birth, self.death, self.link = self.dict[self.poet]['metadata'].split('|')
-        
         ### Make the HTML version of the poem
         
         html_body = '\n' + self.poem
