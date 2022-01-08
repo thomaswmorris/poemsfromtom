@@ -15,8 +15,9 @@ args = parser.parse_args()
 @schedule.scheduled_job('cron', day_of_week='mon,tue,wed,thu,fri,sat,sun', hour=args.hour)
 def send_diagnostic():
 
-    if args.what == 'history': poetizer.send_history(args.address,n=15)
-    if args.what == 'stats': poetizer.send_stats(args.address)
+    for what in args.what.split(','):
+        if what == 'history': poetizer.send_history(args.address,n=15)
+        if what == 'stats': poetizer.send_stats(args.address)
 
 send_diagnostic()
 schedule.start()

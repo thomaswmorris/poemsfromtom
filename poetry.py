@@ -227,7 +227,7 @@ class Poetizer:
         pop_titles = self.titles.copy()
         pop_likelihood = list(self.likelihood)
         
-        self.poem == None
+        self.poem = None
         while (len(pop_titles) > 0) and (self.poem == None):
             
             p = np.array(pop_likelihood) / np.sum(pop_likelihood)
