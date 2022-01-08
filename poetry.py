@@ -189,6 +189,8 @@ class Poetizer:
                   verbose=True,
                   very_verbose=False,
                   html_color='Black'):
+
+        self.poem = None
         
         if (not poet in self.poets) and (not poet=='random'):
             raise(Exception(f'The poet \"{poet}\" is not in the database!'))
@@ -226,7 +228,6 @@ class Poetizer:
         pop_titles = self.titles.copy()
         pop_likelihood = list(self.likelihood)
         
-        self.poem = None
         while (len(pop_titles) > 0) and (self.poem == None):
             
             p = np.array(pop_likelihood) / np.sum(pop_likelihood)
@@ -257,20 +258,21 @@ class Poetizer:
                         
             self.poet = _poet; self.title = _title
             self.poem = self.dict[self.poet][self.title]
-    
-            if write_historical:
-                now = int(time.time()); now_string = ' '.join(datetime.fromtimestamp(time.time()).isoformat()[:19].split('T'))
-                self.history.loc[len(self.history)] = self.poet, self.title, now_string, now
-                self.history.to_csv('history.csv')
-                print(f'wrote poem {self.title} by {self.poet} to history')
-
             break
-            
+    
+        # If we exit the loop, and don't have a poem:
         if self.poem == None:
             raise(Exception(f'No poem with the requirements was found in the database!'))
 
+        # Put the attributes of the poem into the class
         self.tag, self.name, self.birth, self.death, self.link = self.dict[self.poet]['metadata'].split('|')
         if verbose: print(f'chose poem {self.title} by {self.name}')
+
+        if write_historical:
+            now = int(time.time()); now_string = ' '.join(datetime.fromtimestamp(time.time()).isoformat()[:19].split('T'))
+            self.history.loc[len(self.history)] = self.poet, self.title, now_string, now
+            self.history.to_csv('history.csv')
+            print(f'wrote poem {self.title} by {self.poet} to history')
         
         html_body = '\n' + self.poem
         html_body = html_body.replace('—', '-')
