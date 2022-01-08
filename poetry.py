@@ -32,6 +32,8 @@ class Poetizer:
             self.repo_history_contents = self.repo.get_contents('history.csv')
             self.history = pd.read_csv(StringIO(self.repo_history_contents.decoded_content.decode()),index_col=0)
 
+            self.daily_history = self.history.loc[self.history['type']=='daily']
+
         self.poets, self.titles, self.pt_keys = [], [], []
         fns = np.sort([fn for fn in glob.glob('./_json/*.json')])
         for fn in fns:
@@ -256,15 +258,15 @@ class Poetizer:
             
             if read_historical and _likelihood < 1e6:
                 if (poet=='random'):
-                    if _poet in list(self.history['poet']): 
-                        ELAPSED = when - self.history['timestamp'][self.history['poet']==_poet].max()
+                    if _poet in list(self.daily_history['poet']): 
+                        ELAPSED = when - self.daily_history['timestamp'][self.daily_history['poet']==_poet].max()
                         if ELAPSED < poet_latency * 86400 :
                             print(f'poet \"{_poet}\" was sent too recently! ({ELAPSED/86400:.02f} days ago)')
                             continue # if the poem was sent too recently 
 
                 if (title=='random'):
-                    if _title in list(self.history['title']):
-                        ELAPSED = when - self.history['timestamp'][self.history['title']==_title].max()
+                    if _title in list(self.daily_history['title']):
+                        ELAPSED = when - self.daily_history['timestamp'][self.daily_history['title']==_title].max()
                         if ELAPSED < title_latency * 86400 :
                             print(f'title \"{_title}\" was sent too recently! ({ELAPSED/86400:.02f} days ago)')
                             continue # if the poet was sent too recently 
