@@ -205,7 +205,7 @@ class Poetizer:
             self.likelihood[_poet==np.array(self.poets)] = 1 / np.sum(_poet==np.array(self.poets))
         if contextual:
             context_keywords = [self.get_season(when), self.get_weekday(when), self.get_month(when), self.get_holiday(when), self.get_liturgy(when)]
-            if verbose: print(context_keywords)
+            if verbose: print('keywords:',context_keywords)
             for discriminator, context_kw, multiplier, label in zip([self.seasons, self.weekdays, self.months, self.holidays, self.liturgies],
                                                                     context_keywords,
                                                                     [4,7,12,1e10,1e2],
@@ -227,7 +227,8 @@ class Poetizer:
         pop_titles = self.titles.copy()
         pop_likelihood = list(self.likelihood)
         
-        while len(pop_titles) > 0:
+        self.poem == None
+        while (len(pop_titles) > 0) and (self.poem == None):
             
             p = np.array(pop_likelihood) / np.sum(pop_likelihood)
             _index = np.random.choice(np.arange(len(p)),p=p)
@@ -257,11 +258,14 @@ class Poetizer:
                         
             self.poet = _poet; self.title = _title
             self.poem = self.dict[self.poet][self.title]
+            if verbose: print(f'chose poem {self.poem} by {self.title}')
     
             if write_historical:
                 now = int(time.time()); now_string = ' '.join(datetime.fromtimestamp(time.time()).isoformat()[:19].split('T'))
                 self.history.loc[len(self.history)] = self.poet, self.title, now_string, now
                 self.history.to_csv('history.csv')
+                print(f'wrote poem {self.title} by {self.poet} to history')
+
             break
             
         if self.poem == None:
@@ -294,8 +298,6 @@ class Poetizer:
             </p>
         </html>
         """     
-        
-
 
     def send(self, html, recipient, subject=''):
         message = MIMEMultipart('alternative')

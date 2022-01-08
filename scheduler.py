@@ -1,3 +1,10 @@
+import warnings
+def ignore_deprecated():
+    warnings.warn("deprecated", DeprecationWarning)
+
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore"); ignore_deprecated()
+
 import time
 from apscheduler.schedulers.blocking import BlockingScheduler
 from poetry import Poetizer
@@ -20,7 +27,7 @@ args = parser.parse_args()
 @schedule.scheduled_job('cron', day_of_week='mon,tue,wed,thu,fri,sat,sun', hour=args.hour)
 #@schedule.scheduled_job('interval', minutes=1, max_instances=10)
 def send_daily_poem():
-    print(f'This job is run every day at {args.hour}:00.')
+    print(f'This job is run every day at {args.hour}:00UTC')
     if '.txt' in args.address:
         with open(args.address,'r+') as f:
             entries = [entry for entry in f.read().split('\n') if len(entry) > 0]
@@ -38,9 +45,8 @@ def send_daily_poem():
         contextual=args.context, 
         read_historical=args.rh, 
         write_historical=args.wh,
+        verbose=True,
         )
-
-    print(poetizer.poet,poetizer.title)
 
     for entry in entries:
         name, email = entry.split(' : ')
@@ -55,10 +61,7 @@ def send_daily_poem():
                 time.sleep(60)
                 fails += 1
 
-    print('done')
-
 #send_daily_poem()
-
 schedule.start()
 
     
