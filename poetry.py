@@ -300,7 +300,7 @@ class Poetizer:
         html_body = html_body.replace('—', '-')
         html_body = html_body.replace(' ', '&nbsp;')
         html_body = html_body.replace('\n', '<br>')
-        html_body = html_body.replace('--', '&#8211;')
+        html_body = html_body.replace('--', '&#8212;')
         
         while html_body.count('_') > 1:
             try:
@@ -315,7 +315,7 @@ class Poetizer:
         <html>
         <h2 style="font-family:Garamond; color:{html_color}; font-size: 24px; margin-bottom:0; margin : 0; padding-top:0;">{self.titleize(self.title)}</h2>
           <p style="font-family:Garamond; color:{html_color}; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;"><i>by 
-          <a href="{self.link}">{self.name}</a></i> ({self.birth}&#8211;{self.death})</p>
+          <a href="{self.link}">{self.name}</a> ({self.birth}&#8212;{self.death})</i> </p>
           <hr>
             <p style="font-family:Garamond; color:{html_color}; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0">{html_body}
             </p>

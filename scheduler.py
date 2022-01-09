@@ -37,15 +37,13 @@ def send_daily_poem():
         min_length=12, 
         max_length=2000, 
         poet_latency=28, 
-        title_latency=400, 
+        title_latency=800, 
         contextual=args.context, 
         tag_historical=args.hist_tag,
         read_historical=args.rh, 
         write_historical=args.wh,
         verbose=True,
-        )
-
-    #if args.wh: f = repo.create_file('history.csv', "poem log", poetizer.history.to_csv())
+    )
 
     for name, email in zip(entries['name'],entries['email']):
         done = False; fails = 0
