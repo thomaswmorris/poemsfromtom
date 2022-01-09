@@ -284,7 +284,7 @@ class Poetizer:
         output = f'chose poem \"{self.title}\" by {self.name}'
     
         if write_historical:
-            now = int(time.time()); now_date, now_time = datetime.fromtimestamp(now).isoformat()[:19].split('T')
+            now = int(time.time()); now_date, now_time = datetime.now().isoformat()[:19].split('T')
             self.history.loc[len(self.history)] = self.poet, self.title, tag_historical, now_date, now_time, now
             if not self.use_repo:
                 self.history.to_csv('history.csv')
