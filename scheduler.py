@@ -22,7 +22,7 @@ args = parser.parse_args()
 @schedule.scheduled_job('cron', day_of_week='mon,tue,wed,thu,fri,sat,sun', hour=args.hour)
 #@schedule.scheduled_job('interval', minutes=1, max_instances=10)
 def send_daily_poem():
-    print(f'\nThis job is run every day at {args.hour}:00 EST')
+    print(f'\nThis job is run every day at {args.hour} EST')
     if '.csv' in args.address:
         with open(args.address,'r+') as f:
             entries = pd.read_csv(args.address,index_col=0)
@@ -34,14 +34,14 @@ def send_daily_poem():
         poet=args.poet, 
         title=args.title, 
         when=time.time(), 
-        min_length=12, 
+        min_length=10, 
         max_length=2000, 
         poet_latency=28, 
         title_latency=800, 
         contextual=args.context, 
         tag_historical=args.hist_tag,
-        read_historical=args.rh, 
         write_historical=args.wh,
+        read_historical=args.rh, 
         verbose=True,
     )
 

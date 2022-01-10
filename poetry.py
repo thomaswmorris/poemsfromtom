@@ -21,19 +21,8 @@ class Poetizer:
         self.username = 'poemsfromtom@gmail.com'
         self.use_repo = use_repo
 
-        # these are secret!!! go away!!!
+        # this is secret!!! go away!!!
         self.password = 'becauseidonothopetoturnagain'
-        if not self.use_repo:
-            self.history = pd.read_csv('history.csv',index_col=0)
-        else:
-            self.token = "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"
-            self.g = gh.Github(self.token)
-            self.repo = self.g.get_user().get_repo('poetry')
-            self.repo_history_contents = self.repo.get_contents('history.csv')
-            self.history = pd.read_csv(StringIO(self.repo_history_contents.decoded_content.decode()),index_col=0)
-
-            self.daily_history = self.history.loc[self.history['type']=='daily']
-
         self.poets, self.titles, self.pt_keys = [], [], []
         fns = np.sort([fn for fn in glob.glob('./_json/*.json')])
         for fn in fns:
@@ -187,6 +176,21 @@ class Poetizer:
 
         string = re.sub(r'\'S ','\'s ',string)
         return string
+
+    
+    def load_history():
+
+        if self.use_repo:
+            self.g = gh.Github("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")
+            self.repo = self.g.get_user().get_repo('poetry')
+            self.repo_history_contents = self.repo.get_contents('history.csv')
+            self.history = pd.read_csv(StringIO(self.repo_history_contents.decoded_content.decode()),index_col=0)
+            self.daily_history = self.history.loc[self.history['type']=='daily']
+        else:
+            try:
+                self.history = pd.read_csv('history.csv',index_col=0)
+            except Exception as e:
+                print(f'{e}\ncould not find history.csv')
     
 
     def load_poem(self,
@@ -206,6 +210,8 @@ class Poetizer:
                   html_color='Black'):
 
         self.poem = None
+        if read_historical:
+            self.load_history()
         
         if (not poet in self.poets) and (not poet=='random'):
             raise(Exception(f'The poet \"{poet}\" is not in the database!'))
