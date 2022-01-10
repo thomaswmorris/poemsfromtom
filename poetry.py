@@ -210,7 +210,7 @@ class Poetizer:
                   html_color='Black'):
 
         self.poem = None
-        if read_historical:
+        if read_historical or write_historical:
             self.load_history()
         
         if (not poet in self.poets) and (not poet=='random'):
