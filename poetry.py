@@ -178,7 +178,7 @@ class Poetizer:
         return string
 
     
-    def load_history():
+    def load_history(self):
 
         if self.use_repo:
             self.g = gh.Github("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")
