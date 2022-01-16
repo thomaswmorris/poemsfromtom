@@ -54,7 +54,7 @@ if not args.repo_lsfn == '':
     entries  = pd.read_csv(StringIO(contents.decoded_content.decode()),index_col=0)
 
 else: 
-    entries = pd.DataFrame(columns=['name','email']):
+    entries = pd.DataFrame(columns=['name','email'])
     for recipient in args.recipient.split(','):
         entries.loc[len(entries)] = '*', recipient
 
