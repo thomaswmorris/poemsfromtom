@@ -208,6 +208,9 @@ class Poetizer:
                   very_verbose=False,
                   html_color='Black'):
 
+        print(repo_name)
+        print(repo_token)
+
         self.poem = None
         if read_historical or write_historical:
             self.load_history(repo_name=repo_name,
