@@ -1,10 +1,12 @@
-name: Test poem on push
+name: Send daily poem 
 
-on: push
+on:
+  schedule:
+    - cron: '00 7 * * *'  # daily at 7 AM
 
 jobs:
   run_tests:
-    name: Test send-poem.py with credentials
+    name: Send daily poem 
     runs-on: ubuntu-latest
 
     defaults:
@@ -19,7 +21,7 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Send poem to myself
+      - name: Send poem to listserv
         run:
           python send-poem.py --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --recipient 'testserv.csv' 
           --repo 'poetry' --token ${{ secrets.GH_TOKEN }} --subj_tag 'Poem of the Day | ' --context true --rh true --wh false --hist_tag 'test'

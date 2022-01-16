@@ -337,7 +337,7 @@ class Poetizer:
         print(password)
 
         message = MIMEMultipart('alternative')
-        message['From']    = 'Daily Poems' # username
+        message['From']    = 'daily poems' # username
         message['To']      = recipient
         message['Subject'] = subject
         message.attach(MIMEText(html, 'html'))
