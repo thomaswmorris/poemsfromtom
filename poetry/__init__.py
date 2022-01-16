@@ -298,9 +298,11 @@ class Poetizer:
             self.history.loc[len(self.history)] = self.poet, self.title, tag_historical, now_date, now_time, now
             if not repo_name == '':
                 self.repo.update_file('history.csv', 'poem log', self.history.to_csv(), sha=self.repo_history_contents.sha, branch='data')
+                self.repo.update_file('stats.csv', 'poem log', self.get_stats().to_csv(), sha=self.repo_history_contents.sha, branch='data')
                 output += ' (wrote to repo)'
             else:
                 self.history.to_csv('history.csv')
+                self.get_stats().to_csv('stats.csv')
                 output += ' (wrote to local history)'
             
         if verbose: print(output)
@@ -356,4 +358,6 @@ class Poetizer:
     
     def send_stats(self, username, password, recipient):
         self.send(username, password, self.get_stats.to_html(), recipient, subject=f'STATS for {datetime.fromtimestamp(int(time.time())).isoformat()}')
+        
+
         
