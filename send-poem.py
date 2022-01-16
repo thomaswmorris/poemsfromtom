@@ -65,7 +65,7 @@ def send_daily_poem(*arguments):
 
 for name, email in zip(entries['name'],entries['email']):
 
-    p = Process(target=send_daily_poem, args=(args.username, args.password, email, tag=args.subj_tag))
+    p = Process(target=send_daily_poem, args=(args.username, args.password, email, args.subj_tag))
     p.start()
     p.join()
 
