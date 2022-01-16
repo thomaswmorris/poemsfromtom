@@ -2,6 +2,7 @@ import time
 import pandas as pd
 #from apscheduler.schedulers.blocking import BlockingScheduler
 from poetry import Poetizer
+from io import StringIO
 
 
 #schedule = BlockingScheduler(timezone='America/New_York')
