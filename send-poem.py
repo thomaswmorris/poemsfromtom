@@ -51,6 +51,13 @@ poetizer.load_poem(
 )
 
 for name, email in zip(entries['name'],entries['email']):
+
+    poetizer.send_poem(args.username, args.password, email, tag=args.subj_tag)
+    a,b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
+
+
+'''
+for name, email in zip(entries['name'],entries['email']):
     done = False; fails = 0
     while (not done) and (fails < 12):
         try:
@@ -61,7 +68,7 @@ for name, email in zip(entries['name'],entries['email']):
             print(e)
             time.sleep(60)
             fails += 1
-
+'''
 
     
 
