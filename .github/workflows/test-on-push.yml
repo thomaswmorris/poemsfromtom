@@ -21,6 +21,9 @@ jobs:
           export GH_TOKEN=${{ secrets.GH_TOKEN }}
           echo "GH_TOKEN=${GH_TOKEN}" 
 
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
       - name: Test dir
         run: 
           ls -la
