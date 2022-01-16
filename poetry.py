@@ -334,7 +334,7 @@ class Poetizer:
     def send(self, username, password, html, recipient, subject=''):
 
         message = MIMEMultipart('alternative')
-        message['From']    = 'Daily Poems' # username
+        message['From']    = username # 'Daily Poems' # username
         message['To']      = recipient
         message['Subject'] = subject
         message.attach(MIMEText(html, 'html'))
