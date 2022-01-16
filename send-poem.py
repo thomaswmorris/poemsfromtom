@@ -24,10 +24,10 @@ parser.add_argument('--hour', type=str, help='Hour of the day to send', default=
 
 args = parser.parse_args()
 
-if '.csv' in args.address:
-    with open(args.address,'r+') as f:
+if '.csv' in args.recipient:
+    with open(args.recipient,'r+') as f:
         entries = pd.read_csv(args.recipient,index_col=0)
-else: entries = pd.DataFrame(columns=['name','email']); entries.loc[0] = '*', args.address
+else: entries = pd.DataFrame(columns=['name','email']); entries.loc[0] = '*', args.recipient
 
 # Initialize the poetizer
 poetizer = Poetizer()

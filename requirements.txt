@@ -2,4 +2,3 @@ regex
 numpy
 pandas
 pygithub
-apscheduler
