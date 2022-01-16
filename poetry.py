@@ -180,12 +180,14 @@ class Poetizer:
             self.repo = self.g.get_user().get_repo(repo_name)
             self.repo_history_contents = self.repo.get_contents('history.csv')
             self.history = pd.read_csv(StringIO(self.repo_history_contents.decoded_content.decode()),index_col=0)
-            self.daily_history = self.history.loc[self.history['type']!='test']
         else:
             try:
                 self.history = pd.read_csv('history.csv',index_col=0)
             except Exception as e:
+                self.history = pd.DataFrame(columns=['poet','title','type','date','time','timestamp'])
                 print(f'{e}\ncould not find history.csv')
+
+        self.daily_history = self.history.loc[self.history['type']!='test']
     
 
     def load_poem(self,
