@@ -31,5 +31,5 @@ jobs:
 
       - name: Send poem to myself
         run:
-          python send-poem.py --username 'poemsfromtom@gmail.com' --password "${PFT_PW}" --recipient 'poemsfromtom@gmail.com' 
-          --repo 'poetry' --token "${GH_TOKEN}" --subj_tag 'Poem of the Day | ' --context true --rh true --wh true --hist_tag 'test'
+          python send-poem.py --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --recipient 'poemsfromtom@gmail.com' 
+          --repo 'poetry' --token ${{ secrets.GH_TOKEN }} --subj_tag 'Poem of the Day | ' --context true --rh true --wh true --hist_tag 'test'
