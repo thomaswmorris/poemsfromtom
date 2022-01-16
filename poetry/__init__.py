@@ -19,7 +19,9 @@ class Poetizer:
                         
         self.dict = {}
         self.poets, self.titles, self.pt_keys = [], [], []
-        fns = np.sort([fn for fn in glob.glob('../poems/*.json')])
+        self.content_prefix = '../'
+        print(glob.glob(self.content_prefix))
+        fns = np.sort([fn for fn in glob.glob(self.content_prefix + 'poems/*.json')])
         for fn in fns:
             with open(fn, 'r+') as f:
                 _dict = json.load(f)
