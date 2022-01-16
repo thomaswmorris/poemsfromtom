@@ -1,11 +1,9 @@
 import time
 import pandas as pd
-#from apscheduler.schedulers.blocking import BlockingScheduler
 from poetry import Poetizer
 from io import StringIO
+from multiprocessing import Process
 
-
-#schedule = BlockingScheduler(timezone='America/New_York')
 
 import argparse, sys
 parser = argparse.ArgumentParser()
@@ -60,10 +58,21 @@ else:
         entries.loc[len(entries)] = '*', recipient
 
 
+def send_daily_poem(*arguments):
+
+    poetizer.send_poem(*arguments)
+    a,b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
+
 for name, email in zip(entries['name'],entries['email']):
 
-    poetizer.send_poem(args.username, args.password, email, tag=args.subj_tag)
-    a,b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
+    p = Process(target=send_daily_poem, args=(args.username, args.password, email, tag=args.subj_tag))
+    p.start()
+    p.join()
+
+#for name, email in zip(entries['name'],entries['email']):
+
+ #   poetizer.send_poem(args.username, args.password, email, tag=args.subj_tag)
+ #   a,b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
 
 
 '''
