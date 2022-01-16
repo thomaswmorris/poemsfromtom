@@ -292,7 +292,7 @@ class Poetizer:
         if write_historical:
             now = int(time.time()); now_date, now_time = datetime.now().isoformat()[:19].split('T')
             self.history.loc[len(self.history)] = self.poet, self.title, tag_historical, now_date, now_time, now
-            if not self.use_repo:
+            if not repo_name == '':
                 self.history.to_csv('history.csv')
                 output += ' (wrote to local history)'
             else:
