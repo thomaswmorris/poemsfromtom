@@ -23,5 +23,5 @@ jobs:
 
       - name: Send poem to listserv
         run:
-          python send-poem.py --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --recipient 'testserv.csv' 
+          python send-poem.py --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --repo_lsfn 'listserv.csv'
           --repo 'poetry' --token ${{ secrets.GH_TOKEN }} --subj_tag 'Poem of the Day | ' --context true --rh true --wh false --hist_tag 'test'
