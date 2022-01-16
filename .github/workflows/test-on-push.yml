@@ -15,7 +15,7 @@ jobs:
       - name: Set env vars
         run: |
 
-          export PFT_PW=${secrets.PFT_PW}  
+          export PFT_PW=${{ secrets.PFT_PW }}
           echo "PFT_PASSWORD=${PFT_PW}" 
 
           export GH_TOKEN=${{ secrets.GH_TOKEN }}
