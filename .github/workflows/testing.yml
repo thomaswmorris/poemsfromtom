@@ -1,0 +1,9 @@
+name: Build and Publish
+on:
+  push:
+
+jobs:
+  env:
+    GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    PFT_PASSWORD: ${{ secrets.PFT_PW }}
+
