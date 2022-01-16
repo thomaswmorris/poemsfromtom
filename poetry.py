@@ -15,14 +15,9 @@ from email.mime.text import MIMEText
 
 
 class Poetizer:
-    def __init__(self,use_repo=False):
-                
+    def __init__(self):
+                        
         self.dict = {}
-        self.username = 'poemsfromtom@gmail.com'
-        self.use_repo = use_repo
-
-        # this is secret!!! go away!!!
-        self.password = 'becauseidonothopetoturnagain'
         self.poets, self.titles, self.pt_keys = [], [], []
         fns = np.sort([fn for fn in glob.glob('./_json/*.json')])
         for fn in fns:
@@ -178,14 +173,14 @@ class Poetizer:
         return string
 
     
-    def load_history(self):
+    def load_history(self,repo_name='',repo_token=''):
 
-        if self.use_repo:
-            self.g = gh.Github("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")
-            self.repo = self.g.get_user().get_repo('poetry')
+        if not repo_name == '':
+            self.g = gh.Github(repo_token)
+            self.repo = self.g.get_user().get_repo(repo_name)
             self.repo_history_contents = self.repo.get_contents('history.csv')
             self.history = pd.read_csv(StringIO(self.repo_history_contents.decoded_content.decode()),index_col=0)
-            self.daily_history = self.history.loc[self.history['type']=='daily']
+            self.daily_history = self.history.loc[self.history['type']!='test']
         else:
             try:
                 self.history = pd.read_csv('history.csv',index_col=0)
@@ -202,6 +197,8 @@ class Poetizer:
                   poet_latency=0,
                   title_latency=0,
                   contextual=False,
+                  repo_name='',
+                  repo_token='',
                   tag_historical='',
                   read_historical=False,
                   write_historical=False,
@@ -211,7 +208,8 @@ class Poetizer:
 
         self.poem = None
         if read_historical or write_historical:
-            self.load_history()
+            self.load_history(repo_name=repo_name,
+                              repo_token=repo_token)
         
         if (not poet in self.poets) and (not poet=='random'):
             raise(Exception(f'The poet \"{poet}\" is not in the database!'))
@@ -221,7 +219,7 @@ class Poetizer:
             raise(Exception(f'The poem \"{title}\" poet \"{poet}\" is not in the database!'))
             
         # apply multipliers accordingly; so that poems titled "christmas" aren't sent in june, or poems titled "sunday" aren't sent on thursday
-        #if self.likelihood == None:
+        # if self.likelihood == None:
         self.likelihood = np.ones(self.n_pt) / self.n_pt 
         for _poet in list(self.dict):
             self.likelihood[_poet==np.array(self.poets)] = 1 / np.sum(_poet==np.array(self.poets))
@@ -237,7 +235,7 @@ class Poetizer:
                     if not kw in list(self.kw_dict): 
                         self.kw_dict[kw] = []
                     for i_pt,(_poet,_title) in enumerate(self.pt_keys): 
-                        #if np.any([self.string_contains_phrase(_title,_kw) for _kw in [kw,*self.kw_dict[kw]]]):
+                        # if np.any([self.string_contains_phrase(_title,_kw) for _kw in [kw,*self.kw_dict[kw]]]):
                         for _kw in [kw, *self.kw_dict[kw]]:
                             if self.string_contains_phrase(_title,_kw):
                                 if kw == context_kw:
@@ -328,29 +326,25 @@ class Poetizer:
         </html>
         """     
 
-    def send(self, html, recipient, subject=''):
+    def send(self, username, password, html, recipient, subject=''):
+
         message = MIMEMultipart('alternative')
-        message.attach(MIMEText(html, 'html'))
         message['From']    = self.username
         message['To']      = recipient
         message['Subject'] = subject
+        message.attach(MIMEText(html, 'html'))
 
         server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-        server.login(self.username, self.password)
+        server.login(username, password)
         server.send_message(message)
         server.quit()
 
-    def send_poem(self, recipient, tag=''):
-        self.send(self.poem_html, recipient, subject=tag+self.header)
+    def send_poem(self, username, password, recipient, tag=''):
+        self.send(username, password, self.poem_html, recipient, subject=tag+self.header)
 
-    def send_history(self, recipient, n=10):
-        self.send(self.history.iloc[-n:].to_html(), recipient, subject=f'HISTORY for {datetime.fromtimestamp(int(time.time())).isoformat()}')
+    def send_history(self, username, password, recipient, n=10):
+        self.send(username, password, self.history.iloc[-n:].to_html(), recipient, subject=f'HISTORY for {datetime.fromtimestamp(int(time.time())).isoformat()}')
     
-    def send_stats(self, recipient):
-        self.send(self.get_stats.to_html(), recipient, subject=f'STATS for {datetime.fromtimestamp(int(time.time())).isoformat()}')
+    def send_stats(self, username, password, recipient):
+        self.send(username, password, self.get_stats.to_html(), recipient, subject=f'STATS for {datetime.fromtimestamp(int(time.time())).isoformat()}')
         
-#poetizer = Poetizer()
-#poetizer.load_poem(poet='random',title='random')
-#poetizer.load_poem(poet='random',title='CHANGING OF THE GUARD')
-#poetizer.load_poem(poet='merton',title='random')
-#poetizer.load_poem(poet='random',title='random',min_length=500)
