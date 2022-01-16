@@ -19,7 +19,7 @@ class Poetizer:
                         
         self.dict = {}
         self.poets, self.titles, self.pt_keys = [], [], []
-        self.content_prefix = '../'
+        self.content_prefix = ''
         print(glob.glob(self.content_prefix))
         fns = np.sort([fn for fn in glob.glob(self.content_prefix + 'poems/*.json')])
         for fn in fns:
