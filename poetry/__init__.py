@@ -19,7 +19,7 @@ class Poetizer:
                         
         self.dict = {}
         self.poets, self.titles, self.pt_keys = [], [], []
-        fns = np.sort([fn for fn in glob.glob('./_json/*.json')])
+        fns = np.sort([fn for fn in glob.glob('../poems/*.json')])
         for fn in fns:
             with open(fn, 'r+') as f:
                 _dict = json.load(f)
@@ -178,7 +178,7 @@ class Poetizer:
         if not repo_name == '':
             self.g = gh.Github(repo_token)
             self.repo = self.g.get_user().get_repo(repo_name)
-            self.repo_history_contents = self.repo.get_contents('history.csv')
+            self.repo_history_contents = self.repo.get_contents('history.csv',ref='data')
             self.history = pd.read_csv(StringIO(self.repo_history_contents.decoded_content.decode()),index_col=0)
         else:
             try:
@@ -188,7 +188,6 @@ class Poetizer:
                 print(f'{e}\ncould not find history.csv')
 
         self.daily_history = self.history.loc[self.history['type']!='test']
-    
 
     def load_poem(self,
                   poet='random',

@@ -11,6 +11,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--username', type=str, help='Email address from which to send the poem',default='')
 parser.add_argument('--password', type=str, help='Email password',default='')
 parser.add_argument('--recipient', type=str, help='Where to send the poem',default='poemsfromtom@gmail.com')
+parser.add_argument('--repo_lsfn', type=str, help='Where to send the poem',default='')
 parser.add_argument('--poet', type=str, help='Which poet to send', default='random')
 parser.add_argument('--title', type=str, help='Which title to send', default='random')
 parser.add_argument('--repo', type=str, help='Which GH repository to load', default='')
@@ -24,10 +25,6 @@ parser.add_argument('--hour', type=str, help='Hour of the day to send', default=
 
 args = parser.parse_args()
 
-if '.csv' in args.recipient:
-    with open(args.recipient,'r+') as f:
-        entries = pd.read_csv(args.recipient,index_col=0)
-else: entries = pd.DataFrame(columns=['name','email']); entries.loc[0] = '*', args.recipient
 
 # Initialize the poetizer
 poetizer = Poetizer()
@@ -49,6 +46,18 @@ poetizer.load_poem(
     read_historical=args.rh, 
     verbose=True,
 )
+
+
+
+if not args.repo_lsfn == '':
+    contents = poetizer.repo.get_contents(args.repo_lsfn,ref='data')
+    entries  = pd.read_csv(StringIO(contents.decoded_content.decode()),index_col=0)
+
+else: 
+    entries = pd.DataFrame(columns=['name','email']):
+    for recipient in args.recipient.split(','):
+        entries.loc[len(entries)] = '*', recipient
+
 
 for name, email in zip(entries['name'],entries['email']):
 
