@@ -1,4 +1,4 @@
-name: Send daily poem
+name: Test poem on push
 
 on: push
 
