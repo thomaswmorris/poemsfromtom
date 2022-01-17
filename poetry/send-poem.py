@@ -46,8 +46,6 @@ poetizer.load_poem(
     verbose=True,
 )
 
-
-
 if not args.repo_lsfn == '':
     contents = poetizer.repo.get_contents(args.repo_lsfn,ref='data')
     entries  = pd.read_csv(StringIO(contents.decoded_content.decode()),index_col=0)
@@ -56,7 +54,6 @@ else:
     entries = pd.DataFrame(columns=['name','email'])
     for recipient in args.recipient.split(','):
         entries.loc[len(entries)] = '*', recipient
-
 
 def f(*arguments):
 

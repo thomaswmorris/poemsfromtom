@@ -38,7 +38,7 @@ def f(username, password, name, email, tag):
             time.sleep(60)
             fails += 1
 
-@schedule.scheduled_job('cron', day_of_week='mon,tue,wed,thu,fri,sat,sun', hour=args.hour)
+#@schedule.scheduled_job('cron', day_of_week='mon,tue,wed,thu,fri,sat,sun', hour=args.hour)
 def send_daily_poem():
 
     print(f'\nThis job is run every day at {args.hour} EST')
@@ -76,9 +76,6 @@ def send_daily_poem():
         p = Process(target=f, args=(args.username, os.environ['PFT_PW'], name, email, args.subj_tag))
         p.start()
         p.join()
-
-        break
-
 
     
 send_daily_poem()

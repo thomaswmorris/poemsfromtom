@@ -20,7 +20,6 @@ class Poetizer:
         self.dict = {}
         self.poets, self.titles, self.pt_keys = [], [], []
         self.content_prefix = ''
-        print(glob.glob(self.content_prefix))
         fns = np.sort([fn for fn in glob.glob(self.content_prefix + 'poems/*.json')])
         for fn in fns:
             with open(fn, 'r+') as f:
@@ -209,9 +208,6 @@ class Poetizer:
                   very_verbose=False,
                   html_color='Black'):
 
-        print(repo_name)
-        print(repo_token)
-
         self.poem = None
         if read_historical or write_historical:
             self.load_history(repo_name=repo_name,
@@ -333,9 +329,6 @@ class Poetizer:
         """     
 
     def send(self, username, password, html, recipient, subject=''):
-
-        print(username)
-        print(password)
 
         message = MIMEMultipart('alternative')
         message['From']    = username
