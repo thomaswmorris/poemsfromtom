@@ -27,18 +27,16 @@ parser.add_argument('--subj_tag', type=str, help='Email subject prefix', default
 parser.add_argument('--hour', type=str, help='Hour of the day to send', default=7)
 args = parser.parse_args()
 
-def f(poetizer, username, password, name, email, tag):
+def f(username, password, name, email, tag):
     done, fails = False, 0
     while (not done) and (fails < 12):
         try:
-            poetizer.send_poem(username, password, email, tag)
+            poetizer.send_poem(username, password, email, tag); done = True
             a,b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
         except Exception as e:
-            print(e)
-            time.sleep(60)
-            fails += 1
-
-#@schedule.scheduled_job('cron', day_of_week='mon,tue,wed,thu,fri,sat,sun', hour=args.hour)
+            print(e); fails += 1; time.sleep(60)
+            
+@schedule.scheduled_job('cron', day_of_week='mon,tue,wed,thu,fri,sat,sun', hour=args.hour)
 def send_daily_poem():
 
     print(f'\nThis job is run every day at {args.hour} EST')
@@ -69,17 +67,11 @@ def send_daily_poem():
         for recipient in args.recipient.split(','):
             entries.loc[len(entries)] = '*', recipient
 
-    print(entries)
-
     for name, email in zip(entries['name'],entries['email']):
-
-        f(poetizer, args.username, os.environ['PFT_PW'], name, email, args.subj_tag)
-
-        #p = Process(target=f, args=(args.username, os.environ['PFT_PW'], name, email, args.subj_tag))
-        #p.start()
-        #p.join()
-
-    
+        p = Process(target=f, args=(args.username, os.environ['PFT_PW'], name, email, args.subj_tag))
+        p.start()
+        p.join()
+ 
 send_daily_poem()
 #schedule.start()
 
