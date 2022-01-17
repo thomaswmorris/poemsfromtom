@@ -27,11 +27,12 @@ parser.add_argument('--subj_tag', type=str, help='Email subject prefix', default
 parser.add_argument('--hour', type=str, help='Hour of the day to send', default=7)
 args = parser.parse_args()
 
-def f(*arguments):
-    done = False; fails = 0
+def f(username, password, entry, tag):
+    done, fails = False, 0
+    name, email = entries['name'], entries['email']
     while (not done) and (fails < 12):
         try:
-            poetizer.send_poem(*arguments)
+            poetizer.send_poem(args.username, os.environ['PFT_PW'], email, tag)
             a,b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
         except Exception as e:
             print(e)
@@ -69,9 +70,9 @@ def send_daily_poem():
         for recipient in args.recipient.split(','):
             entries.loc[len(entries)] = '*', recipient
 
-    for name, email in zip(entries['name'],entries['email']):
+    for entry in entries:
 
-        p = Process(target=f, args=(args.username, os.environ['PFT_PW'], email, args.subj_tag))
+        p = Process(target=f, args=(args.username, os.environ['PFT_PW'], entry, args.subj_tag))
         p.start()
         p.join()
 
