@@ -1,7 +1,7 @@
 import time
 import pandas as pd
 from apscheduler.schedulers.blocking import BlockingScheduler
-from .poetry import Poetizer
+from poetry import Poetizer
 from multiprocessing import Process
 import os
 from io import StringIO
