@@ -29,10 +29,10 @@ args = parser.parse_args()
 
 def f(username, password, entry, tag):
     done, fails = False, 0
-    name, email = entries['name'], entries['email']
+    name, email = entry['name'], entry['email']
     while (not done) and (fails < 12):
         try:
-            poetizer.send_poem(args.username, os.environ['PFT_PW'], email, tag)
+            poetizer.send_poem(username, password, email, tag)
             a,b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
         except Exception as e:
             print(e)
