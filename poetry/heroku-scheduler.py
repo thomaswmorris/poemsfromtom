@@ -29,7 +29,6 @@ args = parser.parse_args()
 
 def f(username, password, name, email, tag):
     done, fails = False, 0
-    name, email = entry['name'], entry['email']
     while (not done) and (fails < 12):
         try:
             poetizer.send_poem(username, password, email, tag)
