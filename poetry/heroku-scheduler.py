@@ -69,11 +69,15 @@ def send_daily_poem():
         for recipient in args.recipient.split(','):
             entries.loc[len(entries)] = '*', recipient
 
+    print(entries)
+
     for name, email in zip(entries['name'],entries['email']):
 
         p = Process(target=f, args=(args.username, os.environ['PFT_PW'], name, email, args.subj_tag))
         p.start()
         p.join()
+
+        break
 
 
     
