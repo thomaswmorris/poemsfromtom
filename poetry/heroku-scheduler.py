@@ -6,7 +6,7 @@ from multiprocessing import Process
 import os
 from io import StringIO
 
-poetizer = Poetizer(use_repo=True)
+poetizer = Poetizer()
 schedule = BlockingScheduler(timezone='America/New_York')
 
 import argparse, sys
@@ -28,10 +28,10 @@ parser.add_argument('--hour', type=str, help='Hour of the day to send', default=
 args = parser.parse_args()
 
 
-
 print(os.environ['GITHUB_TOKEN'])
 
 def f(*arguments):
+    done = False
     while (not done) and (fails < 12):
         try:
             poetizer.send_poem(*arguments)
