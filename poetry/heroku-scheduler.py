@@ -31,7 +31,7 @@ args = parser.parse_args()
 print(os.environ['GITHUB_TOKEN'])
 
 def f(*arguments):
-    done = False
+    done = False; fails = 0
     while (not done) and (fails < 12):
         try:
             poetizer.send_poem(*arguments)
@@ -40,18 +40,6 @@ def f(*arguments):
             print(e)
             time.sleep(60)
             fails += 1
-
-
-if not args.repo_lsfn == '':
-    contents = poetizer.repo.get_contents(args.repo_lsfn,ref='data')
-    entries  = pd.read_csv(StringIO(contents.decoded_content.decode()),index_col=0)
-
-else: 
-    entries = pd.DataFrame(columns=['name','email'])
-    for recipient in args.recipient.split(','):
-        entries.loc[len(entries)] = '*', recipient
-
-
 
 @schedule.scheduled_job('cron', day_of_week='mon,tue,wed,thu,fri,sat,sun', hour=args.hour)
 def send_daily_poem():
@@ -78,7 +66,15 @@ def send_daily_poem():
         write_historical=args.wh,
         read_historical=args.rh, 
         verbose=True,
-)
+    )
+
+    if not args.repo_lsfn == '':
+        contents = poetizer.repo.get_contents(args.repo_lsfn,ref='data')
+        entries  = pd.read_csv(StringIO(contents.decoded_content.decode()),index_col=0)
+    else: 
+        entries = pd.DataFrame(columns=['name','email'])
+        for recipient in args.recipient.split(','):
+            entries.loc[len(entries)] = '*', recipient
 
     for name, email in zip(entries['name'],entries['email']):
 
@@ -86,9 +82,6 @@ def send_daily_poem():
         p.start()
         p.join()
 
-
-
-    
 
     
 send_daily_poem()
