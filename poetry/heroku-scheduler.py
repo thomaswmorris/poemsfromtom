@@ -72,8 +72,8 @@ def send_daily_poem():
         p.start()
         p.join()
  
-send_daily_poem()
-#schedule.start()
+#send_daily_poem()
+schedule.start()
 
     
 
