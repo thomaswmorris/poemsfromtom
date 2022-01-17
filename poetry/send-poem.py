@@ -1,6 +1,6 @@
 import time
 import pandas as pd
-from . import Poetizer
+from .poetry import Poetizer
 from io import StringIO
 from multiprocessing import Process
 
