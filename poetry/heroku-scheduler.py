@@ -27,7 +27,7 @@ parser.add_argument('--subj_tag', type=str, help='Email subject prefix', default
 parser.add_argument('--hour', type=str, help='Hour of the day to send', default=7)
 args = parser.parse_args()
 
-def f(username, password, entry, tag):
+def f(username, password, name, email, tag):
     done, fails = False, 0
     name, email = entry['name'], entry['email']
     while (not done) and (fails < 12):
@@ -70,9 +70,9 @@ def send_daily_poem():
         for recipient in args.recipient.split(','):
             entries.loc[len(entries)] = '*', recipient
 
-    for entry in entries:
+    for name, email in zip(entries['name'],entries['email']):
 
-        p = Process(target=f, args=(args.username, os.environ['PFT_PW'], entry, args.subj_tag))
+        p = Process(target=f, args=(args.username, os.environ['PFT_PW'], name, email, args.subj_tag))
         p.start()
         p.join()
 
