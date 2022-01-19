@@ -49,7 +49,7 @@ class Poetizer:
         self.kw_dict['palm sunday']      = ['~donkey']
         self.kw_dict['good friday']      = ['~paschal','~crucifixion']
         self.kw_dict['easter vigil']     = ['~hell']
-        self.kw_dict['pentacost']        = ['~holy spirit']
+        self.kw_dict['pentacost']        = ['~holy spirit','pentacostal']
         self.kw_dict['lent']             = ['~sin', '~sorrow', '~sadness']
         self.kw_dict['independence day'] = ['~america']
         self.kw_dict['halloween']        = ['goblin']
@@ -141,12 +141,12 @@ class Poetizer:
         
         if force_rows: pd.set_option('display.max_rows', None)
         if force_cols: pd.set_option('display.max_columns', None)
-        self.stats = pd.DataFrame(columns=['name','birth','death','n_poems','times_sent','last_sent'])
+        self.stats = pd.DataFrame(columns=['name','birth','death','n_poems']) #,'times_sent','last_sent'])
         for _poet in list(self.dict):
             
             tag, name, birth, death, link = self.dict[_poet]['metadata'].split('|')
-            elapsed = (time.time() - self.history['timestamp'][self.history['poet']==_poet].max()) / 86400# if _poet in self.history['poet'] else None
-            self.stats.loc[_poet] = name, birth, death, len(self.dict[_poet]) - 1, (self.history['poet']==_poet).sum(), np.round(elapsed,1)
+            #elapsed = (time.time() - self.history['timestamp'][self.history['poet']==_poet].max()) / 86400# if _poet in self.history['poet'] else None
+            self.stats.loc[_poet] = name, birth, death, len(self.dict[_poet]) - 1 #, (self.history['poet']==_poet).sum(), np.round(elapsed,1)
             
         self.stats.index.name = f'{np.sum([len(self.dict[_poet]) - 1 for _poet in list(self.dict)])} poems from {len(self.dict)} poets'
         return self.stats
