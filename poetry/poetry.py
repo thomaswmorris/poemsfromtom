@@ -21,12 +21,13 @@ class Poetizer:
         self.poets, self.titles, self.pt_keys = [], [], []
         self.content_prefix = ''
         fns = np.sort([fn for fn in glob.glob(self.content_prefix + 'poems/*.json')])
-        for fn in fns:
-            with open(fn, 'r+') as f:
-                _dict = json.load(f)
-            tag, name, birth, death, link = _dict['metadata'].split('|')
-            self.dict[tag] = _dict
-            for title in list(_dict):
+        #for fn in fns:
+        with open('poems.json', 'r+') as f:
+            pt_dict = json.load(f)
+        for k, v in pt_dict.items():
+            tag, name, birth, death, link = pt_dict[k]['metadata'].split('|')
+            self.dict[tag] = v
+            for title in list(v):
                 if not title=='metadata':
                     self.poets.append(tag)
                     self.titles.append(title)
