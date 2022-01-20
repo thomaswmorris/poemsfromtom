@@ -138,7 +138,7 @@ class Poetizer:
                     if np.any([self.string_contains_phrase(_title,_kw) for _kw in [kw,*self.kw_dict[kw]]]):
                         print(f'{_poet:<10} | {_title:}')
                         
-    def get_stats(self,force_rows=True,force_cols=True):
+    def get_stats(self,order_by=None,force_rows=True,force_cols=True):
         
         if force_rows: pd.set_option('display.max_rows', None)
         if force_cols: pd.set_option('display.max_columns', None)
@@ -150,7 +150,7 @@ class Poetizer:
             self.stats.loc[_poet] = name, birth, death, len(self.dict[_poet]) - 1 #, (self.history['poet']==_poet).sum(), np.round(elapsed,1)
             
         self.stats.index.name = f'{np.sum([len(self.dict[_poet]) - 1 for _poet in list(self.dict)])} poems from {len(self.dict)} poets'
-        return self.stats
+        return self.stats if order_by is None else self.stats.sort_values(by=order_by)
 
     
     def titleize(self,string):
