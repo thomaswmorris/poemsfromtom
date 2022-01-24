@@ -181,7 +181,7 @@ class Poetizer:
                 self.history = pd.DataFrame(columns=['poet','title','type','date','time','timestamp'])
                 print(f'{e}\ncould not find history.csv')
 
-    def make_stats(self,order_by=None,force_rows=True,force_cols=True):
+    def make_stats(self,order_by=None, ascending=True,force_rows=True,force_cols=True):
         
         if force_rows: pd.set_option('display.max_rows', None)
         if force_cols: pd.set_option('display.max_columns', None)
@@ -193,7 +193,7 @@ class Poetizer:
             self.stats.loc[_poet] = name, birth, death, len(self.dict[_poet]) - 1, (self.history['poet']==_poet).sum(), np.round(elapsed,1)
             
         if not order_by is None:
-            self.stats = self.stats.sort_values(by=order_by)
+            self.stats = self.stats.sort_values(by=order_by, ascending=ascending)
         # self.stats.index.name = f'{np.sum([len(self.dict[_poet]) - 1 for _poet in list(self.dict)])} poems from {len(self.dict)} poets'
         # return self.stats if order_by is None else self.stats.sort_values(by=order_by)
 
@@ -219,7 +219,7 @@ class Poetizer:
         self.history = None
         if read_historical or write_historical:
             self.load_history(repo_name=repo_name, repo_token=repo_token)
-            self.make_stats(order_by='times_sent')
+            self.make_stats(order_by='times_sent', ascending=True)
         
         if (not poet in self.poets) and (not poet=='random'):
             raise(Exception(f'The poet \"{poet}\" is not in the database!'))
@@ -304,7 +304,7 @@ class Poetizer:
             now = int(time.time()); now_date, now_time = datetime.now().isoformat()[:19].split('T')
             self.rhistory.loc[len(self.rhistory)] = self.poet, self.title, tag_historical, now_date, now_time, now
             self.history = self.rhistory.loc[self.rhistory['type']!='test']
-            self.make_stats(order_by='times_sent')
+            self.make_stats(order_by='times_sent', ascending=True)
 
             if not repo_name == '':
                 
