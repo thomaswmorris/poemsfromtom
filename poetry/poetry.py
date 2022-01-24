@@ -303,6 +303,7 @@ class Poetizer:
             self.history.loc[len(self.history)] = self.poet, self.title, tag_historical, now_date, now_time, now
             if not repo_name == '':
                 self.repo.update_file('history.csv', 'update log', self.history.to_csv(), sha=self.repo_history_contents.sha, branch='data')
+                time.sleep(60)
                 self.load_repo(self.repo_name, self.repo_token)
                 self.repo.update_file('stats.csv', 'update log', self.history.to_csv(), sha=self.repo_history_contents.sha, branch='data')
                 output += ' (wrote to repo)'
