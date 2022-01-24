@@ -315,8 +315,8 @@ class Poetizer:
         if write_historical:
             
             now_date, now_time = self.dt_now.isoformat()[:19].split('T')
-            self.rhistory.loc[len(self.rhistory)] = self.poet, self.title, tag_historical, now_date, now_time, self.now
-            self.history = self.rhistory.loc[self.rhistory['type']!='test']
+            self.history.loc[len(self.history)] = self.poet, self.title, tag_historical, now_date, now_time, self.now
+            # self.history = self.rhistory.loc[self.rhistory['type']!='test']
             self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
 
             if not repo_name == '':
