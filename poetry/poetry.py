@@ -361,7 +361,7 @@ class Poetizer:
                 html_body.replace('_','')
 
         import calendar
-        self.nice_fancy_date = f'{self.weekdays(self.dt_now.weekday).capitalize()}, '
+        self.nice_fancy_date = f'{self.weekdays(self.dt_now.weekday).capitalize()}, '\
                              + f'{calendar.month_name[self.dt_now.month]} {self.dt_now.day} {self.dt_now.year}'
         self.header = f'\"{self.titleize(self.title)}\" by {self.name}'
         self.poem_html = f"""
