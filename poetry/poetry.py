@@ -250,7 +250,7 @@ class Poetizer:
             if verbose: print('keywords:',context_keywords)
             for discriminator, context_kw, multiplier, label in zip([self.seasons, self.weekdays, self.months, self.holidays, self.liturgies],
                                                                     context_keywords,
-                                                                    [4,7,12,1e10,1e2],
+                                                                    [4,7,12,1e20,1e2],
                                                                     ['SEASONS', 'WEEKDAYS', 'MONTHS', 'HOLIDAYS', 'LITURGIES']):
                 
                 for kw in discriminator: # for all the possible values of this discriminator...
