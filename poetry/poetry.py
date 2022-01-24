@@ -317,7 +317,7 @@ class Poetizer:
                 tree   = self.repo.create_git_tree([hist_elem, stat_elem], base_tree)
                 parent = self.repo.get_git_commit(sha=head_sha) 
                 commit = self.repo.create_git_commit(f'update logs {datetime.now().isoformat()[:19]}', tree, [parent])
-                master_ref = self.github_repo.get_git_ref('heads/master')
+                master_ref = self.repo.get_git_ref('heads/master')
                 master_ref.edit(sha=commit.sha)
                 
                 output += ' (wrote to repo)'
