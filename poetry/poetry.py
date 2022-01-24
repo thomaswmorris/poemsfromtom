@@ -234,7 +234,7 @@ class Poetizer:
         self.likelihood = np.ones(self.n_pt) / self.n_pt 
         for _poet in list(self.dict):
             self.likelihood[_poet==np.array(self.poets)] = 1 / np.sum(_poet==np.array(self.poets))
-            if not self.daily_history == None:
+            if not self.daily_history is None:
                 self.likelihood[_poet==np.array(self.poets)] *= np.exp(-.2*np.sum(self.daily_history['poet']==_poet))
                 print(_poet, np.exp(-.2*np.sum(self.daily_history['poet']==_poet)))
         if contextual:
