@@ -220,7 +220,6 @@ class Poetizer:
         self.daily_history = None
         if read_historical or write_historical:
             self.load_history(repo_name=repo_name, repo_token=repo_token)
-            
             self.make_stats()
         
         if (not poet in self.poets) and (not poet=='random'):
@@ -231,13 +230,12 @@ class Poetizer:
             raise(Exception(f'The poem \"{title}\" poet \"{poet}\" is not in the database!'))
             
         # apply multipliers accordingly; so that poems titled "christmas" aren't sent in june, or poems titled "sunday" aren't sent on thursday
-        # if self.likelihood == None:
+        # if self.likelihood is None:
         self.likelihood = np.ones(self.n_pt) / self.n_pt 
         for _poet in list(self.dict):
             self.likelihood[_poet==np.array(self.poets)] = 1 / np.sum(_poet==np.array(self.poets))
             if not self.daily_history is None:
-                self.likelihood[_poet==np.array(self.poets)] *= np.exp(-.2*np.sum(self.daily_history['poet']==_poet))
-                print(_poet, np.exp(-.2*np.sum(self.daily_history['poet']==_poet)))
+                self.likelihood[_poet==np.array(self.poets)] *= np.exp(-.25 * np.sum(self.daily_history['poet']==_poet))
         if contextual:
             context_keywords = [self.get_season(when), self.get_weekday(when), self.get_month(when), self.get_holiday(when), self.get_liturgy(when)]
             if verbose: print('keywords:',context_keywords)
