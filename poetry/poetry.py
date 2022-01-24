@@ -1,4 +1,5 @@
-import regex as re
+import re
+import pytz
 import glob
 import json
 import time
@@ -230,6 +231,7 @@ class Poetizer:
             
         # apply multipliers accordingly; so that poems titled "christmas" aren't sent in june, or poems titled "sunday" aren't sent on thursday
         # if self.likelihood is None:
+
         self.likelihood = np.ones(self.n_pt) / self.n_pt 
         for _poet in list(self.dict):
             self.likelihood[_poet==np.array(self.poets)] = 1 / np.sum(_poet==np.array(self.poets))
@@ -299,20 +301,19 @@ class Poetizer:
         # Put the attributes of the poem into the class
         self.tag, self.name, self.birth, self.death, self.link = self.dict[self.poet]['metadata'].split('|')
         output = f'chose poem \"{self.title}\" by {self.name}'
+
+        self.now = int(time.time())
+        self.dt_now = datetime.fromtimestamp(self.now,tz=pytz.timezone('America/New_York'))
     
         if write_historical:
-            now = int(time.time()); now_date, now_time = datetime.now().isoformat()[:19].split('T')
-            self.rhistory.loc[len(self.rhistory)] = self.poet, self.title, tag_historical, now_date, now_time, now
+            
+            now_date, now_time = self.dt_now.isoformat()[:19].split('T')
+            self.rhistory.loc[len(self.rhistory)] = self.poet, self.title, tag_historical, now_date, now_time, self.now
             self.history = self.rhistory.loc[self.rhistory['type']!='test']
             self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
 
             if not repo_name == '':
-                
-                #self.repo.update_file('history.csv', 'update log', self.history.to_csv(), sha=self.repo_history_contents.sha, branch='data')
-                #self.load_repo(self.repo_name, self.repo_token)
-                #self.repo.update_file('stats.csv', 'update log', self.history.to_csv(), sha=self.repo_history_contents.sha, branch='data')
-                
-                
+
                 hist_blob = self.repo.create_git_blob(self.history.to_csv(), "utf-8")
                 stat_blob = self.repo.create_git_blob(self.stats.to_csv(), "utf-8")
 
@@ -325,7 +326,7 @@ class Poetizer:
                 tree   = self.repo.create_git_tree([hist_elem, stat_elem], base_tree)
                 parent = self.repo.get_git_commit(sha=head_sha) 
 
-                commit = self.repo.create_git_commit(f'update logs {datetime.now().isoformat()[:19]}', tree, [parent])
+                commit = self.repo.create_git_commit(f'update logs {now_date} {now_time}', tree, [parent])
                 master_ref = self.repo.get_git_ref('heads/data')
                 master_ref.edit(sha=commit.sha)
                 
@@ -336,6 +337,13 @@ class Poetizer:
                 output += ' (wrote to local history)'
             
         if verbose: print(output)
+
+        paddings = re.findall('\n+( *)', self.poem)
+        nmp = len(min(paddings, key=len))
+        if nmp > 0:
+            sorted
+            for padding in sorted(paddings,key=len):
+                self.poem = re.sub(padding, padding[:-nmp], self.poem)
 
         # Make an html version (for nicely formatted emails)
         html_body = '\n' + self.poem
@@ -352,11 +360,15 @@ class Poetizer:
             except:
                 html_body.replace('_','')
 
+        import calendar
+        self.nice_fancy_date = f'{self.weekdays(self.dt_now.weekday).capitalize()}, '
+                             + f'{calendar.month_name[self.dt_now.month]} {self.dt_now.day} {self.dt_now.year}'
         self.header = f'\"{self.titleize(self.title)}\" by {self.name}'
         self.poem_html = f"""
+        
         <html>
-        <h2 style="font-family:Garamond; color:{html_color}; font-size: 24px; margin-bottom:0; margin : 0; padding-top:0;">{self.titleize(self.title)}</h2>
-          <p style="font-family:Garamond; color:{html_color}; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;"><i>by 
+        <h2 style="font-family:Garamond; color:{html_color}; font-size: 26px; margin-bottom:0; margin : 0; padding-top:0;">{self.titleize(self.title)}<p>
+          <p style="font-family:Garamond; color:{html_color}; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0;"><i>by 
           <a href="{self.link}">{self.name}</a> ({self.birth}&#8212;{self.death})</i> </p>
           <hr>
             <p style="font-family:Garamond; color:{html_color}; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0">{html_body}
