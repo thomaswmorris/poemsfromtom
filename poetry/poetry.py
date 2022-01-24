@@ -219,7 +219,7 @@ class Poetizer:
         self.history = None
         if read_historical or write_historical:
             self.load_history(repo_name=repo_name, repo_token=repo_token)
-            self.make_stats(order_by='times_sent', ascending=False)
+            self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
         
         if (not poet in self.poets) and (not poet=='random'):
             raise(Exception(f'The poet \"{poet}\" is not in the database!'))
@@ -304,7 +304,7 @@ class Poetizer:
             now = int(time.time()); now_date, now_time = datetime.now().isoformat()[:19].split('T')
             self.rhistory.loc[len(self.rhistory)] = self.poet, self.title, tag_historical, now_date, now_time, now
             self.history = self.rhistory.loc[self.rhistory['type']!='test']
-            self.make_stats(order_by='times_sent', ascending=False)
+            self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
 
             if not repo_name == '':
                 
