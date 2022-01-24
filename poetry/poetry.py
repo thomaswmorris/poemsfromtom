@@ -309,15 +309,19 @@ class Poetizer:
                 
                 
                 hist_blob = self.repo.create_git_blob(self.history.to_csv(), "utf-8")
-                hist_elem = gh.InputGitTreeElement(path='history.csv', mode='100644', type='blob', sha=hist_blob.sha)
                 stat_blob = self.repo.create_git_blob(self.stats.to_csv(), "utf-8")
+
+                hist_elem = gh.InputGitTreeElement(path='history.csv', mode='100644', type='blob', sha=hist_blob.sha)
                 stat_elem = gh.InputGitTreeElement(path='stats.csv', mode='100644', type='blob', sha=stat_blob.sha)
-                head_sha  = self.repo.get_branch('master').commit.sha
+                
+                head_sha  = self.repo.get_branch('data').commit.sha
                 base_tree = self.repo.get_git_tree(sha=head_sha)
+
                 tree   = self.repo.create_git_tree([hist_elem, stat_elem], base_tree)
                 parent = self.repo.get_git_commit(sha=head_sha) 
+
                 commit = self.repo.create_git_commit(f'update logs {datetime.now().isoformat()[:19]}', tree, [parent])
-                master_ref = self.repo.get_git_ref('heads/master')
+                master_ref = self.repo.get_git_ref('heads/data')
                 master_ref.edit(sha=commit.sha)
                 
                 output += ' (wrote to repo)'
