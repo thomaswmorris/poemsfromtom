@@ -220,6 +220,7 @@ class Poetizer:
         self.daily_history = None
         if read_historical or write_historical:
             self.load_history(repo_name=repo_name, repo_token=repo_token)
+            
             self.make_stats()
         
         if (not poet in self.poets) and (not poet=='random'):
