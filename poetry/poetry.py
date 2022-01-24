@@ -192,6 +192,8 @@ class Poetizer:
             elapsed = (time.time() - self.history['timestamp'][self.history['poet']==_poet].max()) / 86400 # if _poet in self.history['poet'] else None
             self.stats.loc[_poet] = name, birth, death, len(self.dict[_poet]) - 1, (self.history['poet']==_poet).sum(), np.round(elapsed,1)
             
+        if not order_by is None:
+            self.stats = self.stats.sort_values(by=order_by)
         # self.stats.index.name = f'{np.sum([len(self.dict[_poet]) - 1 for _poet in list(self.dict)])} poems from {len(self.dict)} poets'
         # return self.stats if order_by is None else self.stats.sort_values(by=order_by)
 
@@ -300,8 +302,8 @@ class Poetizer:
     
         if write_historical:
             now = int(time.time()); now_date, now_time = datetime.now().isoformat()[:19].split('T')
-
-            self.history.loc[len(self.history)] = self.poet, self.title, tag_historical, now_date, now_time, now
+            self.rhistory.loc[len(self.rhistory)] = self.poet, self.title, tag_historical, now_date, now_time, now
+            self.history = self.rhistory.loc[self.rhistory['type']!='test']
             self.make_stats(order_by='times_sent')
 
             if not repo_name == '':
