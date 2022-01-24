@@ -365,10 +365,9 @@ class Poetizer:
                              + f'{calendar.month_name[self.dt_now.month]} {self.dt_now.day} {self.dt_now.year}'
         self.header = f'\"{self.titleize(self.title)}\" by {self.name}'
         self.poem_html = f"""
-        
         <html>
-        <h2 style="font-family:Garamond; color:{html_color}; font-size: 26px; margin-bottom:0; margin : 0; padding-top:0;">{self.titleize(self.title)}<p>
-          <p style="font-family:Garamond; color:{html_color}; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0;"><i>by 
+        <h2 style="font-family:Garamond; color:{html_color}; font-size: 24px; margin-bottom:0; margin : 0; padding-top:0;">{self.titleize(self.title)}</h2>
+          <p style="font-family:Garamond; color:{html_color}; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;"><i>by 
           <a href="{self.link}">{self.name}</a> ({self.birth}&#8212;{self.death})</i> </p>
           <hr>
             <p style="font-family:Garamond; color:{html_color}; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0">{html_body}
