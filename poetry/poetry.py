@@ -191,12 +191,10 @@ class Poetizer:
             
             tag, name, birth, death, link = self.dict[_poet]['metadata'].split('|')
             elapsed = (time.time() - self.daily_history['timestamp'][self.daily_history['poet']==_poet].max()) / 86400 # if _poet in self.history['poet'] else None
-            self.stats.loc[_poet] = _poet, name, birth, death, len(self.dict[_poet]) - 1, (self.daily_history['poet']==_poet).sum(), np.round(elapsed,1)
+            self.stats.loc[len(self.stats)] = _poet, name, birth, death, len(self.dict[_poet]) - 1, (self.daily_history['poet']==_poet).sum(), np.round(elapsed,1)
             
         # self.stats.index.name = f'{np.sum([len(self.dict[_poet]) - 1 for _poet in list(self.dict)])} poems from {len(self.dict)} poets'
         # return self.stats if order_by is None else self.stats.sort_values(by=order_by)
-
-    
 
     def load_poem(self,
                   poet='random',
