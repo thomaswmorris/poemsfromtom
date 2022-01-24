@@ -143,7 +143,14 @@ class Poetizer:
     def titleize(self,string):
 
         words_to_not_capitalize = ['a','an','and','the','with','about','among','for','over',
-                                   'in','on','of','by','to','from','but','is','that','than','near']
+                                   'in','on','of','by','to','from','but','is','that','than','near', 
+                                   'about', 'an', 'and', 'as', 'as', 'at', 'but', 'by', 'even',
+                                   'for', 'from', 'if', 'only', 'in', 'into', 'like', 'near',
+                                   'now', 'nor', 'of', 'off', 'on', 'once', 'onto',
+                                   'or', 'out of', 'over', 'past', 'so', 'so that', 'than', 'that', 'the',
+                                   'till', 'to', 'up', 'upon', 'with', 'when', 'yet.'
+                                   ]
+
         delims = [': ','\"',' ','O\'']
         string = re.sub(r'\ \_[0-9]+\_','',string).lower()
         for delim in delims:  
