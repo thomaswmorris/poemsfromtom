@@ -172,15 +172,14 @@ class Poetizer:
         if not repo_name == '':
             self.load_repo(repo_name, repo_token)
             self.repo_history_contents = self.repo.get_contents('history.csv',ref='data')
-            self.history = pd.read_csv(StringIO(self.repo_history_contents.decoded_content.decode()),index_col=0)
+            self.rhistory = pd.read_csv(StringIO(self.repo_history_contents.decoded_content.decode()),index_col=0)
+            self.history = self.rhistory.loc[self.rhistory['type']!='test']
         else:
             try:
                 self.history = pd.read_csv('history.csv',index_col=0)
             except Exception as e:
                 self.history = pd.DataFrame(columns=['poet','title','type','date','time','timestamp'])
                 print(f'{e}\ncould not find history.csv')
-
-        self.daily_history = self.history.loc[self.history['type']!='test']
 
     def make_stats(self,order_by=None,force_rows=True,force_cols=True):
         
@@ -190,8 +189,8 @@ class Poetizer:
         for _poet in list(self.dict):
             
             tag, name, birth, death, link = self.dict[_poet]['metadata'].split('|')
-            elapsed = (time.time() - self.daily_history['timestamp'][self.daily_history['poet']==_poet].max()) / 86400 # if _poet in self.history['poet'] else None
-            self.stats.loc[_poet] = name, birth, death, len(self.dict[_poet]) - 1, (self.daily_history['poet']==_poet).sum(), np.round(elapsed,1)
+            elapsed = (time.time() - self.history['timestamp'][self.history['poet']==_poet].max()) / 86400 # if _poet in self.history['poet'] else None
+            self.stats.loc[_poet] = name, birth, death, len(self.dict[_poet]) - 1, (self.history['poet']==_poet).sum(), np.round(elapsed,1)
             
         # self.stats.index.name = f'{np.sum([len(self.dict[_poet]) - 1 for _poet in list(self.dict)])} poems from {len(self.dict)} poets'
         # return self.stats if order_by is None else self.stats.sort_values(by=order_by)
@@ -215,7 +214,7 @@ class Poetizer:
                   html_color='Black'):
 
         self.poem = None
-        self.daily_history = None
+        self.history = None
         if read_historical or write_historical:
             self.load_history(repo_name=repo_name, repo_token=repo_token)
             self.make_stats(order_by='times_sent')
@@ -232,7 +231,7 @@ class Poetizer:
         self.likelihood = np.ones(self.n_pt) / self.n_pt 
         for _poet in list(self.dict):
             self.likelihood[_poet==np.array(self.poets)] = 1 / np.sum(_poet==np.array(self.poets))
-            if not self.daily_history is None:
+            if not self.history is None:
                 self.likelihood[_poet==np.array(self.poets)] *= np.exp(-.25 * self.stats.loc[_poet, 'times_sent'])
 
         if contextual:
@@ -274,15 +273,15 @@ class Poetizer:
             
             if read_historical and _likelihood < 1e6:
                 if (poet=='random'):
-                    if _poet in list(self.daily_history['poet']): 
-                        ELAPSED = when - self.daily_history['timestamp'][self.daily_history['poet']==_poet].max()
+                    if _poet in list(self.history['poet']): 
+                        ELAPSED = when - self.history['timestamp'][self.history['poet']==_poet].max()
                         if ELAPSED < poet_latency * 86400 :
                             print(f'poet \"{_poet}\" was sent too recently! ({ELAPSED/86400:.02f} days ago)')
                             continue # if the poem was sent too recently 
 
                 if (title=='random'):
-                    if _title in list(self.daily_history['title']):
-                        ELAPSED = when - self.daily_history['timestamp'][self.daily_history['title']==_title].max()
+                    if _title in list(self.history['title']):
+                        ELAPSED = when - self.history['timestamp'][self.history['title']==_title].max()
                         if ELAPSED < title_latency * 86400 :
                             print(f'title \"{_title}\" was sent too recently! ({ELAPSED/86400:.02f} days ago)')
                             continue # if the poet was sent too recently 
@@ -301,7 +300,10 @@ class Poetizer:
     
         if write_historical:
             now = int(time.time()); now_date, now_time = datetime.now().isoformat()[:19].split('T')
+
             self.history.loc[len(self.history)] = self.poet, self.title, tag_historical, now_date, now_time, now
+            self.make_stats(order_by='times_sent')
+
             if not repo_name == '':
                 
                 #self.repo.update_file('history.csv', 'update log', self.history.to_csv(), sha=self.repo_history_contents.sha, branch='data')
