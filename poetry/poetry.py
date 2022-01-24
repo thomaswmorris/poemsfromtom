@@ -138,20 +138,6 @@ class Poetizer:
                     if np.any([self.string_contains_phrase(_title,_kw) for _kw in [kw,*self.kw_dict[kw]]]):
                         print(f'{_poet:<10} | {_title:}')
                         
-    def get_stats(self,order_by=None,force_rows=True,force_cols=True):
-        
-        if force_rows: pd.set_option('display.max_rows', None)
-        if force_cols: pd.set_option('display.max_columns', None)
-        self.stats = pd.DataFrame(columns=['name','birth','death','n_poems']) #,'times_sent','last_sent'])
-        for _poet in list(self.dict):
-            
-            tag, name, birth, death, link = self.dict[_poet]['metadata'].split('|')
-            #elapsed = (time.time() - self.history['timestamp'][self.history['poet']==_poet].max()) / 86400# if _poet in self.history['poet'] else None
-            self.stats.loc[_poet] = name, birth, death, len(self.dict[_poet]) - 1 #, (self.history['poet']==_poet).sum(), np.round(elapsed,1)
-            
-        self.stats.index.name = f'{np.sum([len(self.dict[_poet]) - 1 for _poet in list(self.dict)])} poems from {len(self.dict)} poets'
-        return self.stats if order_by is None else self.stats.sort_values(by=order_by)
-
     
     def titleize(self,string):
 
@@ -191,6 +177,22 @@ class Poetizer:
 
         self.daily_history = self.history.loc[self.history['type']!='test']
 
+    def make_stats(self,order_by=None,force_rows=True,force_cols=True):
+        
+        if force_rows: pd.set_option('display.max_rows', None)
+        if force_cols: pd.set_option('display.max_columns', None)
+        self.stats = pd.DataFrame(columns=['name','birth','death','n','times_sent','tsls'])
+        for _poet in list(self.dict):
+            
+            tag, name, birth, death, link = self.dict[_poet]['metadata'].split('|')
+            elapsed = (time.time() - self.history['timestamp'][self.history['poet']==_poet].max()) / 86400 # if _poet in self.history['poet'] else None
+            self.stats.loc[_poet] = name, birth, death, len(self.dict[_poet]) - 1, (self.history['poet']==_poet).sum(), np.round(elapsed,1)
+            
+        # self.stats.index.name = f'{np.sum([len(self.dict[_poet]) - 1 for _poet in list(self.dict)])} poems from {len(self.dict)} poets'
+        # return self.stats if order_by is None else self.stats.sort_values(by=order_by)
+
+    
+
     def load_poem(self,
                   poet='random',
                   title='random',
@@ -213,6 +215,7 @@ class Poetizer:
         if read_historical or write_historical:
             self.load_history(repo_name=repo_name,
                               repo_token=repo_token)
+            self.make_stats()
         
         if (not poet in self.poets) and (not poet=='random'):
             raise(Exception(f'The poet \"{poet}\" is not in the database!'))
@@ -294,10 +297,13 @@ class Poetizer:
             now = int(time.time()); now_date, now_time = datetime.now().isoformat()[:19].split('T')
             self.history.loc[len(self.history)] = self.poet, self.title, tag_historical, now_date, now_time, now
             if not repo_name == '':
-                self.repo.update_file('history.csv', 'poem log', self.history.to_csv(), sha=self.repo_history_contents.sha, branch='data')
+                self.repo.update_file('history.csv', 'update log', self.history.to_csv(), sha=self.repo_history_contents.sha, branch='data')
+                time.sleep(10)
+                self.repo.update_file('stats.csv', 'update log', self.history.to_csv(), sha=self.repo_history_contents.sha, branch='data')
                 output += ' (wrote to repo)'
             else:
                 self.history.to_csv('history.csv')
+                self.stats.to_csv('stats.csv')
                 output += ' (wrote to local history)'
             
         if verbose: print(output)
