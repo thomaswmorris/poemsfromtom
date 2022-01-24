@@ -186,12 +186,12 @@ class Poetizer:
         
         if force_rows: pd.set_option('display.max_rows', None)
         if force_cols: pd.set_option('display.max_columns', None)
-        self.stats = pd.DataFrame(columns=['name','birth','death','n','times_sent','tsls'])
+        self.stats = pd.DataFrame(columns=['poet','name','birth','death','n_poems','times_sent','days_since_last_sent'])
         for _poet in list(self.dict):
             
             tag, name, birth, death, link = self.dict[_poet]['metadata'].split('|')
-            elapsed = (time.time() - self.history['timestamp'][self.history['poet']==_poet].max()) / 86400 # if _poet in self.history['poet'] else None
-            self.stats.loc[_poet] = name, birth, death, len(self.dict[_poet]) - 1, (self.history['poet']==_poet).sum(), np.round(elapsed,1)
+            elapsed = (time.time() - self.daily_history['timestamp'][self.daily_history['poet']==_poet].max()) / 86400 # if _poet in self.history['poet'] else None
+            self.stats.loc[_poet] = _poet, name, birth, death, len(self.dict[_poet]) - 1, (self.daily_history['poet']==_poet).sum(), np.round(elapsed,1)
             
         # self.stats.index.name = f'{np.sum([len(self.dict[_poet]) - 1 for _poet in list(self.dict)])} poems from {len(self.dict)} poets'
         # return self.stats if order_by is None else self.stats.sort_values(by=order_by)
@@ -217,9 +217,9 @@ class Poetizer:
                   html_color='Black'):
 
         self.poem = None
+        self.daily_history = None
         if read_historical or write_historical:
-            self.load_history(repo_name=repo_name,
-                              repo_token=repo_token)
+            self.load_history(repo_name=repo_name, repo_token=repo_token)
             self.make_stats()
         
         if (not poet in self.poets) and (not poet=='random'):
@@ -234,6 +234,9 @@ class Poetizer:
         self.likelihood = np.ones(self.n_pt) / self.n_pt 
         for _poet in list(self.dict):
             self.likelihood[_poet==np.array(self.poets)] = 1 / np.sum(_poet==np.array(self.poets))
+            if not self.daily_history == None:
+                self.likelihood[_poet==np.array(self.poets)] *= np.exp(-.2*np.sum(self.daily_history['poet']==_poet))
+                print(_poet, np.exp(-.2*np.sum(self.daily_history['poet']==_poet)))
         if contextual:
             context_keywords = [self.get_season(when), self.get_weekday(when), self.get_month(when), self.get_holiday(when), self.get_liturgy(when)]
             if verbose: print('keywords:',context_keywords)
