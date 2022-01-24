@@ -302,10 +302,24 @@ class Poetizer:
             now = int(time.time()); now_date, now_time = datetime.now().isoformat()[:19].split('T')
             self.history.loc[len(self.history)] = self.poet, self.title, tag_historical, now_date, now_time, now
             if not repo_name == '':
-                self.repo.update_file('history.csv', 'update log', self.history.to_csv(), sha=self.repo_history_contents.sha, branch='data')
-                time.sleep(60)
-                self.load_repo(self.repo_name, self.repo_token)
-                self.repo.update_file('stats.csv', 'update log', self.history.to_csv(), sha=self.repo_history_contents.sha, branch='data')
+                
+                #self.repo.update_file('history.csv', 'update log', self.history.to_csv(), sha=self.repo_history_contents.sha, branch='data')
+                #self.load_repo(self.repo_name, self.repo_token)
+                #self.repo.update_file('stats.csv', 'update log', self.history.to_csv(), sha=self.repo_history_contents.sha, branch='data')
+                
+                
+                hist_blob = self.repo.create_git_blob(self.history.to_csv(), "utf-8")
+                hist_elem = gh.InputGitTreeElement(path='history.csv', mode='100644', type='blob', sha=hist_blob.sha)
+                stat_blob = self.repo.create_git_blob(self.stats.to_csv(), "utf-8")
+                stat_elem = gh.InputGitTreeElement(path='stats.csv', mode='100644', type='blob', sha=stat_blob.sha)
+                head_sha  = self.repo.get_branch('master').commit.sha
+                base_tree = self.repo.get_git_tree(sha=head_sha)
+                tree   = self.repo.create_git_tree([hist_elem, stat_elem], base_tree)
+                parent = self.repo.get_git_commit(sha=head_sha) 
+                commit = self.repo.create_git_commit(f'update logs {datetime.now().isoformat()[:19]}', tree, [parent])
+                master_ref = self.github_repo.get_git_ref('heads/master')
+                master_ref.edit(sha=commit.sha)
+                
                 output += ' (wrote to repo)'
             else:
                 self.history.to_csv('history.csv')
