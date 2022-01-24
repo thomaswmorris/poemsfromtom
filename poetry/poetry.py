@@ -160,14 +160,17 @@ class Poetizer:
         string = re.sub(r'\'S ','\'s ',string)
         return string
 
-    
-    def load_history(self,repo_name='',repo_token=''):
+    def load_repo(self,repo_name='',repo_token=''):
 
         self.repo_name  = repo_name
         self.repo_token = repo_token
+        self.g = gh.Github(self.repo_token)
+        self.repo = self.g.get_user().get_repo(self.repo_name)
+    
+    def load_history(self,repo_name='',repo_token=''):
+
         if not repo_name == '':
-            self.g = gh.Github(self.repo_token)
-            self.repo = self.g.get_user().get_repo(self.repo_name)
+            self.load_repo(self,repo_name=repo_name,repo_token=repo_token)
             self.repo_history_contents = self.repo.get_contents('history.csv',ref='data')
             self.history = pd.read_csv(StringIO(self.repo_history_contents.decoded_content.decode()),index_col=0)
         else:
@@ -299,9 +302,8 @@ class Poetizer:
             now = int(time.time()); now_date, now_time = datetime.now().isoformat()[:19].split('T')
             self.history.loc[len(self.history)] = self.poet, self.title, tag_historical, now_date, now_time, now
             if not repo_name == '':
-                self.repo = self.g.get_user().get_repo(self.repo_name)
                 self.repo.update_file('history.csv', 'update log', self.history.to_csv(), sha=self.repo_history_contents.sha, branch='data')
-                self.repo = self.g.get_user().get_repo(self.repo_name)
+                self.load_repo(self,repo_name=self.repo_name,repo_token=self.repo_token)
                 self.repo.update_file('stats.csv', 'update log', self.history.to_csv(), sha=self.repo_history_contents.sha, branch='data')
                 output += ' (wrote to repo)'
             else:
