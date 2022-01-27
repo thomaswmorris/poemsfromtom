@@ -47,10 +47,11 @@ class Poetizer:
         self.kw_dict['summer']           = []
         self.kw_dict['autumn']           = ['~fall', 'leaves']
         
-        self.kw_dict['valentine']        = ['valentine','~to my']
+        self.kw_dict['valentine']        = ['to my valentine']
         self.kw_dict['palm sunday']      = ['~donkey']
-        self.kw_dict['good friday']      = ['~paschal','~crucifixion']
+        self.kw_dict['good friday']      = ['~paschal','~crucifixion','~martyr']
         self.kw_dict['easter vigil']     = ['~hell']
+        self.kw_dict['divine mercy']     = ['~mercy']
         self.kw_dict['pentacost']        = ['~holy spirit','pentacostal']
         self.kw_dict['lent']             = ['~sin', '~sorrow', '~sadness']
         self.kw_dict['independence day'] = ['~america']
@@ -90,12 +91,12 @@ class Poetizer:
         if yd == easter_yd - 2: return 'good friday'
         if yd == easter_yd - 1: return 'easter vigil'
         if yd == easter_yd: return 'easter'
+        if yd == easter_yd + 7: return 'divine mercy'
         if yd == easter_yd + 39: return 'ascension'
-        if yd == easter_yd + 42: return 'pentacost'
-        
+        if yd == easter_yd + 49: return 'pentacost'
         
         if (dt.month,dt.day)==(2,14):  return 'valentine'
-        #if (dt.month,dt.day)==(3,25):  return 'annunciation'
+        if (dt.month,dt.day)==(3,25):  return 'annunciation'
         if (dt.month,dt.day)==(7,4):   return 'independence day'
         if (dt.month,dt.day)==(10,31): return 'halloween'
         if (dt.month,dt.day)==(11,(3-datetime(dt.year,11,1).weekday())%7+22): return 'thanksgiving' # fourth thursday of november
@@ -103,10 +104,10 @@ class Poetizer:
         if (dt.month,dt.day)==(12,25): return 'christmas'
         
         
-        if (dt.month,dt.day)==(3,21): return 'spring'
-        if (dt.month,dt.day)==(6,21): return 'summer'
-        if (dt.month,dt.day)==(9,21): return 'autumn'
-        if (dt.month,dt.day)==(12,21): return 'winter'
+        #if (dt.month,dt.day)==(3,21): return 'spring'
+        #if (dt.month,dt.day)==(6,21): return 'summer'
+        #if (dt.month,dt.day)==(9,21): return 'autumn'
+        #if (dt.month,dt.day)==(12,21): return 'winter'
         #if self.get_liturgy(t-86400) == 'epiphany' and self.get_liturgy(t) == 'ordinary time': return 'baptism'
         return 'no holiday'
 
@@ -138,8 +139,16 @@ class Poetizer:
                 for i,(_poet,_title) in enumerate(self.pt_keys):
                     if np.any([self.string_contains_phrase(_title,_kw) for _kw in [kw,*self.kw_dict[kw]]]):
                         print(f'{_poet:<10} | {_title:}')
-                        
+
+    def get_keywords(self, when):
+        return [self.get_season(when), self.get_weekday(when), self.get_month(when), self.get_holiday(when), self.get_liturgy(when)]          
     
+    def list_keywords(self):
+        for dyd in range(365):
+            t  = datetime(2022,1,1).timestamp() + 86400 * (dyd + .5)
+            dt = datetime.fromtimestamp(t)
+            print(f'{dt.month}/{dt.day}',self.get_keywords(t))
+
     def titleize(self,string):
 
         words_to_not_capitalize = ['a','an','and','the','with','about','among','for','over',
@@ -246,7 +255,7 @@ class Poetizer:
                 self.likelihood[_poet==np.array(self.poets)] *= np.exp(-.25 * self.stats.loc[_poet, 'times_sent'])
 
         if contextual:
-            context_keywords = [self.get_season(when), self.get_weekday(when), self.get_month(when), self.get_holiday(when), self.get_liturgy(when)]
+            context_keywords = self.get_keywords(when)
             if verbose: print('keywords:',context_keywords)
             for discriminator, context_kw, multiplier, label in zip([self.seasons, self.weekdays, self.months, self.holidays, self.liturgies],
                                                                     context_keywords,
