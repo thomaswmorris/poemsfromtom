@@ -379,7 +379,7 @@ class Poetizer:
         import calendar
         self.nice_fancy_date = f'{self.weekdays[self.dt_now.weekday()].capitalize()}, '\
                              + f'{calendar.month_name[self.dt_now.month]} {self.dt_now.day} {self.dt_now.year}'
-        self.header = f'\"{self.titleize(self.title)}\" by {self.name}'
+        self.header = f'“{self.titleize(self.title)}” by {self.name}'
         self.poem_html = f"""
         <html>
         <h2 style="font-family:Garamond; color:{html_color}; font-size: 24px; margin-bottom:0; margin : 0; padding-top:0;">{self.titleize(self.title)}</h2>
