@@ -160,7 +160,7 @@ class Poetizer:
 
     def titleize(self,string):
 
-        with open('minor-words.txt','r') as f:
+        with open('poetry/minor-words.txt','r') as f:
             words_to_not_capitalize = f.read()
 
         delims = [': ','\"',' ','O\'']
