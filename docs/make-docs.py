@@ -50,6 +50,7 @@ for loc in history.index:
             <a href="https://thomaswmorris.github.io/poetry/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next</a>
             <p style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0">{nice_fancy_date}
             </p>
+            <br>
         </h2>
         </html>
         '''
