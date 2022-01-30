@@ -33,8 +33,8 @@ for loc in history.index:
     html = f'''
     <html>
         <h2 style="font-family:Garamond; color:Black; font-size: 24px; margin-bottom:0; margin : 0; padding-top:0;">
-        <a href="thomaswmorris.github.io/poetry/{dt_prev.year}/{dt_prev.month}/{dt_prev.day}">previous</a>
-        <a href="thomaswmorris.github.io/poetry/{dt_next.year}/{dt_next.month}/{dt_next.day}">next</a>
+        <a href="thomaswmorris.github.io/poetry/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">previous</a>
+        <a href="thomaswmorris.github.io/poetry/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next</a>
         </h2>
     </html>
     '''
