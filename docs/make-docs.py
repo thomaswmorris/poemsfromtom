@@ -16,9 +16,9 @@ poetizer = Poetizer()
 ys, ms, ds = [], [], []
 for loc in history.index:
 
-    y, m, d = [int(x) for x in history.loc[loc,'date'].split('-')]
+    y, m, d = history.loc[loc,'date'].split('-')
 
-    dt = datetime(y,m,d,7,0,0) 
+    dt = datetime(int(y),int(m),int(d),7,0,0) 
     dt_prev = datetime.fromtimestamp(dt.timestamp() - 86400)
     dt_next = datetime.fromtimestamp(dt.timestamp() + 86400)
 
