@@ -20,9 +20,12 @@ for loc in history.index:
 
     if not os.path.isdir(f'docs/{y}'):         os.mkdir(f'docs/{y}')
     if not os.path.isdir(f'docs/{y}/{m}'):     os.mkdir(f'docs/{y}/{m}')
+    if not os.path.isdir(f'docs/{y}/{m}/{d}'): os.mkdir(f'docs/{y}/{m}/{d}')
 
     poetizer.load_poem(poet=history.loc[loc,'poet'], title=history.loc[loc,'title'])
 
-    with open(f'docs/{y}/{m}/{d}.txt','w') as f:
-        f.write(poetizer.poem)
+    with open(f'docs/{y}/{m}/{d}/index.html','w') as f:
+        f.write(poetizer.poem_html)
+
+
 
