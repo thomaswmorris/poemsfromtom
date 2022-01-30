@@ -29,7 +29,6 @@ for loc in history.index:
 
     poetizer.load_poem(poet=history.loc[loc,'poet'], title=history.loc[loc,'title'])
 
-
     html = f'''
     <html>
         <h2 style="font-family:Garamond; color:Black; font-size: 24px; margin-bottom:0; margin : 0; padding-top:0;">
@@ -39,7 +38,7 @@ for loc in history.index:
     </html>
     '''
 
-    with open(f'docs/{y}/{m}/{d}/index.html','w') as f:
+    with open(f'docs/{y}/{m}/{d}/index.html','w+') as f:
         f.write(html + poetizer.poem_html)
 
 
