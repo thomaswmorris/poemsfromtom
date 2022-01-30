@@ -250,12 +250,19 @@ class Poetizer:
             
         # apply multipliers accordingly; so that poems titled "christmas" aren't sent in june, or poems titled "sunday" aren't sent on thursday
         # if self.likelihood is None:
+        
+        if (not poet == 'random') and (not title == 'random'):
+            self.poet  = poet
+            self.title = title
+            self.poem  = self.dict[self.poet][self.title]
+            print(self.poem)
 
-        self.likelihood = np.ones(self.n_pt) / self.n_pt 
-        for _poet in list(self.dict):
-            self.likelihood[_poet==np.array(self.poets)] = 1 / np.sum(_poet==np.array(self.poets))
-            if not self.history is None:
-                self.likelihood[_poet==np.array(self.poets)] *= np.exp(-.25 * self.stats.loc[_poet, 'times_sent'])
+        else:
+            self.likelihood = np.ones(self.n_pt) / self.n_pt 
+            for _poet in list(self.dict):
+                self.likelihood[_poet==np.array(self.poets)] = 1 / np.sum(_poet==np.array(self.poets))
+                if not self.history is None:
+                    self.likelihood[_poet==np.array(self.poets)] *= np.exp(-.25 * self.stats.loc[_poet, 'times_sent'])
 
         if contextual:
             context_keywords = self.get_keywords(when)
@@ -277,10 +284,11 @@ class Poetizer:
                                     if very_verbose: print(_kw, _poet, _title, multiplier)
                                 elif not (((label == 'HOLIDAYS') and (kw in self.seasons)) or '~' in _kw): self.likelihood[i_pt] = 0
 
+            pop_likelihood = list(self.likelihood)
+
         pop_poets  = self.poets.copy()
         pop_titles = self.titles.copy()
-        pop_likelihood = list(self.likelihood)
-        
+            
         while (len(pop_titles) > 0) and (self.poem == None):
             
             p = np.array(pop_likelihood) / np.sum(pop_likelihood)
