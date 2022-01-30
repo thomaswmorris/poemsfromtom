@@ -45,7 +45,7 @@ class Poetizer:
         self.kw_dict['winter']           = ['snow', 'frost', 'cold', 'midwinter']
         self.kw_dict['spring']           = ['~flower','~flowers','~tulips']
         self.kw_dict['summer']           = []
-        self.kw_dict['autumn']           = ['~fall', 'leaves']
+        self.kw_dict['autumn']           = ['~fall', 'leaves', 'autumnal']
         
         self.kw_dict['valentine']        = ['to my valentine']
         self.kw_dict['palm sunday']      = ['~donkey']
