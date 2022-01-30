@@ -29,17 +29,19 @@ for loc in history.index:
 
     poetizer.load_poem(poet=history.loc[loc,'poet'], title=history.loc[loc,'title'])
 
-    html = f'''
-    <html>
-        <h2 style="font-family:Garamond; color:Black; font-size: 24px; margin-bottom:0; margin : 0; padding-top:0;">
-        <a href="https://thomaswmorris.github.io/poetry/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">previous</a>
-        <a href="https://thomaswmorris.github.io/poetry/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next</a>
+    html_header = f'''
+        <html>
+            <h2 style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0;">
+            <a href="https://thomaswmorris.github.io/poetry/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">previous</a>
+            <a href="https://thomaswmorris.github.io/poetry/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next</a>
+            <p style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0">{poetizer.nice_fancy_date}
+            </p>
         </h2>
-    </html>
-    '''
+        </html>
+        '''
 
     with open(f'docs/{y}/{m}/{d}/index.html','w+') as f:
-        f.write(html + poetizer.poem_html)
+        f.write(html + poetizer.nice_ + poetizer.poem_html)
 
 
 
