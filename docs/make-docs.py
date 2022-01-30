@@ -11,7 +11,20 @@ import os
 history  = pd.read_csv('history.csv',index_col=0)
 poetizer = Poetizer()
 
+dt_now = datetime.now()
 
+with open('docs/index.html','w+') as f:
+    f.write(f'''
+    <html>
+    <head>
+        <title>HTML Meta Tag</title>
+        <meta http-equiv = "refresh" content="0; url=https://thomaswmorris.github.io/poetry/{dt_now.year:02}/{dt_now.month:02}/{dt_now.day:02}" />
+    </head>
+    <body>
+        <p>Redirecting to another URL</p>
+    </body>
+    </html>
+    ''')
 
 ys, ms, ds = [], [], []
 for loc in history.index:
@@ -41,7 +54,7 @@ for loc in history.index:
         '''
 
     with open(f'docs/{y}/{m}/{d}/index.html','w+') as f:
-        f.write(html + poetizer.nice_ + poetizer.poem_html)
+        f.write(html_header + poetizer.poem_html)
 
 
 
