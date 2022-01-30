@@ -1,6 +1,7 @@
 
 
 from datetime import datetime
+import calendar
 import pandas as pd
 import sys
 sys.path.insert(1, 'poetry/')
@@ -39,7 +40,7 @@ for loc in history.index:
     if not os.path.isdir(f'docs/{y}/{m}'):     os.mkdir(f'docs/{y}/{m}')
     if not os.path.isdir(f'docs/{y}/{m}/{d}'): os.mkdir(f'docs/{y}/{m}/{d}')
 
-
+    nice_fancy_date = f'{poetizer.weekdays[dt.weekday()].capitalize()}, {calendar.month_name[dt.month]} {dt.day:02} {dt.year}'
     poetizer.load_poem(poet=history.loc[loc,'poet'], title=history.loc[loc,'title'])
 
     html_header = f'''
@@ -47,7 +48,7 @@ for loc in history.index:
             <h2 style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0;">
             <a href="https://thomaswmorris.github.io/poetry/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">previous</a>
             <a href="https://thomaswmorris.github.io/poetry/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next</a>
-            <p style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0">{poetizer.nice_fancy_date}
+            <p style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0">{nice_fancy_date}
             </p>
         </h2>
         </html>
