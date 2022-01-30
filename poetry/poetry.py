@@ -40,12 +40,21 @@ class Poetizer:
         self.weekdays  = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
         self.months    = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
         self.seasons   = ['winter', 'summer', 'autumn', 'spring']
+
+
         
         self.kw_dict = {}
         self.kw_dict['winter']           = ['snow', 'frost', 'cold', 'midwinter']
         self.kw_dict['spring']           = ['~flower','~flowers','~tulips']
         self.kw_dict['summer']           = []
         self.kw_dict['autumn']           = ['~fall', 'leaves', 'autumnal']
+
+        self.kw_dict['winter solstice']  = self.kw_dict['winter']
+        self.kw_dict['spring equinox']   = self.kw_dict['spring']
+        self.kw_dict['summer solstice']  = self.kw_dict['summer']
+        self.kw_dict['autumn equinox']   = self.kw_dict['autumn']
+
+
         
         self.kw_dict['valentine']        = ['to my valentine']
         self.kw_dict['palm sunday']      = ['~donkey']
@@ -104,10 +113,10 @@ class Poetizer:
         if (dt.month,dt.day)==(12,25): return 'christmas'
         
         
-        #if (dt.month,dt.day)==(3,21): return 'spring'
-        #if (dt.month,dt.day)==(6,21): return 'summer'
-        #if (dt.month,dt.day)==(9,21): return 'autumn'
-        #if (dt.month,dt.day)==(12,21): return 'winter'
+        if (dt.month,dt.day)==(3,21): return 'spring equinox'
+        if (dt.month,dt.day)==(6,21): return 'summer solstice'
+        if (dt.month,dt.day)==(9,21): return 'autumn equinox'
+        if (dt.month,dt.day)==(12,21): return 'winter solstice'
         #if self.get_liturgy(t-86400) == 'epiphany' and self.get_liturgy(t) == 'ordinary time': return 'baptism'
         return 'no holiday'
 
@@ -151,14 +160,8 @@ class Poetizer:
 
     def titleize(self,string):
 
-        words_to_not_capitalize = ['a','an','and','the','with','about','among','for','over',
-                                   'in','on','of','by','to','from','but','is','that','than','near', 
-                                   'about', 'an', 'and', 'as', 'as', 'at', 'but', 'by', 'even',
-                                   'for', 'from', 'if', 'only', 'in', 'into', 'like', 'near',
-                                   'now', 'nor', 'of', 'off', 'on', 'once', 'onto',
-                                   'or', 'out of', 'over', 'past', 'so', 'so that', 'than', 'that', 'the',
-                                   'till', 'to', 'up', 'upon', 'with', 'when', 'yet.'
-                                   ]
+        with open('minor-words.txt','r') as f:
+            words_to_not_capitalize = f.read()
 
         delims = [': ','\"',' ','O\'']
         string = re.sub(r'\ \_[0-9]+\_','',string).lower()

@@ -1,0 +1,31 @@
+Each keyword corresponds 
+
+! means that the word is exclusionary, and confers a weights of zero if it is not in context
+~ means that the word is non-exlusive
+
+###
+
+winter           : ['snow', 'frost', 'cold', 'midwinter']
+spring           : ['~flower','~flowers','~tulips']
+summer           : []
+autumn           : ['~fall', 'leaves', 'autumnal']
+
+winter solstice  : self.kw_dict['winter']
+spring equinox   : self.kw_dict['spring']
+summer solstice  : self.kw_dict['summer']
+autumn equinox   : self.kw_dict['autumn']
+
+
+
+valentine        : ['to my valentine']
+palm sunday      : ['~donkey']
+good friday      : ['~paschal','~crucifixion','~martyr']
+easter vigil     : ['~hell']
+divine mercy     : ['~mercy']
+pentacost        : ['~holy spirit','pentacostal']
+lent             : ['~sin', '~sorrow', '~sadness']
+independence day : ['~america']
+halloween        : ['goblin']
+christmas eve    : ['~christmas','~nativity']
+christmas        : ['~christmas','~nativity']
+        
