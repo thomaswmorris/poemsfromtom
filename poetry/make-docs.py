@@ -42,17 +42,26 @@ now_date, now_time = dt_now.isoformat()[:19].split('T')
 home_index = f'''
     <html>
     <head>
-        <title>HTML Meta Tag</title>
+        <title></title>
         <meta http-equiv = "refresh" content="0; url=https://thomaswmorris.github.io/poetry/{dt_now.year:02}/{dt_now.month:02}/{dt_now.day:02}" />
     </head>
-    <body>
-        <p>Redirecting to another URL</p>
-    </body>
+    </html>
+    '''
+
+random_index = f'''
+    <html>
+    <head>
+        <title></title>
+        <meta http-equiv = "refresh" content="0; url=https://thomaswmorris.github.io/poetry/{dt_now.year:02}/{dt_now.month:02}/{dt_now.day:02}" />
+    </head>
     </html>
     '''
 
 blob  = poetizer.repo.create_git_blob(home_index, "utf-8")
 elems = [gh.InputGitTreeElement(path='docs/index.html', mode='100644', type='blob', sha=blob.sha)]
+
+blob  = poetizer.repo.create_git_blob(random_index, "utf-8")
+elems.append(gh.InputGitTreeElement(path='docs/random/index.html', mode='100644', type='blob', sha=blob.sha))
 
 n_history = len(history)
 ys, ms, ds = [], [], []
@@ -75,6 +84,7 @@ for i, loc in enumerate(history.index):
 
     html_header = f'''
         <html>
+        <title>{nice_fancy_date}</title>
             <h2 style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0;">
             {prev_string}
             {next_string}
