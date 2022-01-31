@@ -75,11 +75,14 @@ for i, loc in enumerate(history.index):
 
     print(y, m, d, poetizer.poet, poetizer.title)
 
+    prev_string = '<a href="https://thomaswmorris.github.io/poetry/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">previous</a>' if i > 0 else ''
+    next_string = '<a href="https://thomaswmorris.github.io/poetry/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next</a>' if i < n_history - 1 else ''
+
     html_header = f'''
         <html>
             <h2 style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0;">
-            {'<a href="https://thomaswmorris.github.io/poetry/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">previous</a>' if i > 0 else ''}
-            {'<a href="https://thomaswmorris.github.io/poetry/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next</a>' if i < n_history - 1 else ''}
+            {prev_string}
+            {next_string}
             <p style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0">{nice_fancy_date}
             </p>
             <br>
