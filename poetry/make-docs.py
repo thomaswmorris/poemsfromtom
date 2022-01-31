@@ -31,6 +31,8 @@ args = parser.parse_args()
 # Initialize the poetizer
 poetizer = Poetizer()
 
+print(args.repo, args.token)
+
 # Choose a poem that meets the supplied conditions
 poetizer.load_history(repo_name=args.repo, repo_token=args.token) # This automatically loads the repo as well
 history = poetizer.history.copy()
@@ -66,17 +68,17 @@ for i, loc in enumerate(history.index):
     dt_prev = datetime.fromtimestamp(dt.timestamp() - 86400)
     dt_next = datetime.fromtimestamp(dt.timestamp() + 86400)
 
-    if not os.path.isdir(f'docs/{y}'):         os.mkdir(f'docs/{y}')
-    if not os.path.isdir(f'docs/{y}/{m}'):     os.mkdir(f'docs/{y}/{m}')
-    if not os.path.isdir(f'docs/{y}/{m}/{d}'): os.mkdir(f'docs/{y}/{m}/{d}')
+    #if not os.path.isdir(f'docs/{y}'):         os.mkdir(f'docs/{y}')
+    #if not os.path.isdir(f'docs/{y}/{m}'):     os.mkdir(f'docs/{y}/{m}')
+    #if not os.path.isdir(f'docs/{y}/{m}/{d}'): os.mkdir(f'docs/{y}/{m}/{d}')
 
     nice_fancy_date = f'{poetizer.weekdays[dt.weekday()].capitalize()}, {calendar.month_name[dt.month]} {dt.day:02} {dt.year}'
     poetizer.load_poem(poet=history.loc[loc,'poet'], title=history.loc[loc,'title'], verbose=False)
 
     print(y, m, d, poetizer.poet, poetizer.title)
 
-    prev_string = '<a href="https://thomaswmorris.github.io/poetry/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">previous</a>' if i > 0 else ''
-    next_string = '<a href="https://thomaswmorris.github.io/poetry/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next</a>' if i < n_history - 1 else ''
+    prev_string = f'<a href="https://thomaswmorris.github.io/poetry/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">previous</a>' if i > 0 else ''
+    next_string = f'<a href="https://thomaswmorris.github.io/poetry/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next</a>' if i < n_history - 1 else ''
 
     html_header = f'''
         <html>
