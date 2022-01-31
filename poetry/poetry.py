@@ -398,8 +398,9 @@ class Poetizer:
             <hr>
             <p style="font-family:Garamond; color:{html_color}; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0">{html_body}
             </p>
-            <hr>
-            <p style="font-family:Garamond; color:{html_color}; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0">Past poems 
+            <br>
+            <br>
+            <p style="font-family:Garamond; color:{html_color}; font-size: 14px; margin-bottom:0; margin : 0; padding-top:0">Past poems 
             can be found <a href="https://thomaswmorris.github.io/poetry">here</a>.
             </p>
         </html>
