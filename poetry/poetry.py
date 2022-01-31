@@ -255,7 +255,6 @@ class Poetizer:
             self.poet  = poet
             self.title = title
             self.poem  = self.dict[self.poet][self.title]
-            print(self.poem)
 
         else:
             self.likelihood = np.ones(self.n_pt) / self.n_pt 
