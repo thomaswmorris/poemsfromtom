@@ -398,13 +398,18 @@ class Poetizer:
             <hr>
             <p style="font-family:Garamond; color:{html_color}; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0">{html_body}
             </p>
+        </html>
+        """     
+
+        self.email_html = self.poem_html + '''
+        <html>
             <br>
             <br>
-            <p style="font-family:Garamond; color:{html_color}; font-size: 14px; margin-bottom:0; margin : 0; padding-top:0">Past poems 
+            <p style="font-family:Garamond; color:{html_color}; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0">Past poems 
             can be found <a href="https://thomaswmorris.github.io/poetry">here</a>.
             </p>
         </html>
-        """     
+        '''
 
     def send(self, username, password, html, recipient, subject=''):
 
@@ -420,7 +425,7 @@ class Poetizer:
         server.quit()
 
     def send_poem(self, username, password, recipient, tag=''):
-        self.send(username, password, self.poem_html, recipient, subject=tag+self.header)
+        self.send(username, password, self.email_html, recipient, subject=tag+self.header)
 
     def send_history(self, username, password, recipient, n=10):
         self.send(username, password, self.history.iloc[-n:].to_html(), recipient, subject=f'HISTORY for {datetime.fromtimestamp(int(time.time())).isoformat()}')
