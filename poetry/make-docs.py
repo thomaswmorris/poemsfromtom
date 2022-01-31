@@ -32,7 +32,7 @@ args = parser.parse_args()
 poetizer = Poetizer()
 
 # Choose a poem that meets the supplied conditions
-poetizer.load_history(repo_name='poetry', repo_token='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') # This automatically loads the repo as well
+poetizer.load_history(repo_name=args.repo, repo_token=args.token) # This automatically loads the repo as well
 history = poetizer.history.copy()
 
 dt_now = datetime.now()

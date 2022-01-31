@@ -1,4 +1,4 @@
-name: Test
+name: Pages
 on: push
 
 jobs:
@@ -18,6 +18,6 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Send poem to myself
+      - name: Update repo pages
         run:
           python poetry/make-docs.py --repo 'poetry' --token ${{ secrets.GH_TOKEN }} 
