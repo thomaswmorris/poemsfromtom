@@ -57,10 +57,7 @@ elems = [gh.InputGitTreeElement(path='docs/index.html', mode='100644', type='blo
 n_history = len(history)
 ys, ms, ds = [], [], []
 
-
 for i, loc in enumerate(history.index):
-
-    # print(i,loc)
 
     y, m, d = history.loc[loc,'date'].split('-')
 
@@ -68,11 +65,7 @@ for i, loc in enumerate(history.index):
     dt_prev = datetime.fromtimestamp(dt.timestamp() - 86400)
     dt_next = datetime.fromtimestamp(dt.timestamp() + 86400)
 
-    #if not os.path.isdir(f'docs/{y}'):         os.mkdir(f'docs/{y}')
-    #if not os.path.isdir(f'docs/{y}/{m}'):     os.mkdir(f'docs/{y}/{m}')
-    #if not os.path.isdir(f'docs/{y}/{m}/{d}'): os.mkdir(f'docs/{y}/{m}/{d}')
-
-    nice_fancy_date = f'{poetizer.weekdays[dt.weekday()].capitalize()}, {calendar.month_name[dt.month]} {dt.day:02} {dt.year}'
+    nice_fancy_date = f'{poetizer.weekdays[dt.weekday()].capitalize()}, {calendar.month_name[dt.month]} {dt.day} {dt.year}'
     poetizer.load_poem(poet=history.loc[loc,'poet'], title=history.loc[loc,'title'], verbose=False)
 
     print(y, m, d, poetizer.poet, poetizer.title)
@@ -101,14 +94,10 @@ for i, loc in enumerate(history.index):
     if html_header + poetizer.poem_html == index:
         continue
 
-    #print(index)
-
     blob = poetizer.repo.create_git_blob(html_header + poetizer.poem_html, "utf-8")
     elems.append(gh.InputGitTreeElement(path=index_fn, mode='100644', type='blob', sha=blob.sha))
 
     print(f'wrote to {index_fn}')
-
-
 
 head_sha  = poetizer.repo.get_branch('data').commit.sha
 base_tree = poetizer.repo.get_git_tree(sha=head_sha)

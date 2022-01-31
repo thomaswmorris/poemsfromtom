@@ -1,5 +1,9 @@
 name: Pages
-on: push
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '05 12 * * *'  # daily at 7:05AM EST
 
 jobs:
   run_tests:
