@@ -396,7 +396,7 @@ class Poetizer:
         <h2 style="font-family:Garamond; color:{html_color}; font-size: 24px; margin-bottom:0; margin : 0; padding-top:0;">{self.titleize(self.title)}</h2>
             <p style="font-family:Garamond; color:{html_color}; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;"><i>by 
             <a href="{self.link}">{self.name}</a> ({self.birth}&#8212;{self.death})</i> </p>
-            <hr style="width:20%;text-align:left;margin-left:0";color:black;background-color:black">
+            <hr style="width:25%;text-align:left;margin-left:0";color:black;background-color:black">
             <p style="font-family:Garamond; color:{html_color}; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0">{html_body}
             </p>
         </html>
@@ -407,7 +407,6 @@ class Poetizer:
             <br>
             <br>
             <br>
-            <hr style="width:10%;text-align:left;margin-left:0";color:black;background-color:black">
             <p style="font-family:Garamond; color:{html_color}; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0">Past poems 
             can be found <a href="https://thomaswmorris.github.io/poetry">here</a>.
             </p>

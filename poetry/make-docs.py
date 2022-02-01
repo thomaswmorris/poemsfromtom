@@ -37,7 +37,7 @@ print(args.repo, args.token)
 poetizer.load_history(repo_name=args.repo, repo_token=args.token) # This automatically loads the repo as well
 history = poetizer.history.copy()
 
-dt_now = datetime.now()
+dt_now = datetime.fromtimestamp(history.iloc[-1]['timestamp'])
 now_date, now_time = dt_now.isoformat()[:19].split('T')
 home_index = f'''
     <html>
@@ -79,9 +79,9 @@ for i, loc in enumerate(history.index):
 
     print(y, m, d, poetizer.poet, poetizer.title)
 
-    prev_string = f'<a href="https://thomaswmorris.github.io/poetry/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a>' if i > 0 else ''
-    next_string = f'<a href="https://thomaswmorris.github.io/poetry/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a>' if i < n_history - 1 else ''
-    rand_string = f'<a href="https://thomaswmorris.github.io/poetry/random">random</a>'
+    prev_string = f'<i><a href="https://thomaswmorris.github.io/poetry/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a></i>' if i > 0 else ''
+    next_string = f'<i><a href="https://thomaswmorris.github.io/poetry/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a></i>' if i < n_history - 1 else ''
+    rand_string = f'<i><a href="https://thomaswmorris.github.io/poetry/random">random</a></i>'
 
     html_header = f'''
         <html>
