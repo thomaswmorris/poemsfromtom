@@ -39,6 +39,7 @@ history = poetizer.history.copy()
 
 dt_now = datetime.fromtimestamp(history.iloc[-1]['timestamp'])
 now_date, now_time = dt_now.isoformat()[:19].split('T')
+print(f'today is {now_date} {now_time}')
 home_index = f'''
     <html>
     <head>

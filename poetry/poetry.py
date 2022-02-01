@@ -194,7 +194,7 @@ class Poetizer:
             self.repo_history_contents = self.repo.get_contents('history.csv',ref='data')
             self.rhistory = pd.read_csv(StringIO(self.repo_history_contents.decoded_content.decode()),index_col=0)
             self.history  = self.rhistory.loc[self.rhistory['type']!='test']
-            
+
         else:
             try:
                 self.history = pd.read_csv('history.csv',index_col=0)
@@ -202,7 +202,7 @@ class Poetizer:
                 self.history = pd.DataFrame(columns=['poet','title','type','date','time','timestamp'])
                 print(f'{e}\ncould not find history.csv')
 
-        self.history.index = 1 + np.arange(len(self.history))
+        self.history.index = np.arange(len(self.history))
 
     def make_stats(self,order_by=None, ascending=True,force_rows=True,force_cols=True):
         
