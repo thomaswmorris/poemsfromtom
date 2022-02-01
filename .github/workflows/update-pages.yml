@@ -1,13 +1,12 @@
 name: Pages
 on:
   push:
-  pull_request:
   schedule:
     - cron: '05 12 * * *'  # daily at 7:05AM EST
 
 jobs:
   run_tests:
-    name: Test send-poem.py with credentials
+    name: Update the docs index
     runs-on: ubuntu-latest
 
     defaults:
@@ -24,4 +23,4 @@ jobs:
 
       - name: Update repo pages
         run:
-          python poetry/make-docs.py --repo 'poetry' --token ${{ secrets.GH_TOKEN }} 
+          python docs/make-docs.py --repo 'poetry' --token ${{ secrets.GH_TOKEN }} 
