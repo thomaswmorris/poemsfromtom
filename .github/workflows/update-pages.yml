@@ -1,6 +1,5 @@
 name: Pages
 on:
-  push:
   schedule:
     - cron: '05 12 * * *'  # daily at 7:05AM EST
 

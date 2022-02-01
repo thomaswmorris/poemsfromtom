@@ -1,5 +1,3 @@
-
-
 from datetime import datetime
 import calendar
 import pandas as pd
@@ -35,6 +33,7 @@ print(args.repo, args.token)
 
 # Choose a poem that meets the supplied conditions
 poetizer.load_history(repo_name=args.repo, repo_token=args.token) # This automatically loads the repo as well
+
 history = poetizer.history.copy()
 
 dt_now = datetime.fromtimestamp(history.iloc[-1]['timestamp'])
@@ -98,7 +97,7 @@ for i, loc in enumerate(history.index):
     index_fn = f'docs/{y}/{m}/{d}/index.html'
 
     try:
-        index = poetizer.repo.get_contents(index_fn,ref='master').decoded_content.decode()
+        index = poetizer.repo.get_contents(index_fn,ref='data').decoded_content.decode()
     except:
         index = None
 
@@ -110,14 +109,14 @@ for i, loc in enumerate(history.index):
 
     print(f'wrote to {index_fn}')
 
-head_sha  = poetizer.repo.get_branch('master').commit.sha
+head_sha  = poetizer.repo.get_branch('data').commit.sha
 base_tree = poetizer.repo.get_git_tree(sha=head_sha)
 
 tree   = poetizer.repo.create_git_tree(elems, base_tree)
 parent = poetizer.repo.get_git_commit(sha=head_sha) 
 
-commit = poetizer.repo.create_git_commit(f'update logs {now_date} {now_time}', tree, [parent])
-master_ref = poetizer.repo.get_git_ref('heads/master')
+commit = poetizer.repo.create_git_commit(f'update docs {now_date} {now_time}', tree, [parent])
+master_ref = poetizer.repo.get_git_ref('heads/data')
 master_ref.edit(sha=commit.sha)
 
 
