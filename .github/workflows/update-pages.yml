@@ -22,4 +22,4 @@ jobs:
 
       - name: Update repo pages
         run:
-          python docs/make-docs.py --repo 'poetry' --token ${{ secrets.GH_TOKEN }} 
+          python poetry/make-docs.py --repo 'poetry' --token ${{ secrets.GH_TOKEN }} 
