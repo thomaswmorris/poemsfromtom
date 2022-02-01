@@ -202,7 +202,7 @@ class Poetizer:
                 self.history = pd.DataFrame(columns=['poet','title','type','date','time','timestamp'])
                 print(f'{e}\ncould not find history.csv')
 
-        self.history.index = np.arange(len(self.history))
+        # self.history.index = np.arange(len(self.history))
 
     def make_stats(self,order_by=None, ascending=True,force_rows=True,force_cols=True):
         
@@ -337,7 +337,7 @@ class Poetizer:
         if write_historical:
             
             now_date, now_time = self.dt_now.isoformat()[:19].split('T')
-            self.history.iloc[len(self.history)] = self.poet, self.title, tag_historical, now_date, now_time, self.now
+            self.history.loc[len(self.history)] = self.poet, self.title, tag_historical, now_date, now_time, self.now
             # self.history = self.rhistory.loc[self.rhistory['type']!='test']
             self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
 
