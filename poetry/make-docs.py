@@ -68,6 +68,25 @@ random_index = f'''
     </head>
     </html>
     '''
+random_index = f'''
+    <html>
+        <script>
+        var simpleText = "hello_world";
+        var finalSplitText = simpleText.split("_");
+        var splitText = finalSplitText[0];
+
+        window.onload = function() {
+            //when the document is finished loading, replace everything
+            //between the <a ...> </a> tags with the value of splitText
+        document.getElementById("myLink").innerHTML=splitText;
+        } 
+
+        </script>
+    <body>
+    <a id="myLink" href = test.html></a>
+    </body>
+    </html>
+    '''
 
 blob  = poetizer.repo.create_git_blob(home_index, "utf-8")
 elems = [gh.InputGitTreeElement(path='docs/index.html', mode='100644', type='blob', sha=blob.sha)]
