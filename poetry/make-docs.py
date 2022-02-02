@@ -58,7 +58,7 @@ random_index = f'''
     <html>
     <script>
         // An array of URL's
-        var randURLs = [{','.join([f'\"{link}\"' for link in random_URLs])}];
+        var randURLs = [{','.join([f'"{link}"' for link in random_URLs])}];
 
         // Redirect to a random one
         var randURL = Math.floor(Math.random() * randURLs.length);
