@@ -49,21 +49,23 @@ home_index = f'''
     </html>
     '''
 
-random_URLs = []
+ymds = []
 for i, loc in enumerate(history.index):
     y, m, d = history.loc[loc,'date'].split('-')
-    random_URLs.append(f'https://thomaswmorris.github.io/poetry/{y:0>2}/{m:0>2}/{d:0>2}')
+    ymds.append(f'{y:0>2}/{m:0>2}/{d:0>2}')
 
 random_index = f'''
+
     <html>
     <script>
         // An array of URL's
-        var randURLs = [{','.join([f'"{link}"' for link in random_URLs])}];
-
+        var ymds = [{','.join([f'"{ymd}"' for ymd in ymds])}];
         // Redirect to a random one
-        var randURL = Math.floor(Math.random() * randURLs.length);
-        window.open(randURLs[randURL]);
+        var randURL = https://thomaswmorris.github.io/poetry/ + ymds[Math.floor(Math.random() * ymds.length)];
+        window.location.replace(randURL)
     </script>
+    <head>
+    </head>
     </html>
     '''
 
