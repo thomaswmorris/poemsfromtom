@@ -52,7 +52,7 @@ home_index = f'''
 random_URLs = []
 for i, loc in enumerate(history.index):
     y, m, d = history.loc[loc,'date'].split('-')
-    random_URLs.append(f'https://thomaswmorris.github.io/poetry/{y:02}/{m:02}/{d:02}')
+    random_URLs.append(f'https://thomaswmorris.github.io/poetry/{y:0>2}/{m:0>2}/{d:0>2}')
 
 random_index = f'''
     <html>
