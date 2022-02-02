@@ -49,12 +49,21 @@ home_index = f'''
     </html>
     '''
 
+random_URLs = []
+for i, loc in enumerate(history.index):
+    y, m, d = history.loc[loc,'date'].split('-')
+    random_URLs.append(f'https://thomaswmorris.github.io/poetry/{y:02}/{m:02}/{d:02}')
+
 random_index = f'''
     <html>
-    <head>
-        <title></title>
-        <meta http-equiv = "refresh" content="0; url=https://thomaswmorris.github.io/poetry/{dt_now.year:02}/{dt_now.month:02}/{dt_now.day:02}" />
-    </head>
+    <script>
+        // An array of URL's
+        var randURLs = [{','.join([f'\"{link}\"' for link in random_URLs])}];
+
+        // Redirect to a random one
+        var randURL = Math.floor(Math.random() * randURLs.length);
+        window.open(randURLs[randURL]);
+    </script>
     </html>
     '''
 
