@@ -58,23 +58,11 @@ for i, loc in enumerate(history.index):
 random_index = f'''
     <html>
         <script>
-        var simpleText = "hello_world";
-        var finalSplitText = simpleText.split("_");
-        var splitText = finalSplitText[0];
-
         var ymds = [{','.join([f'"{ymd}"' for ymd in ymds])}];
-        var random_content = "0; url=https://thomaswmorris.github.io/poetry/" + ymds[Math.floor(Math.random() * ymds.length)];
-
-        window.onload = function() {{
-            //when the document is finished loading, replace everything
-            //between the <a ...> </a> tags with the value of splitText
-        document.getElementById("content").innerHTML=random_content;
-        }}
-
+        window.location.href = "https://thomaswmorris.github.io/poetry/" + ymds[Math.floor(Math.random() * ymds.length)];
         </script>
     <head>
         <title></title>
-        <meta http-equiv = "refresh" content= id="content" />
     </head>
     </html>
     '''
