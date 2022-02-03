@@ -45,7 +45,7 @@ def send_daily_poem():
     poetizer.load_poem(
         poet=args.poet, 
         title=args.title, 
-        repo_name='poetry',
+        repo_name='poems',
         repo_token=os.environ['GITHUB_TOKEN'],
         when=time.time(), 
         min_length=10, 

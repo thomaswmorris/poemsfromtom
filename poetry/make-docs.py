@@ -44,7 +44,7 @@ home_index = f'''
     <html>
     <head>
         <title></title>
-        <meta http-equiv = "refresh" content="0; url=https://thomaswmorris.github.io/poetry/{dt_now.year:02}/{dt_now.month:02}/{dt_now.day:02}" />
+        <meta http-equiv = "refresh" content="0; url=https://thomaswmorris.github.io/poems/{dt_now.year:02}/{dt_now.month:02}/{dt_now.day:02}" />
     </head>
     </html>
     '''
@@ -58,7 +58,7 @@ random_index = f'''
     <html>
         <script>
         var ymds = [{','.join([f'"{ymd}"' for ymd in ymds])}];
-        window.location.href = "https://thomaswmorris.github.io/poetry/" + ymds[Math.floor(Math.random() * ymds.length)];
+        window.location.href = "https://thomaswmorris.github.io/poems/" + ymds[Math.floor(Math.random() * ymds.length)];
         </script>
     <head>
         <title></title>
@@ -89,9 +89,9 @@ for i, loc in enumerate(history.index):
     print(y, m, d, poetizer.poet, poetizer.title)
 
     
-    prev_string = f'<i><a href="https://thomaswmorris.github.io/poetry/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a></i>' if i > 0 else ''
-    next_string = f'<i><a href="https://thomaswmorris.github.io/poetry/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a></i>' if i < n_history - 1 else ''
-    rand_string = f'<i><a href="https://thomaswmorris.github.io/poetry/random">random</a></i>'
+    prev_string = f'<i><a href="https://thomaswmorris.github.io/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a></i>' if i > 0 else ''
+    next_string = f'<i><a href="https://thomaswmorris.github.io/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a></i>' if i < n_history - 1 else ''
+    rand_string = f'<i><a href="https://thomaswmorris.github.io/poems/random">random</a></i>'
 
     html_header = f'''
         <html>
@@ -107,7 +107,7 @@ for i, loc in enumerate(history.index):
     index_fn = f'docs/{y}/{m}/{d}/index.html'
 
     try:
-        index = poetizer.repo.get_contents(index_fn,ref='data').decoded_content.decode()
+        index = poetizer.repo.get_contents(index_fn,ref='master').decoded_content.decode()
     except:
         index = None
 
@@ -119,14 +119,14 @@ for i, loc in enumerate(history.index):
 
     print(f'wrote to {index_fn}')
 
-head_sha  = poetizer.repo.get_branch('data').commit.sha
+head_sha  = poetizer.repo.get_branch('master').commit.sha
 base_tree = poetizer.repo.get_git_tree(sha=head_sha)
 
 tree   = poetizer.repo.create_git_tree(elems, base_tree)
 parent = poetizer.repo.get_git_commit(sha=head_sha) 
 
 commit = poetizer.repo.create_git_commit(f'update logs {now_date} {now_time}', tree, [parent])
-master_ref = poetizer.repo.get_git_ref('heads/data')
+master_ref = poetizer.repo.get_git_ref('heads/master')
 master_ref.edit(sha=commit.sha)
 
 

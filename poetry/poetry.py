@@ -410,7 +410,7 @@ class Poetizer:
             <br>
             <br>
             <p style="font-family:Garamond; color:{html_color}; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0">Past poems 
-            can be found <a href="https://thomaswmorris.github.io/poetry">here</a>.
+            can be found <a href="https://thomaswmorris.github.io/poems">here</a>.
             </p>
         </html>
         '''
