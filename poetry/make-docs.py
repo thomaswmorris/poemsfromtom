@@ -54,20 +54,7 @@ for i, loc in enumerate(history.index):
     y, m, d = history.loc[loc,'date'].split('-')
     ymds.append(f'{y:0>2}/{m:0>2}/{d:0>2}')
 
-random_index = f'''
 
-    <html>
-    <script>
-        // An array of URL's
-        var ymds = [{','.join([f'"{ymd}"' for ymd in ymds])}];
-        // Redirect to a random one
-        var randURL = https://thomaswmorris.github.io/poetry/ + ymds[Math.floor(Math.random() * ymds.length)];
-        window.location.replace(randURL)
-    </script>
-    <head>
-    </head>
-    </html>
-    '''
 random_index = f'''
     <html>
         <script>
@@ -75,16 +62,20 @@ random_index = f'''
         var finalSplitText = simpleText.split("_");
         var splitText = finalSplitText[0];
 
+        var ymds = [{','.join([f'"{ymd}"' for ymd in ymds])}];
+        var random_content = "0; url=https://thomaswmorris.github.io/poetry/" + ymds[Math.floor(Math.random() * ymds.length)];
+
         window.onload = function() {{
             //when the document is finished loading, replace everything
             //between the <a ...> </a> tags with the value of splitText
-        document.getElementById("myLink").innerHTML=splitText;
+        document.getElementById("content").innerHTML=random_content;
         }}
 
         </script>
-    <body>
-    <a id="myLink" href = test.html></a>
-    </body>
+    <head>
+        <title></title>
+        <meta http-equiv = "refresh" content= id="content" />
+    </head>
     </html>
     '''
 
