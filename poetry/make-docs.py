@@ -54,7 +54,6 @@ for i, loc in enumerate(history.index):
     y, m, d = history.loc[loc,'date'].split('-')
     ymds.append(f'{y:0>2}/{m:0>2}/{d:0>2}')
 
-
 random_index = f'''
     <html>
         <script>
@@ -89,6 +88,7 @@ for i, loc in enumerate(history.index):
 
     print(y, m, d, poetizer.poet, poetizer.title)
 
+    
     prev_string = f'<i><a href="https://thomaswmorris.github.io/poetry/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a></i>' if i > 0 else ''
     next_string = f'<i><a href="https://thomaswmorris.github.io/poetry/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a></i>' if i < n_history - 1 else ''
     rand_string = f'<i><a href="https://thomaswmorris.github.io/poetry/random">random</a></i>'

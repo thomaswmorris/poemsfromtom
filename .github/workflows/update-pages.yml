@@ -2,7 +2,7 @@ name: Pages
 on:
   push:
   schedule:
-    - cron: '05 * * * *'  # daily at 7:05AM EST
+    - cron: '05 12 * * *'  # daily at 7:05AM EST
 
 jobs:
   run_tests:
