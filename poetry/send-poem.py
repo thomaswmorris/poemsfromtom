@@ -47,7 +47,7 @@ poetizer.load_poem(
 )
 
 if not args.repo_lsfn == '':
-    contents = poetizer.repo.get_contents(args.repo_lsfn,ref='data')
+    contents = poetizer.repo.get_contents(args.repo_lsfn,ref='master')
     entries  = pd.read_csv(StringIO(contents.decoded_content.decode()),index_col=0)
 
 else: 
