@@ -170,7 +170,7 @@ class Poetizer:
             for i,s in enumerate(words):
                 if (not len(s) > 0) or (s in ['\"','\'']):
                     continue
-                if (i in [0,len(words)-1]) or not (s in words_to_not_capitalize): 
+                if (i in [0,len(words)-1]) or not ((s in words_to_not_capitalize) and not delim == '-'): 
                     i_cap = list(re.finditer('[^\"\']',s))[0].start()
                     words[i] = words[i][:i_cap] + words[i][i_cap].capitalize() + words[i][i_cap+1:]
                 else: 
