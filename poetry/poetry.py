@@ -40,13 +40,11 @@ class Poetizer:
         self.weekdays  = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
         self.months    = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
         self.seasons   = ['winter', 'summer', 'autumn', 'spring']
-
-
         
         self.kw_dict = {}
-        self.kw_dict['winter']           = ['snow', 'frost', 'cold', 'midwinter']
-        self.kw_dict['spring']           = ['~flower','~flowers','~tulips']
-        self.kw_dict['summer']           = []
+        self.kw_dict['winter']           = ['snow', 'frost', 'cold', 'midwinter','wintertime']
+        self.kw_dict['spring']           = ['~flower','~flowers','~tulips','springtime']
+        self.kw_dict['summer']           = ['summertime']
         self.kw_dict['autumn']           = ['~fall', 'leaves', 'autumnal']
 
         self.kw_dict['winter solstice']  = self.kw_dict['winter']
@@ -54,8 +52,6 @@ class Poetizer:
         self.kw_dict['summer solstice']  = self.kw_dict['summer']
         self.kw_dict['autumn equinox']   = self.kw_dict['autumn']
 
-
-        
         self.kw_dict['valentine']        = ['to my valentine']
         self.kw_dict['palm sunday']      = ['~donkey']
         self.kw_dict['good friday']      = ['~paschal','~crucifixion','~martyr']
@@ -134,8 +130,6 @@ class Poetizer:
     def string_contains_phrase(self, string, phrase, ordered=False):
         return np.all([len(re.findall(f'[^a-z]{w}[^a-z]',string.lower().join([' ',' ']))) > 0 for w in [w.strip('~') for w in phrase.split()]])
     
-    
-        re.sub(r'\~(.*)',r'\1','~fall')
     def list_contextual(self,exclude=[]):
         for discriminator, label in zip([self.seasons, self.weekdays, self.months, self.holidays, self.liturgies],
                                         ['SEASONS', 'WEEKDAYS', 'MONTHS', 'HOLIDAYS', 'LITURGIES']):
