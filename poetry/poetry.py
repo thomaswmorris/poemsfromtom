@@ -196,6 +196,7 @@ class Poetizer:
             self.repo_history_contents = self.repo.get_contents('history.csv',ref='master')
             self.rhistory = pd.read_csv(StringIO(self.repo_history_contents.decoded_content.decode()),index_col=0)
             self.history  = self.rhistory.loc[self.rhistory['type']!='test']
+            self.history.index = np.arange(self.history.index)
 
         else:
             try:
