@@ -28,15 +28,13 @@ args = parser.parse_args()
 # Initialize the poetizer
 poetizer = Poetizer()
 
-when = time.time() # if not args.hist_tag == 'test' else np.random.uniform(low=0, high=time.time())
-
 # Choose a poem that meets the supplied conditions
 poetizer.load_poem(
     poet=args.poet, 
     title=args.title, 
     repo_name=args.repo,
     repo_token=args.token,
-    when=when, 
+    when=time.time(), 
     min_length=10, 
     max_length=5000, 
     poet_latency=28, 
