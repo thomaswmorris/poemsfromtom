@@ -1,4 +1,5 @@
 import time
+import numpy as np
 import pandas as pd
 from poetry import Poetizer
 from io import StringIO
@@ -24,9 +25,10 @@ parser.add_argument('--hour', type=str, help='Hour of the day to send', default=
 
 args = parser.parse_args()
 
-
 # Initialize the poetizer
 poetizer = Poetizer()
+
+when = time.time() # if not args.hist_tag == 'test' else np.random.uniform(low=0, high=time.time())
 
 # Choose a poem that meets the supplied conditions
 poetizer.load_poem(
@@ -34,7 +36,7 @@ poetizer.load_poem(
     title=args.title, 
     repo_name=args.repo,
     repo_token=args.token,
-    when=time.time(), 
+    when=when, 
     min_length=10, 
     max_length=5000, 
     poet_latency=28, 

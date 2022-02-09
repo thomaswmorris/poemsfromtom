@@ -45,12 +45,12 @@ class Poetizer:
         self.kw_dict['winter']           = ['snow', 'frost', 'cold', 'midwinter','wintertime']
         self.kw_dict['spring']           = ['~flower','~flowers','~tulips','springtime']
         self.kw_dict['summer']           = ['summertime']
-        self.kw_dict['autumn']           = ['~fall', 'leaves', 'autumnal']
+        self.kw_dict['autumn']           = ['~fall', '~leaves', 'autumnal']
 
-        self.kw_dict['winter solstice']  = self.kw_dict['winter']
-        self.kw_dict['spring equinox']   = self.kw_dict['spring']
-        self.kw_dict['summer solstice']  = self.kw_dict['summer']
-        self.kw_dict['autumn equinox']   = self.kw_dict['autumn']
+        for season in self.seasons:
+            self.kw_dict[f'first day of {season}'] = [season,*self.kw_dict[season]]
+        for month in self.months:
+            self.kw_dict[f'first day of {month}'] = [f'~{month}']
 
         self.kw_dict['valentine']        = ['to my valentine']
         self.kw_dict['palm sunday']      = ['~donkey']
@@ -59,6 +59,7 @@ class Poetizer:
         self.kw_dict['divine mercy']     = ['~mercy']
         self.kw_dict['pentacost']        = ['~holy spirit','pentacostal']
         self.kw_dict['lent']             = ['~sin', '~sorrow', '~sadness']
+        self.kw_dict['memorial day']     = ['~soldier']
         self.kw_dict['independence day'] = ['~america']
         self.kw_dict['halloween']        = ['goblin']
         self.kw_dict['christmas eve']    = ['~christmas','~nativity']
@@ -77,10 +78,18 @@ class Poetizer:
             return self.months[datetime.fromtimestamp(t).month-1]
         
     def get_season(self,t=time.time()):
-            month = datetime.fromtimestamp(t).month
-            if 3 <= month < 6:  return 'spring' 
-            if 6 <= month < 9:  return 'summer' 
-            if 9 <= month < 12: return 'autumn' 
+
+            year = datetime.fromtimestamp(t).year
+            yday = datetime.fromtimestamp(t).timetuple().tm_yday
+
+            spring = datetime(year, 3, 20).timetuple().tm_yday
+            summer = datetime(year, 6, 21).timetuple().tm_yday
+            autumn = datetime(year, 9, 23).timetuple().tm_yday
+            winter = datetime(year, 12, 21).timetuple().tm_yday
+
+            if (spring <= yday < summer):  return 'spring' 
+            if (summer <= yday < autumn):  return 'summer' 
+            if (autumn <= yday < winter):  return 'autumn' 
             return 'winter'
 
     def get_holiday(self,t=time.time()):
@@ -102,18 +111,17 @@ class Poetizer:
         
         if (dt.month,dt.day)==(2,14):  return 'valentine'
         if (dt.month,dt.day)==(3,25):  return 'annunciation'
+        if (dt.month,dt.weekday())==(5,0) and (self.get_month(t+7*86400)=='june'): return 'memorial day' # last monday of may
+        if (dt.month,dt.day)==(6,24):  return 'midsummer'
         if (dt.month,dt.day)==(7,4):   return 'independence day'
         if (dt.month,dt.day)==(10,31): return 'halloween'
         if (dt.month,dt.day)==(11,(3-datetime(dt.year,11,1).weekday())%7+22): return 'thanksgiving' # fourth thursday of november
         if (dt.month,dt.day)==(12,24): return 'christmas eve'
         if (dt.month,dt.day)==(12,25): return 'christmas'
         
-        
-        if (dt.month,dt.day)==(3,21): return 'spring equinox'
-        if (dt.month,dt.day)==(6,21): return 'summer solstice'
-        if (dt.month,dt.day)==(9,21): return 'autumn equinox'
-        if (dt.month,dt.day)==(12,21): return 'winter solstice'
-        #if self.get_liturgy(t-86400) == 'epiphany' and self.get_liturgy(t) == 'ordinary time': return 'baptism'
+        if self.get_month(t) != self.get_month(t - 86400): return f'first day of {self.get_month(t)}'
+        if self.get_season(t) != self.get_season(t - 86400): return f'first day of {self.get_season(t)}'
+
         return 'no holiday'
 
     def get_liturgy(self,t=time.time()):
@@ -248,13 +256,13 @@ class Poetizer:
         # apply multipliers accordingly; so that poems titled "christmas" aren't sent in june, or poems titled "sunday" aren't sent on thursday
         # if self.likelihood is None:
         
+        self.likelihood = np.ones(self.n_pt) / self.n_pt 
         if (not poet == 'random') and (not title == 'random'):
             self.poet  = poet
             self.title = title
             self.poem  = self.dict[self.poet][self.title]
 
         else:
-            self.likelihood = np.ones(self.n_pt) / self.n_pt 
             for _poet in list(self.dict):
                 self.likelihood[_poet==np.array(self.poets)] = 1 / np.sum(_poet==np.array(self.poets))
                 if not self.history is None:
@@ -280,8 +288,7 @@ class Poetizer:
                                     if very_verbose: print(_kw, _poet, _title, multiplier)
                                 elif not (((label == 'HOLIDAYS') and (kw in self.seasons)) or '~' in _kw): self.likelihood[i_pt] = 0
 
-            pop_likelihood = list(self.likelihood)
-
+        pop_likelihood = list(self.likelihood)
         pop_poets  = self.poets.copy()
         pop_titles = self.titles.copy()
             
@@ -390,7 +397,7 @@ class Poetizer:
         self.poem_html = f"""
         <html>
         <h2 style="font-family:Garamond; color:{html_color}; font-size: 26px; margin-bottom:0; margin : 0; padding-top:0;">{self.titleize(self.title)}</h2>
-            <p style="font-family:Garamond; color:{html_color}; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0;"><i>by 
+            <p style="font-family:Garamond; color:{html_color}; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;"><i>by 
             <a href="{self.link}">{self.name}</a> ({self.birth}&#8212;{self.death})</i> </p>
             <hr style="width:25%;text-align:left;margin-left:0";color:black;background-color:black">
             <p style="font-family:Garamond; color:{html_color}; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0">{html_body}
