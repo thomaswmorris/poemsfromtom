@@ -94,9 +94,9 @@ for i, loc in enumerate(history.index):
     html_header = f'''
         <html>
         <title>{nice_fancy_date}</title>
-            <h2 style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
+            <h2 style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0;">
             {prev_string} {rand_string} {next_string}
-            <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0">{nice_fancy_date}
+            <p style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0">{nice_fancy_date}
             </p>
             <br>
         </h2>
