@@ -52,7 +52,7 @@ class Poetizer:
         for month in self.months:
             self.kw_dict[f'first day of {month}'] = [f'~{month}']
 
-        self.kw_dict['valentine']        = ['to my valentine']
+        self.kw_dict['valentine\'s day'] = ['to my valentine']
         self.kw_dict['palm sunday']      = ['~donkey']
         self.kw_dict['good friday']      = ['~paschal','~crucifixion','~martyr']
         self.kw_dict['easter vigil']     = ['~hell']
@@ -109,7 +109,7 @@ class Poetizer:
         if yd == easter_yd + 39: return 'ascension'
         if yd == easter_yd + 49: return 'pentacost'
         
-        if (dt.month,dt.day)==(2,14):  return 'valentine'
+        if (dt.month,dt.day)==(2,14):  return 'valentine\'s day'
         if (dt.month,dt.day)==(3,25):  return 'annunciation'
         if (dt.month,dt.weekday())==(5,0) and (self.get_month(t+7*86400)=='june'): return 'memorial day' # last monday of may
         if (dt.month,dt.day)==(6,24):  return 'midsummer'
@@ -129,7 +129,7 @@ class Poetizer:
         yd = dt.timetuple().tm_yday
         easter_yd    = easter(dt.year).timetuple().tm_yday 
         christmas_yd = datetime(dt.year,12,25).timetuple().tm_yday 
-        if 0 < easter(dt.year).timetuple().tm_yday - dt.date().timetuple().tm_yday < 46: return 'lent'
+        if 0 < easter(dt.year).timetuple().tm_yday - dt.date().timetuple().tm_yday <= 46: return 'lent'
         if -42 < easter(dt.year).timetuple().tm_yday - dt.date().timetuple().tm_yday <= 0: return 'easter'
         if christmas_yd - (22 + datetime(dt.year,12,25).weekday()) <= yd < christmas_yd: return 'advent'
         if 2 <= yd < 9: return 'epiphany'
@@ -296,7 +296,7 @@ class Poetizer:
         while (len(pop_titles) > 0) and (self.poem == None):
             
             p = np.array(pop_likelihood) / np.sum(pop_likelihood)
-            _index = np.random.choice(np.arange(len(p)),p=p)
+            _index = np.random.choice(np.arange(len(p)), p=p)
             _poet, _title, _likelihood = pop_poets.pop(_index), pop_titles.pop(_index), pop_likelihood.pop(_index)
 
             if not (_poet==poet) and not (poet=='random'):
