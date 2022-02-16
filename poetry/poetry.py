@@ -18,7 +18,7 @@ from email.mime.text import MIMEText
 class Poetizer:
     def __init__(self):
                         
-        self.dict = {}
+        self.poems, self.metadata = {}, {}
         self.poets, self.titles, self.pt_keys = [], [], []
         self.content_prefix = ''
         fns = np.sort([fn for fn in glob.glob(self.content_prefix + 'poems/*.json')])
@@ -26,8 +26,10 @@ class Poetizer:
         with open('poems.json', 'r+') as f:
             pt_dict = json.load(f)
         for k, v in pt_dict.items():
-            tag, name, birth, death, link = v['metadata'].split('|')
-            self.dict[tag] = v['poems']
+            self.poems[tag]    = v['poems']
+            self.metadata[tag] = v['metadata']
+            tag = v['metadata'].split('|')[0]
+            self.poems[tag] = v['poems']
             for title in list(v['poems']):
                 self.poets.append(tag)
                 self.titles.append(title)
@@ -218,11 +220,11 @@ class Poetizer:
         if force_rows: pd.set_option('display.max_rows', None)
         if force_cols: pd.set_option('display.max_columns', None)
         self.stats = pd.DataFrame(columns=['name','birth','death','n_poems','times_sent','days_since_last_sent'])
-        for _poet in list(self.dict):
+        for _poet in list(self.poems):
             
-            tag, name, birth, death, link = self.dict[_poet]['metadata'].split('|')
+            tag, name, birth, death, link = self.metadata[_poet].split('|')
             elapsed = (time.time() - self.history['timestamp'][self.history['poet']==_poet].max()) / 86400 # if _poet in self.history['poet'] else None
-            self.stats.loc[_poet] = name, birth, death, len(self.dict[_poet]) - 1, (self.history['poet']==_poet).sum(), np.round(elapsed,1)
+            self.stats.loc[_poet] = name, birth, death, len(self.poems[_poet]) - 1, (self.history['poet']==_poet).sum(), np.round(elapsed,1)
             
         if not order_by is None:
             self.stats = self.stats.sort_values(by=order_by, ascending=ascending)
@@ -267,10 +269,10 @@ class Poetizer:
         if (not poet == 'random') and (not title == 'random'):
             self.poet  = poet
             self.title = title
-            self.poem  = self.dict[self.poet][self.title]
+            self.poem  = self.poems[self.poet][self.title]
 
         else:
-            for _poet in list(self.dict):
+            for _poet in list(self.poems):
                 self.likelihood[_poet==np.array(self.poets)] = 1 / np.sum(_poet==np.array(self.poets))
                 if not self.history is None:
                     self.likelihood[_poet==np.array(self.poets)] *= np.exp(-.25 * self.stats.loc[_poet, 'times_sent'])
@@ -309,7 +311,7 @@ class Poetizer:
                 continue 
             if not (_title==title) and not (title=='random'):
                 continue
-            if not (min_length <= len(self.dict[_poet][_title].split()) <= max_length):
+            if not (min_length <= len(self.poems[_poet][_title].split()) <= max_length):
                 continue
             
             if read_historical and _likelihood < 1e6:
@@ -328,7 +330,7 @@ class Poetizer:
                             continue # if the poet was sent too recently 
                         
             self.poet = _poet; self.title = _title
-            self.poem = self.dict[self.poet][self.title]
+            self.poem = self.poems[self.poet][self.title]
             break
     
         # If we exit the loop, and don't have a poem:
@@ -336,7 +338,7 @@ class Poetizer:
             raise(Exception(f'No poem with the requirements was found in the database!'))
 
         # Put the attributes of the poem into the class
-        self.tag, self.name, self.birth, self.death, self.link = self.dict[self.poet]['metadata'].split('|')
+        self.tag, self.name, self.birth, self.death, self.link = self.metadata[self.poet].split('|')
         output = f'chose poem \"{self.title}\" by {self.name}'
 
         self.now = int(time.time())
