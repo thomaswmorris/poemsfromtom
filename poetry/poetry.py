@@ -26,10 +26,11 @@ class Poetizer:
         with open('poems.json', 'r+') as f:
             pt_dict = json.load(f)
         for k, v in pt_dict.items():
-            self.poems[tag]    = v['poems']
-            self.metadata[tag] = v['metadata']
+
             tag = v['metadata'].split('|')[0]
-            self.poems[tag] = v['poems']
+            self.metadata[tag] = v['metadata']    
+            self.poems[tag]    = v['poems']
+            
             for title in list(v['poems']):
                 self.poets.append(tag)
                 self.titles.append(title)
