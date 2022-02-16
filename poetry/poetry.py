@@ -26,13 +26,12 @@ class Poetizer:
         with open('poems.json', 'r+') as f:
             pt_dict = json.load(f)
         for k, v in pt_dict.items():
-            tag, name, birth, death, link = pt_dict[k]['metadata'].split('|')
-            self.dict[tag] = v
-            for title in list(v):
-                if not title=='metadata':
-                    self.poets.append(tag)
-                    self.titles.append(title)
-                    self.pt_keys.append((tag,title)) 
+            tag, name, birth, death, link = v['metadata'].split('|')
+            self.dict[tag] = v['poems']
+            for title in list(v['poems']):
+                self.poets.append(tag)
+                self.titles.append(title)
+                self.pt_keys.append((tag,title)) 
                 
         self.n_pt = len(self.pt_keys)
         self.likelihood = None
@@ -42,8 +41,8 @@ class Poetizer:
         self.seasons   = ['winter', 'summer', 'autumn', 'spring']
         
         self.kw_dict = {}
-        self.kw_dict['winter']           = ['snow', 'frost', 'cold', 'midwinter','wintertime']
-        self.kw_dict['spring']           = ['~flower','~flowers','~tulips','springtime']
+        self.kw_dict['winter']           = ['snow', 'frost', 'cold', 'midwinter', 'wintertime']
+        self.kw_dict['spring']           = ['~flower','~flowers','~tulips','springtime','snowdrops']
         self.kw_dict['summer']           = ['summertime']
         self.kw_dict['autumn']           = ['~fall', '~leaves', 'autumnal']
 
@@ -52,7 +51,8 @@ class Poetizer:
         for month in self.months:
             self.kw_dict[f'first day of {month}'] = [f'~{month}']
 
-        self.kw_dict['valentine\'s day'] = ['to my valentine']
+        self.kw_dict['new year\'s day']  = ['new year', 'old year']
+        self.kw_dict['valentine\'s day'] = ['valentine']
         self.kw_dict['palm sunday']      = ['~donkey']
         self.kw_dict['good friday']      = ['~paschal','~crucifixion','~martyr']
         self.kw_dict['easter vigil']     = ['~hell']
@@ -62,7 +62,6 @@ class Poetizer:
         self.kw_dict['memorial day']     = ['~soldier']
         self.kw_dict['independence day'] = ['~america']
         self.kw_dict['halloween']        = ['goblin']
-        self.kw_dict['christmas eve']    = ['~christmas','~nativity']
         self.kw_dict['christmas']        = ['~christmas','~nativity']
         
         self.holidays = ['no holiday']
@@ -96,7 +95,7 @@ class Poetizer:
 
         dt = datetime.fromtimestamp(t)
         yd = dt.timetuple().tm_yday
-        if dt.month==1 and dt.day==1: return 'new year'
+        if dt.month==1 and dt.day==1: return 'new year\'s day'
         easter_yd = easter(dt.year).timetuple().tm_yday 
         
         if yd == easter_yd - 46: return 'ash wednesday'
@@ -135,8 +134,12 @@ class Poetizer:
         if 2 <= yd < 9: return 'epiphany'
         return 'ordinary time'
     
-    def string_contains_phrase(self, string, phrase, ordered=False):
-        return np.all([len(re.findall(f'[^a-z]{w}[^a-z]',string.lower().join([' ',' ']))) > 0 for w in [w.strip('~') for w in phrase.split()]])
+    def string_contains_phrase(self, string, phrase, ordered=False, return_counts=False):
+
+        # this checks that a string has, as words, all of the words in phrase in some order
+        counts_per_word = np.array([len(re.findall(f'[^a-z]{w}[^a-z]',string.lower().join([' ',' ']))) for w in [w.strip('~') for w in phrase.split()]])
+        if return_counts: return counts_per_word
+        return (counts_per_word > 0).all()
     
     def list_contextual(self,exclude=[]):
         for discriminator, label in zip([self.seasons, self.weekdays, self.months, self.holidays, self.liturgies],
@@ -150,6 +153,9 @@ class Poetizer:
                 for i,(_poet,_title) in enumerate(self.pt_keys):
                     if np.any([self.string_contains_phrase(_title,_kw) for _kw in [kw,*self.kw_dict[kw]]]):
                         print(f'{_poet:<10} | {_title:}')
+                    #elif np.any([np.all(self.string_contains_phrase(self.dict[_poet][_title],_kw,return_counts=True) > 2) 
+                    #                                                for _kw in [kw,*self.kw_dict[kw]]]):
+                    #    print(f'{_poet:<10} * {_title:}')
 
     def get_keywords(self, when):
         return [self.get_season(when), self.get_weekday(when), self.get_month(when), self.get_holiday(when), self.get_liturgy(when)]          
