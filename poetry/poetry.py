@@ -272,8 +272,6 @@ class Poetizer:
             raise(Exception(f'The poem \"{title}\" poet \"{poet}\" is not in the database!'))
             
         # apply multipliers accordingly; so that poems titled "christmas" aren't sent in june, or poems titled "sunday" aren't sent on thursday
-        # if self.likelihood is None:
-        
         self.likelihood = np.ones(self.n_pt) / self.n_pt 
         if (not poet == 'random') and (not title == 'random'):
             self.poet  = poet
@@ -381,7 +379,6 @@ class Poetizer:
         paddings = re.findall('\n+( *)', self.poem)
         nmp = len(min(paddings, key=len))
         if nmp > 0:
-            sorted
             for padding in sorted(paddings,key=len):
                 self.poem = re.sub(padding, padding[:-nmp], self.poem)
 
