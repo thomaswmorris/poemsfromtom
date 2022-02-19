@@ -258,7 +258,7 @@ class Poetizer:
             for row in self.history.index:
                 entry = self.history.loc[row]
                 if when - entry['timestamp'] < title_latency * 86400:
-                    i_pt = np.where(np.array(self.titles) == entry['title'])
+                    i_pt = np.where(np.array(self.titles) == entry['title'])[0]
                     self.poets.pop(i_pt)
                     self.titles.pop(i_pt)
                     self.pt_keys.pop(i_pt)
