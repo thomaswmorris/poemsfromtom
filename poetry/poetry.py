@@ -413,13 +413,13 @@ class Poetizer:
             <p style="font-family:Garamond; color:{html_color}; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0">{html_body}
             </p>
             <br>
-            <br>
-            <br>
         </html>
         """     
 
         self.email_html = self.poem_html + '''
         <html>
+            <br>
+            <br>
             <p style="font-family:Garamond; color:{html_color}; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0">Past poems 
             can be found <a href="https://thomaswmorris.github.io/poems">here</a>.
             </p>
