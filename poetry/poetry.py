@@ -255,6 +255,15 @@ class Poetizer:
         if read_historical or write_historical:
             self.load_history(repo_name=repo_name, repo_token=repo_token)
             self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
+            for row in self.history.index:
+                entry = self.history.loc[row]
+                if when - entry['timestamp'] < title_latency * 86400:
+                    i_pt = np.where(np.array(self.titles) == entry['title'])
+                    self.poets.pop(i_pt)
+                    self.titles.pop(i_pt)
+                    self.pt_keys.pop(i_pt)
+                    title = entry['title']
+                    print(f'popped {title}')
         
         if (not poet in self.poets) and (not poet=='random'):
             raise(Exception(f'The poet \"{poet}\" is not in the database!'))
@@ -273,7 +282,7 @@ class Poetizer:
             self.poem  = self.poems[self.poet][self.title]
 
         else:
-            for _poet in list(self.poems):
+            for _poet in np.unique(self.poets):
                 self.likelihood[_poet==np.array(self.poets)] = 1 / np.sum(_poet==np.array(self.poets))
                 if not self.history is None:
                     self.likelihood[_poet==np.array(self.poets)] *= np.exp(-.25 * self.stats.loc[_poet, 'times_sent'])
