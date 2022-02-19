@@ -263,8 +263,8 @@ class Poetizer:
                     self.poets.pop(i_pt)
                     self.titles.pop(i_pt)
                     self.pt_keys.pop(i_pt)
-                    title = entry['title']
-                    print(f'popped {title}')
+                    _title = entry['title']
+                    print(f'popped {_title}')
         
         if (not poet in self.poets) and (not poet=='random'):
             raise(Exception(f'The poet \"{poet}\" is not in the database!'))
