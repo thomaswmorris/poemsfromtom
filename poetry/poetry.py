@@ -262,9 +262,7 @@ class Poetizer:
                     self.poets.pop(i_pt)
                     self.titles.pop(i_pt)
                     self.pt_keys.pop(i_pt)
-                    _title = entry['title']
                     self.n_pt -= 1
-                    print(f'popped {_title}')
         
         if (not poet in self.poets) and (not poet=='random'):
             raise(Exception(f'The poet \"{poet}\" is not in the database!'))
@@ -333,13 +331,6 @@ class Poetizer:
                             print(f'poet \"{_poet}\" was sent too recently! ({ELAPSED/86400:.02f} days ago)')
                             continue # if the poem was sent too recently 
 
-                if (title=='random'):
-                    if _title in list(self.history['title']):
-                        ELAPSED = when - self.history['timestamp'][self.history['title']==_title].max()
-                        if ELAPSED < title_latency * 86400 :
-                            print(f'title \"{_title}\" was sent too recently! ({ELAPSED/86400:.02f} days ago)')
-                            continue # if the poet was sent too recently 
-                        
             self.poet = _poet; self.title = _title
             self.poem = self.poems[self.poet][self.title]
             break
@@ -359,7 +350,6 @@ class Poetizer:
             
             now_date, now_time = self.dt_now.isoformat()[:19].split('T')
             self.history.loc[len(self.history)] = self.poet, self.title, tag_historical, now_date, now_time, self.now
-            # self.history = self.rhistory.loc[self.rhistory['type']!='test']
             self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
 
             if not repo_name == '':
