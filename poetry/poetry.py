@@ -20,6 +20,7 @@ class Poetizer:
                         
         self.poems, self.metadata = {}, {}
         self.poets, self.titles, self.pt_keys = [], [], []
+        self.ptdf = pd.DataFrame(columns=['poet', 'title'])
         self.content_prefix = ''
         fns = np.sort([fn for fn in glob.glob(self.content_prefix + 'poems/*.json')])
         #for fn in fns:
@@ -34,7 +35,8 @@ class Poetizer:
             for title in list(v['poems']):
                 self.poets.append(tag)
                 self.titles.append(title)
-                self.pt_keys.append((tag,title)) 
+                self.pt_keys.append((tag,title))
+                self.ptdf.loc[len(self.ptdf)] = tag, title
                 
         self.n_pt = len(self.pt_keys)
         self.likelihood = None
@@ -354,14 +356,16 @@ class Poetizer:
 
                 hist_blob = self.repo.create_git_blob(self.history.to_csv(), "utf-8")
                 stat_blob = self.repo.create_git_blob(self.stats.to_csv(), "utf-8")
+                poem_blob = self.repo.create_git_blob(self.ptdf.to_csv(), "utf-8")
 
                 hist_elem = gh.InputGitTreeElement(path='history.csv', mode='100644', type='blob', sha=hist_blob.sha)
                 stat_elem = gh.InputGitTreeElement(path='stats.csv', mode='100644', type='blob', sha=stat_blob.sha)
+                poem_elem = gh.InputGitTreeElement(path='poems.csv', mode='100644', type='blob', sha=stat_blob.sha)
                 
                 head_sha  = self.repo.get_branch('master').commit.sha
                 base_tree = self.repo.get_git_tree(sha=head_sha)
 
-                tree   = self.repo.create_git_tree([hist_elem, stat_elem], base_tree)
+                tree   = self.repo.create_git_tree([hist_elem, stat_elem, poem_elem], base_tree)
                 parent = self.repo.get_git_commit(sha=head_sha) 
 
                 commit = self.repo.create_git_commit(f'update logs {now_date} {now_time}', tree, [parent])
@@ -369,9 +373,11 @@ class Poetizer:
                 master_ref.edit(sha=commit.sha)
                 
                 output += ' (wrote to repo)'
+
             else:
                 self.history.to_csv('history.csv')
                 self.stats.to_csv('stats.csv')
+
                 output += ' (wrote to local history)'
             
         if verbose: print(output)
