@@ -360,7 +360,7 @@ class Poetizer:
 
                 hist_elem = gh.InputGitTreeElement(path='history.csv', mode='100644', type='blob', sha=hist_blob.sha)
                 stat_elem = gh.InputGitTreeElement(path='stats.csv', mode='100644', type='blob', sha=stat_blob.sha)
-                poem_elem = gh.InputGitTreeElement(path='poems.csv', mode='100644', type='blob', sha=stat_blob.sha)
+                poem_elem = gh.InputGitTreeElement(path='poems.csv', mode='100644', type='blob', sha=poem_blob.sha)
                 
                 head_sha  = self.repo.get_branch('master').commit.sha
                 base_tree = self.repo.get_git_tree(sha=head_sha)
@@ -406,7 +406,9 @@ class Poetizer:
         import calendar
         self.nice_fancy_date = f'{self.weekdays[self.dt_now.weekday()].capitalize()}, '\
                              + f'{calendar.month_name[self.dt_now.month]} {self.dt_now.day}, {self.dt_now.year}'
+        
         self.header = f'“{self.titleize(self.title)}” by {self.name}'
+        
         self.poem_html = f"""
         <html>
         <h2 style="font-family:Garamond; color:{html_color}; font-size: 26px; margin-bottom:0; margin : 0; padding-top:0;">{self.titleize(self.title)}</h2>
