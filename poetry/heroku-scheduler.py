@@ -6,7 +6,6 @@ from multiprocessing import Process
 import os
 from io import StringIO
 
-poetizer = Poetizer()
 schedule = BlockingScheduler(timezone='America/New_York')
 
 import argparse, sys
@@ -27,20 +26,13 @@ parser.add_argument('--subj_tag', type=str, help='Email subject prefix', default
 parser.add_argument('--hour', type=str, help='Hour of the day to send', default=7)
 args = parser.parse_args()
 
-def f(username, password, name, email, tag):
-    done, fails = False, 0
-    while (not done) and (fails < 12):
-        try:
-            poetizer.send_poem(username, password, email, tag); done = True
-            a,b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
-        except Exception as e:
-            print(e); fails += 1; time.sleep(60)
-            
+
 @schedule.scheduled_job('cron', day_of_week='mon,tue,wed,thu,fri,sat,sun', hour=args.hour)
 def send_daily_poem():
 
     print(f'\nThis job is run every day at {args.hour} EST')
 
+    # Load the poetizer
     poetizer = Poetizer()
 
     # Choose a poem that meets the supplied conditions
@@ -61,8 +53,17 @@ def send_daily_poem():
         verbose=True,
     )
 
+    def f(username, password, name, email, tag):
+        done, fails = False, 0
+        while (not done) and (fails < 12):
+            try:
+                poetizer.send_poem(username, password, email, tag); done = True
+                a,b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
+            except Exception as e:
+                print(e); fails += 1; time.sleep(60)
+ 
     if not args.repo_lsfn == '':
-        contents = poetizer.repo.get_contents(args.repo_lsfn,ref='master')
+        contents = poetizer.repo.get_contents(args.repo_lsfn, ref='master')
         entries  = pd.read_csv(StringIO(contents.decoded_content.decode()),index_col=0)
     else: 
         entries = pd.DataFrame(columns=['name','email'])
