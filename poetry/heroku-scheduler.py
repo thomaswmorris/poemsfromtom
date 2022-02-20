@@ -6,6 +6,7 @@ from multiprocessing import Process
 import os
 from io import StringIO
 
+poetizer = Poetizer()
 schedule = BlockingScheduler(timezone='America/New_York')
 
 import argparse, sys
