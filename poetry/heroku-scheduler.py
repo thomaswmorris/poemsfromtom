@@ -6,7 +6,6 @@ from multiprocessing import Process
 import os
 from io import StringIO
 
-poetizer = Poetizer()
 schedule = BlockingScheduler(timezone='America/New_York')
 
 import argparse, sys
@@ -40,6 +39,8 @@ def f(username, password, name, email, tag):
 def send_daily_poem():
 
     print(f'\nThis job is run every day at {args.hour} EST')
+
+    poetizer = Poetizer()
 
     # Choose a poem that meets the supplied conditions
     poetizer.load_poem(
