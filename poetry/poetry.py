@@ -262,6 +262,7 @@ class Poetizer:
 
         self.now = int(time.time())
         self.dt_now = datetime.fromtimestamp(self.now,tz=pytz.timezone('America/New_York'))
+        self.ts_now = self.dt_now.timestamp()
     
         if write_historical:
             
@@ -321,8 +322,8 @@ class Poetizer:
                 html_body.replace('_','')
 
         import calendar
-        self.nice_fancy_date = f'{self.weekdays[self.dt_now.weekday()].capitalize()}, '\
-                             + f'{calendar.month_name[self.dt_now.month]} {self.dt_now.day}, {self.dt_now.year}'
+        self.nice_fancy_date = f'{get_weekday(self.ts_now).capitalize()}, '\
+                             + f'{get_month(self.ts_now)} {self.dt_now.day}, {self.dt_now.year}'
         
         self.header = f'“{self.titleize(self.title)}” by {self.name}'
         
