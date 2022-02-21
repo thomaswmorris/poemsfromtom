@@ -10,10 +10,10 @@ import github as gh
 from io import StringIO
 
 from datetime import datetime
-from dateutil.easter import *
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+from keyword_utils import get_month, get_weekday, get_holiday, get_season, get_liturgy
 
 class Poetizer:
     def __init__(self):
@@ -36,7 +36,7 @@ class Poetizer:
 
             tag = v['metadata'].split('|')[0]
             self.metadata[tag] = v['metadata']    
-            self.poems[tag]    = v['poems']
+            self.poems[tag] = v['poems']
 
             for title in list(v['poems']):
                 self.poets.append(tag)
@@ -47,104 +47,6 @@ class Poetizer:
         self.n_pt = len(self.pt_keys)
         self.likelihood = None
         
-        self.weekdays  = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
-        self.months    = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
-        self.seasons   = ['winter', 'summer', 'autumn', 'spring']
-        
-        self.kw_dict = {}
-        self.kw_dict['winter']           = ['snow', 'frost', 'cold', 'midwinter', 'wintertime']
-        self.kw_dict['spring']           = ['~flower','~flowers','~tulips','springtime','snowdrops']
-        self.kw_dict['summer']           = ['summertime']
-        self.kw_dict['autumn']           = ['~fall', '~leaves', 'autumnal']
-
-        for season in self.seasons:
-            self.kw_dict[f'first day of {season}'] = [season,*self.kw_dict[season]]
-        for month in self.months:
-            self.kw_dict[f'first day of {month}'] = [f'~{month}']
-
-        self.kw_dict['new year\'s day']  = ['new year', 'old year']
-        self.kw_dict['valentine\'s day'] = ['valentine']
-        self.kw_dict['palm sunday']      = ['~donkey']
-        self.kw_dict['good friday']      = ['~paschal','~crucifixion','~martyr']
-        self.kw_dict['easter vigil']     = ['~hell']
-        self.kw_dict['divine mercy']     = ['~mercy']
-        self.kw_dict['pentacost']        = ['~holy spirit','pentacostal']
-        self.kw_dict['lent']             = ['~sin', '~sorrow', '~sadness']
-        self.kw_dict['memorial day']     = ['~soldier']
-        self.kw_dict['independence day'] = ['~america']
-        self.kw_dict['halloween']        = ['goblin']
-        self.kw_dict['christmas']        = ['~christmas','~nativity']
-        
-        self.holidays = ['no holiday']
-        [self.holidays.append(holiday) for holiday in map(self.get_holiday,datetime(2022,1,1).timestamp()+86400*np.arange(365)) if not holiday in self.holidays]
-        
-        self.liturgies = ['ordinary time']
-        [self.liturgies.append(liturgy) for liturgy in map(self.get_liturgy,datetime(2022,1,1).timestamp()+86400*np.arange(365)) if not liturgy in self.liturgies]
-
-    def get_weekday(self,t=time.time()):
-            return self.weekdays[datetime.fromtimestamp(t).weekday()]
-        
-    def get_month(self,t=time.time()):
-            return self.months[datetime.fromtimestamp(t).month-1]
-        
-    def get_season(self,t=time.time()):
-
-            year = datetime.fromtimestamp(t).year
-            yday = datetime.fromtimestamp(t).timetuple().tm_yday
-
-            spring = datetime(year, 3, 20).timetuple().tm_yday
-            summer = datetime(year, 6, 21).timetuple().tm_yday
-            autumn = datetime(year, 9, 23).timetuple().tm_yday
-            winter = datetime(year, 12, 21).timetuple().tm_yday
-
-            if (spring <= yday < summer):  return 'spring' 
-            if (summer <= yday < autumn):  return 'summer' 
-            if (autumn <= yday < winter):  return 'autumn' 
-            return 'winter'
-
-    def get_holiday(self,t=time.time()):
-
-        dt = datetime.fromtimestamp(t)
-        yd = dt.timetuple().tm_yday
-        if dt.month==1 and dt.day==1: return 'new year\'s day'
-        easter_yd = easter(dt.year).timetuple().tm_yday 
-        
-        if yd == easter_yd - 46: return 'ash wednesday'
-        if yd == easter_yd - 7: return 'palm sunday'
-        if yd == easter_yd - 3: return 'holy thursday'
-        if yd == easter_yd - 2: return 'good friday'
-        if yd == easter_yd - 1: return 'easter vigil'
-        if yd == easter_yd: return 'easter'
-        if yd == easter_yd + 7: return 'divine mercy'
-        if yd == easter_yd + 39: return 'ascension'
-        if yd == easter_yd + 49: return 'pentacost'
-        
-        if (dt.month,dt.day)==(2,14):  return 'valentine\'s day'
-        if (dt.month,dt.day)==(3,25):  return 'annunciation'
-        if (dt.month,dt.weekday())==(5,0) and (self.get_month(t+7*86400)=='june'): return 'memorial day' # last monday of may
-        if (dt.month,dt.day)==(6,24):  return 'midsummer'
-        if (dt.month,dt.day)==(7,4):   return 'independence day'
-        if (dt.month,dt.day)==(10,31): return 'halloween'
-        if (dt.month,dt.day)==(11,(3-datetime(dt.year,11,1).weekday())%7+22): return 'thanksgiving' # fourth thursday of november
-        if (dt.month,dt.day)==(12,24): return 'christmas eve'
-        if (dt.month,dt.day)==(12,25): return 'christmas'
-        
-        if self.get_month(t) != self.get_month(t - 86400): return f'first day of {self.get_month(t)}'
-        if self.get_season(t) != self.get_season(t - 86400): return f'first day of {self.get_season(t)}'
-
-        return 'no holiday'
-
-    def get_liturgy(self,t=time.time()):
-        dt = datetime.fromtimestamp(t)
-        yd = dt.timetuple().tm_yday
-        easter_yd    = easter(dt.year).timetuple().tm_yday 
-        christmas_yd = datetime(dt.year,12,25).timetuple().tm_yday 
-        if 0 < easter(dt.year).timetuple().tm_yday - dt.date().timetuple().tm_yday <= 46: return 'lent'
-        if -42 < easter(dt.year).timetuple().tm_yday - dt.date().timetuple().tm_yday <= 0: return 'easter'
-        if christmas_yd - (22 + datetime(dt.year,12,25).weekday()) <= yd < christmas_yd: return 'advent'
-        if 2 <= yd < 9: return 'epiphany'
-        return 'ordinary time'
-    
     def string_contains_phrase(self, string, phrase, ordered=False, return_counts=False):
 
         # this checks that a string has, as words, all of the words in phrase in some order
@@ -169,7 +71,7 @@ class Poetizer:
                     #    print(f'{_poet:<10} * {_title:}')
 
     def get_keywords(self, when):
-        return [self.get_season(when), self.get_weekday(when), self.get_month(when), self.get_holiday(when), self.get_liturgy(when)]          
+        return [get_season(when), get_weekday(when), get_month(when), get_holiday(when), get_liturgy(when)]          
     
     def list_keywords(self):
         for dyd in range(365):
@@ -301,12 +203,12 @@ class Poetizer:
                     if poss in context:
                         m = np.array([np.sum([self.string_contains_phrase(t, kw.strip('~')) for kw in self.keywords[cat][poss]]) > 0 for p, t in self.pt_keys])
                         self.likelihood[m] *= 4 * self.kw_mult[cat]
-                        print(f'weighted {m.sum()} poems')
+                        print(f'weighted {m.sum()} poems with context {poss}')
                     
                     else:
                         m = np.array([np.sum([self.string_contains_phrase(t, kw) for kw in self.keywords[cat][poss] if not '~' in kw]) > 0 for p, t in self.pt_keys])
                         self.likelihood[m] *= 0
-                        print(f'disallowed {m.sum()} poems')
+                        print(f'disallowed {m.sum()} poems with context {poss}')
             
             '''
             for discriminator, context_kw, multiplier, label in zip([self.seasons, self.weekdays, self.months, self.holidays, self.liturgies],
