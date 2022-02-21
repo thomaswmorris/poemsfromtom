@@ -1,16 +1,16 @@
 from dateutil.easter import *
 from datetime import datetime
+import time as ttime
 
-
-def get_weekday(t=time.time()):
+def get_weekday(t=ttime.time()):
     weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     return weekdays[datetime.fromtimestamp(t).weekday()]
 
-def get_month(t=time.time()):
+def get_month(t=ttime.time()):
     months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
     return months[datetime.fromtimestamp(t).month-1]
 
-def get_season(t=time.time()):
+def get_season(t=ttime.time()):
 
     year = datetime.fromtimestamp(t).year
     yday = datetime.fromtimestamp(t).timetuple().tm_yday
@@ -25,7 +25,7 @@ def get_season(t=time.time()):
     if (autumn <= yday < winter):  return 'autumn' 
     return 'winter'
 
-def get_holiday(t=time.time()):
+def get_holiday(t=ttime.time()):
 
     dt = datetime.fromtimestamp(t)
     yd = dt.timetuple().tm_yday
@@ -57,7 +57,7 @@ def get_holiday(t=time.time()):
 
     return 'no holiday'
 
-def get_liturgy(t=time.time()):
+def get_liturgy(t=ttime.time()):
     
     dt = datetime.fromtimestamp(t)
     yd = dt.timetuple().tm_yday
