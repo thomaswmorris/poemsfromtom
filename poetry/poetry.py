@@ -157,7 +157,7 @@ class Poetizer:
             for row in self.history.index:
                 entry = self.history.loc[row]
                 if self.when - entry['timestamp'] < title_latency * 86400:
-                    i_pt = np.where(np.array(self.pt_keys) == (entry['poet'],entry['title']))[0][0]
+                    i_pt = np.where((np.array(self.poets)==entry['poet'])&(np.array(self.titles)==entry['title']))[0][0]
                     if very_verbose: print(f'removing poem {self.titles[i_pt]} by {self.poets[i_pt]} at loc {i_pt}')
                     self.poets.pop(i_pt); self.titles.pop(i_pt); self.pt_keys.pop(i_pt); self.n_pt -= 1
         
