@@ -96,7 +96,7 @@ for i, loc in enumerate(history.index):
         <title>{poetizer.nice_fancy_date}</title>
             <h2 style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0;">
             {prev_string} {rand_string} {next_string}
-            <p style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0">{self.nice_fancy_date}
+            <p style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0">{poetizer.nice_fancy_date}
             </p>
             <br>
         </h2>
