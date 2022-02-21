@@ -319,7 +319,7 @@ class Poetizer:
 
         import calendar
         self.nice_fancy_date = f'{get_weekday(self.ts_now).capitalize()}, '\
-                             + f'{get_month(self.ts_now)} {self.dt_now.day}, {self.dt_now.year}'
+                             + f'{get_month(self.ts_now).capitalize()} {self.dt_now.day}, {self.dt_now.year}'
         
         self.header = f'“{self.titleize(self.title)}” by {self.name}'
         
