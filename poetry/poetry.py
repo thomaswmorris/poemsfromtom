@@ -23,9 +23,15 @@ class Poetizer:
         self.ptdf = pd.DataFrame(columns=['poet', 'title'])
         self.content_prefix = ''
         fns = np.sort([fn for fn in glob.glob(self.content_prefix + 'poems/*.json')])
-        #for fn in fns:
+
         with open('poems.json', 'r+') as f:
             pt_dict = json.load(f)
+
+        with open(f'keywords.json', 'r+') as f:
+            self.keywords = json.load(f)
+
+        self.kw_mult = {'season':4, 'month':12, 'weekday':7, 'liturgy':8, 'holiday':1e16}
+
         for k, v in pt_dict.items():
 
             tag = v['metadata'].split('|')[0]
@@ -216,7 +222,7 @@ class Poetizer:
                 self.history = pd.DataFrame(columns=['poet','title','type','date','time','timestamp'])
                 print(f'{e}\ncould not find history.csv')
 
-        # self.history.index = np.arange(len(self.history))
+
 
     def make_stats(self,order_by=None, ascending=True,force_rows=True,force_cols=True):
         
@@ -231,8 +237,6 @@ class Poetizer:
             
         if not order_by is None:
             self.stats = self.stats.sort_values(by=order_by, ascending=ascending)
-        # self.stats.index.name = f'{np.sum([len(self.dict[_poet]) - 1 for _poet in list(self.dict)])} poems from {len(self.dict)} poets'
-        # return self.stats if order_by is None else self.stats.sort_values(by=order_by)
 
     def load_poem(self,
                   poet='random',
@@ -287,8 +291,24 @@ class Poetizer:
                     self.likelihood[_poet==np.array(self.poets)] *= np.exp(-.25 * self.stats.loc[_poet, 'times_sent'])
 
         if contextual:
-            context_keywords = self.get_keywords(when)
-            if verbose: print('keywords:',context_keywords)
+
+            context = self.get_keywords(when)
+            if verbose: print('keywords:', context)
+
+            for cat in list(self.keywords):
+                for poss in self.keywords[cat]:
+                
+                    if poss in context:
+                        m = np.array([np.sum([self.string_contains_phrase(t, kw.strip('~')) for kw in self.keywords[cat][poss]]) > 0 for p, t in self.pt_keys])
+                        self.likelihood[m] *= 4 * self.kw_mult[cat]
+                        print(f'weighted {m.sum()} poems')
+                    
+                    else:
+                        m = np.array([np.sum([self.string_contains_phrase(t, kw) for kw in self.keywords[cat][poss] if not '~' in kw]) > 0 for p, t in self.pt_keys])
+                        self.likelihood[m] *= 0
+                        print(f'disallowed {m.sum()} poems')
+            
+            '''
             for discriminator, context_kw, multiplier, label in zip([self.seasons, self.weekdays, self.months, self.holidays, self.liturgies],
                                                                     context_keywords,
                                                                     [4,7,12,1e20,1e2],
@@ -305,6 +325,7 @@ class Poetizer:
                                     self.likelihood[i_pt] *= multiplier
                                     if very_verbose: print(_kw, _poet, _title, multiplier)
                                 elif not (((label == 'HOLIDAYS') and (kw in self.seasons)) or '~' in _kw): self.likelihood[i_pt] = 0
+            '''
 
         pop_likelihood = list(self.likelihood)
         pop_poets  = self.poets.copy()
