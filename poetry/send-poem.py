@@ -22,6 +22,7 @@ parser.add_argument('--wh', type=bool, help='Whether to consider this poem in th
 parser.add_argument('--hist_tag', type=str, help='What tag to write to the history with', default='')
 parser.add_argument('--subj_tag', type=str, help='Email subject prefix', default='')
 parser.add_argument('--hour', type=str, help='Hour of the day to send', default=7)
+parser.add_argument('--vv', type=bool, help='Very verbose', default=False)
 
 args = parser.parse_args()
 
@@ -44,6 +45,7 @@ poetizer.load_poem(
     write_historical=args.wh,
     read_historical=args.rh, 
     verbose=True,
+    very_verbose=args.vv,
 )
 
 if not args.repo_lsfn == '':

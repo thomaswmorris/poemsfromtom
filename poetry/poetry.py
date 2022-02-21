@@ -59,10 +59,6 @@ class Poetizer:
         counts_per_word = np.array([len(re.findall(f'[^a-z]{w}[^a-z]',string.lower().join([' ',' ']))) for w in [w.strip('~') for w in phrase.split()]])
         if return_counts: return counts_per_word
         return (counts_per_word > 0).all()
-    
-    #def list_contextual(self,exclude=[]):
-
-        #
 
     def get_keywords(self, when):
         return [get_season(when), get_weekday(when), get_month(when), get_holiday(when), get_liturgy(when)]          
@@ -197,12 +193,12 @@ class Poetizer:
                     if poss in context:
                         m = np.array([np.sum([self.string_contains_phrase(t, kw.strip('~')) for kw in self.keywords[cat][poss]]) > 0 for p, t in self.pt_keys])
                         self.likelihood[m] *= 4 * self.kw_mult[cat]
-                        print(f'weighted {m.sum()} poems with context {poss}')
+                        if very_verbose: print(f'weighted {m.sum()} poems with context {poss}')
                     
                     else:
                         m = np.array([np.sum([self.string_contains_phrase(t, kw) for kw in self.keywords[cat][poss] if not '~' in kw]) > 0 for p, t in self.pt_keys])
                         self.likelihood[m] *= 0
-                        print(f'disallowed {m.sum()} poems with context {poss}')
+                        if very_verbose: print(f'disallowed {m.sum()} poems with context {poss}')
             
             '''
             for discriminator, context_kw, multiplier, label in zip([self.seasons, self.weekdays, self.months, self.holidays, self.liturgies],
