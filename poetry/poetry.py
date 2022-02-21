@@ -20,7 +20,7 @@ class Poetizer:
                         
         self.poems, self.metadata = {}, {}
         self.poets, self.titles, self.pt_keys = [], [], []
-        self.ptdf = pd.DataFrame(columns=['poet', 'title'])
+        self.ptdf = pd.DataFrame(columns=['poet', 'title', 'keywords'])
         self.content_prefix = ''
         fns = np.sort([fn for fn in glob.glob(self.content_prefix + 'poems/*.json')])
 
