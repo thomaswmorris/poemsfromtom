@@ -179,7 +179,9 @@ class Poetizer:
             for _poet in np.unique(self.poets):
                 self.likelihood[_poet==np.array(self.poets)] = 1 / np.sum(_poet==np.array(self.poets))
                 if not self.history is None:
-                    self.likelihood[_poet==np.array(self.poets)] *= np.exp(-.25 * self.stats.loc[_poet, 'times_sent'])
+                    weight = np.exp(-.25 * self.stats.loc[_poet, 'times_sent'])
+                    if very_verbose: print(f'{_poet} has been weighted by {weight}')
+                    self.likelihood[_poet==np.array(self.poets)] *= weight
 
         if contextual:
 
