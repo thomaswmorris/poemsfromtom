@@ -148,6 +148,7 @@ class Poetizer:
                   very_verbose=False,
                   html_color='Black'):
 
+        self.when = when
         self.poem = None
         self.history = None
         if read_historical or write_historical:
@@ -155,12 +156,9 @@ class Poetizer:
             self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
             for row in self.history.index:
                 entry = self.history.loc[row]
-                if when - entry['timestamp'] < title_latency * 86400:
-                    i_pt = np.where(np.array(self.titles) == entry['title'])[0][0]
-                    self.poets.pop(i_pt)
-                    self.titles.pop(i_pt)
-                    self.pt_keys.pop(i_pt)
-                    self.n_pt -= 1
+                if self.when - entry['timestamp'] < title_latency * 86400:
+                    for i_pt in np.where(np.array(self.pt_keys) == (entry['poet'],entry['title']))[0]:
+                        self.poets.pop(i_pt); self.titles.pop(i_pt); self.pt_keys.pop(i_pt); self.n_pt -= 1
         
         if (not poet in self.poets) and (not poet=='random'):
             raise(Exception(f'The poet \"{poet}\" is not in the database!'))
@@ -184,7 +182,7 @@ class Poetizer:
 
         if contextual:
 
-            context = self.get_keywords(when)
+            context = self.get_keywords(self.when)
             if verbose: print('keywords:', context)
 
             for cat in list(self.keywords):
@@ -199,26 +197,7 @@ class Poetizer:
                         m = np.array([np.sum([self.string_contains_phrase(t, kw) for kw in self.keywords[cat][poss] if not '~' in kw]) > 0 for p, t in self.pt_keys])
                         self.likelihood[m] *= 0
                         if very_verbose: print(f'disallowed {m.sum()} poems with context {poss}')
-            
-            '''
-            for discriminator, context_kw, multiplier, label in zip([self.seasons, self.weekdays, self.months, self.holidays, self.liturgies],
-                                                                    context_keywords,
-                                                                    [4,7,12,1e20,1e2],
-                                                                    ['SEASONS', 'WEEKDAYS', 'MONTHS', 'HOLIDAYS', 'LITURGIES']):
-                
-                for kw in discriminator: # for all the possible values of this discriminator...
-                    if not kw in list(self.kw_dict): 
-                        self.kw_dict[kw] = []
-                    for i_pt,(_poet,_title) in enumerate(self.pt_keys): 
-                        # if np.any([self.string_contains_phrase(_title,_kw) for _kw in [kw,*self.kw_dict[kw]]]):
-                        for _kw in [kw, *self.kw_dict[kw]]:
-                            if self.string_contains_phrase(_title,_kw):
-                                if kw == context_kw:
-                                    self.likelihood[i_pt] *= multiplier
-                                    if very_verbose: print(_kw, _poet, _title, multiplier)
-                                elif not (((label == 'HOLIDAYS') and (kw in self.seasons)) or '~' in _kw): self.likelihood[i_pt] = 0
-            '''
-
+ 
         pop_likelihood = list(self.likelihood)
         pop_poets  = self.poets.copy()
         pop_titles = self.titles.copy()
@@ -236,14 +215,6 @@ class Poetizer:
             if not (min_length <= len(self.poems[_poet][_title].split()) <= max_length):
                 continue
             
-            if read_historical and _likelihood < 1e6:
-                if (poet=='random'):
-                    if _poet in list(self.history['poet']): 
-                        ELAPSED = when - self.history['timestamp'][self.history['poet']==_poet].max()
-                        if ELAPSED < poet_latency * 86400 :
-                            print(f'poet \"{_poet}\" was sent too recently! ({ELAPSED/86400:.02f} days ago)')
-                            continue # if the poem was sent too recently 
-
             self.poet = _poet; self.title = _title
             self.poem = self.poems[self.poet][self.title]
             break
@@ -256,14 +227,13 @@ class Poetizer:
         self.tag, self.name, self.birth, self.death, self.link = self.metadata[self.poet].split('|')
         output = f'chose poem \"{self.title}\" by {self.name}'
 
-        self.now = int(time.time())
-        self.dt_now = datetime.fromtimestamp(self.now,tz=pytz.timezone('America/New_York'))
-        self.ts_now = self.dt_now.timestamp()
+        self.dt_when = datetime.fromtimestamp(self.when,tz=pytz.timezone('America/New_York'))
+        self.ts_when = self.dt_when.timestamp()
     
         if write_historical:
             
-            now_date, now_time = self.dt_now.isoformat()[:19].split('T')
-            self.history.loc[len(self.history)] = self.poet, self.title, tag_historical, now_date, now_time, self.now
+            when_date, when_time = self.dt_when.isoformat()[:19].split('T')
+            self.history.loc[len(self.history)] = self.poet, self.title, tag_historical, when_date, when_time, self.when
             self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
 
             if not repo_name == '':
@@ -282,7 +252,7 @@ class Poetizer:
                 tree   = self.repo.create_git_tree([hist_elem, stat_elem, poem_elem], base_tree)
                 parent = self.repo.get_git_commit(sha=head_sha) 
 
-                commit = self.repo.create_git_commit(f'update logs {now_date} {now_time}', tree, [parent])
+                commit = self.repo.create_git_commit(f'update logs {when_date} {when_time}', tree, [parent])
                 master_ref = self.repo.get_git_ref('heads/master')
                 master_ref.edit(sha=commit.sha)
                 
@@ -318,8 +288,8 @@ class Poetizer:
                 html_body.replace('_','')
 
         import calendar
-        self.nice_fancy_date = f'{get_weekday(self.ts_now).capitalize()}, '\
-                             + f'{get_month(self.ts_now).capitalize()} {self.dt_now.day}, {self.dt_now.year}'
+        self.nice_fancy_date = f'{get_weekday(self.ts_when).capitalize()}, '\
+                             + f'{get_month(self.ts_when).capitalize()} {self.dt_when.day}, {self.dt_when.year}'
         
         self.header = f'“{self.titleize(self.title)}” by {self.name}'
         

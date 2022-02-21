@@ -80,13 +80,11 @@ for i, loc in enumerate(history.index):
     dt = datetime(int(y),int(m),int(d),7,0,0) 
     dt_prev = datetime.fromtimestamp(dt.timestamp() - 86400)
     dt_next = datetime.fromtimestamp(dt.timestamp() + 86400)
-
     
-    poetizer.load_poem(poet=history.loc[loc,'poet'], title=history.loc[loc,'title'], verbose=False)
+    poetizer.load_poem(poet=history.loc[loc,'poet'], title=history.loc[loc,'title'], when=history.loc[loc,'timestamp'], verbose=False)
 
     print(y, m, d, poetizer.poet, poetizer.title)
 
-    
     prev_string = f'<i><a href="https://thomaswmorris.github.io/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a></i>' if i > 0 else ''
     next_string = f'<i><a href="https://thomaswmorris.github.io/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a></i>' if i < n_history - 1 else ''
     rand_string = f'<i><a href="https://thomaswmorris.github.io/poems/random">random</a></i>'
