@@ -81,7 +81,7 @@ for i, loc in enumerate(history.index):
     dt_prev = datetime.fromtimestamp(dt.timestamp() - 86400)
     dt_next = datetime.fromtimestamp(dt.timestamp() + 86400)
 
-    nice_fancy_date = f'{poetizer.weekdays[dt.weekday()].capitalize()}, {calendar.month_name[dt.month]} {dt.day} {dt.year}'
+    
     poetizer.load_poem(poet=history.loc[loc,'poet'], title=history.loc[loc,'title'], verbose=False)
 
     print(y, m, d, poetizer.poet, poetizer.title)
@@ -93,7 +93,7 @@ for i, loc in enumerate(history.index):
 
     html_header = f'''
         <html>
-        <title>{nice_fancy_date}</title>
+        <title>{poetizer.nice_fancy_date}</title>
             <h2 style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0;">
             {prev_string} {rand_string} {next_string}
             <p style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0">{nice_fancy_date}
