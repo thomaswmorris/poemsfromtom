@@ -1,10 +1,6 @@
 from dateutil.easter import *
 from datetime import datetime
 
-self.weekdays  = 
-        self.months    = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
-        self.seasons   = ['winter', 'summer', 'autumn', 'spring']
-        
 
 def get_weekday(t=time.time()):
     weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']

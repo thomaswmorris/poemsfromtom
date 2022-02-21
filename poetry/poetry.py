@@ -31,6 +31,8 @@ class Poetizer:
             self.keywords = json.load(f)
 
         self.kw_mult = {'season':4, 'month':12, 'weekday':7, 'liturgy':8, 'holiday':1e16}
+        self.kw_list = []
+        [[self.kw_list.extend([kw.strip('~') for kw in self.keywords[cat][poss]]) for poss in self.keywords[cat]] for cat in list(self.keywords)]
 
         for k, v in pt_dict.items():
 
@@ -38,11 +40,15 @@ class Poetizer:
             self.metadata[tag] = v['metadata']    
             self.poems[tag] = v['poems']
 
-            for title in list(v['poems']):
+            for _title in list(v['poems']):
                 self.poets.append(tag)
-                self.titles.append(title)
-                self.pt_keys.append((tag,title))
-                self.ptdf.loc[len(self.ptdf)] = tag, title
+                self.titles.append(_title)
+                self.pt_keys.append((tag,_title))
+                self.ptdf.loc[len(self.ptdf)] = tag, _title, [kw for kw in self.kw_list if self.string_contains_phrase(_title, kw)]
+
+                
+
+        
                 
         self.n_pt = len(self.pt_keys)
         self.likelihood = None
@@ -54,21 +60,9 @@ class Poetizer:
         if return_counts: return counts_per_word
         return (counts_per_word > 0).all()
     
-    def list_contextual(self,exclude=[]):
-        for discriminator, label in zip([self.seasons, self.weekdays, self.months, self.holidays, self.liturgies],
-                                        ['SEASONS', 'WEEKDAYS', 'MONTHS', 'HOLIDAYS', 'LITURGIES']):
-            if label in exclude: continue
-            print(f'\n=========\n{label}\n=========')
-            for kw in discriminator:
-                if not kw in list(self.kw_dict): 
-                    self.kw_dict[kw] = []
-                print(f'\n{kw} (' + ', '.join(self.kw_dict[kw]) + ')\n-----------+-----------')
-                for i,(_poet,_title) in enumerate(self.pt_keys):
-                    if np.any([self.string_contains_phrase(_title,_kw) for _kw in [kw,*self.kw_dict[kw]]]):
-                        print(f'{_poet:<10} | {_title:}')
-                    #elif np.any([np.all(self.string_contains_phrase(self.dict[_poet][_title],_kw,return_counts=True) > 2) 
-                    #                                                for _kw in [kw,*self.kw_dict[kw]]]):
-                    #    print(f'{_poet:<10} * {_title:}')
+    #def list_contextual(self,exclude=[]):
+
+        #
 
     def get_keywords(self, when):
         return [get_season(when), get_weekday(when), get_month(when), get_holiday(when), get_liturgy(when)]          
@@ -124,7 +118,7 @@ class Poetizer:
                 self.history = pd.DataFrame(columns=['poet','title','type','date','time','timestamp'])
                 print(f'{e}\ncould not find history.csv')
 
-
+    
 
     def make_stats(self,order_by=None, ascending=True,force_rows=True,force_cols=True):
         
