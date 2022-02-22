@@ -41,6 +41,8 @@ class Poetizer:
         self.poems['keywords'] = keywords
         self.poems['likelihood'] = 1
         
+        self.history = None
+
     def get_keywords(self, when):
         return [get_season(when), get_month(when), get_weekday(when), get_liturgy(when), get_holiday(when)]          
 
@@ -92,11 +94,13 @@ class Poetizer:
     
 
     def make_stats(self,order_by=None, ascending=True,force_rows=True,force_cols=True):
+
+        if self.history == None: raise(Exception('No history has been loaded!'))
         
         if force_rows: pd.set_option('display.max_rows', None)
         if force_cols: pd.set_option('display.max_columns', None)
         self.stats = pd.DataFrame(columns=['name','birth','death','n_poems','times_sent','days_since_last_sent'])
-        for _poet in list(self.poems):
+        for _poet in np.unqiue(self.poems['poet']):
             
             tag, name, birth, death, link = self.data[_poet]['metadata'].values()
             elapsed = (time.time() - self.history['timestamp'][self.history['poet']==_poet].max()) / 86400 # if _poet in self.history['poet'] else None
@@ -188,6 +192,7 @@ class Poetizer:
                     # if we want to use 'spring' as a holiday for the first day of spring, then we need to not
                     # exclude that keyword when it is not that holiday. this translates well; if the holiday is 
                     # also a season, month, or liturgy, then we do not  
+                    
                     else:
                         if category == 'holiday' and possibility in self.sml_kws: continue
                         self.poems.loc[m, 'likelihood'] = 0
