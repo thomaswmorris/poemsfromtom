@@ -13,61 +13,36 @@ from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from keyword_utils import get_month, get_weekday, get_holiday, get_season, get_liturgy
+from .context_utils import get_month, get_weekday, get_holiday, get_season, get_liturgy
 
 class Poetizer:
     def __init__(self):
                         
-        self.poems, self.metadata = {}, {}
-        self.poets, self.titles, self.pt_keys = [], [], []
-        self.ptdf = pd.DataFrame(columns=['poet', 'title', 'keywords'])
-        self.content_prefix = ''
-        fns = np.sort([fn for fn in glob.glob(self.content_prefix + 'poems/*.json')])
+        with open('data.json', 'r+') as f:
+            self.data = json.load(f)
 
-        with open('poems.json', 'r+') as f:
-            pt_dict = json.load(f)
-
-        with open(f'keywords.json', 'r+') as f:
-            self.keywords = json.load(f)
-
+        with open(f'context.json', 'r+') as f:
+            self.context = json.load(f)
+        
+        self.sml_kws = [kw for c in ['season', 'month', 'liturgy'] for kw in self.context[c]]
         self.kw_mult = {'season':4, 'month':12, 'weekday':7, 'liturgy':8, 'holiday':1e16}
-        self.kw_list = []
-        [[self.kw_list.extend([kw.strip('~') for kw in self.keywords[cat][poss]]) for poss in self.keywords[cat]] for cat in list(self.keywords)]
 
-        for k, v in pt_dict.items():
+        poets, titles, keywords = [], [], []
+        self.poems = pd.DataFrame(columns=['poet', 'title', 'keywords', 'likelihood'])
+        for _poet in self.data.keys():
+            for _title in self.data[_poet]['poems'].keys():
 
-            tag = v['metadata'].split('|')[0]
-            self.metadata[tag] = v['metadata']    
-            self.poems[tag] = v['poems']
+                poets.append(_poet)
+                titles.append(_title)
+                keywords.append(self.data[_poet]['poems'][_title]['keywords'])
 
-            for _title in list(v['poems']):
-                self.poets.append(tag)
-                self.titles.append(_title)
-                self.pt_keys.append((tag,_title))
-                self.ptdf.loc[len(self.ptdf)] = tag, _title, [kw for kw in self.kw_list if self.string_contains_phrase(_title, kw)]
-
-                
-
+        self.poems['poet'] = poets
+        self.poems['title'] = titles
+        self.poems['keywords'] = keywords
+        self.poems['likelihood'] = 1
         
-                
-        self.n_pt = len(self.pt_keys)
-        self.likelihood = None
-        
-    def string_contains_phrase(self, string, phrase, ordered=False, return_counts=False):
-
-        # this checks that a string has, as words, all of the words in phrase in some order
-        counts_per_word = np.array([len(re.findall(f'[^a-z]{w}[^a-z]',string.lower().join([' ',' ']))) for w in [w.strip('~') for w in phrase.split()]])
-        if return_counts: return counts_per_word
-        return (counts_per_word > 0).all()
-
     def get_keywords(self, when):
-        return [get_season(when), get_weekday(when), get_month(when), get_holiday(when), get_liturgy(when)]          
-    
-    def list_keywords(self):
-        for dyd in range(365):
-            t  = datetime(2022,1,1).timestamp() + 86400 * (dyd + .5)
-            dt = datetime.fromtimestamp(t)
-            print(f'{dt.month}/{dt.day}',self.get_keywords(t))
+        return [get_season(when), get_month(when), get_weekday(when), get_liturgy(when), get_holiday(when)]          
 
     def titleize(self,string):
 
@@ -139,6 +114,7 @@ class Poetizer:
                   poet_latency=0,
                   title_latency=0,
                   contextual=False,
+                  force_context=False,
                   repo_name='',
                   repo_token='',
                   tag_historical='',
@@ -148,86 +124,106 @@ class Poetizer:
                   very_verbose=False,
                   html_color='Black'):
 
-        self.when = when
-        self.poem = None
+        try: self.when = float(when)
+        except: 
+            try: self.when = when.timestamp()
+            except: 
+                try: self.when = datetime(*[int(x) for x in when.split('-')],12,0,0).timestamp()
+                except: raise(Exception(f'\'when\' argument must be timestamp or datetime object'))
+            
+        self.body = ''
         self.history = None
+        self.archive_poems = self.poems.copy()
+
         if read_historical or write_historical:
+
             self.load_history(repo_name=repo_name, repo_token=repo_token)
             self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
-            for row in self.history.index:
-                entry = self.history.loc[row]
+            
+            for entry in self.history:
+
                 if self.when - entry['timestamp'] < title_latency * 86400:
-                    i_pt = np.where((np.array(self.poets)==entry['poet'])&(np.array(self.titles)==entry['title']))[0][0]
-                    if very_verbose: print(f'removing poem {self.titles[i_pt]} by {self.poets[i_pt]} at loc {i_pt}')
-                    self.poets.pop(i_pt); self.titles.pop(i_pt); self.pt_keys.pop(i_pt); self.n_pt -= 1
-        
-        if (not poet in self.poets) and (not poet=='random'):
+
+                    row = self.poems.index[(self.poems['poet']==entry['poet']) & (self.poems['title']==entry['title'])]
+                    if very_verbose: print(f'removing poem {self.poems.loc[row]}')
+                    self.poems.drop(row, inplace=True)
+
+        if (not poet in self.poems['poet']) and (not poet=='random'):
             raise(Exception(f'The poet \"{poet}\" is not in the database!'))
-        if (not title in self.titles) and (not title=='random'):
+        if (not title in self.poems['title']) and (not title=='random'):
             raise(Exception(f'The title \"{title}\" is not in the database!'))
-        if (not (poet,title) in self.pt_keys) and (not poet=='random') and (not title=='random'):
+        if (not (poet,title) in zip(self.poems['poet'],self.poems['title'])) and (not poet=='random') and (not title=='random'):
             raise(Exception(f'The poem \"{title}\" poet \"{poet}\" is not in the database!'))
             
         # apply multipliers accordingly; so that poems titled "christmas" aren't sent in june, or poems titled "sunday" aren't sent on thursday
-        self.likelihood = np.ones(self.n_pt) / self.n_pt 
+        self.likelihood = np.ones(len(self.poems)) / len(self.poems)
         if (not poet == 'random') and (not title == 'random'):
             self.poet  = poet
             self.title = title
-            self.poem  = self.poems[self.poet][self.title]
+            self.body  = self.data[self.poet]['poems'][self.title]['body']
 
         else:
-            for _poet in np.unique(self.poets):
-                self.likelihood[_poet==np.array(self.poets)] = 1 / np.sum(_poet==np.array(self.poets))
+            for _poet in np.unique(self.poems['poet']):
+                self.poems.loc[_poet==self.poems['poet'], 'likelihood'] = 1 / np.sum(_poet==self.poems['poet'])
                 if not self.history is None:
                     weight = np.exp(-.25 * self.stats.loc[_poet, 'times_sent'])
                     if very_verbose: print(f'{_poet} has been weighted by {weight}')
-                    self.likelihood[_poet==np.array(self.poets)] *= weight
+                    self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= weight
 
         if contextual:
 
-            context = self.get_keywords(self.when)
-            if verbose: print('keywords:', context)
+            if force_context: self.poems.loc[[len(kws) == 0 for kws in self.poems['keywords']], 'likelihood'] = 0
 
-            for cat in list(self.keywords):
-                for poss in self.keywords[cat]:
-                
-                    if poss in context:
-                        m = np.array([np.sum([self.string_contains_phrase(t, kw.strip('~')) for kw in self.keywords[cat][poss]]) > 0 for p, t in self.pt_keys])
-                        self.likelihood[m] *= 4 * self.kw_mult[cat]
-                        if very_verbose: print(f'weighted {m.sum()} poems with context {poss}')
-                    
+            desired_context = self.get_keywords(self.when)
+            if verbose: print('keywords:', desired_context)
+
+            for icat, category in enumerate(self.context.keys()):
+                for possibility in self.context[category]:
+
+                    m = np.array([possibility in kws for kws in self.poems['keywords']])
+                    if possibility == desired_context[icat]:
+                        self.poems.loc[m,'likelihood'] *= 2 * self.kw_mult[category]
+                        if very_verbose: print(f'weighted {int(m.sum())} poems with context {possibility}')
+
+                    # if we want to use 'spring' as a holiday for the first day of spring, then we need to not
+                    # exclude that keyword when it is not that holiday. this translates well; if the holiday is 
+                    # also a season, month, or liturgy, then we do not  
                     else:
-                        m = np.array([np.sum([self.string_contains_phrase(t, kw) for kw in self.keywords[cat][poss] if not '~' in kw]) > 0 for p, t in self.pt_keys])
-                        self.likelihood[m] *= 0
-                        if very_verbose: print(f'disallowed {m.sum()} poems with context {poss}')
- 
-        pop_likelihood = list(self.likelihood)
-        pop_poets  = self.poets.copy()
-        pop_titles = self.titles.copy()
+                        if category == 'holiday' and possibility in self.sml_kws: continue
+                        self.poems.loc[m, 'likelihood'] = 0
+                        if very_verbose: print(f'disallowed {int(m.sum())} poems with context {possibility}')
+
+            self.poems.drop(self.poems.index[self.poems['likelihood'] == 0], inplace=True)
+        
+        while (len(self.poems) > 0) and (self.body == ''):
             
-        while (len(pop_titles) > 0) and (self.poem == None):
-            
-            p = np.array(pop_likelihood) / np.sum(pop_likelihood)
-            _index = np.random.choice(np.arange(len(p)), p=p)
-            _poet, _title, _likelihood = pop_poets.pop(_index), pop_titles.pop(_index), pop_likelihood.pop(_index)
+            if very_verbose: print(f'choosing from {len(self.poems)} poems')
+            p = self.poems['likelihood'] / np.sum(self.poems['likelihood'])
+            loc = np.random.choice(self.poems.index, p=p)
+            _poet, _title, _keywords, _likelihood = self.poems.loc[loc]
+            _body = self.data[_poet]['poems'][_title]['body']
+            self.poems.drop(loc, inplace=True)
 
             if not (_poet==poet) and not (poet=='random'):
                 continue 
             if not (_title==title) and not (title=='random'):
                 continue
-            if not (min_length <= len(self.poems[_poet][_title].split()) <= max_length):
+            if not (min_length <= len(_body.split()) <= max_length):
                 continue
             
-            self.poet = _poet; self.title = _title
-            self.poem = self.poems[self.poet][self.title]
+            self.poet  = _poet
+            self.title = _title
+            self.body  = _body
             break
+
+        self.poems = self.archive_poems.copy()
     
         # If we exit the loop, and don't have a poem:
-        if self.poem == None:
+        if self.body == '':
             raise(Exception(f'No poem with the requirements was found in the database!'))
 
         # Put the attributes of the poem into the class
-        self.tag, self.name, self.birth, self.death, self.link = self.metadata[self.poet].split('|')
+        self.tag, self.name, self.birth, self.death, self.link = self.data[self.poet]['metadata'].values()
         output = f'chose poem \"{self.title}\" by {self.name}'
 
         self.dt_when = datetime.fromtimestamp(self.when,tz=pytz.timezone('America/New_York'))
@@ -269,14 +265,14 @@ class Poetizer:
             
         if verbose: print(output)
 
-        paddings = re.findall('\n+( *)', self.poem)
+        paddings = re.findall('\n+( *)', self.body)
         nmp = len(min(paddings, key=len))
         if nmp > 0:
             for padding in sorted(paddings,key=len):
-                self.poem = re.sub(padding, padding[:-nmp], self.poem)
+                self.body = re.sub(padding, padding[:-nmp], self.body)
 
         # Make an html version (for nicely formatted emails)
-        html_body = '\n' + self.poem
+        html_body = '\n' + self.body
         html_body = html_body.replace('—', '-')
         html_body = html_body.replace(' ', '&nbsp;')
         html_body = html_body.replace('\n', '<br>')
