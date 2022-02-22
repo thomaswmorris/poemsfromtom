@@ -144,7 +144,7 @@ class Poetizer:
             self.load_history(repo_name=repo_name, repo_token=repo_token)
             self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
             
-            for entry in self.history.iterrows():
+            for index, entry in self.history.iterrows():
 
                 if self.when - entry['timestamp'] < title_latency * 86400:
 
