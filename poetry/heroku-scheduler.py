@@ -1,8 +1,10 @@
-import time
+import ttime
 import pandas as pd
+import numpy as np
 from apscheduler.schedulers.blocking import BlockingScheduler
 from poetry import Poetizer
 from multiprocessing import Process
+from datetime import datetime
 import os
 from io import StringIO
 
@@ -35,13 +37,15 @@ def send_daily_poem():
     # Load the poetizer
     poetizer = Poetizer()
 
+    when = datetime.fromtimestamp(ttime.time() + np.random.uniform(low=0,high=365) * 86400)
+    date, time = datetime.fromtimestamp(when).isoformat().split('T') 
     # Choose a poem that meets the supplied conditions
     poetizer.load_poem(
         poet=args.poet, 
         title=args.title, 
         repo_name='poems',
         repo_token=os.environ['GITHUB_TOKEN'],
-        when=time.time(), 
+        when=when, 
         min_length=100, 
         max_length=5000, 
         poet_latency=40, 
@@ -60,7 +64,7 @@ def send_daily_poem():
                 poetizer.send_poem(username, password, email, tag); done = True
                 a,b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
             except Exception as e:
-                print(e); fails += 1; time.sleep(60)
+                print(e); fails += 1; ttime.sleep(1)
  
     if not args.repo_lsfn == '':
         contents = poetizer.repo.get_contents(args.repo_lsfn, ref='master')
@@ -71,7 +75,7 @@ def send_daily_poem():
             entries.loc[len(entries)] = '*', recipient
 
     for name, email in zip(entries['name'],entries['email']):
-        p = Process(target=f, args=('poemsfromtom@gmail.com', os.environ['PFT_PW'], name, email, args.subj_tag))
+        p = Process(target=f, args=('poemsfromtom@gmail.com', os.environ['PFT_PW'], name, email, args.subj_tag + f'  {date}:'))
         p.start()
         p.join()
  
