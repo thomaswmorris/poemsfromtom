@@ -12,18 +12,14 @@ schedule = BlockingScheduler(timezone='America/New_York')
 
 import argparse, sys
 parser = argparse.ArgumentParser()
-#parser.add_argument('--username', type=str, help='Email address from which to send the poem',default='')
-#parser.add_argument('--password', type=str, help='Email password',default='')
 parser.add_argument('--recipient', type=str, help='Where to send the poem',default='poemsfromtom@gmail.com')
 parser.add_argument('--repo_lsfn', type=str, help='Where to send the poem',default='')
 parser.add_argument('--poet', type=str, help='Which poet to send', default='random')
 parser.add_argument('--title', type=str, help='Which title to send', default='random')
-#parser.add_argument('--repo', type=str, help='Which GH repository to load', default='')
-#parser.add_argument('--token', type=str, help='GH token', default='')
+parser.add_argument('--type', type=str, help='What kind of proc', default='test')
 parser.add_argument('--context', type=bool, help='Whether to send contextual poems', default=False)
 parser.add_argument('--rh', type=bool, help='Whether to consider past poems sent', default=False)
 parser.add_argument('--wh', type=bool, help='Whether to consider this poem in the future', default=False)
-parser.add_argument('--hist_tag', type=str, help='What tag to write to the history with', default='')
 parser.add_argument('--subj_tag', type=str, help='Email subject prefix', default='')
 parser.add_argument('--hour', type=str, help='Hour of the day to send', default=7)
 args = parser.parse_args()
@@ -36,8 +32,13 @@ def send_daily_poem():
     # Load the poetizer
     poetizer = Poetizer()
 
-    when = datetime.fromtimestamp(ttime.time() + np.random.uniform(low=0,high=365) * 86400).timestamp()
-    date, time = datetime.fromtimestamp(when).isoformat().split('T') 
+    when = ttime.time()
+    subject = args.subj_tag
+    if args.type == 'test':
+        when = datetime.fromtimestamp(ttime.time() + np.random.uniform(low=0,high=365) * 86400).timestamp()
+        date, time = datetime.fromtimestamp(when).isoformat().split('T') 
+        subject = args.subj_tag + f' {date}:'
+    
     # Choose a poem that meets the supplied conditions
     poetizer.load_poem(
         poet=args.poet, 
@@ -50,7 +51,7 @@ def send_daily_poem():
         poet_latency=40, 
         title_latency=800, 
         contextual=args.context, 
-        tag_historical=args.hist_tag,
+        tag_historical=args.type,
         write_historical=args.wh,
         read_historical=args.rh, 
         verbose=True,
@@ -74,7 +75,7 @@ def send_daily_poem():
             entries.loc[len(entries)] = '*', recipient
 
     for name, email in zip(entries['name'],entries['email']):
-        p = Process(target=f, args=('poemsfromtom@gmail.com', os.environ['PFT_PW'], name, email, args.subj_tag + f' {date}:'))
+        p = Process(target=f, args=('poemsfromtom@gmail.com', os.environ['PFT_PW'], name, email, subject))
         p.start()
         p.join()
 
