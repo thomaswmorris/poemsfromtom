@@ -1,4 +1,4 @@
-import ttime
+import time as ttime
 import pandas as pd
 import numpy as np
 from apscheduler.schedulers.blocking import BlockingScheduler
