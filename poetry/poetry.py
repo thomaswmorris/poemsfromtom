@@ -104,7 +104,7 @@ class Poetizer:
             
             tag, name, birth, death, link = self.data[_poet]['metadata'].values()
             elapsed = (time.time() - self.history['timestamp'][self.history['poet']==_poet].max()) / 86400 # if _poet in self.history['poet'] else None
-            self.stats.loc[_poet] = name, birth, death, len(self.poems[_poet]), (self.history['poet']==_poet).sum(), np.round(elapsed,1)
+            self.stats.loc[_poet] = name, birth, death, len(self.data[_poet]['poems']), (self.history['poet']==_poet).sum(), np.round(elapsed,1)
             
         if not order_by is None:
             self.stats = self.stats.sort_values(by=order_by, ascending=ascending)
