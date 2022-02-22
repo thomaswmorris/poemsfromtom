@@ -28,7 +28,6 @@ parser.add_argument('--subj_tag', type=str, help='Email subject prefix', default
 parser.add_argument('--hour', type=str, help='Hour of the day to send', default=7)
 args = parser.parse_args()
 
-
 @schedule.scheduled_job('cron', day_of_week='mon,tue,wed,thu,fri,sat,sun', hour=args.hour)
 def send_daily_poem():
 
@@ -79,18 +78,4 @@ def send_daily_poem():
         p.start()
         p.join()
 
-
- 
-send_daily_poem()
-
 schedule.start()
-
-    
-
-
-    
-
-
-
-
-
