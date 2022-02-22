@@ -100,7 +100,7 @@ class Poetizer:
         if force_rows: pd.set_option('display.max_rows', None)
         if force_cols: pd.set_option('display.max_columns', None)
         self.stats = pd.DataFrame(columns=['name','birth','death','n_poems','times_sent','days_since_last_sent'])
-        for _poet in np.unqiue(self.poems['poet']):
+        for _poet in np.unique(self.poems['poet']):
             
             tag, name, birth, death, link = self.data[_poet]['metadata'].values()
             elapsed = (time.time() - self.history['timestamp'][self.history['poet']==_poet].max()) / 86400 # if _poet in self.history['poet'] else None
