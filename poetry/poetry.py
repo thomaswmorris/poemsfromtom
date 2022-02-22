@@ -13,7 +13,7 @@ from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from .context_utils import get_month, get_weekday, get_holiday, get_season, get_liturgy
+from context_utils import get_month, get_weekday, get_holiday, get_season, get_liturgy
 
 class Poetizer:
     def __init__(self):
