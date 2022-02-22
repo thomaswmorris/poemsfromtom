@@ -98,7 +98,7 @@ class Poetizer:
         self.stats = pd.DataFrame(columns=['name','birth','death','n_poems','times_sent','days_since_last_sent'])
         for _poet in list(self.poems):
             
-            tag, name, birth, death, link = self.metadata[_poet].split('|')
+            tag, name, birth, death, link = self.data[_poet]['metadata'].values()
             elapsed = (time.time() - self.history['timestamp'][self.history['poet']==_poet].max()) / 86400 # if _poet in self.history['poet'] else None
             self.stats.loc[_poet] = name, birth, death, len(self.poems[_poet]), (self.history['poet']==_poet).sum(), np.round(elapsed,1)
             
