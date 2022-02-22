@@ -145,11 +145,11 @@ class Poetizer:
             self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
             
             for index, entry in self.history.iterrows():
-
                 if self.when - entry['timestamp'] < title_latency * 86400:
-
                     row = self.poems.index[(self.poems['poet']==entry['poet']) & (self.poems['title']==entry['title'])]
-                    if very_verbose: print(f'removing poem {self.poems.loc[row]}')
+                    if very_verbose: 
+                        _poet, _title = self.poems.loc[row, ['poet', 'title']]
+                        print(f'removing poem {_title} by {_poet}')
                     self.poems.drop(row, inplace=True)
 
         if (not poet in self.poems['poet'].values) and (not poet=='random'):
@@ -171,7 +171,7 @@ class Poetizer:
                 self.poems.loc[_poet==self.poems['poet'], 'likelihood'] = 1 / np.sum(_poet==self.poems['poet'])
                 if not self.history is None:
                     weight = np.exp(-.25 * self.stats.loc[_poet, 'times_sent'])
-                    if very_verbose: print(f'{_poet} has been weighted by {weight}')
+                    if very_verbose: print(f'{_poet:<16} has been weighted by {weight:.03f}')
                     self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= weight
 
         if contextual:
