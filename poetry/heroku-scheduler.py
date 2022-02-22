@@ -37,7 +37,7 @@ def send_daily_poem():
     # Load the poetizer
     poetizer = Poetizer()
 
-    when = datetime.fromtimestamp(ttime.time() + np.random.uniform(low=0,high=365) * 86400)
+    when = datetime.fromtimestamp(ttime.time() + np.random.uniform(low=0,high=365) * 86400).timestamp()
     date, time = datetime.fromtimestamp(when).isoformat().split('T') 
     # Choose a poem that meets the supplied conditions
     poetizer.load_poem(
@@ -75,11 +75,14 @@ def send_daily_poem():
             entries.loc[len(entries)] = '*', recipient
 
     for name, email in zip(entries['name'],entries['email']):
-        p = Process(target=f, args=('poemsfromtom@gmail.com', os.environ['PFT_PW'], name, email, args.subj_tag + f'  {date}:'))
+        p = Process(target=f, args=('poemsfromtom@gmail.com', os.environ['PFT_PW'], name, email, args.subj_tag + f' {date}:'))
         p.start()
         p.join()
+
+
  
-#send_daily_poem()
+send_daily_poem()
+
 schedule.start()
 
     
