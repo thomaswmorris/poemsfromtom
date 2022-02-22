@@ -144,7 +144,7 @@ class Poetizer:
             self.load_history(repo_name=repo_name, repo_token=repo_token)
             self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
             
-            for entry in self.history:
+            for entry in self.history.iterrows():
 
                 if self.when - entry['timestamp'] < title_latency * 86400:
 
@@ -152,11 +152,11 @@ class Poetizer:
                     if very_verbose: print(f'removing poem {self.poems.loc[row]}')
                     self.poems.drop(row, inplace=True)
 
-        if (not poet in self.poems['poet']) and (not poet=='random'):
+        if (not poet in self.poems['poet'].values) and (not poet=='random'):
             raise(Exception(f'The poet \"{poet}\" is not in the database!'))
-        if (not title in self.poems['title']) and (not title=='random'):
+        if (not title in self.poems['title'].values) and (not title=='random'):
             raise(Exception(f'The title \"{title}\" is not in the database!'))
-        if (not (poet,title) in zip(self.poems['poet'],self.poems['title'])) and (not poet=='random') and (not title=='random'):
+        if (not (poet,title) in zip(self.poems['poet'].values,self.poems['title'].values)) and (not poet=='random') and (not title=='random'):
             raise(Exception(f'The poem \"{title}\" poet \"{poet}\" is not in the database!'))
             
         # apply multipliers accordingly; so that poems titled "christmas" aren't sent in june, or poems titled "sunday" aren't sent on thursday
