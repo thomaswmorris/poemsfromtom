@@ -95,7 +95,7 @@ class Poetizer:
 
     def make_stats(self,order_by=None, ascending=True,force_rows=True,force_cols=True):
 
-        if self.history == None: raise(Exception('No history has been loaded!'))
+        if self.history is None: raise(Exception('No history has been loaded!'))
         
         if force_rows: pd.set_option('display.max_rows', None)
         if force_cols: pd.set_option('display.max_columns', None)
