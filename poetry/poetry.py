@@ -188,7 +188,7 @@ class Poetizer:
 
                     m = np.array([possibility in kws for kws in self.poems['keywords']])
                     if possibility == desired_context[icat]:
-                        self.poems.loc[m,'likelihood'] *= self.kw_mult[category]
+                        self.poems.loc[m,'likelihood'] *= 1.5 * self.kw_mult[category]
                         if very_verbose: print(f'weighted {int(m.sum())} poems with context {possibility}')
 
                     # if we want to use 'spring' as a holiday for the first day of spring, then we need to not
