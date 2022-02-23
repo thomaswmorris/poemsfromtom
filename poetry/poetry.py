@@ -207,7 +207,7 @@ class Poetizer:
             if very_verbose: print(f'choosing from {len(self.poems)} poems')
             p = self.poems['likelihood'] / np.sum(self.poems['likelihood'])
             loc = np.random.choice(self.poems.index, p=p)
-            _poet, _title, _keywords, _likelihood = self.poems.loc[loc]
+            _poet, _title, _keywords, _likelihood, _count = self.poems.loc[loc]
             _body = self.data[_poet]['poems'][_title]['body']
             self.poems.drop(loc, inplace=True)
 
