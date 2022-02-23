@@ -335,13 +335,4 @@ class Poetizer:
         server.quit()
 
     def send_poem(self, username, password, recipient, tag=''):
-        self.send(username, password, self.email_html, recipient, subject=tag+self.header)
-
-    def send_history(self, username, password, recipient, n=10):
-        self.send(username, password, self.history.iloc[-n:].to_html(), recipient, subject=f'HISTORY for {datetime.fromtimestamp(int(time.time())).isoformat()}')
-    
-    def send_stats(self, username, password, recipient):
-        self.send(username, password, self.get_stats.to_html(), recipient, subject=f'STATS for {datetime.fromtimestamp(int(time.time())).isoformat()}')
-        
-
-        
+        self.send(username, password, self.email_html, recipient, subject=tag+self.header)        
