@@ -27,19 +27,21 @@ class Poetizer:
         self.sml_kws = [kw for c in ['season', 'month', 'liturgy'] for kw in self.context[c]]
         self.kw_mult = {'season':4, 'month':12, 'weekday':7, 'liturgy':8, 'holiday':1e16}
 
-        poets, titles, keywords = [], [], []
-        self.poems = pd.DataFrame(columns=['poet', 'title', 'keywords', 'likelihood'])
+        poets, titles, keywords, lengths = [], [], [], []
+        self.poems = pd.DataFrame(columns=['poet', 'title', 'keywords', 'likelihood', 'word_count'])
         for _poet in self.data.keys():
             for _title in self.data[_poet]['poems'].keys():
 
                 poets.append(_poet)
                 titles.append(_title)
                 keywords.append(self.data[_poet]['poems'][_title]['keywords'])
+                lengths.append(len(self.data[_poet]['poems'][_title]['body'].split()))
 
         self.poems['poet'] = poets
         self.poems['title'] = titles
         self.poems['keywords'] = keywords
         self.poems['likelihood'] = 1
+        self.poems['word_count'] = lengths
         
         self.history = None
 
@@ -186,7 +188,7 @@ class Poetizer:
 
                     m = np.array([possibility in kws for kws in self.poems['keywords']])
                     if possibility == desired_context[icat]:
-                        self.poems.loc[m,'likelihood'] *= 2 * self.kw_mult[category]
+                        self.poems.loc[m,'likelihood'] *= 1.5 * self.kw_mult[category]
                         if very_verbose: print(f'weighted {int(m.sum())} poems with context {possibility}')
 
                     # if we want to use 'spring' as a holiday for the first day of spring, then we need to not
