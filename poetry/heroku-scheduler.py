@@ -37,9 +37,8 @@ def send_daily_poem():
     if args.type == 'test':
         when = datetime.fromtimestamp(ttime.time() + np.random.uniform(low=0,high=365) * 86400).timestamp()
         date, time = datetime.fromtimestamp(when).isoformat().split('T') 
+        print(date)
         subject = args.subj_tag + f'{date}: '
-
-    print(date)
     
     # Choose a poem that meets the supplied conditions
     poetizer.load_poem(
