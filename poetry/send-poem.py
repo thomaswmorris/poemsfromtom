@@ -40,7 +40,7 @@ poetizer.load_poem(
     max_length=2000, 
     title_latency=800, 
     contextual=args.context, 
-    tag_historical=args.hist_tag,
+    tag_historical=args.type,
     write_historical=args.wh,
     read_historical=args.rh, 
     verbose=True,
