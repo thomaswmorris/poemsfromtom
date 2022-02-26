@@ -148,11 +148,11 @@ class Poetizer:
             
             for index, entry in self.history.iterrows():
                 if self.when - entry['timestamp'] < title_latency * 86400:
-                    row = self.poems.index[(self.poems['poet']==entry['poet']) & (self.poems['title']==entry['title'])]
+                    i = np.where((self.poems['poet']==entry['poet']) & (self.poems['title']==entry['title']))[0]
                     if very_verbose: 
-                        _poet, _title = self.poems.loc[row, ['poet', 'title']]
+                        _poet, _title = self.poems.iloc[i][['poet', 'title']]
                         print(f'removing poem {_title} by {_poet}')
-                    self.poems.drop(row, inplace=True)
+                    self.poems.drop(self.poems.index[i], inplace=True)
 
         if (not poet in self.poems['poet'].values) and (not poet=='random'):
             raise(Exception(f'The poet \"{poet}\" is not in the database!'))
