@@ -20,5 +20,5 @@ jobs:
 
       - name: Send poem to myself
         run:
-          python poetry/send-poem.py --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --repo_lsfn 'testserv.csv'
-          --repo 'poems' --token ${{ secrets.GH_TOKEN }} --subj_tag '(PUSH) ' --context true --rh true --wh true --hist_tag 'test' --vv true
+          python poetry/send-poem.py --type 'test' --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --repo_lsfn 'testserv.csv'
+          --repo 'poems' --token ${{ secrets.GH_TOKEN }} --subj_tag '(PUSH): ' --context true --rh true --wh true --vv true

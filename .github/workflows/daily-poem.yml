@@ -1,0 +1,26 @@
+name: Pages
+on:
+  schedule:
+    - cron: '00 12 * * *'  # daily at 7:00AM EST
+
+jobs:
+  run_tests:
+    name: Daily poem (backup)
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Update repo pages
+        run:
+          python poetry/send-poem.py --type 'daily' --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --repo_lsfn 'listserv.csv'
+          --repo 'poems' --token ${{ secrets.GH_TOKEN }} --subj_tag 'Poem of the Day: ' --context true --rh true --wh true --vv true
