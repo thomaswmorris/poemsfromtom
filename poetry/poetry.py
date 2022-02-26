@@ -148,7 +148,7 @@ class Poetizer:
             
             for index, entry in self.history.iterrows():
                 if time.time() - entry['timestamp'] < title_latency * 86400:
-                    i = np.where((self.poems['poet']==entry['poet']) & (self.poems['title']==entry['title']))[0][0]
+                    i = self.poems.index[np.where((self.poems['poet']==entry['poet']) & (self.poems['title']==entry['title']))[0][0]]
                     if very_verbose: 
                         _poet, _title = self.poems.loc[i, ['poet', 'title']]
                         print(_poet, _title)
