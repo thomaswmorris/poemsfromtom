@@ -54,6 +54,7 @@ for i, loc in enumerate(history.index):
 
 random_index = f'''
     <html>
+        <title></title>
         <script>
         var ymds = [{','.join([f'"{ymd}"' for ymd in ymds])}];
         window.location.href = "https://thomaswmorris.github.io/poems/" + ymds[Math.floor(Math.random() * ymds.length)];

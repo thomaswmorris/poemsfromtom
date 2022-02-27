@@ -10,6 +10,9 @@ def get_month(t=ttime.time()):
     months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
     return months[datetime.fromtimestamp(t).month-1]
 
+def get_day(t=ttime.time()):
+    return f'{datetime.fromtimestamp(t).day:02}'
+
 def get_season(t=ttime.time()):
 
     year = datetime.fromtimestamp(t).year

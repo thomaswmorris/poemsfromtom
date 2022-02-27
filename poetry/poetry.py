@@ -2,7 +2,7 @@ import re
 import pytz
 import glob
 import json
-import time
+import time as ttime
 import smtplib
 import numpy as np
 import pandas as pd
@@ -13,7 +13,7 @@ from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from context_utils import get_month, get_weekday, get_holiday, get_season, get_liturgy
+from .context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
 
 class Poetizer:
     def __init__(self):
@@ -25,7 +25,7 @@ class Poetizer:
             self.context = json.load(f)
         
         self.sml_kws = [kw for c in ['season', 'month', 'liturgy'] for kw in self.context[c]]
-        self.kw_mult = {'season':4, 'month':12, 'weekday':7, 'liturgy':8, 'holiday':1e16}
+        self.kw_mult = {'season':4, 'weekday':7, 'month':12, 'day':30, 'liturgy':8, 'holiday':1e16}
 
         poets, titles, keywords, lengths = [], [], [], []
         self.poems = pd.DataFrame(columns=['poet', 'title', 'keywords', 'likelihood', 'word_count'])
@@ -42,11 +42,13 @@ class Poetizer:
         self.poems['keywords'] = keywords
         self.poems['likelihood'] = 1
         self.poems['word_count'] = lengths
+
+        self.archive_poems = self.poems.copy()
         
         self.history = None
 
-    def get_keywords(self, when):
-        return [get_season(when), get_month(when), get_weekday(when), get_liturgy(when), get_holiday(when)]          
+    def get_keywords(self, when=ttime.time()):
+        return [get_season(when), get_weekday(when), get_month(when), get_day(when),get_liturgy(when), get_holiday(when)]          
 
     def titleize(self,string):
 
@@ -105,7 +107,7 @@ class Poetizer:
         for _poet in np.unique(self.poems['poet']):
             
             tag, name, birth, death, link = self.data[_poet]['metadata'].values()
-            elapsed = (time.time() - self.history['timestamp'][self.history['poet']==_poet].max()) / 86400 # if _poet in self.history['poet'] else None
+            elapsed = (ttime.time() - self.history['timestamp'][self.history['poet']==_poet].max()) / 86400 # if _poet in self.history['poet'] else None
             self.stats.loc[_poet] = name, birth, death, len(self.data[_poet]['poems']), (self.history['poet']==_poet).sum(), np.round(elapsed,1)
             
         if not order_by is None:
@@ -114,10 +116,9 @@ class Poetizer:
     def load_poem(self,
                   poet='random',
                   title='random',
-                  when=time.time(),
+                  when=ttime.time(),
                   min_length=0,
                   max_length=100000,
-                  poet_latency=0,
                   title_latency=0,
                   contextual=False,
                   force_context=False,
@@ -130,6 +131,8 @@ class Poetizer:
                   very_verbose=False,
                   html_color='Black'):
 
+        self.poems = self.archive_poems.copy()
+
         try: self.when = float(when)
         except: 
             try: self.when = when.timestamp()
@@ -139,7 +142,6 @@ class Poetizer:
             
         self.body = ''
         self.history = None
-        self.archive_poems = self.poems.copy()
 
         if read_historical or write_historical:
 
@@ -147,11 +149,10 @@ class Poetizer:
             self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
             
             for index, entry in self.history.iterrows():
-                if time.time() - entry['timestamp'] < title_latency * 86400:
+                if ttime.time() - entry['timestamp'] < title_latency * 86400:
                     i = self.poems.index[np.where((self.poems['poet']==entry['poet']) & (self.poems['title']==entry['title']))[0][0]]
                     if very_verbose: 
                         _poet, _title = self.poems.loc[i, ['poet', 'title']]
-                        print(_poet, _title)
                         print(f'removing poem {_title} by {_poet}')
                     self.poems.drop(i, inplace=True)
 
@@ -201,7 +202,7 @@ class Poetizer:
                         self.poems.loc[m, 'likelihood'] = 0
                         if very_verbose: print(f'disallowed {int(m.sum())} poems with context {possibility}')
 
-            self.poems.drop(self.poems.index[self.poems['likelihood'] == 0], inplace=True)
+            # self.poems.drop(self.poems.index[self.poems['likelihood'] == 0], inplace=True)
         
         while (len(self.poems) > 0) and (self.body == ''):
             
@@ -223,8 +224,6 @@ class Poetizer:
             self.title = _title
             self.body  = _body
             break
-
-        self.poems = self.archive_poems.copy()
     
         # If we exit the loop, and don't have a poem:
         if self.body == '':
@@ -295,7 +294,7 @@ class Poetizer:
                 html_body.replace('_','')
 
         import calendar
-        self.nice_fancy_date = f'{get_weekday(self.ts_when).capitalize()}, '\
+        self.nice_fancy_date = f'{get_weekday(self.ts_when).capitalize()} '\
                              + f'{get_month(self.ts_when).capitalize()} {self.dt_when.day}, {self.dt_when.year}'
         
         self.header = f'“{self.titleize(self.title)}” by {self.name}'
