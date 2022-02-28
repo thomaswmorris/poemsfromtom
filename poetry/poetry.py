@@ -9,7 +9,7 @@ from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from .context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
+from context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
 
 class Poetizer:
     def __init__(self):
@@ -242,7 +242,7 @@ class Poetizer:
 
                 hist_blob = self.repo.create_git_blob(self.history.to_csv(), "utf-8")
                 stat_blob = self.repo.create_git_blob(self.stats.to_csv(), "utf-8")
-                poem_blob = self.repo.create_git_blob(self.archive_poems.to_csv(), "utf-8")
+                poem_blob = self.repo.create_git_blob(self.archive_poems[['poet', 'title', 'keywords', 'word_count']].to_csv(), "utf-8")
 
                 hist_elem = gh.InputGitTreeElement(path='history.csv', mode='100644', type='blob', sha=hist_blob.sha)
                 stat_elem = gh.InputGitTreeElement(path='stats.csv', mode='100644', type='blob', sha=stat_blob.sha)
