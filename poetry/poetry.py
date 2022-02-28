@@ -21,7 +21,7 @@ class Poetizer:
             self.context = json.load(f)
         
         self.sml_kws = [kw for c in ['season', 'month', 'liturgy'] for kw in self.context[c]]
-        self.kw_mult = {'season':4, 'weekday':7, 'month':12, 'day':30, 'liturgy':8, 'holiday':1e16}
+        self.kw_mult = {'season':4, 'weekday':7, 'month':12, 'day':30, 'liturgy':16, 'holiday':1e16}
 
         poets, titles, keywords, lengths = [], [], [], []
         self.poems = pd.DataFrame(columns=['poet', 'title', 'keywords', 'likelihood', 'word_count'])
@@ -186,7 +186,7 @@ class Poetizer:
 
                     m = np.array([possibility in kws for kws in self.poems['keywords']])
                     if possibility == desired_context[icat]:
-                        self.poems.loc[m,'likelihood'] *= 1.5 * self.kw_mult[category]
+                        self.poems.loc[m,'likelihood'] *= self.kw_mult[category]
                         if very_verbose: print(f'weighted {int(m.sum())} poems with context {possibility}')
 
                     # if we want to use 'spring' as a holiday for the first day of spring, then we need to not
