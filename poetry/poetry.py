@@ -9,7 +9,7 @@ from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
+from .context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
 
 class Poetizer:
     def __init__(self):
@@ -116,7 +116,7 @@ class Poetizer:
                   min_length=0,
                   max_length=100000,
                   title_latency=0,
-                  contextual=False,
+                  context=False,
                   force_context=False,
                   repo_name='',
                   repo_token='',
@@ -174,7 +174,7 @@ class Poetizer:
                     if very_verbose: print(f'{_poet:<16} has been weighted by {weight:.03f}')
                     self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= weight
 
-        if contextual:
+        if context:
 
             if force_context: self.poems.loc[[len(kws) == 0 for kws in self.poems['keywords']], 'likelihood'] = 0
 
@@ -242,7 +242,7 @@ class Poetizer:
 
                 hist_blob = self.repo.create_git_blob(self.history.to_csv(), "utf-8")
                 stat_blob = self.repo.create_git_blob(self.stats.to_csv(), "utf-8")
-                poem_blob = self.repo.create_git_blob(self.poems.to_csv(), "utf-8")
+                poem_blob = self.repo.create_git_blob(self.archive_poems.to_csv(), "utf-8")
 
                 hist_elem = gh.InputGitTreeElement(path='history.csv', mode='100644', type='blob', sha=hist_blob.sha)
                 stat_elem = gh.InputGitTreeElement(path='stats.csv', mode='100644', type='blob', sha=stat_blob.sha)
