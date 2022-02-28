@@ -50,7 +50,7 @@ def send_daily_poem():
         min_length=100, 
         max_length=2000, 
         title_latency=800, 
-        contextual=args.context, 
+        context=args.context, 
         tag_historical=args.type,
         write_historical=args.wh,
         read_historical=args.rh, 
