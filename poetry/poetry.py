@@ -169,11 +169,17 @@ class Poetizer:
         else:
             for _poet in np.unique(self.poems['poet']):
                 self.poems.loc[_poet==self.poems['poet'], 'likelihood'] = 1 / np.sum(_poet==self.poems['poet'])
+                
+                # if the poet was sent a lot, exponentially discount him
                 if not self.history is None:
                     weight = np.exp(-.25 * self.stats.loc[_poet, 'times_sent'])
                     if very_verbose: print(f'{_poet:<16} has been weighted by {weight:.03f}')
                     self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= weight
 
+                # if the poet was the last poet sent, then heavily discount him
+                if self.history.iloc[-1]['poet'] == _poet:
+                    self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= 1e-8
+                
         if context:
 
             if force_context: self.poems.loc[[len(kws) == 0 for kws in self.poems['keywords']], 'likelihood'] = 0

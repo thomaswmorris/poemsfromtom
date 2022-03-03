@@ -64,7 +64,7 @@ def send_daily_poem():
                 poetizer.send_poem(username, password, email, tag); done = True
                 a,b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
             except Exception as e:
-                print(e); fails += 1; ttime.sleep(1)
+                print(e); fails += 1; ttime.sleep(10)
  
     if not args.repo_lsfn == '':
         contents = poetizer.repo.get_contents(args.repo_lsfn, ref='master')
