@@ -179,7 +179,7 @@ class Poetizer:
                 # if the poet was sent recently, exponentially discount him
                 if not self.history is None:
                     dsls = self.stats.loc[_poet, 'days_since_last_sent']
-                    if np.isnan(dsls): dsls = 0
+                    if np.isnan(dsls): dsls = 1000
                     weight = 1 / (1 + np.exp(-.25 * (dsls - 14))) 
                     if very_verbose: print(f'{_poet:<16} has been weighted by {weight:.03f}')
                     self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= weight
