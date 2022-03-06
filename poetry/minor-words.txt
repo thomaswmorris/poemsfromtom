@@ -39,6 +39,7 @@ into
 is
 like
 minus
+my
 near
 next
 nor
