@@ -47,6 +47,7 @@ now
 of
 off
 on
+one
 once
 only
 onto
@@ -69,6 +70,7 @@ the
 through
 till
 to
+too
 toward
 under
 underneath
