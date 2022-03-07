@@ -177,7 +177,7 @@ class Poetizer:
                     dsls = self.stats.loc[_poet, 'days_since_last_sent']
                     if np.isnan(dsls): dsls = 1000
                     dsls_weight = 1 / (1 + np.exp(-.25 * (dsls - 14))) 
-                    if very_verbose: print(f'{_poet:<16} has been weighted by {ts_weight:.03f} * {dsls_weight:.03f}')
+                    if very_verbose: print(f'{_poet:<12} has been weighted by {ts_weight:.02f} * {dsls_weight:.02f} = {ts_weight * dsls_weight:.02f}')
                     self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= ts_weight * dsls_weight
                 
         if context:
