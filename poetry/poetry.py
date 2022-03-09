@@ -156,6 +156,7 @@ class Poetizer:
     
         if not poet == 'random': self.poems.loc[self.poems['poet'] != poet, 'likelihood'] = 0
         if not title == 'random': self.poems.loc[self.poems['title'] != title, 'likelihood'] = 0
+        
         if not self.poems['likelihood'].sum() > 0:
             raise(Exception(f'The poem \"{title}\" by \"{poet}\" is not in the database!'))
 
