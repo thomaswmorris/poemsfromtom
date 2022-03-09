@@ -152,34 +152,26 @@ class Poetizer:
                         print(f'removing poem {_title} by {_poet}')
                     self.poems.drop(i, inplace=True)
 
-        if (not poet in self.poems['poet'].values) and (not poet=='random'):
-            raise(Exception(f'The poet \"{poet}\" is not in the database!'))
-        if (not title in self.poems['title'].values) and (not title=='random'):
-            raise(Exception(f'The title \"{title}\" is not in the database!'))
-        if (not (poet,title) in zip(self.poems['poet'].values,self.poems['title'].values)) and (not poet=='random') and (not title=='random'):
-            raise(Exception(f'The poem \"{title}\" poet \"{poet}\" is not in the database!'))
-            
-        # apply multipliers accordingly; so that poems titled "christmas" aren't sent in june, or poems titled "sunday" aren't sent on thursday
-        self.likelihood = np.ones(len(self.poems)) / len(self.poems)
-        if (not poet == 'random') and (not title == 'random'):
-            self.poet  = poet
-            self.title = title
-            self.body  = self.data[self.poet]['poems'][self.title]['body']
+        self.poems.loc[self.poems['word_count'] > max_length, 'likelihood'] = 0
+    
+        if not poet == 'random': self.poems.loc[self.poems['poet'] != poet, 'likelihood'] = 0
+        if not title == 'random': self.poems.loc[self.poems['title'] != title, 'likelihood'] = 0
+        if not self.poems['likelihood'].sum() > 0:
+            raise(Exception(f'The poem \"{title}\" by \"{poet}\" is not in the database!'))
 
-        else:
-            for _poet in np.unique(self.poems['poet']):
-                self.poems.loc[_poet==self.poems['poet'], 'likelihood'] = 1 / np.sum(_poet==self.poems['poet'])
-                
-                # if the poet was sent a lot, exponentially discount him
-                # if the poet was sent recently, exponentially discount him
-                if not self.history is None:
-                    ts_weight = np.exp(-.5 * self.stats.loc[_poet, 'times_sent'])
-                    dsls = self.stats.loc[_poet, 'days_since_last_sent']
-                    if np.isnan(dsls): dsls = 1000
-                    dsls_weight = 1 / (1 + np.exp(-.25 * (dsls - 14))) 
-                    if very_verbose: print(f'{_poet:<12} has been weighted by {ts_weight:.02f} * {dsls_weight:.02f} = {ts_weight * dsls_weight:.02f}')
-                    self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= ts_weight * dsls_weight
-                
+        for _poet in np.unique(self.poems['poet']):
+            self.poems.loc[_poet==self.poems['poet'], 'likelihood'] = 1 / np.sum(_poet==self.poems['poet'])
+            
+            # if the poet was sent a lot, exponentially discount him
+            # if the poet was sent recently, exponentially discount him
+            if not self.history is None:
+                ts_weight = np.exp(-.5 * self.stats.loc[_poet, 'times_sent'])
+                dsls = self.stats.loc[_poet, 'days_since_last_sent']
+                if np.isnan(dsls): dsls = 1000
+                dsls_weight = 1 / (1 + np.exp(-.25 * (dsls - 14))) 
+                if very_verbose: print(f'{_poet:<12} has been weighted by {ts_weight:.02f} * {dsls_weight:.02f} = {ts_weight * dsls_weight:.02f}')
+                self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= ts_weight * dsls_weight
+            
         if context:
 
             if force_context: self.poems.loc[[len(kws) == 0 for kws in self.poems['keywords']], 'likelihood'] = 0
@@ -204,29 +196,13 @@ class Poetizer:
                         self.poems.loc[m, 'likelihood'] = 0
                         if very_verbose: print(f'disallowed {int(m.sum())} poems with context {possibility}')
 
-        
-        
-        while (len(self.poems) > 0) and (self.body == ''):
-            
-            if very_verbose: print(f'choosing from {len(self.poems)} poems')
-            self.poems['p'] = self.poems['likelihood'] / np.sum(self.poems['likelihood'])
-            if very_verbose: print(self.poems.sort_values('p',ascending=False).iloc[:10][['poet','title','keywords','p']])
-            loc = np.random.choice(self.poems.index, p=self.poems['p'])
-            _poet, _title, _keywords, _likelihood, _count = self.poems.loc[loc]
-            _body = self.data[_poet]['poems'][_title]['body']
-            self.poems.drop(loc, inplace=True)
+        if very_verbose: print(f'choosing from {len(self.poems)} poems')
+        self.poems['p'] = self.poems['likelihood'] / np.sum(self.poems['likelihood'])
+        if very_verbose: print(self.poems.sort_values('p',ascending=False).iloc[:10][['poet','title','keywords','p']])
+        loc = np.random.choice(self.poems.index, p=self.poems['p'])
 
-            if not (_poet==poet) and not (poet=='random'):
-                continue 
-            if not (_title==title) and not (title=='random'):
-                continue
-            if not (min_length <= len(_body.split()) <= max_length):
-                continue
-            
-            self.poet  = _poet
-            self.title = _title
-            self.body  = _body
-            break
+        self.poet, self.title = self.poems.loc[loc,['poet', 'title']]
+        self.body = self.data[self.poet]['poems'][self.title]['body']
     
         # If we exit the loop, and don't have a poem:
         if self.body == '':
