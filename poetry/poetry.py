@@ -12,6 +12,7 @@ from email.mime.text import MIMEText
 from context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
 
 class Poetizer:
+    
     def __init__(self):
                         
         with open('data.json', 'r+') as f:
@@ -156,15 +157,17 @@ class Poetizer:
     
         if not poet == 'random': self.poems.loc[self.poems['poet'] != poet, 'likelihood'] = 0
         if not title == 'random': self.poems.loc[self.poems['title'] != title, 'likelihood'] = 0
-        
+
         if not self.poems['likelihood'].sum() > 0:
             raise(Exception(f'The poem \"{title}\" by \"{poet}\" is not in the database!'))
 
         for _poet in np.unique(self.poems['poet']):
-            self.poems.loc[_poet==self.poems['poet'], 'likelihood'] = 1 / np.sum(_poet==self.poems['poet'])
             
+            # weight by the number of poems the poet has 
             # if the poet was sent a lot, exponentially discount him
             # if the poet was sent recently, exponentially discount him
+
+            self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= 1 / np.sum(_poet==self.poems['poet'])
             if not self.history is None:
                 ts_weight = np.exp(-.5 * self.stats.loc[_poet, 'times_sent'])
                 dsls = self.stats.loc[_poet, 'days_since_last_sent']
@@ -194,7 +197,7 @@ class Poetizer:
                     
                     else:
                         if category == 'holiday' and possibility in self.sml_kws: continue
-                        self.poems.loc[m, 'likelihood'] = 0
+                        self.poems.loc[m, 'likelihood'] *= 0
                         if very_verbose: print(f'disallowed {int(m.sum())} poems with context {possibility}')
 
         if very_verbose: print(f'choosing from {len(self.poems)} poems')
