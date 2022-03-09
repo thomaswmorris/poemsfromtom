@@ -209,9 +209,9 @@ class Poetizer:
         while (len(self.poems) > 0) and (self.body == ''):
             
             if very_verbose: print(f'choosing from {len(self.poems)} poems')
-            self.poems['probability'] = self.poems['likelihood'] / np.sum(self.poems['likelihood'])
-            if very_verbose: print(self.poems.sort_values('probability').iloc[:10])
-            loc = np.random.choice(self.poems.index, p=p)
+            self.poems['p'] = self.poems['likelihood'] / np.sum(self.poems['likelihood'])
+            if very_verbose: print(self.poems.sort_values('p',ascending=False).iloc[:10][['poet','title','keywords','p']])
+            loc = np.random.choice(self.poems.index, p=self.poems['p'])
             _poet, _title, _keywords, _likelihood, _count = self.poems.loc[loc]
             _body = self.data[_poet]['poems'][_title]['body']
             self.poems.drop(loc, inplace=True)
