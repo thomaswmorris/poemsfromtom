@@ -68,17 +68,21 @@ for _poet in sorted(np.unique(history['poet'])):
 
     tag, name, birth, death, link = poetizer.data[_poet]['metadata'].values()
 
-    title_list = history.loc[history['poet']==_poet, 'title']
-    date_list  = history.loc[history['poet']==_poet, 'date']
-
-    all_titles = ' '.join(title_list)
+    title_list = history.sort_values('title').loc[history['poet']==_poet, 'title']
+    date_list  = history.sort_values('title').loc[history['poet']==_poet, 'date']
 
     archive_index += f'''
-    <head>{name}</head>
+    <h2 style="font-family:Garamond; color:Black; font-size: 26px; margin-bottom:0; margin : 0; padding-top:0;">{name}</h2>
     <p style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0">
-    {all_titles}
-    </p>
-    <br>
+    '''
+
+    for title, date in zip(title_list, date_list):
+
+        y,m,d = date.split('-')
+        archive_index += f'<i><a href="https://thomaswmorris.github.io/poems/{y:04}/{m:02}/{d:02}">{poetizer.titleize(title)}</a></i>'
+        
+    archive_index += '''
+    </p><br>s
     '''
 
 archive_index += '<html>'
