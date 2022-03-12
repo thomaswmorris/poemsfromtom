@@ -79,7 +79,7 @@ for _poet in sorted(np.unique(history['poet'])):
     for title, date in zip(title_list, date_list):
 
         y,m,d = date.split('-')
-        archive_index += f'<i><a href="https://thomaswmorris.github.io/poems/{y:02}/{m:02}/{d:02}">{poetizer.titleize(title)}</a></i>'
+        archive_index += f'<i><a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a></i>'
         
     archive_index += '''
     </p><br>s
