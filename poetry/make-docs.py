@@ -63,7 +63,7 @@ random_index = f'''
     </html>
     '''
 
-archive_index = '<html><title>poems archive</title>'
+archive_index = '<html><title>Archive</title>'
 for _poet in sorted(np.unique(history['poet'])):
 
     tag, name, birth, death, link = poetizer.data[_poet]['metadata'].values()
@@ -72,17 +72,17 @@ for _poet in sorted(np.unique(history['poet'])):
     date_list  = history.sort_values('title').loc[history['poet']==_poet, 'date']
 
     archive_index += f'''
-    <h2 style="font-family:Garamond; color:Black; font-size: 26px; margin-bottom:0; margin : 0; padding-top:0;">{name}</h2>
-    <p style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0">
+    <h2 style="font-family:Garamond; color:Black; font-size: 24px; margin-bottom:0; margin : 0; padding-top:0;">{name}</h2>
+    <p style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0">
     '''
 
     for title, date in zip(title_list, date_list):
 
         y,m,d = date.split('-')
-        archive_index += f'<i><a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a></i>'
+        archive_index += f'<i><a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a></i><br>'
         
     archive_index += '''
-    </p><br>s
+    </p><br>
     '''
 
 archive_index += '<html>'
