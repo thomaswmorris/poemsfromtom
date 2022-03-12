@@ -12,7 +12,7 @@ from email.mime.text import MIMEText
 from context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
 
 class Poetizer:
-    
+
     def __init__(self):
                         
         with open('data.json', 'r+') as f:
