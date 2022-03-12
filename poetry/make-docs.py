@@ -73,7 +73,7 @@ for _poet in sorted(np.unique(history['poet'])):
 
     archive_index += f'''
     <br>
-    <h2 style="font-family:Garamond; color:Black; font-size: 24px; margin-bottom:0; margin : 0; padding-top:0;">{name}</h2>
+    <h2 style="font-family:Garamond; color:Black; font-size: 26px; margin-bottom:0; margin : 0; padding-top:0;">{name}</h2>
     <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0">
     '''
 
@@ -115,13 +115,14 @@ for i, loc in enumerate(history.index):
     prev_string = f'<i><a href="https://thomaswmorris.github.io/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a></i>' if i > 0 else ''
     next_string = f'<i><a href="https://thomaswmorris.github.io/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a></i>' if i < n_history - 1 else ''
     rand_string = f'<i><a href="https://thomaswmorris.github.io/poems/random">random</a></i>'
+    arch_string = f'<i><a href="https://thomaswmorris.github.io/poems/archive">archive</a></i>'
 
     html_header = f'''
         <html>
         <title>{poetizer.nice_fancy_date}</title>
-            <h2 style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0;">
-            {prev_string} {rand_string} {next_string}
-            <p style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0">{poetizer.nice_fancy_date}
+            <h2 style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
+            {prev_string} {rand_string} {arch_string} {next_string}
+            <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0">{poetizer.nice_fancy_date}
             </p>
             <br>
         </h2>
