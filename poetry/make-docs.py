@@ -3,6 +3,7 @@ import calendar
 import pandas as pd
 import github as gh
 import sys; sys.path.insert(1, 'poetry/')
+import numpy as np
 from poetry import Poetizer
 import os
 from io import StringIO
@@ -54,22 +55,40 @@ for i, loc in enumerate(history.index):
 
 random_index = f'''
     <html>
-        <title></title>
+        <title> </title>
         <script>
         var ymds = [{','.join([f'"{ymd}"' for ymd in ymds])}];
         window.location.href = "https://thomaswmorris.github.io/poems/" + ymds[Math.floor(Math.random() * ymds.length)];
         </script>
-    <head>
-        <title></title>
-    </head>
     </html>
     '''
+
+archive_index = '<html>'
+for _poet in sorted(np.unique(history['poet'])):
+
+    tag, name, birth, death, link = poetizer.data[_poet]['metadata'].values()
+
+    title_list, date_list = history.loc[history['poet']==_poet, ['title', 'date']]
+
+    all_titles = ' '.join(title_list)
+
+    archive_index += f'''
+    <title>{name}</title>
+    <p style="font-family:Garamond; color:Black; font-size: 16px; margin-bottom:0; margin : 0; padding-top:0">
+    {all_titles}
+    </p>
+    '''
+
+archive_index += '<html>'
 
 blob  = poetizer.repo.create_git_blob(home_index, "utf-8")
 elems = [gh.InputGitTreeElement(path='docs/index.html', mode='100644', type='blob', sha=blob.sha)]
 
 blob  = poetizer.repo.create_git_blob(random_index, "utf-8")
 elems.append(gh.InputGitTreeElement(path='docs/random/index.html', mode='100644', type='blob', sha=blob.sha))
+
+blob  = poetizer.repo.create_git_blob(archive_index, "utf-8")
+elems.append(gh.InputGitTreeElement(path='docs/archive/index.html', mode='100644', type='blob', sha=blob.sha))
 
 n_history = len(history)
 ys, ms, ds = [], [], []
