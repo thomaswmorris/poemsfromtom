@@ -63,14 +63,6 @@ random_index = f'''
     </html>
     '''
 
-
-
-<br><i><a href="https://thomaswmorris.github.io/poems/2022/01/19">Instead of Losing</a></i>
-<br><i><a href="https://thomaswmorris.github.io/poems/2021/12/13">The New Higher</a></i>
-</span>
-</p>
-<br>
-
 archive_index = '<html><title>archive</title>'
 for _poet in sorted(np.unique(history['poet'])):
 
