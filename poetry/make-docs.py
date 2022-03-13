@@ -73,7 +73,8 @@ for _poet in sorted(np.unique(history['poet'])):
 
     archive_index += f'''
     <br>
-    <h2 style="font-family:Garamond; color:Black; font-size: 26px; margin-bottom:0; margin : 0; padding-top:0;">{name}</h2>
+    <span style="font-family:Garamond; color:Black; font-size: 26px;>{name}</span>
+    <span style="font-family:Garamond; color:Black; font-size: 20px;>({birth}&#8212;{death})</span>
     <p style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0">
     '''
 
