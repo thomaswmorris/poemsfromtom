@@ -74,7 +74,7 @@ for _poet in sorted(np.unique(history['poet'])):
     archive_index += f'''
     <br>
     <h2 style="font-family:Garamond; color:Black; font-size: 26px; margin-bottom:0; margin : 0; padding-top:0;">{name}</h2>
-    <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0">
+    <p style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0">
     '''
 
     for title, date in zip(title_list, date_list):
