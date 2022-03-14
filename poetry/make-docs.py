@@ -67,7 +67,6 @@ archive_index = '<html><title>archive</title><br>\n'
 for _poet in sorted(np.unique(history['poet'])):
 
     tag, name, birth, death, nationality, link = poetizer.data[_poet]['metadata'].values()
-
     title_list = history.sort_values('title').loc[history['poet']==_poet, 'title']
     date_list  = history.sort_values('title').loc[history['poet']==_poet, 'date']
 
