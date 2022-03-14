@@ -72,7 +72,7 @@ for _poet in sorted(np.unique(history['poet'])):
 
     archive_index += f'''\n\n<p style="font-size: 28px;">{name} 
     <span style="font-size: 20px;">
-    {poetizer.html_flags[nationality]} ({birth}&#8212;{death})
+    ({birth}&#8212;{death}) {poetizer.html_flags[nationality]}
     </span>
     <span style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0">''' 
 
