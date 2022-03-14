@@ -9,7 +9,7 @@ from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
+from .context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
 
 class Poetizer:
 
@@ -43,6 +43,19 @@ class Poetizer:
         self.archive_poems = self.poems.copy()
         
         self.history = None
+
+        self.html_flags = {'american' : '&#127482&#127480', 
+                            'english' : '&#127988&#917607&#917602&#917605&#917614&#917607&#917631',
+                             'french' : '&#127467&#127479',
+                             'german' : '&#127465&#127466',
+                              'irish' : '&#127470&#127466',
+                           'lebanese' : '&#127473&#127463',
+                             'polish' : '&#127477&#127473',
+                            'russian' : '&#127479&#127482',
+                           'scottish' : '&#127988&#917607&#917602&#917619&#917603&#917620&#917631',
+                            'serbian' : '&#127479&#127480',
+                              'welsh' : '&#127988&#917607&#917602&#917623&#917612&#917619&#917631',
+        }
 
     def get_keywords(self, when=ttime.time()):
         return [get_season(when), get_weekday(when), get_month(when), get_day(when),get_liturgy(when), get_holiday(when)]          
@@ -103,7 +116,7 @@ class Poetizer:
         self.stats = pd.DataFrame(columns=['name','birth','death','n_poems','times_sent','days_since_last_sent'])
         for _poet in np.unique(self.poems['poet']):
             
-            tag, name, birth, death, link = self.data[_poet]['metadata'].values()
+            tag, name, birth, death, nationality, link = self.data[_poet]['metadata'].values()
             elapsed = (ttime.time() - self.history['timestamp'][self.history['poet']==_poet].max()) / 86400 # if _poet in self.history['poet'] else None
             self.stats.loc[_poet] = name, birth, death, len(self.data[_poet]['poems']), (self.history['poet']==_poet).sum(), np.round(elapsed,1)
             
@@ -213,7 +226,7 @@ class Poetizer:
             raise(Exception(f'No poem with the requirements was found in the database!'))
 
         # Put the attributes of the poem into the class
-        self.tag, self.name, self.birth, self.death, self.link = self.data[self.poet]['metadata'].values()
+        self.tag, self.name, self.birth, self.death, self.nationality, self.link = self.data[self.poet]['metadata'].values()
         output = f'chose poem \"{self.title}\" by {self.name}'
 
         self.dt_when = datetime.fromtimestamp(self.when,tz=pytz.timezone('America/New_York'))

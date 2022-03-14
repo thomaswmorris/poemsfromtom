@@ -66,12 +66,15 @@ random_index = f'''
 archive_index = '<html><title>archive</title><br>\n'
 for _poet in sorted(np.unique(history['poet'])):
 
-    tag, name, birth, death, link = poetizer.data[_poet]['metadata'].values()
+    tag, name, birth, death, nationality, link = poetizer.data[_poet]['metadata'].values()
 
     title_list = history.sort_values('title').loc[history['poet']==_poet, 'title']
     date_list  = history.sort_values('title').loc[history['poet']==_poet, 'date']
 
-    archive_index += f'''\n\n<p style="font-size: 28px;">{name} <span style="font-size: 20px;">({birth}&#8212;{death})</span>
+    archive_index += f'''\n\n<p style="font-size: 28px;">{name} 
+    <span style="font-size: 20px;">
+    {poetizer.html_flags[nationality]} ({birth}&#8212;{death})
+    </span>
     <span style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0">''' 
 
     for title, date in zip(title_list, date_list):
