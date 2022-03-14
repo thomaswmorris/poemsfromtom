@@ -45,6 +45,7 @@ class Poetizer:
         self.history = None
 
         self.html_flags = {'american' : '&#127482&#127480', 
+                           'austrian' : '&#127462&#127481',
                             'english' : '&#127988&#917607&#917602&#917605&#917614&#917607&#917631',
                              'french' : '&#127467&#127479',
                              'german' : '&#127465&#127466',
