@@ -109,19 +109,18 @@ for i, loc in enumerate(history.index):
 
     print(y, m, d, poetizer.poet, poetizer.title)
 
-    prev_string = f'<i><a href="https://thomaswmorris.github.io/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a></i>' if i > 0 else ''
-    next_string = f'<i><a href="https://thomaswmorris.github.io/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a></i>' if i < n_history - 1 else ''
-    rand_string = f'<i><a href="https://thomaswmorris.github.io/poems/random">random</a></i>'
-    arch_string = f'<i><a href="https://thomaswmorris.github.io/poems/archive">archive</a></i>'
+    prev_string = f'<a href="https://thomaswmorris.github.io/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a>' if i > 0 else ''
+    next_string = f'<a href="https://thomaswmorris.github.io/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a>' if i < n_history - 1 else ''
+    rand_string = f'<a href="https://thomaswmorris.github.io/poems/random">random</a>'
+    arch_string = f'<a href="https://thomaswmorris.github.io/poems/archive">archive</a>'
 
     html_header = f'''
         <html>
         <title>{poetizer.nice_fancy_date}</title>
-            <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;"></p>
-            {prev_string} {rand_string} {arch_string} {next_string}
-            <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0">{poetizer.nice_fancy_date}</p>
+            <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
+            <i><b>{prev_string} {rand_string} {arch_string} {next_string}</b>
+            <br>{poetizer.nice_fancy_date}</i></p>
             <br>
-        </h2>
         </html>
         '''
     index_fn = f'docs/{y}/{m}/{d}/index.html'
