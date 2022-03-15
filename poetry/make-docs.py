@@ -70,10 +70,10 @@ for _poet in sorted(np.unique(history['poet'])):
     title_list = history.sort_values('title').loc[history['poet']==_poet, 'title']
     date_list  = history.sort_values('title').loc[history['poet']==_poet, 'date']
 
-    archive_index += f'''\n\n<p style="font-family:Garamond; color:Black; font-size: 30px; margin-bottom:0; margin : 0; padding-top:0">{name} 
-    <span style="font-size: 20px;">({birth}&#8212;{death}) {poetizer.html_flags[nationality]}</span>
-    </p>''' 
-
+    archive_index += f'''\n\n<p style="font-size: 30px;">{name} 
+    <span style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
+    ({birth}&#8212;{death}) {poetizer.html_flags[nationality]}'''
+    
     for title, date in zip(title_list, date_list):
 
         y, m, d = date.split('-')
