@@ -117,10 +117,9 @@ for i, loc in enumerate(history.index):
     html_header = f'''
         <html>
         <title>{poetizer.nice_fancy_date}</title>
-            <h2 style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
+            <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;"></p>
             {prev_string} {rand_string} {arch_string} {next_string}
-            <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0">{poetizer.nice_fancy_date}
-            </p>
+            <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0">{poetizer.nice_fancy_date}</p>
             <br>
         </h2>
         </html>

@@ -59,6 +59,7 @@ class Poetizer:
                             'serbian' : '&#127479&#127480',
                             'spanish' : '&#127466&#127480',
                             'swedish' : '&#127480&#127466',
+                              'swiss' : '&#127464&#127469',
                               'welsh' : '&#127988&#917607&#917602&#917623&#917612&#917619&#917631',
         }
 
@@ -302,7 +303,7 @@ class Poetizer:
         
         self.poem_html = f"""
         <html>
-        <h2 style="font-family:Garamond; color:{html_color}; font-size: 28px; margin-bottom:0; margin : 0; padding-top:0;">{self.titleize(self.title)}</h2>
+        <p style="font-family:Garamond; color:{html_color}; font-size: 28px; margin-bottom:0; margin : 0; padding-top:0;">{self.titleize(self.title)}</p>
             <p style="font-family:Garamond; color:{html_color}; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;"><i>by 
             <a href="{self.link}">{self.name}</a> ({self.birth}&#8212;{self.death})</i> </p>
             <hr style="width:25%;text-align:left;margin-left:0";color:black;background-color:black">
