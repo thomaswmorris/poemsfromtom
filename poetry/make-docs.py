@@ -102,8 +102,7 @@ for index, entry in history.iterrows():
 
     archive_index += f'\n<i><p style="font-size: 18px;">{poetizer.nice_fancy_date}&#8212;'
     archive_index += f'<a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a>'
-    archive_index += f'by <a href="{link}">{name}</a> ({birth}&#8212;{death})</i> </p>'
-
+    archive_index += f'by <a href="{link}">{name}</a></i></p>'
     archive_index += '\n<br><br></span></p>'
 
 archive_index += '\n<html>'
@@ -141,12 +140,13 @@ for i, loc in enumerate(history.index):
     next_string = f'<a href="https://thomaswmorris.github.io/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a>' if i < n_history - 1 else ''
     rand_string = f'<a href="https://thomaswmorris.github.io/poems/random">random</a>'
     poet_string = f'<a href="https://thomaswmorris.github.io/poems/poets">poets</a>'
+    arch_string = f'<a href="https://thomaswmorris.github.io/poems/archive">archive</a>'
 
     html_header = f'''
         <html>
         <title>{poetizer.nice_fancy_date}</title>
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
-            <i><b>{prev_string} {rand_string} {next_string}  {poet_string}</b>
+            <i><b>{prev_string} {rand_string} {next_string}  {poet_string} {arch_string}</b>
             <br>{poetizer.nice_fancy_date}</i></p>
             <br>
         </html>
