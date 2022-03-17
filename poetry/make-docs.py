@@ -96,13 +96,13 @@ for index, entry in history.iterrows():
     _y, _m, _d = date.split('-')
 
     if not _m == m:
-        archive_index += f'\n<br><br><h2 style="font-size: 24px;">{get_month(timestamp).capitalize()} {y}</h2><br><br>'
+        archive_index += f'\n<br><h2 style="font-size: 24px;">{get_month(timestamp).capitalize()} {y}</h2><br>'
         m = _m
 
     poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False)
-    print_date = poetizer.nice_fancy_date.split()[1].split(', ')[0]
+    print_date = ''.join(poetizer.nice_fancy_date.split()[1:]).split(', ')[0]
 
-    archive_index += f'\n<br><i><p style="font-size: 18px;">{print_date} &#8212; '
+    archive_index += f'\n<i><p style="font-size: 18px;">{print_date} &#8212; '
     archive_index += f'<a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a>'
     archive_index += f' by <a href="{link}">{name}</a></i></p>'
 
@@ -147,7 +147,7 @@ for i, loc in enumerate(history.index):
         <html>
         <title>{poetizer.nice_fancy_date}</title>
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
-            <i><b>{prev_string}&nbsp;&nbsp;{poet_string}&nbsp;&nbsp;{rand_string}&nbsp;&nbsp;{arch_string}&nbsp;&nbsp;{next_string}</b>
+            <i><b>{prev_string}&nbsp;{poet_string}&nbsp;{rand_string}&nbsp;{arch_string}&nbsp;{next_string}</b>
             <br>{poetizer.nice_fancy_date}</i></p>
             <br>
         </html>
