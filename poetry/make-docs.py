@@ -5,6 +5,7 @@ import github as gh
 import sys; sys.path.insert(1, 'poetry/')
 import numpy as np
 from poetry import Poetizer
+from context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
 import os
 from io import StringIO
 
@@ -95,15 +96,15 @@ for index, entry in history.iterrows():
     _y, _m, _d = date.split('-')
 
     if not _m == m:
-        archive_index += '\n<br><p style="font-size: 24px;">{m} {y}</p><br>'
+        archive_index += f'\n<br><br><h2 style="font-size: 24px;">{get_month(timestamp).capitalize()} {y}</h2><br><br>'
         m = _m
 
+    print_date = date.split()[1].split(', ')[0]
     poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False)
 
-    archive_index += f'\n<i><p style="font-size: 18px;">{poetizer.nice_fancy_date}&#8212;'
+    archive_index += f'\n<br><i><p style="font-size: 18px;">{print_date} &#8212; '
     archive_index += f'<a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a>'
-    archive_index += f'by <a href="{link}">{name}</a></i></p>'
-    archive_index += '\n<br><br></span></p>'
+    archive_index += f' by <a href="{link}">{name}</a></i></p>'
 
 archive_index += '\n<html>'
 
@@ -146,7 +147,7 @@ for i, loc in enumerate(history.index):
         <html>
         <title>{poetizer.nice_fancy_date}</title>
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
-            <i><b>{prev_string} {rand_string} {next_string}  {poet_string} {arch_string}</b>
+            <i><b>{prev_string} {poet_string} {rand_string} {arch_string} {next_string}</b>
             <br>{poetizer.nice_fancy_date}</i></p>
             <br>
         </html>
