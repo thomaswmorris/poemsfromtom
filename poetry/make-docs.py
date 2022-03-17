@@ -99,7 +99,7 @@ for index, entry in history.iterrows():
         archive_index += f'\n<br><br><h2 style="font-size: 24px;">{get_month(timestamp).capitalize()} {y}</h2><br><br>'
         m = _m
 
-    print_date = date.split()[1].split(', ')[0]
+    print_date = poetizer.nice_fancy_date.split()[1].split(', ')[0]
     poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False)
 
     archive_index += f'\n<br><i><p style="font-size: 18px;">{print_date} &#8212; '
