@@ -63,31 +63,61 @@ random_index = f'''
     </html>
     '''
 
-archive_index = '<html><title>archive</title><br>\n'
+poets_index = '<html><title>poets</title><br>\n'
 for _poet in sorted(np.unique(history['poet'])):
 
     tag, name, birth, death, nationality, link = poetizer.data[_poet]['metadata'].values()
     title_list = history.sort_values('title').loc[history['poet']==_poet, 'title']
     date_list  = history.sort_values('title').loc[history['poet']==_poet, 'date']
 
-    archive_index += f'''\n\n<p style="font-size: 30px;">{name} 
+    poets_index += f'''\n\n<p style="font-size: 30px;">{name} 
     <span style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
     ({birth}&#8212;{death}) {poetizer.html_flags[nationality]}'''
     
     for title, date in zip(title_list, date_list):
 
         y, m, d = date.split('-')
-        archive_index += f'\n<br><i><a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a></i>'
+        poets_index += f'\n<br><i><a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a></i>'
         
+    poets_index += '\n<br><br></span></p>'
+
+poets_index += '\n<html>'
+
+####### 
+
+archive_index = '<html><title>archive</title><br>\n'
+m = '0'
+for index, entry in history.iterrows():
+
+    poet, title, type, date, time, timestamp = entry
+    tag, name, birth, death, nationality, link = poetizer.data[poet]['metadata'].values()
+
+    _y, _m, _d = date.split('-')
+
+    if not _m == m:
+        archive_index += '\n<br><p style="font-size: 24px;">{m} {y}</p><br>'
+        m = _m
+
+    poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False)
+
+    archive_index += f'\n<i><p style="font-size: 18px;">{poetizer.nice_fancy_date}&#8212;'
+    archive_index += f'<a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a>'
+    archive_index += f'by <a href="{link}">{name}</a> ({birth}&#8212;{death})</i> </p>'
+
     archive_index += '\n<br><br></span></p>'
 
 archive_index += '\n<html>'
+
+#######
 
 blob  = poetizer.repo.create_git_blob(home_index, "utf-8")
 elems = [gh.InputGitTreeElement(path='docs/index.html', mode='100644', type='blob', sha=blob.sha)]
 
 blob  = poetizer.repo.create_git_blob(random_index, "utf-8")
 elems.append(gh.InputGitTreeElement(path='docs/random/index.html', mode='100644', type='blob', sha=blob.sha))
+
+blob  = poetizer.repo.create_git_blob(poets_index, "utf-8")
+elems.append(gh.InputGitTreeElement(path='docs/poets/index.html', mode='100644', type='blob', sha=blob.sha))
 
 blob  = poetizer.repo.create_git_blob(archive_index, "utf-8")
 elems.append(gh.InputGitTreeElement(path='docs/archive/index.html', mode='100644', type='blob', sha=blob.sha))
@@ -110,13 +140,13 @@ for i, loc in enumerate(history.index):
     prev_string = f'<a href="https://thomaswmorris.github.io/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a>' if i > 0 else ''
     next_string = f'<a href="https://thomaswmorris.github.io/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a>' if i < n_history - 1 else ''
     rand_string = f'<a href="https://thomaswmorris.github.io/poems/random">random</a>'
-    arch_string = f'<a href="https://thomaswmorris.github.io/poems/archive">archive</a>'
+    poet_string = f'<a href="https://thomaswmorris.github.io/poems/poets">poets</a>'
 
     html_header = f'''
         <html>
         <title>{poetizer.nice_fancy_date}</title>
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
-            <i><b>{prev_string} {rand_string} {arch_string} {next_string}</b>
+            <i><b>{prev_string} {rand_string} {next_string}  {poet_string}</b>
             <br>{poetizer.nice_fancy_date}</i></p>
             <br>
         </html>
