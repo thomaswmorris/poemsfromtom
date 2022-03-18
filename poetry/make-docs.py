@@ -104,7 +104,7 @@ for index, entry in history.iterrows():
 
     archive_index += f'\n<i><p style="font-size: 18px;">{int(get_day(timestamp))} &#8212; '
     archive_index += f'<a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a>'
-    archive_index += f' by <a href="{link}">{name}</a></i></p>'
+    archive_index += f' by {name}</a></i></p>'
 
 archive_index += '\n<html>'
 
