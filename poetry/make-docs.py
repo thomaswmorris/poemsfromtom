@@ -102,7 +102,7 @@ for index, entry in history.iterrows():
 
     poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False)
 
-    archive_index += f'\n<i><p style="font-size: 18px;">{get_month(timestamp).capitalize()} {int(get_day(timestamp))} &#8212; '
+    archive_index += f'\n<i><p style="font-size: 18px;">{int(get_day(timestamp))} &#8212; '
     archive_index += f'<a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a>'
     archive_index += f' by <a href="{link}">{name}</a></i></p>'
 
