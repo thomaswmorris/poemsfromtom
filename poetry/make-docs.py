@@ -87,17 +87,18 @@ poets_index += '\n<html>'
 ####### 
 
 archive_index = '<html><title>archive</title><br>\n'
-m = '0'
+_m = '0'
 for index, entry in history.iterrows():
 
     poet, title, type, date, time, timestamp = entry
     tag, name, birth, death, nationality, link = poetizer.data[poet]['metadata'].values()
 
-    _y, _m, _d = date.split('-')
+    y, m, d = date.split('-')
 
-    if not _m == m:
-        archive_index += f'\n<br><h2 style="font-size: 24px;">{get_month(timestamp).capitalize()} {_y}</h2><br>'
-        m = _m
+    if not m == _m:
+        archive_index += f'\n<br><h2 style="font-size: 24px;">{get_month(timestamp).capitalize()} {y}</h2>'
+        _m = m
+
 
     poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False)
 
