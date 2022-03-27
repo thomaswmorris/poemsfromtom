@@ -66,13 +66,15 @@ random_index = f'''
     </html>
     '''
 
-poet_string = f'<a href="https://thomaswmorris.github.io/poems/poets">poets</a>'
 arch_string = f'<a href="https://thomaswmorris.github.io/poems/archive">archive</a>'
+poet_string = f'<a href="https://thomaswmorris.github.io/poems/poets">poets</a>'
 tday_string = f'<a href="https://thomaswmorris.github.io/poems">today\'s poem</a>'
+
+head_links = f'<i><b>{arch_string}&nbsp;</b>/<b>&nbsp;{poet_string}&nbsp;</b>/<b>&nbsp;{tday_string}</b></i>'
 
 poets_index = f'''<html><title>poets</title>\n
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
-            <i><b>{poet_string}&nbsp;</b>|<b>&nbsp;{arch_string}&nbsp;</b>|<b>&nbsp;{tday_string}</b></i>'''
+            {head_links}'''
 
 for _poet in sorted(np.unique(history['poet'])):
 
@@ -148,18 +150,18 @@ for i, loc in enumerate(history.index):
 
     print(y, m, d, poetizer.poet, poetizer.title)
 
-    prev_string = f'<a href="https://thomaswmorris.github.io/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a>' if i > 0 else ''
-    next_string = f'<a href="https://thomaswmorris.github.io/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a>' if i < n_history - 1 else ''
+    prev_string = f'<a href="https://thomaswmorris.github.io/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a>&nbsp;</b>/<b>&nbsp;' if i > 0 else ''
+    next_string = f'&nbsp;</b>/<b>&nbsp;<a href="https://thomaswmorris.github.io/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a>' if i < n_history - 1 else ''
     rand_string = f'<a href="https://thomaswmorris.github.io/poems/random">random</a>'
 
     html_header = f'''
         <html>
         <title>{poetizer.nice_fancy_date}</title>
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
-            <i><b>{poet_string}&nbsp;</b>|<b>&nbsp;{arch_string}&nbsp;</b>|<b>&nbsp;{tday_string}</b></i>
+            
             <br>
             <br>
-            <i><b>{prev_string}&nbsp;</b>|<b>&nbsp;{rand_string}&nbsp;</b>|<b>&nbsp;{next_string}</b>
+            <i><b>{prev_string}{rand_string}{next_string}</b>
             <br>{poetizer.nice_fancy_date}</i></p>
             <br>
         </html>
