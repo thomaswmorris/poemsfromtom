@@ -68,13 +68,11 @@ random_index = f'''
 
 arch_string = f'<a href="https://thomaswmorris.github.io/poems/archive">archive</a>'
 poet_string = f'<a href="https://thomaswmorris.github.io/poems/poets">poets</a>'
-tday_string = f'<a href="https://thomaswmorris.github.io/poems">today\'s poem</a>'
-
-head_links = f'<i><b>{arch_string}&nbsp;</b>/<b>&nbsp;{poet_string}&nbsp;</b>/<b>&nbsp;{tday_string}</b></i>'
+tday_string = f'<a href="https://thomaswmorris.github.io/poems">today</a>'
 
 poets_index = f'''<html><title>poets</title>\n
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
-            {head_links}'''
+            <i><b>{arch_string}&nbsp;</b>/<b>&nbsp;poets&nbsp;</b>/<b>&nbsp;{tday_string}</b></i>'''
 
 for _poet in sorted(np.unique(history['poet'])):
 
@@ -99,7 +97,7 @@ poets_index += '\n<html>'
 
 archive_index = f'''<html><title>archive</title>\n
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
-            {head_links}'''
+            <i><b>archive&nbsp;</b>/<b>&nbsp;{poet_string}&nbsp;</b>/<b>&nbsp;{tday_string}</b></i>'''
 _m = '0'
 for index, entry in history.iterrows():
 
@@ -154,11 +152,12 @@ for i, loc in enumerate(history.index):
     next_string = f'&nbsp;</b>/<b>&nbsp;<a href="https://thomaswmorris.github.io/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a>' if i < n_history - 1 else ''
     rand_string = f'<a href="https://thomaswmorris.github.io/poems/random">random</a>'
 
+    today = tday_string if i < n_history - 1 else 'today'
     html_header = f'''
         <html>
         <title>{poetizer.nice_fancy_date}</title>
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
-            {head_links}
+            '<i><b>{arch_string}&nbsp;</b>/<b>&nbsp;{poet_string}&nbsp;</b>/<b>&nbsp;{today}</b></i>' 
             <br>
             <br>
             <i><b>{prev_string}{rand_string}{next_string}</b>
