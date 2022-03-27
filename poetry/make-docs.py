@@ -99,7 +99,7 @@ poets_index += '\n<html>'
 
 archive_index = f'''<html><title>archive</title>\n
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
-            <i><b>{poet_string}&nbsp;</b>|<b>&nbsp;{arch_string}&nbsp;</b>|<b>&nbsp;{tday_string}</b></i>'''
+            {head_links}'''
 _m = '0'
 for index, entry in history.iterrows():
 
@@ -158,7 +158,7 @@ for i, loc in enumerate(history.index):
         <html>
         <title>{poetizer.nice_fancy_date}</title>
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
-            
+            {head_links}
             <br>
             <br>
             <i><b>{prev_string}{rand_string}{next_string}</b>
