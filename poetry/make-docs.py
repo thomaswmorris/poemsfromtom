@@ -72,7 +72,7 @@ tday_string = f'<a href="https://thomaswmorris.github.io/poems">today\'s poem</a
 
 poets_index = f'''<html><title>poets</title>\n
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
-            <i><b>&nbsp;{poet_string}&nbsp;{arch_string}&nbsp;{tday_string}</b></i>'''
+            <i><b>{poet_string}&nbsp;</b>|<b>&nbsp;{arch_string}&nbsp;</b>|<b>&nbsp;{tday_string}</b></i>'''
 
 for _poet in sorted(np.unique(history['poet'])):
 
@@ -97,7 +97,7 @@ poets_index += '\n<html>'
 
 archive_index = f'''<html><title>archive</title>\n
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
-            <i><b>&nbsp;{poet_string}&nbsp;{arch_string}&nbsp;{tday_string}</b></i>'''
+            <i><b>{poet_string}&nbsp;</b>|<b>&nbsp;{arch_string}&nbsp;</b>|<b>&nbsp;{tday_string}</b></i>'''
 _m = '0'
 for index, entry in history.iterrows():
 
@@ -156,10 +156,10 @@ for i, loc in enumerate(history.index):
         <html>
         <title>{poetizer.nice_fancy_date}</title>
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
-            <i><b>{poet_string}&nbsp;{arch_string}&nbsp;{tday_string}</b></i>
+            <i><b>{poet_string}&nbsp;</b>|<b>&nbsp;{arch_string}&nbsp;</b>|<b>&nbsp;{tday_string}</b></i>
             <br>
             <br>
-            <i><b>{prev_string}&nbsp;{rand_string}&nbsp;{next_string}</b>
+            <i><b>{prev_string}&nbsp;</b>|<b>&nbsp;{rand_string}&nbsp;</b>|<b>&nbsp;{next_string}</b>
             <br>{poetizer.nice_fancy_date}</i></p>
             <br>
         </html>
