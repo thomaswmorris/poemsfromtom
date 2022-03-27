@@ -28,6 +28,8 @@ parser.add_argument('--hour', type=str, help='Hour of the day to send', default=
 
 args = parser.parse_args()
 
+
+
 # Initialize the poetizer
 poetizer = Poetizer()
 
@@ -64,7 +66,14 @@ random_index = f'''
     </html>
     '''
 
-poets_index = '<html><title>poets</title><br>\n'
+poet_string = f'<a href="https://thomaswmorris.github.io/poems/poets">poets</a>'
+arch_string = f'<a href="https://thomaswmorris.github.io/poems/archive">archive</a>'
+tday_string = f'<a href="https://thomaswmorris.github.io/poems/archive">today</a>'
+
+poets_index = '''<html><title>poets</title><br>\n'
+            <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
+            <i><b>&nbsp;{poet_string}&nbsp;{arch_string}&nbsp;{tday_string}<b></i>'''
+
 for _poet in sorted(np.unique(history['poet'])):
 
     tag, name, birth, death, nationality, link = poetizer.data[_poet]['metadata'].values()
@@ -86,7 +95,9 @@ poets_index += '\n<html>'
 
 ####### 
 
-archive_index = '<html><title>archive</title><br>\n'
+archive_index = '''<html><title>archive</title><br>\n'
+            <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
+            <i><b>&nbsp;{poet_string}&nbsp;{arch_string}&nbsp;{tday_string}<b></i>'''
 _m = '0'
 for index, entry in history.iterrows():
 
@@ -140,14 +151,15 @@ for i, loc in enumerate(history.index):
     prev_string = f'<a href="https://thomaswmorris.github.io/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a>' if i > 0 else ''
     next_string = f'<a href="https://thomaswmorris.github.io/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a>' if i < n_history - 1 else ''
     rand_string = f'<a href="https://thomaswmorris.github.io/poems/random">random</a>'
-    poet_string = f'<a href="https://thomaswmorris.github.io/poems/poets">poets</a>'
-    arch_string = f'<a href="https://thomaswmorris.github.io/poems/archive">archive</a>'
 
     html_header = f'''
         <html>
         <title>{poetizer.nice_fancy_date}</title>
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
-            <i><b>{prev_string}&nbsp;{poet_string}&nbsp;{rand_string}&nbsp;{arch_string}&nbsp;{next_string}</b>
+            <i><b>{poet_string}&nbsp;{arch_string}&nbsp;{tday_string}<b></i>
+            <br>
+            <br>
+            <i><b>{prev_string}&nbsp;{rand_string}&nbsp;{next_string}</b>
             <br>{poetizer.nice_fancy_date}</i></p>
             <br>
         </html>
