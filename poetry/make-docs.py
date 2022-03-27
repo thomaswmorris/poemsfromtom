@@ -68,9 +68,9 @@ random_index = f'''
 
 poet_string = f'<a href="https://thomaswmorris.github.io/poems/poets">poets</a>'
 arch_string = f'<a href="https://thomaswmorris.github.io/poems/archive">archive</a>'
-tday_string = f'<a href="https://thomaswmorris.github.io/poems/archive">today</a>'
+tday_string = f'<a href="https://thomaswmorris.github.io/poems">today</a>'
 
-poets_index = '''<html><title>poets</title><br>\n'
+poets_index = f'''<html><title>poets</title><br>\n
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
             <i><b>&nbsp;{poet_string}&nbsp;{arch_string}&nbsp;{tday_string}<b></i>'''
 
@@ -95,7 +95,7 @@ poets_index += '\n<html>'
 
 ####### 
 
-archive_index = '''<html><title>archive</title><br>\n'
+archive_index = f'''<html><title>archive</title><br>\n
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
             <i><b>&nbsp;{poet_string}&nbsp;{arch_string}&nbsp;{tday_string}<b></i>'''
 _m = '0'
