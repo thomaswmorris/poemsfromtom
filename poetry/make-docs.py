@@ -46,7 +46,7 @@ home_index = f'''
     <html>
     <head>
         <title></title>
-        <meta http-equiv = "refresh" content="0; url=https://thomaswmorris.github.io/poems/{dt_now.year:02}/{dt_now.month:02}/{dt_now.day:02}" />
+        <meta http-equiv = "refresh" content="0; url=https://thomaswmorris.github.io/poems/{dt_now.year:02}/{dt_now.month:02}/{dt_now.day:02}"/>
     </head>
     </html>
     '''
@@ -68,7 +68,7 @@ random_index = f'''
 
 arch_string = f'<a href="https://thomaswmorris.github.io/poems/archive">archive</a>'
 poet_string = f'<a href="https://thomaswmorris.github.io/poems/poets">poets</a>'
-tday_string = f'<a href="https://thomaswmorris.github.io/poems">today</a>'
+tday_string = f'<a href="https://thomaswmorris.github.io/poems/{dt_now.year:02}/{dt_now.month:02}/{dt_now.day:02}">today</a>'
 
 poets_index = f'''<html><title>poets</title>\n
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
@@ -109,7 +109,6 @@ for index, entry in history.iterrows():
     if not m == _m:
         archive_index += f'\n<br><h2 style="font-size: 24px;">{get_month(timestamp).capitalize()} {y}</h2>'
         _m = m
-
 
     poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False)
 
