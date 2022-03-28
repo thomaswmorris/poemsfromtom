@@ -157,7 +157,7 @@ for i, loc in enumerate(history.index):
         <html>
         <title>{poetizer.nice_fancy_date}</title>
             <p style="font-family:Garamond; color:Black; font-size: 18px; margin-bottom:0; margin : 0; padding-top:0;">
-            '<i><b>{arch_string}&nbsp;</b>/<b>&nbsp;{poet_string}&nbsp;</b>/<b>&nbsp;{today}</b></i>' 
+            <i><b>{arch_string}&nbsp;</b>/<b>&nbsp;{poet_string}&nbsp;</b>/<b>&nbsp;{today}</b></i> 
             <br>
             <br>
             <i><b>{prev_string}{rand_string}{next_string}</b>
