@@ -112,8 +112,12 @@ for index, entry in history.iterrows():
 
     poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False)
 
-    archive_index += f'\n<p style="font-size: 20px;margin-top:0;margin-bottom:10">{int(get_day(timestamp)):<2} &#8212; '
-    archive_index += f'<i><a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a> by {name}</i></p>'
+    day = f'{int(get_day(timestamp))}&nbsp;'
+
+    if len(day) == 1: day += '&nbsp;&nbsp;'
+
+    archive_index += f'\n<p style="font-size: 20px;margin-top:0;margin-bottom:10">{day}&#8212;&nbsp;'
+    archive_index += f'<i><a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a></i>&nbsp;by&nbsp;{name}</p>'
 
 archive_index += '\n</html>'
 
