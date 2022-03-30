@@ -72,7 +72,7 @@ tday_string = f'<a href="https://thomaswmorris.github.io/poems/{dt_now.year:02}/
 
 poets_index = f'''<html><title>poets</title>\n
             <p style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
-            <i><b>{arch_string}&nbsp;</b>/<b>&nbsp;poets&nbsp;</b>/<b>&nbsp;{tday_string}</b></i>'''
+            <i><b>{arch_string}&nbsp;</b>/<b>&nbsp;poets&nbsp;</b>/<b>&nbsp;{tday_string}</b></i><br>'''
 
 for _poet in sorted(np.unique(history['poet'])):
 
@@ -97,7 +97,7 @@ poets_index += '\n<html>'
 
 archive_index = f'''<html><title>archive</title>\n
             <p style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
-            <i><b>archive&nbsp;</b>/<b>&nbsp;{poet_string}&nbsp;</b>/<b>&nbsp;{tday_string}</b></i>'''
+            <i><b>archive&nbsp;</b>/<b>&nbsp;{poet_string}&nbsp;</b>/<b>&nbsp;{tday_string}</b></i><p>'''
 _m = '0'
 for index, entry in history.iterrows():
 
@@ -107,16 +107,16 @@ for index, entry in history.iterrows():
     y, m, d = date.split('-')
 
     if not m == _m:
-        archive_index += f'\n</i></p><br><h2 style="font-size: 28px;">{get_month(timestamp).capitalize()} {y}</h2><p style="font-size: 20px;">'
+        archive_index += f'\n</p><br><h2 style="font-size: 28px;">{get_month(timestamp).capitalize()} {y}</h2><p style="font-size: 20px;">'
         _m = m
 
     poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False)
 
-    archive_index += f'\n{int(get_day(timestamp))} &#8212; '
+    archive_index += f'\n{int(get_day(timestamp)):<2} &#8212; '
     archive_index += f'<i><a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a> by {name}</i>'
     archive_index += f'<br><br style="line-height: 10px" />'
 
-archive_index += '\n</i></p><html>'
+archive_index += '\n</i></p></html>'
 
 #######
 
