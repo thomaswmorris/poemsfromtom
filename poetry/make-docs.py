@@ -114,10 +114,10 @@ for index, entry in history.iterrows():
 
     day = f'{int(get_day(timestamp))}&nbsp;'
 
-    if len(day) == 1: day += '&nbsp;&nbsp;'
+    if len(day) == 7: day += '&nbsp;&nbsp;'
 
     archive_index += f'\n<p style="font-size: 20px;margin-top:0;margin-bottom:10">{day}&#8212;&nbsp;'
-    archive_index += f'<i><a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a></i>&nbsp;by&nbsp;{name}</p>'
+    archive_index += f'<i><a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a>&nbsp;by&nbsp;{name}</i></p>'
 
 archive_index += '\n</html>'
 
