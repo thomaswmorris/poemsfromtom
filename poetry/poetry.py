@@ -193,7 +193,7 @@ class Poetizer:
                 ts_weight = np.exp(-.5 * self.stats.loc[_poet, 'times_sent'])
                 dsls = self.stats.loc[_poet, 'days_since_last_sent']
                 if np.isnan(dsls): dsls = 1000
-                dsls_weight = 1 / (1 + np.exp(-.25 * (dsls - 14))) 
+                dsls_weight = 1 / (1 + np.exp(-.25 * (dsls - 21))) # after three weeks, the weight is 0.5
                 if very_verbose: print(f'{_poet:<12} has been weighted by {ts_weight:.02f} * {dsls_weight:.02f} = {ts_weight * dsls_weight:.02f}')
                 self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= ts_weight * dsls_weight
             
