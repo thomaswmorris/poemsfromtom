@@ -190,7 +190,6 @@ class Poetizer:
 
             self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= 1 / np.sum(_poet==self.poems['poet'])
             if not self.history is None:
-                rm_weight = 
                 ts_weight = np.exp(-.25 * self.stats.loc[_poet, 'times_sent'])
                 dsls = self.stats.loc[_poet, 'days_since_last_sent']
                 if np.isnan(dsls): dsls = 1000
