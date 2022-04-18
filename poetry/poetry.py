@@ -45,6 +45,7 @@ class Poetizer:
 
         self.html_flags = {'american' : '&#127482&#127480', 
                            'austrian' : '&#127462&#127481',
+                         'australian' : '&#127462&#127482',
                            'canadian' : '&#127464&#127462',
                             'chilean' : '&#127464&#127473',
                               'czech' : '&#127464&#127487',
