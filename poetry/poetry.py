@@ -74,7 +74,7 @@ class Poetizer:
         with open('poetry/minor-words.txt','r') as f:
             words_to_not_capitalize = f.read().split('\n')
 
-        delims = [': ', '\"', ' ', 'O\'', '-']
+        delims = [': ', '\"', ' ', 'O\'', '-', '(']
         string = re.sub(r'\ \_[0-9]+\_','',string).lower()
         for delim in delims:  
             words = string.split(delim)
