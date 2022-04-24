@@ -9,7 +9,7 @@ from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
+from .context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
 
 class Poetizer:
 
@@ -248,6 +248,8 @@ class Poetizer:
             when_date, when_time = self.dt_when.isoformat()[:19].split('T')
             self.history.loc[len(self.history)] = self.poet, self.title, tag_historical, when_date, when_time, int(ttime.time())
             self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
+
+            if very_verbose: print(self.stats)
 
             if not repo_name == '':
 
