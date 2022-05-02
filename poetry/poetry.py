@@ -9,7 +9,7 @@ from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
+from .context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
 
 class Poetizer:
 
@@ -56,6 +56,7 @@ class Poetizer:
                             'italian' : '&#127470&#127481',
                            'jamaican' : '&#127471&#127474',
                            'lebanese' : '&#127473&#127463',
+                            'maltese' : '&#127474&#127481',
                          'nicaraguan' : '&#127475&#127470',
                           'norwegian' : '&#127475&#127476',
                              'polish' : '&#127477&#127473',
