@@ -25,10 +25,11 @@ parser.add_argument('--wh', type=bool, help='Whether to consider this poem in th
 parser.add_argument('--hist_tag', type=str, help='What tag to write to the history with', default='')
 parser.add_argument('--subj_tag', type=str, help='Email subject prefix', default='')
 parser.add_argument('--hour', type=str, help='Hour of the day to send', default=7)
+parser.add_argument('--token_from_heroku', type=bool, help='Whether to get token from os env', default=False)
 
 args = parser.parse_args()
 
-
+if args.token_from_heroku: args.token = os.environ['GITHUB_TOKEN']
 
 # Initialize the poetizer
 poetizer = Poetizer()
@@ -191,5 +192,3 @@ parent = poetizer.repo.get_git_commit(sha=head_sha)
 commit = poetizer.repo.create_git_commit(f'update logs {now_date} {now_time}', tree, [parent])
 master_ref = poetizer.repo.get_git_ref('heads/master')
 master_ref.edit(sha=commit.sha)
-
-
