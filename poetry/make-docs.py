@@ -111,7 +111,7 @@ for index, entry in history.iterrows():
         archive_index += f'\n<br><h2 style="font-size: 28px;">{get_month(timestamp).capitalize()} {y}</h2>'
         _m = m
 
-    poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False, include_flags=True)
+    poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False)
 
     day = f'{int(get_day(timestamp))}&nbsp;'
 
@@ -147,7 +147,7 @@ for i, loc in enumerate(history.index):
     dt_prev = datetime.fromtimestamp(dt.timestamp() - 86400)
     dt_next = datetime.fromtimestamp(dt.timestamp() + 86400)
     
-    poetizer.load_poem(poet=history.loc[loc,'poet'], title=history.loc[loc,'title'], when=history.loc[loc,'timestamp'], verbose=False)
+    poetizer.load_poem(poet=history.loc[loc,'poet'], title=history.loc[loc,'title'], when=history.loc[loc,'timestamp'], verbose=False, include_flags=True)
 
     print(y, m, d, poetizer.poet, poetizer.title)
 
