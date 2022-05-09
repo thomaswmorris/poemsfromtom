@@ -111,7 +111,7 @@ for index, entry in history.iterrows():
         archive_index += f'\n<br><h2 style="font-size: 28px;">{get_month(timestamp).capitalize()} {y}</h2>'
         _m = m
 
-    poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False)
+    poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False, include_flags=True)
 
     day = f'{int(get_day(timestamp))}&nbsp;'
 

@@ -151,6 +151,7 @@ class Poetizer:
                   write_historical=False,
                   verbose=True,
                   very_verbose=False,
+                  include_flags=False,
                   html_color='Black'):
 
         self.poems = self.archive_poems.copy()
@@ -312,12 +313,14 @@ class Poetizer:
                              + f'{get_month(self.ts_when).capitalize()} {self.dt_when.day}, {self.dt_when.year}'
         
         self.header = f'“{self.titleize(self.title)}” by {self.name}'
+
+        flag_ish = f' {self.html_flags[self.nationality]}' if include_flags else ''
         
         self.poem_html = f"""
         <html>
         <h2 style="font-family:Garamond; color:{html_color}; font-size: 30px; margin-bottom:0; margin : 0; padding-top:0;">{self.titleize(self.title)}</h2>
             <p style="font-family:Garamond; color:{html_color}; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;"><i>by 
-            <a href="{self.link}">{self.name}</a> ({self.birth}&#8212;{self.death}) {self.html_flags[self.nationality]}</i> </p>
+            <a href="{self.link}">{self.name}</a> ({self.birth}&#8212;{self.death})</i>{flag_ish}</p>
             <hr style="width:25%;text-align:left;margin-left:0";color:black;background-color:black">
             <p style="font-family:Garamond; color:{html_color}; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0">{html_body}
             </p>
