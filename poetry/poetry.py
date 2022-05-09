@@ -172,11 +172,15 @@ class Poetizer:
             
             for index, entry in self.history.iterrows():
                 if ttime.time() - entry['timestamp'] < title_latency * 86400:
-                    i = self.poems.index[np.where((self.poems['poet']==entry['poet']) & (self.poems['title']==entry['title']))[0][0]]
-                    if very_verbose: 
-                        _poet, _title = self.poems.loc[i, ['poet', 'title']]
-                        print(f'removing poem {_title} by {_poet}')
-                    self.poems.drop(i, inplace=True)
+                    try:
+                        i = self.poems.index[np.where((self.poems['poet']==entry['poet']) & (self.poems['title']==entry['title']))[0][0]]
+                        if very_verbose: 
+                            _poet, _title = self.poems.loc[i, ['poet', 'title']]
+                            print(f'removing poem {_title} by {_poet}')
+                        self.poems.drop(i, inplace=True)
+                    except:
+                        print('error handling entry {entry}')
+
 
         self.poems.loc[self.poems['word_count'] > max_length, 'likelihood'] = 0
     
