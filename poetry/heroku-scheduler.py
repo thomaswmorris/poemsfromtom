@@ -21,10 +21,10 @@ parser.add_argument('--context', type=bool, help='Whether to send contextual poe
 parser.add_argument('--rh', type=bool, help='Whether to consider past poems sent', default=False)
 parser.add_argument('--wh', type=bool, help='Whether to consider this poem in the future', default=False)
 parser.add_argument('--subj_tag', type=str, help='Email subject prefix', default='')
-parser.add_argument('--hour', type=str, help='Hour of the day to send', default=7)
+parser.add_argument('--hour', type=str, help='Hour of the day to send', default='7')
 args = parser.parse_args()
 
-@schedule.scheduled_job('cron', day_of_week='mon,tue,wed,thu,fri,sat,sun', hour='9', minute='27')
+@schedule.scheduled_job('cron', day_of_week='mon,tue,wed,thu,fri,sat,sun', hour=args.hour)
 def send_daily_poem():
 
     print(f'\nThis job is run every day at {args.hour} EST')
