@@ -210,6 +210,8 @@ class Poetizer:
 
             if force_context: self.poems.loc[[len(kws) == 0 for kws in self.poems['keywords']], 'likelihood'] = 0
 
+            self.poems.loc[m, 'likelihood'] *= np.array([4.0 if 'tight' in kws else 1.0 for kws in self.poems['keywords']])
+
             desired_context = self.get_keywords(self.when)
             if verbose: print('keywords:', desired_context)
 
