@@ -168,14 +168,19 @@ for i, loc in enumerate(history.index):
             <br>
         </html>
         '''
+
     index_fn = f'docs/{y}/{m}/{d}/index.html'
 
-    try:
-        index = poetizer.repo.get_contents(index_fn,ref='master').decoded_content.decode()
-    except:
-        index = None
+    #try:
+    contents = poetizer.repo.get_contents(index_fn, ref='master').decoded_content.decode()
+    #except:
+    #index = None
 
-    if html_header + poetizer.poem_html == index:
+    print(contents)
+
+    print(html_header + poetizer.poem_html == contents)
+
+    if html_header + poetizer.poem_html == contents:
         continue
 
     blob = poetizer.repo.create_git_blob(html_header + poetizer.poem_html, "utf-8")
