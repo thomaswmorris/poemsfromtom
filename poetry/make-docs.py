@@ -186,6 +186,13 @@ for i, loc in enumerate(history.index):
 
     print(32*'#')
 
+    running_string = ''
+    for char1, char2 in zip(contents, html_header + poetizer.poem_html):
+        if not char1 == char2: break
+        running_string += char1
+
+    print(running_string)
+
     assert False
 
     print(html_header + poetizer.poem_html == contents)
