@@ -69,7 +69,7 @@ random_index = f'''
 
 arch_string = f'<a href="https://thomaswmorris.github.io/poems/archive">archive</a>'
 poet_string = f'<a href="https://thomaswmorris.github.io/poems/poets">poets</a>'
-tday_string = f'<a href="https://thomaswmorris.github.io/poems">today</a>'
+tday_string = f'<a href="https://thomaswmorris.github.io/poems/{dt_now.year:02}/{dt_now.month:02}/{dt_now.day:02}">today</a>'
 
 poets_index = f'''<html><title>poets</title>\n
             <p style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
@@ -171,14 +171,24 @@ for i, loc in enumerate(history.index):
 
     index_fn = f'docs/{y}/{m}/{d}/index.html'
 
-    #try:
-    contents = poetizer.repo.get_contents(index_fn, ref='master').decoded_content.decode()
-    #except:
-    #index = None
-    #print(html_header + poetizer.poem_html == contents)
+    try:
+        contents = poetizer.repo.get_contents(index_fn, ref='master').decoded_content.decode()
+    except:
+        index = None
+
+    print(32*'#')
 
     if html_header + poetizer.poem_html == contents:
         continue
+
+    running_string = ''
+    for char1, char2 in zip(contents, html_header + poetizer.poem_html):
+        if not char1 == char2: break
+        running_string += char1
+
+    print(running_string)
+
+    if i > 10: assert False
 
     blob = poetizer.repo.create_git_blob(html_header + poetizer.poem_html, "utf-8")
     elems.append(gh.InputGitTreeElement(path=index_fn, mode='100644', type='blob', sha=blob.sha))
