@@ -69,7 +69,7 @@ random_index = f'''
 
 arch_string = f'<a href="https://thomaswmorris.github.io/poems/archive">archive</a>'
 poet_string = f'<a href="https://thomaswmorris.github.io/poems/poets">poets</a>'
-tday_string = f'<a href="https://thomaswmorris.github.io/poems/{dt_now.year:02}/{dt_now.month:02}/{dt_now.day:02}">today</a>'
+tday_string = f'<a href="https://thomaswmorris.github.io/poems">today</a>'
 
 poets_index = f'''<html><title>poets</title>\n
             <p style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
@@ -175,27 +175,7 @@ for i, loc in enumerate(history.index):
     contents = poetizer.repo.get_contents(index_fn, ref='master').decoded_content.decode()
     #except:
     #index = None
-
-    print(32*'#')
-
-    print(contents)
-
-    print(32*'#')
-
-    print(html_header + poetizer.poem_html)
-
-    print(32*'#')
-
-    running_string = ''
-    for char1, char2 in zip(contents, html_header + poetizer.poem_html):
-        if not char1 == char2: break
-        running_string += char1
-
-    print(running_string)
-
-    assert False
-
-    print(html_header + poetizer.poem_html == contents)
+    #print(html_header + poetizer.poem_html == contents)
 
     if html_header + poetizer.poem_html == contents:
         continue
