@@ -176,7 +176,17 @@ for i, loc in enumerate(history.index):
     #except:
     #index = None
 
+    print(32*'#')
+
     print(contents)
+
+    print(32*'#')
+
+    print(html_header + poetizer.poem_html)
+
+    print(32*'#')
+
+    assert False
 
     print(html_header + poetizer.poem_html == contents)
 
