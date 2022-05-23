@@ -188,17 +188,15 @@ for i, loc in enumerate(history.index):
 
     index_fn = f'docs/{y}/{m}/{d}/index.html'
 
-    #try:
-    contents = poetizer.repo.get_contents(index_fn, ref='master').decoded_content.decode()
-    #except:
-    #    contents = None
+    try:    contents = poetizer.repo.get_contents(index_fn, ref='master').decoded_content.decode()
+    except: contents = None
 
     print(32*'#')
 
     if html_header + poetizer.poem_html == contents:
         continue
 
-
+    '''
     running_string = ''
     for char1, char2 in zip(contents, html_header + poetizer.poem_html):
         
@@ -209,6 +207,7 @@ for i, loc in enumerate(history.index):
     print(running_string)
 
     #if i > 10: assert False
+    '''
 
     blob = poetizer.repo.create_git_blob(html_header + poetizer.poem_html, "utf-8")
     elems = [gh.InputGitTreeElement(path=index_fn, mode='100644', type='blob', sha=blob.sha)]
