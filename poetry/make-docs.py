@@ -31,6 +31,21 @@ args = parser.parse_args()
 
 if args.token_from_heroku: args.token = os.environ['GITHUB_TOKEN']
 
+def commit_elements(_elems):
+
+    dt_now = datetime.fromtimestamp(history.iloc[-1]['timestamp'])
+    now_date, now_time = dt_now.isoformat()[:19].split('T') 
+
+    head_sha  = poetizer.repo.get_branch('master').commit.sha
+    base_tree = poetizer.repo.get_git_tree(sha=head_sha)
+
+    tree   = poetizer.repo.create_git_tree(_elems, base_tree)
+    parent = poetizer.repo.get_git_commit(sha=head_sha) 
+
+    commit = poetizer.repo.create_git_commit(f'update logs {now_date} {now_time}', tree, [parent])
+    master_ref = poetizer.repo.get_git_ref('heads/master')
+    master_ref.edit(sha=commit.sha)
+
 # Initialize the poetizer
 poetizer = Poetizer()
 
@@ -136,6 +151,8 @@ elems.append(gh.InputGitTreeElement(path='docs/poets/index.html', mode='100644',
 blob  = poetizer.repo.create_git_blob(archive_index, "utf-8")
 elems.append(gh.InputGitTreeElement(path='docs/archive/index.html', mode='100644', type='blob', sha=blob.sha))
 
+commit_elements(elems)
+
 n_history = len(history)
 ys, ms, ds = [], [], []
 
@@ -181,6 +198,7 @@ for i, loc in enumerate(history.index):
     if html_header + poetizer.poem_html == contents:
         continue
 
+
     running_string = ''
     for char1, char2 in zip(contents, html_header + poetizer.poem_html):
         
@@ -190,19 +208,10 @@ for i, loc in enumerate(history.index):
 
     print(running_string)
 
-    if i > 10: assert False
+    #if i > 10: assert False
 
     blob = poetizer.repo.create_git_blob(html_header + poetizer.poem_html, "utf-8")
-    elems.append(gh.InputGitTreeElement(path=index_fn, mode='100644', type='blob', sha=blob.sha))
+    elems = [gh.InputGitTreeElement(path=index_fn, mode='100644', type='blob', sha=blob.sha)]
 
+    commit_elements(elems)
     print(f'wrote to {index_fn}')
-
-head_sha  = poetizer.repo.get_branch('master').commit.sha
-base_tree = poetizer.repo.get_git_tree(sha=head_sha)
-
-tree   = poetizer.repo.create_git_tree(elems, base_tree)
-parent = poetizer.repo.get_git_commit(sha=head_sha) 
-
-commit = poetizer.repo.create_git_commit(f'update logs {now_date} {now_time}', tree, [parent])
-master_ref = poetizer.repo.get_git_ref('heads/master')
-master_ref.edit(sha=commit.sha)
