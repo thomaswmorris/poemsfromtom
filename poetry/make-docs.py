@@ -111,6 +111,19 @@ poets_index += '\n<html>'
 
 ####### 
 
+<table cellspacing="30">
+  <tr>
+    <td></td>
+    <td>November 2021</td>
+    <td>December 2021</td>
+  </tr>
+  <tr>
+    <td>January 2022</td>
+    <td>February 2022</td>
+    <td>March 2022</td>
+  </tr>
+</table>
+
 archive_index = f'''<html><title>archive</title>\n
             <p style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
             <i><b>archive&nbsp;</b>/<b>&nbsp;{poet_string}&nbsp;</b>/<b>&nbsp;{tday_string}</b></i></p>'''
@@ -123,7 +136,7 @@ for index, entry in history.iterrows():
     y, m, d = date.split('-')
 
     if not m == _m:
-        archive_index += f'\n<br><h2 style="font-size: 28px;">{get_month(timestamp).capitalize()} {y}</h2>'
+        archive_index += f'\n</td><br><h2 style="font-size: 28px;">{get_month(timestamp).capitalize()} {y}</h2></td>'
         _m = m
 
     poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False)
@@ -132,10 +145,11 @@ for index, entry in history.iterrows():
 
     if len(day) == 7: day += '&nbsp;&nbsp;'
 
-    archive_index += f'\n<p style="font-size: 20px;margin-top:0;margin-bottom:8">{day}&#8212;&nbsp;'
-    archive_index += f'<i><a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a>&nbsp;by&nbsp;{name}</i></p>'
+    archive_index += f'\n<td><p style="font-size: 20px;margin-top:0;margin-bottom:8">{day}&#8212;&nbsp;'
+    archive_index += f'<i><a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}'
+    archive_index += f'</a>&nbsp;by&nbsp;{name}</i></p></td>'
 
-archive_index += '\n</html>'
+archive_index += '\n</td>\n</table>\n</html>'
 
 #######
 
