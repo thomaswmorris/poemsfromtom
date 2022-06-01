@@ -123,7 +123,9 @@ for index, entry in history.iterrows():
     y, m, d = date.split('-')
 
     if not m == _m:
+        archive_index += f'</td></table>'
         archive_index += f'\n<br><h2 style="font-size: 28px;">{get_month(timestamp).capitalize()} {y}</h2>'
+        archive_index += f'\n<table cellspacing="30"><td>'
         _m = m
 
     poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False)
@@ -131,11 +133,12 @@ for index, entry in history.iterrows():
     day = f'{int(get_day(timestamp))}&nbsp;'
 
     if len(day) == 7: day += '&nbsp;&nbsp;'
+    if int(d) % 10 == 0: archive_index += f'</td><td>'
 
     archive_index += f'\n<p style="font-size: 20px;margin-top:0;margin-bottom:8">{day}&#8212;&nbsp;'
     archive_index += f'<i><a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a>&nbsp;by&nbsp;{name}</i></p>'
 
-archive_index += '\n</html>'
+archive_index += '\n</td></table>\n</html>'
 
 #######
 
