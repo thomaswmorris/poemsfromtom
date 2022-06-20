@@ -125,7 +125,7 @@ for index, entry in history.iterrows():
     if not m == _m:
         archive_index += f'</td></table>'
         archive_index += f'\n<br><h2 style="font-size: 28px;">{get_month(timestamp).capitalize()} {y}</h2>'
-        archive_index += f'\n<table cellspacing="30"><td>'
+        archive_index += f'\n<table cellspacing="18"><td>'
         _m = m
 
     poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False)
