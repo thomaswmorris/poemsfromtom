@@ -49,7 +49,7 @@ def get_holiday(t=ttime.time()):
     if yd == easter_yd + 49: return 'pentacost'
 
     # these are on specific dates 
-
+    
     if (dt.month,dt.day)==(1,1):   return 'new year\'s day'
     if (dt.month,dt.day)==(1,6):   return 'epiphany'
     if (dt.month,dt.day)==(2,2):   return 'candlemas'
