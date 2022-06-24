@@ -56,7 +56,6 @@ def get_holiday(t=ttime.time()):
     if (dt.month,dt.day)==(2,14):  return 'valentine\'s day'
     if (dt.month,dt.day)==(3,25):  return 'annunciation'
     
-    if (dt.month,dt.day)==(6,24):  return 'midsummer'
     if (dt.month,dt.day)==(7,4):   return 'independence day'
     if (dt.month,dt.day)==(9,8):   return 'immaculate conception'
     if (dt.month,dt.day)==(10,31): return 'halloween'
