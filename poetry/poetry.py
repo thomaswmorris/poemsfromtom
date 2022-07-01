@@ -69,6 +69,7 @@ class Poetizer:
                             'persian' : '&#127470&#127479',
                            'peruvian' : '&#127477&#127466',
                              'polish' : '&#127477&#127473',
+                         'portuguese' : '&#127477&#127481',
                             'russian' : '&#127479&#127482',
                            'scottish' : '&#127988&#917607&#917602&#917619&#917603&#917620&#917631',
                             'serbian' : '&#127479&#127480',
@@ -136,7 +137,7 @@ class Poetizer:
         if force_rows: pd.set_option('display.max_rows', None)
         if force_cols: pd.set_option('display.max_columns', None)
         self.stats = pd.DataFrame(columns=['name','birth','death','n_poems','times_sent','days_since_last_sent'])
-        for _poet in np.unique(self.poems['poet']):
+        for _poet in np.unique(np.append(self.poems['poet'], self.history['poet'])):
             
             tag, name, birth, death, nationality, link = self.data[_poet]['metadata'].values()
             elapsed = (ttime.time() - self.history['timestamp'][self.history['poet']==_poet].max()) / 86400 # if _poet in self.history['poet'] else None
