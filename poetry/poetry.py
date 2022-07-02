@@ -78,6 +78,7 @@ class Poetizer:
                             'swedish' : '&#127480&#127466',
                               'swiss' : '&#127464&#127469',
                               'welsh' : '&#127988&#917607&#917602&#917623&#917612&#917619&#917631',
+                                   '' : '',
         }
 
     def get_keywords(self, when=ttime.time()):
