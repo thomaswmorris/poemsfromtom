@@ -210,8 +210,10 @@ class Poetizer:
             # if the poet was sent recently, exponentially discount him
 
             self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= 1 / np.sum(_poet==self.poems['poet'])
+
             if not self.history is None:
-                ts_weight = np.exp(-.25 * self.stats.loc[_poet, 'times_sent'])
+
+                ts_weight = np.exp(.5 * np.log(.5) * self.stats.loc[_poet, 'times_sent']) # twice is a weight of 0.5
                 dsls = self.stats.loc[_poet, 'days_since_last_sent']
                 if np.isnan(dsls): dsls = 1000
                 dsls_weight = 1 / (1 + np.exp(-.1 * (dsls - 56))) # after eight weeks, the weight is 0.5
