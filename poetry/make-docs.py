@@ -55,6 +55,8 @@ print(args.repo, args.token)
 poetizer.load_history(repo_name=args.repo, repo_token=args.token) # This automatically loads the repo as well
 history = poetizer.history.copy()
 
+history['strip_title'] = [title.strip('THE ') for title in history['title']]
+
 dt_now = datetime.fromtimestamp(history.iloc[-1]['timestamp'])
 now_date, now_time = dt_now.isoformat()[:19].split('T')
 print(f'today is {now_date} {now_time}')
@@ -93,8 +95,9 @@ poets_index = f'''<html><title>poets</title>\n
 for _poet in sorted(np.unique(history['poet'])):
 
     tag, name, birth, death, nationality, link = poetizer.data[_poet]['metadata'].values()
-    title_list = history.sort_values('title').loc[history['poet']==_poet, 'title']
-    date_list  = history.sort_values('title').loc[history['poet']==_poet, 'date']
+
+    title_list = history.sort_values('strip_title').loc[history['poet']==_poet, 'title']
+    date_list  = history.sort_values('strip_title').loc[history['poet']==_poet, 'date']
 
     poets_index += f'''\n\n<p style="font-size: 28px;">{name} 
     <span style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
