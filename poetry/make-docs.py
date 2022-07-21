@@ -120,7 +120,7 @@ archive_index = f'''<html><title>archive</title>\n
 _m = '0'
 for index, entry in history.iterrows():
 
-    poet, title, type, date, time, timestamp = entry
+    poet, title, type, date, time, timestamp, _ = entry
     tag, name, birth, death, nationality, link = poetizer.data[poet]['metadata'].values()
 
     y, m, d = date.split('-')
