@@ -6,7 +6,7 @@ import sys; sys.path.insert(1, 'poetry/')
 import numpy as np
 from poetry import Poetizer
 from context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
-import os
+import os, re
 from io import StringIO
 
 import argparse, sys
@@ -55,7 +55,7 @@ print(args.repo, args.token)
 poetizer.load_history(repo_name=args.repo, repo_token=args.token) # This automatically loads the repo as well
 history = poetizer.history.copy()
 
-history['strip_title'] = [title.strip('THE ') for title in history['title']]
+history['strip_title'] = [re.sub(r'^(THE|AN|A)\s+', '', title) for title in history['title']]
 
 dt_now = datetime.fromtimestamp(history.iloc[-1]['timestamp'])
 now_date, now_time = dt_now.isoformat()[:19].split('T')
