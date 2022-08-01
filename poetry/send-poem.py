@@ -4,6 +4,7 @@ import pandas as pd
 from poetry import Poetizer
 from io import StringIO
 from multiprocessing import Process
+from datetime import datetime
 
 
 import argparse, sys
@@ -35,7 +36,7 @@ poetizer.load_poem(
     title=args.title, 
     repo_name=args.repo,
     repo_token=args.token,
-    when=time.time(), 
+    when=datetime(2022,7,30).timestamp(), 
     min_length=10, 
     max_length=2000, 
     title_latency=800, 

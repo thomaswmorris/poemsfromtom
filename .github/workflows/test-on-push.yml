@@ -1,4 +1,4 @@
-name: Test
+name: Send a test poem on push
 on: push
 
 jobs:
