@@ -36,7 +36,7 @@ poetizer.load_poem(
     title=args.title, 
     repo_name=args.repo,
     repo_token=args.token,
-    when=datetime(2022,7,30).timestamp(), 
+    when=time.time(), 
     min_length=10, 
     max_length=2000, 
     title_latency=800, 
