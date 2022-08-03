@@ -133,9 +133,9 @@ for index, entry in history.iterrows():
 
     poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False)
 
-    day = f'{int(get_day(timestamp))}&nbsp;'
+    day = f'{int(get_day(timestamp)):>02}&nbsp;'
 
-    if len(day) == 7: day += '&nbsp;&nbsp;'
+    #if len(day) == 7: day += '&nbsp;&nbsp;'
     if int(d) in [11,21]: archive_index += f'</td><td>'
 
     archive_index += f'\n<p style="font-size: 20px;margin-top:0;margin-bottom:8">{day}&#8212;&nbsp;'
