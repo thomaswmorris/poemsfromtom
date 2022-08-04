@@ -1,4 +1,4 @@
-name: Daily update of the repository
+name: update the repository
 on:
   push:
   schedule:

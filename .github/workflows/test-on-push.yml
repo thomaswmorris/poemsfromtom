@@ -1,9 +1,9 @@
-name: Send a test poem on push
+name: send a test poem on push
 on: push
 
 jobs:
   run_tests:
-    name: Test send-poem.py with credentials
+    name: test send-poem.py with credentials
     runs-on: ubuntu-latest
 
     defaults:
