@@ -1,4 +1,4 @@
-name: Pages
+name: Daily update of the repository
 on:
   push:
   schedule:

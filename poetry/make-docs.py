@@ -118,7 +118,11 @@ archive_index = f'''<html><title>archive</title>\n
             <p style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
             <i><b>archive&nbsp;</b>/<b>&nbsp;{poet_string}&nbsp;</b>/<b>&nbsp;{tday_string}</b></i></p>'''
 _m = '0'
-for index, entry in history.iterrows():
+
+dts = map(datetime.fromtimestamp, history.timestamp.values)
+archive_ordering = np.argsort([-dt.year - 1e-3 * dt.month + 1e-6 * dt.day for dt in dts])
+
+for index, entry in history.iloc[archive_ordering].iterrows():
 
     poet, title, type, date, time, timestamp, _ = entry
     tag, name, birth, death, nationality, link = poetizer.data[poet]['metadata'].values()
