@@ -92,19 +92,27 @@ class Poetizer:
         with open('poetry/minor-words.txt','r') as f:
             words_to_not_capitalize = f.read().split('\n')
 
+        
+
         delims = [': ', '\"', ' ', 'O\'', '-', '(']
         string = re.sub(r'\ \_[0-9]+\_','',string).lower()
         for delim in delims:  
             words = string.split(delim)
-            for i,s in enumerate(words):
+            for i, s in enumerate(words):
+                
                 if (not len(s) > 0) or (s in ['\"','\'']):
                     continue
+
                 if (i in [0,len(words)-1]) or not ((s in words_to_not_capitalize) and not delim == '-'): 
                     i_cap = list(re.finditer('[^\"\']',s))[0].start()
                     words[i] = words[i][:i_cap] + words[i][i_cap].capitalize() + words[i][i_cap+1:]
-                else: 
-                    pass
+
+                if np.isin(list(s),['I','V','X']).all():
+                    words[i] = s.upper()
+
             string = delim.join(words)
+
+        
 
         string = re.sub(r'\'S ','\'s ',string)
         return string
@@ -219,7 +227,7 @@ class Poetizer:
                 ts_weight = np.exp(.5 * np.log(.5) * self.stats.loc[_poet, 'times_sent']) # twice is a weight of 0.5
                 dsls = self.stats.loc[_poet, 'days_since_last_sent']
                 if np.isnan(dsls): dsls = 1e3
-                dsls_weight = 1 / (1 + np.exp(-.1 * (dsls - 42))) # after six weeks, the weight is 0.5
+                dsls_weight = 1 / (1 + np.exp(-.1 * (dsls - 56))) # after six weeks, the weight is 0.5
                 if very_verbose: print(f'{_poet:<12} has been weighted by {ts_weight:.03f} * {dsls_weight:.03f} = {ts_weight * dsls_weight:.03f}')
                 self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= ts_weight * dsls_weight
             
