@@ -175,7 +175,7 @@ class Poetizer:
                   write_historical=False,
                   verbose=True,
                   very_verbose=False,
-                  include_flags=False,
+                  include_flags=True,
                   html_color='Black'):
 
         self.poems = self.archive_poems.copy()
