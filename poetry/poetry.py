@@ -343,6 +343,8 @@ class Poetizer:
         self.header = f'“{self.titleize(self.title)}” by {self.name}'
 
         flag_ish = f' {self.html_flags[self.nationality]}' if include_flags else ''
+
+        self.html_body = html_body
         
         self.poem_html = f"""
         <html>
