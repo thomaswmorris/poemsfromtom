@@ -183,9 +183,54 @@ for i, loc in enumerate(history.index):
     rand_string = f'<a href="https://thomaswmorris.github.io/poems/random">random</a>'
 
     today = tday_string if i < n_history - 1 else 'today'
-    html_header = f'''
-        <html>
-        <title>{poetizer.nice_fancy_date}</title>
+    html = f'''
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="">
+            <meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+            
+            <title>{poetizer.nice_fancy_date}</title>
+
+            <link rel="shortcut icon" href="assets/images/gt_favicon.png">
+            <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+            <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+            <link rel="stylesheet" href="assets/css/styles.css">
+
+            <!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+        </head>
+
+        <body class="home"></body>
+        <header id="header">
+            <div id="head"></div>
+            <nav class="navbar navbar-default navbar-sticky">
+                <div class="container-fluid">
+                    
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    </div>
+                    
+                    <div class="navbar-collapse collapse">
+                        
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="cv.html">CV</a></li>
+                            <li><a href="papers.html">Papers</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="poems.html">Poem of the Day</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            
+                        </ul>
+                    </div><!--/.nav-collapse -->			
+                </div>	
+            </nav>
+        </header>
+        
+        <main id="main">
+
             <p style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
             <i><b>{arch_string}&nbsp;</b>/<b>&nbsp;{poet_string}&nbsp;</b>/<b>&nbsp;{today}</b></i> 
             <br>
@@ -193,6 +238,24 @@ for i, loc in enumerate(history.index):
             <i><b>{prev_string}{rand_string}{next_string}</b>
             <br>{poetizer.nice_fancy_date}</i></p>
             <br>
+
+            <div class="container">
+                <div class="row section topspace" style="padding-left: 10%; padding-right: 10%;">
+                    <div class="col-md-12">
+                        <blockquote id="quote" align="justify" >
+                        {poetizer.html_body}
+                        </blockquote>
+                    </div>
+            </div>	<!-- /container -->
+
+            <div class="row section featured topspace">
+                <img class="img-circle" src="assets/images/me.jpg" style='float: left; width:200px;height:200px;' hspace="25" vspace="5">
+                    <p style="font-size: 32px; margin-bottom: 0;"><b>Thomas Morris</b></p>
+                    <p style="font-size: 18px;"><i>I am a researcher working in the fields of synchrotron radiation, astronomy, and atmospheric physics. I specialize in applying machine learning and novel statistical methods to   </i></p>
+            </div>
+
+        </main>
+        </body>
         </html>
         '''
 
@@ -203,7 +266,7 @@ for i, loc in enumerate(history.index):
 
     print(32*'#')
 
-    if html_header + poetizer.poem_html == contents:
+    if html == contents:
         continue
 
     '''
@@ -219,7 +282,7 @@ for i, loc in enumerate(history.index):
     #if i > 10: assert False
     '''
 
-    blob = poetizer.repo.create_git_blob(html_header + poetizer.poem_html, "utf-8")
+    blob = poetizer.repo.create_git_blob(html, "utf-8")
     elems = [gh.InputGitTreeElement(path=index_fn, mode='100644', type='blob', sha=blob.sha)]
 
     commit_elements(elems)
