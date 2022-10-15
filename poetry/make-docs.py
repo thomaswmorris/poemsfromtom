@@ -64,7 +64,7 @@ home_index = f'''
     <html>
     <head>
         <title></title>
-        <meta http-equiv = "refresh" content="0; url=https://thomaswmorris.github.io/poems/{dt_now.year:02}/{dt_now.month:02}/{dt_now.day:02}"/>
+        <meta http-equiv = "refresh" content="0; url={dt_now.year:02}-{dt_now.month:02}-{dt_now.day:02}"/>
     </head>
     </html>
     '''
@@ -79,7 +79,7 @@ random_index = f'''
         <title> </title>
         <script>
         var ymds = [{','.join([f'"{ymd}"' for ymd in ymds])}];
-        window.location.href = "https://thomaswmorris.github.io/poems/" + ymds[Math.floor(Math.random() * ymds.length)];
+        window.location.href = ymds[Math.floor(Math.random() * ymds.length)];
         </script>
     </html>
     '''
@@ -143,23 +143,23 @@ for index, entry in history.iloc[archive_ordering].iterrows():
     if int(d) in [11,21]: archive_index += f'</td><td>'
 
     archive_index += f'\n<p style="font-size: 20px;margin-top:0;margin-bottom:8">{day}&#8212;&nbsp;'
-    archive_index += f'<i><a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a>&nbsp;by&nbsp;{name}</i></p>'
+    archive_index += f'<i><a href="https://thomaswmorris.github.io/poems/{y}-{m}-{d}">{poetizer.titleize(title)}</a>&nbsp;by&nbsp;{name}</i></p>'
 
 archive_index += '\n</td></table>\n</html>'
 
 #######
 
 blob  = poetizer.repo.create_git_blob(home_index, "utf-8")
-elems = [gh.InputGitTreeElement(path='docs/index.html', mode='100644', type='blob', sha=blob.sha)]
+elems = [gh.InputGitTreeElement(path='poems/index.html', mode='100644', type='blob', sha=blob.sha)]
 
 blob  = poetizer.repo.create_git_blob(random_index, "utf-8")
-elems.append(gh.InputGitTreeElement(path='docs/random/index.html', mode='100644', type='blob', sha=blob.sha))
+elems.append(gh.InputGitTreeElement(path='poems/random/index.html', mode='100644', type='blob', sha=blob.sha))
 
 blob  = poetizer.repo.create_git_blob(poets_index, "utf-8")
-elems.append(gh.InputGitTreeElement(path='docs/poets/index.html', mode='100644', type='blob', sha=blob.sha))
+elems.append(gh.InputGitTreeElement(path='poems/poets/index.html', mode='100644', type='blob', sha=blob.sha))
 
 blob  = poetizer.repo.create_git_blob(archive_index, "utf-8")
-elems.append(gh.InputGitTreeElement(path='docs/archive/index.html', mode='100644', type='blob', sha=blob.sha))
+elems.append(gh.InputGitTreeElement(path='poems/archive/index.html', mode='100644', type='blob', sha=blob.sha))
 
 commit_elements(elems)
 
@@ -178,8 +178,8 @@ for i, loc in enumerate(history.index):
 
     print(y, m, d, poetizer.poet, poetizer.title)
 
-    prev_string = f'<a href="https://thomaswmorris.github.io/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a>&nbsp;</b>/<b>&nbsp;' if i > 0 else ''
-    next_string = f'&nbsp;</b>/<b>&nbsp;<a href="https://thomaswmorris.github.io/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a>' if i < n_history - 1 else ''
+    prev_string = f'<a href="https://thomaswmorris.github.io/poems/{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«previous</a>&nbsp;</b>/<b>&nbsp;' if i > 0 else ''
+    next_string = f'&nbsp;</b>/<b>&nbsp;<a href="https://thomaswmorris.github.io/poems/{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">next»</a>' if i < n_history - 1 else ''
     rand_string = f'<a href="https://thomaswmorris.github.io/poems/random">random</a>'
 
     today = tday_string if i < n_history - 1 else 'today'
@@ -196,7 +196,7 @@ for i, loc in enumerate(history.index):
         </html>
         '''
 
-    index_fn = f'docs/{y}/{m}/{d}/index.html'
+    index_fn = f'poems/{y}-{m}-{d}.html'
 
     try:    contents = poetizer.repo.get_contents(index_fn, ref='master').decoded_content.decode()
     except: contents = None

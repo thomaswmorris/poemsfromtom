@@ -23,4 +23,4 @@ jobs:
 
       - name: Update repo pages
         run:
-          python poetry/make-docs.py --repo 'poems' --token ${{ secrets.GH_TOKEN }} 
+          python poetry/make-docs.py --repo 'thomaswmorris.github.io' --token ${{ secrets.GH_TOKEN }} 
