@@ -84,9 +84,9 @@ random_index = f'''
     </html>
     '''
 
-arch_string = f'<a href="https://thomaswmorris.github.io/poems/archive">archive</a>'
-poet_string = f'<a href="https://thomaswmorris.github.io/poems/poets">poets</a>'
-tday_string = f'<a href="https://thomaswmorris.github.io/poems">today</a>'
+arch_string = f'<a href="thomaswmorris.com/poems/archive">archive</a>'
+poet_string = f'<a href="thomaswmorris.com/poems/poets">poets</a>'
+tday_string = f'<a href="thomaswmorris.com/poems">today</a>'
 
 poets_index = f'''<html><title>poets</title>\n
             <p style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
@@ -106,7 +106,7 @@ for _poet in sorted(np.unique(history['poet'])):
     for title, date in zip(title_list, date_list):
 
         y, m, d = date.split('-')
-        poets_index += f'\n<br><i><a href="https://thomaswmorris.github.io/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a></i>'
+        poets_index += f'\n<br><i><a href="thomaswmorris.com/poems/{y}/{m}/{d}">{poetizer.titleize(title)}</a></i>'
         
     poets_index += '\n<br><br style="line-height: 10px" /></span></p>'
 
@@ -143,7 +143,7 @@ for index, entry in history.iloc[archive_ordering].iterrows():
     if int(d) in [11,21]: archive_index += f'</td><td>'
 
     archive_index += f'\n<p style="font-size: 20px;margin-top:0;margin-bottom:8">{day}&#8212;&nbsp;'
-    archive_index += f'<i><a href="https://thomaswmorris.github.io/poems/{y}-{m}-{d}">{poetizer.titleize(title)}</a>&nbsp;by&nbsp;{name}</i></p>'
+    archive_index += f'<i><a href="thomaswmorris.com/poems/{y}-{m}-{d}">{poetizer.titleize(title)}</a>&nbsp;by&nbsp;{name}</i></p>'
 
 archive_index += '\n</td></table>\n</html>'
 
@@ -178,86 +178,82 @@ for i, loc in enumerate(history.index):
 
     print(y, m, d, poetizer.poet, poetizer.title)
 
-    prev_string = f'<a href="https://thomaswmorris.github.io/poems/{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«previous</a>&nbsp;</b>/<b>&nbsp;' if i > 0 else ''
-    next_string = f'&nbsp;</b>/<b>&nbsp;<a href="https://thomaswmorris.github.io/poems/{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">next»</a>' if i < n_history - 1 else ''
-    rand_string = f'<a href="https://thomaswmorris.github.io/poems/random">random</a>'
+    prev_string = f'<a href="thomaswmorris.com/poems/{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«previous</a>&nbsp;</b>/<b>&nbsp;' if i > 0 else ''
+    next_string = f'&nbsp;</b>/<b>&nbsp;<a href="thomaswmorris.com/poems/{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">next»</a>' if i < n_history - 1 else ''
+    rand_string = f'<a href="thomaswmorris.com/poems/random">random</a>'
+
+    html_color = 'black'
 
     today = tday_string if i < n_history - 1 else 'today'
     html = f'''
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="utf-8">
-            <meta name="viewport"    content="width=device-width, initial-scale=1.0">
-            <meta name="description" content="">
-            <meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+    
+    <title>{poetizer.nice_fancy_date}</title>
+
+    <link rel="shortcut icon" href="assets/images/gt_favicon.png">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+</head>
+
+<body class="home"></body>
+<header id="header">
+    <div id="head"></div>
+    <nav class="navbar navbar-default navbar-sticky">
+        <div class="container-fluid">
             
-            <title>{poetizer.nice_fancy_date}</title>
-
-            <link rel="shortcut icon" href="assets/images/gt_favicon.png">
-            <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
-            <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
-            <link rel="stylesheet" href="assets/css/styles.css">
-
-            <!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
-        </head>
-
-        <body class="home"></body>
-        <header id="header">
-            <div id="head"></div>
-            <nav class="navbar navbar-default navbar-sticky">
-                <div class="container-fluid">
-                    
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                    </div>
-                    
-                    <div class="navbar-collapse collapse">
-                        
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li><a href="cv.html">CV</a></li>
-                            <li><a href="papers.html">Papers</a></li>
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="poems.html">Poem of the Day</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            
-                        </ul>
-                    </div><!--/.nav-collapse -->			
-                </div>	
-            </nav>
-        </header>
-        
-        <main id="main">
-
-            <p style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
-            <i><b>{arch_string}&nbsp;</b>/<b>&nbsp;{poet_string}&nbsp;</b>/<b>&nbsp;{today}</b></i> 
-            <br>
-            <br>
-            <i><b>{prev_string}{rand_string}{next_string}</b>
-            <br>{poetizer.nice_fancy_date}</i></p>
-            <br>
-
-            <div class="container">
-                <div class="row section topspace" style="padding-left: 10%; padding-right: 10%;">
-                    <div class="col-md-12">
-                        <blockquote id="quote" align="justify" >
-                        {poetizer.html_body}
-                        </blockquote>
-                    </div>
-            </div>	<!-- /container -->
-
-            <div class="row section featured topspace">
-                <img class="img-circle" src="assets/images/me.jpg" style='float: left; width:200px;height:200px;' hspace="25" vspace="5">
-                    <p style="font-size: 32px; margin-bottom: 0;"><b>Thomas Morris</b></p>
-                    <p style="font-size: 18px;"><i>I am a researcher working in the fields of synchrotron radiation, astronomy, and atmospheric physics. I specialize in applying machine learning and novel statistical methods to   </i></p>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
             </div>
+            
+            <div class="navbar-collapse collapse">
+                
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                    <li><a href="../papers.html">Papers</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../poems.html">Poem of the Day</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    
+                </ul>
+            </div><!--/.nav-collapse -->			
+        </div>	
+    </nav>
+</header>
 
-        </main>
-        </body>
-        </html>
-        '''
+<main id="main">
+    <div class="container">
+        <div class="row section topspace" style="padding-left: 0%; padding-right: 0%;">
+            <p style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
+                <i><b>{prev_string}{rand_string}{next_string}</b>
+                <br>{poetizer.nice_fancy_date}</i></p>
+                <br>
+            <div class="col-md-12">
+                <h2 style="font-family:Garamond; color:'{html_color}'; font-size: 30px; margin-bottom:0; margin : 0; padding-top:0;">{self.titleize(self.title)}</h2>
+                <p style="font-family:Garamond; color:{html_color}; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;"><i>by 
+                <a href="{poetizer.link}">{poetizer.name}</a> ({poetizer.birth}&#8212;{poetizer.death})</i>{poetizer.flag_ish}</p>
+                <blockquote align="justify">
+                {poetizer.html_body}
+                </blockquote>
+            </div>
+        </div>	<!-- /container -->
+    </div>	<!-- /container -->
+
+</main>
+</body>
+</html>
+'''
 
     index_fn = f'poems/{y}-{m}-{d}.html'
 

@@ -345,6 +345,7 @@ class Poetizer:
         flag_ish = f' {self.html_flags[self.nationality]}' if include_flags else ''
 
         self.html_body = html_body
+        self.flag_ish  = flag_ish
         
         self.poem_html = f"""
         <html>
