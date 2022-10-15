@@ -72,7 +72,7 @@ home_index = f'''
 ymds = []
 for i, loc in enumerate(history.index):
     y, m, d = history.loc[loc,'date'].split('-')
-    ymds.append(f'{y:0>2}/{m:0>2}/{d:0>2}')
+    ymds.append(f'{y:0>2}-{m:0>2}-{d:0>2}')
 
 random_index = f'''
     <html>
@@ -155,11 +155,11 @@ elems = [gh.InputGitTreeElement(path='poems/index.html', mode='100644', type='bl
 blob  = poetizer.repo.create_git_blob(random_index, "utf-8")
 elems.append(gh.InputGitTreeElement(path='poems/random.html', mode='100644', type='blob', sha=blob.sha))
 
-blob  = poetizer.repo.create_git_blob(poets_index, "utf-8")
-elems.append(gh.InputGitTreeElement(path='poems/poets.html', mode='100644', type='blob', sha=blob.sha))
+#blob  = poetizer.repo.create_git_blob(poets_index, "utf-8")
+#elems.append(gh.InputGitTreeElement(path='poems/poets.html', mode='100644', type='blob', sha=blob.sha))
 
-blob  = poetizer.repo.create_git_blob(archive_index, "utf-8")
-elems.append(gh.InputGitTreeElement(path='poems/archive.html', mode='100644', type='blob', sha=blob.sha))
+#blob  = poetizer.repo.create_git_blob(archive_index, "utf-8")
+#elems.append(gh.InputGitTreeElement(path='poems/archive.html', mode='100644', type='blob', sha=blob.sha))
 
 commit_elements(elems)
 
@@ -185,9 +185,7 @@ for i, loc in enumerate(history.index):
     html_color = 'black'
 
     today = tday_string if i < n_history - 1 else 'today'
-    html = f'''
-
-<!DOCTYPE html>
+    html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">

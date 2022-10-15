@@ -363,7 +363,7 @@ class Poetizer:
         <html>
             <br>
             <p style="font-family:Garamond; color:{html_color}; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0"> 
-            <a href="https://thomaswmorris.github.io/poems/archive">archive</a>
+            <a href="https://thomaswmorris.com/poems">archive</a>
             </p>
         </html>
         '''
