@@ -233,13 +233,13 @@ for i, loc in enumerate(history.index):
 <main id="main">
     <div class="container">
         <div class="row section topspace" style="padding-left: 0%; padding-right: 0%;">
-            <p style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
+            <p style="color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
                 <i><b>{prev_string}{rand_string}{next_string}</b>
                 <br>{poetizer.nice_fancy_date}</i></p>
                 <br>
             <div class="col-md-12">
-                <h2 style="font-family:Garamond; color:'{html_color}'; font-size: 30px; margin-bottom:0; margin : 0; padding-top:0;">{poetizer.titleize(poetizer.title)}</h2>
-                <p style="font-family:Garamond; color:{html_color}; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;"><i>by 
+                <h2 style="color:'{html_color}'; font-size: 30px; margin-bottom:0; margin : 0; padding-top:0;">{poetizer.titleize(poetizer.title)}</h2>
+                <p style="color:{html_color}; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;"><i>by 
                 <a href="{poetizer.link}">{poetizer.name}</a> ({poetizer.birth}&#8212;{poetizer.death})</i>{poetizer.flag_ish}</p>
                 <blockquote align="justify">
                 {poetizer.html_body}
