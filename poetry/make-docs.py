@@ -219,7 +219,7 @@ for i, loc in enumerate(history.index):
             <div class="navbar-collapse collapse">
                 
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index">Home</a></li>
+                    <li class="active"><a href="../index">Home</a></li>
                     <li><a href="../cv">CV</a></li>
                     <li><a href="../papers">Papers</a></li>
                     <li><a href="../projects">Projects</a></li>

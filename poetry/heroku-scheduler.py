@@ -44,7 +44,7 @@ def send_daily_poem():
     poetizer.load_poem(
         poet=args.poet, 
         title=args.title, 
-        repo_name='poems',
+        repo_name='thomaswmorris.github.io',
         repo_token=os.environ['GITHUB_TOKEN'],
         when=when, 
         min_length=100, 
