@@ -293,12 +293,12 @@ class Poetizer:
 
                 hist_elem = gh.InputGitTreeElement(path='history.csv', mode='100644', type='blob', sha=hist_blob.sha)
                 stat_elem = gh.InputGitTreeElement(path='stats.csv', mode='100644', type='blob', sha=stat_blob.sha)
-                poem_elem = gh.InputGitTreeElement(path='poems.csv', mode='100644', type='blob', sha=poem_blob.sha)
+                #poem_elem = gh.InputGitTreeElement(path='poems.csv', mode='100644', type='blob', sha=poem_blob.sha)
                 
                 head_sha  = self.repo.get_branch('master').commit.sha
                 base_tree = self.repo.get_git_tree(sha=head_sha)
 
-                tree   = self.repo.create_git_tree([hist_elem, stat_elem, poem_elem], base_tree)
+                tree   = self.repo.create_git_tree([hist_elem, stat_elem], base_tree)
                 parent = self.repo.get_git_commit(sha=head_sha) 
 
                 commit = self.repo.create_git_commit(f'update logs {when_date} {when_time}', tree, [parent])
