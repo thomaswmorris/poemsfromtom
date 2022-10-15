@@ -84,9 +84,9 @@ random_index = f'''
     </html>
     '''
 
-arch_string = f'<a href="archive.html">archive</a>'
-poet_string = f'<a href="poets.html">poets</a>'
-tday_string = f'<a href="index.html">today</a>'
+arch_string = f'<a href="archive">archive</a>'
+poet_string = f'<a href="poets">poets</a>'
+tday_string = f'<a href="index">today</a>'
 
 poets_index = f'''<html><title>poets</title>\n
             <p style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
@@ -106,7 +106,7 @@ for _poet in sorted(np.unique(history['poet'])):
     for title, date in zip(title_list, date_list):
 
         y, m, d = date.split('-')
-        poets_index += f'\n<br><i><a href="{y}-{m}-{d}.html">{poetizer.titleize(title)}</a></i>'
+        poets_index += f'\n<br><i><a href={y}-{m}-{d}">{poetizer.titleize(title)}</a></i>'
         
     poets_index += '\n<br><br style="line-height: 10px" /></span></p>'
 
@@ -143,7 +143,7 @@ for index, entry in history.iloc[archive_ordering].iterrows():
     if int(d) in [11,21]: archive_index += f'</td><td>'
 
     archive_index += f'\n<p style="font-size: 20px;margin-top:0;margin-bottom:8">{day}&#8212;&nbsp;'
-    archive_index += f'<i><a href="{y}-{m}-{d}.html">{poetizer.titleize(title)}</a>&nbsp;by&nbsp;{name}</i></p>'
+    archive_index += f'<i><a href="{y}-{m}-{d}">{poetizer.titleize(title)}</a>&nbsp;by&nbsp;{name}</i></p>'
 
 archive_index += '\n</td></table>\n</html>'
 
@@ -178,9 +178,9 @@ for i, loc in enumerate(history.index):
 
     print(y, m, d, poetizer.poet, poetizer.title)
 
-    prev_string = f'<a href="{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}.html">«previous</a>&nbsp;</b>/<b>&nbsp;' if i > 0 else ''
-    next_string = f'&nbsp;</b>/<b>&nbsp;<a href="{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}.html">next»</a>' if i < n_history - 1 else ''
-    rand_string = f'<a href="random.html">random</a>'
+    prev_string = f'<a href="{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«previous</a>&nbsp;</b>/<b>&nbsp;' if i > 0 else ''
+    next_string = f'&nbsp;</b>/<b>&nbsp;<a href="{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">next»</a>' if i < n_history - 1 else ''
+    rand_string = f'<a href="random">random</a>'
 
     html_color = 'black'
 
@@ -219,12 +219,12 @@ for i, loc in enumerate(history.index):
             <div class="navbar-collapse collapse">
                 
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="../cv.html">CV</a></li>
-                    <li><a href="../papers.html">Papers</a></li>
-                    <li><a href="../projects.html">Projects</a></li>
-                    <li><a href="../poems.html">Poem of the Day</a></li>
-                    <li><a href="../blog.html">Blog</a></li>
+                    <li class="active"><a href="index">Home</a></li>
+                    <li><a href="../cv">CV</a></li>
+                    <li><a href="../papers">Papers</a></li>
+                    <li><a href="../projects">Projects</a></li>
+                    <li><a href="../poems">Poem of the Day</a></li>
+                    <li><a href="../blog">Blog</a></li>
                     
                 </ul>
             </div><!--/.nav-collapse -->			
