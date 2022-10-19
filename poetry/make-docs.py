@@ -166,6 +166,8 @@ commit_elements(elems)
 n_history = len(history)
 ys, ms, ds = [], [], []
 
+elems = []
+
 for i, loc in enumerate(history.index):
 
     y, m, d = history.loc[loc,'date'].split('-')
@@ -196,16 +198,16 @@ for i, loc in enumerate(history.index):
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendor/select2/select2.min.css">
-    <link rel="stylesheet" href="assets/vendor/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/vendor/lightcase/lightcase.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/vendor/select2/select2.min.css">
+    <link rel="stylesheet" href="../assets/vendor/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/vendor/lightcase/lightcase.css">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="../assets/css/style.min.css">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link href="https://file.myfontastic.com/7vRKgqrN3iFEnLHuqYhYuL/icons.css" rel="stylesheet">
 
@@ -256,14 +258,14 @@ for i, loc in enumerate(history.index):
 </div>
 	<!-- External JS -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-	<script src="assets/vendor/bootstrap/popper.min.js"></script>
-	<script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
-	<script src="assets/vendor/select2/select2.min.js "></script>
-	<script src="assets/vendor/owlcarousel/owl.carousel.min.js"></script>
-	<script src="assets/vendor/isotope/isotope.min.js"></script>
-	<script src="assets/vendor/lightcase/lightcase.js"></script>
-	<script src="assets/vendor/waypoints/waypoint.min.js"></script>
-	<script src="assets/vendor/countTo/jquery.countTo.js"></script>
+	<script src="../assets/vendor/bootstrap/popper.min.js"></script>
+	<script src="../assets/vendor/bootstrap/bootstrap.min.js"></script>
+	<script src="../assets/vendor/select2/select2.min.js "></script>
+	<script src="../assets/vendor/owlcarousel/owl.carousel.min.js"></script>
+	<script src="../assets/vendor/isotope/isotope.min.js"></script>
+	<script src="../assets/vendor/lightcase/lightcase.js"></script>
+	<script src="../assets/vendor/waypoints/waypoint.min.js"></script>
+	<script src="../assets/vendor/countTo/jquery.countTo.js"></script>
 
 	<!-- Main JS -->
 	<script src="js/app.min.js "></script>
@@ -296,7 +298,8 @@ for i, loc in enumerate(history.index):
     '''
 
     blob = poetizer.repo.create_git_blob(html, "utf-8")
-    elems = [gh.InputGitTreeElement(path=index_fn, mode='100644', type='blob', sha=blob.sha)]
 
-    commit_elements(elems)
-    print(f'wrote to {index_fn}')
+elems.append(gh.InputGitTreeElement(path=index_fn, mode='100644', type='blob', sha=blob.sha))
+
+commit_elements(elems)
+print(f'wrote to {index_fn}')
