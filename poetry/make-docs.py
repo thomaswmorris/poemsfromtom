@@ -299,7 +299,7 @@ for i, loc in enumerate(history.index):
 
     blob = poetizer.repo.create_git_blob(html, "utf-8")
 
-elems.append(gh.InputGitTreeElement(path=index_fn, mode='100644', type='blob', sha=blob.sha))
+    elems.append(gh.InputGitTreeElement(path=index_fn, mode='100644', type='blob', sha=blob.sha))
 
 commit_elements(elems)
 print(f'wrote to {index_fn}')
