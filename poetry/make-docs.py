@@ -188,49 +188,53 @@ for i, loc in enumerate(history.index):
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="utf-8">
-    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{poetizer.nice_fancy_date}</title>
+    <meta name="description" content="Core HTML Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="shortcut icon" href="assets/images/gt_favicon.png">
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/select2/select2.min.css">
+    <link rel="stylesheet" href="assets/vendor/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendor/lightcase/lightcase.css">
 
-    <!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link href="https://file.myfontastic.com/7vRKgqrN3iFEnLHuqYhYuL/icons.css" rel="stylesheet">
+
+    <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
 </head>
 
-<body class="home"></body>
-<header id="header">
-    <div id="head"></div>
-    <nav class="navbar navbar-default navbar-sticky">
-        <div class="container-fluid">
-            
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-            </div>
-            
-            <div class="navbar-collapse collapse">
-                
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="../index">Home</a></li>
-                    <li><a href="../cv">CV</a></li>
-                    <li><a href="../papers">Papers</a></li>
-                    <li><a href="../projects">Projects</a></li>
-                    <li><a href="../poems">Poem of the Day</a></li>
-                    <li><a href="../blog">Blog</a></li>
-                    
-                </ul>
-            </div><!--/.nav-collapse -->			
-        </div>	
-    </nav>
-</header>
+<body data-spy="scroll" data-target="#navbar-nav-header" class="static-layout">
+	<div class="boxed-page">
 
-<main id="main">
+<nav id="gtco-header-navbar" class="navbar navbar-expand-lg py-4">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbar-nav-header">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="cv">CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="papers">Papers</a></li>
+                <li class="nav-item"><a class="nav-link" href="projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="poems">Poems</a></li>
+                <li class="nav-item"><a class="nav-link" href="crosswords">Crosswords</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </div>    
+</nav>		
+
+<section class="bg-white">
     <div class="container">
         <div class="row section topspace" style="padding-left: 0%; padding-right: 0%;">
             <p style="color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
@@ -247,10 +251,36 @@ for i, loc in enumerate(history.index):
             </div>
         </div>	<!-- /container -->
     </div>	<!-- /container -->
+</section>		<!-- Counter Section -->
+	
+</div>
+	<!-- External JS -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+	<script src="assets/vendor/bootstrap/popper.min.js"></script>
+	<script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+	<script src="assets/vendor/select2/select2.min.js "></script>
+	<script src="assets/vendor/owlcarousel/owl.carousel.min.js"></script>
+	<script src="assets/vendor/isotope/isotope.min.js"></script>
+	<script src="assets/vendor/lightcase/lightcase.js"></script>
+	<script src="assets/vendor/waypoints/waypoint.min.js"></script>
+	<script src="assets/vendor/countTo/jquery.countTo.js"></script>
 
-</main>
+	<!-- Main JS -->
+	<script src="js/app.min.js "></script>
+	<script src="//localhost:35729/livereload.js"></script>
 </body>
 </html>
+    
+    
+
+    <link rel="shortcut icon" href="assets/images/gt_favicon.png">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+</head>
 '''
 
     index_fn = f'poems/{y}-{m}-{d}.html'
