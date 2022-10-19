@@ -270,17 +270,6 @@ for i, loc in enumerate(history.index):
 	<script src="//localhost:35729/livereload.js"></script>
 </body>
 </html>
-    
-    
-
-    <link rel="shortcut icon" href="assets/images/gt_favicon.png">
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
-    <link rel="stylesheet" href="../assets/css/styles.css">
-
-    <!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
-</head>
 '''
 
     index_fn = f'poems/{y}-{m}-{d}.html'
