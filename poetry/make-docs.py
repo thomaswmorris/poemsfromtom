@@ -187,8 +187,7 @@ for i, loc in enumerate(history.index):
     html_color = 'black'
 
     today = tday_string if i < n_history - 1 else 'today'
-    html = f'''
-<!DOCTYPE html>
+    html = f'''<!DOCTYPE html>
 <html lang="en">
 <head><!DOCTYPE html>
     <meta charset="utf-8">
@@ -203,13 +202,13 @@ for i, loc in enumerate(history.index):
                     {prev_string}
                     <li class="nav-item left"><a class="nav-link" href="random">Random</a></li>
                     {next_string}
-                    <li class="nav-item right"><a class="nav-link" href="blog.html">Blog</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="crosswords.html">Crosswords</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="poems.html">Poems</a></li>    
-                    <li class="nav-item right"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="papers.html">Papers</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="cv.html">CV</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="../blog">Blog</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="../crosswords">Crosswords</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="../poems">Poems</a></li>    
+                    <li class="nav-item right"><a class="nav-link" href="../projects">Projects</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="../papers">Papers</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="../cv">CV</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="../index">Home</a></li>
                 </ul>
             </nav>
             <section class="bg-white">
@@ -230,7 +229,7 @@ for i, loc in enumerate(history.index):
 </html>
 '''
 
-    index_fn = f'poems/{y}-{m}-{d}'
+    index_fn = f'poems/{y}-{m}-{d}.html'
 
     try:    contents = poetizer.repo.get_contents(index_fn, ref='master').decoded_content.decode()
     except: contents = None
