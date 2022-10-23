@@ -180,101 +180,57 @@ for i, loc in enumerate(history.index):
 
     print(y, m, d, poetizer.poet, poetizer.title)
 
-    prev_string = f'<a href="{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«previous</a>&nbsp;</b>/<b>&nbsp;' if i > 0 else ''
-    next_string = f'&nbsp;</b>/<b>&nbsp;<a href="{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">next»</a>' if i < n_history - 1 else ''
+    prev_string = f'<li class="nav-item left"><a class="nav-link" href="{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«Previous</a></li>' if i > 0 else ''
+    next_string = f'<li class="nav-item left"><a class="nav-link" href="{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">Next»</a></li>' if i < n_history - 1 else ''
     rand_string = f'<a href="random">random</a>'
 
     html_color = 'black'
 
     today = tday_string if i < n_history - 1 else 'today'
-    html = f'''<!DOCTYPE html>
+    html = f'''
+<!DOCTYPE html>
 <html lang="en">
-<head>
-
+<head><!DOCTYPE html>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{poetizer.nice_fancy_date}</title>
-    <meta name="description" content="Core HTML Project">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="../assets/vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/vendor/select2/select2.min.css">
-    <link rel="stylesheet" href="../assets/vendor/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="../assets/vendor/lightcase/lightcase.css">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/style.min.css">
-    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    <link href="https://file.myfontastic.com/7vRKgqrN3iFEnLHuqYhYuL/icons.css" rel="stylesheet">
-
-    <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-
-<body data-spy="scroll" data-target="#navbar-nav-header" class="static-layout">
-	<div class="boxed-page">
-
-<nav id="gtco-header-navbar" class="navbar navbar-expand-lg py-4">
-    <div class="container">
-        <div class="collapse navbar-collapse" id="navbar-nav-header">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="cv">CV</a></li>
-                <li class="nav-item"><a class="nav-link" href="papers">Papers</a></li>
-                <li class="nav-item"><a class="nav-link" href="projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="poems">Poems</a></li>
-                <li class="nav-item"><a class="nav-link" href="crosswords">Crosswords</a></li>
-                <li class="nav-item"><a class="nav-link" href="blog">Blog</a>
-                </li>
-            </ul>
-        </div>
-    </div>    
-</nav>		
-
-<section class="bg-white">
-    <div class="container">
-        <div class="row section topspace" style="padding-left: 0%; padding-right: 0%;">
-            <p style="color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
-                <i><b>{prev_string}{rand_string}{next_string}</b>
-                <br>{poetizer.nice_fancy_date}</i></p>
-                <br>
-            <div class="col-md-12">
-                <h2 style="color:'{html_color}'; font-size: 30px; margin-bottom:0; margin : 0; padding-top:0;">{poetizer.titleize(poetizer.title)}</h2>
-                <p style="color:{html_color}; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;"><i>by 
-                <a href="{poetizer.link}">{poetizer.name}</a> ({poetizer.birth}&#8212;{poetizer.death})</i>{poetizer.flag_ish}</p>
-                <blockquote align="justify">
-                {poetizer.html_body}
-                </blockquote>
+    <body class="static-layout" background="../assets/images/bg/monet-haystacks.jpg">
+        <div class="boxed-page">	
+            <nav>
+                <ul>
+                    {prev_string}
+                    <li class="nav-item left"><a class="nav-link" href="random">Random</a></li>
+                    {next_string}
+                    <li class="nav-item right"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="crosswords.html">Crosswords</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="poems.html">Poems</a></li>    
+                    <li class="nav-item right"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="papers.html">Papers</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="cv.html">CV</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="index.html">Home</a></li>
+                </ul>
+            </nav>
+            <section class="bg-white">
+                <div class="section-content" style="border-collapse:collapse; padding-left: 5%; padding-right: 5%;">
+                    <p style="font-family:Garamond; font-size: 18px; line-height: 1.5;">
+                    <i>Sunday October 23, 2022</i>
+                    <br>
+                    <span style="font-size: 24px;"><b>{poetizer.titleize(poetizer.title)} </b></span>
+                    <i>by <a href="{poetizer.link}">{poetizer.name}</a> ({poetizer.birth}&#8212;{poetizer.death})</i>{poetizer.flag_ish}</p>
+                    </p>
+                    <blockquote style="font-family: Garamond; font-size: 18px" align="left">
+                    {poetizer.html_body}
+                    </blockquote>
+                </div>
             </div>
-        </div>	<!-- /container -->
-    </div>	<!-- /container -->
-</section>		<!-- Counter Section -->
-	
-</div>
-	<!-- External JS -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-	<script src="../assets/vendor/bootstrap/popper.min.js"></script>
-	<script src="../assets/vendor/bootstrap/bootstrap.min.js"></script>
-	<script src="../assets/vendor/select2/select2.min.js "></script>
-	<script src="../assets/vendor/owlcarousel/owl.carousel.min.js"></script>
-	<script src="../assets/vendor/isotope/isotope.min.js"></script>
-	<script src="../assets/vendor/lightcase/lightcase.js"></script>
-	<script src="../assets/vendor/waypoints/waypoint.min.js"></script>
-	<script src="../assets/vendor/countTo/jquery.countTo.js"></script>
-
-	<!-- Main JS -->
-	<script src="js/app.min.js "></script>
-	<script src="//localhost:35729/livereload.js"></script>
-</body>
+        </section>		
+    </body>
 </html>
 '''
 
-    index_fn = f'poems/{y}-{m}-{d}.html'
+    index_fn = f'poems/{y}-{m}-{d}'
 
     try:    contents = poetizer.repo.get_contents(index_fn, ref='master').decoded_content.decode()
     except: contents = None
