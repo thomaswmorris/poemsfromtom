@@ -289,8 +289,8 @@ class Poetizer:
                 stat_blob = self.repo.create_git_blob(self.stats.to_csv(), "utf-8")
                 poem_blob = self.repo.create_git_blob(self.archive_poems[['poet', 'title', 'keywords', 'word_count']].to_csv(), "utf-8")
 
-                hist_elem = gh.InputGitTreeElement(path='history.csv', mode='100644', type='blob', sha=hist_blob.sha)
-                stat_elem = gh.InputGitTreeElement(path='stats.csv', mode='100644', type='blob', sha=stat_blob.sha)
+                hist_elem = gh.InputGitTreeElement(path='poems/history.csv', mode='100644', type='blob', sha=hist_blob.sha)
+                stat_elem = gh.InputGitTreeElement(path='poems/stats.csv', mode='100644', type='blob', sha=stat_blob.sha)
                 #poem_elem = gh.InputGitTreeElement(path='poems.csv', mode='100644', type='blob', sha=poem_blob.sha)
                 
                 head_sha  = self.repo.get_branch('master').commit.sha
