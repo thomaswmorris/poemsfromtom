@@ -215,18 +215,19 @@ class Poetizer:
 
         for _poet in np.unique(self.poems['poet']):
             
-            # weight by the number of poems the poet has 
-            # if the poet was sent a lot, exponentially discount him
-            # if the poet was sent recently, exponentially discount him
+            # weigh by the number of poems the poet has sent
+            # if there are few poems left, discount him
+            # if the poet was sent a lot, discount him
+            # if the poet was sent recently, discount him
 
-            self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= 1 / np.sum(_poet==self.poems['poet'])
+            self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= np.minimum(1, 4 / np.sum(_poet==self.poems['poet']))
 
             if not self.history is None:
 
-                ts_weight = np.exp(.5 * np.log(.5) * self.stats.loc[_poet, 'times_sent']) # twice is a weight of 0.5
+                ts_weight = 1 # np.exp(.5 * np.log(.5) * self.stats.loc[_poet, 'times_sent']) # twice is a weight of 0.5
                 dsls = self.stats.loc[_poet, 'days_since_last_sent']
                 if np.isnan(dsls): dsls = 1e3
-                dsls_weight = 1 / (1 + np.exp(-.1 * (dsls - 56))) # after eight weeks, the weight is 0.5
+                dsls_weight = 1 / (1 + np.exp(-.1 * (dsls - 84))) # after twelve weeks, the weight is 0.5
                 if very_verbose: print(f'{_poet:<12} has been weighted by {ts_weight:.03f} * {dsls_weight:.03f} = {ts_weight * dsls_weight:.03f}')
                 self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= ts_weight * dsls_weight
             
