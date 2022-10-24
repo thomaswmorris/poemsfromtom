@@ -180,8 +180,8 @@ for i, loc in enumerate(history.index):
 
     print(y, m, d, poetizer.poet, poetizer.title)
 
-    prev_string = f'<li class="nav-item left"><a class="nav-link" href="{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«Previous</a></li>' if i > 0 else ''
-    next_string = f'<li class="nav-item left"><a class="nav-link" href="{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">Next»</a></li>' if i < n_history - 1 else ''
+    prev_string = f'<li class="nav-item left"><a class="nav-link" href="{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«previous</a></li>' if i > 0 else ''
+    next_string = f'<li class="nav-item left"><a class="nav-link" href="{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">next»</a></li>' if i < n_history - 1 else ''
     rand_string = f'<a href="random">random</a>'
 
     html_color = 'black'
@@ -200,15 +200,15 @@ for i, loc in enumerate(history.index):
             <nav>
                 <ul>
                     {prev_string}
-                    <li class="nav-item left"><a class="nav-link" href="random">Random</a></li>
+                    <li class="nav-item left"><a class="nav-link" href="random">random</a></li>
                     {next_string}
-                    <li class="nav-item right"><a class="nav-link" href="../blog">Blog</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="../crosswords">Crosswords</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="../poems">Poems</a></li>    
-                    <li class="nav-item right"><a class="nav-link" href="../projects">Projects</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="../papers">Papers</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="../cv">CV</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="../index">Home</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="blog">blog</a>
+                    <li class="nav-item right"><a class="nav-link" href="crosswords">crosswords</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="poems">poems</a></li>    
+                    <li class="nav-item right"><a class="nav-link" href="projects">projects</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="papers">papers</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="cv">cv</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="./">home</a></li>
                 </ul>
             </nav>
             <section class="bg-white">
