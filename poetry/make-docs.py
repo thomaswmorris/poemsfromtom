@@ -214,7 +214,7 @@ for i, loc in enumerate(history.index):
             <section class="bg-white">
                 <div class="section-content" style="border-collapse:collapse; padding-left: 5%; padding-right: 5%;">
                     <p style="font-family:Garamond; font-size: 18px; line-height: 1.5;">
-                    <i>Sunday October 23, 2022</i>
+                    <i>{poetizer.nice_fancy_date}</i>
                     <br>
                     <span style="font-size: 24px;"><b>{poetizer.titleize(poetizer.title)} </b></span>
                     <i>by <a href="{poetizer.link}">{poetizer.name}</a> ({poetizer.birth}&#8212;{poetizer.death})</i>{poetizer.flag_ish}</p>
@@ -239,21 +239,7 @@ for i, loc in enumerate(history.index):
     if html == contents:
         continue
 
-    '''
-    running_string = ''
-    for char1, char2 in zip(contents, html_header + poetizer.poem_html):
-        
-        running_string += char1
-
-        if not char1 == char2: break
-
-    print(running_string)
-
-    #if i > 10: assert False
-    '''
-
     blob = poetizer.repo.create_git_blob(html, "utf-8")
-
     elems.append(gh.InputGitTreeElement(path=index_fn, mode='100644', type='blob', sha=blob.sha))
 
 commit_elements(elems)

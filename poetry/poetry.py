@@ -345,26 +345,25 @@ class Poetizer:
         self.html_body = html_body
         self.flag_ish  = flag_ish
         
-        self.poem_html = f"""
+        self.email_html = f"""
         <html>
-        <h2 style="font-family:Garamond; color:{html_color}; font-size: 30px; margin-bottom:0; margin : 0; padding-top:0;">{self.titleize(self.title)}</h2>
-            <p style="font-family:Garamond; color:{html_color}; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;"><i>by 
-            <a href="{self.link}">{self.name}</a> ({self.birth}&#8212;{self.death})</i>{flag_ish}</p>
-            <hr style="width:25%;text-align:left;margin-left:0";color:black;background-color:black">
-            <p style="font-family:Garamond; color:{html_color}; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0">{html_body}
-            </p>
-            <br>
+            <div style="border-collapse:collapse; padding-left: 5%; padding-right: 5%;">
+                <p style="font-family:Garamond; font-size: 18px; line-height: 1.5;">
+                    <i>{self.nice_fancy_date}</i>
+                    <br>
+                    <span style="font-size: 24px;"><b>{self.titleize(self.title)} </b></span>
+                    <i>by <a href="{self.link}">{self.name}</a> ({self.birth}&#8212;{self.death})</i>{self.flag_ish}</p>
+                </p>
+                <blockquote style="font-family: Garamond; font-size: 18px" align="left">
+                    {self.html_body}
+                </blockquote>
+                <br>
+                <p style="font-family:Garamond; color:{html_color}; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0"> 
+                <a href="thomaswmorris.com/poems">archive</a>
+                </p>
+            </div>
         </html>
-        """     
-
-        self.email_html = self.poem_html + '''
-        <html>
-            <br>
-            <p style="font-family:Garamond; color:{html_color}; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0"> 
-            <a href="https://thomaswmorris.com/poems">archive</a>
-            </p>
-        </html>
-        '''
+        """
 
     def send(self, username, password, html, recipient, subject=''):
 
