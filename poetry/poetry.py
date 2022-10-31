@@ -220,7 +220,7 @@ class Poetizer:
             # if the poet was sent a lot, discount him
             # if the poet was sent recently, discount him
 
-            self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= np.minimum(1, 4 / np.sum(_poet==self.poems['poet']))
+            self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= np.minimum(1., 4. / np.sum(_poet==self.poems['poet']))
 
             if not self.history is None:
 
@@ -257,10 +257,14 @@ class Poetizer:
                         self.poems.loc[m, 'likelihood'] *= 0
                         if very_verbose: print(f'disallowed {int(m.sum())} poems with context {possibility}')
 
+        
+
         if very_verbose: print(f'choosing from {len(self.poems)} poems')
         self.poems['p'] = self.poems['likelihood'] / np.sum(self.poems['likelihood'])
         if very_verbose: print(self.poems.sort_values('p',ascending=False).iloc[:10][['poet','title','keywords','p']])
         loc = np.random.choice(self.poems.index, p=self.poems['p'])
+
+        print(self.poems.loc[self.poems.title=='GOBLIN MARKET'])
 
         self.poet, self.title = self.poems.loc[loc,['poet', 'title']]
         self.body = self.data[self.poet]['poems'][self.title]['body']
