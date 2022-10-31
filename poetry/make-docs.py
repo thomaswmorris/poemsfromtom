@@ -34,7 +34,7 @@ if args.token_from_heroku: args.token = os.environ['GITHUB_TOKEN']
 
 def commit_elements(_elems):
 
-    dt_now = datetime.fromtimestamp(history.iloc[-1]['timestamp'], tzinfo=pytz.utc)
+    dt_now = datetime.fromtimestamp(history.iloc[-1]['timestamp']).astimezone(pytz.utc)
     now_date, now_time = dt_now.isoformat()[:19].split('T') 
 
     head_sha  = poetizer.repo.get_branch('master').commit.sha
@@ -58,7 +58,7 @@ history = poetizer.history.copy()
 
 history['strip_title'] = [re.sub(r'^(THE|AN|A)\s+', '', title) for title in history['title']]
 
-dt_now = datetime.fromtimestamp(history.iloc[-1]['timestamp'], tzinfo=pytz.utc)
+dt_now = datetime.fromtimestamp(history.iloc[-1]['timestamp']).astimezone(pytz.utc)
 now_date, now_time = dt_now.isoformat()[:19].split('T')
 print(f'today is {now_date} {now_time}')
 home_index = f'''
