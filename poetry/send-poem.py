@@ -38,7 +38,7 @@ poetizer.load_poem(
     repo_token=args.token,
     when=time.time(), 
     min_length=10, 
-    max_length=2000, 
+    max_length=5000, 
     title_latency=800, 
     context=args.context, 
     tag_historical=args.type,
