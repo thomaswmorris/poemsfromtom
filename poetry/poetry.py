@@ -224,10 +224,10 @@ class Poetizer:
 
             if not self.history is None:
 
-                ts_weight = 1 # np.exp(.5 * np.log(.5) * self.stats.loc[_poet, 'times_sent']) # twice is a weight of 0.5
+                ts_weight = np.exp(.25 * np.log(.5) * self.stats.loc[_poet, 'times_sent']) # four times sent is a weight of 0.5
                 dsls = self.stats.loc[_poet, 'days_since_last_sent']
                 if np.isnan(dsls): dsls = 1e3
-                dsls_weight = 1 / (1 + np.exp(-.1 * (dsls - 84))) # after twelve weeks, the weight is 0.5
+                dsls_weight = 1 / (1 + np.exp(-.1 * (dsls - 42))) # after six weeks, the weight is 0.5
                 if very_verbose: print(f'{_poet:<12} has been weighted by {ts_weight:.03f} * {dsls_weight:.03f} = {ts_weight * dsls_weight:.03f}')
                 self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= ts_weight * dsls_weight
             
@@ -273,7 +273,7 @@ class Poetizer:
         self.tag, self.name, self.birth, self.death, self.nationality, self.link = self.data[self.poet]['metadata'].values()
         output = f'chose poem \"{self.title}\" by {self.name}'
 
-        self.dt_when = datetime.fromtimestamp(self.when,tz=pytz.timezone('America/New_York'))
+        self.dt_when = datetime.fromtimestamp(self.when, tz=pytz.utc)
         self.ts_when = self.dt_when.timestamp()
     
         if write_historical:
@@ -348,20 +348,19 @@ class Poetizer:
         
         self.email_html = f"""
         <html>
-            <div style="border-collapse:collapse; padding-left: 5%; padding-right: 5%;">
-                <p style="font-family:Garamond; font-size: 18px; line-height: 1.5;">
+            <div class="section-content" style="border-collapse:collapse; padding-left: 5%; padding-right: 5%;">
+                    <p style="font-family:Baskerville; font-size: 18px; line-height: 1.5;">
                     <i>{self.nice_fancy_date}</i>
                     <br>
-                    <span style="font-size: 24px;"><b>{self.titleize(self.title)} </b></span>
+                    <span style="font-family:sans-serif; font-size: 24px;"><b>{self.titleize(self.title)} </b></span>
                     <i>by <a href="{self.link}">{self.name}</a> ({self.birth}&#8212;{self.death})</i>{self.flag_ish}</p>
-                </p>
-                <blockquote style="font-family: Garamond; font-size: 18px" align="left">
+                    </p>
+                    <blockquote style="font-family:Baskerville; font-size: 18px" align="left">
                     {self.html_body}
-                </blockquote>
-                <br>
-                <p style="font-family:Garamond; color:{html_color}; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0"> 
-                <a href="thomaswmorris.com/poems">archive</a>
-                </p>
+                    </blockquote>
+                    <p> 
+                    <a href="thomaswmorris.com/poems">past poems</a>
+                    </p>
             </div>
         </html>
         """

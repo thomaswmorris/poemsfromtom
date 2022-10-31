@@ -8,6 +8,7 @@ from poetry import Poetizer
 from context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
 import os, re
 from io import StringIO
+import pytz
 
 import argparse, sys
 parser = argparse.ArgumentParser()
@@ -33,7 +34,7 @@ if args.token_from_heroku: args.token = os.environ['GITHUB_TOKEN']
 
 def commit_elements(_elems):
 
-    dt_now = datetime.fromtimestamp(history.iloc[-1]['timestamp'])
+    dt_now = datetime.fromtimestamp(history.iloc[-1]['timestamp'], tzinfo=pytz.utc)
     now_date, now_time = dt_now.isoformat()[:19].split('T') 
 
     head_sha  = poetizer.repo.get_branch('master').commit.sha
@@ -57,7 +58,7 @@ history = poetizer.history.copy()
 
 history['strip_title'] = [re.sub(r'^(THE|AN|A)\s+', '', title) for title in history['title']]
 
-dt_now = datetime.fromtimestamp(history.iloc[-1]['timestamp'])
+dt_now = datetime.fromtimestamp(history.iloc[-1]['timestamp'], tzinfo=pytz.utc)
 now_date, now_time = dt_now.isoformat()[:19].split('T')
 print(f'today is {now_date} {now_time}')
 home_index = f'''
@@ -158,8 +159,8 @@ elems.append(gh.InputGitTreeElement(path='poems/random.html', mode='100644', typ
 #blob  = poetizer.repo.create_git_blob(poets_index, "utf-8")
 #elems.append(gh.InputGitTreeElement(path='poems/poets.html', mode='100644', type='blob', sha=blob.sha))
 
-#blob  = poetizer.repo.create_git_blob(archive_index, "utf-8")
-#elems.append(gh.InputGitTreeElement(path='poems/archive.html', mode='100644', type='blob', sha=blob.sha))
+blob  = poetizer.repo.create_git_blob(archive_index, "utf-8")
+elems.append(gh.InputGitTreeElement(path='poems/archive.html', mode='100644', type='blob', sha=blob.sha))
 
 commit_elements(elems)
 
@@ -203,7 +204,7 @@ for i, loc in enumerate(history.index):
                     <li class="nav-item left"><a class="nav-link" href="random">Random</a></li>
                     {next_string}
                     <li class="nav-item right"><a class="nav-link" href="../blog">Blog</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="../crosswords">Crosswords</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="../xw">Crosswords</a></li>
                     <li class="nav-item right"><a class="nav-link" href="../poems">Poems</a></li>    
                     <li class="nav-item right"><a class="nav-link" href="../projects">Projects</a></li>
                     <li class="nav-item right"><a class="nav-link" href="../papers">Papers</a></li>
@@ -213,13 +214,13 @@ for i, loc in enumerate(history.index):
             </nav>
             <section class="bg-white">
                 <div class="section-content" style="border-collapse:collapse; padding-left: 5%; padding-right: 5%;">
-                    <p style="font-family:Garamond; font-size: 18px; line-height: 1.5;">
+                    <p style="font-family:Baskerville; font-size: 18px; line-height: 1.5;">
                     <i>{poetizer.nice_fancy_date}</i>
                     <br>
-                    <span style="font-size: 24px;"><b>{poetizer.titleize(poetizer.title)} </b></span>
+                    <span style="font-family:sans-serif; font-size: 24px;"><b>{poetizer.titleize(poetizer.title)} </b></span>
                     <i>by <a href="{poetizer.link}">{poetizer.name}</a> ({poetizer.birth}&#8212;{poetizer.death})</i>{poetizer.flag_ish}</p>
                     </p>
-                    <blockquote style="font-family: Garamond; font-size: 18px" align="left">
+                    <blockquote style="font-family:Baskerville; font-size: 18px" align="left">
                     {poetizer.html_body}
                     </blockquote>
                 </div>

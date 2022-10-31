@@ -1,6 +1,7 @@
 from dateutil.easter import *
 from datetime import datetime
 import time as ttime
+import pytz
 
 def get_weekday(t=ttime.time()):
     weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
