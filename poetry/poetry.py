@@ -68,7 +68,7 @@ class Poetizer:
                             'maltese' : '&#127474&#127481',
                          'nicaraguan' : '&#127475&#127470',
                           'norwegian' : '&#127475&#127476',
-                            'persian' : '&#127470&#127479',
+                            'persian' : '',
                            'peruvian' : '&#127477&#127466',
                              'polish' : '&#127477&#127473',
                          'portuguese' : '&#127477&#127481',
@@ -256,8 +256,6 @@ class Poetizer:
                         if category == 'holiday' and possibility in self.sml_kws: continue
                         self.poems.loc[m, 'likelihood'] *= 0
                         if very_verbose: print(f'disallowed {int(m.sum())} poems with context {possibility}')
-
-        
 
         if very_verbose: print(f'choosing from {len(self.poems)} poems')
         self.poems['p'] = self.poems['likelihood'] / np.sum(self.poems['likelihood'])
