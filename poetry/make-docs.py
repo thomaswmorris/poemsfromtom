@@ -220,7 +220,7 @@ for i, loc in enumerate(history.index):
                     <span style="font-family:sans-serif; font-size: 24px;"><b>{poetizer.titleize(poetizer.title)} </b></span>
                     <i>by <a href="{poetizer.link}">{poetizer.name}</a> ({poetizer.birth}&#8212;{poetizer.death})</i>{poetizer.flag_ish}</p>
                     </p>
-                    <blockquote style="font-family:Baskerville; font-size: 18px" align="left">
+                    <blockquote style="font-family:Baskerville; font-size: 18px; vertical-align:top; line-height:1.4; padding-left: 5%; padding-right: 5%; overflow-x:auto">
                     {poetizer.html_body}
                     </blockquote>
                 </div>
