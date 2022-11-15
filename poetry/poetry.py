@@ -262,7 +262,7 @@ class Poetizer:
         if very_verbose: print(self.poems.sort_values('p',ascending=False).iloc[:10][['poet','title','keywords','p']])
         loc = np.random.choice(self.poems.index, p=self.poems['p'])
 
-        print(self.poems.loc[self.poems.title=='GOBLIN MARKET'])
+        # print(self.poems.loc[self.poems.title=='GOBLIN MARKET'])
 
         self.poet, self.title = self.poems.loc[loc,['poet', 'title']]
         self.body = self.data[self.poet]['poems'][self.title]['body']
