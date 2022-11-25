@@ -121,8 +121,8 @@ class Poem():
             self.body, self.keywords = data[author]['poems'][title].values()
             self.when, self.html_flag = when, html_flags[self.nationality]
 
-        self.html_body = f'''<blockquote>
-        <div style="font-family:Baskerville; text-indent: -1em; padding-left:1em;">
+        self.html_body = f'''<blockquote style="font-family:Baskerville; font-size: 18px" align="left">
+        <div style="text-indent: -1em; padding-left:1em;">
         {text_to_html(self.body)}
         </div>
         </blockquote>'''
@@ -135,7 +135,7 @@ class Poem():
             <i>{self.nice_fancy_date}</i>
             <br>
             <span style="font-family:sans-serif; font-size: 24px;"><b>{titleize(title)}</b></span>
-            <i>by <a href="{self.link}">{self.author_name}</a> ({self.birth}&#8212;{self.death})</i> {self.html_flag}</p>
+            <i>by <a href="{self.link}">{self.author_name}</a> ({self.birth}&#8212;{self.death})</i></p>
             </p>'''
 
         self.email_html = f'''<html>

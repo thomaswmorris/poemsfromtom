@@ -134,7 +134,7 @@ for i, entry in curator.history.iterrows():
                     <li class="nav-item right"><a class="nav-link" href="../projects">Projects</a></li>
                     <li class="nav-item right"><a class="nav-link" href="../papers">Papers</a></li>
                     <li class="nav-item right"><a class="nav-link" href="../cv">CV</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="../index">Home</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="..">Home</a></li>
                 </ul>
             </nav>
             <section class="bg-white">
