@@ -374,7 +374,7 @@ class Curator():
 
                 if verbose: print(f'wrote to local history')
 
-        return Poem(author, title, when)
+        return Poem(chosen_author, chosen_title, when)
 
 
 
