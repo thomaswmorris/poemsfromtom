@@ -73,7 +73,7 @@ home_index = f'''
 
 ymds = []
 for i, entry in curator.history.iterrows():
-    y, m, d = entry.data.split('-')
+    y, m, d = entry.date.split('-')
     ymds.append(f'{y:0>2}-{m:0>2}-{d:0>2}')
 
 random_index = f'''
