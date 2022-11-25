@@ -116,6 +116,7 @@ class Poem():
         with open(f'{base}/data.json', 'r+') as f:
 
             data = json.load(f)
+            self.title = title
             self.author, self.author_name, self.birth, self.death, self.nationality, self.link = data[author]['metadata'].values()
             self.body, self.keywords = data[author]['poems'][title].values()
             self.when, self.html_flag = when, html_flags[self.nationality]
@@ -336,6 +337,8 @@ class Curator():
         self.ts_when = self.dt_when.timestamp()
     
         if write_historical:
+
+
             
             when_date, when_time = self.dt_when.isoformat()[:19].split('T')
             self.history.loc[len(self.history)] = chosen_author, chosen_title, tag_historical, when_date, when_time, int(ttime.time())
@@ -363,15 +366,13 @@ class Curator():
                 master_ref = self.repo.get_git_ref('heads/master')
                 master_ref.edit(sha=commit.sha)
                 
-                output += ' (wrote to repo)'
+                if verbose: print(f'wrote to repo ({self.repo_name})')
 
             else:
                 self.history.to_csv('history.csv')
                 self.stats.to_csv('stats.csv')
 
-                output += ' (wrote to local history)'
-            
-            if verbose: print(output)
+                if verbose: print(f'wrote to local history')
 
         return Poem(author, title, when)
 
