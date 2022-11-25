@@ -2,9 +2,9 @@ from datetime import datetime
 import calendar
 import pandas as pd
 import github as gh
-import sys; sys.path.insert(1, 'authorry/')
+import sys; sys.path.insert(1, 'poetry/')
 import numpy as np
-import authorry
+import poetry
 from context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
 import os, re
 from io import StringIO
@@ -48,7 +48,7 @@ def commit_elements(_elems):
     master_ref.edit(sha=commit.sha)
 
 # Initialize the curator
-curator = authorry.Curator()
+curator = poetry.Curator()
 
 print(args.repo, args.token)
 
