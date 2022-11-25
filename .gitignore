@@ -1,0 +1,2 @@
+poetry/*.ipynb
+poetry/.ipynb_checkpoints/*
