@@ -1,7 +1,7 @@
 import time
 import numpy as np
 import pandas as pd
-from poetry import Poetizer
+import poetry
 from io import StringIO
 from multiprocessing import Process
 from datetime import datetime
@@ -28,28 +28,28 @@ parser.add_argument('--vv', type=bool, help='Very verbose', default=False)
 args = parser.parse_args()
 
 # Initialize the poetizer
-poetizer = Poetizer()
+curator = poetry.Curator()
 
 # Choose a poem that meets the supplied conditions
-poetizer.load_poem(
-    poet=args.poet, 
-    title=args.title, 
-    repo_name=args.repo,
-    repo_token=args.token,
-    when=time.time(), 
-    min_length=10, 
-    max_length=5000, 
-    title_latency=800, 
-    context=args.context, 
-    tag_historical=args.type,
-    write_historical=args.wh,
-    read_historical=args.rh, 
-    verbose=True,
-    very_verbose=args.vv,
-)
+poem = curator.load_poem(
+                            poet=args.poet, 
+                            title=args.title, 
+                            repo_name=args.repo,
+                            repo_token=args.token,
+                            when=time.time(), 
+                            min_length=10, 
+                            max_length=5000, 
+                            title_latency=800, 
+                            context=args.context, 
+                            tag_historical=args.type,
+                            write_historical=args.wh,
+                            read_historical=args.rh, 
+                            verbose=True,
+                            very_verbose=args.vv,
+                        )
 
 if not args.repo_lsfn == '':
-    contents = poetizer.repo.get_contents(args.repo_lsfn, ref='master')
+    contents = curator.repo.get_contents(args.repo_lsfn, ref='master')
     entries  = pd.read_csv(StringIO(contents.decoded_content.decode()),index_col=0)
 
 else: 
@@ -59,12 +59,12 @@ else:
 
 def f(*arguments):
 
-    poetizer.send_poem(*arguments)
+    poetry.send_poem(*arguments)
     a,b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
 
 for name, email in zip(entries['name'],entries['email']):
 
-    p = Process(target=f, args=(args.username, args.password, email, args.subj_tag))
+    p = Process(target=f, args=(poem, args.username, args.password, email, args.subj_tag))
     p.start()
     p.join()
 

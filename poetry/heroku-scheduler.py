@@ -1,11 +1,12 @@
+import poetry
+import os, threading
+
 import time as ttime
 import pandas as pd
 import numpy as np
+
 from apscheduler.schedulers.blocking import BlockingScheduler
-from poetry import Poetizer
-from multiprocessing import Process
 from datetime import datetime
-import os
 from io import StringIO
 
 schedule = BlockingScheduler(timezone='America/New_York')
@@ -30,8 +31,7 @@ def send_daily_poem():
     print(f'\nThis job is run every day at {args.hour} EST')
 
     # Load the poetizer
-    poetizer = Poetizer()
-
+    curator = poetry.Curator()
     when = ttime.time()
     subject = args.subj_tag
     if args.type == 'test':
@@ -41,8 +41,8 @@ def send_daily_poem():
         subject = args.subj_tag + f'{date}: '
     
     # Choose a poem that meets the supplied conditions
-    poetizer.load_poem(
-        poet=args.poet, 
+    poem = curator.load_poem(
+        author=args.poet, 
         title=args.title, 
         repo_name='thomaswmorris.github.io',
         repo_token=os.environ['GITHUB_TOKEN'],
@@ -59,24 +59,24 @@ def send_daily_poem():
 
     def f(username, password, name, email, tag):
         done, fails = False, 0
-        while (not done) and (fails < 12):
+        while (not done) and (fails < 16):
             try:
-                poetizer.send_poem(username, password, email, tag); done = True
+                poetry.send_poem(poem, username, password, email, tag); done = True
                 a,b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
             except Exception as e:
                 print(e); fails += 1; ttime.sleep(10)
  
     if not args.repo_lsfn == '':
-        contents = poetizer.repo.get_contents(args.repo_lsfn, ref='master')
+        contents = curator.repo.get_contents(args.repo_lsfn, ref='master')
         entries  = pd.read_csv(StringIO(contents.decoded_content.decode()),index_col=0)
+
     else: 
         entries = pd.DataFrame(columns=['name','email'])
         for recipient in args.recipient.split(','):
             entries.loc[len(entries)] = '*', recipient
 
-    for name, email in zip(entries['name'],entries['email']):
-        p = Process(target=f, args=('poemsfromtom@gmail.com', os.environ['PFT_PW'], name, email, subject))
-        p.start()
-        p.join()
+    for name, email in zip(entries.name, entries.email):
+        t = threading.Thread(target=f, args=('poemsfromtom@gmail.com', os.environ['PFT_PW'], name, email, subject))
+        t.start()
 
 schedule.start()

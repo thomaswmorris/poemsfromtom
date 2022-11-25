@@ -2,9 +2,9 @@ from datetime import datetime
 import calendar
 import pandas as pd
 import github as gh
-import sys; sys.path.insert(1, 'poetry/')
+import sys; sys.path.insert(1, 'authorry/')
 import numpy as np
-from poetry import Poetizer
+import authorry
 from context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
 import os, re
 from io import StringIO
@@ -16,7 +16,7 @@ parser.add_argument('--username', type=str, help='Email address from which to se
 parser.add_argument('--password', type=str, help='Email password',default='')
 parser.add_argument('--recipient', type=str, help='Where to send the poem',default='poemsfromtom@gmail.com')
 parser.add_argument('--repo_lsfn', type=str, help='Where to send the poem',default='')
-parser.add_argument('--poet', type=str, help='Which poet to send', default='random')
+parser.add_argument('--author', type=str, help='Which author to send', default='random')
 parser.add_argument('--title', type=str, help='Which title to send', default='random')
 parser.add_argument('--repo', type=str, help='Which GH repository to load', default='')
 parser.add_argument('--token', type=str, help='GH token', default='')
@@ -37,42 +37,43 @@ def commit_elements(_elems):
     dt_now = datetime.fromtimestamp(history.iloc[-1]['timestamp']).astimezone(pytz.utc)
     now_date, now_time = dt_now.isoformat()[:19].split('T') 
 
-    head_sha  = poetizer.repo.get_branch('master').commit.sha
-    base_tree = poetizer.repo.get_git_tree(sha=head_sha)
+    head_sha  = curator.repo.get_branch('master').commit.sha
+    base_tree = curator.repo.get_git_tree(sha=head_sha)
 
-    tree   = poetizer.repo.create_git_tree(_elems, base_tree)
-    parent = poetizer.repo.get_git_commit(sha=head_sha) 
+    tree   = curator.repo.create_git_tree(_elems, base_tree)
+    parent = curator.repo.get_git_commit(sha=head_sha) 
 
-    commit = poetizer.repo.create_git_commit(f'update logs {now_date} {now_time}', tree, [parent])
-    master_ref = poetizer.repo.get_git_ref('heads/master')
+    commit = curator.repo.create_git_commit(f'update logs {now_date} {now_time}', tree, [parent])
+    master_ref = curator.repo.get_git_ref('heads/master')
     master_ref.edit(sha=commit.sha)
 
-# Initialize the poetizer
-poetizer = Poetizer()
+# Initialize the curator
+curator = authorry.Curator()
 
 print(args.repo, args.token)
 
-# Choose a poem that meets the supplied conditions
-poetizer.load_history(repo_name=args.repo, repo_token=args.token) # This automatically loads the repo as well
-history = poetizer.history.copy()
+# Initialize the curator
+curator.load_history(repo_name=args.repo, repo_token=args.token)
+history = curator.history.copy()
 
 history['strip_title'] = [re.sub(r'^(THE|AN|A)\s+', '', title) for title in history['title']]
 
-dt_now = datetime.fromtimestamp(history.iloc[-1]['timestamp']).astimezone(pytz.utc)
+dt_now = datetime.now() #fromtimestamp(history.iloc[-1]['timestamp']).astimezone(pytz.utc)
 now_date, now_time = dt_now.isoformat()[:19].split('T')
 print(f'today is {now_date} {now_time}')
+
 home_index = f'''
     <html>
     <head>
         <title></title>
-        <meta http-equiv = "refresh" content="0; url={dt_now.year:02}-{dt_now.month:02}-{dt_now.day:02}"/>
+        <meta http-equiv="refresh" content="0; url={dt_now.year:02}-{dt_now.month:02}-{dt_now.day:02}"/>
     </head>
     </html>
     '''
 
 ymds = []
-for i, loc in enumerate(history.index):
-    y, m, d = history.loc[loc,'date'].split('-')
+for i, entry in curator.history.iterrows():
+    y, m, d = entry.data.split('-')
     ymds.append(f'{y:0>2}-{m:0>2}-{d:0>2}')
 
 random_index = f'''
@@ -85,119 +86,43 @@ random_index = f'''
     </html>
     '''
 
-arch_string = f'<a href="archive">archive</a>'
-poet_string = f'<a href="poets">poets</a>'
-tday_string = f'<a href="index">today</a>'
-
-poets_index = f'''<html><title>poets</title>\n
-            <p style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
-            <i><b>{arch_string}&nbsp;</b>/<b>&nbsp;poets&nbsp;</b>/<b>&nbsp;{tday_string}</b></i><br>'''
-
-for _poet in sorted(np.unique(history['poet'])):
-
-    tag, name, birth, death, nationality, link = poetizer.data[_poet]['metadata'].values()
-
-    title_list = history.sort_values('strip_title').loc[history['poet']==_poet, 'title']
-    date_list  = history.sort_values('strip_title').loc[history['poet']==_poet, 'date']
-
-    poets_index += f'''\n\n<p style="font-size: 28px;">{name} 
-    <span style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
-    ({birth}&#8212;{death}) {poetizer.html_flags[nationality]}'''
-    
-    for title, date in zip(title_list, date_list):
-
-        y, m, d = date.split('-')
-        poets_index += f'\n<br><i><a href={y}-{m}-{d}">{poetizer.titleize(title)}</a></i>'
-        
-    poets_index += '\n<br><br style="line-height: 10px" /></span></p>'
-
-poets_index += '\n<html>'
-
-####### 
-
-archive_index = f'''<html><title>archive</title>\n
-            <p style="font-family:Garamond; color:Black; font-size: 20px; margin-bottom:0; margin : 0; padding-top:0;">
-            <i><b>archive&nbsp;</b>/<b>&nbsp;{poet_string}&nbsp;</b>/<b>&nbsp;{tday_string}</b></i></p>'''
-_m = '0'
-
-dts = map(datetime.fromtimestamp, history.timestamp.values)
-archive_ordering = np.argsort([-dt.year - 1e-3 * dt.month + 1e-6 * dt.day for dt in dts])
-
-for index, entry in history.iloc[archive_ordering].iterrows():
-
-    poet, title, type, date, time, timestamp, _ = entry
-    tag, name, birth, death, nationality, link = poetizer.data[poet]['metadata'].values()
-
-    y, m, d = date.split('-')
-
-    if not m == _m:
-        archive_index += f'</td></table>'
-        archive_index += f'\n<br><h2 style="font-size: 28px;">{get_month(timestamp).capitalize()} {y}</h2>'
-        archive_index += f'\n<table cellspacing="18"><td>'
-        _m = m
-
-    poetizer.load_poem(poet=poet, title=title, when=timestamp, verbose=False)
-
-    day = f'{int(get_day(timestamp))}&nbsp;'
-
-    if len(day) == 7: day += '&nbsp;&nbsp;'
-    if int(d) in [11,21]: archive_index += f'</td><td>'
-
-    archive_index += f'\n<p style="font-size: 20px;margin-top:0;margin-bottom:8">{day}&#8212;&nbsp;'
-    archive_index += f'<i><a href="{y}-{m}-{d}">{poetizer.titleize(title)}</a>&nbsp;by&nbsp;{name}</i></p>'
-
-archive_index += '\n</td></table>\n</html>'
-
 #######
 
-blob  = poetizer.repo.create_git_blob(home_index, "utf-8")
+blob  = curator.repo.create_git_blob(home_index, "utf-8")
 elems = [gh.InputGitTreeElement(path='poems/index.html', mode='100644', type='blob', sha=blob.sha)]
 
-blob  = poetizer.repo.create_git_blob(random_index, "utf-8")
+blob  = curator.repo.create_git_blob(random_index, "utf-8")
 elems.append(gh.InputGitTreeElement(path='poems/random.html', mode='100644', type='blob', sha=blob.sha))
-
-#blob  = poetizer.repo.create_git_blob(poets_index, "utf-8")
-#elems.append(gh.InputGitTreeElement(path='poems/poets.html', mode='100644', type='blob', sha=blob.sha))
-
-blob  = poetizer.repo.create_git_blob(archive_index, "utf-8")
-elems.append(gh.InputGitTreeElement(path='poems/archive.html', mode='100644', type='blob', sha=blob.sha))
-
-commit_elements(elems)
 
 n_history = len(history)
 ys, ms, ds = [], [], []
 
-elems = []
+for i, entry in curator.history.iterrows():
 
-for i, loc in enumerate(history.index):
+    y, m, d = entry.date.split('-')
 
-    y, m, d = history.loc[loc,'date'].split('-')
-
-    dt = datetime(int(y),int(m),int(d),7,0,0) 
+    dt = datetime(int(y),int(m),int(d),12,0,0,tzinfo=pytz.utc) 
     dt_prev = datetime.fromtimestamp(dt.timestamp() - 86400)
     dt_next = datetime.fromtimestamp(dt.timestamp() + 86400)
     
-    poetizer.load_poem(poet=history.loc[loc,'poet'], title=history.loc[loc,'title'], when=history.loc[loc,'timestamp'], verbose=False, include_flags=True)
+    poem = curator.load_poem(author=entry.author, title=entry.title, when=entry.timestamp, verbose=False, include_flags=True)
 
-    print(y, m, d, poetizer.poet, poetizer.title)
+    print(y, m, d, poem.author, poem.title)
 
     prev_string = f'<li class="nav-item left"><a class="nav-link" href="{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«Previous</a></li>' if i > 0 else ''
     next_string = f'<li class="nav-item left"><a class="nav-link" href="{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">Next»</a></li>' if i < n_history - 1 else ''
     rand_string = f'<a href="random">random</a>'
 
-    html_color = 'black'
-
-    today = tday_string if i < n_history - 1 else 'today'
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head><!DOCTYPE html>
     <meta charset="utf-8">
-    <title>{poetizer.nice_fancy_date}</title>
+    <title>{poem.nice_fancy_date}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
     <body class="static-layout" background="../assets/images/bg/monet-haystacks.jpg">
-        <div class="boxed-page">	
+        <div class="boxed-page">
             <nav>
                 <ul>
                     {prev_string}
@@ -214,15 +139,8 @@ for i, loc in enumerate(history.index):
             </nav>
             <section class="bg-white">
                 <div class="section-content" style="border-collapse:collapse; padding-left: 5%; padding-right: 5%;">
-                    <p style="font-family:Baskerville; font-size: 18px; line-height: 1.5;">
-                    <i>{poetizer.nice_fancy_date}</i>
-                    <br>
-                    <span style="font-family:sans-serif; font-size: 24px;"><b>{poetizer.titleize(poetizer.title)} </b></span>
-                    <i>by <a href="{poetizer.link}">{poetizer.name}</a> ({poetizer.birth}&#8212;{poetizer.death})</i>{poetizer.flag_ish}</p>
-                    </p>
-                    <blockquote style="font-family:Baskerville; font-size: 18px; vertical-align:top; line-height:1.4; padding-left: 5%; padding-right: 5%; overflow-x:auto">
-                    {poetizer.html_body}
-                    </blockquote>
+                    {poem.html_header}
+                    {poem.html_body}
                 </div>
             </div>
         </section>		
@@ -232,7 +150,7 @@ for i, loc in enumerate(history.index):
 
     index_fn = f'poems/{y}-{m}-{d}.html'
 
-    try:    contents = poetizer.repo.get_contents(index_fn, ref='master').decoded_content.decode()
+    try:    contents = curator.repo.get_contents(index_fn, ref='master').decoded_content.decode()
     except: contents = None
 
     print(32*'#')
@@ -240,8 +158,7 @@ for i, loc in enumerate(history.index):
     if html == contents:
         continue
 
-    blob = poetizer.repo.create_git_blob(html, "utf-8")
+    blob = curator.repo.create_git_blob(html, "utf-8")
     elems.append(gh.InputGitTreeElement(path=index_fn, mode='100644', type='blob', sha=blob.sha))
 
 commit_elements(elems)
-print(f'wrote to {index_fn}')

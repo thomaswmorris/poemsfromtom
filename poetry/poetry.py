@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import github as gh
 from io import StringIO
+import os
 
 from datetime import datetime
 from email.mime.multipart import MIMEMultipart
@@ -11,30 +12,162 @@ from email.mime.text import MIMEText
 
 from context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
 
-class Poetizer:
+base, this_filename = os.path.split(__file__)
+
+html_flags = {'american' : '&#127482&#127480', 
+            'argentinian' : '&#127462&#127479',
+                'austrian' : '&#127462&#127481',
+                'australian' : '&#127462&#127482',
+                'belgian' : '&#127463&#127466',
+                'bengali' : '&#127463&#127465',
+                'canadian' : '&#127464&#127462',
+                'chilean' : '&#127464&#127473',
+                    'cuban' : '&#127464&#127482',
+                    'czech' : '&#127464&#127487',
+                'english' : '&#127988&#917607&#917602&#917605&#917614&#917607&#917631',
+                    'french' : '&#127467&#127479',
+                    'german' : '&#127465&#127466',
+                'georgian' : '&#127468&#127466',
+                    'greek' : '&#127468&#127479',
+                'guatemalan' : '&#127468&#127481',
+                'hungarian' : '&#127469&#127482',
+                    'irish' : '&#127470&#127466',
+                'israeli' : '&#127470&#127473',
+                'italian' : '&#127470&#127481',
+                'jamaican' : '&#127471&#127474',
+                'lebanese' : '&#127473&#127463',
+                'maltese' : '&#127474&#127481',
+                'nicaraguan' : '&#127475&#127470',
+                'norwegian' : '&#127475&#127476',
+                'persian' : '',
+                'peruvian' : '&#127477&#127466',
+                    'polish' : '&#127477&#127473',
+                'portuguese' : '&#127477&#127481',
+                'russian' : '&#127479&#127482',
+            'saint lucian' : '&#127473&#127464',
+                'scottish' : '&#127988&#917607&#917602&#917619&#917603&#917620&#917631',
+                'serbian' : '&#127479&#127480',
+                'spanish' : '&#127466&#127480',
+            'south african' : '&#127487&#127462',
+                'swedish' : '&#127480&#127466',
+                    'swiss' : '&#127464&#127469',
+                'vietnamese' : '&#127483&#127475', 
+                    'welsh' : '&#127988&#917607&#917602&#917623&#917612&#917619&#917631',
+                        '' : '',
+        }
+
+def send_email(username, password, html, recipient, subject=''):
+
+        message = MIMEMultipart('alternative')
+        message['From']    = username
+        message['To']      = recipient
+        message['Subject'] = subject
+        message.attach(MIMEText(html, 'html'))
+        
+        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        server.login(username, password)
+        server.send_message(message)
+        server.quit()
+
+def send_poem(poem, username, password, recipient, tag=''):
+    send_email(username, password, poem.email_html, recipient, subject=tag+poem.header)      
+
+def titleize(string):
+
+    with open(f'{base}/minor-words.txt','r') as f:
+        words_to_not_capitalize = f.read().split('\n')
+
+    delims = [': ', '\"', ' ', 'O\'', '-', '(']
+    string = re.sub(r'\ \_[0-9]+\_','',string).lower()
+    for delim in delims:  
+        words = string.split(delim)
+        for i, s in enumerate(words):
+            
+            if (not len(s) > 0) or (s in ['\"','\'']):
+                continue
+
+            if (i in [0,len(words)-1]) or not ((s in words_to_not_capitalize) and not delim == '-'): 
+                i_cap = list(re.finditer('[^\"\']',s))[0].start()
+                words[i] = words[i][:i_cap] + words[i][i_cap].capitalize() + words[i][i_cap+1:]
+
+            if np.isin(list(s),['I','V','X']).all():
+                words[i] = s.upper()
+
+        string = delim.join(words)
+
+    string = re.sub(r'\'S ','\'s ',string)
+    return string
+
+def text_to_html(text):
+
+    text  = text.replace('--', '&#8212;') # convert emdashes
+    text  = re.sub(r'_(.*?)_', r'<i>\1</i>', text) # convert italic notation
+
+    lines = [line if len(line) > 0 else '&nbsp;' for line in text.split('\n')]
+
+    html  = '\n'.join([f'<div style="text-align:left" align="center">\n\t{line}\n</div>' for line in lines])
+
+    return html
+
+class Poem():
+
+    def __init__(self, author, title, when):
+
+        with open(f'{base}/data.json', 'r+') as f:
+
+            data = json.load(f)
+            self.author, self.author_name, self.birth, self.death, self.nationality, self.link = data[author]['metadata'].values()
+            self.body, self.keywords = data[author]['poems'][title].values()
+            self.when, self.html_flag = when, html_flags[self.nationality]
+
+        self.html_body = f'''<blockquote>
+        <div style="font-family:Baskerville; text-indent: -1em; padding-left:1em;">
+        {text_to_html(self.body)}
+        </div>
+        </blockquote>'''
+        self.date_time = datetime.fromtimestamp(when).replace(tzinfo=pytz.utc)
+        self.nice_fancy_date = f'{get_weekday(self.when).capitalize()} {get_month(self.when).capitalize()} {self.date_time.day}, {self.date_time.year}'
+        
+        self.header = f'“{titleize(title)}” by {self.author_name}'
+
+        self.html_header = f'''<p style="font-family:Baskerville; font-size: 18px; line-height: 1.5;">
+            <i>{self.nice_fancy_date}</i>
+            <br>
+            <span style="font-family:sans-serif; font-size: 24px;"><b>{titleize(title)}</b></span>
+            <i>by <a href="{self.link}">{self.author_name}</a> ({self.birth}&#8212;{self.death})</i> {self.html_flag}</p>
+            </p>'''
+
+        self.email_html = f'''<html>
+            {self.html_header}
+            {self.html_body}
+            <p> 
+            <a href="thomaswmorris.com/poems">past poems</a>
+            </p>
+            </html>'''
+
+class Curator():
 
     def __init__(self):
                         
-        with open('data.json', 'r+') as f:
+        with open(f'{base}/data.json', 'r+') as f:
             self.data = json.load(f)
 
-        with open(f'context.json', 'r+') as f:
+        with open(f'{base}/context.json', 'r+') as f:
             self.context = json.load(f)
         
         self.sml_kws = [kw for c in ['season', 'month', 'liturgy'] for kw in self.context[c]]
         self.kw_mult = {'season':4, 'weekday':7, 'month':12, 'day':30, 'liturgy':16, 'holiday':1e16}
 
-        poets, titles, keywords, lengths = [], [], [], []
-        self.poems = pd.DataFrame(columns=['poet', 'title', 'keywords', 'likelihood', 'word_count'])
-        for _poet in self.data.keys():
-            for _title in self.data[_poet]['poems'].keys():
-
-                poets.append(_poet)
+        authors, titles, keywords, lengths = [], [], [], []
+        self.poems = pd.DataFrame(columns=['author', 'title', 'keywords', 'likelihood', 'word_count'])
+        for _author in self.data.keys():
+            for _title in self.data[_author]['poems'].keys():
+                authors.append(_author)
                 titles.append(_title)
-                keywords.append(self.data[_poet]['poems'][_title]['keywords'])
-                lengths.append(len(self.data[_poet]['poems'][_title]['body'].split()))
+                keywords.append(self.data[_author]['poems'][_title]['keywords'])
+                lengths.append(len(self.data[_author]['poems'][_title]['body'].split()))
 
-        self.poems['poet'] = poets
+        self.poems['author'] = authors
         self.poems['title'] = titles
         self.poems['keywords'] = keywords
         self.poems['likelihood'] = 1
@@ -43,91 +176,23 @@ class Poetizer:
         self.archive_poems = self.poems.copy()
         self.history = None
 
-        self.html_flags = {'american' : '&#127482&#127480', 
-                        'argentinian' : '&#127462&#127479',
-                           'austrian' : '&#127462&#127481',
-                         'australian' : '&#127462&#127482',
-                            'belgian' : '&#127463&#127466',
-                            'bengali' : '&#127463&#127465',
-                           'canadian' : '&#127464&#127462',
-                            'chilean' : '&#127464&#127473',
-                              'cuban' : '&#127464&#127482',
-                              'czech' : '&#127464&#127487',
-                            'english' : '&#127988&#917607&#917602&#917605&#917614&#917607&#917631',
-                             'french' : '&#127467&#127479',
-                             'german' : '&#127465&#127466',
-                           'georgian' : '&#127468&#127466',
-                              'greek' : '&#127468&#127479',
-                         'guatemalan' : '&#127468&#127481',
-                          'hungarian' : '&#127469&#127482',
-                              'irish' : '&#127470&#127466',
-                            'israeli' : '&#127470&#127473',
-                            'italian' : '&#127470&#127481',
-                           'jamaican' : '&#127471&#127474',
-                           'lebanese' : '&#127473&#127463',
-                            'maltese' : '&#127474&#127481',
-                         'nicaraguan' : '&#127475&#127470',
-                          'norwegian' : '&#127475&#127476',
-                            'persian' : '',
-                           'peruvian' : '&#127477&#127466',
-                             'polish' : '&#127477&#127473',
-                         'portuguese' : '&#127477&#127481',
-                            'russian' : '&#127479&#127482',
-                       'saint lucian' : '&#127473&#127464',
-                           'scottish' : '&#127988&#917607&#917602&#917619&#917603&#917620&#917631',
-                            'serbian' : '&#127479&#127480',
-                            'spanish' : '&#127466&#127480',
-                      'south african' : '&#127487&#127462',
-                            'swedish' : '&#127480&#127466',
-                              'swiss' : '&#127464&#127469',
-                         'vietnamese' : '&#127483&#127475', 
-                              'welsh' : '&#127988&#917607&#917602&#917623&#917612&#917619&#917631',
-                                   '' : '',
-        }
+        
 
     def get_keywords(self, when=ttime.time()):
         return [get_season(when), get_weekday(when), get_month(when), get_day(when),get_liturgy(when), get_holiday(when)]          
 
-    def titleize(self,string):
 
-        with open('poetry/minor-words.txt','r') as f:
-            words_to_not_capitalize = f.read().split('\n')
-
-        
-
-        delims = [': ', '\"', ' ', 'O\'', '-', '(']
-        string = re.sub(r'\ \_[0-9]+\_','',string).lower()
-        for delim in delims:  
-            words = string.split(delim)
-            for i, s in enumerate(words):
-                
-                if (not len(s) > 0) or (s in ['\"','\'']):
-                    continue
-
-                if (i in [0,len(words)-1]) or not ((s in words_to_not_capitalize) and not delim == '-'): 
-                    i_cap = list(re.finditer('[^\"\']',s))[0].start()
-                    words[i] = words[i][:i_cap] + words[i][i_cap].capitalize() + words[i][i_cap+1:]
-
-                if np.isin(list(s),['I','V','X']).all():
-                    words[i] = s.upper()
-
-            string = delim.join(words)
-
-        
-
-        string = re.sub(r'\'S ','\'s ',string)
-        return string
-
-    def load_repo(self,repo_name='',repo_token=''):
+    def load_repo(self,repo_name='', repo_token=''):
 
         self.repo_name  = repo_name
         self.repo_token = repo_token
         self.g = gh.Github(self.repo_token)
         self.repo = self.g.get_user().get_repo(self.repo_name)
     
-    def load_history(self,repo_name='',repo_token=''):
+    def load_history(self, repo_name='', repo_token=''):
 
         if not repo_name == '':
+
             self.load_repo(repo_name, repo_token)
             self.repo_history_contents = self.repo.get_contents('poems/history.csv',ref='master')
             self.rhistory = pd.read_csv(StringIO(self.repo_history_contents.decoded_content.decode()),index_col=0)
@@ -138,7 +203,7 @@ class Poetizer:
             try:
                 self.history = pd.read_csv('poems/history.csv',index_col=0)
             except Exception as e:
-                self.history = pd.DataFrame(columns=['poet','title','type','date','time','timestamp'])
+                self.history = pd.DataFrame(columns=['author','title','type','date','time','timestamp'])
                 print(f'{e}\ncould not find history.csv')
 
     def make_stats(self,order_by=None, ascending=True,force_rows=True,force_cols=True):
@@ -148,19 +213,19 @@ class Poetizer:
         if force_rows: pd.set_option('display.max_rows', None)
         if force_cols: pd.set_option('display.max_columns', None)
         self.stats = pd.DataFrame(columns=['name','birth','death','n_poems','times_sent','days_since_last_sent'])
-        for _poet in np.unique(np.append(self.poems['poet'], self.history['poet'])):
+        for _author in np.unique(np.append(self.poems['author'], self.history['author'])):
             
-            tag, name, birth, death, nationality, link = self.data[_poet]['metadata'].values()
-            elapsed = (ttime.time() - self.history['timestamp'][self.history['poet']==_poet].max()) / 86400 # if _poet in self.history['poet'] else None
-            self.stats.loc[_poet] = name, birth, death, len(self.data[_poet]['poems']), (self.history['poet']==_poet).sum(), np.round(elapsed,1)
+            tag, name, birth, death, nationality, link = self.data[_author]['metadata'].values()
+            elapsed = (ttime.time() - self.history['timestamp'][self.history['author']==_author].max()) / 86400 # if _author in self.history['author'] else None
+            self.stats.loc[_author] = name, birth, death, len(self.data[_author]['poems']), (self.history['author']==_author).sum(), np.round(elapsed,1)
             
         if not order_by is None:
             self.stats = self.stats.sort_values(by=order_by, ascending=ascending)
 
     def load_poem(self,
-                  poet='random',
+                  author='random',
                   title='random',
-                  when=ttime.time(),
+                  when=ttime.time(), # this needs to be a timestamp
                   min_length=0,
                   max_length=100000,
                   title_latency=0,
@@ -177,13 +242,7 @@ class Poetizer:
                   html_color='Black'):
 
         self.poems = self.archive_poems.copy()
-
-        try: self.when = float(when)
-        except: 
-            try: self.when = when.timestamp()
-            except: 
-                try: self.when = datetime(*[int(x) for x in when.split('-')],12,0,0).timestamp()
-                except: raise(Exception(f'\'when\' argument must be timestamp or datetime object'))
+        self.when = float(when)
             
         self.body = ''
         self.history = None
@@ -196,40 +255,39 @@ class Poetizer:
             for index, entry in self.history.iterrows():
                 if ttime.time() - entry['timestamp'] < title_latency * 86400:
                     try:
-                        i = self.poems.index[np.where((self.poems['poet']==entry['poet']) & (self.poems['title']==entry['title']))[0][0]]
+                        i = self.poems.index[np.where((self.poems['author']==entry['author']) & (self.poems['title']==entry['title']))[0][0]]
                         if very_verbose: 
-                            _poet, _title = self.poems.loc[i, ['poet', 'title']]
-                            print(f'removing poem {_title} by {_poet}')
+                            _author, _title = self.poems.loc[i, ['author', 'title']]
+                            print(f'removing poem {_title} by {_author}')
                         self.poems.drop(i, inplace=True)
                     except:
                         print('error handling entry {entry}')
 
-
         self.poems.loc[self.poems['word_count'] > max_length, 'likelihood'] = 0
     
-        if not poet == 'random': self.poems.loc[self.poems['poet'] != poet, 'likelihood'] = 0
+        if not author == 'random': self.poems.loc[self.poems['author'] != author, 'likelihood'] = 0
         if not title == 'random': self.poems.loc[self.poems['title'] != title, 'likelihood'] = 0
 
         if not self.poems['likelihood'].sum() > 0:
-            raise(Exception(f'The poem \"{title}\" by \"{poet}\" is not in the database!'))
+            raise(Exception(f'The poem \"{title}\" by \"{author}\" is not in the database!'))
 
-        for _poet in np.unique(self.poems['poet']):
+        for _author in np.unique(self.poems['author']):
             
-            # weigh by the number of poems the poet has sent
+            # weigh by the number of poems the author has sent
             # if there are few poems left, discount him
-            # if the poet was sent a lot, discount him
-            # if the poet was sent recently, discount him
+            # if the author was sent a lot, discount him
+            # if the author was sent recently, discount him
 
-            self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= np.minimum(1., 4. / np.sum(_poet==self.poems['poet']))
+            self.poems.loc[_author==self.poems['author'], 'likelihood'] *= np.minimum(1., 4. / np.sum(_author==self.poems['author']))
 
             if not self.history is None:
 
-                ts_weight = np.exp(.25 * np.log(.5) * self.stats.loc[_poet, 'times_sent']) # four times sent is a weight of 0.5
-                dsls = self.stats.loc[_poet, 'days_since_last_sent']
+                ts_weight = np.exp(.25 * np.log(.5) * self.stats.loc[_author, 'times_sent']) # four times sent is a weight of 0.5
+                dsls = self.stats.loc[_author, 'days_since_last_sent']
                 if np.isnan(dsls): dsls = 1e3
                 dsls_weight = 1 / (1 + np.exp(-.1 * (dsls - 42))) # after six weeks, the weight is 0.5
-                if very_verbose: print(f'{_poet:<12} has been weighted by {ts_weight:.03f} * {dsls_weight:.03f} = {ts_weight * dsls_weight:.03f}')
-                self.poems.loc[_poet==self.poems['poet'], 'likelihood'] *= ts_weight * dsls_weight
+                if very_verbose: print(f'{_author:<12} has been weighted by {ts_weight:.03f} * {dsls_weight:.03f} = {ts_weight * dsls_weight:.03f}')
+                self.poems.loc[_author==self.poems['author'], 'likelihood'] *= ts_weight * dsls_weight
             
         if context:
 
@@ -259,21 +317,20 @@ class Poetizer:
 
         if very_verbose: print(f'choosing from {len(self.poems)} poems')
         self.poems['p'] = self.poems['likelihood'] / np.sum(self.poems['likelihood'])
-        if very_verbose: print(self.poems.sort_values('p',ascending=False).iloc[:10][['poet','title','keywords','p']])
+        if very_verbose: print(self.poems.sort_values('p',ascending=False).iloc[:10][['author','title','keywords','p']])
         loc = np.random.choice(self.poems.index, p=self.poems['p'])
 
         # print(self.poems.loc[self.poems.title=='GOBLIN MARKET'])
 
-        self.poet, self.title = self.poems.loc[loc,['poet', 'title']]
-        self.body = self.data[self.poet]['poems'][self.title]['body']
+        author, title = self.poems.loc[loc, ['author', 'title']]
+        print(f'chose poem {title} by {author}')
+        # self.body = self.data[self.author]['poems'][self.title]['body']
     
         # If we exit the loop, and don't have a poem:
-        if self.body == '':
-            raise(Exception(f'No poem with the requirements was found in the database!'))
+        #if self.body == '':
+        #    raise(Exception(f'No poem with the requirements was found in the database!'))
 
-        # Put the attributes of the poem into the class
-        self.tag, self.name, self.birth, self.death, self.nationality, self.link = self.data[self.poet]['metadata'].values()
-        output = f'chose poem \"{self.title}\" by {self.name}'
+
 
         self.dt_when = datetime.fromtimestamp(self.when, tz=pytz.utc)
         self.ts_when = self.dt_when.timestamp()
@@ -281,7 +338,7 @@ class Poetizer:
         if write_historical:
             
             when_date, when_time = self.dt_when.isoformat()[:19].split('T')
-            self.history.loc[len(self.history)] = self.poet, self.title, tag_historical, when_date, when_time, int(ttime.time())
+            self.history.loc[len(self.history)] = self.author, self.title, tag_historical, when_date, when_time, int(ttime.time())
             self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
 
             if very_verbose: print(self.stats)
@@ -290,7 +347,7 @@ class Poetizer:
 
                 hist_blob = self.repo.create_git_blob(self.history.to_csv(), "utf-8")
                 stat_blob = self.repo.create_git_blob(self.stats.to_csv(), "utf-8")
-                poem_blob = self.repo.create_git_blob(self.archive_poems[['poet', 'title', 'keywords', 'word_count']].to_csv(), "utf-8")
+                #poem_blob = self.repo.create_git_blob(self.archive_poems[['author', 'title', 'keywords', 'word_count']].to_csv(), "utf-8")
 
                 hist_elem = gh.InputGitTreeElement(path='poems/history.csv', mode='100644', type='blob', sha=hist_blob.sha)
                 stat_elem = gh.InputGitTreeElement(path='poems/stats.csv', mode='100644', type='blob', sha=stat_blob.sha)
@@ -302,7 +359,7 @@ class Poetizer:
                 tree   = self.repo.create_git_tree([hist_elem, stat_elem], base_tree)
                 parent = self.repo.get_git_commit(sha=head_sha) 
 
-                commit = self.repo.create_git_commit(f'update logs {when_date} {when_time}', tree, [parent])
+                commit = self.repo.create_git_commit(f'updated logs @ {when_date} {when_time}', tree, [parent])
                 master_ref = self.repo.get_git_ref('heads/master')
                 master_ref.edit(sha=commit.sha)
                 
@@ -314,71 +371,10 @@ class Poetizer:
 
                 output += ' (wrote to local history)'
             
-        if verbose: print(output)
+            if verbose: print(output)
 
-        paddings = re.findall('\n+( *)', self.body)
-        nmp = len(min(paddings, key=len))
-        if nmp > 0:
-            for padding in sorted(paddings,key=len):
-                self.body = re.sub(padding, padding[:-nmp], self.body)
+        return Poem(author, title, when)
 
-        # Make an html version (for nicely formatted emails)
-        html_body = '\n' + self.body
-        html_body = html_body.replace('—', '-')
-        html_body = html_body.replace(' ', '&nbsp;')
-        html_body = html_body.replace('\n', '<br>')
-        html_body = html_body.replace('--', '&#8212;')
-        
-        while html_body.count('_') > 1:
-            try:
-                s,e = [match.start() for match in re.finditer('\_',html_body)][:2]
-                html_body = html_body[:s]   + '<i>' + html_body[s+1:]
-                html_body = html_body[:e+2] + '</i>' + html_body[e+1+2:]
-            except:
-                html_body.replace('_','')
 
-        import calendar
-        self.nice_fancy_date = f'{get_weekday(self.ts_when).capitalize()} '\
-                             + f'{get_month(self.ts_when).capitalize()} {self.dt_when.day}, {self.dt_when.year}'
-        
-        self.header = f'“{self.titleize(self.title)}” by {self.name}'
 
-        flag_ish = f' {self.html_flags[self.nationality]}' if include_flags else ''
-
-        self.html_body = html_body
-        self.flag_ish  = flag_ish
-        
-        self.email_html = f"""
-        <html>
-            <div class="section-content" style="border-collapse:collapse; padding-left: 5%; padding-right: 5%;">
-                    <p style="font-family:Baskerville; font-size: 18px; line-height: 1.5;">
-                    <i>{self.nice_fancy_date}</i>
-                    <br>
-                    <span style="font-family:sans-serif; font-size: 24px;"><b>{self.titleize(self.title)} </b></span>
-                    <i>by <a href="{self.link}">{self.name}</a> ({self.birth}&#8212;{self.death})</i>{self.flag_ish}</p>
-                    </p>
-                    <blockquote style="font-family:Baskerville; font-size: 18px" align="left">
-                    {self.html_body}
-                    </blockquote>
-                    <p> 
-                    <a href="thomaswmorris.com/poems">past poems</a>
-                    </p>
-            </div>
-        </html>
-        """
-
-    def send(self, username, password, html, recipient, subject=''):
-
-        message = MIMEMultipart('alternative')
-        message['From']    = username
-        message['To']      = recipient
-        message['Subject'] = subject
-        message.attach(MIMEText(html, 'html'))
-
-        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-        server.login(username, password)
-        server.send_message(message)
-        server.quit()
-
-    def send_poem(self, username, password, recipient, tag=''):
-        self.send(username, password, self.email_html, recipient, subject=tag+self.header)        
+  
