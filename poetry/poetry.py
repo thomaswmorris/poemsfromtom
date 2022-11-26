@@ -134,7 +134,7 @@ class Poem():
         self.html_header = f'''<p style="font-family:Baskerville; font-size: 18px; line-height: 1.5;">
             <i>{self.nice_fancy_date}</i>
             <br>
-            <span style="font-family:sans-serif; font-size: 24px;"><b>{titleize(title)}</b></span>
+            <span style="font-family:Georgia; font-size: 24px;"><b>{titleize(title)}</b></span>
             <i>by <a href="{self.link}">{self.author_name}</a> ({self.birth}&#8212;{self.death})</i></p>
             </p>'''
 
