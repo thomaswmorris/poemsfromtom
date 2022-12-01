@@ -21,7 +21,7 @@ jobs:
       - name: Send poem to myself
         run:
           python poetry/send-poem.py --type 'test' --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --repo_lsfn 'poems/testserv.csv'
-          --repo 'thomaswmorris.github.io' --token ${{ secrets.GH_TOKEN }} --subj_tag '(PUSH) ' --context true --rh true --wh true --vv true
+          --repo 'thomaswmorris.github.io' --token ${{ secrets.GH_TOKEN }} --subj_tag '(PUSH)' --context true --rh true --wh true --vv true
 
        - name: Update repo pages
         run:
