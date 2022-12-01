@@ -1,9 +1,11 @@
-name: test on push
-on: push
+name: hourly test
+on:
+  schedule:
+    - cron: '0 * * * *' # hourly # daily at 12:00 UTC (07:00 EST)
 
 jobs:
   run_tests:
-    name: Test send-poem.py and make-docs.py with credentials
+    name: Send a test poem to PFT on the hour
     runs-on: ubuntu-latest
 
     defaults:
@@ -18,11 +20,7 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Send poem to myself
+      - name: Curate a poem, and send it to the listserv
         run:
           python poetry/send-poem.py --type 'test' --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --repo_lsfn 'poems/testserv.csv'
-          --repo 'thomaswmorris.github.io' --token ${{ secrets.GH_TOKEN }} --subj_tag '(PUSH)' --context true --rh true --wh true --vv true
-
-      - name: Update repo pages
-        run:
-          python poetry/make-docs.py --repo 'thomaswmorris.github.io' --token ${{ secrets.GH_TOKEN }} 
+          --repo 'thomaswmorris.github.io' --token ${{ secrets.GH_TOKEN }} --subj_tag 'Poem of the Day' --context true --rh true --wh true --vv true
