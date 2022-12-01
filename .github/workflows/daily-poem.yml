@@ -1,5 +1,7 @@
 name: send a test poem on push
-on: push
+on:
+  schedule:
+    - cron: '00 * * * *' # hourly # daily at 12:00 UTC (07:00 EST)
 
 jobs:
   run_tests:
@@ -18,11 +20,11 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Send poem to myself
+      - name: Curate a poem, and send it to the listserv
         run:
-          python poetry/send-poem.py --type 'test' --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --repo_lsfn 'poems/testserv.csv'
-          --repo 'thomaswmorris.github.io' --token ${{ secrets.GH_TOKEN }} --subj_tag '(PUSH) ' --context true --rh true --wh true --vv true
+          python poetry/send-poem.py --type 'daily' --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --repo_lsfn 'poems/testserv.csv'
+          --repo 'thomaswmorris.github.io' --token ${{ secrets.GH_TOKEN }} --subj_tag 'Poem of the Day: ' --context true --rh true --wh true --vv true
 
-       - name: Update repo pages
+      - name: Update repo pages
         run:
           python poetry/make-docs.py --repo 'thomaswmorris.github.io' --token ${{ secrets.GH_TOKEN }} 
