@@ -5,7 +5,6 @@ import github as gh
 import sys; sys.path.insert(1, 'poetry/')
 import numpy as np
 import poetry
-from context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
 import os, re
 from io import StringIO
 import pytz
