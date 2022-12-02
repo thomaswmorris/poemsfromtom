@@ -330,24 +330,23 @@ class Curator():
         if not order_by is None:
             self.stats = self.stats.sort_values(by=order_by, ascending=ascending)
 
-    def load_poem(self,
-                  author='random',
-                  title='random',
-                  when=ttime.time(), # this needs to be a timestamp
-                  min_length=0,
-                  max_length=100000,
-                  title_latency=0,
-                  context=False,
-                  force_context=False,
-                  repo_name='',
-                  repo_token='',
-                  tag_historical='',
-                  read_historical=False,
-                  write_historical=False,
-                  verbose=True,
-                  very_verbose=False,
-                  include_flags=False,
-                  html_color='Black'):
+    def get_poem(
+                self,
+                author='random',
+                title='random',
+                when=ttime.time(), # this needs to be a timestamp
+                title_latency=0,
+                context=False,
+                force_context=False,
+                repo_name='',
+                repo_token='',
+                tag_historical='',
+                read_historical=False,
+                write_historical=False,
+                verbose=True,
+                very_verbose=False,
+                include_flags=False,
+                ):
 
         self.poems = self.archive_poems.copy()
         self.when = float(when)
