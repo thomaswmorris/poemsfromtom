@@ -400,8 +400,7 @@ class Curator():
             if verbose: print(context)
 
             for category in context_categories:
-                for keyword in context[category]:
-
+                for keyword in context_multipliers[category].keys():
                     m = np.array([keyword in _keywords for _keywords in self.poems['keywords']])
                     if keyword == context[category]:
                         self.poems.loc[m, 'likelihood'] *= context_multipliers[category][keyword]
