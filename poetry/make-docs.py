@@ -13,10 +13,7 @@ import argparse, sys
 parser = argparse.ArgumentParser()
 parser.add_argument('--repo', type=str, help='Which GH repository to load', default='')
 parser.add_argument('--token', type=str, help='GH token', default='')
-
 args = parser.parse_args()
-
-if args.token_from_heroku: args.token = os.environ['GITHUB_TOKEN']
 
 def commit_elements(_elems):
 

@@ -18,7 +18,6 @@ parser.add_argument('--rh', type=bool, help='Whether to consider past poems sent
 parser.add_argument('--wh', type=bool, help='Whether to consider this poem in the future', default=False)
 parser.add_argument('--type', type=str, help='What tag to write to the history with', default='')
 parser.add_argument('--vv', type=bool, help='Very verbose', default=False)
-
 args = parser.parse_args()
 
 # Initialize the curator
