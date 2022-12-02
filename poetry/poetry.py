@@ -169,8 +169,6 @@ for category in context_categories:
             continue
         context_multipliers[category][keyword] = np.round(len(samples) / np.sum(keyword==samples))
 
-print(context_multipliers)
-
 def send_email(username, password, html, recipient, subject=''):
 
         message = MIMEMultipart('alternative')
@@ -405,7 +403,7 @@ class Curator():
 
             self.poems.loc[:, 'likelihood'] *= np.array([4.0 if 'tight' in kws else 1.0 for kws in self.poems['keywords']])
 
-            context = self.get_context(self.when)
+            context = get_context(self.when)
             if verbose: print(context)
 
             for category in context_categories:
