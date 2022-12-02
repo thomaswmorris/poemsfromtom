@@ -357,17 +357,14 @@ class Curator():
             self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
             
             for index, entry in self.history.iterrows():
-                if ttime.time() - entry['timestamp'] < title_latency * 86400:
-                    try:
-                        i = self.poems.index[np.where((self.poems['author']==entry['author']) & (self.poems['title']==entry['title']))[0][0]]
-                        if very_verbose: 
-                            _author, _title = self.poems.loc[i, ['author', 'title']]
-                            print(f'removing poem {_title} by {_author}')
-                        self.poems.drop(i, inplace=True)
-                    except:
-                        print('error handling entry {entry}')
-
-        self.poems.loc[self.poems['word_count'] > max_length, 'likelihood'] = 0
+                try:
+                    i = self.poems.index[np.where((self.poems['author']==entry['author']) & (self.poems['title']==entry['title']))[0][0]]
+                    if very_verbose: 
+                        _author, _title = self.poems.loc[i, ['author', 'title']]
+                        print(f'removing poem {_title} by {_author}')
+                    self.poems.drop(i, inplace=True)
+                except:
+                    print('error handling entry {entry}')
     
         if not author == 'random': self.poems.loc[self.poems['author'] != author, 'likelihood'] = 0
         if not title == 'random': self.poems.loc[self.poems['title'] != title, 'likelihood'] = 0
