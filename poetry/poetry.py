@@ -11,8 +11,6 @@ from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-import context_utils
-
 def PoemNotFoundError(Exception):
     pass
 
