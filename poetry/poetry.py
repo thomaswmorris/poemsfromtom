@@ -407,7 +407,7 @@ class Curator():
             if verbose: print(context)
 
             for category in context_categories:
-                for keyword in self.context[category]:
+                for keyword in context[category]:
 
                     m = np.array([keyword in _keywords for _keywords in self.poems['keywords']])
                     if keyword == context[category]:
