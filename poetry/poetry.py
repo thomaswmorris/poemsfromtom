@@ -182,8 +182,8 @@ def send_email(username, password, html, recipient, subject=''):
         server.send_message(message)
         server.quit()
 
-def send_poem(poem, username, password, recipient, tag=''):
-    send_email(username, password, poem.email_html, recipient, subject=f'{tag}: {poem.header}')      
+#def send_poem(poem, username, password, recipient, tag=''):
+#    send_email(username, password, poem.email_html, recipient, subject=f'{tag}: {poem.header}')      
 
 def titleize(string):
 

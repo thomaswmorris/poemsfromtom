@@ -1,4 +1,4 @@
-name: hourly test
+name: Hourly test
 on:
   schedule:
     - cron: '0 * * * *' # hourly # daily at 12:00 UTC (07:00 EST)
@@ -20,7 +20,7 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Curate a poem, and send it to the listserv
+      - name: Curate a poem, and send it to the testserv
         run:
-          python poetry/send-poem.py --type 'test' --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --repo_lsfn 'poems/testserv.csv'
+          python poetry/send-poem.py --type 'test' --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --listserv_filename 'poems/testserv.csv'
           --repo 'thomaswmorris.github.io' --token ${{ secrets.GH_TOKEN }} --context true --rh true --wh true --vv true
