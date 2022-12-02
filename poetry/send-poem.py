@@ -30,6 +30,10 @@ args = parser.parse_args()
 # Initialize the curator
 curator = poetry.Curator()
 
+when = time.time() if not args.type == 'test' else time.time() + 365 * 86400 * np.random.uniform()
+
+subject = args.subj_tag if not args.subj_tag == '' else datetime.fromtimestamp(when).isoformat()[:10]
+
 # Choose a poem that meets the supplied conditions
 poem = curator.load_poem(
                             author=args.author, 
@@ -49,10 +53,12 @@ poem = curator.load_poem(
                         )
 
 if not args.repo_lsfn == '':
+
     contents = curator.repo.get_contents(args.repo_lsfn, ref='master')
     entries  = pd.read_csv(StringIO(contents.decoded_content.decode()),index_col=0)
 
 else: 
+    
     entries = pd.DataFrame(columns=['name','email'])
     for recipient in args.recipient.split(','):
         entries.loc[len(entries)] = '*', recipient
@@ -64,7 +70,7 @@ def f(*arguments):
 
 for name, email in zip(entries['name'],entries['email']):
 
-    t = threading.Thread(target=f, args=(poem, args.username, args.password, email, args.subj_tag))
+    t = threading.Thread(target=f, args=(poem, args.username, args.password, email, subject))
     t.start()
 
 

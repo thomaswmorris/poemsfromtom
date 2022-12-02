@@ -6,11 +6,15 @@ import github as gh
 from io import StringIO
 import os
 
+from dateutil.easter import *
 from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from context_utils import get_month, get_weekday, get_day, get_holiday, get_season, get_liturgy
+import context_utils
+
+def PoemNotFoundError(Exception):
+    pass
 
 base, this_filename = os.path.split(__file__)
 
@@ -55,6 +59,119 @@ html_flags = {'american' : '&#127482&#127480',
                     'welsh' : '&#127988&#917607&#917602&#917623&#917612&#917619&#917631',
                         '' : '',
         }
+
+def get_weekday(t=ttime.time()):
+    weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+    return weekdays[datetime.fromtimestamp(t).weekday()]
+
+def get_month(t=ttime.time()):
+    months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
+    return months[datetime.fromtimestamp(t).month-1]
+
+def get_day(t=ttime.time()):
+    return f'{datetime.fromtimestamp(t).day:02}'
+
+def get_season(t=ttime.time()):
+
+    year = datetime.fromtimestamp(t).year
+    yday = datetime.fromtimestamp(t).timetuple().tm_yday
+
+    spring = datetime(year, 3, 20).timetuple().tm_yday
+    summer = datetime(year, 6, 21).timetuple().tm_yday
+    autumn = datetime(year, 9, 23).timetuple().tm_yday
+    winter = datetime(year, 12, 21).timetuple().tm_yday
+
+    if (spring <= yday < summer):  return 'spring' 
+    if (summer <= yday < autumn):  return 'summer' 
+    if (autumn <= yday < winter):  return 'autumn' 
+    return 'winter'
+
+def get_holiday(t=ttime.time()):
+
+
+    dt = datetime.fromtimestamp(t)
+    yd = dt.timetuple().tm_yday
+    if dt.month==1 and dt.day==1: return 'new year\'s day'
+    easter_yd = easter(dt.year).timetuple().tm_yday 
+
+    # easter things supercede 
+
+    if yd == easter_yd - 46: return 'ash wednesday'
+    if yd == easter_yd - 7:  return 'palm sunday'
+    if yd == easter_yd - 3:  return 'holy thursday'
+    if yd == easter_yd - 2:  return 'good friday'
+    if yd == easter_yd - 1:  return 'easter vigil'
+    if yd == easter_yd:      return 'easter'
+    if yd == easter_yd + 7:  return 'divine mercy'
+    if yd == easter_yd + 39: return 'ascension'
+    if yd == easter_yd + 49: return 'pentacost'
+
+    # these are on specific dates 
+    
+    if (dt.month,dt.day)==(1,1):   return 'new year\'s day'
+    if (dt.month,dt.day)==(1,6):   return 'epiphany'
+    if (dt.month,dt.day)==(2,2):   return 'candlemas'
+    if (dt.month,dt.day)==(2,14):  return 'valentine\'s day'
+    if (dt.month,dt.day)==(3,25):  return 'annunciation'
+    
+    if (dt.month,dt.day)==(7,4):   return 'independence day'
+    if (dt.month,dt.day)==(9,8):   return 'immaculate conception'
+    if (dt.month,dt.day)==(10,31): return 'halloween'
+    if (dt.month,dt.day)==(11,1):  return 'all saints'
+    if (dt.month,dt.day)==(11,11): return 'veteran\'s day'
+    
+    if (dt.month,dt.day)==(12,24): return 'christmas eve'
+    if (dt.month,dt.day)==(12,25): return 'christmas day'
+    if (dt.month,dt.day)==(12,31): return 'new year\'s eve'
+
+    # these are weird lmao
+
+    if (dt.month,dt.weekday())==(5,0) and (get_month(t+7*86400)=='june'): return 'memorial day' # last monday of may
+    if (dt.month,dt.day)==(11,(3-datetime(dt.year,11,1).weekday())%7+22): return 'thanksgiving' # fourth thursday of november
+
+    # a changing month or season is a holiday
+
+    if get_season(t) != get_season(t - 86400): return get_season(t)
+    if get_month(t) != get_month(t - 86400): return get_month(t)
+    
+    return 'no holiday'
+
+def get_liturgy(t=ttime.time()):
+    
+    dt = datetime.fromtimestamp(t)
+    yd = dt.timetuple().tm_yday
+    easter_yd    = easter(dt.year).timetuple().tm_yday 
+    christmas_yd = datetime(dt.year,12,25).timetuple().tm_yday 
+
+    if yd <= 5 or yd >= christmas_yd: return 'christmastide'
+    if 0 < easter_yd - dt.date().timetuple().tm_yday <= 46: 
+        if not dt.weekday() == 0: return 'lent'
+    if -39 < easter_yd - dt.date().timetuple().tm_yday <= 0: return 'eastertide'
+    if christmas_yd - (22 + datetime(dt.year,12,25).weekday()) <= yd < christmas_yd: return 'advent'
+    return 'ordinary time'
+
+def get_context(when):
+    return {'season' : get_season(when), 
+           'weekday' : get_weekday(when), 
+             'month' : get_month(when), 
+               'day' : get_day(when),
+           'liturgy' : get_liturgy(when), 
+           'holiday' : get_holiday(when)
+    }
+
+context_categories = get_context(0).keys()
+context_multipliers = {}
+sample_times = datetime(2020,1,1,12).timestamp() + 86400 * np.arange(366)
+for category in context_categories:
+    samples = np.array([get_context(t)[category] for t in sample_times])
+    context_multipliers[category] = {}
+    for keyword in np.unique(samples):
+        if category == 'holiday': 
+            context_multipliers[category][keyword] = 1e12
+            continue
+        context_multipliers[category][keyword] = np.round(len(samples) / np.sum(keyword==samples))
+
+print(context_multipliers)
 
 def send_email(username, password, html, recipient, subject=''):
 
@@ -152,12 +269,6 @@ class Curator():
                         
         with open(f'{base}/data.json', 'r+') as f:
             self.data = json.load(f)
-
-        with open(f'{base}/context.json', 'r+') as f:
-            self.context = json.load(f)
-        
-        self.sml_kws = [kw for c in ['season', 'month', 'liturgy'] for kw in self.context[c]]
-        self.kw_mult = {'season':4, 'weekday':7, 'month':12, 'day':30, 'liturgy':16, 'holiday':1e16}
 
         authors, titles, keywords, lengths = [], [], [], []
         self.poems = pd.DataFrame(columns=['author', 'title', 'keywords', 'likelihood', 'word_count'])
@@ -270,7 +381,7 @@ class Curator():
         if not title == 'random': self.poems.loc[self.poems['title'] != title, 'likelihood'] = 0
 
         if not self.poems['likelihood'].sum() > 0:
-            raise(Exception(f'The poem \"{title}\" by \"{author}\" is not in the database!'))
+            raise PoemNotFoundError(f'The poem \"{title}\" by \"{author}\" is not in the database!')
 
         for _author in np.unique(self.poems['author']):
             
@@ -296,65 +407,53 @@ class Curator():
 
             self.poems.loc[:, 'likelihood'] *= np.array([4.0 if 'tight' in kws else 1.0 for kws in self.poems['keywords']])
 
-            desired_context = self.get_keywords(self.when)
-            if verbose: print('keywords:', desired_context)
+            context = self.get_context(self.when)
+            if verbose: print(context)
 
-            for icat, category in enumerate(self.context.keys()):
-                for possibility in self.context[category]:
+            for category in context_categories:
+                for keyword in self.context[category]:
 
-                    m = np.array([possibility in kws for kws in self.poems['keywords']])
-                    if possibility == desired_context[icat]:
-                        self.poems.loc[m,'likelihood'] *= self.kw_mult[category]
-                        if very_verbose: print(f'weighted {int(m.sum())} poems with context {possibility}')
+                    m = np.array([keyword in _keywords for _keywords in self.poems['keywords']])
+                    if keyword == context[category]:
+                        self.poems.loc[m, 'likelihood'] *= context_multipliers[category][keyword]
+                        if very_verbose: print(f'weighted {int(m.sum())} poems with context {category}: {keyword}')
 
                     # if we want to use 'spring' as a holiday for the first day of spring, then we need to not
                     # exclude that keyword when it is not that holiday. this translates well; if the holiday is 
                     # also a season, month, or liturgy, then we do not  
-                    
+
                     else:
-                        if category == 'holiday' and possibility in self.sml_kws: continue
                         self.poems.loc[m, 'likelihood'] *= 0
-                        if very_verbose: print(f'disallowed {int(m.sum())} poems with context {possibility}')
+                        if very_verbose: print(f'disallowed {int(m.sum())} poems with context {category}: {keyword}')
+
+        if not self.poems['likelihood'].sum() > 0:
+            raise PoemNotFoundError(f'No poem with the given context')
 
         if very_verbose: print(f'choosing from {len(self.poems)} poems')
         self.poems['p'] = self.poems['likelihood'] / np.sum(self.poems['likelihood'])
         if very_verbose: print(self.poems.sort_values('p',ascending=False).iloc[:10][['author','title','keywords','p']])
         loc = np.random.choice(self.poems.index, p=self.poems['p'])
 
-        # print(self.poems.loc[self.poems.title=='GOBLIN MARKET'])
-
         chosen_author, chosen_title = self.poems.loc[loc, ['author', 'title']]
         print(f'chose poem "{chosen_title}" by {chosen_author}')
-        # self.body = self.data[self.author]['poems'][self.title]['body']
-    
-        # If we exit the loop, and don't have a poem:
-        #if self.body == '':
-        #    raise(Exception(f'No poem with the requirements was found in the database!'))
-
-
 
         self.dt_when = datetime.fromtimestamp(self.when, tz=pytz.utc)
         self.ts_when = self.dt_when.timestamp()
     
         if write_historical:
-
-
             
             when_date, when_time = self.dt_when.isoformat()[:19].split('T')
             self.history.loc[len(self.history)] = chosen_author, chosen_title, tag_historical, when_date, when_time, int(ttime.time())
             self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False,True))
 
             if very_verbose: print(self.stats)
-
             if not repo_name == '':
 
                 hist_blob = self.repo.create_git_blob(self.history.to_csv(), "utf-8")
                 stat_blob = self.repo.create_git_blob(self.stats.to_csv(), "utf-8")
-                #poem_blob = self.repo.create_git_blob(self.archive_poems[['author', 'title', 'keywords', 'word_count']].to_csv(), "utf-8")
 
                 hist_elem = gh.InputGitTreeElement(path='poems/history.csv', mode='100644', type='blob', sha=hist_blob.sha)
                 stat_elem = gh.InputGitTreeElement(path='poems/stats.csv', mode='100644', type='blob', sha=stat_blob.sha)
-                #poem_elem = gh.InputGitTreeElement(path='poems.csv', mode='100644', type='blob', sha=poem_blob.sha)
                 
                 head_sha  = self.repo.get_branch('master').commit.sha
                 base_tree = self.repo.get_git_tree(sha=head_sha)
