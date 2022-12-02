@@ -317,7 +317,6 @@ class Curator():
     def make_stats(self,order_by=None, ascending=True,force_rows=True,force_cols=True):
 
         if self.history is None: raise(Exception('No history has been loaded!'))
-        
         if force_rows: pd.set_option('display.max_rows', None)
         if force_cols: pd.set_option('display.max_columns', None)
         self.stats = pd.DataFrame(columns=['name','birth','death','n_poems','times_sent','days_since_last_sent'])
@@ -335,7 +334,6 @@ class Curator():
                 author='random',
                 title='random',
                 when=ttime.time(), # this needs to be a timestamp
-                title_latency=0,
                 context=False,
                 force_context=False,
                 repo_name='',
@@ -345,7 +343,6 @@ class Curator():
                 write_historical=False,
                 verbose=True,
                 very_verbose=False,
-                include_flags=False,
                 ):
 
         self.poems = self.archive_poems.copy()
