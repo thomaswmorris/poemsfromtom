@@ -84,13 +84,13 @@ for i, entry in curator.history.iterrows():
 
     y, m, d = entry.date.split('-')
 
-    dt = datetime(int(y),int(m),int(d),12,0,0,tzinfo=pytz.utc) 
+    dt = datetime(int(y), int(m), int(d), 12, 0, 0, tzinfo=pytz.utc) 
     dt_prev = datetime.fromtimestamp(dt.timestamp() - 86400)
     dt_next = datetime.fromtimestamp(dt.timestamp() + 86400)
     
     poem = curator.get_poem(author=entry.author, 
                             title=entry.title, 
-                            when=entry.timestamp, 
+                            when=dt.timestamp(), 
                             verbose=False)
 
     print(y, m, d, poem.author, poem.title)

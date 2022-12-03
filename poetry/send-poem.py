@@ -53,7 +53,7 @@ if args.listserv_filename == '':
 contents = curator.repo.get_contents(args.listserv_filename, ref='master')
 entries  = pd.read_csv(StringIO(contents.decoded_content.decode()), index_col=0)
 
-def f(poem, username, password, name, email, subject):
+def thread_process(poem, username, password, name, email, subject):
 
     done, fails = False, 0
     while (not done) and (fails < 10):
@@ -62,11 +62,11 @@ def f(poem, username, password, name, email, subject):
             a, b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
             done = True
         except Exception as e:
-            print(e); fails += 1; ttime.sleep(60)
+            print(e); fails += 1; ttime.sleep(np.random.uniform(low=30,high=120))
 
 for name, email in zip(entries['name'], entries['email']):
 
-    t = threading.Thread(target=f, args=(curated_poem, args.username, args.password, name, email, subject))
+    t = threading.Thread(target=thread_process, args=(curated_poem, args.username, args.password, name, email, subject))
     t.start()
 
 
