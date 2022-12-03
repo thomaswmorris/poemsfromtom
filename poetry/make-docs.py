@@ -41,15 +41,15 @@ history = curator.history.copy()
 
 history['strip_title'] = [re.sub(r'^(THE|AN|A)\s+', '', title) for title in history['title']]
 
-dt_now = datetime.now() #fromtimestamp(history.iloc[-1]['timestamp']).astimezone(pytz.utc)
-now_date, now_time = dt_now.isoformat()[:19].split('T')
-print(f'today is {now_date} {now_time}')
+dt_last = datetime.fromtimestamp(curator.history.iloc[-1].timestamp).astimezone(pytz.utc) #fromtimestamp(history.iloc[-1]['timestamp']).astimezone(pytz.utc)
+last_date, last_time = dt_last.isoformat()[:19].split('T')
+print(f'today is {last_date} {last_time}')
 
 home_index = f'''
     <html>
     <head>
         <title></title>
-        <meta http-equiv="refresh" content="0; url={dt_now.year:02}-{dt_now.month:02}-{dt_now.day:02}"/>
+        <meta http-equiv="refresh" content="0; url={dt_last.year:02}-{dt_last.month:02}-{dt_last.day:02}"/>
     </head>
     </html>
     '''
@@ -79,6 +79,9 @@ elems.append(gh.InputGitTreeElement(path='poems/random.html', mode='100644', typ
 
 n_history = len(history)
 ys, ms, ds = [], [], []
+
+
+
 
 for i, entry in curator.history.iterrows():
 

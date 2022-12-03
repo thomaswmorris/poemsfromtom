@@ -11,7 +11,7 @@ from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-def PoemNotFoundError(Exception):
+def PoemNotFoundError(BaseException):
     pass
 
 base, this_filename = os.path.split(__file__)
@@ -53,6 +53,7 @@ html_flags = {'american' : '&#127482&#127480',
             'south african' : '&#127487&#127462',
                 'swedish' : '&#127480&#127466',
                     'swiss' : '&#127464&#127469',
+                    'syrian' : '',
                 'vietnamese' : '&#127483&#127475', 
                     'welsh' : '&#127988&#917607&#917602&#917623&#917612&#917619&#917631',
                         '' : '',
@@ -214,10 +215,9 @@ def titleize(string):
 def text_to_html(text):
 
     text  = text.replace('--', '&#8212;') # convert emdashes
-    text  = re.sub(r'_(.*?)_', r'<i>\1</i>', text) # convert italic notation
+    text  = re.sub(r'_([\s\S]*?)_', r'<i>\1</i>', text) # convert italic notation
 
     lines = [line if len(line) > 0 else '&nbsp;' for line in text.split('\n')]
-
     html  = '\n'.join([f'<div style="text-align:left" align="center">\n\t{line}\n</div>' for line in lines])
 
     return html
@@ -306,8 +306,10 @@ class Curator():
             self.rhistory = pd.read_csv(StringIO(self.repo_history_contents.decoded_content.decode()),index_col=0)
             self.history  = self.rhistory.loc[self.rhistory['type']!='test']
             self.history.index = np.arange(len(self.history.index))
+            self.history.timestamp = self.history.timestamp.astype(int)
 
         else:
+            
             try:
                 self.history = pd.read_csv('poems/history.csv',index_col=0)
             except Exception as e:
