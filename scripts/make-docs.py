@@ -1,4 +1,5 @@
 from datetime import datetime
+import time as ttime
 import github as gh
 import pytz, re, sys
 sys.path.insert(0, '../poetry')
@@ -48,6 +49,22 @@ random_html = f'''
 
 #######
 
+def commit_elements(elements):
+
+    print(f'committing {len(elements)} elements...')
+
+    now = datetime.now(tz=pytz.utc)
+    now_date, now_time = now.isoformat()[:19].split('T') 
+
+    head_sha  = curator.repo.get_branch('master').commit.sha
+    base_tree = curator.repo.get_git_tree(sha=head_sha)
+
+    tree   = curator.repo.create_git_tree(elements, base_tree)
+    parent = curator.repo.get_git_commit(sha=head_sha) 
+
+    commit = curator.repo.create_git_commit(f'update logs {now_date} {now_time}', tree, [parent])
+    master_ref = curator.repo.get_git_ref('heads/master')
+    master_ref.edit(sha=commit.sha)
 
 blob  = curator.repo.create_git_blob(home_html, "utf-8")
 elems = [gh.InputGitTreeElement(path='poems/index.html', mode='100644', type='blob', sha=blob.sha)]
@@ -123,17 +140,9 @@ for i, entry in curator.history.iterrows():
     print(f'creating file {filepath}')
     print(32*'#')
 
-print(f'committing {len(elems)} elements')
+    if len(elems) > 64: 
+        commit_elements(elems)
+        elems = []
+        ttime.sleep(60) # just chill out, github doesn't like rapid commits
 
-now = datetime.now(tz=pytz.utc)
-now_date, now_time = now.isoformat()[:19].split('T') 
-
-head_sha  = curator.repo.get_branch('master').commit.sha
-base_tree = curator.repo.get_git_tree(sha=head_sha)
-
-tree   = curator.repo.create_git_tree(elems, base_tree)
-parent = curator.repo.get_git_commit(sha=head_sha) 
-
-commit = curator.repo.create_git_commit(f'update logs {now_date} {now_time}', tree, [parent])
-master_ref = curator.repo.get_git_ref('heads/master')
-master_ref.edit(sha=commit.sha)
+commit_elements(elems)
