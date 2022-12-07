@@ -136,7 +136,7 @@ class Curator():
             base_tree = self.repo.get_git_tree(sha=head_sha)
             tree      = self.repo.create_git_tree([hist_elem], base_tree)
             parent    = self.repo.get_git_commit(sha=head_sha) 
-            commit    = self.repo.create_git_commit(f'updated logs @ {datetime.now(tzinfo=pytz.utc).isoformat()[:19]}', tree, [parent])
+            commit    = self.repo.create_git_commit(f'updated logs @ {datetime.now(tz=pytz.utc).isoformat()[:19]}', tree, [parent])
             master_ref = self.repo.get_git_ref('heads/master')
             master_ref.edit(sha=commit.sha)
             
