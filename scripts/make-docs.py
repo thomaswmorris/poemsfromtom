@@ -116,13 +116,11 @@ for i, entry in curator.history.iterrows():
     except: contents = None
     if html == contents:
         continue
-
-    curator.repo.create_file(filepath, "from make-docs", html, branch='master')
-    print(f'created file {filepath}')
+    
 
     blob = curator.repo.create_git_blob(html, "utf-8")
     elems.append(gh.InputGitTreeElement(path=filepath, mode='100644', type='blob', sha=blob.sha))
-
+    print(f'creating file {filepath}')
     print(32*'#')
 
 print(f'committing {len(elems)} elements')
