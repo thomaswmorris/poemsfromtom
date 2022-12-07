@@ -111,7 +111,7 @@ for i, entry in curator.history.iterrows():
 </html>
 '''
 
-    filepath = f'poems/{y}-{m}-{d}.html'Z
+    filepath = f'poems/{y}-{m}-{d}.html'
     try:    contents = curator.repo.get_contents(filepath, ref='master').decoded_content.decode()
     except: contents = None
     if html == contents:
