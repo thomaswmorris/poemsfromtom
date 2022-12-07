@@ -99,7 +99,8 @@ def get_liturgy(t=ttime.time()):
     if christmas_yd - (22 + datetime(dt.year,12,25).weekday()) <= yd < christmas_yd: return 'advent'
     return 'ordinary time'
 
-def get_context(when):
+def get_context(when=None):
+    if when is None: when = ttime.time()
     return {'weekday' : get_weekday(when), 
               'month' : get_month(when), 
                 'day' : get_day(when),

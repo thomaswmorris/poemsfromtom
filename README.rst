@@ -30,9 +30,10 @@ We can additionally
 .. code-block:: python
     
     context = poetry.utils.get_context()
+    print(context)
     
     # Loads a contextual poem, e.g. it will load Christmas poems on Christmas and summer poems during the summer
-    poem = curator.get_poem(context=context, weight_schemes=['context']) 
+    poem = curator.get_poem(context=context) 
     print(poem.body)
     
-Contextual poems are sent daily to the listserv, which can be found `here <https://thomaswmorris.github.io/poems>`_. If you want to be on the email list, just ask me. 
+Contextual poems are sent daily to the listserv. Past poems are on my `website <https://thomaswmorris.github.io/poems>`_. If you want to be on the listserv, just ask me. 

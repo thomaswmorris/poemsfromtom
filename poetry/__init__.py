@@ -153,11 +153,10 @@ class Curator():
                 ):
 
         verbose = verbose or very_verbose
-
         self.poems = self.archive_poems.copy()
 
         if context == 'auto':
-            context = utils.get_context(ttime.time())
+            context = utils.get_context()
 
         self.when = ttime.time() 
         if context is not None:
@@ -191,7 +190,7 @@ class Curator():
             if not hasattr(self, 'history'): 
                 raise Exception('There is no history for the weight scheme.')
 
-            for index, entry in self.history.iterrows():
+            for _, entry in self.history.iterrows():
                 try:
                     loc = self.poems.index[np.where((self.poems.author==entry.author)&(self.poems.title==entry.title))[0][0]]
                     self.poems.drop(loc, inplace=True)
