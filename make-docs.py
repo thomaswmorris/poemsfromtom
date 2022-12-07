@@ -2,7 +2,6 @@ from datetime import datetime
 import calendar
 import pandas as pd
 import github as gh
-import sys; sys.path.insert(1, 'poetry/')
 import numpy as np
 import poetry
 import os, re

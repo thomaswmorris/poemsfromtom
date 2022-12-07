@@ -1,10 +1,12 @@
-import re, smtplib
+import re, os, smtplib
 import numpy as np
 import time as ttime
 from datetime import datetime
 from dateutil.easter import *
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+
+base, this_filename = os.path.split(__file__)
 
 def get_weekday(t=ttime.time()):
     weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
