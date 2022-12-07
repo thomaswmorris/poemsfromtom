@@ -142,21 +142,6 @@ class Curator():
         self.g = gh.Github(self.github_token)
         self.repo = self.g.get_user().get_repo(self.github_repo_name)
 
-    def make_stats(self,order_by=None, ascending=True,force_rows=True,force_cols=True):
-
-        if self.history is None: raise(Exception('No history has been loaded!'))
-        if force_rows: pd.set_option('display.max_rows', None)
-        if force_cols: pd.set_option('display.max_columns', None)
-        self.stats = pd.DataFrame(columns=['name','birth','death','n_poems','times_sent','days_since_last_sent'])
-        for _author in np.unique(np.append(self.poems['author'], self.history['author'])):
-            
-            name, birth, death, nationality, link = self.data[_author]['metadata'].values()
-            elapsed = (ttime.time() - self.history['timestamp'][self.history['author']==_author].max()) / 86400 # if _author in self.history['author'] else None
-            self.stats.loc[_author] = name, birth, death, len(self.data[_author]['poems']), (self.history['author']==_author).sum(), np.round(elapsed,1)
-            
-        if not order_by is None:
-            self.stats = self.stats.sort_values(by=order_by, ascending=ascending)
-
     def read_history(self, filename, from_repo=False, apply_weights=False, verbose=False):
 
         if from_repo:
@@ -174,7 +159,8 @@ class Curator():
 
         self.history = self.history.loc[self.history['type']!='test']
         self.history.index = np.arange(len(self.history.index))
-        self.history.days_since_last_sent[self.history.days_since_last_sent.isna()] = 365
+        self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False, True))
+        self.stats.days_since_last_sent[self.stats.days_since_last_sent.isna()] = 365
 
         if apply_weights:
 
@@ -198,7 +184,7 @@ class Curator():
                 if verbose: print(f'{uauthor:<12} has been weighted by {times_sent_weight:.03f} * {days_since_last_sent_weight:.03f} = {total_weight:.03f}')
                 self.poems.loc[uauthor==self.poems.author, 'likelihood'] *= total_weight
 
-        self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False, True))
+        
 
     def write_history(self, filename, to_repo=False, verbose=False):
 
@@ -222,6 +208,21 @@ class Curator():
         else:
             self.history.to_csv(filename)
             if verbose: print(f'wrote to local history')
+
+    def make_stats(self, order_by=None, ascending=True, force_rows=True, force_cols=True):
+
+        if self.history is None: raise(Exception('No history has been loaded!'))
+        if force_rows: pd.set_option('display.max_rows', None)
+        if force_cols: pd.set_option('display.max_columns', None)
+        self.stats = pd.DataFrame(columns=['name','birth','death','n_poems','times_sent','days_since_last_sent'])
+
+        for uauthor in np.unique(self.history.author):
+            name, birth, death, nationality, link = self.data[uauthor]['metadata'].values()
+            elapsed = (ttime.time() - self.history['timestamp'][self.history.author==uauthor].max()) / 86400 
+            self.stats.loc[uauthor] = name, birth, death, len(self.data[uauthor]['poems']), (self.history['author']==uauthor).sum(), np.round(elapsed,1)
+            
+        if not order_by is None:
+            self.stats = self.stats.sort_values(by=order_by, ascending=ascending)
 
     def get_poem(
                 self,
