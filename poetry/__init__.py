@@ -132,7 +132,8 @@ class Curator():
         self.poems['likelihood'] = 1
         self.poems['word_count'] = lengths
 
-        self.archive_poems = self.poems.copy()
+        self.unique_authors = np.unique(self.poems.authors)
+        self.archive_poems  = self.poems.copy()
         self.history = None
 
     def load_github_repo(self, github_repo_name=None, github_token=None):
@@ -173,18 +174,15 @@ class Curator():
                 except:
                     print(f'error handling entry {entry}')
 
-            for uauthor in np.unique(self.poems.author):
+            for uauthor in self.unique_authors:
                 
                 # weigh by number of poems so that every poet is equally likely (unless you have few poems left) 
-
                 times_sent_weight = np.exp(.25 * np.log(.5) * self.stats.times_sent.loc[uauthor]) # four times sent is a weight of 0.5
                 days_since_last_sent_weight = 1 / (1 + np.exp(-.1 * (self.stats.days_since_last_sent.loc[uauthor] - 42))) # after six weeks, the weight is 0.5
                 total_weight = times_sent_weight * days_since_last_sent_weight
 
-                if verbose: print(f'{uauthor:<12} has been weighted by {times_sent_weight:.03f} * {days_since_last_sent_weight:.03f} = {total_weight:.03f}')
+                if verbose: print(f'weighted {uauthor:<12} by {times_sent_weight:.03f} * {days_since_last_sent_weight:.03f} = {total_weight:.03f}')
                 self.poems.loc[uauthor==self.poems.author, 'likelihood'] *= total_weight
-
-        
 
     def write_history(self, filename, to_repo=False, verbose=False):
 
@@ -216,7 +214,7 @@ class Curator():
         if force_cols: pd.set_option('display.max_columns', None)
         self.stats = pd.DataFrame(columns=['name','birth','death','n_poems','times_sent','days_since_last_sent'])
 
-        for uauthor in np.unique(self.history.author):
+        for uauthor in np.unique(self.poems.authors):
             name, birth, death, nationality, link = self.data[uauthor]['metadata'].values()
             elapsed = (ttime.time() - self.history['timestamp'][self.history.author==uauthor].max()) / 86400 
             self.stats.loc[uauthor] = name, birth, death, len(self.data[uauthor]['poems']), (self.history['author']==uauthor).sum(), np.round(elapsed,1)
@@ -265,7 +263,7 @@ class Curator():
                 raise PoemNotFoundError(f'There are no poem \"{title}\" by any author in the database.')
 
         if weight_scheme == 'author':
-            for uauthor in np.unique(self.poems.author):
+            for uauthor in self.unique_authors:
                 self.poems.loc[uauthor==self.poems.author, 'likelihood'] *= np.minimum(1., 4. / np.sum(uauthor==self.poems.author))
             
         if context is not None:
