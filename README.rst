@@ -35,4 +35,4 @@ We can additionally
     poem = curator.get_poem(context=context, weight_schemes=['context']) 
     print(poem.body)
     
-Contextual poems are sent daily to the listserv, which can be found [here](https://thomaswmorris.github.io/poems). If you want to be on the email list, just ask me. 
+Contextual poems are sent daily to the listserv, which can be found `here <https://thomaswmorris.github.io/poems>`_. If you want to be on the email list, just ask me. 
