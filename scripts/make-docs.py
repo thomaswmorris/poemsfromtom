@@ -112,10 +112,15 @@ for i, entry in curator.history.iterrows():
 '''
 
     filepath = f'poems/{y}-{m}-{d}.html'
-    try:    contents = curator.repo.get_contents(filepath, ref='master').decoded_content.decode()
-    except: contents = None
-    if html == contents:
-        continue
+
+    contents = curator.repo.get_contents(filepath, ref='master').decoded_content.decode()
+    print(contents)
+    print('\n\n\n')
+    print(html)
+    #try:    
+    #except: contents = None
+    #if html == contents:
+    #    continue
     
 
     blob = curator.repo.create_git_blob(html, "utf-8")

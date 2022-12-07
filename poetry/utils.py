@@ -116,7 +116,7 @@ for category in context_categories:
     samples = np.array([get_context(t)[category] for t in sample_times])
     context_multipliers[category] = {}
     for keyword in np.unique(samples):
-        context_multipliers[category][keyword] = np.round(len(samples) / np.sum(keyword==samples))
+        context_multipliers[category][keyword] = np.round(len(samples) / np.sum(keyword==samples), 3)
 
 def send_email(username, password, html, recipient, subject=''):
 
