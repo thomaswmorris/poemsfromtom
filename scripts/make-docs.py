@@ -55,6 +55,7 @@ elems = [gh.InputGitTreeElement(path='poems/index.html', mode='100644', type='bl
 blob  = curator.repo.create_git_blob(random_html, "utf-8")
 elems.append(gh.InputGitTreeElement(path='poems/random.html', mode='100644', type='blob', sha=blob.sha))
 
+n_history = len(history)
 ys, ms, ds = [], [], []
 
 for i, entry in curator.history.iterrows():
@@ -110,7 +111,7 @@ for i, entry in curator.history.iterrows():
 </html>
 '''
 
-    filepath = f'poems/{y}-{m}-{d}.html'
+    filepath = f'poems/{y}-{m}-{d}.html'Z
     try:    contents = curator.repo.get_contents(filepath, ref='master').decoded_content.decode()
     except: contents = None
     if html == contents:
