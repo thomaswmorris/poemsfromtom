@@ -82,7 +82,7 @@ class Curator():
         self.g = gh.Github(self.github_token)
         self.repo = self.g.get_user().get_repo(self.github_repo_name)
 
-    def read_history(self, filename, from_repo=False, apply_weights=False, verbose=False):
+    def read_history(self, filename, from_repo=False):
 
         if from_repo:
             if not hasattr(self, 'repo'):
@@ -101,27 +101,6 @@ class Curator():
         self.history.index = np.arange(len(self.history.index))
         self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False, True))
         self.stats.loc[self.stats.days_since_last_sent.isna(), 'days_since_last_sent'] = 365
-
-        if apply_weights:
-
-            for index, entry in self.history.iterrows():
-                try:
-                    loc = self.poems.index[np.where((self.poems.author==entry.author)&(self.poems.title==entry.title))[0][0]]
-                    if verbose: 
-                        print(f'removing poem {self.poems.loc[loc, "title"]} by {self.poems.loc[loc, "author"]}')
-                    self.poems.drop(loc, inplace=True)
-                except:
-                    print(f'error handling entry {entry}')
-
-            for uauthor in self.unique_authors:
-                
-                # weigh by number of poems so that every poet is equally likely (unless you have few poems left) 
-                times_sent_weight = np.exp(.25 * np.log(.5) * self.stats.times_sent.loc[uauthor]) # four times sent is a weight of 0.5
-                days_since_last_sent_weight = 1 / (1 + np.exp(-.1 * (self.stats.days_since_last_sent.loc[uauthor] - 42))) # after six weeks, the weight is 0.5
-                total_weight = times_sent_weight * days_since_last_sent_weight
-
-                if verbose: print(f'weighted {uauthor:<12} by {times_sent_weight:.03f} * {days_since_last_sent_weight:.03f} = {total_weight:.03f}')
-                self.poems.loc[uauthor==self.poems.author, 'likelihood'] *= total_weight
 
     def write_history(self, filename, to_repo=False, verbose=False):
 
@@ -166,7 +145,7 @@ class Curator():
                 author=None,
                 title=None,
                 context=None,
-                weight_scheme='author',
+                weight_schemes=['author'],
                 forced_contexts=[],
                 historical_tag=None,
                 verbose=True,
@@ -204,9 +183,32 @@ class Curator():
             if not len(self.poems) > 0:
                 raise PoemNotFoundError(f'There are no poem \"{title}\" by any author in the database.')
 
-        if weight_scheme == 'author':
+        if 'author' in weight_schemes:
             for uauthor in self.unique_authors:
                 self.poems.loc[uauthor==self.poems.author, 'likelihood'] *= np.minimum(1., 4. / np.sum(uauthor==self.poems.author))
+
+        if 'history' in weight_schemes:
+            if not hasattr(self, 'history'): 
+                raise Exception('There is no history for the weight scheme.')
+
+            for index, entry in self.history.iterrows():
+                try:
+                    loc = self.poems.index[np.where((self.poems.author==entry.author)&(self.poems.title==entry.title))[0][0]]
+                    self.poems.drop(loc, inplace=True)
+                    if verbose: 
+                        print(f'removing poem {self.poems.loc[loc, "title"]} by {self.poems.loc[loc, "author"]}')
+                except:
+                    print(f'error handling entry {entry}')
+
+            for uauthor in self.unique_authors:
+                
+                # weigh by number of poems so that every poet is equally likely (unless you have few poems left) 
+                times_sent_weight = np.exp(.25 * np.log(.5) * self.stats.times_sent.loc[uauthor]) # four times sent is a weight of 0.5
+                days_since_last_sent_weight = 1 / (1 + np.exp(-.1 * (self.stats.days_since_last_sent.loc[uauthor] - 42))) # after six weeks, the weight is 0.5
+                total_weight = times_sent_weight * days_since_last_sent_weight
+
+                if verbose: print(f'weighted {uauthor:<12} by {times_sent_weight:.03f} * {days_since_last_sent_weight:.03f} = {total_weight:.03f}')
+                self.poems.loc[uauthor==self.poems.author, 'likelihood'] *= total_weight
             
         if context is not None:
 

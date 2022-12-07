@@ -51,7 +51,7 @@ random_html = f'''
 
 def commit_elements(elements):
 
-    print(f'committing {len(elements)} elements...')
+    print(f'\ncommitting {len(elements)} elements...\n')
 
     now = datetime.now(tz=pytz.utc)
     now_date, now_time = now.isoformat()[:19].split('T') 
@@ -140,7 +140,7 @@ for i, entry in curator.history.iterrows():
     print(f'creating file {filepath}')
     print(32*'#')
 
-    if len(elems) > 64: 
+    if len(elems) >= 64: 
         commit_elements(elems)
         elems = []
         ttime.sleep(60) # just chill out, github doesn't like rapid commits
