@@ -140,7 +140,7 @@ class Curator():
             master_ref = self.repo.get_git_ref('heads/master')
             master_ref.edit(sha=commit.sha)
             
-            if verbose: print(f'wrote to repo ({self.github_repo})')
+            if verbose: print(f'wrote to repo ({self.repo})')
 
         else:
             self.history.to_csv(filename)
