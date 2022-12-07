@@ -196,7 +196,7 @@ class Curator():
                     loc = self.poems.index[np.where((self.poems.author==entry.author)&(self.poems.title==entry.title))[0][0]]
                     self.poems.drop(loc, inplace=True)
                     if verbose: 
-                        print(f'removing poem {self.poems.loc[loc, "title"]} by {self.poems.loc[loc, "author"]}')
+                        print(f'removed {entry.title} by {entry.author}')
                 except:
                     print(f'error handling entry {entry}')
 
