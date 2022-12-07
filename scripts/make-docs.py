@@ -22,7 +22,7 @@ dt_last = datetime.fromtimestamp(curator.history.iloc[-1].timestamp).astimezone(
 last_date, last_time = dt_last.isoformat()[:19].split('T')
 print(f'today is {last_date} {last_time}')
 
-home_index = f'''
+home_html = f'''
     <html>
     <head>
         <title></title>
@@ -36,7 +36,7 @@ for i, entry in curator.history.iterrows():
     y, m, d = entry.date.split('-')
     ymds.append(f'{y:0>2}-{m:0>2}-{d:0>2}')
 
-random_index = f'''
+random_html = f'''
     <html>
         <title> </title>
         <script>
@@ -48,11 +48,18 @@ random_index = f'''
 
 #######
 
+'''
 blob  = curator.repo.create_git_blob(home_index, "utf-8")
 elems = [gh.InputGitTreeElement(path='poems/index.html', mode='100644', type='blob', sha=blob.sha)]
 
 blob  = curator.repo.create_git_blob(random_index, "utf-8")
 elems.append(gh.InputGitTreeElement(path='poems/random.html', mode='100644', type='blob', sha=blob.sha))
+'''
+
+curator.repo.create_file('poems/index.html', "from make-docs", home_html, branch='master')
+curator.repo.create_file('poems/random.html', "from make-docs", random_html, branch='master')
+
+assert False
 
 n_history = len(history)
 ys, ms, ds = [], [], []
@@ -110,9 +117,9 @@ for i, entry in curator.history.iterrows():
 </html>
 '''
 
-    index_fn = f'poems/{y}-{m}-{d}.html'
+    filepath = f'poems/{y}-{m}-{d}.html'
 
-    try:    contents = curator.repo.get_contents(index_fn, ref='master').decoded_content.decode()
+    try:    contents = curator.repo.get_contents(filepath, ref='master').decoded_content.decode()
     except: contents = None
 
     print(32*'#')
@@ -120,9 +127,13 @@ for i, entry in curator.history.iterrows():
     if html == contents:
         continue
 
+    curator.repo.create_file(filepath, "from make-docs", html, branch='master')
+    print('created file ')
+
     blob = curator.repo.create_git_blob(html, "utf-8")
     elems.append(gh.InputGitTreeElement(path=index_fn, mode='100644', type='blob', sha=blob.sha))
 
+'''
 now = datetime.now(tz=pytz.utc)
 now_date, now_time = now.isoformat()[:19].split('T') 
 
@@ -135,3 +146,4 @@ parent = curator.repo.get_git_commit(sha=head_sha)
 commit = curator.repo.create_git_commit(f'update logs {now_date} {now_time}', tree, [parent])
 master_ref = curator.repo.get_git_ref('heads/master')
 master_ref.edit(sha=commit.sha)
+'''
