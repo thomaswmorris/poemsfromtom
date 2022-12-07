@@ -15,28 +15,10 @@ parser.add_argument('--repo', type=str, help='Which GH repository to load', defa
 parser.add_argument('--token', type=str, help='GH token', default='')
 args = parser.parse_args()
 
-def commit_elements(_elems):
-
-    dt_now = datetime.fromtimestamp(history.iloc[-1]['timestamp']).astimezone(pytz.utc)
-    now_date, now_time = dt_now.isoformat()[:19].split('T') 
-
-    head_sha  = curator.repo.get_branch('master').commit.sha
-    base_tree = curator.repo.get_git_tree(sha=head_sha)
-
-    tree   = curator.repo.create_git_tree(_elems, base_tree)
-    parent = curator.repo.get_git_commit(sha=head_sha) 
-
-    commit = curator.repo.create_git_commit(f'update logs {now_date} {now_time}', tree, [parent])
-    master_ref = curator.repo.get_git_ref('heads/master')
-    master_ref.edit(sha=commit.sha)
-
 # Initialize the curator
 curator = poetry.Curator()
-
-print(args.repo, args.token)
-
-# Initialize the curator
-curator.load_history(repo_name=args.repo, repo_token=args.token)
+curator.load_github_repo(github_repo_name=args.github_repo_name, github_token=args.github_token)
+curator.read_history(filename='poems/history.csv', from_repo=True, apply_weights=True, verbose=True)
 history = curator.history.copy()
 
 history['strip_title'] = [re.sub(r'^(THE|AN|A)\s+', '', title) for title in history['title']]
@@ -150,4 +132,15 @@ for i, entry in curator.history.iterrows():
     blob = curator.repo.create_git_blob(html, "utf-8")
     elems.append(gh.InputGitTreeElement(path=index_fn, mode='100644', type='blob', sha=blob.sha))
 
-commit_elements(elems)
+now = datetime.now(tzinfo=pytz.utc)
+now_date, now_time = now.isoformat()[:19].split('T') 
+
+head_sha  = curator.repo.get_branch('master').commit.sha
+base_tree = curator.repo.get_git_tree(sha=head_sha)
+
+tree   = curator.repo.create_git_tree(_elems, base_tree)
+parent = curator.repo.get_git_commit(sha=head_sha) 
+
+commit = curator.repo.create_git_commit(f'update logs {now_date} {now_time}', tree, [parent])
+master_ref = curator.repo.get_git_ref('heads/master')
+master_ref.edit(sha=commit.sha)

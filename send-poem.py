@@ -9,34 +9,26 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--username', type=str, help='Email address from which to send the poem',default='')
 parser.add_argument('--password', type=str, help='Email password',default='')
 parser.add_argument('--listserv_filename', type=str, help='Where to send the poem',default='')
-parser.add_argument('--author', type=str, help='Which poet to send', default='random')
-parser.add_argument('--title', type=str, help='Which title to send', default='random')
-parser.add_argument('--repo', type=str, help='Which GH repository to load', default='')
-parser.add_argument('--token', type=str, help='GH token', default='')
-parser.add_argument('--context', type=bool, help='Whether to send contextual poems', default=False)
-parser.add_argument('--rh', type=bool, help='Whether to consider past poems sent', default=False)
-parser.add_argument('--wh', type=bool, help='Whether to consider this poem in the future', default=False)
+parser.add_argument('--github_repo_name', type=str, help='Which GH repository to load', default='')
+parser.add_argument('--github_token', type=str, help='GH token', default='')
 parser.add_argument('--type', type=str, help='What tag to write to the history with', default='')
 parser.add_argument('--vv', type=bool, help='Very verbose', default=False)
 args = parser.parse_args()
 
 # Initialize the curator
 curator = poetry.Curator()
+curator.load_github_repo(github_repo_name=args.github_repo_name, github_token=args.github_token)
+curator.read_history(filename='poems/history.csv', from_repo=True, apply_weights=True, verbose=True)
 
 when = ttime.time() if not args.type == 'test' else ttime.time() + 365 * 86400 * np.random.uniform()
 
+context = poetry.utils.get_context(when)
+
 # Choose a poem that meets the supplied conditions
 curated_poem = curator.get_poem(
-                                author=args.author, 
-                                title=args.title, 
-                                repo_name=args.repo,
-                                repo_token=args.token,
-                                when=when, 
-                                context=args.context, 
-                                tag_historical=args.type,
-                                write_historical=args.wh,
-                                read_historical=args.rh, 
-                                verbose=True,
+                                context=context, 
+                                forced_contexts=['holiday'],
+                                historical_tag=args.type,
                                 very_verbose=args.vv,
                                 )
 
