@@ -68,6 +68,7 @@ for i, entry in curator.history.iterrows():
     
     poem = curator.get_poem(author=entry.author, 
                             title=entry.title, 
+                            context={'timestamp' : dt.timestamp()},
                             verbose=False)
 
     print(y, m, d, poem.author, poem.title)
@@ -117,7 +118,6 @@ for i, entry in curator.history.iterrows():
     if html == contents:
         continue
     
-
     blob = curator.repo.create_git_blob(html, "utf-8")
     elems.append(gh.InputGitTreeElement(path=filepath, mode='100644', type='blob', sha=blob.sha))
     print(f'creating file {filepath}')

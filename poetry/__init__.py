@@ -180,7 +180,10 @@ class Curator():
         if context == 'auto':
             context = utils.get_context(ttime.time())
 
-        self.when  = ttime.time() if context is None else context['timestamp']
+        self.when = ttime.time() 
+        if context is not None:
+            if 'timestamp' in context.keys():
+                self.when = context['timestamp']
 
         # if author is supplied, get rid of poems not by that author
         if author is not None: 
@@ -213,9 +216,8 @@ class Curator():
             # if the category is forced, then we multiply by some arbitrarily large number. we don't multiply (~category) by 0 because this
             # would throw an error if there were no suitable poems, so this is a bit more flexible for workflows and things. 
 
-
-
             for category in utils.context_categories:
+                if not category in context.keys(): continue
                 for keyword in utils.context_multipliers[category].keys():
                     has_keyword = np.array([keyword==kwdict[category] if category in kwdict.keys() else False for kwdict in self.poems.keywords])
                     if not has_keyword.sum() > 0: continue
