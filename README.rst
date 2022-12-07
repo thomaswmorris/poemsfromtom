@@ -3,7 +3,7 @@
 Usage
 -----
 
-The ```poetry``` package works with a curator, initialized as 
+The ``poetry`` package works with a curator, initialized as 
 
 .. code-block:: python
 
