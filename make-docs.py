@@ -11,8 +11,8 @@ import pytz
 
 import argparse, sys
 parser = argparse.ArgumentParser()
-parser.add_argument('--repo', type=str, help='Which GH repository to load', default='')
-parser.add_argument('--token', type=str, help='GH token', default='')
+parser.add_argument('--github_repo_name', type=str, help='Which GH repository to load', default='')
+parser.add_argument('--github_token', type=str, help='GH token', default='')
 args = parser.parse_args()
 
 # Initialize the curator
