@@ -31,7 +31,7 @@ We can additionally
     
     context = poetry.utils.get_context()
     
-    # Loads a contextual poem, e.g. Christmas poems on Christmas and summer poems during the summer
+    # Loads a contextual poem, e.g. it will load Christmas poems on Christmas and summer poems during the summer
     poem = curator.get_poem(context=context, weight_schemes=['context']) 
     print(poem.body)
     
