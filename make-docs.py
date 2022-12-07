@@ -127,13 +127,13 @@ for i, entry in curator.history.iterrows():
     blob = curator.repo.create_git_blob(html, "utf-8")
     elems.append(gh.InputGitTreeElement(path=index_fn, mode='100644', type='blob', sha=blob.sha))
 
-now = datetime.now(tzinfo=pytz.utc)
+now = datetime.now(tz=pytz.utc)
 now_date, now_time = now.isoformat()[:19].split('T') 
 
 head_sha  = curator.repo.get_branch('master').commit.sha
 base_tree = curator.repo.get_git_tree(sha=head_sha)
 
-tree   = curator.repo.create_git_tree(_elems, base_tree)
+tree   = curator.repo.create_git_tree(elems, base_tree)
 parent = curator.repo.get_git_commit(sha=head_sha) 
 
 commit = curator.repo.create_git_commit(f'update logs {now_date} {now_time}', tree, [parent])

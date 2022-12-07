@@ -31,6 +31,8 @@ curated_poem = curator.get_poem(
                                 very_verbose=True,
                                 )
 
+curator.write_history(filename='poems/history.csv', to_repo=True, verbose=True)
+
 if args.type == 'test':
     subject = f'(TEST) {curated_poem.nice_fancy_date}: {curated_poem.header}'
 elif args.type == 'daily':
