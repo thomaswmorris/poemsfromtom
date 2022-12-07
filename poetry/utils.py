@@ -97,15 +97,6 @@ def get_liturgy(t=ttime.time()):
     if christmas_yd - (22 + datetime(dt.year,12,25).weekday()) <= yd < christmas_yd: return 'advent'
     return 'ordinary time'
 
-def get_feast(t=ttime.time()):
-    
-    if yd <= 5 or yd >= christmas_yd: return 'christmastide'
-    if 0 < easter_yd - dt.date().timetuple().tm_yday <= 46: 
-        if not dt.weekday() == 0: return 'lent'
-    if -39 < easter_yd - dt.date().timetuple().tm_yday <= 0: return 'eastertide'
-    if christmas_yd - (22 + datetime(dt.year,12,25).weekday()) <= yd < christmas_yd: return 'advent'
-    return 'ordinary time'
-
 def get_context(when):
     return {'weekday' : get_weekday(when), 
               'month' : get_month(when), 
