@@ -18,7 +18,7 @@ args = parser.parse_args()
 # Initialize the curator
 curator = poetry.Curator()
 curator.load_github_repo(github_repo_name=args.github_repo_name, github_token=args.github_token)
-curator.read_history(filename='poems/history.csv', from_repo=True, apply_weights=True, verbose=True)
+curator.read_history(filename='poems/history.csv', from_repo=True)
 
 when = ttime.time() if not args.type == 'test' else ttime.time() + 365 * 86400 * np.random.uniform()
 
