@@ -17,7 +17,7 @@ args = parser.parse_args()
 # Initialize the curator
 curator = poetry.Curator()
 curator.load_github_repo(github_repo_name=args.github_repo_name, github_token=args.github_token)
-curator.read_history(filename='poems/history.csv', from_repo=True, apply_weights=True, verbose=True)
+curator.read_history(filename='poems/history.csv', from_repo=True, apply_weights=False, verbose=True)
 history = curator.history.copy()
 
 history['strip_title'] = [re.sub(r'^(THE|AN|A)\s+', '', title) for title in history['title']]
@@ -61,9 +61,6 @@ elems.append(gh.InputGitTreeElement(path='poems/random.html', mode='100644', typ
 n_history = len(history)
 ys, ms, ds = [], [], []
 
-
-
-
 for i, entry in curator.history.iterrows():
 
     y, m, d = entry.date.split('-')
@@ -74,7 +71,6 @@ for i, entry in curator.history.iterrows():
     
     poem = curator.get_poem(author=entry.author, 
                             title=entry.title, 
-                            when=dt.timestamp(), 
                             verbose=False)
 
     print(y, m, d, poem.author, poem.title)

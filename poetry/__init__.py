@@ -1,4 +1,4 @@
-import re, os, pytz, json, smtplib
+import os, pytz, json
 import time as ttime
 import numpy as np
 import pandas as pd
@@ -100,7 +100,7 @@ class Curator():
         self.history = self.history.loc[self.history['type']!='test']
         self.history.index = np.arange(len(self.history.index))
         self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False, True))
-        self.stats.days_since_last_sent[self.stats.days_since_last_sent.isna()] = 365
+        self.stats.loc[self.stats.days_since_last_sent.isna(), 'days_since_last_sent'] = 365
 
         if apply_weights:
 
