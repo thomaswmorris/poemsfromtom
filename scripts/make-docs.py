@@ -48,20 +48,13 @@ random_html = f'''
 
 #######
 
-'''
-blob  = curator.repo.create_git_blob(home_index, "utf-8")
+
+blob  = curator.repo.create_git_blob(home_html, "utf-8")
 elems = [gh.InputGitTreeElement(path='poems/index.html', mode='100644', type='blob', sha=blob.sha)]
 
-blob  = curator.repo.create_git_blob(random_index, "utf-8")
+blob  = curator.repo.create_git_blob(random_html, "utf-8")
 elems.append(gh.InputGitTreeElement(path='poems/random.html', mode='100644', type='blob', sha=blob.sha))
-'''
 
-curator.repo.create_file('poems/index.html', "from make-docs", home_html, branch='master')
-curator.repo.create_file('poems/random.html', "from make-docs", random_html, branch='master')
-
-assert False
-
-n_history = len(history)
 ys, ms, ds = [], [], []
 
 for i, entry in curator.history.iterrows():
@@ -118,22 +111,21 @@ for i, entry in curator.history.iterrows():
 '''
 
     filepath = f'poems/{y}-{m}-{d}.html'
-
     try:    contents = curator.repo.get_contents(filepath, ref='master').decoded_content.decode()
     except: contents = None
-
-    print(32*'#')
-
     if html == contents:
         continue
 
     curator.repo.create_file(filepath, "from make-docs", html, branch='master')
-    print('created file ')
+    print(f'created file {filepath}')
 
     blob = curator.repo.create_git_blob(html, "utf-8")
-    elems.append(gh.InputGitTreeElement(path=index_fn, mode='100644', type='blob', sha=blob.sha))
+    elems.append(gh.InputGitTreeElement(path=filepath, mode='100644', type='blob', sha=blob.sha))
 
-'''
+    print(32*'#')
+
+print(f'committing {len(elems)} elements')
+
 now = datetime.now(tz=pytz.utc)
 now_date, now_time = now.isoformat()[:19].split('T') 
 
@@ -146,4 +138,3 @@ parent = curator.repo.get_git_commit(sha=head_sha)
 commit = curator.repo.create_git_commit(f'update logs {now_date} {now_time}', tree, [parent])
 master_ref = curator.repo.get_git_ref('heads/master')
 master_ref.edit(sha=commit.sha)
-'''
