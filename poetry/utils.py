@@ -2,6 +2,8 @@ import numpy as np
 import time as ttime
 from datetime import datetime
 from dateutil.easter import *
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 def get_weekday(t=ttime.time()):
     weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
@@ -121,3 +123,52 @@ for category in context_categories:
     context_multipliers[category] = {}
     for keyword in np.unique(samples):
         context_multipliers[category][keyword] = np.round(len(samples) / np.sum(keyword==samples))
+
+def send_email(username, password, html, recipient, subject=''):
+
+        message = MIMEMultipart('alternative')
+        message['From']    = username
+        message['To']      = recipient
+        message['Subject'] = subject
+        message.attach(MIMEText(html, 'html'))
+        
+        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        server.login(username, password)
+        server.send_message(message)
+        server.quit()
+
+def titleize(string):
+
+    with open(f'{base}/minor-words.txt','r') as f:
+        words_to_not_capitalize = f.read().split('\n')
+
+    delims = [': ', '\"', ' ', 'O\'', '-', '(']
+    string = re.sub(r'\ \_[0-9]+\_','',string).lower()
+    for delim in delims:  
+        words = string.split(delim)
+        for i, s in enumerate(words):
+            
+            if (not len(s) > 0) or (s in ['\"','\'']):
+                continue
+
+            if (i in [0,len(words)-1]) or not ((s in words_to_not_capitalize) and not delim == '-'): 
+                i_cap = list(re.finditer('[^\"\']',s))[0].start()
+                words[i] = words[i][:i_cap] + words[i][i_cap].capitalize() + words[i][i_cap+1:]
+
+            if np.isin(list(s),['I','V','X']).all():
+                words[i] = s.upper()
+
+        string = delim.join(words)
+
+    string = re.sub(r'\'S ','\'s ',string)
+    return string
+
+def text_to_html(text):
+
+    text  = text.replace('--', '&#8212;') # convert emdashes
+    text  = re.sub(r'_([\s\S]*?)_', r'<i>\1</i>', text) # convert italic notation
+
+    lines = [line if len(line) > 0 else '&nbsp;' for line in text.split('\n')]
+    html  = '\n'.join([f'<div style="text-align:left" align="center">\n\t{line}\n</div>' for line in lines])
+
+    return html

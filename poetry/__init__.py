@@ -1,78 +1,17 @@
-import re, pytz, json, smtplib
+import re, os, pytz, json, smtplib
 import time as ttime
 import numpy as np
 import pandas as pd
 import github as gh
 from io import StringIO
-import os
 
-from dateutil.easter import *
 from datetime import datetime
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-
 from . import utils
 
 def PoemNotFoundError(BaseException):
     pass
 
 base, this_filename = os.path.split(__file__)
-
-
-
-
-
-def send_email(username, password, html, recipient, subject=''):
-
-        message = MIMEMultipart('alternative')
-        message['From']    = username
-        message['To']      = recipient
-        message['Subject'] = subject
-        message.attach(MIMEText(html, 'html'))
-        
-        server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-        server.login(username, password)
-        server.send_message(message)
-        server.quit()
-
-#def send_poem(poem, username, password, recipient, tag=''):
-#    send_email(username, password, poem.email_html, recipient, subject=f'{tag}: {poem.header}')      
-
-def titleize(string):
-
-    with open(f'{base}/minor-words.txt','r') as f:
-        words_to_not_capitalize = f.read().split('\n')
-
-    delims = [': ', '\"', ' ', 'O\'', '-', '(']
-    string = re.sub(r'\ \_[0-9]+\_','',string).lower()
-    for delim in delims:  
-        words = string.split(delim)
-        for i, s in enumerate(words):
-            
-            if (not len(s) > 0) or (s in ['\"','\'']):
-                continue
-
-            if (i in [0,len(words)-1]) or not ((s in words_to_not_capitalize) and not delim == '-'): 
-                i_cap = list(re.finditer('[^\"\']',s))[0].start()
-                words[i] = words[i][:i_cap] + words[i][i_cap].capitalize() + words[i][i_cap+1:]
-
-            if np.isin(list(s),['I','V','X']).all():
-                words[i] = s.upper()
-
-        string = delim.join(words)
-
-    string = re.sub(r'\'S ','\'s ',string)
-    return string
-
-def text_to_html(text):
-
-    text  = text.replace('--', '&#8212;') # convert emdashes
-    text  = re.sub(r'_([\s\S]*?)_', r'<i>\1</i>', text) # convert italic notation
-
-    lines = [line if len(line) > 0 else '&nbsp;' for line in text.split('\n')]
-    html  = '\n'.join([f'<div style="text-align:left" align="center">\n\t{line}\n</div>' for line in lines])
-
-    return html
 
 class Poem():
 
@@ -87,18 +26,18 @@ class Poem():
 
         self.html_body = f'''<blockquote style="font-family:Baskerville; font-size: 18px" align="left">
         <div style="text-indent: -1em; padding-left:1em;">
-        {text_to_html(self.body)}
+        {utils.text_to_html(self.body)}
         </div>
         </blockquote>'''
         self.date_time = datetime.fromtimestamp(when).replace(tzinfo=pytz.utc)
         self.nice_fancy_date = f'{utils.get_weekday(self.when).capitalize()} {utils.get_month(self.when).capitalize()} {self.date_time.day}, {self.date_time.year}'
         
-        self.header = f'“{titleize(title)}” by {self.author_name}'
+        self.header = f'“{utils.titleize(title)}” by {self.author_name}'
 
         self.html_header = f'''<p style="font-family:Baskerville; font-size: 18px; line-height: 1.5;">
             <i>{self.nice_fancy_date}</i>
             <br>
-            <span style="font-family:Georgia; font-size: 24px;"><b>{titleize(title)}</b></span>
+            <span style="font-family:Georgia; font-size: 24px;"><b>{utils.titleize(title)}</b></span>
             <i>by <a href="{self.link}">{self.author_name}</a> ({self.birth}&#8212;{self.death})</i></p>
             </p>'''
 
@@ -132,7 +71,7 @@ class Curator():
         self.poems['likelihood'] = 1
         self.poems['word_count'] = lengths
 
-        self.unique_authors = np.unique(self.poems.authors)
+        self.unique_authors = np.unique(self.poems.author)
         self.archive_poems  = self.poems.copy()
         self.history = None
 
