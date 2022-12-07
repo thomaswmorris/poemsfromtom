@@ -1,12 +1,7 @@
 from datetime import datetime
-import calendar
-import pandas as pd
 import github as gh
-import numpy as np
+import pytz, re, sys
 import poetry
-import os, re
-from io import StringIO
-import pytz
 
 import argparse, sys
 parser = argparse.ArgumentParser()

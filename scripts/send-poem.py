@@ -1,9 +1,10 @@
 import time as ttime
 import numpy as np
 import pandas as pd
-import argparse, poetry, sys, threading
+import argparse, sys, threading
 from io import StringIO
 from datetime import datetime
+import poetry
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--username', type=str, help='Email address from which to send the poem',default='')

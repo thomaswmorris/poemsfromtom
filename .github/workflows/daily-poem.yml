@@ -22,9 +22,9 @@ jobs:
 
       - name: Curate a poem, and send it to the listserv
         run:
-          python send-poem.py --type 'daily' --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --listserv_filename 'poems/listserv.csv'
+          python scripts/send-poem.py --type 'daily' --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --listserv_filename 'poems/listserv.csv'
           --github_repo_name 'thomaswmorris.github.io' --github_token ${{ secrets.GH_TOKEN }}
 
       - name: Update repo pages
         run:
-          python make-docs.py --github_repo_name 'thomaswmorris.github.io' --github_token ${{ secrets.GH_TOKEN }} 
+          python scripts/make-docs.py --github_repo_name 'thomaswmorris.github.io' --github_token ${{ secrets.GH_TOKEN }} 
