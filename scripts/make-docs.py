@@ -1,6 +1,7 @@
 from datetime import datetime
 import github as gh
 import pytz, re, sys
+sys.path.insert(0, '../poetry')
 import poetry
 
 import argparse, sys

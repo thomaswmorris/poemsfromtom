@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import argparse, sys, threading
 from io import StringIO
-from datetime import datetime
+sys.path.insert(0, '../poetry')
 import poetry
 
 parser = argparse.ArgumentParser()
