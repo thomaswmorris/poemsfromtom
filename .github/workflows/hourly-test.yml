@@ -22,5 +22,5 @@ jobs:
 
       - name: Curate a poem, and send it to the testserv
         run:
-          python poetry/send-poem.py --type 'test' --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --listserv_filename 'poems/testserv.csv'
-          --repo 'thomaswmorris.github.io' --token ${{ secrets.GH_TOKEN }} --context true --rh true --wh true --vv true
+          python send-poem.py --type 'test' --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --listserv_filename 'poems/testserv.csv'
+          --github_repo_name 'thomaswmorris.github.io' --github_token ${{ secrets.GH_TOKEN }} 

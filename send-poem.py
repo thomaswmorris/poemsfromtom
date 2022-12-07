@@ -12,7 +12,6 @@ parser.add_argument('--listserv_filename', type=str, help='Where to send the poe
 parser.add_argument('--github_repo_name', type=str, help='Which GH repository to load', default='')
 parser.add_argument('--github_token', type=str, help='GH token', default='')
 parser.add_argument('--type', type=str, help='What tag to write to the history with', default='')
-parser.add_argument('--vv', type=bool, help='Very verbose', default=False)
 args = parser.parse_args()
 
 # Initialize the curator
@@ -29,7 +28,7 @@ curated_poem = curator.get_poem(
                                 context=context, 
                                 forced_contexts=['holiday'],
                                 historical_tag=args.type,
-                                very_verbose=args.vv,
+                                very_verbose=True,
                                 )
 
 if args.type == 'test':
