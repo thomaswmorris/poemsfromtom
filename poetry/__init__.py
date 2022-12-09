@@ -101,13 +101,14 @@ class Curator():
         self.history.index = np.arange(len(self.history.index))
         self.make_stats() # order_by=['times_sent', 'days_since_last_sent'], ascending=(False, True))
 
-    def write_to_repo(self, items, branch='master'):
+    def write_to_repo(self, items, branch='master', verbose=False):
 
         elements = []
         for filename, content in items.items():
 
             blob = self.repo.create_git_blob(content, "utf-8")
             elements.append(gh.InputGitTreeElement(path=filename, mode='100644', type='blob', sha=blob.sha))
+            if verbose: print(f'writing to {self.github_repo_name}/{filename}')
 
         head_sha   = self.repo.get_branch(branch).commit.sha
         base_tree  = self.repo.get_git_tree(sha=head_sha)
