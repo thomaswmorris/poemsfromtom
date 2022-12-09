@@ -101,16 +101,20 @@ class Curator():
         self.history.index = np.arange(len(self.history.index))
         self.make_stats() # order_by=['times_sent', 'days_since_last_sent'], ascending=(False, True))
 
-    def write_to_repo(self, filename, content):
+    def write_to_repo(self, items, branch='master'):
 
-        hist_blob = self.repo.create_git_blob(content, "utf-8")
-        hist_elem = gh.InputGitTreeElement(path=filename, mode='100644', type='blob', sha=hist_blob.sha)
-        head_sha  = self.repo.get_branch('master').commit.sha
-        base_tree = self.repo.get_git_tree(sha=head_sha)
-        tree      = self.repo.create_git_tree([hist_elem], base_tree)
-        parent    = self.repo.get_git_commit(sha=head_sha) 
-        commit    = self.repo.create_git_commit(f'updated logs @ {datetime.now(tz=pytz.utc).isoformat()[:19]}', tree, [parent])
-        master_ref = self.repo.get_git_ref('heads/master')
+        elements = []
+        for filename, content in items.items():
+
+            blob = self.repo.create_git_blob(content, "utf-8")
+            elements.append(gh.InputGitTreeElement(path=filename, mode='100644', type='blob', sha=blob.sha))
+
+        head_sha   = self.repo.get_branch(branch).commit.sha
+        base_tree  = self.repo.get_git_tree(sha=head_sha)
+        tree       = self.repo.create_git_tree(elements, base_tree)
+        parent     = self.repo.get_git_commit(sha=head_sha) 
+        commit     = self.repo.create_git_commit(f'updated logs @ {datetime.now(tz=pytz.utc).isoformat()[:19]}', tree, [parent])
+        master_ref = self.repo.get_git_ref(f'heads/{branch}')
         master_ref.edit(sha=commit.sha)
 
     def make_stats(self, order_by=None, ascending=True, force_rows=True, force_cols=True):
