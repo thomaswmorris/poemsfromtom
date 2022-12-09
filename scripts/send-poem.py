@@ -33,8 +33,8 @@ curated_poem = curator.get_poem(
                                 very_verbose=True,
                                 )
 
-curator.write_to_repo(content={'poems/history.csv' : curator.history.to_csv(),
-                                 'poems/stats/csv' : curator.stats.to_csv()})
+curator.write_to_repo(items={'poems/history.csv' : curator.history.to_csv(),
+                               'poems/stats/csv' : curator.stats.to_csv()})
 
 if args.type == 'test':
     subject = f'(TEST) {curated_poem.nice_fancy_date}: {curated_poem.header}'
