@@ -99,8 +99,7 @@ class Curator():
 
         self.history = self.history.loc[self.history['type']!='test']
         self.history.index = np.arange(len(self.history.index))
-        self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False, True))
-        self.stats.loc[self.stats.days_since_last_sent.isna(), 'days_since_last_sent'] = 365
+        self.make_stats() # order_by=['times_sent', 'days_since_last_sent'], ascending=(False, True))
 
     def write_to_repo(self, filename, content):
 
@@ -192,7 +191,7 @@ class Curator():
                 
                 # weigh by number of poems so that every poet is equally likely (unless you have few poems left) 
                 times_sent_weight = np.exp(.25 * np.log(.5) * self.stats.times_sent.loc[uauthor]) # four times sent is a weight of 0.5
-                days_since_last_sent_weight = 1 / (1 + np.exp(-.1 * (self.stats.days_since_last_sent.loc[uauthor] - 42))) # after six weeks, the weight is 0.5
+                days_since_last_sent_weight = 1 / (1 + np.exp(-.1 * (self.stats.days_since_last_sent.loc[uauthor].fillna(365) - 42))) # after six weeks, the weight is 0.5
                 total_weight = times_sent_weight * days_since_last_sent_weight
 
                 if verbose: print(f'weighted {uauthor:<12} by {times_sent_weight:.03f} * {days_since_last_sent_weight:.03f} = {total_weight:.03f}')
