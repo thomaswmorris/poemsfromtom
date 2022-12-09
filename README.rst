@@ -3,7 +3,7 @@
 Usage
 -----
 
-The ``poetry`` package works with a curator, initialized as 
+The ``poetry`` package works with the ``Curator``, initialized as 
 
 .. code-block:: python
 
@@ -11,29 +11,39 @@ The ``poetry`` package works with a curator, initialized as
     
     curator = poetry.Curator()
     
-We can get a random poem from a specified poet:
+It can get us a random poem by a specified poet
 
 .. code-block:: python
     
-    poem = curator.get_poem(author="frost") # Robert Frost
+    # Load a random poem by Robert Frost
+    poem = curator.get_poem(author="frost")
     print(poem.body)
     
-or a specified poem:
+or a specified poem by a specified poet
 
 .. code-block:: python
     
-    poem = curator.get_poem(author="blake", title="THE TYGER") # "The Tyger" by William Blake
+    # Load "The Tyger" by William Blake
+    poem = curator.get_poem(author="blake", title="THE TYGER") 
     print(poem.body)
 
-We can additionally 
+assuming that it is in the database (which you can see as ``curator.poems``). We can also load contextual poems, so that it loads summer poems during the summer, Christmas poems on Christmas, etc.
+
+.. code-block:: python
+    
+    context = poetry.utils.get_context() # Just a dictionary
+    print(context)
+    
+    poem = curator.get_poem(context=context) # Loads a contextual poem
+
+Note that if it's summertime, this does not guarantee a summer poem (rather, it only excludes e.g. winter poems and adjusts the likelihood of summer poems to make up for al the times during the year that it isn't summer), though we can force the context if we want:
 
 .. code-block:: python
     
     context = poetry.utils.get_context()
     print(context)
     
-    # Loads a contextual poem, e.g. it will load Christmas poems on Christmas and summer poems during the summer
-    poem = curator.get_poem(context=context) 
-    print(poem.body)
+    poem = curator.get_poem(context=context, forced_contexts=['holiday']) # A guaranteed holiday poem, assuming it's a holiday when you run this
+    poem = curator.get_poem(context=context, forced_contexts=['season']) # A guaranteed winter/spring/summer/autumn poem
     
-Contextual poems are sent daily to the listserv. Past poems are on my `website <https://thomaswmorris.github.io/poems>`_. If you want to be on the listserv, just ask me. 
+Unforced contextual poems are sent daily to the listserv. Past poems are on my `website <https://thomaswmorris.github.io/poems>`_. If you want to be on the listserv, just ask me. 

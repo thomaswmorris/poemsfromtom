@@ -102,28 +102,17 @@ class Curator():
         self.make_stats(order_by=['times_sent', 'days_since_last_sent'], ascending=(False, True))
         self.stats.loc[self.stats.days_since_last_sent.isna(), 'days_since_last_sent'] = 365
 
-    def write_history(self, filename, to_repo=False, verbose=False):
+    def write_to_repo(self, filename, content):
 
-        if to_repo:
-
-            if not hasattr(self, 'repo'):
-                raise Exception('The curator has not loaded a github repository.')
-
-            hist_blob = self.repo.create_git_blob(self.history.to_csv(), "utf-8")
-            hist_elem = gh.InputGitTreeElement(path=filename, mode='100644', type='blob', sha=hist_blob.sha)
-            head_sha  = self.repo.get_branch('master').commit.sha
-            base_tree = self.repo.get_git_tree(sha=head_sha)
-            tree      = self.repo.create_git_tree([hist_elem], base_tree)
-            parent    = self.repo.get_git_commit(sha=head_sha) 
-            commit    = self.repo.create_git_commit(f'updated logs @ {datetime.now(tz=pytz.utc).isoformat()[:19]}', tree, [parent])
-            master_ref = self.repo.get_git_ref('heads/master')
-            master_ref.edit(sha=commit.sha)
-            
-            if verbose: print(f'wrote to repo ({self.repo})')
-
-        else:
-            self.history.to_csv(filename)
-            if verbose: print(f'wrote to local history')
+        hist_blob = self.repo.create_git_blob(content, "utf-8")
+        hist_elem = gh.InputGitTreeElement(path=filename, mode='100644', type='blob', sha=hist_blob.sha)
+        head_sha  = self.repo.get_branch('master').commit.sha
+        base_tree = self.repo.get_git_tree(sha=head_sha)
+        tree      = self.repo.create_git_tree([hist_elem], base_tree)
+        parent    = self.repo.get_git_commit(sha=head_sha) 
+        commit    = self.repo.create_git_commit(f'updated logs @ {datetime.now(tz=pytz.utc).isoformat()[:19]}', tree, [parent])
+        master_ref = self.repo.get_git_ref('heads/master')
+        master_ref.edit(sha=commit.sha)
 
     def make_stats(self, order_by=None, ascending=True, force_rows=True, force_cols=True):
 
