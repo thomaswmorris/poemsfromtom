@@ -33,8 +33,7 @@ curated_poem = curator.get_poem(
                                 very_verbose=True,
                                 )
 
-curator.write_to_repo(items={'poems/history.csv' : curator.history.to_csv(),
-                               'poems/stats/csv' : curator.stats.to_csv()}, verbose=True)
+curator.write_to_repo(items={'poems/history.csv' : curator.history.to_csv(), 'poems/stats.csv' : curator.stats.to_csv()}, verbose=True)
 
 if args.type == 'test':
     subject = f'(TEST) {curated_poem.nice_fancy_date}: {curated_poem.header}'
@@ -52,13 +51,13 @@ entries  = pd.read_csv(StringIO(contents.decoded_content.decode()), index_col=0)
 def thread_process(poem, username, password, name, email, subject):
 
     done, fails = False, 0
-    while (not done) and (fails < 10):
+    while (not done) and (fails < 60):
         try:
             poetry.utils.send_email(username, password, poem.email_html, email, subject)
             a, b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
             done = True
         except Exception as e:
-            print(e); fails += 1; ttime.sleep(np.random.uniform(low=30,high=120))
+            print(e); fails += 1; ttime.sleep(30)
 
 for name, email in zip(entries['name'], entries['email']):
 
