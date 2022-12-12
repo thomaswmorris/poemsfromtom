@@ -1,7 +1,8 @@
-import dateutil, re, os, pytz, smtplib
+import re, os, pytz, smtplib
 import numpy as np
 import time as ttime
 from datetime import datetime
+from dateutil.easter import easter
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
@@ -45,7 +46,7 @@ def get_holiday(t=None):
     yd = dt.timetuple().tm_yday
     
     # these are easter things, which supercede all others
-    easter_yd = dateutil.easter(dt.year).timetuple().tm_yday 
+    easter_yd = easter(dt.year).timetuple().tm_yday 
     if yd == easter_yd - 47: return 'mardi_gras'
     if yd == easter_yd - 46: return 'ash_wednesday'
     if yd == easter_yd - 7:  return 'palm_sunday'
@@ -107,7 +108,7 @@ def get_liturgy(t=ttime.time()):
     
     dt = get_utc_datetime(t)
     yd = dt.timetuple().tm_yday
-    easter_yd = dateutil.easter(dt.year).timetuple().tm_yday 
+    easter_yd = easter(dt.year).timetuple().tm_yday 
     christmas_yd = datetime(dt.year,12,25).timetuple().tm_yday 
 
     if yd <= 5 or yd >= christmas_yd: return 'christmastide'

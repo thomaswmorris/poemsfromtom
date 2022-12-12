@@ -32039,7 +32039,52 @@
 
 *** T. S. Eliot (1888 - 1965)
 
-	1. THE CULTIVATION OF CHRISTMAS TREES
+	1. A SONG FOR SIMEON
+
+		Lord, they Roman hyacinths are blooming in bowls and
+		The winter sun creeps by the snow hills;
+		The stubborn season has made stand.
+		My life is light, waiting for the death wind,
+		Like a feather on the back of my hand.
+		Dust in sunlight and memory in corners
+		Wait for the wind that chills towards the dead land.
+		
+		Grant us they peace.
+		I have walked many years in this city,
+		Kept faith and fast, provided for the poor,
+		have given and taken honour and ease.
+		There went never any rejected from my door.
+		Who shall remember my house, where shall live my children’s
+		children?
+		When the time of sorrow is come?
+		They will take to the goat’s path, and the fox’s home,
+		Fleeing from foreign faces and the foreign swords.
+		
+		Before the time of cords and scourges and lamentation
+		Grant us thy peace.
+		Before the stations of the mountain of desolation,
+		Before the certain hour of maternal sorrow,
+		Now at this birth season of decease,
+		Let the Infant, the still unspeaking and unspoken Word,
+		Grant Israel’s consolation
+		To one who has eighty years and no to-morrow.
+		
+		According to thy word.
+		They shall praise Thee and suffer in every generation
+		With glory and derision,
+		Light upon light, mounting the saints’ stair.
+		Not for me the martyrdom, the ecstasy of thought and prayer,
+		Not for me the ultimate vision.
+		Grant me thy peace.
+		(And a sword shall pierce thy heart,
+		Thine also).
+		I am tired with my own life and the lives of those after me,
+		I am dying in my own death and the deaths of those after me.
+		Let they servant depart,
+		Having seen thy salvation.
+
+
+	2. THE CULTIVATION OF CHRISTMAS TREES
 
 		There are several attitudes towards Christmas,
 		Some of which we may disregard:
@@ -32080,7 +32125,7 @@
 		And the first coming of the second coming.
 
 
-	2. EYES THAT I LAST SAW IN TEARS
+	3. EYES THAT I LAST SAW IN TEARS
 
 		Eyes that last I saw in tears 
 		Through division 
@@ -32100,7 +32145,7 @@
 		And hold us in derision. 
 
 
-	3. THE JOURNEY OF THE MAGI
+	4. THE JOURNEY OF THE MAGI
 
 		A cold coming we had of it,
 		Just the worst time of the year
@@ -32149,7 +32194,7 @@
 		I should be glad of another death.
 
 
-	4. CONVERSATION GALANTE
+	5. CONVERSATION GALANTE
 
 		I observe: “Our sentimental friend the moon!
 		Or possibly (fantastic, I confess)
@@ -32173,7 +32218,7 @@
 		 And--“Are we then so serious?”
 
 
-	5. HYSTERIA
+	6. HYSTERIA
 
 		As she laughed I was aware of becoming involved in her
 		laughter and being part of it, until her teeth were
@@ -32192,7 +32237,7 @@
 		careful subtlety to this end.
 
 
-	6. MR. APOLLINAX
+	7. MR. APOLLINAX
 
 		When Mr. Apollinax visited the United States
 		His laughter tinkled among the teacups.
@@ -32218,7 +32263,7 @@
 		I remember a slice of lemon, and a bitten macaroon.
 
 
-	7. COUSIN NANCY
+	8. COUSIN NANCY
 
 		Miss Nancy Ellicott Strode across the hills and broke them,
 		Rode across the hills and broke them--
@@ -32236,7 +32281,7 @@
 		The army of unalterable law.
 
 
-	8. AUNT HELEN
+	9. AUNT HELEN
 
 		Miss Helen Slingsby was my maiden aunt,
 		And lived in a small house near a fashionable square
@@ -32253,7 +32298,7 @@
 		Who had always been so careful while her mistress lived.
 
 
-	9. THE BOSTON EVENING TRANSCRIPT
+	10. THE BOSTON EVENING TRANSCRIPT
 
 		The readers of the Boston Evening Transcript
 		Sway in the wind like a field of ripe corn.
@@ -32266,7 +32311,7 @@
 		And I say, “Cousin Harriet, here is the Boston Evening Transcript.”
 
 
-	10. MORNING AT THE WINDOW
+	11. MORNING AT THE WINDOW
 
 		They are rattling breakfast plates in basement kitchens,
 		And along the trampled edges of the street
@@ -32279,7 +32324,7 @@
 		And vanishes along the level of the roofs.
 
 
-	11. SWEENEY AMONG THE NIGHTINGALES
+	12. SWEENEY AMONG THE NIGHTINGALES
 
 		 [Greek text inserted here]
 		
@@ -32335,7 +32380,7 @@
 		To stain the stiff dishonoured shroud.
 
 
-	12. A COOKING EGG
+	13. A COOKING EGG
 
 		 _En l’an trentiesme de mon aage
 		 Que toutes mes hontes j’ay beues . . ._
@@ -32386,7 +32431,7 @@
 		Droop in a hundred A.B.C.‘s
 
 
-	13. SWEENEY ERECT
+	14. SWEENEY ERECT
 
 		                     _And the trees about me,
 		 Let them be dry and leafless; let the rocks
@@ -32450,7 +32495,7 @@
 		And a glass of brandy neat.
 
 
-	14. BURBANK WITH A BAEDEKER: BLEISTEIN WITH A CIGAR
+	15. BURBANK WITH A BAEDEKER: BLEISTEIN WITH A CIGAR
 
 		 _Tra-la-la-la-la-la-laire--nil nisi divinum stabile
 		 est; caetera fumus--the gondola stopped, the old
@@ -32502,7 +32547,7 @@
 		Time’s ruins, and the seven laws.
 
 
-	15. ASH WEDNESDAY
+	16. ASH WEDNESDAY
 
 		I
 		
@@ -32784,7 +32829,7 @@
 		And let my cry come unto Thee.
 
 
-	16. THE BURIAL OF THE DEAD
+	17. THE BURIAL OF THE DEAD
 
 		April is the cruellest month breeding
 		Lilacs out of the dead land mixing
@@ -32867,7 +32912,7 @@
 		“You! hypocrite lecteur!--mon semblable--mon frère!”    
 
 
-	17. A GAME OF CHESS
+	18. A GAME OF CHESS
 
 		The Chair she sat in like a burnished throne
 		Glowed on the marble where the glass
@@ -32972,7 +33017,7 @@
 		Good night ladies good night sweet ladies good night good night.    
 
 
-	18. THE FIRE SERMON
+	19. THE FIRE SERMON
 
 		The river’s tent is broken: the last fingers of leaf
 		Clutch and sink into the wet bank. The wind
@@ -33126,7 +33171,7 @@
 		burning    
 
 
-	19. WHAT THE THUNDER SAID
+	20. WHAT THE THUNDER SAID
 
 		After the torchlight red on sweaty faces
 		After the frosty silence in the gardens
@@ -33250,7 +33295,7 @@
 		                          Shantih    shantih    shantih
 
 
-	20. THE HOLLOW MEN
+	21. THE HOLLOW MEN
 
 			I.
 		
@@ -33387,7 +33432,7 @@
 		   Not with a bang but a whimper.
 
 
-	21. GERONTION
+	22. GERONTION
 
 		 Thou hast nor youth nor age
 		 But as it were an after dinner sleep
@@ -33478,7 +33523,7 @@
 		Thoughts of a dry brain in a dry season.
 
 
-	22. THE HIPPOPOTAMUS
+	23. THE HIPPOPOTAMUS
 
 		 _Similiter et omnes revereantur Diaconos ut
 		 mandatum Jesu Christi; et Episcopum ut Jesum
@@ -33540,7 +33585,7 @@
 		Wrapt in the old miasmal mist.
 
 
-	23. WHISPERS OF IMMORTALITY
+	24. WHISPERS OF IMMORTALITY
 
 		Webster was much possessed by death
 		And saw the skull beneath the skin;
@@ -33584,7 +33629,7 @@
 		To keep our metaphysics warm.
 
 
-	24. MR. ELIOT’S SUNDAY MORNING SERVICE
+	25. MR. ELIOT’S SUNDAY MORNING SERVICE
 
 		  Look look master here comes two religious
 		  caterpillars.
@@ -33633,7 +33678,7 @@
 		Are controversial polymath.
 
 
-	25. THE LOVE SONG OF J. ALFRED PRUFROCK
+	26. THE LOVE SONG OF J. ALFRED PRUFROCK
 
 		  _S’io credesse che mia risposta fosse
 		  A persona che mai tornasse al mondo
@@ -33802,7 +33847,7 @@
 		Till human voices wake us and we drown.
 
 
-	26. PORTRAIT OF A LADY
+	27. PORTRAIT OF A LADY
 
 		 _Thou hast committed--
 		 Fornication: but that was in another country
@@ -33955,7 +34000,7 @@
 		And should I have the right to smile?
 
 
-	27. PRELUDES
+	28. PRELUDES
 
 		I
 		
@@ -34030,7 +34075,7 @@
 		Gathering fuel in vacant lots.
 
 
-	28. RHAPSODY ON A WINDY NIGHT
+	29. RHAPSODY ON A WINDY NIGHT
 
 		Twelve o’clock.
 		Along the reaches of the street
@@ -34120,7 +34165,7 @@
 		The last twist of the knife.
 
 
-	29. LA FIGLIA CHE PIANGE
+	30. LA FIGLIA CHE PIANGE
 
 		 _O quam te memorem Virgo . . ._
 		
