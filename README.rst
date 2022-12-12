@@ -27,7 +27,7 @@ or a specified poem by a specified poet
     poem = curator.get_poem(author="blake", title="THE TYGER") 
     print(poem.body)
 
-assuming that it is in the database (which you can see as ``curator.poems``). We can also load contextual poems, so that it loads summer poems during the summer, Christmas poems on Christmas, etc.
+assuming that it is in the database (which you can see as ``curator.poems``). We can also load contextual poems (e.g. so that it loads summer poems during the summer, Christmas poems on Christmas, etc.):
 
 .. code-block:: python
     
@@ -43,7 +43,10 @@ Note that if it's summertime, this does not guarantee a summer poem (rather, it 
     context = poetry.utils.get_context()
     print(context)
     
-    poem = curator.get_poem(context=context, forced_contexts=['holiday']) # A guaranteed holiday poem, assuming it's a holiday when you run this
-    poem = curator.get_poem(context=context, forced_contexts=['season']) # A guaranteed winter/spring/summer/autumn poem
+    # A guaranteed holiday poem, assuming it's a holiday when you run this
+    poem = curator.get_poem(context=context, forced_contexts=['holiday']) 
+
+    # A guaranteed seasonal poem
+    poem = curator.get_poem(context=context, forced_contexts=['season']) 
     
 Unforced contextual poems are sent daily to the listserv. Past poems are on my `website <https://thomaswmorris.github.io/poems>`_. If you want to be on the listserv, just ask me. 

@@ -20,7 +20,7 @@ benet,Stephen Vincent Benét,1898,1943,american,6
 benson,Robert Hugh Benson,1871,1914,english,6
 berry,Wendell Berry,1934,,american,23
 berryman,John Berryman,1914,1972,american,21
-bishop,Elizabeth Bishop,1911,1979,american,9
+bishop,Elizabeth Bishop,1911,1979,american,19
 bjornson,Bjørnstjerne Bjørnson,1832,1910,norwegian,4
 blake,William Blake,1757,1827,english,31
 blok,Alexander Blok,1880,1921,russian,2
@@ -28,7 +28,7 @@ bly,Robert Bly,1926,2021,american,13
 bogan,Louise Bogan,1897,1970,american,3
 borges,Jorge Luis Borges,1899,1986,argentinian,2
 brecht,Bertolt Brecht,1898,1956,german,10
-bridges,Robert Bridges,1844,1930,english,8
+bridges,Robert Bridges,1844,1930,english,9
 brodsky,Joseph Brodsky,1940,1996,russian,24
 bronte,Emily Brontë,1818,1848,english,5
 brooke,Rupert Brooke,1887,1915,english,3
@@ -53,13 +53,13 @@ chaucer,Geoffrey Chaucer,1340,1400,english,5
 chesterton,G. K. Chesterton,1874,1936,english,53
 clare,John Clare,1793,1864,english,11
 cohen,Leonard Cohen,1934,2016,canadian,7
-coleridge,Samuel Taylor Coleridge,1772,1834,english,5
+coleridge,Samuel Taylor Coleridge,1772,1834,english,6
 cowley,Abraham Cowley,1618,1667,english,4
 cowper,William Cowper,1731,1800,english,5
 crane,Hart Crane,1899,1932,american,5
 crashaw,Richard Crashaw,1613,1649,english,5
 cross,John of the Cross,1542,1591,spanish,3
-cummings,E. E. Cummings,1894,1962,american,6
+cummings,E. E. Cummings,1894,1962,american,7
 davie,Donald Davie,1922,1995,english,6
 day-lewis,Cecil Day-Lewis,1904,1972,english,9
 dickey,James Dickey,1923,1997,american,6
@@ -68,13 +68,13 @@ dillard,Annie Dillard,1945,,american,5
 donne,John Donne,1572,1631,english,11
 doren,Mark Van Doren,1894,1972,american,5
 dryden,John Dryden,1631,1700,english,5
-dunbar,Paul Laurence Dunbar,1872,1906,american,4
+dunbar,Paul Laurence Dunbar,1872,1906,american,5
 duyn,Mona Van Duyn,1921,2004,american,2
 dylan,Bob Dylan,1941,,american,12
 eberhart,Richard Eberhart,1904,2005,american,4
 ehrmann,Max Ehrmann,1872,1945,american,2
 eliot-g,George Eliot,1819,1888,english,7
-eliot-ts,T. S. Eliot,1888,1965,english,26
+eliot-ts,T. S. Eliot,1888,1965,english,29
 emerson,Ralph Waldo Emerson,1803,1882,american,5
 ephrem,Ephrem the Syrian,306,373,syrian,1
 everson,William Everson,1912,1994,american,3
@@ -91,7 +91,7 @@ gioia,Dana Gioia,1950,,american,13
 gluck,Louise Glück,1943,,american,3
 goethe,Johann Wolfgang von Goethe,1749,1832,german,11
 graves,Robert Graves,1895,1985,english,3
-hardy,Thomas Hardy,1840,1928,english,12
+hardy,Thomas Hardy,1840,1928,english,13
 hayden,Robert Hayden,1913,1980,american,2
 heaney,Seamus Heaney,1939,2013,irish,10
 hecht,Anthony Hecht,1923,2004,american,11
@@ -122,7 +122,7 @@ kavanagh,Patrick Kavanagh,1904,1967,irish,8
 keats,John Keats,1795,1821,english,3
 kennedy,Geoffrey Studdert Kennedy,1883,1929,english,11
 kerouac,Jack Kerouac,1922,1969,american,6
-kilmer,Joyce Kilmer,1886,1918,american,17
+kilmer,Joyce Kilmer,1886,1918,american,18
 kipling,Rudyard Kipling,1865,1936,english,5
 koch,Kenneth Koch,1925,2002,american,5
 kunitz,Stanley Kunitz,1905,2006,american,9
@@ -149,7 +149,7 @@ macleish,Archibald MacLeish,1892,1982,american,6
 macneice,Louis MacNeice,1907,1963,english,7
 mallarme,Stéphane Mallarmé,1842,1898,french,4
 mangan,James Clarence Mangan,1803,1849,irish,7
-mare,Walter de la Mare,1873,1965,english,9
+mare,Walter de la Mare,1873,1965,english,10
 mariani,Paul Mariani,1940,,american,4
 marlowe,Christopher Marlowe,1564,1593,english,3
 marti,José Martí,1853,1895,cuban,2
@@ -196,12 +196,13 @@ ritsos,Yiannis Ritsos,1909,1990,greek,3
 robinson-ea,Edwin Arlington Robinson,1869,1935,american,9
 robinson-m,Mary Robinson,1757,1800,english,3
 roethke,Theodore Roethke,1908,1963,american,4
-rossetti-c,Christina Rossetti,1830,1894,english,16
+rossetti-c,Christina Rossetti,1830,1894,english,19
 rossetti-dg,Dante Gabriel Rossetti,1828,1882,english,7
 rumi,Rumi,1207,1273,persian,3
 sandburg,Carl Sandburg,1878,1967,american,10
 santayana,George Santayana,1863,1952,spanish,3
 sassoon,Siegfried Sassoon,1886,1967,english,7
+sayers,Dorothy Sayers,1893,1957,english,19
 schwartz,Delmore Schwartz,1913,1966,american,9
 seifert,Jaroslav Seifert,1901,1986,czech,3
 shakespeare,William Shakespeare,1564,1616,english,10
@@ -219,7 +220,7 @@ spitteler,Carl Spitteler,1845,1924,swiss,3
 stafford,William Stafford,1914,1993,american,6
 stein,Gertrude Stein,1874,1946,american,2
 stevens,Wallace Stevens,1879,1955,american,10
-stevenson,Robert Louis Stevenson,1850,1894,scottish,5
+stevenson,Robert Louis Stevenson,1850,1894,scottish,6
 stickney,Trumbull Stickney,1874,1904,american,4
 swinburne,Algernon Charles Swinburne,1837,1909,english,4
 szymborska,Wisława Szymborska,1923,2012,polish,10
@@ -228,7 +229,7 @@ tagore,Rabindranath Tagore,1861,1941,bengali,3
 tate-a,Allen Tate,1899,1979,american,2
 tate-j,James Tate,1943,2015,american,6
 taylor,Edward Taylor,1642,1729,american,2
-tennyson,"Alfred, Lord Tennyson",1809,1892,english,9
+tennyson,"Alfred, Lord Tennyson",1809,1892,english,10
 thomas-d,Dylan Thomas,1915,1953,welsh,8
 thomas-rs,R. S. Thomas,1913,2000,welsh,6
 thompson,Francis Thompson,1859,1907,english,8
@@ -257,4 +258,4 @@ wojtyla,Karol Wojtyła,1920,2005,polish,4
 wordsworth,William Wordsworth,1770,1850,english,6
 wright,Charles Wright,1935,,american,5
 wyatt,Thomas Wyatt,1503,1542,english,5
-yeats,W. B. Yeats,1865,1939,irish,23
+yeats,W. B. Yeats,1865,1939,irish,24
