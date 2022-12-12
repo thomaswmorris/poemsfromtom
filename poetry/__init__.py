@@ -175,10 +175,6 @@ class Curator():
             if not len(self.poems) > 0:
                 raise PoemNotFoundError(f'There are no poem \"{title}\" by any author in the database.')
 
-        if 'author' in weight_schemes:
-            for uauthor in self.unique_authors:
-                self.poems.loc[uauthor==self.poems.author, 'likelihood'] *= np.minimum(1., 4. / np.sum(uauthor==self.poems.author))
-
         if 'history' in weight_schemes:
             if not hasattr(self, 'history'): 
                 raise Exception('There is no history for the weight scheme.')
@@ -199,8 +195,20 @@ class Curator():
                 days_since_last_sent_weight = 1 / (1 + np.exp(-.1 * (self.stats.days_since_last_sent.fillna(365).loc[uauthor] - 42))) # after six weeks, the weight is 0.5
                 total_weight = times_sent_weight * days_since_last_sent_weight
 
-                if verbose: print(f'weighted {uauthor:<12} by {times_sent_weight:.03f} * {days_since_last_sent_weight:.03f} = {total_weight:.03f}')
+                #if verbose: print(f'weighted {uauthor:<12} by {times_sent_weight:.03f} * {days_since_last_sent_weight:.03f} = {total_weight:.03f}')
                 self.poems.loc[uauthor==self.poems.author, 'likelihood'] *= total_weight
+
+            if verbose: print('applying \"history\" weighting scheme')
+
+        if 'author' in weight_schemes:
+            for uauthor in self.unique_authors:
+                self.poems.loc[uauthor==self.poems.author, 'likelihood'] /= np.sum(uauthor==self.poems.author)
+            if verbose: print('applying \"author\" weighting scheme')
+
+        if 'remaining' in weight_schemes:
+            for uauthor in self.unique_authors:
+                self.poems.loc[uauthor==self.poems.author, 'likelihood'] *= 1 + np.log(np.sum(uauthor==self.poems.author))
+            if verbose: print('applying \"remaining\" weighting scheme')
             
         if context is not None:
 
