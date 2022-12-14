@@ -28,7 +28,7 @@ context = poetry.utils.get_context(when)
 curated_poem = curator.get_poem(
                                 context=context, 
                                 forced_contexts=['holiday'],
-                                weight_schemes=['author', 'remaining', 'history'],
+                                weight_schemes=['context', 'history'],
                                 historical_tag=args.type,
                                 very_verbose=True,
                                 )

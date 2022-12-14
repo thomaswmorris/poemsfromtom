@@ -77,7 +77,7 @@ eliot-g,George Eliot,1819,1888,english,7
 eliot-ts,T. S. Eliot,1888,1965,english,30
 emerson,Ralph Waldo Emerson,1803,1882,american,5
 ephrem,Ephrem the Syrian,306,373,syrian,1
-everson,William Everson,1912,1994,american,3
+everson,William Everson,1912,1994,american,5
 faber,Frederick William Faber,1814,1863,english,5
 faulkner,William Faulkner,1897,1962,american,3
 ferguson,Samuel Ferguson,1810,1886,irish,2
@@ -171,7 +171,7 @@ moore,Marianne Moore,1887,1972,american,10
 muir,Edwin Muir,1887,1959,scottish,8
 murray,Les Murray,1938,2019,australian,8
 nash,Ogden Nash,1902,1971,american,23
-neruda,Pablo Neruda,1904,1973,chilean,4
+neruda,Pablo Neruda,1904,1973,chilean,23
 newman,John Henry Newman,1801,1890,english,2
 noyes,Alfred Noyes,1880,1958,english,9
 owen,Wilfred Owen,1893,1918,english,13
@@ -260,4 +260,4 @@ wojtyla,Karol Wojtyła,1920,2005,polish,4
 wordsworth,William Wordsworth,1770,1850,english,6
 wright,Charles Wright,1935,,american,5
 wyatt,Thomas Wyatt,1503,1542,english,5
-yeats,W. B. Yeats,1865,1939,irish,24
+yeats,W. B. Yeats,1865,1939,irish,82

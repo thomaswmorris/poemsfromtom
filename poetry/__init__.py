@@ -1,4 +1,4 @@
-import os, pytz, json
+import json, os, pytz
 import time as ttime
 import numpy as np
 import pandas as pd
@@ -11,7 +11,7 @@ from . import utils
 def PoemNotFoundError(BaseException):
     pass
 
-base, this_filename = os.path.split(__file__)
+base, this_file = os.path.split(__file__)
 
 class Poem():
 
@@ -138,7 +138,7 @@ class Curator():
                 author=None,
                 title=None,
                 context=None,
-                weight_schemes=['author'],
+                weight_schemes=[],
                 forced_contexts=[],
                 historical_tag=None,
                 verbose=True,
@@ -148,13 +148,12 @@ class Curator():
         verbose = verbose or very_verbose
         self.poems = self.archive_poems.copy()
 
-        if context == 'auto':
+        if context is None:
             context = utils.get_context()
 
         self.when = ttime.time() 
-        if context is not None:
-            if 'timestamp' in context.keys():
-                self.when = context['timestamp']
+        if 'timestamp' in context.keys():
+            self.when = context['timestamp']
 
         # if author is supplied, get rid of poems not by that author
         if author is not None: 
@@ -183,8 +182,7 @@ class Curator():
                 try:
                     loc = self.poems.index[np.where((self.poems.author==entry.author)&(self.poems.title==entry.title))[0][0]]
                     self.poems.drop(loc, inplace=True)
-                    if verbose: 
-                        print(f'removed {entry.title} by {entry.author}')
+                    #if verbose: print(f'removed {entry.title} by {entry.author}')
                 except:
                     print(f'error handling entry {entry}')
 
@@ -207,10 +205,12 @@ class Curator():
 
         if 'remaining' in weight_schemes:
             for uauthor in self.unique_authors:
-                self.poems.loc[uauthor==self.poems.author, 'likelihood'] *= 1 + np.log(np.sum(uauthor==self.poems.author))
+                n = np.sum(uauthor == self.poems.author)
+                if not n > 0: continue
+                self.poems.loc[uauthor == self.poems.author, 'likelihood'] *= 1 + np.log(n)
             if verbose: print('applying \"remaining\" weighting scheme')
             
-        if context is not None:
+        if 'context' in weight_schemes:
 
             if verbose: print(f'using context {context}')
 

@@ -66,7 +66,7 @@ def get_holiday(t=None):
     if (dt.month, dt.day) == (1, 6):   return 'epiphany'
 
     if (dt.month, dt.day) == (2, 2):   return 'candlemas'
-    if (dt.month, dt.day) == (2, 14):  return 'valentines_day'
+    if (dt.month, dt.day) == (2, 14):  return 'saint_valentine'
 
     if (dt.month, dt.day) == (3, 17):  return 'saint_patrick'
     if (dt.month, dt.day) == (3, 19):  return 'saint_joseph'
