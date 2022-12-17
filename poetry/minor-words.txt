@@ -29,6 +29,7 @@ degli
 despite
 down
 during
+et
 even
 except
 following
@@ -86,4 +87,5 @@ when
 with
 within
 without
+y
 yet
