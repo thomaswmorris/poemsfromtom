@@ -8,9 +8,12 @@ from email.mime.text import MIMEText
 
 base, this_filename = os.path.split(__file__)
 
-def get_utc_datetime(t=None):
-    if t is None: t = ttime.time()
-    return datetime.fromtimestamp(t).astimezone(pytz.utc)
+def get_utc_datetime(when=None):
+    if type(when) == str: 
+        when = datetime.fromisoformat(when).replace(tzinfo=pytz.utc).timestamp()
+    if when is None: 
+        when = ttime.time()
+    return datetime.fromtimestamp(when).astimezone(pytz.utc)
 
 def get_weekday(t=None):
     weekdays = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
@@ -118,8 +121,8 @@ def get_liturgy(t=ttime.time()):
     if christmas_yd - (22 + datetime(dt.year,12,25).weekday()) <= yd < christmas_yd: return 'advent'
     return 'ordinary time'
 
-def get_context(when=None):
-    if when is None: when = ttime.time()
+def get_context(x=None):
+    when = get_utc_datetime(x).timestamp() if x is not None else ttime.time()
     return {
             'weekday' : get_weekday(when), 
               'month' : get_month(when), 
@@ -132,12 +135,12 @@ def get_context(when=None):
 
 context_categories = [key for key in get_context(0).keys() if not key == 'timestamp']
 context_multipliers = {}
-sample_times = datetime(2020,1,1,12).timestamp() + 86400 * np.arange(4*366)
+sample_times = datetime(2020,1,1,12).timestamp() + 86400 * np.arange(366)
 for category in context_categories:
     samples = np.array([get_context(t)[category] for t in sample_times])
     context_multipliers[category] = {}
     for keyword in np.unique(samples):
-        context_multipliers[category][keyword] = np.round(len(samples) / np.sum(keyword==samples), 3)
+        context_multipliers[category][keyword] = np.round(len(samples) / np.sum(keyword==samples))
 
 def send_email(username, password, html, recipient, subject=''):
 
