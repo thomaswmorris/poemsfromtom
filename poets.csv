@@ -1,7 +1,7 @@
 ,name,birth,death,nationality,#_of_poems
 agee,James Agee,1909,1955,american,19
-aiken,Conrad Aiken,1889,1973,american,5
-akhmatova,Anna Akhmatova,1889,1966,russian,8
+aiken,Conrad Aiken,1889,1973,american,25
+akhmatova,Anna Akhmatova,1889,1966,russian,9
 alcott,Louisa May Alcott,1832,1888,american,2
 aleixandre,Vicente Aleixandre,1898,1984,spanish,1
 alighieri,Dante Alighieri,1265,1321,italian,2
@@ -108,7 +108,7 @@ holmes,Oliver Wendell Holmes,1809,1894,american,3
 hopkins,Gerard Manley Hopkins,1844,1889,english,41
 housman,A. E. Housman,1859,1936,english,4
 hughes,Ted Hughes,1930,1998,english,6
-hugo,Victor Hugo,1802,1885,french,3
+hugo,Victor Hugo,1802,1885,french,6
 huxley,Aldous Huxley,1894,1963,english,24
 jarrell,Randall Jarrell,1914,1965,american,6
 jeffers,Robinson Jeffers,1887,1962,american,23
@@ -173,7 +173,7 @@ murray,Les Murray,1938,2019,australian,8
 nash,Ogden Nash,1902,1971,american,23
 neruda,Pablo Neruda,1904,1973,chilean,23
 newman,John Henry Newman,1801,1890,english,2
-noyes,Alfred Noyes,1880,1958,english,9
+noyes,Alfred Noyes,1880,1958,english,17
 owen,Wilfred Owen,1893,1918,english,13
 parker,Dorothy Parker,1893,1967,american,4
 pasternak,Boris Pasternak,1890,1960,russian,12
@@ -234,7 +234,7 @@ taylor,Edward Taylor,1642,1729,american,2
 tennyson,"Alfred, Lord Tennyson",1809,1892,english,10
 thomas-d,Dylan Thomas,1915,1953,welsh,8
 thomas-rs,R. S. Thomas,1913,2000,welsh,6
-thompson,Francis Thompson,1859,1907,english,8
+thompson,Francis Thompson,1859,1907,english,22
 thoreau,Henry David Thoreau,1817,1862,american,4
 tolkien,J. R. R. Tolkien,1892,1973,english,3
 trakl,Georg Trakl,1887,1914,austrian,3

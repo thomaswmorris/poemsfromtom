@@ -132,7 +132,7 @@ def get_context(when=None):
 
 context_categories = [key for key in get_context(0).keys() if not key == 'timestamp']
 context_multipliers = {}
-sample_times = datetime(2020,1,1,12).timestamp() + 86400 * np.arange(366)
+sample_times = datetime(2020,1,1,12).timestamp() + 86400 * np.arange(4*366)
 for category in context_categories:
     samples = np.array([get_context(t)[category] for t in sample_times])
     context_multipliers[category] = {}
