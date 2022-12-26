@@ -83,7 +83,7 @@ def get_holiday(t=None):
     if (dt.month, dt.day) == (7, 4):   return 'independence_day'
 
     if (dt.month, dt.day) == (8, 6):   return 'transfiguration'
-    if (dt.month, dt.day) == (8, 25):  return 'assumption'
+    if (dt.month, dt.day) == (8, 15):  return 'assumption'
 
     if (dt.month, dt.day) == (10, 31): return 'halloween'
     

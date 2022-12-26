@@ -24,7 +24,7 @@ class Poem():
             self.author_name, self.birth, self.death, self.nationality, self.link = data[author]['metadata'].values()
             self.body, self.keywords = data[author]['poems'][title].values()
 
-        self.html_body = f'''<blockquote style="font-family:Baskerville; font-size: 18px" align="left">
+        self.html_body = f'''<blockquote style="font-family:Baskerville; font-size: 18px" align="left; max-width: 600px;">
         <div style="text-indent: -1em; padding-left:1em;">
         {utils.text_to_html(self.body)}
         </div>
@@ -190,7 +190,7 @@ class Curator():
                 
                 # weigh by number of poems so that every poet is equally likely (unless you have few poems left) 
                 times_sent_weight = np.exp(.25 * np.log(.5) * self.stats.times_sent.loc[uauthor]) # four times sent is a weight of 0.5
-                days_since_last_sent_weight = 1 / (1 + np.exp(-.1 * (self.stats.days_since_last_sent.fillna(365).loc[uauthor] - 42))) # after six weeks, the weight is 0.5
+                days_since_last_sent_weight = 1 / (1 + np.exp(-.1 * (self.stats.days_since_last_sent.fillna(365).loc[uauthor] - 21))) # after six weeks, the weight is 0.5
                 total_weight = days_since_last_sent_weight # * times_sent_weight
 
                 #if verbose: print(f'weighted {uauthor:<12} by {times_sent_weight:.03f} * {days_since_last_sent_weight:.03f} = {total_weight:.03f}')
