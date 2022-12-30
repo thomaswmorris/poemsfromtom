@@ -28,7 +28,7 @@ bly,Robert Bly,1926,2021,american,13
 bogan,Louise Bogan,1897,1970,american,3
 borges,Jorge Luis Borges,1899,1986,argentinian,2
 brecht,Bertolt Brecht,1898,1956,german,10
-bridges,Robert Bridges,1844,1930,english,9
+bridges,Robert Bridges,1844,1930,english,57
 brodsky,Joseph Brodsky,1940,1996,russian,24
 bronte,Emily Brontë,1818,1848,english,5
 brooke,Rupert Brooke,1887,1915,english,3
@@ -82,7 +82,7 @@ faber,Frederick William Faber,1814,1863,english,5
 faulkner,William Faulkner,1897,1962,american,3
 ferguson,Samuel Ferguson,1810,1886,irish,2
 fitzgerald,Robert Fitzgerald,1910,1985,american,10
-fletcher,John Gould Fletcher,1886,1950,american,16
+fletcher,John Gould Fletcher,1886,1950,american,19
 ford,Ford Madox Ford,1873,1939,english,6
 frost,Robert Frost,1874,1963,american,45
 gautier,Théophile Gautier,1811,1872,french,4
@@ -174,6 +174,7 @@ nash,Ogden Nash,1902,1971,american,23
 neruda,Pablo Neruda,1904,1973,chilean,23
 newman,John Henry Newman,1801,1890,english,2
 noyes,Alfred Noyes,1880,1958,english,17
+olson,Charles Olson,1910,1970,american,3
 owen,Wilfred Owen,1893,1918,english,13
 parker,Dorothy Parker,1893,1967,american,4
 pasternak,Boris Pasternak,1890,1960,russian,12
@@ -189,7 +190,7 @@ pound,Ezra Pound,1885,1972,american,19
 psaila,Dun Karm Psaila,1871,1961,maltese,3
 pushkin,Alexander Pushkin,1799,1837,russian,34
 quasimodo,Salvatore Quasimodo,1901,1968,italian,5
-ransom,John Crowe Ransom,1888,1974,american,6
+ransom,John Crowe Ransom,1888,1974,american,40
 rilke,Rainer Maria Rilke,1875,1926,austrian,31
 rimbaud,Arthur Rimbaud,1854,1891,french,14
 ritsos,Yiannis Ritsos,1909,1990,greek,3
@@ -209,7 +210,7 @@ shakespeare,William Shakespeare,1564,1616,english,10
 shapiro,Karl Shapiro,1913,2000,american,7
 shelley,Percy Bysshe Shelley,1792,1822,english,9
 simic,Charles Simic,1938,,serbian,7
-sitwell,Edith Sitwell,1887,1964,english,3
+sitwell,Edith Sitwell,1887,1964,english,15
 slessor,Kenneth Slessor,1901,1971,australian,5
 smith,Clark Ashton Smith,1893,1961,american,4
 snodgrass,W. D. Snodgrass,1926,2009,american,4
@@ -260,4 +261,4 @@ wojtyla,Karol Wojtyła,1920,2005,polish,4
 wordsworth,William Wordsworth,1770,1850,english,6
 wright,Charles Wright,1935,,american,5
 wyatt,Thomas Wyatt,1503,1542,english,5
-yeats,W. B. Yeats,1865,1939,irish,82
+yeats,W. B. Yeats,1865,1939,irish,83
