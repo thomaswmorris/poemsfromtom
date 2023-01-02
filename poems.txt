@@ -2624,7 +2624,46 @@
 
 *** Matthew Arnold (1822 - 1888)
 
-	1. BACCHANALIA
+	1. (FROM) THE HYMN OF EMPEDOCLES
+
+		IS it so small a thing
+		To have enjoy’d the sun,
+		To have lived light in the spring,
+		To have loved, to have thought, to have done;
+		To have advanced true friends, and beat down baffling foes;
+		
+		That we must feign a bliss
+		Of doubtful future date,
+		And while we dream on this
+		Lose all our present state,
+		And relegate to worlds yet distant our repose?
+		
+		Not much, I know, you prize
+		What pleasures may be had,
+		Who look on life with eyes
+		Estranged, like mine, and sad:
+		And yet the village churl feels the truth more than you;
+		
+		Who ‘s loth to leave this life
+		Which to him little yields:
+		His hard-task’d sunburnt wife,
+		His often-labour’d fields;
+		The boors with whom he talk’d, the country spots he knew.
+		
+		But thou, because thou hear’st
+		Men scoff at Heaven and Fate;
+		Because the gods thou fear’st
+		Fail to make blest thy state,
+		Tremblest, and wilt not dare to trust the joys there are.
+		
+		I say, Fear not! life still
+		Leaves human effort scope.
+		But, since life teems with ill,
+		Nurse no extravagant hope.
+		Because thou must not dream, thou need’st not then despair.
+
+
+	2. BACCHANALIA
 
 		I
 		
@@ -2758,7 +2797,7 @@
 		Whatever thought, might think it too.
 
 
-	2. CONSOLATION
+	3. CONSOLATION
 
 		Mist clogs the sunshine.
 		Smoky dwarf houses
@@ -2851,7 +2890,7 @@
 		Some undimmed hours.
 
 
-	3. DOVER BEACH
+	4. DOVER BEACH
 
 		The sea is calm to-night.
 		The tide is full, the moon lies fair
@@ -2894,45 +2933,6 @@
 		And we are here as on a darkling plain
 		Swept with confused alarms of struggle and flight,
 		Where ignorant armies clash by night.
-
-
-	4. FROM THE HYMN OF EMPEDOCLES
-
-		IS it so small a thing
-		To have enjoy’d the sun,
-		To have lived light in the spring,
-		To have loved, to have thought, to have done;
-		To have advanced true friends, and beat down baffling foes;
-		
-		That we must feign a bliss
-		Of doubtful future date,
-		And while we dream on this
-		Lose all our present state,
-		And relegate to worlds yet distant our repose?
-		
-		Not much, I know, you prize
-		What pleasures may be had,
-		Who look on life with eyes
-		Estranged, like mine, and sad:
-		And yet the village churl feels the truth more than you;
-		
-		Who ‘s loth to leave this life
-		Which to him little yields:
-		His hard-task’d sunburnt wife,
-		His often-labour’d fields;
-		The boors with whom he talk’d, the country spots he knew.
-		
-		But thou, because thou hear’st
-		Men scoff at Heaven and Fate;
-		Because the gods thou fear’st
-		Fail to make blest thy state,
-		Tremblest, and wilt not dare to trust the joys there are.
-		
-		I say, Fear not! life still
-		Leaves human effort scope.
-		But, since life teems with ill,
-		Nurse no extravagant hope.
-		Because thou must not dream, thou need’st not then despair.
 
 
 	5. GROWING OLD
@@ -12721,7 +12721,27 @@
 
 *** William Blake (1757 - 1827)
 
-	1. A DIVINE IMAGE
+	1. (FROM) A MEMORABLE FANCY
+
+		As I was walking among the fires of Hell, delighted with the enjoyments
+		of Genius, which to Angels look like torment and insanity, I collected
+		some of their proverbs, thinking that as the sayings used in a nation
+		mark its character, so the proverbs of Hell show the nature of infernal
+		wisdom better than any description of buildings or garments.
+		
+		When I came home, on the abyss of the five senses, where a flat-sided
+		steep frowns over the present world, I saw a mighty Devil folded in
+		black clouds hovering on the sides of the rock; with corroding fires
+		he wrote the following sentence now perceived by the minds of men, and
+		read by them on earth:--
+		
+		   _“How do you know but every bird
+		       that cuts the airy way
+		   Is an immense world of delight,
+		       closed by your senses five?”_
+
+
+	2. A DIVINE IMAGE
 
 		Cruelty has a human heart,
 		 And Jealousy a human face;
@@ -12734,7 +12754,7 @@
 		 The human heart its hungry gorge.
 
 
-	2. A LITTLE BOY LOST
+	3. A LITTLE BOY LOST
 
 		“Nought loves another as itself,
 		 Nor venerates another so,
@@ -12765,26 +12785,6 @@
 		 Where many had been burned before;
 		The weeping parents wept in vain.
 		 Are such thing done on Albion’s shore?
-
-
-	3. A MEMORABLE FANCY
-
-		As I was walking among the fires of Hell, delighted with the enjoyments
-		of Genius, which to Angels look like torment and insanity, I collected
-		some of their proverbs, thinking that as the sayings used in a nation
-		mark its character, so the proverbs of Hell show the nature of infernal
-		wisdom better than any description of buildings or garments.
-		
-		When I came home, on the abyss of the five senses, where a flat-sided
-		steep frowns over the present world, I saw a mighty Devil folded in
-		black clouds hovering on the sides of the rock; with corroding fires
-		he wrote the following sentence now perceived by the minds of men, and
-		read by them on earth:--
-		
-		   _“How do you know but every bird
-		       that cuts the airy way
-		   Is an immense world of delight,
-		       closed by your senses five?”_
 
 
 	4. A POISON TREE
