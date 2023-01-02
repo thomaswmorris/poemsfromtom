@@ -32,12 +32,12 @@ class Poem():
         self.date_time = datetime.fromtimestamp(when).replace(tzinfo=pytz.utc)
         self.nice_fancy_date = f'{utils.get_weekday(self.when).capitalize()} {utils.get_month(self.when).capitalize()} {self.date_time.day}, {self.date_time.year}'
         
-        self.header = f'“{utils.titleize(title)}” by {self.author_name}'
+        self.header = f'{utils.titleize(title)} by {self.author_name}'
 
         self.html_header = f'''<p style="font-family:Baskerville; font-size: 18px; line-height: 1.5;">
             <i>{self.nice_fancy_date}</i>
             <br>
-            <span style="font-family:Georgia; font-size: 24px;"><b>{utils.titleize(title)}</b></span>
+            <span style="font-family:Georgia; font-size: 24px;"><b>{utils.titleize(title, with_quotes=False)}</b></span>
             <i>by <a href="{self.link}">{self.author_name}</a> ({self.birth}&#8212;{self.death})</i></p>
             </p>'''
 

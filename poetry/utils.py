@@ -155,13 +155,17 @@ def send_email(username, password, html, recipient, subject=''):
         server.send_message(message)
         server.quit()
 
-def titleize(string):
+def titleize(string, with_quotes=True):
 
     with open(f'{base}/minor-words.txt','r') as f:
         words_to_not_capitalize = f.read().split('\n')
 
     delims = [': ', '\“', ' ', 'O’', '-', '(']
     string = re.sub(r'\ \_[0-9]+\_','',string).lower()
+
+    if '(FROM)' in string: string = string.replace('(FROM)', '').strip(); is_from = True
+    else: is_from = False
+
     for delim in delims:  
         words = string.split(delim)
         for i, s in enumerate(words):
@@ -179,7 +183,8 @@ def titleize(string):
         string = delim.join(words)
 
     string = re.sub(r'\'S ','\'s ',string)
-    return string
+    if with_quotes: string = f'“{string}”'
+    return string if not is_from else f'from {string}'
 
 def text_to_html(text):
 
