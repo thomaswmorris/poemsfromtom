@@ -160,11 +160,14 @@ def titleize(string, with_quotes=True):
     with open(f'{base}/minor-words.txt','r') as f:
         words_to_not_capitalize = f.read().split('\n')
 
-    delims = [': ', '\“', ' ', 'O’', '-', '(']
-    string = re.sub(r'\ \_[0-9]+\_','',string).lower()
+    if '(FROM)' in string: 
+        string = string.replace('(FROM)', '').strip()
+        is_from = True
+    else: 
+        is_from = False
 
-    if '(FROM)' in string: string = string.replace('(FROM)', '').strip(); is_from = True
-    else: is_from = False
+    delims = [': ', '\“', ' ', 'O’', '-', '(']
+    string = string.lower()
 
     for delim in delims:  
         words = string.split(delim)

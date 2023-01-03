@@ -88,7 +88,7 @@ for i, entry in curator.history.iterrows():
                             context={'timestamp' : dt.timestamp()},
                             verbose=False)
 
-    print(y, m, d, poem.author, poem.title)
+    print(f'{y}-{m}-{d} {poem.author:>12} {poem.title}')
 
     prev_string = f'<li class="nav-item left"><a class="nav-link" href="{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«Previous</a></li>' if i > 0 else ''
     next_string = f'<li class="nav-item left"><a class="nav-link" href="{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">Next»</a></li>' if i < n_history - 1 else ''
