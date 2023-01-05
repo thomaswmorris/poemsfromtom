@@ -73,9 +73,11 @@ def get_holiday(t=None):
 
     if (dt.month, dt.day) == (3, 17):  return 'saint_patrick'
     if (dt.month, dt.day) == (3, 19):  return 'saint_joseph'
+    if (dt.month, dt.day) == (3, 20):  return 'spring_equinox'
     if (dt.month, dt.day) == (3, 25):  return 'annunciation'
 
     if (dt.month, dt.day) == (6, 19):  return 'juneteenth'
+    if (dt.month, dt.day) == (6, 21):  return 'summer_solstice'
     if (dt.month, dt.day) == (6, 24):  return 'john_the_baptist'
     if (dt.month, dt.day) == (6, 29):  return 'peter_and_paul'
     
@@ -85,6 +87,8 @@ def get_holiday(t=None):
     if (dt.month, dt.day) == (8, 6):   return 'transfiguration'
     if (dt.month, dt.day) == (8, 15):  return 'assumption'
 
+    if (dt.month, dt.day) == (9, 23):  return 'autumn_equinox'
+
     if (dt.month, dt.day) == (10, 31): return 'halloween'
     
     if (dt.month, dt.day) == (11, 1):  return 'all_saints'
@@ -92,6 +96,8 @@ def get_holiday(t=None):
     if (dt.month, dt.day) == (11, 11): return 'veterans_day'
     
     if (dt.month, dt.day) == (12, 8):  return 'immaculate_conception'
+    if (dt.month, dt.day) == (12, 12): return 'guadalupe'
+    if (dt.month, dt.day) == (12, 12): return 'winter_solstice'
     if (dt.month, dt.day) == (12, 24): return 'christmas_eve'
     if (dt.month, dt.day) == (12, 25): return 'christmas_day'
     if (dt.month, dt.day) == (12, 31): return 'new_years_eve'
@@ -155,7 +161,7 @@ def send_email(username, password, html, recipient, subject=''):
         server.send_message(message)
         server.quit()
 
-def titleize(string, with_quotes=True):
+def titleize(string, with_quotes=True, as_html=False):
 
     with open(f'{base}/minor-words.txt','r') as f:
         words_to_not_capitalize = f.read().split('\n')
@@ -186,8 +192,11 @@ def titleize(string, with_quotes=True):
         string = delim.join(words)
 
     string = re.sub(r'\'S ','\'s ',string)
+    
     if with_quotes: string = f'“{string}”'
-    return string if not is_from else f'from {string}'
+    if not is_from: return string
+    elif is_from and (not as_html): return f'from {string}'
+    else: return f'<i>from</i> {string}'
 
 def text_to_html(text):
 
