@@ -206,6 +206,6 @@ def text_to_html(text):
     text  = re.sub(r'_([\w\W]*?)_', r'<i>\1</i>', text) # convert to html italic notation
 
     lines = [line.strip() if len(line) > 0 else '&nbsp;' for line in text.split('\n')]
-    html  = '\n'.join([f'<div style="text-align:left" align="center">\n\t{line}\n</div>' for line in lines])
+    html  = '\n'.join([f'<div style="text-align:left" align="center">\n{line}\n</div>' for line in lines])
 
     return html
