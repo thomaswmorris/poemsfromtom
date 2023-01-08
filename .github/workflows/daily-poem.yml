@@ -1,7 +1,7 @@
 name: Send the daily poem
 on:
   schedule:
-    - cron: '0 12 * * *' # hourly # daily at 12:00 UTC (07:00 EST)
+    - cron: '0 12 * * *' # daily at 12:00 UTC (07:00 EST)
 
 jobs:
   run_tests:
