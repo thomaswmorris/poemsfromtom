@@ -172,7 +172,7 @@ def titleize(string, with_quotes=True, as_html=False):
     else: 
         is_from = False
 
-    delims = [': ', '\“', ' ', 'O’', '-', '(']
+    delims = [': ', '\“', ' ', 'O’', '-', '(', '.']
     string = string.lower()
 
     for delim in delims:  
