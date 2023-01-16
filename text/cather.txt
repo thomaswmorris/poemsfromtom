@@ -19,7 +19,33 @@
 	 Or kiss back Cleopatra from the dead!
 
 
-2. ARCADIAN WINTER
+2. ANTINOUS
+
+	With attributes of gods they sculptured him,
+	   Hermes, Osiris, but were never wise
+	To lift the level, frowning brow of him
+	   Or dull the mortal misery in his eyes,
+	The scornful weariness of every limb,
+	   The dust-begotten doubt that never dies,
+	Antinous, beneath thy lids, though dim,
+	The curling smoke of altars rose to thee,
+	Conjuring thee to comfort and content.
+	   An emperor sent his galleys wide and far
+	To seek thy healing for thee. Yea, and spent
+	   Honour and treasure and red fruits of war
+	   To lift thy heaviness, lest thou should’st mar
+	The head that was an empire’s glory, bent
+	A little, as the heavy poppies are.
+	   Did the perfection of thy beauty pain
+	Thy limbs to bear it? Did it ache to be,
+	   As song hath ached in men, or passion vain?
+	Or lay it like some heavy robe on thee?
+	   Was thy sick soul drawn from thee like the rain,
+	Or drunk up as the dead are drunk each hour
+	To feed the colour of some tulip flower?
+
+
+3. ARCADIAN WINTER
 
 	Woe is me to tell it thee,
 	Winter winds in Arcady!
@@ -66,7 +92,7 @@
 	Shepherd maids no longer fair.
 
 
-3. AUTUMN MELODY
+4. AUTUMN MELODY
 
 	In the autumn days, the days of parting,
 	   Days that in a golden silence fall,
@@ -89,7 +115,28 @@
 	   Would our shades could drink it, and be stilled.
 
 
-4. EVENING SONG
+5. THE ENCORE
+
+	No garlands in the winter-time,
+	   No trumpets in the night!
+	The song ye praise was done lang syne,
+	   And was its own delight.
+	O’ God’s name take the wreath away,
+	   Since now the music’s sped;
+	Ye never cry, “Long live the king!”
+	   Until the king is dead.
+	
+	When I came piping through the land,
+	   One morning in the spring,
+	With cockle-burrs upon my coat,
+	   ’Twas then I was a king:
+	A mullein sceptre in my hand,
+	   My order daisies three,
+	With song’s first freshness on my lips--
+	   And then ye pitied me!
+
+
+6. EVENING SONG
 
 	Dear love, what thing of all the things that be
 	Is ever worth one thought from you or me,
@@ -114,7 +161,7 @@
 	       And none but Love.
 
 
-5. FIDES, SPES
+7. FIDES, SPES
 
 	Joy is come to the little
 	       Everywhere;
@@ -146,7 +193,37 @@
 	       Frozen, dumb?
 
 
-6. GOING HOME
+8. THE GAUL IN THE CAPITOL
+
+	The murmur of old, old water,
+	The yellow of old, old stone,
+	The fountain that sings through the silence,
+	The river-god, dreaming alone;
+	The Antonine booted and mounted
+	In his sun-lit, hill-top place,
+	The Julians, gigantic in armour,
+	The low-browed Claudian race.
+	
+	The wolf and the twin boys she suckled,
+	And the powerful breed they bred;
+	Caesars of duplicate empires,
+	All under one roof-stead.
+	Fronting these fronts triumphant,
+	Conquest on conquest pressed
+	By these marching, arrogant masters,
+	Who could have hoped for the West?
+	
+	At the feet of his multiple victors,
+	Beaten and dazed and dumb,
+	One, from the wild new races,
+	Clay of the kings to come.
+	Hail, in the halls of the Caesars!
+	Hail, from the thrones oversea!
+	Sheath of the sword-like vigour,
+	Sap of the kings to be!
+
+
+9. GOING HOME
 
 	How smoothly the trains run beyond the Missouri;
 	Even in my sleep I know when I have crossed the river.
@@ -177,7 +254,7 @@
 	As if they, too, were going home.
 
 
-7. GRANDMITHER, THINK NOT I FORGET
+10. GRANDMITHER, THINK NOT I FORGET
 
 	Grandmither, think not I forget, when I come back to town,
 	An’ wander the old ways again an’ tread them up an’ down.
@@ -220,7 +297,7 @@
 	     That I would like to be.
 
 
-8. THE HAWTHORN TREE
+11. THE HAWTHORN TREE
 
 	Across the shimmering meadows--
 	Ah, when he came to me!
@@ -244,7 +321,7 @@
 	Not what he said to me!
 
 
-9. I SOUGHT THE WOOD IN WINTER
+12. I SOUGHT THE WOOD IN WINTER
 
 	I sought the wood in summer
 	       When every twig was green;
@@ -295,7 +372,7 @@
 	       The Law behind the veil.”
 
 
-10. IN MEDIA VITA
+13. IN MEDIA VITA
 
 	Streams of the spring a-singing,
 	 Winds of the May that blow,
@@ -325,7 +402,7 @@
 	 And the dead, under all!
 
 
-11. IN ROSE-TIME
+14. IN ROSE-TIME
 
 	_Oh, this is the joy of the rose:
 	         That it blows,
@@ -363,7 +440,40 @@
 	           And goes._
 
 
-12. A LIKENESS
+15. LAMENT FOR MARSYAS
+
+	Marsyas sleeps. Oh, never wait,
+	Maidens, by the city gate,
+	Till he come to plunder gold
+	Of the daffodils you hold,
+	Or your branches white with may;
+	He is whiter gone than they.
+	He will startle you no more
+	When along the river shore
+	Damsels beat the linen clean.
+	Nor when maidens play at ball
+	Will he catch it where it fall:
+	Though ye wait for him and call,
+	He will answer not, I ween.
+	
+	Happy Earth to hold him so,
+	Still and satisfied and low,
+	Giving him his will--ah, more
+	Than a woman could before!
+	Still forever holding up
+	To his parted lips the cup
+	Which hath eased him, when to bless
+	All who loved were powerless.
+	Ah! for that too-lovely head,
+	Low among the laureled dead,
+	Many a rose earth oweth yet;
+	Many a yellow jonquil brim,
+	Many a hyacinth dewy-dim,
+	For the singing breath of him--
+	Sweeter than the violet.
+
+
+16. A LIKENESS
 
 	In every line a supple beauty--
 	   The restless head a little bent--
@@ -420,7 +530,28 @@
 	   His sorrow in a marble face.
 
 
-13. L’ENVOI
+17. LONDON ROSES
+
+	“Rowses, Rowses! Penny a bunch!” they tell you--
+	Slattern girls in Trafalgar, eager to sell you.
+	Roses, roses, red in the Kensington sun,
+	Holland Road, High Street, Bayswater, see you and smell you--
+	Roses of London town, red till the summer is done.
+	
+	Roses, roses, locust and lilac, perfuming
+	West End, East End, wondrously budding and blooming
+	Out of the black earth, rubbed in a million hands,
+	Foot-trod, sweat-sour over and under, entombing
+	Highways of darkness, deep gutted with iron bands.
+	
+	“Rowses, rowses! Penny a bunch!” they tell you,
+	Ruddy blooms of corruption, see you and smell you,
+	Born of stale earth, fallowed with squalor and tears--
+	North shire, south shire, none are like these, I tell you,
+	Roses of London perfumed with a thousand years.
+
+
+18. L’ENVOI
 
 	Where are the loves that we have loved before
 	When once we are alone, and shut the door?
@@ -440,7 +571,7 @@
 	When once I am alone, and shut the door.
 
 
-14. MACON PRAIRIE
+19. MACON PRAIRIE
 
 	She held me for a night against her bosom,
 	The aunt who died when I was yet a baby,
@@ -530,7 +661,7 @@
 	On the red rolling land of Macon prairie.
 
 
-15. THE PALATINE
+20. THE PALATINE
 
 	“Have you been with the King to Rome,
 	       Brother, big brother?”
@@ -581,7 +712,7 @@
 	       Back to your play, little brother.”
 
 
-16. PARADOX
+21. PARADOX
 
 	I knew them both upon Miranda’s isle,
 	 Which is of youth a sea-bound seigniory:
@@ -599,7 +730,7 @@
 	 Alack, it was poor Caliban who sang.
 
 
-17. THE POOR MINSTREL
+22. THE POOR MINSTREL
 
 	_Does the darkness cradle thee
 	Than mine arms more tenderly?_
@@ -648,7 +779,60 @@
 	Than mine arms more tenderly?_
 
 
-18. PRAIRIE DAWN
+23. POPPIES ON LUDLOW CASTLE
+
+	Through halls of vanished pleasure,
+	      And hold of vanished power,
+	And crypt of faith forgotten,
+	      I came to Ludlow tower.
+	
+	A-top of arch and stairway,
+	      Of crypt, and donjon cell,
+	Of council hall, and chamber,
+	      Of wall, and ditch, and well,
+	
+	High over grated turrets
+	      Where clinging ivies run,
+	A thousand scarlet poppies
+	      Enticed the rising sun,
+	
+	Upon the topmost turret,
+	      With death and damp below,--
+	Three hundred years of spoilage,--
+	      The crimson poppies grow.
+	
+	This hall it was that bred him,
+	      These hills that knew him brave,
+	The gentlest English singer
+	      That fills an English grave.
+	
+	How have they heart to blossom
+	      So cruel gay and red,
+	When beauty so hath perished
+	      And valour so hath sped?
+	
+	When knights so fair are rotten,
+	      And captains true asleep,
+	And singing lips are dust-stopped
+	      Six English earth-feet deep?
+	
+	When ages old remind me
+	      How much hath gone for naught,
+	What wretched ghost remaineth
+	      Of all that flesh hath wrought;
+	
+	Of love and song and warring,
+	      Of adventure and play,
+	Of art and comely building,
+	      Of faith and form and fray--
+	
+	I’ll mind the flowers of pleasure,
+	      Of short-lived youth and sleep,
+	That drank the sunny weather
+	      A-top of Ludlow keep.
+
+
+24. PRAIRIE DAWN
 
 	A crimson fire that vanquishes the stars;
 	A pungent odor from the dusty sage;
@@ -660,7 +844,7 @@
 	A sudden sickness for the hills of home.
 
 
-19. PRAIRIE SPRING
+25. PRAIRIE SPRING
 
 	Evening and the flat land,
 	Rich and somber and always silent;
@@ -683,7 +867,7 @@
 	Out of the earthy dusk.
 
 
-20. PROVENÇAL LEGEND
+26. PROVENÇAL LEGEND
 
 	On his little grave and wild,
 	Faustinus, the martyr child,
@@ -735,7 +919,7 @@
 	 Play-time to that martyr child.
 
 
-21. RECOGNITION
+27. RECOGNITION
 
 	The old volcanic mountains
 	That slope up from the sea--
@@ -748,7 +932,7 @@
 	A new sail comes home!
 
 
-22. A SILVER CUP
+28. A SILVER CUP
 
 	In Venice,
 	Under the Rialto bridge, one summer morning,
@@ -835,7 +1019,7 @@
 	Who had his story, which you never told me.
 
 
-23. SLEEP, MINSTREL, SLEEP
+29. SLEEP, MINSTREL, SLEEP
 
 	Sleep, minstrel, sleep; the winter wind’s awake,
 	     And yellow April’s buried deep and cold.
@@ -865,7 +1049,7 @@
 	     When winter winds awoke. Sleep, minstrel, sleep.
 
 
-24. SONG
+30. SONG
 
 	Troubadour, when you were gay,
 	You wooed with rose and roundelay,
@@ -896,7 +1080,7 @@
 	Than ever roundelay or rose!
 
 
-25. SPANISH JOHNNY
+31. SPANISH JOHNNY
 
 	The old West, the old time,
 	   The old wind singing through
@@ -926,7 +1110,7 @@
 	   To his mandolin.
 
 
-26. STREET IN PACKINGTOWN
+32. STREET IN PACKINGTOWN
 
 	In the gray dust before a frail gray shed,
 	By a board fence obscenely chalked in red,
@@ -960,7 +1144,7 @@
 	Lithuania looks at me.
 
 
-27. THE SWEDISH MOTHER
+33. THE SWEDISH MOTHER
 
 	_“You shall hear the tale again--_
 	   _Hush, my red-haired daughter.”_
@@ -1022,7 +1206,7 @@
 	   _In the sunset grazing._
 
 
-28. THE TAVERN
+34. THE TAVERN
 
 	In the tavern of my heart
 	 Many a one has sat before,
@@ -1052,7 +1236,37 @@
 	 None will come forevermore.
 
 
-29. WINTER AT DELPHI
+35. THOU ART THE PEARL
+
+	I read of knights who laid their armour down,
+	   And left the tourney’s prize for other hands,
+	And clad them in a pilgrim’s sober gown,
+	   To seek a holy cup in desert lands.
+	For them no more the torch of victory;
+	   For them lone vigils and the starlight pale,
+	So they in dreams the Blessed Cup may see--
+	   Thou art the Grail!
+	
+	An Eastern king once smelled a rose in sleep,
+	   And on the morrow laid his scepter down.
+	His heir his titles and his lands might keep,--
+	   The rose was sweeter wearing than the crown.
+	Nor cared he that its life was but an hour,
+	   A breath that from the crimson summer blows,
+	Who gladly paid a kingdom for a flower--
+	   Thou art the Rose!
+	
+	A merchant man, who knew the worth of things,
+	   Beheld a pearl more priceless than a star;
+	And straight returning, all he hath he brings
+	   And goes upon his way, ah, richer far!
+	Laughter of merchants in the market-place,
+	   Nor taunting gibe nor scornful lips that curl,
+	Can ever cloud the rapture on his face--
+	   Thou art the Pearl!
+
+
+36. WINTER AT DELPHI
 
 	Cold are the stars of the night,
 	 Wild is the tempest crying,
