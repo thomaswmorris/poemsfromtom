@@ -67,10 +67,10 @@ def commit_elements(elements):
     master_ref.edit(sha=commit.sha)
 
 blob  = curator.repo.create_git_blob(home_html, "utf-8")
-elems = [gh.InputGitTreeElement(path='/poems/index.html', mode='100644', type='blob', sha=blob.sha)]
+elems = [gh.InputGitTreeElement(path='poems/index.html', mode='100644', type='blob', sha=blob.sha)]
 
 blob  = curator.repo.create_git_blob(random_html, "utf-8")
-elems.append(gh.InputGitTreeElement(path='/poems/random.html', mode='100644', type='blob', sha=blob.sha))
+elems.append(gh.InputGitTreeElement(path='poems/random.html', mode='100644', type='blob', sha=blob.sha))
 
 n_history = len(history)
 ys, ms, ds = [], [], []
