@@ -92,7 +92,6 @@ for i, entry in curator.history.iterrows():
 
     prev_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«Previous</a></li>' if i > 0 else ''
     next_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">Next»</a></li>' if i < n_history - 1 else ''
-    rand_string = f'<a href="random">/poems/random</a>'
 
     html = f'''<!DOCTYPE html>
 <html lang="en">
@@ -107,7 +106,7 @@ for i, entry in curator.history.iterrows():
             <nav>
                 <ul>
                     {prev_string}
-                    <li class="nav-item left"><a class="nav-link" href="random">Random</a></li>
+                    <li class="nav-item left"><a class="nav-link" href="/poems/random">Random</a></li>
                     {next_string}
                     <li class="nav-item right"><a class="nav-link" href="/blog">Blog</a></li>
                     <li class="nav-item right"><a class="nav-link" href="/xw">Crosswords</a></li>
