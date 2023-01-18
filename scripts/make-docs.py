@@ -27,7 +27,7 @@ home_html = f'''
     <html>
     <head>
         <title></title>
-        <meta http-equiv="refresh" content="0; url={dt_last.year:02}-{dt_last.month:02}-{dt_last.day:02}"/>
+        <meta http-equiv="refresh" content="0; url={dt_last.year:02}/{dt_last.month:02}/{dt_last.day:02}"/>
     </head>
     </html>
     '''
@@ -35,7 +35,7 @@ home_html = f'''
 ymds = []
 for i, entry in curator.history.iterrows():
     y, m, d = entry.date.split('-')
-    ymds.append(f'{y:0>2}-{m:0>2}-{d:0>2}')
+    ymds.append(f'{y:0>2}/{m:0>2}/{d:0>2}')
 
 random_html = f'''
     <html>
@@ -88,7 +88,7 @@ for i, entry in curator.history.iterrows():
                             context={'timestamp' : dt.timestamp()},
                             verbose=False)
 
-    print(f'{y}-{m}-{d} {poem.author:>12} {poem.title}')
+    print(f'{y}/{m}/{d} {poem.author:>12} {poem.title}')
 
     prev_string = f'<li class="nav-item left"><a class="nav-link" href="{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«Previous</a></li>' if i > 0 else ''
     next_string = f'<li class="nav-item left"><a class="nav-link" href="{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">Next»</a></li>' if i < n_history - 1 else ''
@@ -100,22 +100,22 @@ for i, entry in curator.history.iterrows():
     <meta charset="utf-8">
     <title>{poem.nice_fancy_date}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="..../assets/css/style.css">
 </head>
-    <body class="static-layout" background="../assets/images/bg/monet-haystacks.jpg">
+    <body class="static-layout" background="..../assets/images/bg/monet-haystacks.jpg">
         <div class="boxed-page">
             <nav>
                 <ul>
                     {prev_string}
                     <li class="nav-item left"><a class="nav-link" href="random">Random</a></li>
                     {next_string}
-                    <li class="nav-item right"><a class="nav-link" href="../blog">Blog</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="../xw">Crosswords</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="../poems">Poems</a></li>    
-                    <li class="nav-item right"><a class="nav-link" href="../projects">Projects</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="../papers">Papers</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="../cv">CV</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="..">Home</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="..../blog">Blog</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="..../xw">Crosswords</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="..../poems">Poems</a></li>    
+                    <li class="nav-item right"><a class="nav-link" href="..../projects">Projects</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="..../papers">Papers</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="..../cv">CV</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="....">Home</a></li>
                 </ul>
             </nav>
             <section class="bg-white">
@@ -129,7 +129,7 @@ for i, entry in curator.history.iterrows():
 </html>
 '''
 
-    filepath = f'poems/{y}-{m}-{d}.html'
+    filepath = f'poems/{y}/{m}/{d}.html'
     try:    contents = curator.repo.get_contents(filepath, ref='master').decoded_content.decode()
     except: contents = None
     if html == contents:
