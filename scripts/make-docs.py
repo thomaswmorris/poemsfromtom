@@ -67,10 +67,10 @@ def commit_elements(elements):
     master_ref.edit(sha=commit.sha)
 
 blob  = curator.repo.create_git_blob(home_html, "utf-8")
-elems = [gh.InputGitTreeElement(path='poems/index.html', mode='100644', type='blob', sha=blob.sha)]
+elems = [gh.InputGitTreeElement(path='/poems/index.html', mode='100644', type='blob', sha=blob.sha)]
 
 blob  = curator.repo.create_git_blob(random_html, "utf-8")
-elems.append(gh.InputGitTreeElement(path='poems/random.html', mode='100644', type='blob', sha=blob.sha))
+elems.append(gh.InputGitTreeElement(path='/poems/random.html', mode='100644', type='blob', sha=blob.sha))
 
 n_history = len(history)
 ys, ms, ds = [], [], []
@@ -90,9 +90,9 @@ for i, entry in curator.history.iterrows():
 
     print(f'{y}/{m}/{d} {poem.author:>12} {poem.title}')
 
-    prev_string = f'<li class="nav-item left"><a class="nav-link" href="{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«Previous</a></li>' if i > 0 else ''
-    next_string = f'<li class="nav-item left"><a class="nav-link" href="{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">Next»</a></li>' if i < n_history - 1 else ''
-    rand_string = f'<a href="random">random</a>'
+    prev_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«Previous</a></li>' if i > 0 else ''
+    next_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">Next»</a></li>' if i < n_history - 1 else ''
+    rand_string = f'<a href="random">/poems/random</a>'
 
     html = f'''<!DOCTYPE html>
 <html lang="en">
@@ -100,22 +100,22 @@ for i, entry in curator.history.iterrows():
     <meta charset="utf-8">
     <title>{poem.nice_fancy_date}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="..../assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-    <body class="static-layout" background="..../assets/images/bg/monet-haystacks.jpg">
+    <body class="static-layout" background="/assets/images/bg/monet-haystacks.jpg">
         <div class="boxed-page">
             <nav>
                 <ul>
                     {prev_string}
                     <li class="nav-item left"><a class="nav-link" href="random">Random</a></li>
                     {next_string}
-                    <li class="nav-item right"><a class="nav-link" href="..../blog">Blog</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="..../xw">Crosswords</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="..../poems">Poems</a></li>    
-                    <li class="nav-item right"><a class="nav-link" href="..../projects">Projects</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="..../papers">Papers</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="..../cv">CV</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="....">Home</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="/blog">Blog</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="/xw">Crosswords</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="/poems">Poems</a></li>    
+                    <li class="nav-item right"><a class="nav-link" href="/projects">Projects</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="/papers">Papers</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="/cv">CV</a></li>
+                    <li class="nav-item right"><a class="nav-link" href="/">Home</a></li>
                 </ul>
             </nav>
             <section class="bg-white">
