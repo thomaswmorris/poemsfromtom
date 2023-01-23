@@ -3,13 +3,13 @@
 Usage
 -----
 
-The ``poetry`` package works with the ``Curator``, initialized as 
+The ``poems`` package works with the ``Curator``, initialized as 
 
 .. code-block:: python
 
-    import poetry
+    import poems
     
-    curator = poetry.Curator()
+    curator = poems.Curator()
     
 It can get us a random poem by a specified poet
 
@@ -31,7 +31,7 @@ assuming that it is in the database (which you can see as ``curator.poems``). We
 
 .. code-block:: python
     
-    context = poetry.utils.get_context() # Just a dictionary
+    context = poems.utils.get_context() # Just a dictionary
     print(context)
     
     poem = curator.get_poem(context=context) # Loads a contextual poem
@@ -40,7 +40,7 @@ Note that if it's summertime, this does not guarantee a summer poem (rather, it 
 
 .. code-block:: python
     
-    context = poetry.utils.get_context()
+    context = poems.utils.get_context()
     print(context)
     
     # A guaranteed holiday poem, assuming it's a holiday when you run this

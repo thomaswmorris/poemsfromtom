@@ -2,8 +2,8 @@ from datetime import datetime
 import time as ttime
 import github as gh
 import pytz, re, sys
-sys.path.insert(0, '../poetry')
-import poetry
+sys.path.insert(0, '../poems')
+import poems
 
 import argparse, sys
 parser = argparse.ArgumentParser()
@@ -12,7 +12,7 @@ parser.add_argument('--github_token', type=str, help='GH token', default='')
 args = parser.parse_args()
 
 # Initialize the curator
-curator = poetry.Curator()
+curator = poems.Curator()
 curator.load_github_repo(github_repo_name=args.github_repo_name, github_token=args.github_token)
 curator.read_history(filename='poems/history.csv', from_repo=True)
 history = curator.history.copy()

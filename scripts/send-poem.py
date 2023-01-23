@@ -3,8 +3,8 @@ import numpy as np
 import pandas as pd
 import argparse, sys, threading
 from io import StringIO
-sys.path.insert(0, '../poetry')
-import poetry
+sys.path.insert(0, '../poems')
+import poems
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--username', type=str, help='Email address from which to send the poem',default='')
@@ -16,13 +16,13 @@ parser.add_argument('--type', type=str, help='What tag to write to the history w
 args = parser.parse_args()
 
 # Initialize the curator
-curator = poetry.Curator()
+curator = poems.Curator()
 curator.load_github_repo(github_repo_name=args.github_repo_name, github_token=args.github_token)
 curator.read_history(filename='poems/history.csv', from_repo=True)
 
 when = ttime.time() if not args.type == 'test' else ttime.time() + 365 * 86400 * np.random.uniform()
 
-context = poetry.utils.get_context(when)
+context = poems.utils.get_context(when)
 
 # Choose a poem that meets the supplied conditions
 curated_poem = curator.get_poem(
@@ -53,7 +53,7 @@ def thread_process(poem, username, password, name, email, subject):
     done, fails = False, 0
     while (not done) and (fails < 60):
         try:
-            poetry.utils.send_email(username, password, poem.email_html, email, subject)
+            poems.utils.send_email(username, password, poem.email_html, email, subject)
             a, b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
             done = True
         except Exception as e:
