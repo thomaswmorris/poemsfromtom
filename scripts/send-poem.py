@@ -57,7 +57,7 @@ def thread_process(poem, username, password, name, email, subject):
             a, b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
             done = True
         except Exception as e:
-            print(e); fails += 1; ttime.sleep(30)
+            print(e); fails += 1; ttime.sleep(60)
 
 for name, email in zip(entries['name'], entries['email']):
 

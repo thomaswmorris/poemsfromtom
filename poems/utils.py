@@ -82,7 +82,6 @@ def get_holiday(t=None):
     if (dt.month, dt.day) == (6, 29):  return 'peter_and_paul'
     
     if (dt.month, dt.day) == (7, 4):   return 'independence_day'
-    if (dt.month, dt.day) == (7, 4):   return 'independence_day'
 
     if (dt.month, dt.day) == (8, 6):   return 'transfiguration'
     if (dt.month, dt.day) == (8, 15):  return 'assumption'
