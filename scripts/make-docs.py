@@ -99,7 +99,7 @@ for i, entry in curator.history.iterrows():
     <meta charset="utf-8">
     <title>{poem.nice_fancy_date}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
     <style>
     {poems.css}
     </style>
@@ -124,7 +124,7 @@ for i, entry in curator.history.iterrows():
     <div class="poem-header">
         <i>{poem.nice_fancy_date}</i>
         <br>
-        <span style="font-family:'Trebuchet MS'; font-size: 24px;"><b>{poems.utils.titleize(poem.title, with_quotes=False, as_html=True)}</b></span>
+        <span style="font-family:Baskerville; font-size: 24px;"><b>{poems.utils.titleize(poem.title, with_quotes=False, as_html=True)}</b></span>
         <i>by <a href="{poem.link}">{poem.author_name}</a> ({poem.birth}&#8212;{poem.death})</i></p>
     </div>
     {poem.html_lines}
@@ -144,11 +144,9 @@ for i, entry in curator.history.iterrows():
     print(f'creating file {filepath}')
     print(32*'#')
 
-    if len(elems) >= 64: 
+    if len(elems) >= 256: 
         commit_elements(elems)
         elems = []
-        ttime.sleep(60) # just chill out, github doesn't like rapid commits
-
-    break
+        ttime.sleep(10) # just chill out, github doesn't like rapid commits
 
 commit_elements(elems)
