@@ -197,7 +197,7 @@ def titleize(string, with_quotes=True, as_html=False):
     elif is_from and (not as_html): return f'from {string}'
     else: return f'<i>from</i> {string}'
 
-def text_to_html(text):
+def text_to_html_lines(text):
 
     text  = text.replace('--', '&#8212;') # convert emdashes
 
@@ -205,6 +205,6 @@ def text_to_html(text):
     text  = re.sub(r'_([\w\W]*?)_', r'<i>\1</i>', text) # convert to html italic notation
 
     lines = [line.strip() if len(line) > 0 else '&nbsp;' for line in text.split('\n')]
-    html  = '\n'.join([f'<div style="text-align:left" align="center">\n{line}\n</div>' for line in lines])
+    html_lines  = '\n'.join([f'<div class="poem-line">{line}</div>' for line in lines])
 
-    return html
+    return html_lines

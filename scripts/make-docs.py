@@ -101,30 +101,32 @@ for i, entry in curator.history.iterrows():
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-    <body class="static-layout" background="/assets/images/bg/monet-haystacks.jpg">
-        <div class="boxed-page">
-            <nav>
-                <ul>
-                    {prev_string}
-                    <li class="nav-item left"><a class="nav-link" href="/poems/random">Random</a></li>
-                    {next_string}
-                    <li class="nav-item right"><a class="nav-link" href="/blog">Blog</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="/xw">Crosswords</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="/poems">Poems</a></li>    
-                    <li class="nav-item right"><a class="nav-link" href="/projects">Projects</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="/papers">Papers</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="/cv">CV</a></li>
-                    <li class="nav-item right"><a class="nav-link" href="/">Home</a></li>
-                </ul>
-            </nav>
-            <section class="bg-white">
-                <div class="section-content" style="border-collapse:collapse; padding-left: 5%; padding-right: 5%;">
-                    {poem.html_header}
-                    {poem.html_body}
-                </div>
-            </div>
-        </section>		
-    </body>
+<body>
+    <header style="background-image: url('../../../assets/images/bg/monet-haystacks.jpg')"></header>
+    <nav>
+        <ul>
+            {prev_string}
+            <li class="nav-item left"><a class="nav-link" href="/poems/random">Random</a></li>
+            {next_string}
+            <li class="nav-item left"><a class="nav-link" href="./">Home</a></li>
+            <li class="nav-item left"><a class="nav-link" href="cv">CV</a></li>
+            <li class="nav-item left"><a class="nav-link" href="papers">Papers</a></li>
+            <li class="nav-item left"><a class="nav-link" href="projects">Projects</a></li>
+            <li class="nav-item left"><a class="nav-link" href="poems">Poems</a></li>    
+            <li class="nav-item left"><a class="nav-link" href="xw">Crosswords</a></li>
+            <li class="nav-item left"><a class="nav-link" href="blog">Blog</a>
+        </ul>
+    </nav>
+    <section class="poem-section">
+    <div class="poem-header">
+        <i>{poem.nice_fancy_date}</i>
+        <br>
+        <span style="font-family:'Trebuchet MS'; font-size: 24px;"><b>{poems.utils.titleize(poem.title, with_quotes=False, as_html=True)}</b></span>
+        <i>by <a href="{poem.link}">{poem.author_name}</a> ({poem.birth}&#8212;{poem.death})</i></p>
+    </div>
+    {poem.html_lines}
+</section>		
+</body>
 </html>
 '''
 

@@ -13,6 +13,8 @@ def PoemNotFoundError(BaseException):
 
 base, this_file = os.path.split(__file__)
 
+with open(f'{base}/style.css', 'r') as f: css = f.read()
+
 class Poem():
 
     def __init__(self, author, title, when):
@@ -24,30 +26,28 @@ class Poem():
             self.author_name, self.birth, self.death, self.nationality, self.link = data[author]['metadata'].values()
             self.body, self.keywords = data[author]['poems'][title].values()
 
-        self.html_body = f'''<blockquote style="font-family:Baskerville; font-size: 18px" align="left; max-width: 600px;">
-        <div style="text-indent: -1em; padding-left:1em;">
-        {utils.text_to_html(self.body)}
-        </div>
-        </blockquote>'''
         self.date_time = datetime.fromtimestamp(when).replace(tzinfo=pytz.utc)
         self.nice_fancy_date = f'{utils.get_weekday(self.when).capitalize()} {utils.get_month(self.when).capitalize()} {self.date_time.day}, {self.date_time.year}'
+        self.html_lines = utils.text_to_html_lines(self.body)
         
         self.header = f'{utils.titleize(title)} by {self.author_name}'
 
-        self.html_header = f'''<p style="font-family:Baskerville; font-size: 18px; line-height: 1.5;">
-            <i>{self.nice_fancy_date}</i>
-            <br>
-            <span style="font-family:Georgia; font-size: 24px;"><b>{utils.titleize(title, with_quotes=False, as_html=True)}</b></span>
-            <i>by <a href="{self.link}">{self.author_name}</a> ({self.birth}&#8212;{self.death})</i></p>
-            </p>'''
-
-        self.email_html = f'''<html>
-            {self.html_header}
-            {self.html_body}
-            <p> 
-            <a href="thomaswmorris.com/poems">past poems</a>
-            </p>
-            </html>'''
+        self.email_html = f'''
+<head><!DOCTYPE html>
+<style>
+{css}
+</style>
+</head>
+<section class="poem-section">
+    <div class="poem-header">
+        <i>{self.nice_fancy_date}</i>
+        <br>
+        <span style="font-family:'Trebuchet MS'; font-size: 24px;"><b>{utils.titleize(title, with_quotes=False, as_html=True)}</b></span>
+        <i>by <a href="{self.link}">{self.author_name}</a> ({self.birth}&#8212;{self.death})</i></p>
+    </div>
+    {self.html_lines}
+</section>	
+'''
 
 class Curator():
 
