@@ -23,6 +23,6 @@ jobs:
           python scripts/send-poem.py --type 'test' --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --listserv_filename 'poems/testserv.csv'
           --github_repo_name 'thomaswmorris.github.io' --github_token ${{ secrets.GH_TOKEN }} 
 
-      #- name: Update repo pages
-      #  run:
-      #    python scripts/make-docs.py --github_repo_name 'thomaswmorris.github.io' --github_token ${{ secrets.GH_TOKEN }} 
+      - name: Update repo pages
+        run:
+          python scripts/make-docs.py --github_repo_name 'thomaswmorris.github.io' --github_token ${{ secrets.GH_TOKEN }} 
