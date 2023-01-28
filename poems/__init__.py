@@ -42,7 +42,7 @@ class Poem():
     <div class="poem-header">
         <i>{self.nice_fancy_date}</i>
         <br>
-        <span style="font-family:Baskerville; font-size: 24px;"><b>{utils.titleize(title, with_quotes=False, as_html=True)}</b></span>
+        <span style="font-family:Baskerville; font-size: 28px;"><b>{utils.titleize(title, with_quotes=False, as_html=True)}</b></span>
         <i>by <a href="{self.link}">{self.author_name}</a> ({self.birth}&#8212;{self.death})</i></p>
     </div>
     {self.html_lines}

@@ -4,17 +4,17 @@ div.poem-line {
   align: left;
   max-width: fit-content;
   font-family: Baskerville; 
-  font-size: 18px;
+  font-size: 20px;
 }
 
 div.poem-header {
   align: left;
   max-width: fit-content;
   font-family: Baskerville; 
-  font-size: 18px;
+  font-size: 20px;
   padding-bottom: 10px;
 }
 
 section.poem-section {
-  padding: 3%;
+  padding-left: 3%;
 }
