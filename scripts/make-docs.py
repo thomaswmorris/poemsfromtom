@@ -90,8 +90,8 @@ for i, entry in curator.history.iterrows():
 
     print(f'{y}/{m}/{d} {poem.author:>12} {poem.title}')
 
-    prev_string = f'<li class="nav-item right"><a class="nav-link" href="/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«Previous</a></li>' if i > 0 else ''
-    next_string = f'<li class="nav-item right"><a class="nav-link" href="/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">Next»</a></li>' if i < n_history - 1 else ''
+    prev_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«Previous</a></li>' if i > 0 else ''
+    next_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">Next»</a></li>' if i < n_history - 1 else ''
 
     html = f'''<!DOCTYPE html>
 <html lang="en">
@@ -105,7 +105,7 @@ for i, entry in curator.history.iterrows():
     </style>
 </head>
 <body>
-    <header style="background-image: url('../../../assets/images/bg/monet-haystacks.jpg')"></header>
+    <header style="background-image: url('../../../assets/images/bg/pissaro-pontoise.jpeg')"></header>
     <nav>
         <ul>
             <li class="nav-item left"><a class="nav-link" href="/">Home</a></li>
@@ -118,7 +118,7 @@ for i, entry in curator.history.iterrows():
         </ul>
         <ul>
             {prev_string}
-            <li class="nav-item right"><a class="nav-link" href="/poems/random">Random</a></li>
+            <li class="nav-item left"><a class="nav-link" href="/poems/random">Random</a></li>
             {next_string}
         </ul>
     </nav>
