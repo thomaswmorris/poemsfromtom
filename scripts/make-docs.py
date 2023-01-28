@@ -100,6 +100,9 @@ for i, entry in curator.history.iterrows():
     <title>{poem.nice_fancy_date}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+    {poems.css}
+    </style>
 </head>
 <body>
     <header style="background-image: url('../../../assets/images/bg/monet-haystacks.jpg')"></header>
@@ -145,5 +148,7 @@ for i, entry in curator.history.iterrows():
         commit_elements(elems)
         elems = []
         ttime.sleep(60) # just chill out, github doesn't like rapid commits
+
+    break
 
 commit_elements(elems)
