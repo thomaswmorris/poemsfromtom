@@ -13,7 +13,7 @@ def PoemNotFoundError(BaseException):
 
 base, this_file = os.path.split(__file__)
 
-with open(f'{base}/style.css', 'r') as f: css = f.read()
+with open(f'{base}/poem-style.css', 'r') as f: css = f.read()
 
 class Poem():
 
