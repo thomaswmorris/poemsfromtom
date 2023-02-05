@@ -129,7 +129,7 @@ def get_liturgy(t=ttime.time()):
 
 def get_month_epoch(t=ttime.time()):
     
-    day = get_day(t=t)
+    day = int(get_day(t=t))
     if day < 11: return 'early'
     if day < 21: return 'middle'
     return 'late'
