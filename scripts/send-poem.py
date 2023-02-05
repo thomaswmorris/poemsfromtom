@@ -1,6 +1,7 @@
 import time as ttime
 import numpy as np
 import pandas as pd
+from datetime import datetime
 import argparse, sys, threading
 from io import StringIO
 sys.path.insert(0, '../poems')
@@ -54,7 +55,7 @@ def thread_process(poem, username, password, name, email, subject):
     while (not done) and (fails < 60):
         try:
             poems.utils.send_email(username, password, poem.email_html, email, subject)
-            a, b = email.split('@'); print(f'sent to {name:<18} | {a:>24} @ {b:<20}')
+            a, b = email.split('@'); print(f'{datetime.now().isoformat()} | sent to {name:<18} | {a:>24} @ {b:<20}')
             done = True
         except Exception as e:
             print(e); fails += 1; ttime.sleep(60)

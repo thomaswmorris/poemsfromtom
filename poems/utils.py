@@ -106,9 +106,10 @@ def get_holiday(t=None):
     if get_holiday(t + 7 * 86400) == 'advent_sunday': return 'christ_the_king'
 
     # these are weirder
+    if (dt.month, dt.weekday()) == (5, 6) and (dt.day > 7) and (get_utc_datetime(t - 14 * 86400).month == 4): return 'mothers_day' # second sunday of may
     if (dt.month, dt.weekday()) == (5, 0) and (get_utc_datetime(t + 7 * 86400).month == 6): return 'memorial_day' # last monday of may
     if (dt.month, dt.weekday()) == (9, 0) and (get_utc_datetime(t - 7 * 86400).month == 8): return 'labor_day' # first monday of september
-    if (dt.month, dt.day) == (11, (3 - datetime(dt.year, 11, 1).weekday()) % 7 + 22): return 'thanksgiving' # fourth thursday of november
+    if (dt.month, dt.weekday()) == (11, 3) and (dt.day > 21) and (get_utc_datetime(t - 28 * 86400).month == 10): return 'thanksgiving' # fourth thursday of november
     
     return 'no holiday'
 
@@ -126,11 +127,19 @@ def get_liturgy(t=ttime.time()):
     if christmas_yd - (22 + datetime(dt.year,12,25).weekday()) <= yd < christmas_yd: return 'advent'
     return 'ordinary time'
 
+def get_month_epoch(t=ttime.time()):
+    
+    day = get_day(t=t)
+    if day < 11: return 'early'
+    if day < 21: return 'middle'
+    return 'late'
+
 def get_context(x=None):
     when = get_utc_datetime(x).timestamp() if x is not None else ttime.time()
     return {
             'weekday' : get_weekday(when), 
               'month' : get_month(when), 
+        'month_epoch' : get_month_epoch(when),
                 'day' : get_day(when),
              'season' : get_season(when), 
             'liturgy' : get_liturgy(when), 

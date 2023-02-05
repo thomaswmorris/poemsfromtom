@@ -3,48 +3,48 @@
 
 1. THE BALLAD OF JOHN SILVER
 
-	We were schooner-rigged and rakish, with a long and lissome hull, 
-	And we flew the pretty colours of the cross-bones and the skull; 
-	We’d a big black Jolly Roger flapping grimly at the fore, 
-	And we sailed the Spanish Water in the happy days of yore. 
-	
-	We’d a long brass gun amidships, like a well-conducted ship, 
-	We had each a brace of pistols and a cutlass at the hip; 
-	It’s a point which tells against us, and a fact to be deplored, 
-	But we chased the goodly merchant-men and laid their ships aboard. 
-	
-	Then the dead men fouled the scuppers and the wounded filled the chains, 
-	And the paint-work all was spatter-dashed with other people’s brains, 
-	She was boarded, she was looted, she was scuttled till she sank, 
-	And the pale survivors left us by the medium of the plank. 
-	
-	O! then it was (while standing by the taffrail on the poop) 
-	We could hear the drowning folk lament the absent chicken-coop; 
-	Then, having washed the blood away, we’d little else to do 
-	Than to dance a quiet hornpipe as the old salts taught us to. 
-	
-	O! the fiddle on the fo’c’s’le, and the slapping naked soles, 
-	And the genial “Down the middle, Jake, and curtsey when she rolls!” 
-	With the silver seas around us and the pale moon overhead, 
-	And the look-out not a-looking and his pipe-bowl glowing red. 
-	
-	Ah! the pig-tailed, quidding pirates and the pretty pranks we played, 
-	All have since been put a stop-to by the naughty Board of Trade; 
-	The schooners and the merry crews are laid away to rest, 
+	We were schooner-rigged and rakish, with a long and lissome hull,
+	And we flew the pretty colours of the cross-bones and the skull;
+	We’d a big black Jolly Roger flapping grimly at the fore,
+	And we sailed the Spanish Water in the happy days of yore.
+
+	We’d a long brass gun amidships, like a well-conducted ship,
+	We had each a brace of pistols and a cutlass at the hip;
+	It’s a point which tells against us, and a fact to be deplored,
+	But we chased the goodly merchant-men and laid their ships aboard.
+
+	Then the dead men fouled the scuppers and the wounded filled the chains,
+	And the paint-work all was spatter-dashed with other people’s brains,
+	She was boarded, she was looted, she was scuttled till she sank,
+	And the pale survivors left us by the medium of the plank.
+
+	O! then it was (while standing by the taffrail on the poop)
+	We could hear the drowning folk lament the absent chicken-coop;
+	Then, having washed the blood away, we’d little else to do
+	Than to dance a quiet hornpipe as the old salts taught us to.
+
+	O! the fiddle on the fo’c’s’le, and the slapping naked soles,
+	And the genial “Down the middle, Jake, and curtsey when she rolls!”
+	With the silver seas around us and the pale moon overhead,
+	And the look-out not a-looking and his pipe-bowl glowing red.
+
+	Ah! the pig-tailed, quidding pirates and the pretty pranks we played,
+	All have since been put a stop-to by the naughty Board of Trade;
+	The schooners and the merry crews are laid away to rest,
 	A little south the sunset in the Islands of the Blest.
 
 
 
 2. BEAUTY
 
-	I have seen dawn and sunset on moors and windy hills 
-	Coming in solemn beauty like slow old tunes of Spain: 
-	I have seen the lady April bringing the daffodils, 
-	Bringing the springing grass and the soft warm April rain. 
-	
-	I have heard the song of the blossoms and the old chant of the sea, 
-	And seen strange lands from under the arched white sails of ships; 
-	But the loveliest thing of beauty God ever has shown to me, 
+	I have seen dawn and sunset on moors and windy hills
+	Coming in solemn beauty like slow old tunes of Spain:
+	I have seen the lady April bringing the daffodils,
+	Bringing the springing grass and the soft warm April rain.
+
+	I have heard the song of the blossoms and the old chant of the sea,
+	And seen strange lands from under the arched white sails of ships;
+	But the loveliest thing of beauty God ever has shown to me,
 	Are her voice, and her hair, and eyes, and the dear red curve of her lips.
 
 
@@ -59,7 +59,7 @@
 	About the feast days freshly kept by me,
 	But men will call the golden hour of bliss
 	‘About this time,’ or ‘shortly after this.’
-	
+
 	Men do not heed the rungs by which men climb
 	Those glittering steps, those milestones upon time,
 	Those tombstones of dead selves, those hours of birth,
@@ -68,7 +68,7 @@
 	The power of freedom in the perished cult,
 	The power of boredom in the dead man’s deeds
 	Not the bright moments of the sprinkled seeds.
-	
+
 	By many waters and on many ways
 	I have known golden instants and bright days;
 	The day on which, beneath an arching sail,
@@ -97,7 +97,7 @@
 	In happier seasons, and gave thanks to God.
 	All had their beauty, their bright moments’ gift,
 	Their something caught from Time, the ever-swift.
-	
+
 	All of those gleams were golden; but life’s hands
 	Have given more constant gifts in changing lands;
 	And when I count those gifts, I think them such
@@ -108,13 +108,13 @@
 	A city of ships with great ships under weigh,
 	The great street paved with water, filled with shipping,
 	And all the world’s flags flying and seagulls dipping.
-	
+
 	Yet when I am dust my penman may not know
 	Those water-trampling ships which made me glow,
 	But think my wonder mad and fail to find,
 	Their glory, even dimly, from my mind,
 	And yet they made me:
-	
+
 	not alone the ships
 	But men hard-palmed from tallying-on to whips,
 	The two close friends of nearly twenty years
@@ -127,7 +127,7 @@
 	When the loud call blew at the strike of bells?
 	No one, I know, yet let me be believed--
 	A soul entirely known is life achieved.
-	
+
 	Years blank with hardship never speak a word
 	Live in the soul to make the being stirred;
 	Towns can be prisons where the spirit dulls
@@ -152,7 +152,7 @@
 	Where there was wine and fire and talk with some
 	Under strange pictures of the wakened soul
 	To whom this earth was but a burnt-out coal.
-	
+
 	O Time, bring back those midnights and those friends,
 	Those glittering moments that a spirit lends,
 	That all may be imagined from the flash,
@@ -175,7 +175,7 @@
 	Teaching the ways our brooding minds had found,
 	Making that room our Chapter, our one mind
 	Where all that this world soiled should be refined.
-	
+
 	Often at night I tread those streets again
 	And see the alleys glimmering in the rain,
 	Yet now I miss that sign of earlier tramps,
@@ -236,7 +236,7 @@
 	A better beauty since the Earth was laid,
 	Than that thanksgiving given to grey hair
 	For the great gift of life which brought them there.
-	
+
 	Days of endeavour have been good: the days
 	Racing in cutters for the comrade’s praise.
 	The day they led my cutter at the turn,
@@ -277,7 +277,7 @@
 	The watchers’ cheering almost drowned the gun.
 	We had hardly strength to toss our oars; our cry
 	Cheering the losing cutter was a sigh.
-	
+
 	Other bright days of action have seemed great:
 	Wild days in a pampero off the Plate;
 	Good swimming days, at Hog Back or the Coves
@@ -301,7 +301,7 @@
 	Not known by townsmen, nor imagined; health
 	That puts new glory upon mental wealth
 	And makes the poor man rich.
-	
+
 	But that ends, too.
 	Health, with its thoughts of life; and that bright view,
 	That sunny landscape from life’s peak, that glory,
@@ -316,7 +316,7 @@
 	Is dead as print before the funeral;
 	Even deader after, when the dates are sought,
 	And cold minds disagree with what we thought.
-	
+
 	This many-pictured world of many passions
 	Wears out the nations as a woman fashions,
 	And what life is is much to very few;
@@ -333,7 +333,7 @@
 	Dull with the ritual and records of death,
 	That frost of fact by which our wisdom gives
 	Correctly stated death to all that lives.
-	
+
 	Best trust the happy moments. What they gave
 	Makes man less fearful of the certain grave,
 	And gives his work compassion and new eyes.
@@ -344,62 +344,62 @@
 4. THE BUILDERS
 
 	Before the unseen cock had called the time,
-	    Those workers left their beds and stumbled out
+	Those workers left their beds and stumbled out
 	Into the street, where dust lay white as lime
-	    Under the last star that keeps bats about.
+	Under the last star that keeps bats about.
 	Then blinking still from bed, they trod the street,
-	    The doors closed up and down; the traveller heard
+	The doors closed up and down; the traveller heard
 	Doors opened, closed, then silence, then men’s feet
-	    Moving to toil, the men too drowsed for word.
+	Moving to toil, the men too drowsed for word.
 	The bean-field was a greyness as they passed,
-	    The darkness of the hedge was starred with flowers,
+	The darkness of the hedge was starred with flowers,
 	The moth, with wings like dead leaves, sucked his last,
-	    The triumphing cock cried out with all his powers;
+	The triumphing cock cried out with all his powers;
 	His fire of crying made the twilight quick,
 	Then clink, clink, clink, men’s trowels tapped the brick.
-	
+
 	I saw the delicate man who built the tower
-	    Look from the turret at the ground below,
+	Look from the turret at the ground below,
 	The granite column wavered like a flower,
-	    But stood in air whatever winds might blow.
+	But stood in air whatever winds might blow.
 	Its roots were in the rock, its head stood proud,
-	    No earthly forest reared a head so high;
+	No earthly forest reared a head so high;
 	Sometimes the eagle came there, sometimes cloud,
-	    It was man’s ultimate footstep to the sky.
+	It was man’s ultimate footstep to the sky.
 	And in that peak the builder kept his treasure,
-	    Books with the symbols of his art, the signs
+	Books with the symbols of his art, the signs
 	Of knowledge in excitement, skill in pleasure,
-	    The edge that cut, the rule that kept the lines.
+	The edge that cut, the rule that kept the lines.
 	He who had seen his tower beneath the grass,
 	Rock in the earth, now smiled, because it was.
-	
-	How many thousand men had done his will,  
-	    Men who had hands, or arms, or strength to spend,
+
+	How many thousand men had done his will,
+	Men who had hands, or arms, or strength to spend,
 	Or cunning with machines, or art, or skill !
-	    All had obeyed him, working to this end.      
+	All had obeyed him, working to this end.
 	Hundreds in distant lands had given their share
-	    Of power, to deck it; on its every stone
+	Of power, to deck it; on its every stone
 	Their oddity of pleasure was laid bare,
-	    Yet was the tower his offspring, his alone.
+	Yet was the tower his offspring, his alone.
 	His inner eye had seen, his will had made it,
-	    All the opposing army of men’s minds
+	All the opposing army of men’s minds
 	Had bowed, had turned, had striven as he bade it,
-	    Each to his purpose in their myriad kinds.
+	Each to his purpose in their myriad kinds.
 	Now it was done, and in the peak he stood
 	Seeing his work, and smiled to find it good.
-	
+
 	It had been stone, earth’s body, hidden deep,
-	    Lightless and shapeless, where it cooled and hardened.
+	Lightless and shapeless, where it cooled and hardened.
 	Now it was as the banner on man’s keep
-	    Or as the Apple in Eden where God gardened.
+	Or as the Apple in Eden where God gardened.
 	Lilies of stone ran round it, and like fires
-	    The tongues of crockets shot from it and paused,
+	The tongues of crockets shot from it and paused,
 	Horsemen who raced were carven on’t, the spires
-	    Were bright with gold ;  all this the builder caused.
+	Were bright with gold ; all this the builder caused.
 	And standing there, it seemed that all the hive
-	    Of human skill which now it had become,
+	Of human skill which now it had become,
 	Was stone no more, nor building, but alive,
-	    Trying to speak, this tower that was dumb,
+	Trying to speak, this tower that was dumb,
 	Trying to speak, nay, speaking, soul to soul
 	With powers who are, to raven or control.
 
@@ -409,86 +409,86 @@
 
 	This is a sacred city built of marvellous earth.
 	Life was lived nobly here to give such beauty birth.
-	
+
 	Beauty was in this brain and in this eager hand:
 	Death is so blind and dumb Death does not understand.
 	Death drifts the brain with dust and soils the young limbs’ glory,
 	Death makes justice a dream, and strength a traveller’s story.
 	Death drives the lovely soul to wander under the sky.
-	Death opens unknown doors.  It is most grand to die.
+	Death opens unknown doors. It is most grand to die.
 
 
 
 6. A CREED
 
-	I hold that when a person dies 
-	      His soul returns again to earth; 
-	Arrayed in some new flesh-disguise 
-	      Another mother gives him birth. 
-	With sturdier limbs and brighter brain 
-	The old soul takes the road again. 
-	
-	Such is my own belief and trust; 
-	      This hand, this hand that holds the pen, 
-	Has many a hundred times been dust 
-	      And turned, as dust, to dust again; 
-	These eyes of mine have blinked and shown 
-	In Thebes, in Troy, in Babylon. 
-	
-	All that I rightly think or do, 
-	      Or make, or spoil, or bless, or blast, 
-	Is curse or blessing justly due 
-	      For sloth or effort in the past. 
-	My life’s a statement of the sum 
-	Of vice indulged, or overcome. 
-	
-	I know that in my lives to be 
-	      My sorry heart will ache and burn, 
-	And worship, unavailingly, 
-	      The woman whom I used to spurn, 
-	And shake to see another have 
-	The love I spurned, the love she gave. 
-	
-	And I shall know, in angry words, 
-	      In gibes, and mocks, and many a tear, 
-	A carrion flock of homing-birds, 
-	      The gibes and scorns I uttered here. 
-	The brave word that I failed to speak 
-	Will brand me dastard on the cheek. 
-	
-	And as I wander on the roads 
-	      I shall be helped and healed and blessed; 
-	Dear words shall cheer and be as goads 
-	      To urge to heights before unguessed. 
-	My road shall be the road I made; 
-	All that I gave shall be repaid. 
-	
-	So shall I fight, so shall I tread, 
-	      In this long war beneath the stars; 
-	So shall a glory wreathe my head, 
-	      So shall I faint and show the scars, 
-	Until this case, this clogging mould, 
+	I hold that when a person dies
+	His soul returns again to earth;
+	Arrayed in some new flesh-disguise
+	Another mother gives him birth.
+	With sturdier limbs and brighter brain
+	The old soul takes the road again.
+
+	Such is my own belief and trust;
+	This hand, this hand that holds the pen,
+	Has many a hundred times been dust
+	And turned, as dust, to dust again;
+	These eyes of mine have blinked and shown
+	In Thebes, in Troy, in Babylon.
+
+	All that I rightly think or do,
+	Or make, or spoil, or bless, or blast,
+	Is curse or blessing justly due
+	For sloth or effort in the past.
+	My life’s a statement of the sum
+	Of vice indulged, or overcome.
+
+	I know that in my lives to be
+	My sorry heart will ache and burn,
+	And worship, unavailingly,
+	The woman whom I used to spurn,
+	And shake to see another have
+	The love I spurned, the love she gave.
+
+	And I shall know, in angry words,
+	In gibes, and mocks, and many a tear,
+	A carrion flock of homing-birds,
+	The gibes and scorns I uttered here.
+	The brave word that I failed to speak
+	Will brand me dastard on the cheek.
+
+	And as I wander on the roads
+	I shall be helped and healed and blessed;
+	Dear words shall cheer and be as goads
+	To urge to heights before unguessed.
+	My road shall be the road I made;
+	All that I gave shall be repaid.
+
+	So shall I fight, so shall I tread,
+	In this long war beneath the stars;
+	So shall a glory wreathe my head,
+	So shall I faint and show the scars,
+	Until this case, this clogging mould,
 	Be smithied all to kingly gold.
 
 
 
 7. DEATH LIES IN WAIT FOR YOU
 
-	Death lies in wait for you, you wild thing in the wood, 
-	Shy-footed, beauty dear, half-seen, half-understood, 
-	Glimpsed in the beech-wood dim and in the dropping fir, 
-	Shy like a fawn and sweet and beauty’s minister. 
-	Glimpsed as in flying clouds by night the little moon, 
-	A wonder, a delight, a paleness passing soon. 
-	
-	Only a moment held, only an hour seen, 
-	Only an instant known in all that life has been, 
-	One instant in the sand to drink that gush of grace, 
-	The beauty of your way, the marvel of your face. 
-	
-	Death lies in wait for you, but few short hours he gives; 
-	I perish even as you by whom all spirit lives. 
-	Come to me, spirit, come, and fill my hour of breath 
+	Death lies in wait for you, you wild thing in the wood,
+	Shy-footed, beauty dear, half-seen, half-understood,
+	Glimpsed in the beech-wood dim and in the dropping fir,
+	Shy like a fawn and sweet and beauty’s minister.
+	Glimpsed as in flying clouds by night the little moon,
+	A wonder, a delight, a paleness passing soon.
+
+	Only a moment held, only an hour seen,
+	Only an instant known in all that life has been,
+	One instant in the sand to drink that gush of grace,
+	The beauty of your way, the marvel of your face.
+
+	Death lies in wait for you, but few short hours he gives;
+	I perish even as you by whom all spirit lives.
+	Come to me, spirit, come, and fill my hour of breath
 	With hours of life in life that pay no toll to death.
 
 
@@ -508,16 +508,16 @@
 	Noon erthely paleys wrouhte in so statly wyse,
 	Com on my freend, my brothir moost enteer,
 	For the I offryd my blood in sacrifise._
-				--John Lydgate
-	
-	
+	--John Lydgate
+
+
 	From ‘41 to ‘51
 	I was folk’s contrary son;
 	I bit my father’s hand right through
 	And broke my mother’s heart in two.
 	I sometimes go without my dinner
 	Now that I know the times I’ve gi’n her.
-	
+
 	From ‘51 to ‘61
 	I cut my teeth and took to fun.
 	I learned what not to be afraid of
@@ -528,14 +528,14 @@
 	To lads as roll home singing by’t.
 	My blood did leap, my flesh did revel,
 	Saul Kane was tokened to the devil.
-	
+
 	From ‘61 to’71
 	I lived in disbelief of Heaven.
 	I drunk, I fought, I poached, I whored,
 	I did despite unto the Lord.
 	I cursed, ‘would make a man look pale,
 	And nineteen times I went to gaol
-	
+
 	Now, friends, observe and look upon me,
 	Mark how the Lord took pity on me.
 	By Dead Man’s Thorn, while setting wires,
@@ -568,12 +568,12 @@
 	Will make a purse five pounds a side.”
 	Those were the words, that was the place
 	By which God brought me into grace.
-	
+
 	On Wood Top Field the peewits go
 	Mewing and wheeling ever so;
 	And like the shaking of a timbrel
 	Cackles the laughter of the whimbrel..
-	
+
 	In the old quarry-pit they say
 	Head-keeper Pike was made away.
 	He walks, head-keeper Pike, for harm,
@@ -584,12 +584,12 @@
 	The peewits wambling in the dark
 	Lest in the dark the old man might
 	Creep up to me to beg a light.
-	
+
 	But Wood Top grass is short and sweet
 	And springy to a boxer’s feet;
 	At harvest hum the moon so bright
 	Did shine on Wood Top for the fight.
-	
+
 	When Bill was stripped down to his bends
 	I thought how long we two’d been friends,
 	And in my mind, about that wire,
@@ -608,7 +608,7 @@
 	For fear of what my friends would say.
 	They’d backed me, see? O Lord, the sin
 	Done for things there’s money in.
-	
+
 	The stakes were drove, the ropes were hitched,
 	Into the ring my hat I pitched.
 	My corner faced the Squire’s park
@@ -641,7 +641,7 @@
 	Enough to make their throttles howl,
 	While we whom Jesus died to teach
 	Fought round on round, three minutes each.
-	
+
 	And think that, you’ll understand
 	I thought, “I’ll go and take Bill’s hand.
 	I’ll up and say the fault was mine,
@@ -655,7 +655,7 @@
 	They shan’t think that. I will not. I’m
 	Damned if I will. I will not.”
 	Time!
-	
+
 	From the beginning of the bout
 	My luck was gone, my hand was out.
 	Right from the start Bill called the play,
@@ -672,7 +672,7 @@
 	Of “That’s the style, Bill, give him hell.”
 	No one for me, but Jimmy’s light
 	“Straight left! Straight left!” and “Watch his right.”
-	
+
 	I don’t know how a boxer goes
 	When all his body hums from blows;
 	I know I seemed to rock and spin,
@@ -691,7 +691,7 @@
 	Time! And Jim’s knee, and rum to drink.
 	And round the ring there ran a titter:
 	“Saved by the call, the bloody quitter.”
-	
+
 	They drove (a dodge that never fails)
 	A pin beneath my finger nails.
 	They poured what seemed a running beck
@@ -705,7 +705,7 @@
 	A gulp of liquor dulled the pain,
 	And then the flasks clinked again.
 	Time!
-	
+
 	There was Bill as grim as death,
 	He rushed, I clinched, to get more breath,
 	And breath I got, though Billy bats
@@ -726,9 +726,9 @@
 	I thought, “Your sprained thumb’s crocked again.”
 	So I got strength and Bill gave ground,
 	And that round was an easy round.
-	
+
 	During the wait my Jimmy said,
-	
+
 	What’s making Billy fight so dead?
 	He’s all to pieces. Is he blown?”
 	“His thumb’s out.”
@@ -737,7 +737,7 @@
 	He’s got the goods if you’ve got the cash,
 	And what one hand can do he’ll do.
 	Be careful this next round or two.”
-	
+
 	Time. There was Bill, and I felt sick
 	That luck should play so mean a trick
 	And give me leave to knock him out
@@ -754,7 +754,7 @@
 	He didn’t care what pain it gave him.
 	He called the music and the dance
 	For five rounds more and gave no chance.
-	
+
 	Try to imagine if you can
 	The kind of manhood in the man,
 	And if you’d like to feel his pain
@@ -767,7 +767,7 @@
 	Till halfway through the eighteenth round,
 	And then I sent him down and out,
 	And Silas said, “Kane wins the bout.”
-	
+
 	When Bill came to, you understand,
 	I ripped the mitten from my hand
 	And across to ask Bill shake,
@@ -788,16 +788,16 @@
 	You’ll get what you’d a got tonight;
 	That puts my meaning clear, I guess,
 	Now get to hell; I want to dress.”
-	
-	
-	
+
+
+
 	I dressed. My backers one and all
 	Said, “Well done you” or “Good old Saul.”
 	“Saul is a wonder and a fly ‘un,
 	What’ll you have, Saul, at the Lion?”
 	With merry oaths they helped me down
 	The stony wood path to the town.
-	
+
 	The moonlight shone on Cabbage Walk,
 	It made the limestone look like chalk.
 	It was too late for any people,
@@ -824,9 +824,9 @@
 	When all the bells ring out of theirselve.
 	Rang a peal for Christmas morn,
 	Glory, men, for Christ is born.
-	
+
 	All the old monks’ singing places
-	
+
 	Glimmered quick with flitting faces,
 	Singing anthems, singing hymns
 	Under carven cherubims.
@@ -848,7 +848,7 @@
 	Will sweep the planets from their courses
 	And loose the stars to burn up night.
 	Lord, give us eyes to bear the light.
-	
+
 	We all went quiet down the Scallenge
 	Lest Police Inspector Drew should challenge.
 	But ‘Spector Drew was sleeping sweet,
@@ -887,7 +887,7 @@
 	And thirst for men instead of soul.
 	She’s trod her pathway to the fire.
 	Old Rivers had his nephew by her.
-	
+
 	I step aside from Tom and Jimmy
 	To find if she’d a kiss to gimme.
 	I blew out lamp ‘fore she could speak.
@@ -915,7 +915,7 @@
 	And shut out Christ in husks and swine.
 	I felt the dart strike through my liver.
 	God punish me for’t and forgive her.
-	
+
 	Each one could be a Jesus mild,
 	Each one has been a little child,
 	A little child with laughing look,
@@ -926,7 +926,7 @@
 	Takes that as thanks for all He’s given.
 	The book He lent is given back
 	All blotted red and smutted black.
-	
+
 	“Open the door,” said Jim, “and call.”
 	Jane gasped “They’ll see me. Loose me, Saul.”
 	She pushed me by, and ducked downstair
@@ -939,7 +939,7 @@
 	And mind you don’t put too much lemon.
 	Our good friend Saul has had a fight of it,
 	Now smoke up, boys, and make a night of it.”
-	
+
 	The room was full of men and stink
 	Of bad cigars and heavy drink.
 	Riley was nodding to the floor
@@ -976,7 +976,7 @@
 	With bits out of the “Maid of Gloster.”
 	And fifteen arms went round her waist.
 	(And then men ask, Are Barmaids chaste?}
-	
+
 	O young men, pray to be kept whole
 	from bringing down a weaker soul.
 	Your minute’s joy so meet in doin’
@@ -1005,7 +1005,7 @@
 	He’d never seen a brisker bout.
 	There was the purse. At that he’d leave it.
 	Let Kane come forward to receive it.
-	
+
 	I took the purse and hemmed and bowed,
 	And called for gin punch for the crowd;
 	And when the second bowl was done,
@@ -1030,7 +1030,7 @@
 	We’ll have the girls in when it’s gone.”
 	So round the g in went, hot and heady,
 	Hot Hollands punch on top of deady.
-	
+
 	Hot Hollands punch on top of stout
 	Puts madness in and wisdom out.
 	From drunken man to drunken man
@@ -1052,7 +1052,7 @@
 	He’ll learn I mean to have my rights;
 	I’ll bloody him a bloody fix,
 	I’ll bloody burn his bloody ricks.”
-	
+
 	From three long hours of gin and smokes,
 	And two girls’ breath and fifteen blokes,
 	A warmish night, and windows shut,
@@ -1065,7 +1065,7 @@
 	But all the drunken others slept.
 	Jane slept beside me in the chair,
 	And I got up; I wanted air.
-	
+
 	I opened window wide and leaned
 	Out of that pigstye of the fiend
 	And felt a cool wind go like grace
@@ -1114,7 +1114,7 @@
 	Is cut down like a withered flower.
 	In all the show from birth to rest
 	I give the poor dumb cattle best.”
-	
+
 	I wondered, then, why life should be,
 	And what would be the end of me
 	When youth and health and strength were gone
@@ -1141,14 +1141,14 @@
 	Why stand it , since it can’t be mended?”
 	And in my heart I heard him plain,
 	“Throw yourself down and end it, Kane.”
-	
+
 	“Why not?” said I. “Why not? But no.
 	I won’t. I’ve never had my go.
 	I’ve not had all the world can give.
 	Death by and by, but first I’ll live.
 	The world owes me my time of times,
 	And that time’s coming now, by crimes.”
-	
+
 	A madness took me then. I felt
 	I’d like to hit the world a belt.
 	I felt that I could fly through air,
@@ -1190,7 +1190,7 @@
 	And muttered how they’d all expected.
 	(I’ve thought of that old dog for years,
 	And of how near I come to tears.)
-	
+
 	But you, you minds of bread and cheese,
 	Are less divine tha[n] that dog’s fleas,
 	You suck blood from kindly friends,
@@ -1225,7 +1225,7 @@
 	And then I clashed the lamps and screamed
 	“I’m Satan, newly come from hell.”
 	And then I spied the fire bell.
-	
+
 	I’ve been a ringer, so I know
 	How best to make a big bell go.
 	So on to bell-rope swift swoop,
@@ -1246,7 +1246,7 @@
 	Those shrieking birds made out of sound
 	With news of fire in their bills.
 	(They heard ‘em plain beyond Wall Hills.).
-	
+
 	Up go the winders, out come heads,
 	I heard the springs go creak in beds;
 	But still I heave and sweat and tire,
@@ -1261,7 +1261,7 @@
 	I stopped and called: “It’s fire of hell;
 	And this is Sodom and Gomorrah,
 	And now I’ll burn you up, begorra.”
-	
+
 	By this time firemen were mustering,
 	The half-dressed stable men were flustering,
 	Backing the horses out of stalls
@@ -1293,7 +1293,7 @@
 	By Pilate ruled, and Caiaphas.
 	Now your account is totted. Learn
 	Hell’s flames are loose and you shall burn.”
-	
+
 	At that I leaped and screamed and ran,
 	I heard their cries go, “Catch him, man.”
 	“Who was it?” “Down him.” “Out him, Em.”
@@ -1306,7 +1306,7 @@
 	“We’ll give him hell.” “By God, we’ll mob him.”
 	“We’ll duck him, scrout him, flog him, fratch him.”
 	“All right,” I said. “But first you’ll catch him.”
-	
+
 	The men who don’t know to the root
 	The joy of being swift of foot,
 	Have never known divine and fresh
@@ -1325,7 +1325,7 @@
 	Two copper nozzles, tipped with brass,
 	And double whang at every turning,
 	And yell, “All hell’s loose, and burning.”
-	
+
 	I beat my brass and shouted fire
 	At doors of parson, lawyer, squire,
 	at all three doors I threshed and slammed
@@ -1348,7 +1348,7 @@
 	Th’ old Adam’s strong in me, I find.
 	God pardon man, and may God’s son
 	Forgive the evil things I’ve done.
-	
+
 	What more? By Dirty Lane I crept
 	Back to the Lion, where I slept.
 	The raging madness hot and floodin’
@@ -1391,10 +1391,10 @@
 	With all them Welsh come picking hops:
 	With drunken Welsh in all our sheds
 	We might be murdered in our beds.
-	
+
 	By all accounts, both men and wives
 	Had had the scare up of their lives.
-	
+
 	I ate and drank and gathered strength,
 	And stretched along the bench full length,
 	Or crossed to window seat to pat
@@ -1437,7 +1437,7 @@
 	When first he miscreated man.
 	You mumble through a formal code
 	To get which martyrs burned and blowed.
-	
+
 	I look on martyrs as mistakes,
 	But still they burned for it at stakes;
 	Your only fire’s the jolly fire
@@ -1466,7 +1466,7 @@
 	And teach man how to sing God’s praise.
 	And now I’ll tell you what you teach
 	In downright honest English speech.
-	
+
 	“You teach the ground-down starving man
 	That Squire’s greed’s Jehovah’s plan.
 	You get his learning circumvented
@@ -1487,7 +1487,7 @@
 	And see what sweet restraint it yields,
 	A woman’s day at turnip picking,
 	Your hearts too fat for plough or ricking.
-	
+
 	“And you whom luck taught French and Greek
 	Have purple flaps on either cheek,
 	A stately house, and time for knowledge,
@@ -1512,7 +1512,7 @@
 	And what you do, and what you teach
 	Is not God’s Word, nor honest schism,
 	But Devil’s scant and pauperism.”
-	
+
 	By this time many folk had gathered
 	To listen to me while I blathered;
 	I said my piece, and when I’d said it,
@@ -1537,7 +1537,7 @@
 	A little human growth appears
 	Worth having, even to the soul
 	Who sees most plain it’s not the whole.
-	
+
 	This state is dull and evil, both,
 	I keep it in the path of growth;
 	You think the Church an outworn fetter;
@@ -1560,9 +1560,9 @@
 	To mix more water in your gin.
 	We’re neither saints nor Philip Sidneys,
 	But mortal men with mortal kidneys.”
-	
-	
-	
+
+
+
 	He took his snuff, and wheezed a greeting,
 	And waddled off to mother’s meeting;
 	I hung my head upon my chest,
@@ -1575,7 +1575,7 @@
 	They let all sorts of darkness in;
 	Whatever light man finds they doubt it
 	They love, not light, but talk about it.
-	
+
 	But parson’d proved to people’s eyes
 	That I was drunk, and he was wise;
 	And people grinned and women tittered,
@@ -1596,7 +1596,7 @@
 	To have a fight before I went.
 	Our Fates are strange, and no one now his;
 	Our lovely Saviour Christ disposes.
-	
+
 	Jane wasn’t where we’d planned, the jade.
 	She’d thought me drunk and hadn’t stayed.
 	So I went up the Walk to look for her
@@ -1621,7 +1621,7 @@
 	Resolved to brace myself with gin.
 	And as I walked, I said, “It’s strange,
 	There’s Death let loose to-night, and Change.”
-	
+
 	In Cabbage Walk, I made a haul
 	Of two big pears from lawyer’s wall,
 	And, munching one, I took the lane
@@ -1636,7 +1636,7 @@
 	A ghastly light besides the gas.
 	The Devil’s tasks and Devil’s rages
 	Were giving me the Devil’s wages.
-	
+
 	In Market-place it’s always light,
 	The big shop windows make it bright;
 	And in the press of people buying
@@ -1647,7 +1647,7 @@
 	And mother’s whip would curl right round him,
 	And mother’d say h’ed done to crost her,
 	Though there being crowds about he’d lost her.
-	
+
 	Lord, give to men who are old and rougher
 	The things that little children suffer,
 	And let keep bright and undefiled
@@ -1704,7 +1704,7 @@
 	(And how good mouse-meat smells when toasting),
 	Then down they sit to merry feast
 	While moon goes west and sun comes east.
-	
+
 	Sometimes they make so merry there
 	Old lawyer comes to head of stair
 	To ‘fend with fist and poker took firm
@@ -1723,10 +1723,10 @@
 	The sounds that say the wind is changing.
 	At last he turns and shakes his head,
 	“It’s nothing. I’ll go back to bed.”
-	
+
 	And just then Mrs. Jaggard came
 	To view and end her Jimmy’s shame.
-	
+
 	She made on rush and gi’m a bat
 	And shook him like a dog a rat.
 	“I can’t turn round but what you’re straying.
@@ -1755,7 +1755,7 @@
 	she gasped, white hollows in her cheek;
 	Jimmy was writhing, screaming wild,
 	The shoppers thought I’d killed the child.
-	
+
 	I had to speak, so I begun.
 	“You oughtn’t beat your little son;
 	He did no harm, but seeing him there
@@ -1780,14 +1780,14 @@
 	The dirtiest dog in all the shire:
 	Nice friends for any woman’s son
 	After ten years, and all she’s done.
-	
+
 	“For I’ve had eight, and buried five,
 	And only three are left alive.
 	I’ve given them all we could afford.
 	I’ve taught them all to fear the Lord.
 	They’ve had the best we had to give,
 	The only three the Lord let live.
-	
+
 	“For Minnie whom I love the worst
 	Died mad in childbirth with her first.
 	And John and Mary died of measles,
@@ -1842,7 +1842,7 @@
 	Who’d make white shirts of a mother’s shroud,
 	He laughs now, it’s a joke to him,
 	Though it’s the gates of hell for Jim.
-	
+
 	“I’ve had my heart burnt out like coal,
 	And drops of blood wrung from my soul
 	Day in, day out, in pain and tears,
@@ -1883,7 +1883,7 @@
 	Jim, take me home, I’m turning faint.”
 	They went, and some cried, “Good old sod.”
 	“She put it to him straight, by God.”
-	
+
 	Summat, whe was, or looked, or said,
 	Went home and made me hang my head.
 	I slunk away into the night
@@ -1910,7 +1910,7 @@
 	That thought remained, it was not drowned.
 	And when I’d rise to get a light
 	I’d think, “What’s come to me tonight?”
-	
+
 	There’s always crowds when drinks are standing.
 	The house doors slammed along the landing,
 	The rising wind was gusty yet,
@@ -1957,7 +1957,7 @@
 	Beside where all the matches are
 	And poured it out upon the floor dust,
 	Among the fag-ends, spit and saw-dust.
-	
+
 	“Saul Kane,” she said, “when next you drink,
 	Do me the gentleness to think
 	That every drop of drink accursed
@@ -1970,7 +1970,7 @@
 	All that you are is that Christ’s loss.”
 	The clock run down and struck a chime
 	And Mrs. Si said, “Closing time.”
-	
+
 	The wet was pelting on the pane
 	And something broke inside my brain,
 	I heard the rain drip from the gutters
@@ -1994,7 +1994,7 @@
 	She said, “He waits until you knock.”
 	She turned at that and went out swift,
 	Si grinned and winked, his missus sniffed.
-	
+
 	I heard her clang the Lion door,
 	I marked a drink-drop roll to floor;
 	It took up scraps of sawdust, furry,
@@ -2021,7 +2021,7 @@
 	And inn signs swung like people hanging,
 	And in my heart the drink unpriced,
 	The burning cataracts of Christ.
-	
+
 	I did not think, I did not strive,
 	The deep peace burnt my me alive;
 	The bolted door had broken in,
@@ -2030,9 +2030,9 @@
 	To brother all the souls on earth,
 	And every bird and every beast
 	Should share the crumbs broke at the feast.
-	
-	
-	
+
+
+
 	O glory of the lighted mind.
 	How dead I’d been, how dumb, how blind.
 	The station brook, to my new eyes,
@@ -2047,19 +2047,19 @@
 	Were parts of an eternal glory,
 	Were God’s eternal garden flowers.
 	I stood in bliss at this for hours.
-	
+
 	O glory of the lighted soul.
 	The dawn came up on Bradlow Knoll,
 	The dawn with glittering on the grasses,
 	The dawn which pass and never passes.
-	
+
 	“It’s dawn,” I said, “And chimney’s smoking,
 	And all the blessed fields are soaking.’
 	It’s dawn, and there’s an engine shunting;
 	And hounds, for huntsman’s going hunting.
 	It’s dawn, and I must wander north
 	Along the road Christ led me forth.”
-	
+
 	So up the road I wander slow
 	Past where the snowdrops used to grow
 	With celandines in early springs,
@@ -2130,7 +2130,7 @@
 	Brought me above the mist again,
 	The two great fields arose like death
 	Above the mists of human breath.
-	
+
 	All earthly things that blessиd morning
 	Were everlasting joy and warning,
 	The gate was Jesus’way made plain,
@@ -2159,7 +2159,7 @@
 	O ploughman of the sinner’s soul.
 	O Jesus, drive the coulter deep
 	To plough my living man from sleep.
-	
+
 	Slow up the hill the plough team plod,
 	Old Callow at the task of God,
 	Helped by man’s wit, helped by the brute,
@@ -2182,7 +2182,7 @@
 	Christ would be ploughing in my heart,
 	Through rest-harrow and bitter roots,
 	Through all my bad life’s rotten fruits.
-	
+
 	O Christ who holds the open gate,
 	O Christ who drives the furrow straight,
 	O Christ, the plough, O Christ, the laughter
@@ -2199,7 +2199,7 @@
 	By which the soul of man is fed,
 	The holy bread, the food unpriced,
 	Thy everlasting mercy, Christ.
-	
+
 	The share will jar on many a stone,
 	Thou wilt not let me stand alone;
 	And I shall feel (thou wilt not fail),
@@ -2230,7 +2230,7 @@
 	A spiritual ploughman stands
 	Forever waiting, waiting now,
 	The heart’s “Put in, man, zook the plough.”
-	
+
 	By this the sun was all one glitter,
 	The little birds were all atwitter;
 	Out of a tuft a little lark
@@ -2257,12 +2257,12 @@
 	The tossing rooks arose and hove.
 	A stone struck on the share. A word
 	Came to the team. The red earth stirred.
-	
+
 	I crossed the hedge by shooter’s gap,
 	I hitched my boxer’s belt a strap,
 	I jumped the ditch and crossed the fallow:
 	I took the hales from framer Callow.
-	
+
 	How swift the summer goes,
 	Forget-me-not, pink, rose.
 	The young grass when I started
@@ -2277,7 +2277,7 @@
 	The rain that makes things new,
 	The earth that hides things old,
 	And blessings manifold.
-	
+
 	O lovely lily clean,
 	O lily springing green,
 	O lily bursting white,
@@ -2293,82 +2293,82 @@
 	The rabbits and the pismires brood
 	On broken gold, and shards, and beads
 	Where Priam’s ancient palace stood.
-	
+
 	The floors of many a gallant house
 	Are matted with the roots of grass;
 	The glow-worm and the nimble mouse
 	Among her ruins flit and pass.
-	
+
 	And there, in orts of blackened bone,
 	The widowed Trojan beauties lie,
 	And Simois babbles over stone
 	And waps and gurgles to the sky.
-	
+
 	Once there were merry days in Troy,
 	Her chimneys smoked with cooking meals,
 	The passing chariots did annoy
 	The sunning housewives at their wheels.
-	
+
 	And many a lovely Trojan maid
 	Set Trojan lads to lovely things;
 	The game of life was nobly played,
 	They played the game like Queens and Kings.
-	
+
 	So that, when Troy had greatly passed
 	In one red roaring fiery coal,
 	The courts the Grecians overcast
 	Became a city in the soul.
-	
+
 	In some green island of the sea,
 	Where now the shadowy coral grows
 	In pride and pomp and empery
 	The courts of old Atlantis rose.
-	
+
 	In many a glittering house of glass
 	The Atlanteans wandered there;
 	The paleness of their faces was
 	Like ivory, so pale they were.
-	
+
 	And hushed they were, no noise of words
 	In those bright cities ever rang;
 	Only their thoughts, like golden birds,
 	About their chambers thrilled and sang.
-	
+
 	They knew all wisdom, for they knew
 	The souls of those Egyptian Kings
 	Who learned, in ancient Babilu,
 	The beauty of immortal things.
-	
+
 	They knew all beauty--when they thought
 	The air chimed like a stricken lyre,
 	The elemental birds were wrought,
 	The golden birds became a fire.
-	
+
 	And straight to busy camps and marts
 	The singing flames were swiftly gone;
 	The trembling leaves of human hearts
 	Hid boughs for them to perch upon.
-	
+
 	And men in desert places, men
 	Abandoned, broken, sick with fears,
 	Rose singing, swung their swords agen,
 	And laughed and died among the spears.
-	
+
 	The green and greedy seas have drowned
 	That city’s glittering walls and towers,
 	Her sunken minarets are crowned
 	With red and russet water-flowers.
-	
+
 	In towers and rooms and golden courts
 	The shadowy coral lifts her sprays;
 	The scrawl hath gorged her broken orts,
 	The shark doth haunt her hidden ways.
-	
+
 	But, at the falling of the tide,
 	The golden birds still sing and gleam,
 	The Atlanteans have not died,
 	Immortal things still give us dream.
-	
+
 	The dream that fires man’s heart to make,
 	To build, to do, to sing or say
 	A beauty Death can never take,
@@ -2392,7 +2392,7 @@
 	Where the young knight the broken squadron rallies.
 	Only stay quiet while my mind remembers
 	The beauty of fire from the beauty of embers.
-	
+
 	Beauty, have pity! for the strong have power,
 	The rich their wealth, the beautiful their grace,
 	Summer of man its sunlight and its flower.
@@ -2413,107 +2413,107 @@
 12. THE HAUNTED
 
 	Here, in this darkened room of this old house,
-	     I sit beside the fire.     I hear again,
+	I sit beside the fire. I hear again,
 	Within, the scutter where the mice carouse,
-	     Without, the gutter dropping with the rain.
+	Without, the gutter dropping with the rain.
 	Opposite, are black shelves of wormy books,
-	     To left, glazed cases, dusty with the same,
+	To left, glazed cases, dusty with the same,
 	Behind, a wall, with rusty guns on hooks,
-	     To right, the fire, that chokes one panting flame.
+	To right, the fire, that chokes one panting flame.
 	Over the mantel, black as funeral cloth,
-	     A portrait hangs, a man, whose flesh the worm
+	A portrait hangs, a man, whose flesh the worm
 	Has mawed this hundred years, whose clothes the moth
-	     A century since, has channelled to a term.
-	I cannot see his face :  I only know
+	A century since, has channelled to a term.
+	I cannot see his face : I only know
 	He stares at me, that man of long ago.
-	 
+
 	I light the candles in the long brass sticks,
-	     I see him now, a pale-eyed, simpering man,
+	I see him now, a pale-eyed, simpering man,
 	Framed in carved wood, wherein the death-watch ticks,
-	     A most dead face :  yet when the work began
+	A most dead face : yet when the work began
 	That face, the pale puce coat, the simpering smile,
-	     The hands that hold a book, the eyes that gaze,
+	The hands that hold a book, the eyes that gaze,
 	Moved to the touch of mind a little while.
-	     The painter sat in judgment on his ways :
+	The painter sat in judgment on his ways :
 	The painter turned him to and from the light,
-	     Talked about art, or bade him lift his head.
+	Talked about art, or bade him lift his head.
 	Judged the lips’ paleness and the temples’ white,
-	     And now his work abides ;  the man is dead.
-	But is he dead ?  This dusty study drear
+	And now his work abides ; the man is dead.
+	But is he dead ? This dusty study drear
 	Creaks in its panels that the man is here.
-	 
+
 	Here, beyond doubt, he lived, in that old day.
-	     “He was a Doctor here,” the student thought.
+	“He was a Doctor here,” the student thought.
 	Here, when the puce was new, that now is grey,
-	     That simpering man his daily practice wrought.
+	That simpering man his daily practice wrought.
 	Here he let blood, prescribed the pill and drop,
-	     The leech, the diet ;  here his verdict given
+	The leech, the diet ; here his verdict given
 	Brought agonies of hoping to a stop,
-	     Here his condemned confessioners were shriven.
+	Here his condemned confessioners were shriven.
 	What is that book he holds, the key, too dim
-	     To read, to know ;  some little book he wrote,
+	To read, to know ; some little book he wrote,
 	Forgotten now, but still the key to him.
-	     He sacrificed his vision for his coat.
-	I see the man ;  a simpering mask that hid
+	He sacrificed his vision for his coat.
+	I see the man ; a simpering mask that hid
 	A seeing mind that simpering men forbid.
-	 
+
 	Those are his books no doubt, untoucht, undusted,
-	     Unread, since last he left them on the shelves,
+	Unread, since last he left them on the shelves,
 	Octavo sermons that the fox has rusted,
-	     Sides splitting off from brown decaying twelves.
+	Sides splitting off from brown decaying twelves.
 	This was his room, this darkness of old death,
-	     This coffin-room with lights like embrasures,
-	The place is poisonous with him ;  like a breath
-	     On glass, he stains the spirit ;  he endures.
+	This coffin-room with lights like embrasures,
+	The place is poisonous with him ; like a breath
+	On glass, he stains the spirit ; he endures.
 	Here is his name within the sermon book,
-	     And verse, “When hungry Worms my Body eat” ;
+	And verse, “When hungry Worms my Body eat” ;
 	He leans across my shoulder as I look,
-	     He who is God or pasture to the wheat.
+	He who is God or pasture to the wheat.
 	He who is Dead is still upon the soul
-	     A check, an inhibition, a control.
-	 
-	I draw the bolts.     I am alone within.
-	     The moonlight through the coloured glass comes faint,
+	A check, an inhibition, a control.
+
+	I draw the bolts. I am alone within.
+	The moonlight through the coloured glass comes faint,
 	Mottling the passage wall like human skin,
-	     Pale with the breathings left of withered paint.
+	Pale with the breathings left of withered paint.
 	But others walk the empty house with me,
-	     There is no loneliness within these walls
+	There is no loneliness within these walls
 	No more than there is stillness in the sea
-	     Or silence in the eternal waterfalls.
+	Or silence in the eternal waterfalls.
 	There in the room, to right, they sit at feast ;
-	     The dropping grey-beard with the cold blue eye,
+	The dropping grey-beard with the cold blue eye,
 	The lad, his son, that should have been a priest,
-	     And he, the rake, who made his mother die.
+	And he, the rake, who made his mother die.
 	And he, the gambling man, who staked the throw,
 	They look me through, they follow when I go.
-	 
+
 	They follow with still footing down the hall,
-	     I know their souls, those fellow-tenants mine,
+	I know their souls, those fellow-tenants mine,
 	Their shadows dim those colours on the wall,
-	     They point my every gesture with a sign.
+	They point my every gesture with a sign.
 	That grey-beard cast his aged servant forth
-	     After his forty years of service done,
+	After his forty years of service done,
 	The gambler supped up riches as the north
-	     Sups with his death the glories of the sun.
-	The lad betrayed his trust ;  the rake was he
-	     Who broke two women’s hearts to ease his own :
+	Sups with his death the glories of the sun.
+	The lad betrayed his trust ; the rake was he
+	Who broke two women’s hearts to ease his own :
 	They nudge each other as they look at me,
-	     Shadows, all our, and yet as hard as stone.
+	Shadows, all our, and yet as hard as stone.
 	And there, he comes, that simpering man, who sold
 	His mind for coat of puce and penny gold.
-	 
+
 	O ruinous house, within whose corridors
-	     None but the wicked and the mad go free.
+	None but the wicked and the mad go free.
 	(On the dark stairs they wait, behind the doors
-	     They crouch, they watch, or creep to follow me.)
+	They crouch, they watch, or creep to follow me.)
 	Deep in old blood your ominous bricks are red,
-	     Firm in old bones your walls’ foundations stand,
+	Firm in old bones your walls’ foundations stand,
 	With dead men’s passions built upon the dead,
-	     With broken hearts for lime and oaths for sand.
+	With broken hearts for lime and oaths for sand.
 	Terrible house, whose horror I have built,
-	     Sin after sin, unseen, as sand that slips
+	Sin after sin, unseen, as sand that slips
 	Telling the time, till now the heaped guilt
-	     Cries, and the planets circle to eclipse.
+	Cries, and the planets circle to eclipse.
 	You only are the Daunter, you alone
 	Clutch, till I feel your ivy on the bone.
 
@@ -2530,7 +2530,7 @@
 	I’ll run a blushin’ dairy-farm or go a-crackin’ stones,
 	Or buy ‘n’ keep a little liquor-store” &mdash
 	So he said.
-	
+
 	They towed her in to Liverpool, we made the hooker fast,
 	And the copper-bound official paid the crew,
 	And Billy drew his money, but the money didn’t last,
@@ -2545,101 +2545,101 @@
 
 14. HERE IN THE SELF
 
-	Here in the self is all that man can know 
-	Of Beauty, all the wonder, all the power, 
-	All the unearthly colour, all the glow, 
-	Here in the self which withers like a flower; 
-	Here in the self which fades as hours pass, 
-	And droops and dies and rots and is forgotten 
-	Sooner, by ages, than the mirroring glass 
-	In which it sees its glory still unrotten. 
-	Here in the flesh, within the flesh, behind, 
-	Swift in the blood and throbbing on the bone, 
-	Beauty herself, the universal mind, 
-	Eternal April wandering alone; 
-	The God, the holy Ghost, the atoning Lord, 
-	Here in the flesh, the never yet explored. 
+	Here in the self is all that man can know
+	Of Beauty, all the wonder, all the power,
+	All the unearthly colour, all the glow,
+	Here in the self which withers like a flower;
+	Here in the self which fades as hours pass,
+	And droops and dies and rots and is forgotten
+	Sooner, by ages, than the mirroring glass
+	In which it sees its glory still unrotten.
+	Here in the flesh, within the flesh, behind,
+	Swift in the blood and throbbing on the bone,
+	Beauty herself, the universal mind,
+	Eternal April wandering alone;
+	The God, the holy Ghost, the atoning Lord,
+	Here in the flesh, the never yet explored.
 
 
 
 15. I WENT INTO THE FIELDS
 
-	I went into the fields, but you were there 
-	Waiting for me, so all the summer flowers 
-	Were only glimpses of your starry powers; 
-	Beautiful and inspired dust they were. 
-	
-	I went down by the waters, and a bird 
-	Sang with your voice in all the unknown tones 
-	Of all that self of you I have not heard, 
-	So that my being felt you to the bones. 
-	
-	I went into the house, and shut the door 
-	To be alone, but you were there with me; 
-	All beauty in a little room may be, 
-	Though the roof lean and muddy be the floor. 
-	
-	Then in my bed I bound my tired eyes 
-	To make a darkness for my weary brain; 
-	But like a presence you were there again, 
-	Being and real, beautiful and wise, 
-	
-	So that I could not sleep, and cried aloud, 
-	‘You strange grave thing, what is it you would say?’ 
-	The redness of your dear lips dimmed to grey, 
-	The waters ebbed, the moon hid in a cloud. 
+	I went into the fields, but you were there
+	Waiting for me, so all the summer flowers
+	Were only glimpses of your starry powers;
+	Beautiful and inspired dust they were.
+
+	I went down by the waters, and a bird
+	Sang with your voice in all the unknown tones
+	Of all that self of you I have not heard,
+	So that my being felt you to the bones.
+
+	I went into the house, and shut the door
+	To be alone, but you were there with me;
+	All beauty in a little room may be,
+	Though the roof lean and muddy be the floor.
+
+	Then in my bed I bound my tired eyes
+	To make a darkness for my weary brain;
+	But like a presence you were there again,
+	Being and real, beautiful and wise,
+
+	So that I could not sleep, and cried aloud,
+	‘You strange grave thing, what is it you would say?’
+	The redness of your dear lips dimmed to grey,
+	The waters ebbed, the moon hid in a cloud.
 
 
 
 16. IF I COULD GET WITHIN THIS CHANGING I
 
-	If I could get within this changing I, 
-	This ever altering thing which yet persists, 
-	Keeping the features it is reckoned by, 
-	While each component atom breaks or twists; 
-	If, wandering past strange groups of shifting forms, 
-	Cells at their hidden marvels hard at work, 
-	Pale from much toil, or red from sudden storms, 
-	I might attain to where the Rulers lurk; 
-	If, pressing past the guards in those grey gates, 
-	The brain’s most folded, intertwisted shell, 
-	I might attain to that which alters fates, 
-	The King, the supreme self, the Master Cell; 
-	Then, on Man’s earthly peak, I might behold 
-	The unearthly self beyond, unguessed, untold. 
+	If I could get within this changing I,
+	This ever altering thing which yet persists,
+	Keeping the features it is reckoned by,
+	While each component atom breaks or twists;
+	If, wandering past strange groups of shifting forms,
+	Cells at their hidden marvels hard at work,
+	Pale from much toil, or red from sudden storms,
+	I might attain to where the Rulers lurk;
+	If, pressing past the guards in those grey gates,
+	The brain’s most folded, intertwisted shell,
+	I might attain to that which alters fates,
+	The King, the supreme self, the Master Cell;
+	Then, on Man’s earthly peak, I might behold
+	The unearthly self beyond, unguessed, untold.
 
 
 
 17. THE ISLAND OF SKYROS
 
-	Here, where we stood together, we three men, 
-	Before the war had swept us to the East 
-	Three thousand miles away, I stand again 
-	And hear the bells, and breathe, and go to feast. 
-	We trod the same path, to the selfsame place, 
-	Yet here I stand, having beheld their graves, 
-	Skyros whose shadows the great seas erase, 
-	And Seddul Bahr that ever more blood craves. 
-	So, since we communed here, our bones have been 
-	Nearer, perhaps, than they again will be, 
-	Earth and the worldwide battle lie between, 
-	Death lies between, and friend-destroying sea. 
-	Yet here, a year ago, we talked and stood 
-	As I stnad now, with pulses beating blood. 
-	
-	I saw her like a shadow on the sky 
-	In the last light, a blur upon the sea, 
-	Then the gale’s darkness put the shadow by, 
-	But from one grave that island talked to me; 
-	And, in the midnight, in the breaking storm, 
-	I saw its blackness and a blinking light, 
-	And thought, “So death obscures your gentle form, 
-	So memory strives to make the darkness bright; 
-	And, in that heap of rocks, your body lies, 
-	Part of the island till the planet ends, 
-	My gentle comrade, beautiful and wise, 
-	Part of this crag this bitter surge offends, 
-	While I, who pass, a little obscure thing, 
+	Here, where we stood together, we three men,
+	Before the war had swept us to the East
+	Three thousand miles away, I stand again
+	And hear the bells, and breathe, and go to feast.
+	We trod the same path, to the selfsame place,
+	Yet here I stand, having beheld their graves,
+	Skyros whose shadows the great seas erase,
+	And Seddul Bahr that ever more blood craves.
+	So, since we communed here, our bones have been
+	Nearer, perhaps, than they again will be,
+	Earth and the worldwide battle lie between,
+	Death lies between, and friend-destroying sea.
+	Yet here, a year ago, we talked and stood
+	As I stnad now, with pulses beating blood.
+
+	I saw her like a shadow on the sky
+	In the last light, a blur upon the sea,
+	Then the gale’s darkness put the shadow by,
+	But from one grave that island talked to me;
+	And, in the midnight, in the breaking storm,
+	I saw its blackness and a blinking light,
+	And thought, “So death obscures your gentle form,
+	So memory strives to make the darkness bright;
+	And, in that heap of rocks, your body lies,
+	Part of the island till the planet ends,
+	My gentle comrade, beautiful and wise,
+	Part of this crag this bitter surge offends,
+	While I, who pass, a little obscure thing,
 	War with this force, and breathe, and am its king.”
 
 
@@ -2650,17 +2650,17 @@
 	Better the world with a blow in the teeth of a wrong.
 	Laugh, for the time is brief, a thread the length of a span.
 	Laugh and be proud to belong to the old proud pageant of man.
-	
+
 	Laugh and be merry: remember, in olden time.
 	God made Heaven and Earth for joy He took in a rhyme,
 	Made them, and filled them full with the strong red wine of His mirth
 	The splendid joy of the stars: the joy of the earth.
-	
+
 	So we must laugh and drink from the deep blue cup of the sky,
 	Join the jubilant song of the great stars sweeping by,
 	Laugh, and battle, and work, and drink of the wine outpoured
 	In the dear green earth, the sign of the joy of the Lord.
-	
+
 	Laugh and be merry together, like brothers akin,
 	Guesting awhile in the rooms of a beautiful inn,
 	Glad till the dancing stops, and the lilt of the music ends.
@@ -2692,95 +2692,95 @@
 	Out of the earth to rest or range
 	Perpetual in perpetual change,
 	The unknown passing through the strange.
-	
+
 	Water and saltness held together
 	To tread the dust and stand the weather,
 	And plough the field and stretch the tether,
-	
+
 	To pass the wine-cup and be witty,
 	Water the sands and build the city,
 	Slaughter like devils and have pity,
-	
+
 	Be red with rage and pale with lust,
 	Make beauty come, make peace, make trust,
 	Water and saltness mixed with dust;
-	
+
 	Drive over earth, swim under sea,
 	Fly in the eagle’s secrecy,
 	Guess where the hidden comets be;
-	
+
 	Know all the deathy seeds that still
 	Queen Helen’s beauty, Caesar’s will,
 	And slay them even as they kill;
-	
+
 	Fashion an altar for a rood,
 	Defile a continent with blood,
 	And watch a brother starve for food:
-	
+
 	Love like a madman, shaking, blind,
 	Till self is burnt into a kind
 	Possession of another mind;
-	
+
 	Brood upon beauty, till the grace
 	Of beauty with the holy face
 	Brings peace into the bitter place;
-	
+
 	Prove in the lifeless granites, scan
 	The stars for hope, for guide, for plan;
 	Live as a woman or a man;
-	
+
 	Fasten to lover or to friend,
 	Until the heart break at the end:
 	The break of death that cannot mend;
-	
+
 	Then to lie useless, helpless, still,
 	Down in the earth, in dark, to fill
 	The roots of grass or daffodil.
-	
+
 	Down in the earth, in dark, alone,
 	A mockery of the ghost in bone,
 	The strangeness, passing the unknown.
-	
+
 	Time will go by, that outlasts clocks,
 	Dawn in the thorps will rouse the cocks,
 	Sunset be glory on the rocks:
-	
+
 	But it, the thing, will never heed
 	Even the rootling from the seed
 	Thrusting to suck it for its need.
-	
+
 	Since moons decay and suns decline,
 	How else should end this life of mine?
 	Water and saltness are not wine.
-	
+
 	But in the darkest hour of night,
 	When even the foxes peer for sight,
 	The byre-cock crows; he feels the light.
-	
+
 	So, in this water mixed with dust,
 	The byre-cock spirit crows from trust
 	That death will change because it must;
-	
+
 	For all things change, the darkness changes,
 	The wandering spirits change their ranges,
 	The corn is gathered to the granges.
-	
+
 	The corn is sown again, it grows;
 	The stars burn out, the darkness goes;
 	The rhythms change, they do not close.
-	
+
 	They change, and we, who pass like foam,
 	Like dust blown through the streets of Rome,
 	Change ever, too; we have no home,
-	
+
 	Only a beauty, only a power,
 	Sad in the fruit, bright in the flower,
 	Endlessly erring for its hour,
-	
+
 	But gathering, as we stray, a sense
 	Of Life, so lovely and intense,
 	It lingers when we wander hence,
-	
+
 	That those who follow feel behind
 	Their backs, when all before is blind,
 	Our joy, a rampart to the mind.
@@ -2790,17 +2790,17 @@
 21. THE RACER
 
 	I saw the racer coming to the jump,
-	     Staring with fiery eyeballs as he rusht,
+	Staring with fiery eyeballs as he rusht,
 	I heard the blood within his body thump,
-	     I saw him launch, I heard the toppings crusht.
+	I saw him launch, I heard the toppings crusht.
 	And as he landed I beheld his soul
-	     Kindle, because, in front, he saw the Straight
+	Kindle, because, in front, he saw the Straight
 	With all its thousands roaring at the goal,
-	     He laughed, he took the moment for his mate.
+	He laughed, he took the moment for his mate.
 	Would that the passionate moods on which we ride
-	     Might kindle thus to oneness with the will;
+	Might kindle thus to oneness with the will;
 	Would we might see the end to which we stride,
-	     And feel, not strain in struggle, only thrill,
+	And feel, not strain in struggle, only thrill,
 	And laugh like him and know in all our nerves
 	Beauty, the spirit, scattering dust and turves.
 
@@ -2808,54 +2808,54 @@
 
 22. ROADWAYS
 
-	One road leads to London,  
-	   One road leads to Wales, 
-	My road leads me seawards 
-	   To the white dipping sails. 
-	
-	One road leads to the river, 
-	   As it goes singing slow; 
-	My road leads to shipping, 
-	   Where the bronzed sailors go. 
-	
-	Leads me, lures me, calls me 
-	   To salt green tossing sea; 
-	A road without earth’s road-dust 
-	   Is the right road for me. 
-	
-	A wet road heaving, shining, 
-	   And wild with segulls’ cries, 
-	A mad salt sea-wind blowing 
-	   The salt spray in my eyes. 
-	
-	My road calls me, lures me 
-	   West, east, south, and north; 
-	Most roads lead men homewards, 
-	   My road leads me forth 
-	
-	To add more miles to the tally  
-	   Of grey miles left behind, 
-	In quest of that one beauty  
-	   God put me here to find.
+	One road leads to London,
+	One road leads to Wales,
+	My road leads me seawards
+	To the white dipping sails.
+
+	One road leads to the river,
+	As it goes singing slow;
+	My road leads to shipping,
+	Where the bronzed sailors go.
+
+	Leads me, lures me, calls me
+	To salt green tossing sea;
+	A road without earth’s road-dust
+	Is the right road for me.
+
+	A wet road heaving, shining,
+	And wild with segulls’ cries,
+	A mad salt sea-wind blowing
+	The salt spray in my eyes.
+
+	My road calls me, lures me
+	West, east, south, and north;
+	Most roads lead men homewards,
+	My road leads me forth
+
+	To add more miles to the tally
+	Of grey miles left behind,
+	In quest of that one beauty
+	God put me here to find.
 
 
 
 23. ROSES ARE BEAUTY
 
-	Roses are beauty, but I never see 
-	Those blood drops from the burning heart of June 
-	Glowing like thought upon the living tree 
-	Without a pity that they die so soon, 
-	Die into petals, like those roses old, 
-	Those women, who were summer in men’s hearts 
-	Before the smile upon the Sphinx was cold 
-	Or sand had hid the Syrian and his arts. 
-	O myriad dust of beauty that lies thick 
-	Under our feet that not a single grain 
-	But stirred and moved in beauty and was quick 
-	For one brief moon and died nor lived again; 
-	But when the moon rose lay upon the grass 
-	Pasture to living beauty, life that was. 
+	Roses are beauty, but I never see
+	Those blood drops from the burning heart of June
+	Glowing like thought upon the living tree
+	Without a pity that they die so soon,
+	Die into petals, like those roses old,
+	Those women, who were summer in men’s hearts
+	Before the smile upon the Sphinx was cold
+	Or sand had hid the Syrian and his arts.
+	O myriad dust of beauty that lies thick
+	Under our feet that not a single grain
+	But stirred and moved in beauty and was quick
+	For one brief moon and died nor lived again;
+	But when the moon rose lay upon the grass
+	Pasture to living beauty, life that was.
 
 
 
@@ -2865,12 +2865,12 @@
 	And all I ask is a tall ship and a star to steer her by,
 	And the wheel’s kick and the wind’s song and the white sail’s shaking,
 	And a gray mist on the sea’s face, and a gray dawn breaking.
-	
+
 	I must go down to the seas again, for the call of the running tide
 	Is a wild call and a clear call that may not be denied;
 	And all I ask is a windy day with the white clouds flying,
 	And the flung spray and the blown spume, and the sea-gulls crying.
-	
+
 	I must go down to the seas again, to the vagrant gypsy life,
 	To the gull’s way and the whale’s way, where the wind’s like a whetted knife;
 	And all I ask is a merry yarn from a laughing fellow-rover,
@@ -2880,31 +2880,31 @@
 
 25. THE SEEKERS
 
-	Friends and loves we have none, nor wealth nor blessed abode, 
-	But the hope of the City of God at the other end of the road. 
-	
-	Not for us are content, and quiet, and peace of mind, 
-	For we go seeking a city that we shall never find. 
-	
-	There is no solace on earth for us--for such as we-- 
-	Who search for a hidden city that we shall never see. 
-	
-	Only the road and the dawn, the sun, the wind, and the rain, 
-	And the watch fire under stars, and sleep, and the road again. 
-	
-	We seek the City of God, and the haunt where beauty dwells, 
-	And we find the noisy mart and the sound of burial bells. 
-	
-	Never the golden city, where radiant people meet, 
-	But the dolorous town where mourners are going about the street. 
-	
-	We travel the dusty road till the light of the day is dim, 
-	And sunset shows us spires away on the world’s rim. 
-	
-	We travel from dawn to dusk, till the day is past and by, 
-	Seeking the Holy City beyond the rim of the sky. 
-	
-	Friends and loves we have none, nor wealth nor blest abode, 
+	Friends and loves we have none, nor wealth nor blessed abode,
+	But the hope of the City of God at the other end of the road.
+
+	Not for us are content, and quiet, and peace of mind,
+	For we go seeking a city that we shall never find.
+
+	There is no solace on earth for us--for such as we--
+	Who search for a hidden city that we shall never see.
+
+	Only the road and the dawn, the sun, the wind, and the rain,
+	And the watch fire under stars, and sleep, and the road again.
+
+	We seek the City of God, and the haunt where beauty dwells,
+	And we find the noisy mart and the sound of burial bells.
+
+	Never the golden city, where radiant people meet,
+	But the dolorous town where mourners are going about the street.
+
+	We travel the dusty road till the light of the day is dim,
+	And sunset shows us spires away on the world’s rim.
+
+	We travel from dawn to dusk, till the day is past and by,
+	Seeking the Holy City beyond the rim of the sky.
+
+	Friends and loves we have none, nor wealth nor blest abode,
 	But the hope of the City of God at the other end of the road.
 
 
@@ -2912,64 +2912,64 @@
 26. THE SHIP AND HER MAKERS
 
 	_The Ore_
-	 
+
 	Before Man’s labouring wisdom gave me birth
 	I had not even seen the light of day;
 	Down in the central darkness of the earth,
 	Crushed by the weight of continents I lay,
 	Ground by the weight to heat, not knowing then
 	The air, the light, the noise, the world of men.
-	 
-	
+
+
 	_The Trees_
-	
+
 	We grew on mountains where the glaciers cry,
 	Infinite sombre armies of us stood
 	Below the snow-peaks which defy the sky;
 	A song like the gods moaning filled our wood;
 	We knew no men--our life was to stand staunch,
 	Singing our song, against the avalanche.
-	
-	 
+
+
 	_THe Hemp and Flax_
-	 
+
 	We were a million grasses on the hill,
 	A million herbs which bowed as the wind blew,
 	Trembling in every fibre, never still;
 	Out of the summer earth sweet life we drew.
 	Little blue-flowered grasses up the glen,
 	Glad of the sun, what did we know of men?
-	 
-	
+
+
 	_The Workers_
-	 
+
 	We tore the iron from the mountain’s hold,
 	By blasting fires we smithied it to steel;
 	Out of the shapeless stone we learned to mould
 	The sweeping bow, the rectilinear keel;
 	We hewed the pine to plank, we split the fir,
 	We pulled the myriad flax to fashion her.
-	 
+
 	Out of a million lives our knowledge came,
 	A million subtle craftsmen forged the means;
 	Steam was our handmaid and our servant flame,
 	Water our strength, all bowed to our machines.
 	Out of the rock, the tree, the springing herb
 	We built this wandering beauty so superb.
-	  
-	
+
+
 	_The Sailors_
-	 
+
 	We, who were born on earth and live by air,
 	Make this thing pass across the fatal floor,
 	The speechless sea; alone we commune there
 	Jesting with death, that ever open door.
 	Sun, moon and stars are signs by which we drive
 	This wind-blown iron like a thing alive.
-	 
-	
+
+
 	_The Ship_
-	 
+
 	I march across great waters like a queen,
 	I whom so many wisdoms helped to make;
 	Over the uncruddled billows of seas green
@@ -2981,19 +2981,19 @@
 
 27. SONNET
 
-	Flesh, I have knocked at many a dusty door, 
-	Gone down full many a midnight lane, 
-	Probed in old walls and felt along the floor, 
-	Pressed in blind hope the lighted window-pane, 
-	But useless all, though sometimes when the moon 
-	Was full in heaven and the sea was full, 
-	Along my body’s alleys came a tune 
-	Played in the tavern by the Beautiful. 
-	Then for an instant I have felt at point 
-	To find and seize her, whosoe’er she be, 
-	Whether some saint whose glory doth anoint 
-	Those whom she loves, or but a part of me, 
-	Or something that the things not understood 
+	Flesh, I have knocked at many a dusty door,
+	Gone down full many a midnight lane,
+	Probed in old walls and felt along the floor,
+	Pressed in blind hope the lighted window-pane,
+	But useless all, though sometimes when the moon
+	Was full in heaven and the sea was full,
+	Along my body’s alleys came a tune
+	Played in the tavern by the Beautiful.
+	Then for an instant I have felt at point
+	To find and seize her, whosoe’er she be,
+	Whether some saint whose glory doth anoint
+	Those whom she loves, or but a part of me,
+	Or something that the things not understood
 	Make for their uses out of flesh and blood.
 
 
@@ -3004,12 +3004,12 @@
 	Going through meadow and village, one knows not whither or why;
 	Through the grey light drift of the dust, in the keen cool rush of the air,
 	Under the flying white clouds, and the broad blue lift of the sky.
-	
+
 	And to halt at the chattering brook, in a tall green fern at the brink
 	Where the harebell grows, and the gorse, and the foxgloves purple and white;
 	Where the shy-eyed delicate deer troop down to the brook to drink
 	When the stars are mellow and large at the coming on of the night.
-	
+
 	O, to feel the beat of the rain, and the homely smell of the earth,
 	Is a tune for the blood to jig to, and joy past power of words;
 	And the blessed green comely meadows are all a-ripple with mirth
@@ -3023,10 +3023,10 @@
 	Down in the valley the lamps, and the mist, and a star over all,
 	There by the rick, where they thresh, is the drone at an end,
 	Twilight it is, and I travel the road with my friend.
-	
+
 	I think of the friends who are dead, who were dear long ago in the past,
 	Beautiful friends who are dead, though I know that death cannot last;
-	
+
 	Friends with the beautiful eyes that the dust has defiled,
 	Beautiful souls who were gentle when I was a child.
 
@@ -3034,97 +3034,97 @@
 
 30. A WANDERER’S SONG
 
-	A wind’s  in the heart of me, a fire’s in my heels, 
-	I am tired of brick and stone and rumbling wagon-wheels; 
-	I hunger for the sea’s edge, the limit of the land, 
-	Where the wild old Atlantic is shouting on the sand. 
-	
-	Oh I’ll be going, leaving the noises of the street, 
-	To where a lifting foresail-foot is yanking at the sheet; 
-	To a windy, tossing anchorage where yawls and ketches ride, 
-	Oh I’ll be going, going, until I meet the tide. 
-	
-	And first I’ll hear the sea-wind, the mewing of the gulls, 
-	The clucking, sucking of the sea about the rusty hulls, 
-	The songs at the capstan at the hooker warping out, 
-	And then the heart of me’ll know I’m there or thereabout. 
-	
-	Oh I am sick of brick and stone, the heart of me is sick, 
-	For windy green, unquiet sea, the realm of Moby Dick; 
-	And I’ll be going, going, from the roaring of the wheels, 
+	A wind’s in the heart of me, a fire’s in my heels,
+	I am tired of brick and stone and rumbling wagon-wheels;
+	I hunger for the sea’s edge, the limit of the land,
+	Where the wild old Atlantic is shouting on the sand.
+
+	Oh I’ll be going, leaving the noises of the street,
+	To where a lifting foresail-foot is yanking at the sheet;
+	To a windy, tossing anchorage where yawls and ketches ride,
+	Oh I’ll be going, going, until I meet the tide.
+
+	And first I’ll hear the sea-wind, the mewing of the gulls,
+	The clucking, sucking of the sea about the rusty hulls,
+	The songs at the capstan at the hooker warping out,
+	And then the heart of me’ll know I’m there or thereabout.
+
+	Oh I am sick of brick and stone, the heart of me is sick,
+	For windy green, unquiet sea, the realm of Moby Dick;
+	And I’ll be going, going, from the roaring of the wheels,
 	For a wind’s in the heart of me, a fire’s in my heels.
 
 
 
 31. WE ARE NEITHER HEAVEN NOR EARTH
 
-	Ah, we are neither heaven nor earth, but men; 
-	Something that uses and despises both, 
-	That takes its earth’s contentment in the pen, 
-	Then sees the world’s injustice and is wroth, 
-	And flinging off youth’s happy promise, flies 
-	Up to some breach, despising earthly things, 
-	And, in contempt of hell and heaven, dies 
-	Rather than bear some yoke of priests or kings. 
-	Our joys are not of heaven nor earth, but man’s, 
-	A woman’s beauty, or a child’s delight, 
-	The trembling blood when the discoverer scans 
-	The sought-for world, the gussed-at satellite; 
-	The ringing scene, the stone at point to blush 
-	For unborn men to look at and say ‘Hush.’ 
+	Ah, we are neither heaven nor earth, but men;
+	Something that uses and despises both,
+	That takes its earth’s contentment in the pen,
+	Then sees the world’s injustice and is wroth,
+	And flinging off youth’s happy promise, flies
+	Up to some breach, despising earthly things,
+	And, in contempt of hell and heaven, dies
+	Rather than bear some yoke of priests or kings.
+	Our joys are not of heaven nor earth, but man’s,
+	A woman’s beauty, or a child’s delight,
+	The trembling blood when the discoverer scans
+	The sought-for world, the gussed-at satellite;
+	The ringing scene, the stone at point to blush
+	For unborn men to look at and say ‘Hush.’
 
 
 
 32. THE WEST WIND
 
-	It’s a warm wind, the west wind, full of birds’ cries; 
-	I never hear the west wind but tears are in my eyes. 
-	For it comes from the west lands, the old brown hills. 
-	And April’s in the west wind, and daffodils. 
-	
-	It’s a fine land, the west land, for hearts as tired as mine, 
-	Apple orchards blossom there, and the air’s like wine. 
-	There is cool green grass there, where men may lie at rest, 
-	And the thrushes are in song there, fluting from the nest. 
-	
-	“Will ye not come home, brother? Ye have been long away, 
-	It’s April, and blossom time, and white is the May; 
-	And bright is the sun brother, and warm is the rain,-- 
-	Will ye not come home, brother, home to us again? 
-	
-	“The young corn is green, brother, where the rabbits run. 
-	It’s blue sky, and white clouds, and warm rain and sun. 
-	It’s song to a man’s soul, brother, fire to a man’s brain, 
-	To hear the wild bees and see the merry spring again. 
-	
-	“Larks are singing in the west, brother, above the green wheat, 
-	So will ye not come home, brother, and rest your tired feet? 
-	I’ve a balm for bruised hearts, brother, sleep for aching eyes,” 
-	Says the warm wind, the west wind, full of birds’ cries. 
-	
-	It’s the white road westwards is the road I must tread 
-	To the green grass, the cool grass, and rest for heart and head, 
-	To the violets, and the warm hearts, and the thrushes’ song, 
+	It’s a warm wind, the west wind, full of birds’ cries;
+	I never hear the west wind but tears are in my eyes.
+	For it comes from the west lands, the old brown hills.
+	And April’s in the west wind, and daffodils.
+
+	It’s a fine land, the west land, for hearts as tired as mine,
+	Apple orchards blossom there, and the air’s like wine.
+	There is cool green grass there, where men may lie at rest,
+	And the thrushes are in song there, fluting from the nest.
+
+	“Will ye not come home, brother? Ye have been long away,
+	It’s April, and blossom time, and white is the May;
+	And bright is the sun brother, and warm is the rain,--
+	Will ye not come home, brother, home to us again?
+
+	“The young corn is green, brother, where the rabbits run.
+	It’s blue sky, and white clouds, and warm rain and sun.
+	It’s song to a man’s soul, brother, fire to a man’s brain,
+	To hear the wild bees and see the merry spring again.
+
+	“Larks are singing in the west, brother, above the green wheat,
+	So will ye not come home, brother, and rest your tired feet?
+	I’ve a balm for bruised hearts, brother, sleep for aching eyes,”
+	Says the warm wind, the west wind, full of birds’ cries.
+
+	It’s the white road westwards is the road I must tread
+	To the green grass, the cool grass, and rest for heart and head,
+	To the violets, and the warm hearts, and the thrushes’ song,
 	In the fine land, the west land, the land where I belong.
 
 
 
 33. WHAT AM I, LIFE?
 
-	What am I, Life? A thing of watery salt 
-	Held in cohesion by unresting cells 
-	Which work they know not why, which never halt, 
-	Myself unwitting where their master dwells. 
-	I do not bid them, yet they toil, they spin; 
-	A world which uses me as I use them, 
-	Nor do I know which end or which begin, 
-	Nor which to praise, which pamper, which condemn. 
-	So, like a marvel in a marvel set, 
-	I answer to the vast, as wave by wave 
-	The sea of air goes over, dry or wet, 
-	Or the full moon comes swimming from her cave, 
-	Or the great sun comes north, this myriad I 
-	Tingles, not knowing how, yet wondering why. 
+	What am I, Life? A thing of watery salt
+	Held in cohesion by unresting cells
+	Which work they know not why, which never halt,
+	Myself unwitting where their master dwells.
+	I do not bid them, yet they toil, they spin;
+	A world which uses me as I use them,
+	Nor do I know which end or which begin,
+	Nor which to praise, which pamper, which condemn.
+	So, like a marvel in a marvel set,
+	I answer to the vast, as wave by wave
+	The sea of air goes over, dry or wet,
+	Or the full moon comes swimming from her cave,
+	Or the great sun comes north, this myriad I
+	Tingles, not knowing how, yet wondering why.
 
 
 
@@ -3144,7 +3144,7 @@
 	Over the wood that glows.
 	Wings linked. Necks a-strain,
 	A rush and a wild crying.
-	
+
 	A cry of the long pain
 	In the reeds of a steel lagoon,
 	In a land that no man knows.
