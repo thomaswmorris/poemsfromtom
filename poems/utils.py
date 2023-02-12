@@ -44,7 +44,6 @@ def get_season(t=None):
 # def get_sunday():
 
 def get_holiday(t=None):
-
     dt = get_utc_datetime(t)
     yd = dt.timetuple().tm_yday
     
@@ -114,12 +113,10 @@ def get_holiday(t=None):
     return 'no holiday'
 
 def get_liturgy(t=ttime.time()):
-    
     dt = get_utc_datetime(t)
     yd = dt.timetuple().tm_yday
     easter_yd = easter(dt.year).timetuple().tm_yday 
     christmas_yd = datetime(dt.year,12,25).timetuple().tm_yday 
-
     if yd <= 5 or yd >= christmas_yd: return 'christmastide'
     if 0 < easter_yd - dt.date().timetuple().tm_yday <= 46: 
         if not dt.weekday() == 0: return 'lent'
@@ -128,7 +125,6 @@ def get_liturgy(t=ttime.time()):
     return 'ordinary time'
 
 def get_month_epoch(t=ttime.time()):
-    
     day = int(get_day(t=t))
     if day < 11: return 'early'
     if day < 21: return 'middle'
