@@ -94,7 +94,6 @@ def get_holiday(t=None):
     if (dt.month, dt.day) == (11, 11): return 'veterans_day'
     
     if (dt.month, dt.day) == (12, 8):  return 'immaculate_conception'
-    if (dt.month, dt.day) == (12, 12): return 'guadalupe'
     if (dt.month, dt.day) == (12, 12): return 'winter_solstice'
     if (dt.month, dt.day) == (12, 24): return 'christmas_eve'
     if (dt.month, dt.day) == (12, 25): return 'christmas_day'
