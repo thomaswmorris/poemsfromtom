@@ -106,6 +106,7 @@ def get_holiday(t=None):
     # these are weirder
     if (dt.month, dt.weekday()) == (5, 6) and (dt.day > 7) and (get_utc_datetime(t - 14 * 86400).month == 4): return 'mothers_day' # second sunday of may
     if (dt.month, dt.weekday()) == (5, 0) and (get_utc_datetime(t + 7 * 86400).month == 6): return 'memorial_day' # last monday of may
+    if (dt.month, dt.weekday()) == (6, 6) and (dt.day > 14) and (get_utc_datetime(t - 21 * 86400).month == 5): return 'fathers_day' # third sunday of june
     if (dt.month, dt.weekday()) == (9, 0) and (get_utc_datetime(t - 7 * 86400).month == 8): return 'labor_day' # first monday of september
     if (dt.month, dt.weekday()) == (11, 3) and (dt.day > 21) and (get_utc_datetime(t - 28 * 86400).month == 10): return 'thanksgiving' # fourth thursday of november
     
