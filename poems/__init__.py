@@ -245,10 +245,11 @@ class Curator():
             print(self.poems.sort_values('probability', ascending=False)[['author','title','keywords','probability']].iloc[:10])
         chosen_loc = np.random.choice(self.poems.index, p=self.poems.probability)
         chosen_author, chosen_title = self.poems.loc[chosen_loc, ['author', 'title']]
-        poem = Poem(chosen_author, chosen_title, self.when)
-
+        
         if verbose: 
             print(f'chose poem "{chosen_title}" by {chosen_author}')
+
+        poem = Poem(chosen_author, chosen_title, self.when)
 
         if not historical_tag is None:
             now = datetime.now(tz=pytz.utc)
