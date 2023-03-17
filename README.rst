@@ -3,7 +3,7 @@
 Usage
 -----
 
-The ``poems`` package works with the ``Curator``, initialized as 
+The ``poems`` package works with a ``Curator``, initialized as 
 
 .. code-block:: python
 
@@ -49,4 +49,4 @@ Note that if it's summertime, this does not guarantee a summer poem (rather, it 
     # A guaranteed seasonal poem
     poem = curator.get_poem(context=context, forced_contexts=['season']) 
     
-Unforced contextual poems are sent daily to the listserv. Past poems are on my `website <https://thomaswmorris.github.io/poems>`_. If you want to be on the listserv, just ask me. 
+Unforced contextual poems are sent daily to the listserv. Past poems are on my `website <https://thomaswmorris.com/poems>`_. If you want to be on the listserv, just ask me. 
