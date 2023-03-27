@@ -2,7 +2,7 @@ div.poem-line {
   text-indent: -1em;
   padding-left: 1em;
   align: left;
-  max-width: fit-content;
+  max-width: 720px;
   font-family: Baskerville; 
   font-size: 20px;
 }

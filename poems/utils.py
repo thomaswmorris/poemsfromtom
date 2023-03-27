@@ -34,14 +34,12 @@ def get_season(t=None):
     spring = datetime(year, 3, 20).timetuple().tm_yday
     summer = datetime(year, 6, 21).timetuple().tm_yday
     autumn = datetime(year, 9, 23).timetuple().tm_yday
-    winter = datetime(year, 12, 21).timetuple().tm_yday
+    winter = datetime(year, 12, 22).timetuple().tm_yday
 
     if (spring <= yday < summer):  return 'spring' 
     if (summer <= yday < autumn):  return 'summer' 
     if (autumn <= yday < winter):  return 'autumn' 
     return 'winter'
-
-# def get_sunday():
 
 def get_holiday(t=None):
     dt = get_utc_datetime(t)
