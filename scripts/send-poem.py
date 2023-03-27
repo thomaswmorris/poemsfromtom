@@ -63,7 +63,9 @@ for name, email in zip(entries['name'], entries['email']):
     t = threading.Thread(target=thread_process, args=(curated_poem, args.username, args.password, name, email, subject))
     t.start()
 
-curator.write_to_repo(items={'poems/history.csv' : curator.history.to_csv(), 'poems/stats.csv' : curator.stats.to_csv()}, verbose=True)
+if args.type == 'daily':
+    
+    curator.write_to_repo(items={'poems/history.csv' : curator.history.to_csv(), 'poems/stats.csv' : curator.stats.to_csv()}, verbose=True)
 
 
     
