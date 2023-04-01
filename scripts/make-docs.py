@@ -14,7 +14,7 @@ args = parser.parse_args()
 # Initialize the curator
 curator = poems.Curator()
 curator.load_github_repo(github_repo_name=args.github_repo_name, github_token=args.github_token)
-curator.read_history(filename='poems/history.csv', from_repo=True)
+curator.read_history(filename='data/poems/history.csv', from_repo=True)
 history = curator.history.copy()
 
 history['strip_title'] = [re.sub(r'^(THE|AN|A)\s+', '', title) for title in history['title']]
@@ -67,10 +67,10 @@ def commit_elements(elements):
     master_ref.edit(sha=commit.sha)
 
 blob  = curator.repo.create_git_blob(home_html, "utf-8")
-elems = [gh.InputGitTreeElement(path='poems/index.html', mode='100644', type='blob', sha=blob.sha)]
+elems = [gh.InputGitTreeElement(path='docs/poems/index.html', mode='100644', type='blob', sha=blob.sha)]
 
 blob  = curator.repo.create_git_blob(random_html, "utf-8")
-elems.append(gh.InputGitTreeElement(path='poems/random.html', mode='100644', type='blob', sha=blob.sha))
+elems.append(gh.InputGitTreeElement(path='docs/poems/random.html', mode='100644', type='blob', sha=blob.sha))
 
 n_history = len(history)
 ys, ms, ds = [], [], []
@@ -136,7 +136,7 @@ for i, entry in curator.history.iterrows():
 </html>
 '''
 
-    filepath = f'poems/{y}/{m}/{d}.html'
+    filepath = f'docs/poems/{y}/{m}/{d}.html'
     try:    contents = curator.repo.get_contents(filepath, ref='master').decoded_content.decode()
     except: contents = None
     if html == contents:
