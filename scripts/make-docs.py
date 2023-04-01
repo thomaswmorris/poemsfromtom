@@ -90,17 +90,16 @@ for i, entry in curator.history.iterrows():
 
     print(f'{y}/{m}/{d} {poem.author:>12} {poem.title}')
 
-    prev_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a></li>' if i > 0 else ''
-    next_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a></li>' if i < n_history - 1 else ''
+    prev_string = f'<li class="nav-item left"><a class="nav-link" href="/docs/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a></li>' if i > 0 else ''
+    next_string = f'<li class="nav-item left"><a class="nav-link" href="/docs/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a></li>' if i < n_history - 1 else ''
 
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head><!DOCTYPE html>
     <meta charset="utf-8">
     <title>{poem.nice_fancy_date}</title>
-    <link rel="icon" href="/assets/images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <style>
     {poems.css}
     </style>
@@ -109,18 +108,18 @@ for i, entry in curator.history.iterrows():
     <header style="background-image: url('/assets/images/bg/pissaro-pontoise.jpeg')"></header>
     <nav>
         <ul>
-            <li><a href="/">home</a></li>
-            <li><a href="/cv">cv</a></li>
-            <li><a href="/papers">papers</a></li>
-            <li><a href="/projects">projects</a></li>
-            <li><a href="/music">music</a></li>
-            <li><a href="/poems">poems</a></li>    
-            <li><a href="/xw">crosswords</a></li>
-            <li><a href="/blog">blog</a></li>
+            <li><a href="/docs/">home</a></li>
+            <li><a href="/docs/cv">cv</a></li>
+            <li><a href="/docs/papers">papers</a></li>
+            <li><a href="/docs/projects">projects</a></li>
+            <li><a href="/docs/music">music</a></li>
+            <li><a href="/docs/poems">poems</a></li>    
+            <li><a href="/docs/xw">crosswords</a></li>
+            <li><a href="/docs/blog">blog</a></li>
         </ul>
         <ul>
             {prev_string}
-            <li class="nav-item left"><a class="nav-link" href="/poems/random">random</a></li>
+            <li class="nav-item left"><a class="nav-link" href="/docs/poems/random">random</a></li>
             {next_string}
         </ul>
     </nav>
