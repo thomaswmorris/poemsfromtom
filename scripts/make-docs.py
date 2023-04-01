@@ -37,15 +37,20 @@ for i, entry in curator.history.iterrows():
     y, m, d = entry.date.split('-')
     ymds.append(f'{y:0>2}/{m:0>2}/{d:0>2}')
 
-random_html = f'''
-    <html>
-        <title> </title>
-        <script>
-        var ymds = [{','.join([f'"{ymd}"' for ymd in ymds])}];
-        window.location.href = ymds[Math.floor(Math.random() * ymds.length)];
-        </script>
-    </html>
-    '''
+start_date = curator.history.date.iloc[0]
+end_date = curator.history.date.iloc[-1]
+
+random_html = """<html>
+<script>
+function randomDate(start, end) {
+var date = new Date(+start + Math.random() * (end - start));
+return date;}
+"""
+
+random_html += f"""window.location.href = randomDate(new Date({', '.join(start_date.split('-'))}), new Date({', '.join(end_date.split('-'))})).toISOString().slice(0, 10).split("-").join("/")
+</script>
+</html>   
+"""
 
 #######
 
@@ -90,8 +95,8 @@ for i, entry in curator.history.iterrows():
 
     print(f'{y}/{m}/{d} {poem.author:>12} {poem.title}')
 
-    prev_string = f'<li class="nav-item left"><a class="nav-link" href="/docs/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a></li>' if i > 0 else ''
-    next_string = f'<li class="nav-item left"><a class="nav-link" href="/docs/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a></li>' if i < n_history - 1 else ''
+    prev_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a></li>' if i > 0 else ''
+    next_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a></li>' if i < n_history - 1 else ''
 
     html = f'''<!DOCTYPE html>
 <html lang="en">
@@ -99,26 +104,26 @@ for i, entry in curator.history.iterrows():
     <meta charset="utf-8">
     <title>{poem.nice_fancy_date}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <style>
     {poems.css}
     </style>
 </head>
-<header style="background-image: url('../../../assets/images/bg/pissaro-pontoise.jpeg')"></header>
+<header style="background-image: url('/assets/images/bg/pissaro-pontoise.jpeg')"></header>
 <nav>
     <ul>
-        <li><a href="../../../">home</a></li>
-        <li><a href="../../../cv">cv</a></li>
-        <li><a href="../../../papers">papers</a></li>
-        <li><a href="../../../projects">projects</a></li>
-        <li><a href="../../../music">music</a></li>
-        <li><a href="../../../poems">poems</a></li>    
-        <li><a href="../../../xw">crosswords</a></li>
-        <li><a href="../../../blog">blog</a></li>
+        <li><a href="/">home</a></li>
+        <li><a href="/cv">cv</a></li>
+        <li><a href="/papers">papers</a></li>
+        <li><a href="/projects">projects</a></li>
+        <li><a href="/music">music</a></li>
+        <li><a href="/poems">poems</a></li>    
+        <li><a href="/xw">crosswords</a></li>
+        <li><a href="/blog">blog</a></li>
     </ul>
     <ul>
         {prev_string}
-        <li class="nav-item left"><a class="nav-link" href="/docs/poems/random">random</a></li>
+        <li class="nav-item left"><a class="nav-link" href="/poems/random">random</a></li>
         {next_string}
     </ul>
 </nav>
