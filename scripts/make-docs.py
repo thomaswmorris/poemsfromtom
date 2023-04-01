@@ -147,9 +147,9 @@ for i, entry in curator.history.iterrows():
     print(f'creating file {filepath}')
     print(32*'#')
 
-    if len(elems) >= 256: 
+    if len(elems) >= 64: 
         commit_elements(elems)
         elems = []
-        ttime.sleep(60) # just chill out, github doesn't like rapid commits
+        ttime.sleep(30) # just chill out, github doesn't like rapid commits
 
 commit_elements(elems)
