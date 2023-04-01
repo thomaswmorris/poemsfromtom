@@ -99,38 +99,38 @@ for i, entry in curator.history.iterrows():
     <meta charset="utf-8">
     <title>{poem.nice_fancy_date}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../../../css/style.css">
     <style>
     {poems.css}
     </style>
 </head>
+<header style="background-image: url('../../../assets/images/bg/pissaro-pontoise.jpeg')"></header>
+<nav>
+    <ul>
+        <li><a href="../../../">home</a></li>
+        <li><a href="../../../cv">cv</a></li>
+        <li><a href="../../../papers">papers</a></li>
+        <li><a href="../../../projects">projects</a></li>
+        <li><a href="../../../music">music</a></li>
+        <li><a href="../../../poems">poems</a></li>    
+        <li><a href="../../../xw">crosswords</a></li>
+        <li><a href="../../../blog">blog</a></li>
+    </ul>
+    <ul>
+        {prev_string}
+        <li class="nav-item left"><a class="nav-link" href="/docs/poems/random">random</a></li>
+        {next_string}
+    </ul>
+</nav>
 <body>
-    <header style="background-image: url('/assets/images/bg/pissaro-pontoise.jpeg')"></header>
-    <nav>
-        <ul>
-            <li><a href="/docs/">home</a></li>
-            <li><a href="/docs/cv">cv</a></li>
-            <li><a href="/docs/papers">papers</a></li>
-            <li><a href="/docs/projects">projects</a></li>
-            <li><a href="/docs/music">music</a></li>
-            <li><a href="/docs/poems">poems</a></li>    
-            <li><a href="/docs/xw">crosswords</a></li>
-            <li><a href="/docs/blog">blog</a></li>
-        </ul>
-        <ul>
-            {prev_string}
-            <li class="nav-item left"><a class="nav-link" href="/docs/poems/random">random</a></li>
-            {next_string}
-        </ul>
-    </nav>
-    <section class="poem-section">
-    <div class="poem-header">
-        <i>{poem.nice_fancy_date}</i>
-        <br>
-        <span style="font-family:Baskerville; font-size: 24px;"><b>{poems.utils.titleize(poem.title, with_quotes=False, as_html=True)}</b></span>
-        <i>by <a href="{poem.link}">{poem.author_name}</a> ({poem.birth}&#8212;{poem.death})</i></p>
-    </div>
-    {poem.html_lines}
+<section class="poem-section">
+<div class="poem-header">
+    <i>{poem.nice_fancy_date}</i>
+    <br>
+    <span style="font-family:Baskerville; font-size: 24px;"><b>{poems.utils.titleize(poem.title, with_quotes=False, as_html=True)}</b></span>
+    <i>by <a href="{poem.link}">{poem.author_name}</a> ({poem.birth}&#8212;{poem.death})</i></p>
+</div>
+{poem.html_lines}
 </section>		
 </body>
 </html>
