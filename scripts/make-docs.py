@@ -70,9 +70,6 @@ for i, entry in curator.history.iterrows():
     <title>{poem.nice_fancy_date}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/css/style.css">
-    <style>
-    {poems.css}
-    </style>
 </head>
 <header style="background-image: url('/assets/images/bg/pissaro-pontoise.jpeg')"></header>
 <nav>
