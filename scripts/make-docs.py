@@ -25,6 +25,8 @@ print(f'today is {last_date} {last_time}')
 
 #######
 
+elems = []
+
 def commit_elements(elements):
 
     print(f'\ncommitting {len(elements)} elements...\n')
