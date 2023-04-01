@@ -23,32 +23,6 @@ dt_last = datetime.fromtimestamp(curator.history.iloc[-1].timestamp).astimezone(
 last_date, last_time = dt_last.isoformat()[:19].split('T')
 print(f'today is {last_date} {last_time}')
 
-home_html = f'''
-    <html>
-    <head>
-        <title></title>
-        <meta http-equiv="refresh" content="0; url={dt_last.year:02}/{dt_last.month:02}/{dt_last.day:02}"/>
-    </head>
-    </html>
-    '''
-
-ymds = []
-for i, entry in curator.history.iterrows():
-    y, m, d = entry.date.split('-')
-    ymds.append(f'{y:0>2}/{m:0>2}/{d:0>2}')
-
-
-random_html = """<html>
-<script>
-function randomDate(start, end) {
-var date = new Date(+start + Math.random() * (end - start));
-return date;
-}
-window.location.href = randomDate(new Date(2021, 11, 22), new Date()).toISOString().slice(0, 10).split("-").join("/")
-</script>
-</html>   
-"""
-
 #######
 
 def commit_elements(elements):
@@ -68,12 +42,6 @@ def commit_elements(elements):
     master_ref = curator.repo.get_git_ref('heads/master')
     master_ref.edit(sha=commit.sha)
 
-blob  = curator.repo.create_git_blob(home_html, "utf-8")
-elems = [gh.InputGitTreeElement(path='docs/poems/index.html', mode='100644', type='blob', sha=blob.sha)]
-
-blob  = curator.repo.create_git_blob(random_html, "utf-8")
-elems.append(gh.InputGitTreeElement(path='docs/poems/random.html', mode='100644', type='blob', sha=blob.sha))
-
 n_history = len(history)
 ys, ms, ds = [], [], []
 
@@ -92,8 +60,8 @@ for i, entry in curator.history.iterrows():
 
     print(f'{y}/{m}/{d} {poem.author:>12} {poem.title}')
 
-    prev_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_prev.year:02}/{dt_prev.month:02}/{dt_prev.day:02}">«previous</a></li>' if i > 0 else ''
-    next_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_next.year:02}/{dt_next.month:02}/{dt_next.day:02}">next»</a></li>' if i < n_history - 1 else ''
+    prev_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«previous</a></li>' if i > 0 else ''
+    next_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">next»</a></li>' if i < n_history - 1 else ''
 
     html = f'''<!DOCTYPE html>
 <html lang="en">
@@ -138,7 +106,7 @@ for i, entry in curator.history.iterrows():
 </html>
 '''
 
-    filepath = f'docs/poems/{y}/{m}/{d}.html'
+    filepath = f'docs/poems/{y}-{m}-{d}.html'
     try:    contents = curator.repo.get_contents(filepath, ref='master').decoded_content.decode()
     except: contents = None
     if html == contents:
