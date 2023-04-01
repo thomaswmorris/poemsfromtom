@@ -65,7 +65,7 @@ for name, email in zip(entries['name'], entries['email']):
 
 if args.type == 'daily':
     
-    curator.write_to_repo(items={'poems/history.csv' : curator.history.to_csv(), 'poems/stats.csv' : curator.stats.to_csv()}, verbose=True)
+    curator.write_to_repo(items={'data/poems/history.csv' : curator.history.to_csv(), 'data/poems/stats.csv' : curator.stats.to_csv()}, verbose=True)
 
 
     
