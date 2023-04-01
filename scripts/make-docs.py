@@ -37,17 +37,14 @@ for i, entry in curator.history.iterrows():
     y, m, d = entry.date.split('-')
     ymds.append(f'{y:0>2}/{m:0>2}/{d:0>2}')
 
-start_date = curator.history.date.iloc[0]
-end_date = curator.history.date.iloc[-1]
 
 random_html = """<html>
 <script>
 function randomDate(start, end) {
 var date = new Date(+start + Math.random() * (end - start));
-return date;}
-"""
-
-random_html += f"""window.location.href = randomDate(new Date({', '.join(start_date.split('-'))}), new Date({', '.join(end_date.split('-'))})).toISOString().slice(0, 10).split("-").join("/")
+return date;
+}
+window.location.href = randomDate(new Date(2021, 11, 22), new Date()).toISOString().slice(0, 10).split("-").join("/")
 </script>
 </html>   
 """
