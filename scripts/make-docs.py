@@ -19,13 +19,34 @@ history = curator.history.copy()
 
 history['strip_title'] = [re.sub(r'^(THE|AN|A)\s+', '', title) for title in history['title']]
 
-dt_last = datetime.fromtimestamp(curator.history.iloc[-1].timestamp).astimezone(pytz.utc) #fromtimestamp(history.iloc[-1]['timestamp']).astimezone(pytz.utc)
+dt_last = datetime.fromtimestamp(curator.history.iloc[-1].timestamp).astimezone(pytz.utc)
 last_date, last_time = dt_last.isoformat()[:19].split('T')
 print(f'today is {last_date} {last_time}')
 
-#######
+index_html = f'''<html>
+<head>
+<meta http-equiv="refresh" content="0; url={dt_last.year:02}-{dt_last.month:02}-{dt_last.day:02}"/>
+</head>
+</html>'''
+
+random_html = '''<html>
+<script>
+function randomDate(start, end) {
+var date = new Date(+start + Math.random() * (end - start));
+return date;
+}'''
+
+random_html += f'''window.location.href = randomDate(new Date(2021, 11, 22), new Date({dt_last.year}, {dt_last.month-1}, {dt_last.day})).toISOString().slice(0, 10).split("-").join("/")
+</script>
+</html>'''
 
 elems = []
+
+blob = curator.repo.create_git_blob(index_html, "utf-8")
+elems.append(gh.InputGitTreeElement(path='docs/poems/index.html', mode='100644', type='blob', sha=blob.sha))
+
+blob = curator.repo.create_git_blob(random_html, "utf-8")
+elems.append(gh.InputGitTreeElement(path='docs/poems/random.html', mode='100644', type='blob', sha=blob.sha))
 
 def commit_elements(elements):
 
