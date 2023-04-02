@@ -98,7 +98,6 @@ for i, entry in curator.history.iterrows():
 <nav>
     <ul>
         <li><a href="/">home</a></li>
-        <li><a href="/cv">cv</a></li>
         <li><a href="/papers">papers</a></li>
         <li><a href="/projects">projects</a></li>
         <li><a href="/music">music</a></li>
@@ -117,7 +116,7 @@ for i, entry in curator.history.iterrows():
 <div class="poem-header">
     <i>{poem.nice_fancy_date}</i>
     <br>
-    <span style="font-family:Baskerville; font-size: 24px;"><b>{poems.utils.titleize(poem.title, with_quotes=False, as_html=True)}</b></span>
+    <span font-size: 24px;"><b>{poems.utils.titleize(poem.title, with_quotes=False, as_html=True)}</b></span>
     <i>by <a href="{poem.link}">{poem.author_name}</a> ({poem.birth}&#8212;{poem.death})</i></p>
 </div>
 {poem.html_lines}
