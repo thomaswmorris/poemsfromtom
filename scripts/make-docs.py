@@ -33,10 +33,10 @@ random_html = '''<html>
 <script>
 function randomDate(start, end) {
 var date = new Date(+start + Math.random() * (end - start));
-return date;
-}'''
+return date;}'''
 
-random_html += f'''window.location.href = randomDate(new Date(2021, 10, 22), new Date({dt_last.year}, {dt_last.month-1}, {dt_last.day})).toISOString().slice(0, 10)
+random_html += f'''
+window.location.href = randomDate(new Date(2021, 10, 22), new Date({dt_last.year}, {dt_last.month-1}, {dt_last.day})).toISOString().slice(0, 10)
 </script>
 </html>'''
 
