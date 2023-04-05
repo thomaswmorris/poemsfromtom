@@ -54,7 +54,7 @@ def get_holiday(t=None):
     if yd == easter_yd - 2:  return 'good_friday'
     if yd == easter_yd - 1:  return 'holy_saturday'
     if yd == easter_yd:      return 'easter_sunday'
-    if yd == easter_yd + 7:  return 'divine_mercy_sunday'
+    if yd == easter_yd + 7:  return 'divine_mercy'
     if yd == easter_yd + 39: return 'ascension'
     if yd == easter_yd + 49: return 'pentecost'
     if yd == easter_yd + 56: return 'trinity_sunday'
