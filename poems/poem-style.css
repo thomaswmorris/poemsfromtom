@@ -19,7 +19,7 @@ div.poem-header {
   padding-bottom: 10px;
 }
 
-span.poem-date {
+div.poem-date {
   font-style: italic;
 }
 
