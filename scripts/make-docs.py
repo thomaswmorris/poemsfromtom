@@ -112,15 +112,7 @@ for i, entry in curator.history.iterrows():
     </ul>
 </nav>
 <body>
-<section class="poem-section">
-<div class="poem-header">
-    <i>{poem.nice_fancy_date}</i>
-    <br>
-    <span font-size: 24px;"><b>{poems.utils.titleize(poem.title, with_quotes=False, as_html=True)}</b></span>
-    <i>by <a href="{poem.link}">{poem.author_name}</a> ({poem.birth}&#8212;{poem.death})</i></p>
-</div>
-{poem.html_lines}
-</section>		
+{poem.html}
 </body>
 </html>
 '''

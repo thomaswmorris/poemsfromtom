@@ -19,6 +19,14 @@ div.poem-header {
   padding-bottom: 10px;
 }
 
+span.poem-date {
+  font-style: italic;
+}
+
+span.poem-title {
+  font-weight: bold;
+}
+
 section.poem-section {
   padding-left: 3%;
 }

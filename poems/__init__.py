@@ -24,7 +24,7 @@ class Poem():
 
             data = json.load(f)
             self.author, self.title, self.when = author, title, when
-            self.author_name, self.birth, self.death, self.nationality, self.link = data[author]['metadata'].values()
+            self.author_name, self.author_birth, self.author_death, self.author_nationality, self.author_link = data[author]['metadata'].values()
             self.body, self.keywords = data[author]['poems'][title].values()
 
         self.date_time = datetime.fromtimestamp(when).replace(tzinfo=pytz.utc)
@@ -33,25 +33,29 @@ class Poem():
         
         self.header = f'{utils.titleize(title)} by {self.author_name}'
 
-        self.email_html = f'''
-<head><!DOCTYPE html>
+        self.html = f'''<section class="poem-section">
+<div class="poem-header">
+    <div class="poem-date">{self.nice_fancy_date}</div>
+    <div>
+        <span class="poem-title">{utils.titleize(self.title, with_quotes=False, as_html=True)}</span>
+        by 
+        <span class="poem-author"><a href="{self.author_link}">{self.author_name}</a> <i>({self.author_birth}&#8212;{self.author_death})</i></span>
+    </div>
+</div>
+{self.html_lines}
+</section>'''
+
+        self.email_html = f'''<head><!DOCTYPE html>
 <style>
 {css}
 </style>
 </head>
-<section class="poem-section">
-    <div class="poem-header">
-        <i>{self.nice_fancy_date}</i>
-        <br>
-        <span style="font-family:Baskerville; font-size: 28px;"><b>{utils.titleize(title, with_quotes=False, as_html=True)}</b></span>
-        <i>by <a href="{self.link}">{self.author_name}</a> ({self.birth}&#8212;{self.death})</i></p>
-    </div>
-    {self.html_lines}
-    <br>
-    <br>
-    <a href="thomaswmorris.com/poems">archive</a>
-</section>	
+{self.html}
+</html>
 '''
+
+
+
 
 class Curator():
 
