@@ -204,10 +204,15 @@ def text_to_html_lines(text):
 
     text  = text.replace('--', '&#8212;') # convert emdashes
 
-    for m in re.findall(r'(_[\w\W]+?_)', text): text = re.sub(m, re.sub(r'\n', r'_\n_', m), text) # add italic around all line breaks
+    for m in re.findall(r'(_[\w\W]+?_)', text): 
+        text = re.sub(m, re.sub(r'\n', r'_\n_', m), text) # add italic around all line breaks
     text  = re.sub(r'_([\w\W]*?)_', r'<i>\1</i>', text) # convert to html italic notation
 
-    lines = [line.strip() if len(line) > 0 else '&nbsp;' for line in text.split('\n')]
-    html_lines  = '\n'.join([f'<div class="poem-line">{line}</div>' for line in lines])
+    parsed_lines = []
+    for line in text.split('\n'):
+        if len(line) > 0:
+            parsed_lines.append(f'<div class="poem-line">{line.strip()}</div>')
+        else:
+            parsed_lines.append(f'<div class="poem-line-blank">&nbsp;</div>')
 
-    return html_lines
+    return '\n'.join(parsed_lines)

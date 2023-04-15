@@ -4,7 +4,11 @@ div.poem-line {
   align: left;
   max-width: 720px;
   font-family: Baskerville; 
-  font-size: 20px;
+  font-size: 18px;
+}
+
+div.poem-line-blank {
+  font-size: 10px;
 }
 
 div.poem-header {
