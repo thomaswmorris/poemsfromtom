@@ -99,7 +99,6 @@ for i, entry in curator.history.iterrows():
     <ul>
         <li><a href="/">home</a></li>
         <li><a href="/papers">papers</a></li>
-        <li><a href="/projects">projects</a></li>
         <li><a href="/music">music</a></li>
         <li><a href="/poems">poems</a></li>    
         <li><a href="/xw">crosswords</a></li>

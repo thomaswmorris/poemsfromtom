@@ -1,7 +1,7 @@
 div.poem-line {
   text-indent: -1em;
   padding-left: 1em;
-  align: left;
+  text-align: left;
   max-width: 720px;
   font-family: Baskerville; 
   font-size: 18px;
@@ -12,7 +12,7 @@ div.poem-line-blank {
 }
 
 div.poem-header {
-  align: left;
+  text-align: left;
   max-width: fit-content;
   font-family: Baskerville; 
   font-size: 20px;
