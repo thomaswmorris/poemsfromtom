@@ -81,8 +81,6 @@ for i, entry in curator.history.iterrows():
                             context={'timestamp' : dt.timestamp()},
                             verbose=False)
 
-    print(f'{y}/{m}/{d} {poem.author:>12} {poem.title}')
-
     prev_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«previous</a></li>' if i > 0 else ''
     next_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">next»</a></li>' if i < n_history - 1 else ''
 
@@ -120,12 +118,12 @@ for i, entry in curator.history.iterrows():
     try:    contents = curator.repo.get_contents(filepath, ref='master').decoded_content.decode()
     except: contents = None
     if html == contents:
+        print(f'{y}/{m}/{d} {poem.author:>12} {poem.title}')
         continue
     
     blob = curator.repo.create_git_blob(html, "utf-8")
     elems.append(gh.InputGitTreeElement(path=filepath, mode='100644', type='blob', sha=blob.sha))
-    print(f'creating file {filepath}')
-    print(32*'#')
+    print(f'\nWROTE TO REPO: {y}/{m}/{d} {poem.author:>12} {poem.title}\n')
 
     if len(elems) >= 64: 
         commit_elements(elems)
