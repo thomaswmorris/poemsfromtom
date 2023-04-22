@@ -117,14 +117,15 @@ for i, entry in curator.history.iterrows():
     filepath = f'docs/poems/{y}-{m}-{d}.html'
     try:    contents = curator.repo.get_contents(filepath, ref='master').decoded_content.decode()
     except: contents = None
-    if html == contents:
-        print(f'{y}/{m}/{d} {poem.author:>12} {poem.title}')
+    if html != contents:
+        print(f'OVERWRITE {y}/{m}/{d} {poem.author:>12} {poem.title}')
+    else:
+        print(f'          {y}/{m}/{d} {poem.author:>12} {poem.title}')
         continue
     
     blob = curator.repo.create_git_blob(html, "utf-8")
     elems.append(gh.InputGitTreeElement(path=filepath, mode='100644', type='blob', sha=blob.sha))
-    print(f'\nWROTE TO REPO: {y}/{m}/{d} {poem.author:>12} {poem.title}\n')
-
+    
     if len(elems) >= 64: 
         commit_elements(elems)
         elems = []
