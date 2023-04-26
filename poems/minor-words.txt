@@ -50,7 +50,6 @@ now
 of
 off
 on
-one
 once
 only
 onto
@@ -64,7 +63,6 @@ per
 plus
 regarding
 round
-save
 since
 so
 than
