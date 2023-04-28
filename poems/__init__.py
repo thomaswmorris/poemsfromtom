@@ -51,6 +51,8 @@ class Poem():
 </style>
 </head>
 {self.html}
+<br>
+Past poems are in the <a href="https://thomaswmorris.com/poems">archive</a>.
 </html>
 '''
 
