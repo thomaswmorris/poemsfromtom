@@ -52,7 +52,7 @@ class Poem():
 </head>
 {self.html}
 <br>
-Past poems are in the <a href="https://thomaswmorris.com/poems">archive</a>.
+Past poems can be found in the <a href="https://thomaswmorris.com/poems">archive</a>.
 </html>
 '''
 

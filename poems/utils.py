@@ -204,8 +204,8 @@ def text_to_html_lines(text):
 
     text  = text.replace('--', '&#8212;') # convert emdashes
 
-    for m in re.findall(r'(_[\w\W]+?_)', text): 
-        text = re.sub(m, re.sub(r'\n', r'_\n_', m), text) # add italic around all line breaks
+    for span in re.findall(r'(_[\w\W]+?_)', text): 
+        text = re.sub(fr'{span}', re.sub(r'\n', r'_\n_', fr'{span}'), text) # add italic around all line breaks
     text  = re.sub(r'_([\w\W]*?)_', r'<i>\1</i>', text) # convert to html italic notation
 
     parsed_lines = []
