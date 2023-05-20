@@ -213,6 +213,6 @@ def text_to_html_lines(text):
         if len(line) > 0:
             parsed_lines.append(f'<div class="poem-line">{line.strip()}</div>')
         else:
-            parsed_lines.append(f'<div class="poem-line-blank">&nbsp;</div>')
+            parsed_lines.append(f'<div class="poem-line-blank">&#8203;</div>')
 
     return '\n'.join(parsed_lines)
