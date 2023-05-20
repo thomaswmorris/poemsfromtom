@@ -52,7 +52,7 @@ def thread_process(poem, username, password, name, email, subject):
     done, fails = False, 0
     while (not done) and (fails < 60):
         try:
-            poems.utils.send_email(username, password, poem.html, email, subject)
+            poems.utils.send_email(username, password, poem.email_html, email, subject)
             a, b = email.split('@'); print(f'{datetime.now().isoformat()} | sent to {name:<18} | {a:>24} @ {b:<20}')
             done = True
         except Exception as e:
