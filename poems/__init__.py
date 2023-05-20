@@ -13,19 +13,23 @@ def PoemNotFoundError(Exception):
 
 base, this_file = os.path.split(__file__)
 
-with open(f'{base}/poem-style.css', 'r') as f: 
-    css = f.read()
+with open(f"{base}/poem-style.css", "r") as f: 
+    CSS = f.read()
+
+with open(f"{base}/data/flags.json", "r") as f: 
+    FLAGS = f.read()
+
+with open(f'{base}/data/poems.json', 'r+') as f:
+    POEMS = json.load(f)
 
 class Poem():
 
-    def __init__(self, author, title, when):
+    def __init__(self, author, title, when, as_email=False, **kwargs):
 
-        with open(f'{base}/data.json', 'r+') as f:
-
-            data = json.load(f)
-            self.author, self.title, self.when = author, title, when
-            self.author_name, self.author_birth, self.author_death, self.author_nationality, self.author_link = data[author]['metadata'].values()
-            self.body, self.keywords = data[author]['poems'][title].values()
+        self.author, self.title, self.when = author, title, when
+        for attr, value in POEMS[author]["metadata"].items():
+            setattr(self, f"author_{attr}", value)
+        self.body, self.keywords = POEMS[author]["poems"][title].values()
 
         self.date_time = datetime.fromtimestamp(when).replace(tzinfo=pytz.utc)
         self.nice_fancy_date = f'{utils.get_weekday(self.when).capitalize()} {utils.get_month(self.when).capitalize()} {self.date_time.day}, {self.date_time.year}'
@@ -33,21 +37,24 @@ class Poem():
         
         self.header = f'{utils.titleize(title)} by {self.author_name}'
 
-        self.html = f'''<section class="poem-section">
+        self.flag_html =  "" if as_email else FLAGS["html"][self.author_nation]
+
+        html = f'''<section class="poem-section">
 <div class="poem-header">
     <div class="poem-date">{self.nice_fancy_date}</div>
     <div>
         <span class="poem-title">{utils.titleize(self.title, with_quotes=False, as_html=True)}</span>
         by 
-        <span class="poem-author"><a href="{self.author_link}">{self.author_name}</a> <i>({self.author_birth}&#8212;{self.author_death})</i></span>
+        <span class="poem-author"><a href="{self.author_link}">{self.author_name}</a> <i>({self.author_birth}&#8212;{self.author_death})</i> {self.flag_html}</span>
     </div>
 </div>
 {self.html_lines}
 </section>'''
 
-        self.email_html = f'''<head><!DOCTYPE html>
+        if as_email:
+            self.html = f'''<head><!DOCTYPE html>
 <style>
-{css}
+{CSS}
 </style>
 </head>
 {self.html}
@@ -55,7 +62,8 @@ class Poem():
 Past poems can be found in the <a href="https://thomaswmorris.com/poems">archive</a>.
 </html>
 '''
-
+        else:
+            self.html = html
 
 
 
@@ -63,17 +71,16 @@ class Curator():
 
     def __init__(self):
                         
-        with open(f'{base}/data.json', 'r+') as f:
-            self.data = json.load(f)
+        
 
         authors, titles, keywords, lengths = [], [], [], []
         self.poems = pd.DataFrame(columns=['author', 'title', 'keywords', 'likelihood', 'word_count'])
-        for author in self.data.keys():
-            for title in self.data[author]['poems'].keys():
+        for author in POEMS.keys():
+            for title in POEMS[author]['poems'].keys():
                 authors.append(author)
                 titles.append(title)
-                keywords.append(self.data[author]['poems'][title]['keywords'])
-                lengths.append(len(self.data[author]['poems'][title]['body'].split()))
+                keywords.append(POEMS[author]['poems'][title]['keywords'])
+                lengths.append(len(POEMS[author]['poems'][title]['body'].split()))
 
         self.poems['author'] = authors
         self.poems['title'] = titles
@@ -136,9 +143,9 @@ class Curator():
         self.stats = pd.DataFrame(columns=['name','birth','death','n_poems','times_sent','days_since_last_sent'])
 
         for uauthor in self.unique_authors:
-            name, birth, death, nationality, link = self.data[uauthor]['metadata'].values()
+            name, birth, death, nation, link = POEMS[uauthor]['metadata'].values()
             elapsed = (ttime.time() - self.history['timestamp'][self.history.author==uauthor].max()) / 86400 
-            self.stats.loc[uauthor] = name, birth, death, len(self.data[uauthor]['poems']), (self.history['author']==uauthor).sum(), np.round(elapsed,1)
+            self.stats.loc[uauthor] = name, birth, death, len(POEMS[uauthor]['poems']), (self.history['author']==uauthor).sum(), np.round(elapsed,1)
             
         if not order_by is None:
             self.stats = self.stats.sort_values(by=order_by, ascending=ascending)
@@ -153,6 +160,7 @@ class Curator():
                 historical_tag=None,
                 verbose=True,
                 very_verbose=False,
+                **kwargs,
                 ):
 
         verbose = verbose or very_verbose
@@ -173,7 +181,7 @@ class Curator():
 
             # if the author AND the title are supplied, then we can end here (either in a return or an error)
             if title is not None: 
-                if title in self.data[author]['poems'].keys():
+                if title in POEMS[author]['poems'].keys():
                     return Poem(author, title, self.when)
                 else:
                     raise PoemNotFoundError(f'There is no poem \"{title}\" by \"{author}\" in the database.')
@@ -256,7 +264,7 @@ class Curator():
         if verbose: 
             print(f'chose poem "{chosen_title}" by {chosen_author}')
 
-        poem = Poem(chosen_author, chosen_title, self.when)
+        poem = Poem(chosen_author, chosen_title, self.when, **kwargs)
 
         if not historical_tag is None:
             now = datetime.now(tz=pytz.utc)
