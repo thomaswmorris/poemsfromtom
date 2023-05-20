@@ -24,7 +24,7 @@ with open(f'{base}/data/poems.json', 'r+') as f:
 
 class Poem():
 
-    def __init__(self, author, title, when, as_email=False, **kwargs):
+    def __init__(self, author, title, when, **kwargs):
 
         self.author, self.title, self.when = author, title, when
         for attr, value in POEMS[author]["metadata"].items():
@@ -37,9 +37,9 @@ class Poem():
         
         self.header = f'{utils.titleize(title)} by {self.author_name}'
 
-        self.flag_html =  "" if as_email else FLAGS["html"][self.author_nation]
+        self.html_flag = FLAGS["html"][self.author_nation]
 
-        html = f'''<section class="poem-section">
+        self.html = f'''<section class="poem-section">
 <div class="poem-header">
     <div class="poem-date">{self.nice_fancy_date}</div>
     <div>
@@ -51,20 +51,16 @@ class Poem():
 {self.html_lines}
 </section>'''
 
-        if as_email:
-            self.html = f'''<head><!DOCTYPE html>
+        self.email_html = f'''<head><!DOCTYPE html>
 <style>
 {CSS}
 </style>
 </head>
-{self.html}
+{self.html.replace(self.html_flag, "")}
 <br>
 Past poems can be found in the <a href="https://thomaswmorris.com/poems">archive</a>.
 </html>
 '''
-        else:
-            self.html = html
-
 
 
 class Curator():

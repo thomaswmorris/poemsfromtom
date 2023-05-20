@@ -32,7 +32,6 @@ curated_poem = curator.get_poem(
                                 weight_schemes=['context', 'history'],
                                 historical_tag=args.type,
                                 very_verbose=True,
-                                as_email=True,
                                 )
 
 if args.type == 'test':
