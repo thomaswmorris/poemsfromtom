@@ -37,7 +37,7 @@ class Poem():
         
         self.header = f'{utils.titleize(title)} by {self.author_name}'
 
-        self.flag_html = FLAGS["html"][self.author_nation]
+        self.flag_html = ' '.join([FLAGS["html"][nation] for nation in self.author_nationality.split('-')])
 
         self.html = f'''<section class="poem-section">
 <div class="poem-header">
