@@ -17,7 +17,7 @@ with open(f"{base}/poem-style.css", "r") as f:
     CSS = f.read()
 
 with open(f"{base}/data/flags.json", "r") as f: 
-    FLAGS = f.read()
+    FLAGS = json.load(f)
 
 with open(f'{base}/data/poems.json', 'r+') as f:
     POEMS = json.load(f)
@@ -37,7 +37,7 @@ class Poem():
         
         self.header = f'{utils.titleize(title)} by {self.author_name}'
 
-        self.html_flag = FLAGS["html"][self.author_nation]
+        self.flag_html = FLAGS["html"][self.author_nation]
 
         self.html = f'''<section class="poem-section">
 <div class="poem-header">
@@ -56,7 +56,7 @@ class Poem():
 {CSS}
 </style>
 </head>
-{self.html.replace(self.html_flag, "")}
+{self.html.replace(self.flag_html, "")}
 <br>
 Past poems can be found in the <a href="https://thomaswmorris.com/poems">archive</a>.
 </html>
