@@ -136,12 +136,16 @@ class Curator():
         if self.history is None: raise(Exception('No history has been loaded!'))
         if force_rows: pd.set_option('display.max_rows', None)
         if force_cols: pd.set_option('display.max_columns', None)
-        self.stats = pd.DataFrame(columns=['name','birth','death','n_poems','times_sent','days_since_last_sent'])
+        self.stats = pd.DataFrame(columns=['name','nationality','birth','death','n_poems','times_sent','days_since_last_sent'])
 
         for uauthor in self.unique_authors:
-            name, birth, death, nation, link = POEMS[uauthor]['metadata'].values()
+            name, birth, death, nationality, link = POEMS[uauthor]['metadata'].values()
+
             elapsed = (ttime.time() - self.history['timestamp'][self.history.author==uauthor].max()) / 86400 
-            self.stats.loc[uauthor] = name, birth, death, len(POEMS[uauthor]['poems']), (self.history['author']==uauthor).sum(), np.round(elapsed,1)
+            n_poems = len(POEMS[uauthor]['poems'])
+            n_sent  = (self.history['author']==uauthor).sum()
+            
+            self.stats.loc[uauthor] = name, nationality, birth, death, n_poems, n_sent, np.round(elapsed,1)
             
         if not order_by is None:
             self.stats = self.stats.sort_values(by=order_by, ascending=ascending)
