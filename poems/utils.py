@@ -8,6 +8,9 @@ from email.mime.text import MIMEText
 
 base, this_filename = os.path.split(__file__)
 
+with open(f'{base}/minor-words.txt','r') as f:
+    MINOR_WORDS = f.read().split('\n')
+
 def get_utc_datetime(when=None):
     if type(when) == str: 
         when = datetime.fromisoformat(when).replace(tzinfo=pytz.utc).timestamp()
@@ -165,8 +168,7 @@ def send_email(username, password, html, recipient, subject=''):
 
 def titleize(string, with_quotes=True, as_html=False):
 
-    with open(f'{base}/minor-words.txt','r') as f:
-        words_to_not_capitalize = f.read().split('\n')
+    
 
     if '(FROM)' in string: 
         string = string.replace('(FROM)', '').strip()
@@ -174,17 +176,17 @@ def titleize(string, with_quotes=True, as_html=False):
     else: 
         is_from = False
 
-    delims = [': ', '\“', ' ', 'O’', '-', '(', '.']
+    delims = [' ', '\“', '-', '(', ' Mc', 'O’']
     string = string.lower()
 
     for delim in delims:  
         words = string.split(delim)
         for i, s in enumerate(words):
             
-            if (not len(s) > 0) or (s in ['\"','\'']):
+            if (not len(s) > 0):
                 continue
 
-            if (i in [0,len(words)-1]) or not ((s in words_to_not_capitalize) and not delim == '-'): 
+            if (i in [0,len(words)-1]) or not ((s in MINOR_WORDS) and not delim == '-'): 
                 i_cap = list(re.finditer('[^\"\']',s))[0].start()
                 words[i] = words[i][:i_cap] + words[i][i_cap].capitalize() + words[i][i_cap+1:]
 
@@ -192,8 +194,6 @@ def titleize(string, with_quotes=True, as_html=False):
                 words[i] = s.upper()
 
         string = delim.join(words)
-
-    string = re.sub(r'\'S ','\'s ',string)
     
     if with_quotes: string = f'“{string}”'
     if not is_from: return string
