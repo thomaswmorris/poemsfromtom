@@ -8,7 +8,7 @@ from io import StringIO
 from datetime import datetime
 from . import utils
 
-def PoemNotFoundError(Exception):
+class PoemNotFoundError(Exception):
     pass
 
 base, this_file = os.path.split(__file__)
