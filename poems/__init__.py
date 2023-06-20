@@ -111,7 +111,7 @@ class Curator():
                 raise Exception(f'{e}\n(Could not load file \"{filename}\")')
 
         self.history = self.history.loc[self.history['type']!='test']
-        self.history.index = np.arange(len(self.history.index))
+        self.history.index = 1 + np.arange(len(self.history.index))
         self.make_stats() # order_by=['times_sent', 'days_since_last_sent'], ascending=(False, True))
 
     def write_to_repo(self, items, branch='master', verbose=False):
