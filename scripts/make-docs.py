@@ -82,7 +82,7 @@ for i, entry in curator.history.iterrows():
                             verbose=False)
 
     prev_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«previous</a></li>' if i > 0 else ''
-    next_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">next»</a></li>' if i < n_history - 1 else ''
+    next_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">next»</a></li>' if i < n_history else ''
 
     html = f'''<!DOCTYPE html>
 <html lang="en">
