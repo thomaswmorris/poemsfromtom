@@ -15,9 +15,6 @@ args = parser.parse_args()
 curator = poems.Curator()
 curator.load_github_repo(github_repo_name=args.github_repo_name, github_token=args.github_token)
 curator.read_history(filename='data/poems/history.csv', from_repo=True)
-history = curator.history.copy()
-
-history['strip_title'] = [re.sub(r'^(THE|AN|A)\s+', '', title) for title in history['title']]
 
 dt_last = datetime.fromtimestamp(curator.history.iloc[-1].timestamp).astimezone(pytz.utc)
 last_date, last_time = dt_last.isoformat()[:19].split('T')
@@ -82,9 +79,9 @@ for index, entry in curator.history.iterrows():
                             context={'timestamp' : dt.timestamp()},
                             verbose=False)
 
-    prev_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«previous</a></li>' if index > 0 else ''
+    prev_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«previous</a></li>' if index != curator.history.index[0] else ''
 
-    next_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">next»</a></li>' if index < len(history) else ''
+    next_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">next»</a></li>' if index != curator.history.index[-1] else ''
 
     html = f'''<!DOCTYPE html>
 <html lang="en">
