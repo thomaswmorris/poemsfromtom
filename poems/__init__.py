@@ -111,7 +111,6 @@ class Curator():
                 raise Exception(f'{e}\n(Could not load file \"{filename}\")')
 
         self.history = self.history.loc[self.history['type']!='test']
-        self.history.index = 1 + np.arange(len(self.history.index))
         self.make_stats() # order_by=['times_sent', 'days_since_last_sent'], ascending=(False, True))
 
     def write_to_repo(self, items, branch='master', verbose=False):
@@ -268,7 +267,7 @@ class Curator():
 
         if not historical_tag is None:
             now = datetime.now(tz=pytz.utc)
-            self.history.loc[len(self.history)] = poem.author, poem.title, historical_tag, *now.isoformat()[:19].split('T'), int(now.timestamp())
+            self.history.loc[len(self.history)+1] = poem.author, poem.title, historical_tag, *now.isoformat()[:19].split('T'), int(now.timestamp())
 
         return poem
 

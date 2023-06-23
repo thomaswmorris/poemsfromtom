@@ -113,12 +113,14 @@ for index, entry in curator.history.iterrows():
 '''
 
     filepath = f'docs/poems/{y}-{m}-{d}.html'
-    try:    contents = curator.repo.get_contents(filepath, ref='master').decoded_content.decode()
-    except: contents = None
+    try: 
+        contents = curator.repo.get_contents(filepath, ref='master').decoded_content.decode()
+    except: 
+        contents = None
     if html != contents:
-        print(f'OVERWRITE #{index} {y}/{m}/{d} {poem.author:>12} {poem.title}')
+        print(f'OVERWRITE #{index:>03} {y}/{m}/{d} {poem.author:>12} {poem.title}')
     else:
-        print(f'          #{index} {y}/{m}/{d} {poem.author:>12} {poem.title}')
+        print(f'          #{index:>03} {y}/{m}/{d} {poem.author:>12} {poem.title}')
         continue
     
     blob = curator.repo.create_git_blob(html, "utf-8")
