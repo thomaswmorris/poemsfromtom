@@ -65,10 +65,11 @@ def commit_elements(elements):
     master_ref = curator.repo.get_git_ref('heads/master')
     master_ref.edit(sha=commit.sha)
 
-n_history = len(history)
 ys, ms, ds = [], [], []
 
-for i, entry in curator.history.iterrows():
+print(f"writing docs for n={len(curator.history)} poems")
+
+for index, entry in curator.history.iterrows():
 
     y, m, d = entry.date.split('-')
 
@@ -81,8 +82,9 @@ for i, entry in curator.history.iterrows():
                             context={'timestamp' : dt.timestamp()},
                             verbose=False)
 
-    prev_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«previous</a></li>' if i > 0 else ''
-    next_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">next»</a></li>' if i < n_history else ''
+    prev_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_prev.year:02}-{dt_prev.month:02}-{dt_prev.day:02}">«previous</a></li>' if index > 0 else ''
+
+    next_string = f'<li class="nav-item left"><a class="nav-link" href="/poems/{dt_next.year:02}-{dt_next.month:02}-{dt_next.day:02}">next»</a></li>' if index < len(history) else ''
 
     html = f'''<!DOCTYPE html>
 <html lang="en">
@@ -117,9 +119,9 @@ for i, entry in curator.history.iterrows():
     try:    contents = curator.repo.get_contents(filepath, ref='master').decoded_content.decode()
     except: contents = None
     if html != contents:
-        print(f'OVERWRITE {y}/{m}/{d} {poem.author:>12} {poem.title}')
+        print(f'OVERWRITE #{index} {y}/{m}/{d} {poem.author:>12} {poem.title}')
     else:
-        print(f'          {y}/{m}/{d} {poem.author:>12} {poem.title}')
+        print(f'          #{index} {y}/{m}/{d} {poem.author:>12} {poem.title}')
         continue
     
     blob = curator.repo.create_git_blob(html, "utf-8")
