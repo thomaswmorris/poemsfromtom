@@ -1,4 +1,4 @@
-import json, os, pytz
+import json, os, pytz, re
 import time as ttime
 import numpy as np
 import pandas as pd
@@ -16,10 +16,7 @@ base, this_file = os.path.split(__file__)
 with open(f"{base}/poem-style.css", "r") as f: 
     CSS = f.read()
 
-with open(f"{base}/data/flags.json", "r") as f: 
-    FLAGS = json.load(f)
-
-with open(f'{base}/data/poems.json', 'r+') as f:
+with open(f'{base}/poems.json', 'r+') as f:
     POEMS = json.load(f)
 
 class Poem():
@@ -29,23 +26,24 @@ class Poem():
         self.author, self.title, self.when = author, title, when
         for attr, value in POEMS[author]["metadata"].items():
             setattr(self, f"author_{attr}", value)
-        self.body, self.keywords = POEMS[author]["poems"][title].values()
+
+        self.cased_title, self.body, self.keywords = POEMS[author]["poems"][title].values()
+
+        self.html_title = re.sub("^from", "<i>from</i>", self.cased_title)
 
         self.date_time = datetime.fromtimestamp(when).replace(tzinfo=pytz.utc)
         self.nice_fancy_date = f'{utils.get_weekday(self.when).capitalize()} {utils.get_month(self.when).capitalize()} {self.date_time.day}, {self.date_time.year}'
         self.html_lines = utils.text_to_html_lines(self.body)
         
-        self.header = f'{utils.titleize(title)} by {self.author_name}'
-
-        self.flag_html = ' '.join([FLAGS["html"][nation] for nation in self.author_nationality.split('-')])
+        self.header = f'“{self.cased_title}” by {self.author_name}'
 
         self.html = f'''<section class="poem-section">
 <div class="poem-header">
     <div class="poem-date">{self.nice_fancy_date}</div>
     <div>
-        <span class="poem-title">{utils.titleize(self.title, with_quotes=False, as_html=True)}</span>
+        <span class="poem-title">{self.html_title}</span>
         by 
-        <span class="poem-author"><a href="{self.author_link}">{self.author_name}</a> <i>({self.author_birth}&#8212;{self.author_death})</i> {self.flag_html}</span>
+        <span class="poem-author"><a href="{self.author_link}">{self.author_name}</a> <i>({self.author_birth}&#8212;{self.author_death})</i> {self.author_flag}</span>
     </div>
 </div>
 {self.html_lines}
@@ -56,7 +54,7 @@ class Poem():
 {CSS}
 </style>
 </head>
-{self.html.replace(self.flag_html, "")}
+{self.html.replace(self.author_flag, "")}
 <br>
 Past poems can be found in the <a href="https://thomaswmorris.com/poems">archive</a>.
 </html>
@@ -67,8 +65,6 @@ class Curator():
 
     def __init__(self):
                         
-        
-
         authors, titles, keywords, lengths = [], [], [], []
         self.poems = pd.DataFrame(columns=['author', 'title', 'keywords', 'likelihood', 'word_count'])
         for author in POEMS.keys():
