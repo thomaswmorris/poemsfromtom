@@ -37,7 +37,7 @@ class Poem():
         self.nice_fancy_date = f"{utils.get_weekday(self.when).capitalize()} {utils.get_month(self.when).capitalize()} {self.date_time.day}, {self.date_time.year}"
         self.html_lines = utils.text_to_html_lines(self.body)
         
-        self.header = f"“{self.cased_title}” by {self.author_name}"
+        self.header = f"{self.cased_title} by {self.author_name}"
 
         self.html = f'''<section class="poem-section">
 <div class="poem-header">
