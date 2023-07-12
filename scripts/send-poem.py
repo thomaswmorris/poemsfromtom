@@ -19,7 +19,7 @@ args = parser.parse_args()
 # Initialize the curator
 curator = poems.Curator()
 curator.load_github_repo(github_repo_name=args.github_repo_name, github_token=args.github_token)
-curator.read_history(filename='data/poems/history.csv', from_repo=True)
+curator.read_history(filename='data/poems/daily-history.csv', from_repo=True)
 
 when = ttime.time() if not args.type == 'test' else ttime.time() + 365 * 86400 * np.random.uniform()
 
@@ -65,8 +65,8 @@ for name, email in zip(entries['name'], entries['email']):
 
 if args.type == 'daily':
     
-    curator.write_to_repo(items={'data/poems/history.csv' : curator.history.to_csv(), 
-                                   'data/poems/stats.csv' : curator.stats.drop(columns=['days_since_last_sent']).to_csv()}, verbose=True)
+    curator.write_to_repo(items={'data/poems/daily-history.csv' : curator.history.to_csv(), 
+                                   'data/poems/daily-stats.csv' : curator.stats.drop(columns=['days_since_last_sent']).to_csv()}, verbose=True)
 
 
     
