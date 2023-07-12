@@ -118,9 +118,9 @@ for index, entry in curator.history.iterrows():
     except: 
         contents = None
     if html != contents:
-        print(f'OVERWRITE #{index:>03} {y}/{m}/{d} {poem.author:>12} {poem.title}')
+        print(f'OVERWRITE #{index:>03} {y}/{m}/{d} {poem.author:>26} {poem.title}')
     else:
-        print(f'          #{index:>03} {y}/{m}/{d} {poem.author:>12} {poem.title}')
+        print(f'          #{index:>03} {y}/{m}/{d} {poem.author:>26} {poem.title}')
         continue
     
     blob = curator.repo.create_git_blob(html, "utf-8")
