@@ -132,7 +132,7 @@ class Curator():
         if self.history is None: raise(Exception("No history has been loaded!"))
         if force_rows: pd.set_option("display.max_rows", None)
         if force_cols: pd.set_option("display.max_columns", None)
-        self.stats = pd.DataFrame(columns=["name","nationality","birth","death","n_poems","times_sent","days_since_last_sent"])
+        self.stats = pd.DataFrame(columns=["name","nationality","birth","death","#_of_poems","#_of_times_sent","days_since_last_sent"])
 
         for uauthor in self.unique_authors:
 
@@ -140,7 +140,7 @@ class Curator():
             birth = POEMS[uauthor]["metadata"]["birth"]
             death = POEMS[uauthor]["metadata"]["death"]
             nationality = POEMS[uauthor]["metadata"]["nationality"]
-            n_poems = POEMS[uauthor]["metadata"]["n_poems"]
+            n_poems = POEMS[uauthor]["metadata"]["#_of_poems"]
 
             elapsed = (ttime.time() - self.history["timestamp"][self.history.author==uauthor].max()) / 86400 
             n_sent = (self.history["author"]==uauthor).sum()
