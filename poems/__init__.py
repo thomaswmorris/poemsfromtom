@@ -134,18 +134,18 @@ class Curator():
         if force_cols: pd.set_option("display.max_columns", None)
         self.stats = pd.DataFrame(columns=["name","nationality","birth","death","#_of_poems","#_of_times_sent","days_since_last_sent"])
 
-        for uauthor in self.unique_authors:
+        for author in POEMS.keys():
 
-            name = POEMS[uauthor]["metadata"]["name"]
-            birth = POEMS[uauthor]["metadata"]["birth"]
-            death = POEMS[uauthor]["metadata"]["death"]
-            nationality = POEMS[uauthor]["metadata"]["nationality"]
-            n_poems = POEMS[uauthor]["metadata"]["#_of_poems"]
+            name = POEMS[author]["metadata"]["name"]
+            birth = POEMS[author]["metadata"]["birth"]
+            death = POEMS[author]["metadata"]["death"]
+            nationality = POEMS[author]["metadata"]["nationality"]
+            n_poems = POEMS[author]["metadata"]["#_of_poems"]
 
-            elapsed = (ttime.time() - self.history["timestamp"][self.history.author==uauthor].max()) / 86400 
-            n_sent = (self.history["author"]==uauthor).sum()
+            elapsed = (ttime.time() - self.history["timestamp"][self.history.author==author].max()) / 86400 
+            n_sent = (self.history["author"]==author).sum()
             
-            self.stats.loc[uauthor] = name, nationality, birth, death, n_poems, n_sent, np.round(elapsed,1)
+            self.stats.loc[author] = name, nationality, birth, death, n_poems, n_sent, np.round(elapsed,1)
             
         if not order_by is None:
             self.stats = self.stats.sort_values(by=order_by, ascending=ascending)
@@ -231,6 +231,11 @@ class Curator():
         if "context" in weight_schemes:
 
             if verbose: print(f"using context {context}")
+
+            exclude = np.array([kwdict["type"]=="exclude" if "type" in kwdict.keys() else False for kwdict in self.poems.keywords])
+            self.poems.loc[exclude, "likelihood"] = 0
+
+            if verbose: print(f"omitting {exclude.sum()} poems")
 
             # if the category is "statistical", then we weight to be uniform in the long run (i.e. *= 4 for seasons and *= 12 for months)
             # if the category is forced, then we multiply by some arbitrarily large number. we don"t multiply (~category) by 0 because this
