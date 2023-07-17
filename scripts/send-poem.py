@@ -25,11 +25,13 @@ when = ttime.time() if not args.type == 'test' else ttime.time() + 365 * 86400 *
 
 context = poems.utils.get_context(when)
 
+FORCED_CONTEXTS = ["good_friday", "holy_saturday", "easter_sunday", "thanksgiving", "christmas_eve", "christmas_day"]
+
 # Choose a poem that meets the supplied conditions
 curated_poem = curator.get_poem(
                                 context=context, 
-                                forced_contexts=['holiday'],
                                 weight_schemes=['context', 'history'],
+                                forced_contexts=FORCED_CONTEXTS,
                                 historical_tag=args.type,
                                 very_verbose=True,
                                 )

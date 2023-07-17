@@ -19,6 +19,9 @@ with open(f"{base}/poem-style.css", "r") as f:
 with open(f"{base}/poems.json", "r+") as f:
     POEMS = json.load(f)
 
+with open(f"{base}/weights.json", "r+") as f:
+    CONTEXT_WEIGHTS = json.load(f)
+
 class Poem():
 
     def __init__(self, author, title, when, **kwargs):
@@ -155,7 +158,7 @@ class Curator():
                 author=None,
                 title=None,
                 context=None,
-                weight_schemes=[],
+                weight_schemes=["context"],
                 forced_contexts=[],
                 historical_tag=None,
                 verbose=True,
@@ -231,6 +234,7 @@ class Curator():
         if "context" in weight_schemes:
 
             if verbose: print(f"using context {context}")
+            if verbose: print(f"forcing contexts {forced_contexts}")
 
             exclude = np.array([kwdict["type"]=="exclude" if "type" in kwdict.keys() else False for kwdict in self.poems.keywords])
             self.poems.loc[exclude, "likelihood"] = 0
@@ -241,13 +245,22 @@ class Curator():
             # if the category is forced, then we multiply by some arbitrarily large number. we don"t multiply (~category) by 0 because this
             # would throw an error if there were no suitable poems, so this is a bit more flexible for workflows and things. 
 
-            for category in utils.context_categories:
-                if not category in context.keys(): continue
-                for keyword in utils.context_multipliers[category].keys():
+            for category in CONTEXT_WEIGHTS.keys():
+                if not category in context.keys(): 
+                    continue
+                for keyword in CONTEXT_WEIGHTS[category].keys():
                     has_keyword = np.array([keyword==kwdict[category] if category in kwdict.keys() else False for kwdict in self.poems.keywords])
-                    if not has_keyword.sum() > 0: continue
-                    if keyword == context[category]: multiplier = utils.context_multipliers[category][keyword] if category not in forced_contexts else 1e12
-                    else: multiplier = 0
+                    if not has_keyword.sum() > 0: 
+                        continue
+
+                    if keyword == context[category]: 
+                        if keyword not in forced_contexts:
+                            multiplier = CONTEXT_WEIGHTS[category][keyword]  
+                        else:
+                            if very_verbose: print(f"forcing context for {category} = {keyword}")
+                            multiplier = 1e12
+                    else: 
+                        multiplier = 0
 
                     # if we want to use "spring" as a holiday for the first day of spring, then we need to not
                     # exclude that keyword when it is not that holiday. this translates well; if the holiday is 
