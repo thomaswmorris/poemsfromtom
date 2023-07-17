@@ -1,3 +1,4 @@
+ephem
 numpy
 pandas
 pygithub
