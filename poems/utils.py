@@ -74,13 +74,14 @@ def get_holiday(t=None):
     if (month, day) == (1, 28):  return "saint_thomas_aquinas"
 
     if (month, day) == (2, 2):   return "candlemas"
-    if (month, day) == (2, 11):   return "our_lady_of_lourdes"
+    if (month, day) == (2, 11):  return "our_lady_of_lourdes"
     if (month, day) == (2, 14):  return "saint_valentine"
 
     if (month, day) == (3, 17):  return "saint_patrick"
     if (month, day) == (3, 19):  return "saint_joseph"
-    
     if (month, day) == (3, 25):  return "annunciation"
+
+    if (month, day) == (4, 29):  return "saint_catherine_of_siena"
 
     if (month, day) == (5, 1):   return "may_day"
     if (month, day) == (5, 3):   return "saints_philip_and_james"
@@ -88,7 +89,6 @@ def get_holiday(t=None):
     if (month, day) == (5, 31):  return "visitation"
 
     if (month, day) == (6, 19):  return "juneteenth"
-    
     if (month, day) == (6, 24):  return "saint_john_the_baptist"
     if (month, day) == (6, 29):  return "saints_peter_and_paul"
     
@@ -96,6 +96,7 @@ def get_holiday(t=None):
     if (month, day) == (7, 4):   return "independence_day"
     if (month, day) == (7, 16):  return "our_lady_of_mount_carmel"
     if (month, day) == (7, 17):  return "saint_alexis"
+    if (month, day) == (7, 22):  return "mary_magdelene"
     if (month, day) == (7, 25):  return "saint_james"
 
     if (month, day) == (8, 1):   return "lammas_day"
@@ -116,8 +117,10 @@ def get_holiday(t=None):
     if (month, day) == (9, 29):  return "saint_michael"
     if (month, day) == (9, 30):  return "saint_jerome"
     
+    if (month, day) == (10, 1):  return "saint_therese_of_lisieux"
     if (month, day) == (10, 4):  return "saint_francis"
     if (month, day) == (10, 7):  return "our_lady_of_the_rosary"
+    if (month, day) == (10, 15): return "saint_teresa_of_avila"
     if (month, day) == (10, 18): return "saint_luke"
     if (month, day) == (10, 28): return "saint_john_paul"
     if (month, day) == (10, 30): return "saint_alphonsus_rodriguez"
@@ -196,6 +199,7 @@ def get_context(x=None):
     when = get_utc_datetime(x).timestamp() if x is not None else ttime.time()
     return {
             "weekday" : get_weekday(when), 
+               "year" : get_year(when), 
               "month" : get_month(when), 
                 "day" : get_day(when),
              "season" : get_season(when), 

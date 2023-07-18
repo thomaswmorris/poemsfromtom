@@ -257,7 +257,6 @@ class Curator():
                         if keyword not in forced_contexts:
                             multiplier = CONTEXT_WEIGHTS[category][keyword]  
                         else:
-                            if very_verbose: print(f"forcing context for {category} = {keyword}")
                             multiplier = 1e12
                     else: 
                         multiplier = 0
