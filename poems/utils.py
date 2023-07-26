@@ -28,20 +28,17 @@ def get_day(t=None):
     return f"{get_utc_datetime(t).day:02}"
 
 def get_season(t=None):
-
     year = get_utc_datetime(t).year
     yday = get_utc_datetime(t).timetuple().tm_yday
-
-    spring = datetime(year, 3, 20).timetuple().tm_yday
-    summer = datetime(year, 6, 21).timetuple().tm_yday
-    autumn = datetime(year, 9, 23).timetuple().tm_yday
-    winter = datetime(year, 12, 22).timetuple().tm_yday
-
-    if (spring <= yday < summer):  return "spring" 
-    if (summer <= yday < autumn):  return "summer" 
-    if (autumn <= yday < winter):  return "autumn" 
+    if yday < get_solstice_or_equinox_year_day(year, "spring"):
+        return "winter"
+    if yday < get_solstice_or_equinox_year_day(year, "summer"):
+        return "spring"
+    if yday < get_solstice_or_equinox_year_day(year, "autumn"):
+        return "summer"
+    if yday < get_solstice_or_equinox_year_day(year, "winter"):
+        return "autumn"
     return "winter"
-
 
 def get_holiday(t=None):
     dt = get_utc_datetime(t)
@@ -157,24 +154,23 @@ def get_holiday(t=None):
     if (month, weekday) == (11, 3) and (day > 21) and (get_utc_datetime(t - 28 * 86400).month == 10): return "thanksgiving" # fourth thursday of november
     
     # not important
-    if (month, day) == get_solstice_or_equinox_date(year, "spring"): return "spring_equinox"
-    if (month, day) == get_solstice_or_equinox_date(year, "summer"): return "summer_solstice"
-    if (month, day) == get_solstice_or_equinox_date(year, "autumn"): return "autumn_equinox"
-    if (month, day) == get_solstice_or_equinox_date(year, "winter"): return "winter_solstice"
+    if yd == get_solstice_or_equinox_year_day(year, "spring"): return "spring_equinox"
+    if yd == get_solstice_or_equinox_year_day(year, "summer"): return "summer_solstice"
+    if yd == get_solstice_or_equinox_year_day(year, "autumn"): return "autumn_equinox"
+    if yd == get_solstice_or_equinox_year_day(year, "winter"): return "winter_solstice"
 
-    return "no holiday"
+    return "none"
 
 
-def get_solstice_or_equinox_date(year, season):
+def get_solstice_or_equinox_year_day(year, season):
     if season == "spring":
-        date = str(ephem.next_spring_equinox((year,1,1)))
+        return ephem.next_spring_equinox((year,1,1)).datetime().timetuple().tm_yday
     elif season == "summer":
-        date = str(ephem.next_summer_solstice((year,1,1)))
+        return ephem.next_summer_solstice((year,1,1)).datetime().timetuple().tm_yday
     elif season == "autumn":
-        date = str(ephem.next_autumnal_equinox((year,1,1)))
+        return ephem.next_autumnal_equinox((year,1,1)).datetime().timetuple().tm_yday
     elif season == "winter":
-        date = str(ephem.next_winter_solstice((year,1,1)))
-    return tuple(np.array(date.split()[0].split("/"))[1:].astype(int))
+        return ephem.next_winter_solstice((year,1,1)).datetime().timetuple().tm_yday
 
 def get_liturgy(t=ttime.time()):
     dt = get_utc_datetime(t)
@@ -182,11 +178,16 @@ def get_liturgy(t=ttime.time()):
     weekday = dt.weekday()
     easter_yd = easter(dt.year).timetuple().tm_yday 
     christmas_yd = datetime(dt.year,12,25).timetuple().tm_yday 
-    if yd <= 5 or yd >= christmas_yd: return "christmastide"
-    if 0 < easter_yd - dt.date().timetuple().tm_yday <= 46: 
-        if not weekday == 0: return "lent"
-    if -39 < easter_yd - dt.date().timetuple().tm_yday <= 0: return "eastertide"
-    if christmas_yd - (22 + datetime(dt.year,12,25).weekday()) <= yd < christmas_yd: return "advent"
+    if yd <= 5 or yd >= christmas_yd: 
+        return "christmastide"
+    if 3 < easter_yd - dt.date().timetuple().tm_yday <= 46: 
+        return "lent"
+    if 0 < easter_yd - dt.date().timetuple().tm_yday <= 3: 
+        return "triduum"
+    if -39 < easter_yd - dt.date().timetuple().tm_yday <= 0: 
+        return "eastertide"
+    if christmas_yd - (22 + datetime(dt.year,12,25).weekday()) <= yd < christmas_yd: 
+        return "advent"
     return "ordinary time"
 
 def get_month_epoch(t=ttime.time()):
@@ -194,6 +195,9 @@ def get_month_epoch(t=ttime.time()):
     if day < 11: return "early"
     if day < 21: return "middle"
     return "late"
+
+def get_year_day(t=ttime.time()):
+    return get_utc_datetime(t).timetuple().tm_yday
 
 def get_context(x=None):
     when = get_utc_datetime(x).timestamp() if x is not None else ttime.time()
@@ -206,6 +210,7 @@ def get_context(x=None):
             "liturgy" : get_liturgy(when), 
             "holiday" : get_holiday(when),
         "month_epoch" : get_month_epoch(when),
+           "year_day" : get_year_day(when),
           "timestamp" : when,
             }
 

@@ -37,7 +37,7 @@ curated_poem = curator.get_poem(
                                 )
 
 if args.type == 'test':
-    subject = f'(TEST) {curated_poem.nice_fancy_date}: {curated_poem.header}'
+    subject = f'(TEST) {curated_poem.nice_fancy_date}: {curated_poem.header} {curated_poem.keywords}'
 elif args.type == 'daily':
     subject = f'Poem of the Day: {curated_poem.header}'
 else:
