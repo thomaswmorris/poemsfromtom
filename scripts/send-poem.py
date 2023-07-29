@@ -4,24 +4,28 @@ import pandas as pd
 from datetime import datetime
 import argparse, sys, threading
 from io import StringIO
-sys.path.insert(0, '../poems')
+sys.path.insert(0, "../poems")
 import poems
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--username', type=str, help='Email address from which to send the poem',default='')
-parser.add_argument('--password', type=str, help='Email password',default='')
-parser.add_argument('--listserv_filename', type=str, help='Where to send the poem',default='')
-parser.add_argument('--github_repo_name', type=str, help='Which GH repository to load', default='')
-parser.add_argument('--github_token', type=str, help='GH token', default='')
-parser.add_argument('--type', type=str, help='What tag to write to the history with', default='')
+parser.add_argument("--username", type=str, help="Email address from which to send the poem",default="")
+parser.add_argument("--password", type=str, help="Email password",default="")
+parser.add_argument("--listserv_filename", type=str, help="Where to send the poem",default="")
+parser.add_argument("--github_repo_name", type=str, help="Which GH repository to load", default="")
+parser.add_argument("--github_token", type=str, help="GH token", default="")
+parser.add_argument("--kind", type=str, help="What tag to write to the history with", default="")
 args = parser.parse_args()
 
 # Initialize the curator
 curator = poems.Curator()
 curator.load_github_repo(github_repo_name=args.github_repo_name, github_token=args.github_token)
-curator.read_history(filename='data/poems/daily-history.csv', from_repo=True)
 
-when = ttime.time() if not args.type == 'test' else ttime.time() + 365 * 86400 * np.random.uniform()
+if args.kind == "test":
+    curator.read_history(filename="data/poems/history-test.csv", from_repo=True)
+elif args.kind == "daily":
+    curator.read_history(filename="data/poems/history-daily.csv", from_repo=True)
+
+when = ttime.time() if not args.kind == "test" else ttime.time() + 365 * 86400 * np.random.uniform()
 
 context = poems.utils.get_context(when)
 
@@ -30,23 +34,23 @@ FORCED_CONTEXTS = ["good_friday", "holy_saturday", "easter_sunday", "thanksgivin
 # Choose a poem that meets the supplied conditions
 curated_poem = curator.get_poem(
                                 context=context, 
-                                weight_schemes=['context', 'history'],
+                                weight_schemes=["context", "history"],
                                 forced_contexts=FORCED_CONTEXTS,
-                                historical_tag=args.type,
+                                historical_tag=args.kind,
                                 very_verbose=True,
                                 )
 
-if args.type == 'test':
-    subject = f'(TEST) {curated_poem.nice_fancy_date}: {curated_poem.header} {curated_poem.keywords}'
-elif args.type == 'daily':
-    subject = f'Poem of the Day: {curated_poem.header}'
+if args.kind == "test":
+    subject = f"(TEST) {curated_poem.nice_fancy_date}: {curated_poem.header} {curated_poem.keywords}"
+elif args.kind == "daily":
+    subject = f"Poem of the Day: {curated_poem.header}"
 else:
-    raise Exception('unhandled type')
+    raise Exception("unhandled kind")
 
-if args.listserv_filename == '':
-    raise Exception('could not find a listserv')
+if args.listserv_filename == "":
+    raise Exception("could not find a listserv")
 
-contents = curator.repo.get_contents(args.listserv_filename, ref='master')
+contents = curator.repo.get_contents(args.listserv_filename, ref="master")
 entries  = pd.read_csv(StringIO(contents.decoded_content.decode()), index_col=0)
 
 def thread_process(poem, username, password, name, email, subject):
@@ -55,20 +59,23 @@ def thread_process(poem, username, password, name, email, subject):
     while (not done) and (fails < 60):
         try:
             poems.utils.send_email(username, password, poem.email_html, email, subject)
-            a, b = email.split('@'); print(f'{datetime.now().isoformat()} | sent to {name:<18} | {a:>24} @ {b:<20}')
+            a, b = email.split("@"); print(f"{datetime.now().isoformat()} | sent to {name:<18} | {a:>24} @ {b:<20}")
             done = True
         except Exception as e:
             print(e); fails += 1; ttime.sleep(60)
 
-for name, email in zip(entries['name'], entries['email']):
+for name, email in zip(entries["name"], entries["email"]):
 
     t = threading.Thread(target=thread_process, args=(curated_poem, args.username, args.password, name, email, subject))
     t.start()
 
-if args.type == 'daily':
-    
-    curator.write_to_repo(items={'data/poems/daily-history.csv' : curator.history.to_csv(), 
-                                   'data/poems/author-stats.csv' : curator.stats.drop(columns=['days_since_last_sent']).to_csv()}, verbose=True)
+
+if args.kind == "test":
+    curator.write_to_repo(items={"data/poems/history-test.csv" : curator.history.to_csv()}, verbose=True)
+
+if args.kind == "daily":
+    curator.write_to_repo(items={"data/poems/history-daily.csv" : curator.history.to_csv(), 
+                                 "data/poems/author-stats.csv" : curator.stats.drop(columns=["days_since_last_sent"]).to_csv()}, verbose=True)
 
 
     
