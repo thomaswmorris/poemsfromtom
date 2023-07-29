@@ -20,9 +20,9 @@ jobs:
 
       - name: Send poem to myself
         run:
-          python scripts/send-poem.py --type 'test' --username 'poemsfromtom@gmail.com' --password ${{ secrets.PFT_PW }} --listserv_filename 'data/poems/testserv.csv'
-          --github_repo_name 'thomaswmorris.github.io' --github_token ${{ secrets.GH_TOKEN }} 
+          python scripts/send-poem.py --kind "test" --username "poemsfromtom@gmail.com" --password ${{ secrets.PFT_PW }} --listserv_filename "data/poems/testserv.csv"
+          --github_repo_name "thomaswmorris.github.io" --github_token ${{ secrets.GH_TOKEN }} 
 
       - name: Update repo pages
         run:
-          python scripts/make-docs.py --github_repo_name 'thomaswmorris.github.io' --github_token ${{ secrets.GH_TOKEN }} 
+          python scripts/make-docs.py --github_repo_name "thomaswmorris.github.io" --github_token ${{ secrets.GH_TOKEN }} 
