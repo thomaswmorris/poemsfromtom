@@ -14,7 +14,7 @@ args = parser.parse_args()
 # Initialize the curator
 curator = poems.Curator()
 curator.load_github_repo(github_repo_name=args.github_repo_name, github_token=args.github_token)
-curator.read_history(filename='data/poems/daily-history.csv', from_repo=True)
+curator.read_history(filename='data/poems/history-daily.csv', from_repo=True)
 
 dt_last = datetime.fromtimestamp(curator.history.iloc[-1].timestamp).astimezone(pytz.utc)
 last_date, last_time = dt_last.isoformat()[:19].split('T')
