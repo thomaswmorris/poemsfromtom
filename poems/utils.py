@@ -6,6 +6,23 @@ from dateutil.easter import easter
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+
+def get_context(x=None):
+    when = get_utc_datetime(x).timestamp() if x is not None else ttime.time()
+    return {
+               "year" : get_year(when), 
+           "year_day" : get_year_day(when),
+            "weekday" : get_weekday(when), 
+              "month" : get_month(when), 
+                "day" : get_day(when),
+        "month_epoch" : get_month_epoch(when),
+             "season" : get_season(when), 
+            "liturgy" : get_liturgy(when), 
+            "holiday" : get_holiday(when),
+          "timestamp" : when,
+            }
+
+
 def get_utc_datetime(when=None):
     if type(when) == str: 
         when = datetime.fromisoformat(when).replace(tzinfo=pytz.utc).timestamp()
@@ -199,20 +216,6 @@ def get_month_epoch(t=ttime.time()):
 def get_year_day(t=ttime.time()):
     return get_utc_datetime(t).timetuple().tm_yday
 
-def get_context(x=None):
-    when = get_utc_datetime(x).timestamp() if x is not None else ttime.time()
-    return {
-            "weekday" : get_weekday(when), 
-               "year" : get_year(when), 
-              "month" : get_month(when), 
-                "day" : get_day(when),
-             "season" : get_season(when), 
-            "liturgy" : get_liturgy(when), 
-            "holiday" : get_holiday(when),
-        "month_epoch" : get_month_epoch(when),
-           "year_day" : get_year_day(when),
-          "timestamp" : when,
-            }
 
 
 def send_email(username, password, html, recipient, subject=""):

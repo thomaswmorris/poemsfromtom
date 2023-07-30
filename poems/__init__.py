@@ -5,6 +5,8 @@ import pandas as pd
 import github as gh
 from io import StringIO
 
+from dataclasses import dataclass
+
 from datetime import datetime
 from . import utils
 
@@ -22,13 +24,51 @@ with open(f"{base}/poems.json", "r+") as f:
 with open(f"{base}/weights.json", "r+") as f:
     CONTEXT_WEIGHTS = json.load(f)
 
+
+
+@dataclass
+class Author():
+    """Author data class"""
+    name: str
+    birth: str
+    death: str
+    nationality: str
+    flag: str
+    link: str
+    favorite: str
+    n_poems: str
+    link: str
+
+
+@dataclass
+class Poem():
+    """Author data class"""
+    name: str
+    birth: int
+    death: int
+    nationality: str
+    flag: str
+    link: str
+    favorite: bool
+    n_poems: str
+    link: str
+
+    def dates(self) -> str:
+        if self.birth < 0:
+            if self.death < 0:
+                return f"({(self.birth)} BC &#8211; {self.death} BC)"
+            else:
+                return f"({(self.birth)} BC &#8211; {self.death} AD)"
+        else:
+             return f"({(self.birth)} &#8211; {self.death})"
+
 class Poem():
 
     def __init__(self, author, title, when, **kwargs):
 
-        self.author, self.title, self.when = author, title, when
-        for attr, value in POEMS[author]["metadata"].items():
-            setattr(self, f"author_{attr}", value)
+        self.when = when
+
+        self.author = Author(**POEMS[author]["metadata"])
 
         self.cased_title = POEMS[author]["poems"][title]["title"]
         self.body = POEMS[author]["poems"][title]["body"]
@@ -40,7 +80,7 @@ class Poem():
         self.nice_fancy_date = f"{utils.get_weekday(self.when).capitalize()} {utils.get_month(self.when).capitalize()} {self.date_time.day}, {self.date_time.year}"
         self.html_lines = utils.text_to_html_lines(self.body)
         
-        self.header = f"{self.cased_title} by {self.author_name}"
+        self.header = f"{self.cased_title} by {self.author.name}"
 
         self.html = f'''<section class="poem-section">
 <div class="poem-header">
@@ -48,7 +88,7 @@ class Poem():
     <div>
         <span class="poem-title">{self.html_title}</span>
         by 
-        <span class="poem-author"><a href="{self.author_link}">{self.author_name}</a> <i>({self.author_birth}&#8212;{self.author_death})</i> {self.author_flag}</span>
+        <span class="poem-author"><a href="{self.author.link}">{self.author.name}</a> <i>{self.author.dates}</i> {self.author.flag}</span>
     </div>
 </div>
 {self.html_lines}
@@ -59,7 +99,7 @@ class Poem():
 {CSS}
 </style>
 </head>
-{self.html.replace(self.author_flag, "")}
+{self.html.replace(self.author.flag, "")}
 <br>
 Past poems can be found in the <a href="https://thomaswmorris.com/poems">archive</a>.
 </html>
