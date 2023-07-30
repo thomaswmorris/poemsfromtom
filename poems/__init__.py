@@ -227,7 +227,7 @@ class Curator():
             # if the author AND the title are supplied, then we can end here (either in a return or an error)
             if title is not None: 
                 if title in POEMS[author]["poems"].keys():
-                    return Poem(author=Author(chosen_author, **POEMS[author]["metadata"]),
+                    return Poem(author=Author(author, **POEMS[author]["metadata"]),
                                 title=title,
                                 body=POEMS[author]["poems"][title]["body"],
                                 keywords=POEMS[author]["poems"][title]["keywords"],
