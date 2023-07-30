@@ -226,7 +226,11 @@ class Curator():
             # if the author AND the title are supplied, then we can end here (either in a return or an error)
             if title is not None: 
                 if title in POEMS[author]["poems"].keys():
-                    return Poem(author, title, self.when)
+                    return Poem(author=Author(**POEMS[author]["metadata"]),
+                                title=title,
+                                body=POEMS[author]["poems"][title]["body"],
+                                keywords=POEMS[author]["poems"][title]["keywords"],
+                                when=self.when)
                 else:
                     raise PoemNotFoundError(f"There is no poem \"{title}\" by \"{author}\" in the database.")
 
