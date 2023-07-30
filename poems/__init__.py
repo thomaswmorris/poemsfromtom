@@ -39,12 +39,15 @@ class Author():
     n_poems: str
     link: str
 
+    @property
     def dates(self) -> str:
+        if self.death is None:
+            return f"(born {self.birth})"
         if self.birth < 0:
             if self.death < 0:
-                return f"({(self.birth)} BC &#8211; {self.death} BC)"
+                return f"({(-self.birth)} BC &#8211; {-self.death} BC)"
             else:
-                return f"({(self.birth)} BC &#8211; {self.death} AD)"
+                return f"({(-self.birth)} BC &#8211; {self.death} AD)"
         else:
              return f"({(self.birth)} &#8211; {self.death})"
 
@@ -56,31 +59,27 @@ class Poem():
     keywords: dict
     when: int
 
-    def __init__(self, author, title, when, **kwargs):
-
-        self.title, self.when = title, when
-
-        self.author = Author(**POEMS[author]["metadata"])
-
-        self.cased_title = POEMS[author]["poems"][title]["title"]
-        self.body = POEMS[author]["poems"][title]["body"]
-        self.keywords = POEMS[author]["poems"][title]["keywords"]
-
+    @property
     def html_title(self) -> str:
         return re.sub("^from", "<i>from</i>", self.title)
 
+    @property
     def date_time(self):
-        return datetime.fromtimestamp(swhen).replace(tzinfo=pytz.utc)
+        return datetime.fromtimestamp(self.when).replace(tzinfo=pytz.utc)
 
+    @property
     def nice_fancy_date(self):
         return f"{utils.get_weekday(self.when).capitalize()} {utils.get_month(self.when).capitalize()} {self.date_time.day}, {self.date_time.year}"
 
+    @property
     def html_lines(self):
         return utils.text_to_html_lines(self.body)
-        
+
+    @property        
     def header(self):
         return f"{self.title} by {self.author.name}"
 
+    @property
     def html(self):
         return f'''<section class="poem-section">
 <div class="poem-header">
@@ -94,8 +93,8 @@ class Poem():
 {self.html_lines}
 </section>'''
 
-        def email_html(self):
-            return f'''<head><!DOCTYPE html>
+    def email_html(self):
+        return f'''<head><!DOCTYPE html>
 <style>
 {CSS}
 </style>
@@ -322,7 +321,7 @@ class Curator():
         if verbose: 
             print(f"chose poem \"{chosen_title}\" by {chosen_author}")
 
-        poem = Poem(author=Author(**POEMS[author]["metadata"]),
+        poem = Poem(author=Author(**POEMS[chosen_author]["metadata"]),
                     title=chosen_title,
                     body=POEMS[chosen_author]["poems"][chosen_title]["body"],
                     keywords=POEMS[chosen_author]["poems"][chosen_title]["keywords"],
