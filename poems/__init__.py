@@ -29,7 +29,6 @@ with open(f"{base}/weights.json", "r+") as f:
 @dataclass
 class Author():
     """Author data class"""
-    tag: str
     name: str
     birth: int
     death: int
@@ -227,10 +226,8 @@ class Curator():
             # if the author AND the title are supplied, then we can end here (either in a return or an error)
             if title is not None: 
                 if title in POEMS[author]["poems"].keys():
-                    return Poem(author=Author(author, **POEMS[author]["metadata"]),
-                                title=title,
-                                body=POEMS[author]["poems"][title]["body"],
-                                keywords=POEMS[author]["poems"][title]["keywords"],
+                    return Poem(author=Author(**POEMS[author]["metadata"]),
+                                **POEMS[author]["poems"][title],
                                 when=self.when)
                 else:
                     raise PoemNotFoundError(f"There is no poem \"{title}\" by \"{author}\" in the database.")
@@ -327,10 +324,8 @@ class Curator():
         if verbose: 
             print(f"chose poem \"{chosen_title}\" by {chosen_author}")
 
-        poem = Poem(author=Author(chosen_author, **POEMS[chosen_author]["metadata"]),
-                    title=chosen_title,
-                    body=POEMS[chosen_author]["poems"][chosen_title]["body"],
-                    keywords=POEMS[chosen_author]["poems"][chosen_title]["keywords"],
+        poem = Poem(author=Author(**POEMS[chosen_author]["metadata"]),
+                    **POEMS[chosen_author]["poems"][chosen_title],
                     when=self.when)
 
         if not historical_tag is None:
