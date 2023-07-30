@@ -30,20 +30,6 @@ with open(f"{base}/weights.json", "r+") as f:
 class Author():
     """Author data class"""
     name: str
-    birth: str
-    death: str
-    nationality: str
-    flag: str
-    link: str
-    favorite: str
-    n_poems: str
-    link: str
-
-
-@dataclass
-class Poem():
-    """Author data class"""
-    name: str
     birth: int
     death: int
     nationality: str
