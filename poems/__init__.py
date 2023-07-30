@@ -93,6 +93,7 @@ class Poem():
 {self.html_lines}
 </section>'''
 
+    @property
     def email_html(self):
         return f'''<head><!DOCTYPE html>
 <style>
