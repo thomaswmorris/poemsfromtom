@@ -48,11 +48,17 @@ class Author():
         else:
              return f"({(self.birth)} &#8211; {self.death})"
 
+@dataclass
 class Poem():
+    author: Author
+    title: str
+    body: str
+    keywords: dict
+    when: int
 
     def __init__(self, author, title, when, **kwargs):
 
-        self.when = when
+        self.title, self.when = title, when
 
         self.author = Author(**POEMS[author]["metadata"])
 
@@ -60,15 +66,23 @@ class Poem():
         self.body = POEMS[author]["poems"][title]["body"]
         self.keywords = POEMS[author]["poems"][title]["keywords"]
 
-        self.html_title = re.sub("^from", "<i>from</i>", self.cased_title)
+    def html_title(self) -> str:
+        return re.sub("^from", "<i>from</i>", self.title)
 
-        self.date_time = datetime.fromtimestamp(when).replace(tzinfo=pytz.utc)
-        self.nice_fancy_date = f"{utils.get_weekday(self.when).capitalize()} {utils.get_month(self.when).capitalize()} {self.date_time.day}, {self.date_time.year}"
-        self.html_lines = utils.text_to_html_lines(self.body)
+    def date_time(self):
+        return datetime.fromtimestamp(swhen).replace(tzinfo=pytz.utc)
+
+    def nice_fancy_date(self):
+        return f"{utils.get_weekday(self.when).capitalize()} {utils.get_month(self.when).capitalize()} {self.date_time.day}, {self.date_time.year}"
+
+    def html_lines(self):
+        return utils.text_to_html_lines(self.body)
         
-        self.header = f"{self.cased_title} by {self.author.name}"
+    def header(self):
+        return f"{self.title} by {self.author.name}"
 
-        self.html = f'''<section class="poem-section">
+    def html(self):
+        return f'''<section class="poem-section">
 <div class="poem-header">
     <div class="poem-date">{self.nice_fancy_date}</div>
     <div>
@@ -80,7 +94,8 @@ class Poem():
 {self.html_lines}
 </section>'''
 
-        self.email_html = f'''<head><!DOCTYPE html>
+        def email_html(self):
+            return f'''<head><!DOCTYPE html>
 <style>
 {CSS}
 </style>
@@ -307,11 +322,15 @@ class Curator():
         if verbose: 
             print(f"chose poem \"{chosen_title}\" by {chosen_author}")
 
-        poem = Poem(chosen_author, chosen_title, self.when, **kwargs)
+        poem = Poem(author=Author(**POEMS[author]["metadata"]),
+                    title=chosen_title,
+                    body=POEMS[chosen_author]["poems"][chosen_title]["body"],
+                    keywords=POEMS[chosen_author]["poems"][chosen_title]["keywords"],
+                    when=self.when)
 
         if not historical_tag is None:
             now = datetime.now(tz=pytz.utc)
-            self.history.loc[len(self.history)+1] = poem.author, poem.title, *now.isoformat()[:19].split("T"), int(now.timestamp())
+            self.history.loc[len(self.history)+1] = chosen_author, chosen_title, *now.isoformat()[:19].split("T"), int(now.timestamp())
 
         return poem
 
