@@ -90,6 +90,7 @@ def get_holiday(t=None):
     if (month, day) == (2, 2):   return "candlemas"
     if (month, day) == (2, 11):  return "our_lady_of_lourdes"
     if (month, day) == (2, 14):  return "saint_valentine"
+    if (month, day) == (2, 29):  return "leap_day"
 
     if (month, day) == (3, 17):  return "saint_patrick"
     if (month, day) == (3, 19):  return "saint_joseph"
@@ -103,6 +104,7 @@ def get_holiday(t=None):
     if (month, day) == (5, 31):  return "visitation"
 
     if (month, day) == (6, 19):  return "juneteenth"
+    if (month, day) == (6, 23):  return "saint_johns_eve"
     if (month, day) == (6, 24):  return "saint_john_the_baptist"
     if (month, day) == (6, 29):  return "saints_peter_and_paul"
     
@@ -128,7 +130,7 @@ def get_holiday(t=None):
     if (month, day) == (9, 15):  return "our_lady_of_sorrows"
     if (month, day) == (9, 19):  return "our_lady_of_la_salette"
     if (month, day) == (9, 21):  return "saint_matthew"
-    if (month, day) == (9, 29):  return "saint_michael"
+    if (month, day) == (9, 29):  return "michaelmas"
     if (month, day) == (9, 30):  return "saint_jerome"
     
     if (month, day) == (10, 1):  return "saint_therese_of_lisieux"

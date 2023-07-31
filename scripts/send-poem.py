@@ -20,12 +20,15 @@ args = parser.parse_args()
 curator = poems.Curator()
 curator.load_github_repo(github_repo_name=args.github_repo_name, github_token=args.github_token)
 
-if args.kind == "test":
+test = (args.kind == "test")
+if test:
     curator.read_history(filename="data/poems/history-test.csv", from_repo=True)
 elif args.kind == "daily":
     curator.read_history(filename="data/poems/history-daily.csv", from_repo=True)
+else:
+    raise Exception(f"unhandled kind f{args.kind}")
 
-when = ttime.time() if not args.kind == "test" else ttime.time() + 365 * 86400 * np.random.uniform()
+when = ttime.time() if not test else ttime.time() + 365 * 86400 * np.random.uniform()
 
 context = poems.utils.get_context(when)
 
@@ -36,19 +39,14 @@ curated_poem = curator.get_poem(
                                 context=context, 
                                 weight_schemes=["context", "history"],
                                 forced_contexts=FORCED_CONTEXTS,
-                                historical_tag=args.kind,
-                                very_verbose=True,
+                                verbose=True,
+                                very_verbose=test,
                                 )
 
-if args.kind == "test":
+if test:
     subject = f"(TEST) {curated_poem.nice_fancy_date}: {curated_poem.header} {curated_poem.keywords}"
-elif args.kind == "daily":
-    subject = f"Poem of the Day: {curated_poem.header}"
 else:
-    raise Exception("unhandled kind")
-
-if args.listserv_filename == "":
-    raise Exception("could not find a listserv")
+    subject = f"Poem of the Day: {curated_poem.header}"
 
 contents = curator.repo.get_contents(args.listserv_filename, ref="master")
 entries  = pd.read_csv(StringIO(contents.decoded_content.decode()), index_col=0)
@@ -69,11 +67,10 @@ for name, email in zip(entries["name"], entries["email"]):
     t = threading.Thread(target=thread_process, args=(curated_poem, args.username, args.password, name, email, subject))
     t.start()
 
-
-if args.kind == "test":
+if test:
     curator.write_to_repo(items={"data/poems/history-test.csv" : curator.history.to_csv()}, verbose=True)
 
-if args.kind == "daily":
+else:
     curator.write_to_repo(items={"data/poems/history-daily.csv" : curator.history.to_csv(), 
                                  "data/poems/author-stats.csv" : curator.stats.drop(columns=["days_since_last_sent"]).to_csv()}, verbose=True)
 

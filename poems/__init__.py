@@ -42,7 +42,7 @@ class Author():
     @property
     def dates(self) -> str:
         if self.death is None:
-            return f"(born {self.birth})"
+            return f"(b. {self.birth})"
         if self.birth < 0:
             if self.death < 0:
                 return f"({(-self.birth)} BC &#8211; {-self.death} BC)"
@@ -53,6 +53,7 @@ class Author():
 
 @dataclass
 class Poem():
+    """Poem data class"""
     author: Author
     title: str
     body: str
@@ -201,7 +202,6 @@ class Curator():
                 context=None,
                 weight_schemes=["context"],
                 forced_contexts=[],
-                historical_tag=None,
                 verbose=True,
                 very_verbose=False,
                 **kwargs,
@@ -316,8 +316,8 @@ class Curator():
 
         self.poems["probability"] = self.poems.likelihood / self.poems.likelihood.sum()
         if very_verbose: 
-            print(f"choosing from {len(self.poems)} poems. the 10 most likely are:")
-            print(self.poems.sort_values("probability", ascending=False)[["author","title","keywords","probability"]].iloc[:10])
+            print(f"choosing from {len(self.poems)} poems; the 20 most likely are:")
+            print(self.poems.sort_values("probability", ascending=False)[["author","title","keywords","probability"]].iloc[:20])
         chosen_loc = np.random.choice(self.poems.index, p=self.poems.probability)
         chosen_author, chosen_title = self.poems.loc[chosen_loc, ["author", "title"]]
         
@@ -328,9 +328,8 @@ class Curator():
                     **POEMS[chosen_author]["poems"][chosen_title],
                     when=self.when)
 
-        if not historical_tag is None:
-            now = datetime.now(tz=pytz.utc)
-            self.history.loc[len(self.history)+1] = chosen_author, chosen_title, *now.isoformat()[:19].split("T"), int(now.timestamp())
+        now = datetime.now(tz=pytz.utc)
+        self.history.loc[len(self.history)+1] = chosen_author, chosen_title, *now.isoformat()[:19].split("T"), int(now.timestamp())
 
         return poem
 
