@@ -91,8 +91,16 @@ for index, entry in curator.history.iterrows():
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/css/style.css">
 </head>
+<header style="background-image: url('/assets/images/bg/pissaro-pontoise.jpeg')"></header>
 <nav>
-    <ul class="poem-nav">
+    <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/music">music</a></li>
+        <li><a href="/poems">poems</a></li>    
+        <li><a href="/xw">crosswords</a></li>
+        <li><a href="/blog">blog</a></li>
+    </ul>
+    <ul>
         {prev_string}
         <li class="nav-item left"><a class="nav-link" href="/poems/random">random</a></li>
         {next_string}
