@@ -233,13 +233,38 @@ def send_email(username, password, html, recipient, subject=""):
         server.send_message(message)
         server.quit()
 
-def text_to_html_lines(text):
 
-    text  = text.replace("--", "&#8212;") # convert emdashes
+# raw:
+
+# monospace:
+
+# html: 
+
+
+
+
+def uppercase_title(text):
+    """
+    Capitalizes the part in quotes.
+    """
+    prefix, title, suffix = re.search(r"(.*)“(.*)”(.*)", text).groups(0)
+    return f"{prefix}“{title.upper()}”{suffix}"
+
+def add_italic_tags(text):
+    """
+    Converts to HTML italic format.
+    """
 
     for span in re.findall(r"(_[\w\W]+?_)", text): 
         text = re.sub(fr"{span}", re.sub(r"\n", r"_\n_", fr"{span}"), text) # add italic around all line breaks
-    text  = re.sub(r"_([\w\W]*?)_", r"<i>\1</i>", text) # convert to html italic notation
+    text = re.sub(r"_([\w\W]*?)_", r"<i>\1</i>", text) # convert to html italic notation
+
+    return text
+
+
+def text_to_html_lines(text):
+
+    text  = text.replace("--", "&#8212;") # convert emdashes
 
     parsed_lines = []
     for line in text.split("\n"):

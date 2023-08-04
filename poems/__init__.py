@@ -88,7 +88,7 @@ class Poem():
     <div>
         <span class="poem-title">{self.html_title}</span>
         by 
-        <span class="poem-author"><a href="{self.author.link}">{self.author.name}</a> <i>{self.author.dates}</i> {self.author.flag}</span>
+        <span class="poem-author"><a href="{self.author.link}">{self.author.name}</a> <i>{self.author.dates}</i></span>
     </div>
 </div>
 {self.html_lines}

@@ -1,3 +1,4 @@
+import json
 import time as ttime
 import numpy as np
 import pandas as pd
@@ -71,10 +72,12 @@ if test:
     curator.write_to_repo(items={"data/poems/history-test.csv" : curator.history.to_csv()}, verbose=True)
 
 else:
-    curator.write_to_repo(items={"data/poems/history-daily.csv" : curator.history.to_csv(), 
-                                 "data/poems/author-stats.csv" : curator.stats.drop(columns=["days_since_last_sent"]).to_csv()}, verbose=True)
-
-
+    curator.write_to_repo(items={
+                                 "data/poems/history-daily.csv" : curator.history.to_csv(), 
+                                 "data/poems/author-stats.csv"  : curator.stats.drop(columns=["days_since_last_sent"]).to_csv(),
+                                 "docs/assets/scripts/poems.js" : f"var poemData = {json.dumps(json.loads(curator.history.T.to_json()), indent=4, ensure_ascii=False)}",
+                                 }, 
+                                 verbose=True)
     
 
 
