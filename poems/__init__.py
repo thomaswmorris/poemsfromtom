@@ -42,7 +42,7 @@ class Author():
     @property
     def dates(self) -> str:
         if self.death is None:
-            return f"(b. {self.birth})"
+            return f"(born {self.birth})"
         if self.birth < 0:
             if self.death < 0:
                 return f"({(-self.birth)} BC &#8211; {-self.death} BC)"
