@@ -15,7 +15,7 @@ class PoemNotFoundError(Exception):
 
 base, this_file = os.path.split(__file__)
 
-with open(f"{base}/poem-style.css", "r") as f: 
+with open(f"{base}/style.css", "r") as f: 
     CSS = f.read()
 
 with open(f"{base}/poems.json", "r+") as f:
@@ -80,29 +80,22 @@ class Poem():
         return f"{self.title} by {self.author.name}"
 
     @property
-    def html(self):
-        return f'''<section class="poem-section">
-<div class="poem-header">
-    <div class="poem-date">{self.nice_fancy_date}</div>
-    <div>
-        <span class="poem-title">{self.html_title}</span>
-        by 
-        <span class="poem-author"><a href="{self.author.link}">{self.author.name}</a> <i>{self.author.dates}</i></span>
-    </div>
-</div>
-{self.html_lines}
-</section>'''
-
-    @property
     def email_html(self):
         return f'''<!DOCTYPE html>
 <html lang="en">
-<head>
-    <style>
-    {CSS}
-    </style>
-</head>
-{self.html.replace(self.author.flag, "")}
+<section style="text-indent: -1em; padding-left: 1em; text-align: left; max-width: 800px; font-family: Baskerville;  font-size: 18px;">
+<div>
+    <div>{self.nice_fancy_date}</div>
+    <div>
+        <span>{self.html_title}</span>
+        by 
+        <span><a href="{self.author.link}">{self.author.name}</a> <i>{self.author.dates}</i></span>
+    </div>
+</div>
+<div>
+{self.html_lines}
+</div>
+</section>
 <br>
 Past poems can be found in the <a href="https://thomaswmorris.com/poems">archive</a>.
 </html>
