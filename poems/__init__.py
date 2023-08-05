@@ -83,9 +83,9 @@ class Poem():
     def email_html(self):
         return f'''<!DOCTYPE html>
 <html lang="en">
-<section style="text-indent: -1em; padding-left: 1em; text-align: left; max-width: 800px; font-family: Baskerville;  font-size: 18px;">
-<div>
-    <div>{self.nice_fancy_date}</div>
+<section style="text-align: left; max-width: 800px; font-family: Baskerville;  font-size: 18px;">
+<div style="padding-bottom: 16px;">
+    <div><i>{self.nice_fancy_date}</i></div>
     <div>
         <span>{self.html_title}</span>
         by 
