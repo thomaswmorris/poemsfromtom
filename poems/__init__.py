@@ -15,9 +15,6 @@ class PoemNotFoundError(Exception):
 
 base, this_file = os.path.split(__file__)
 
-with open(f"{base}/style.css", "r") as f: 
-    CSS = f.read()
-
 with open(f"{base}/poems.json", "r+") as f:
     POEMS = json.load(f)
 

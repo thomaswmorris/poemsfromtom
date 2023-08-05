@@ -269,8 +269,8 @@ def convert_to_html_lines(text):
     for line in text.split("\n"):
         if len(line) == 0:
             html_lines.append('''<div class="poem-line-blank">&#8203</div>''')
-        elif line.strip().strip("_")[0] in ["“", "‘"]:
-            html_lines.append(f'''<div class="poem-line-quote-start">{line}</div>''')
+        elif line.strip().strip("_")[0] in ["“", "‘", "’"]:
+            html_lines.append(f'''<div class="poem-line-punc-start">{line}</div>''')
         else:
             html_lines.append(f'''<div class="poem-line">{line}</div>''')
             
