@@ -25,7 +25,6 @@ with open(f"{base}/weights.json", "r+") as f:
     CONTEXT_WEIGHTS = json.load(f)
 
 
-
 @dataclass
 class Author():
     """Author data class"""
@@ -107,6 +106,7 @@ Past poems can be found in the <a href="https://thomaswmorris.com/poems">archive
 </html>
 '''
 
+authors = {author:Author(**POEMS[author]["metadata"]) for author in POEMS.keys()}
 
 class Curator():
 

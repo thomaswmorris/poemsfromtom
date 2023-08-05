@@ -261,10 +261,26 @@ def add_italic_tags(text):
 
     return text
 
+def convert_to_html_lines(text):
+    """
+    Converts to HTML italic format.
+    """
+    html_lines = []
+
+    text = add_italic_tags(text)
+    for line in text.split("\n"):
+        if len(line) > 0:
+            html_lines.append(f'''<div class="poem-line">{line}</div>''')
+        else:
+            html_lines.append('''<div class="poem-line-blank">&#8203</div>''')
+    return "\n".join(html_lines)
+
+
 
 def text_to_html_lines(text):
 
-    text  = text.replace("--", "&#8212;") # convert emdashes
+    text = text.replace("--", "&#8212;") # convert emdashes
+    text = add_italic_tags(text)
 
     parsed_lines = []
     for line in text.split("\n"):
