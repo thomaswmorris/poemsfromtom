@@ -95,10 +95,12 @@ class Poem():
 
     @property
     def email_html(self):
-        return f'''<head><!DOCTYPE html>
-<style>
-{CSS}
-</style>
+        return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    {CSS}
+    </style>
 </head>
 {self.html.replace(self.author.flag, "")}
 <br>

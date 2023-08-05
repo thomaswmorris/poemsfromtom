@@ -266,14 +266,15 @@ def convert_to_html_lines(text):
     Converts to HTML italic format.
     """
     html_lines = []
-
-    text = add_italic_tags(text)
     for line in text.split("\n"):
-        if len(line) > 0:
-            html_lines.append(f'''<div class="poem-line">{line}</div>''')
-        else:
+        if len(line) == 0:
             html_lines.append('''<div class="poem-line-blank">&#8203</div>''')
-    return "\n".join(html_lines)
+        elif line.strip().strip("_")[0] in ["“", "‘"]:
+            html_lines.append(f'''<div class="poem-line-quote-start">{line}</div>''')
+        else:
+            html_lines.append(f'''<div class="poem-line">{line}</div>''')
+            
+    return add_italic_tags("\n".join(html_lines))
 
 
 
