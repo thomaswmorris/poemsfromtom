@@ -23,7 +23,8 @@ curator.load_github_repo(github_repo_name=args.github_repo_name, github_token=ar
 
 test = (args.kind == "test")
 if test:
-    curator.read_history(filename="data/poems/history-test.csv", from_repo=True)
+    ...
+    #curator.read_history(filename="data/poems/history-test.csv", from_repo=True)
 elif args.kind == "daily":
     curator.read_history(filename="data/poems/history-daily.csv", from_repo=True)
 else:
@@ -69,7 +70,8 @@ for name, email in zip(entries["name"], entries["email"]):
     t.start()
 
 if test:
-    curator.write_to_repo(items={"data/poems/history-test.csv" : curator.history.to_csv()}, verbose=True)
+    ...
+    # curator.write_to_repo(items={"data/poems/history-test.csv" : curator.history.to_csv()}, verbose=True)
 
 else:
     curator.write_to_repo(items={
