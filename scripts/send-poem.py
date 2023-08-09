@@ -22,13 +22,8 @@ curator = poems.Curator()
 curator.load_github_repo(github_repo_name=args.github_repo_name, github_token=args.github_token)
 
 test = (args.kind == "test")
-if test:
-    ...
-    #curator.read_history(filename="data/poems/history-test.csv", from_repo=True)
-elif args.kind == "daily":
-    curator.read_history(filename="data/poems/history-daily.csv", from_repo=True)
-else:
-    raise Exception(f"unhandled kind f{args.kind}")
+
+curator.read_history(filename="data/poems/history-daily.csv", from_repo=True)
 
 when = ttime.time() if not test else ttime.time() + 365 * 86400 * np.random.uniform()
 
