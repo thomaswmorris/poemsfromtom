@@ -184,6 +184,8 @@ class Curator():
             
             self.stats.loc[author] = name, nationality, birth, death, n_poems, n_sent, np.round(elapsed,1)
             
+        self.stats = self.stats.sort_values(by=["#_of_times_sent", "name"], ascending=False)
+
         if not order_by is None:
             self.stats = self.stats.sort_values(by=order_by, ascending=ascending)
 
