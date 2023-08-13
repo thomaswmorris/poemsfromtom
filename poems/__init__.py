@@ -21,13 +21,12 @@ with open(f"{base}/poems.json", "r+") as f:
 with open(f"{base}/weights.json", "r+") as f:
     CONTEXT_WEIGHTS = json.load(f)
 
-
 @dataclass
 class Author():
     """Author data class"""
     name: str
-    birth: int
-    death: int
+    birth: str
+    death: str
     nationality: str
     flag: str
     link: str
@@ -37,15 +36,29 @@ class Author():
 
     @property
     def dates(self) -> str:
-        if self.death is None:
-            return f"(born {self.birth})"
-        if self.birth < 0:
-            if self.death < 0:
-                return f"({(-self.birth)} BC &#8211; {-self.death} BC)"
-            else:
-                return f"({(-self.birth)} BC &#8211; {self.death} AD)"
-        else:
-             return f"({(self.birth)} &#8211; {self.death})"
+
+        # this assumes no one born before Christ is still alive
+        if self.death == "": return f"(born {self.birth})"
+
+        birth_is_circa = True if "~" in self.birth else False
+        death_is_circa = True if "~" in self.death else False
+        
+        b = int(self.birth.strip("~"))
+        d = int(self.death.strip("~"))
+
+        birth_string, death_string = str(abs(b)), str(abs(d))
+
+        birth_string = f'{"c. " if birth_is_circa else ""}{abs(b)}'
+        death_string = f'{"c. " if death_is_circa else ""}{abs(d)}'
+
+        if b < 0: 
+            birth_string += " BC"
+            if d < 0: 
+                death_string += " BC"
+            else: 
+                death_string += " AD"
+
+        return f"({birth_string} -- {death_string})"
 
 @dataclass
 class Poem():
@@ -86,7 +99,7 @@ class Poem():
     <div>
         <span>{self.html_title}</span>
         by 
-        <span><a href="{self.author.link}">{self.author.name}</a> <i>{self.author.dates}</i></span>
+        <span><a href="{self.author.link}">{self.author.name}</a> <i>{self.author.dates.replace("--", "&ndash;")}</i></span>
     </div>
 </div>
 <div>
@@ -323,7 +336,9 @@ class Curator():
                     when=self.when)
 
         now = datetime.now(tz=pytz.utc)
-        self.history.loc[len(self.history)+1] = chosen_author, chosen_title, *now.isoformat()[:19].split("T"), int(now.timestamp())
+
+        if self.history is not None:
+            self.history.loc[len(self.history)+1] = chosen_author, chosen_title, *now.isoformat()[:19].split("T"), int(now.timestamp())
 
         return poem
 
