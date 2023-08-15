@@ -66,7 +66,7 @@ class Poem():
     author: Author
     title: str
     body: str
-    keywords: dict
+    metadata: dict
     when: int
 
     @property
@@ -117,18 +117,21 @@ class Curator():
 
     def __init__(self):
                         
-        authors, titles, keywords, lengths = [], [], [], []
-        self.poems = pd.DataFrame(columns=["author", "title", "keywords", "likelihood", "word_count"])
+        authors, titles, keywords, translators, lengths = [], [], [], [], []
+        self.poems = pd.DataFrame(columns=["author", "title", "keywords", "translators", "likelihood", "word_count"])
         for author in POEMS.keys():
             for title in POEMS[author]["poems"].keys():
                 authors.append(author)
                 titles.append(title)
-                keywords.append(POEMS[author]["poems"][title]["keywords"])
+                metadata = POEMS[author]["poems"][title]["metadata"]
+                keywords.append(metadata["keywords"] if "keywords" in metadata.keys() else {})
+                translators.append(metadata["translator"] if "translator" in metadata.keys() else None)
                 lengths.append(len(POEMS[author]["poems"][title]["body"].split()))
 
         self.poems.loc[:, "author"] = authors
         self.poems.loc[:, "title"] = titles
         self.poems.loc[:, "keywords"] = keywords
+        self.poems.loc[:, "translators"] = translators
         self.poems.loc[:, "likelihood"] = 1
         self.poems.loc[:, "word_count"] = lengths
 
