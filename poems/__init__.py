@@ -70,6 +70,10 @@ class Poem():
     when: int
 
     @property
+    def keywords(self) -> str:
+        return self.metadata["keywords"] if "keywords" in self.metadata.keys() else {}
+
+    @property
     def html_title(self) -> str:
         return re.sub("^from", "<i>from</i>", self.title)
 
