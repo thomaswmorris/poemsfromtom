@@ -136,7 +136,7 @@ class Curator():
         self.poems.loc[:, "title"] = titles
         self.poems.loc[:, "keywords"] = keywords
         self.poems.loc[:, "translators"] = translators
-        self.poems.loc[:, "likelihood"] = 1
+        self.poems.loc[:, "likelihood"] = 1.
         self.poems.loc[:, "word_count"] = lengths
 
         self.unique_authors = np.sort(np.unique(self.poems.author))
@@ -189,9 +189,9 @@ class Curator():
         if self.history is None: raise(Exception("No history has been loaded!"))
         if force_rows: pd.set_option("display.max_rows", None)
         if force_cols: pd.set_option("display.max_columns", None)
-        self.stats = pd.DataFrame(columns=["name","nationality","birth","death","n_poems","#_of_times_sent","days_since_last_sent"])
+        self.stats = pd.DataFrame(columns=["tag", "name", "nationality","birth","death","n_poems","n_times_sent","days_since_last_sent"])
 
-        for author in POEMS.keys():
+        for i, author in enumerate(POEMS.keys()):
 
             name = POEMS[author]["metadata"]["name"]
             birth = POEMS[author]["metadata"]["birth"]
@@ -202,9 +202,9 @@ class Curator():
             elapsed = (ttime.time() - self.history["timestamp"][self.history.author==author].max()) / 86400 
             n_sent = (self.history["author"]==author).sum()
             
-            self.stats.loc[author] = name, nationality, birth, death, n_poems, n_sent, np.round(elapsed,1)
+            self.stats.loc[i] = author, name, nationality, birth, death, n_poems, n_sent, np.round(elapsed,1)
             
-        self.stats = self.stats.sort_values(by=["#_of_times_sent"], ascending=False)
+        self.stats = self.stats.sort_values(by=["n_times_sent", "n_poems", "tag"], ascending=False)
 
         if not order_by is None:
             self.stats = self.stats.sort_values(by=order_by, ascending=ascending)
