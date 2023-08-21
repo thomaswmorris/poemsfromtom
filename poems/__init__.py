@@ -28,11 +28,11 @@ class Author():
     birth: str
     death: str
     nationality: str
+    language: str
     flag: str
     link: str
     favorite: bool
     n_poems: str
-    link: str
 
     @property
     def dates(self) -> str:
