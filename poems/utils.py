@@ -251,16 +251,28 @@ def uppercase_title(text):
     prefix, title, suffix = re.search(r"(.*)“(.*)”(.*)", text).groups(0)
     return f"{prefix}“{title.upper()}”{suffix}"
 
+# def add_italic_tags(text):
+#     """
+#     Converts to HTML italic format.
+#     """
+
+#     for span in re.findall(r"(_[\w\W]+?_)", text): 
+#         text = re.sub(fr"{span}", re.sub(r"\n", r"_\n_", fr"{span}"), text) # add italic around all line breaks
+#     text = re.sub(r"_([\w\W]*?)_", r"<i>\1</i>", text) # convert to html italic notation
+
+#     return text
+
 def add_italic_tags(text):
     """
     Converts to HTML italic format.
     """
-
-    for span in re.findall(r"(_[\w\W]+?_)", text): 
-        text = re.sub(fr"{span}", re.sub(r"\n", r"_\n_", fr"{span}"), text) # add italic around all line breaks
-    text = re.sub(r"_([\w\W]*?)_", r"<i>\1</i>", text) # convert to html italic notation
-
-    return text
+    sections = []
+    for i, section in enumerate(text.split("_")):
+        if i % 2 == 1:
+            section = "<i>" + re.sub("\n", "</i>\n<i>", section) + "</i>"
+            section.replace("<i></i>", "")
+        sections.append(section)
+    return "".join(sections)
 
 def convert_to_html_lines(text):
     """
