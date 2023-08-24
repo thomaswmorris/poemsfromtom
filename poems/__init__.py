@@ -103,7 +103,7 @@ class Poem():
     <div>
         <span>{self.html_title}</span>
         by 
-        <span><a href="{self.author.link}">{self.author.name}</a> <i>{self.author.dates.replace("--", "&ndash;")}</i></span>
+        <span><a href="{self.author.link}">{self.author.name}</a> {self.author.dates.replace("--", "&ndash;")}</span>
     </div>
 </div>
 <div>
