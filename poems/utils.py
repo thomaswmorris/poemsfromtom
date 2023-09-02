@@ -116,7 +116,7 @@ def get_holiday(t=None):
     if (month, day) == (7, 22):  return "mary_magdelene"
     if (month, day) == (7, 25):  return "saint_james"
 
-    if (month, day) == (8, 1):   return "lammas_day"
+    if (month, day) == (8, 1):   return "lammas"
     if (month, day) == (8, 6):   return "transfiguration"
     if (month, day) == (8, 8):   return "saint_dominic"
     if (month, day) == (8, 10):  return "saint_lawrence"
@@ -139,8 +139,7 @@ def get_holiday(t=None):
     if (month, day) == (10, 7):  return "our_lady_of_the_rosary"
     if (month, day) == (10, 15): return "saint_teresa_of_avila"
     if (month, day) == (10, 18): return "saint_luke"
-    if (month, day) == (10, 28): return "saint_john_paul"
-    if (month, day) == (10, 30): return "saint_alphonsus_rodriguez"
+    if (month, day) == (10, 22): return "saint_john_paul"
     if (month, day) == (10, 31): return "halloween"
     
     if (month, day) == (11, 1):  return "all_saints"
@@ -281,11 +280,11 @@ def convert_to_html_lines(text):
     html_lines = []
     for line in text.split("\n"):
         if len(line) == 0:
-            html_lines.append('''<div class="poem-line-blank">&#8203</div>''')
+            html_lines.append('''<div class="opus-line-blank">&#8203</div>''')
         elif line.strip().strip("_")[0] in ["“", "‘", "’"]:
-            html_lines.append(f'''<div class="poem-line-punc-start">{line}</div>''')
+            html_lines.append(f'''<div class="opus-line-punc-start">{line}</div>''')
         else:
-            html_lines.append(f'''<div class="poem-line">{line}</div>''')
+            html_lines.append(f'''<div class="opus-line">{line}</div>''')
             
     return add_italic_tags("\n".join(html_lines))
 
@@ -299,8 +298,8 @@ def text_to_html_lines(text):
     parsed_lines = []
     for line in text.split("\n"):
         if len(line) > 0:
-            parsed_lines.append(f'<div class="poem-line">{line.strip()}</div>')
+            parsed_lines.append(f'<div class="opus-line">{line.strip()}</div>')
         else:
-            parsed_lines.append(f'<div class="poem-line-blank">&#8203;</div>')
+            parsed_lines.append(f'<div class="opus-line-blank">&#8203;</div>')
 
     return "\n".join(parsed_lines)
