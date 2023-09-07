@@ -1,6 +1,10 @@
+poems
+-----
+
+All of the poems in here are good, or interesting. There are currently 6404 poems by 382 poets.
 
 
-Usage
+usage
 -----
 
 The ``poems`` package works with a ``Curator``, initialized as 
@@ -16,7 +20,7 @@ It can get us a random poem by a specified poet
 .. code-block:: python
     
     # Load a random poem by Robert Frost
-    poem = curator.get_poem(author="frost")
+    poem = curator.get_poem(author="robert-frost")
     print(poem.body)
     
 or a specified poem by a specified poet
@@ -24,7 +28,7 @@ or a specified poem by a specified poet
 .. code-block:: python
     
     # Load "The Tyger" by William Blake
-    poem = curator.get_poem(author="blake", title="THE TYGER") 
+    poem = curator.get_poem(author="william-blake", title="the-tyger") 
     print(poem.body)
 
 assuming that it is in the database (which you can see as ``curator.poems``). We can also load contextual poems (e.g. so that it loads summer poems during the summer, Christmas poems on Christmas, etc.):
@@ -49,4 +53,4 @@ Note that if it's summertime, this does not guarantee a summer poem (rather, it 
     # A guaranteed seasonal poem
     poem = curator.get_poem(context=context, forced_contexts=['season']) 
     
-Unforced contextual poems are sent daily to the listserv. Past poems are on my `website <https://thomaswmorris.com/poems>`_. If you want to be on the listserv, just ask me. 
+Unforced contextual poems are sent daily to the listserv. Past poems are on my `website <https://thomaswmorris.com/poems>`_. If you want to be on the listserv, just ask me.

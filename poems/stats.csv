@@ -66,6 +66,7 @@ lewis-carroll,Lewis Carroll,1832,1898,english,33
 raymond-carver,Raymond Carver,1938,1988,american,7
 catullus,Catullus,-84,-54,roman,5
 willa-cather,Willa Cather,1873,1947,american,34
+catherine-of-siena,Saint Catherine of Siena,1347,1380,italian,5
 constantine-p-cavafy,Constantine P. Cavafy,1863,1933,greek,51
 guido-cavalcanti,Guido Cavalcanti,~1250,1300,italian,4
 jean-de-la-ceppede,Jean de La Ceppède,1550,1623,french,2
@@ -74,13 +75,14 @@ g-k-chesterton,G. K. Chesterton,1874,1936,english,65
 john-clare,John Clare,1793,1864,english,11
 paul-claudel,Paul Claudel,1868,1955,french,11
 leonard-cohen,Leonard Cohen,1934,2016,canadian,7
-samuel-taylor-coleridge,Samuel Taylor Coleridge,1772,1834,english,6
+samuel-taylor-coleridge,Samuel Taylor Coleridge,1772,1834,english,7
 billy-collins,Billy Collins,1941,,american,4
 william-collins,William Collins,1721,1759,english,2
 abraham-cowley,Abraham Cowley,1618,1667,english,4
 william-cowper,William Cowper,1731,1800,english,5
 hart-crane,Hart Crane,1899,1932,american,5
 richard-crashaw,Richard Crashaw,1613,1649,english,5
+alice-guerin-crist,Alice Guerin Crist,1876,1941,irish-australian,6
 e-e-cummings,E. E. Cummings,1894,1962,american,42
 ruben-dario,Rubén Darío,1867,1916,nicaraguan,2
 donald-davidson,Donald Davidson,1893,1968,american,8
@@ -154,16 +156,18 @@ gerard-manley-hopkins,Gerard Manley Hopkins,1844,1889,english,80
 horace,Horace,-65,-8,roman,8
 a-e-housman,A. E. Housman,1859,1936,english,30
 andrew-hudgins,Andrew Hudgins,1951,,american,4
+langston-hughes,Langston Hughes,1901,1967,american,2
 ted-hughes,Ted Hughes,1930,1998,english,6
 victor-hugo,Victor Hugo,1802,1885,french,6
 t-e-hulme,T. E. Hulme,1883,1917,english,2
 aldous-huxley,Aldous Huxley,1894,1963,english,22
 randall-jarrell,Randall Jarrell,1914,1965,american,6
 robinson-jeffers,Robinson Jeffers,1887,1962,american,23
-elizabeth-jennings,Elizabeth Jennings,1926,2001,english,16
+elizabeth-jennings,Elizabeth Jennings,1926,2001,english,14
 juan-ramon-jimenez,Juan Ramón Jiménez,1881,1958,spanish,4
 john-of-the-cross,Saint John of the Cross,1542,1591,spanish,12
 john-paul-ii,Pope Saint John Paul II,1920,2005,polish,3
+lionel-johnson,Lionel Johnson,1867,1902,english,5
 samuel-johnson,Samuel Johnson,1709,1784,english,7
 ben-jonson,Ben Jonson,1572,1637,english,2
 james-joyce,James Joyce,1882,1941,irish,4
@@ -174,6 +178,7 @@ erik-axel-karlfeldt,Erik Axel Karlfeldt,1864,1931,swedish,3
 patrick-kavanagh,Patrick Kavanagh,1904,1967,irish,9
 john-keats,John Keats,1795,1821,english,5
 john-keble,John Keble,1792,1866,english,6
+henry-kendall,Henry Kendall,1839,1882,australian,1
 geoffrey-studdert-kennedy,Geoffrey Studdert Kennedy,1883,1929,english,11
 x-j-kennedy,X. J. Kennedy,1929,,american,2
 jack-kerouac,Jack Kerouac,1922,1969,american,11
@@ -204,6 +209,7 @@ vachel-lindsay,Vachel Lindsay,1879,1931,american,14
 henry-wadsworth-longfellow,Henry Wadsworth Longfellow,1807,1882,american,6
 federico-garcia-lorca,Federico García Lorca,1898,1936,spanish,2
 amy-lowell,Amy Lowell,1874,1925,american,2
+james-russell-lowell,James Russell Lowell,1819,1891,american,1
 robert-lowell,Robert Lowell,1917,1977,american,11
 malcolm-lowry,Malcolm Lowry,1909,1957,english,4
 john-lydgate,John Lydgate,~1370,~1451,english,2
@@ -262,11 +268,12 @@ sandor-petofi,Sándor Petőfi,1823,1849,hungarian,22
 petrarch,Petrarch,1304,1374,italian,36
 sylvia-plath,Sylvia Plath,1932,1963,american,39
 joseph-mary-plunkett,Joseph Mary Plunkett,1887,1916,irish,6
-edgar-allan-poe,Edgar Allan Poe,1809,1849,american,57
+edgar-allan-poe,Edgar Allan Poe,1809,1849,american,56
 alexander-pope,Alexander Pope,1688,1744,english,11
 anne-porter,Anne Porter,1911,2011,american,5
 ezra-pound,Ezra Pound,1885,1972,american-italian,52
 jessica-powers,Jessica Powers,1905,1988,american,7
+adelia-prado,Adélia Prado,1935,,brazilian,2
 may-probyn,May Probyn,1856,1909,english,5
 sully-prudhomme,Sully Prudhomme,1839,1907,french,3
 dun-karm-psaila,Dun Karm Psaila,1871,1961,maltese,3
@@ -303,7 +310,6 @@ william-shakespeare,William Shakespeare,1564,1616,english,160
 karl-shapiro,Karl Shapiro,1913,2000,american,13
 percy-bysshe-shelley,Percy Bysshe Shelley,1792,1822,english,42
 philip-sidney,Philip Sidney,1554,1586,english,3
-catherine-of-siena,Saint Catherine of Siena,1347,1380,italian,5
 shel-silverstein,Shel Silverstein,1930,1999,american,32
 charles-simic,Charles Simic,1938,2023,serbian-american,34
 edith-sitwell,Edith Sitwell,1887,1964,english,14
@@ -344,7 +350,7 @@ henry-david-thoreau,Henry David Thoreau,1817,1862,american,5
 j-r-r-tolkien,J. R. R. Tolkien,1892,1973,english,6
 georg-trakl,Georg Trakl,1887,1914,austrian,14
 marina-tsvetaeva,Marina Tsvetaeva,1892,1941,russian,14
-tu-fu,Tu Fu,712,770,chinese,2
+tu-fu,Tu Fu,712,770,chinese,3
 ivan-turgenev,Ivan Turgenev,1818,1883,russian,11
 katharine-tynan,Katharine Tynan,1859,1931,irish,13
 miguel-de-unamuno,Miguel de Unamuno,1864,1936,spanish,1
