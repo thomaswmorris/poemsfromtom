@@ -63,7 +63,7 @@ def get_holiday(t=None):
 
     year, month, day, weekday = dt.year, dt.month, dt.day, dt.weekday()
     
-    # these are easter things, which supercede all others
+    # these are easter things, which supersede all others
     easter_yd = easter(dt.year).timetuple().tm_yday 
     if yd == easter_yd - 47: return "mardi_gras"
     if yd == easter_yd - 46: return "ash_wednesday"
@@ -123,6 +123,7 @@ def get_holiday(t=None):
     if (month, day) == (8, 10):  return "saint_lawrence"
     if (month, day) == (8, 14):  return "saint_maximilian_kolbe"
     if (month, day) == (8, 15):  return "assumption"
+    if (month, day) == (8, 22):  return "coronation"
     if (month, day) == (8, 24):  return "saint_bartholomew"
     if (month, day) == (8, 27):  return "saint_monica"
     if (month, day) == (8, 28):  return "saint_augustine"
@@ -134,7 +135,7 @@ def get_holiday(t=None):
     if (month, day) == (9, 21):  return "saint_matthew"
     if (month, day) == (9, 29):  return "michaelmas"
     if (month, day) == (9, 30):  return "saint_jerome"
-    
+
     if (month, day) == (10, 1):  return "saint_therese_of_lisieux"
     if (month, day) == (10, 4):  return "saint_francis"
     if (month, day) == (10, 7):  return "our_lady_of_the_rosary"
@@ -155,6 +156,7 @@ def get_holiday(t=None):
     if (month, day) == (12, 8):  return "immaculate_conception"
     if (month, day) == (12, 10): return "our_lady_of_loreto"
     if (month, day) == (12, 12): return "our_lady_of_guadalupe"
+    if (month, day) == (12, 13): return "saint_lucia"
     if (month, day) == (12, 14): return "saint_john_of_the_cross"
     if (month, day) == (12, 24): return "christmas_eve"
     if (month, day) == (12, 25): return "christmas_day"

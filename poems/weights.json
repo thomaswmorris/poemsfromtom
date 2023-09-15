@@ -71,7 +71,7 @@
     },
     "holiday": {
         "new_years_day": 365.242,
-        "none": 1.336,
+        "none": 1.341,
         "epiphany": 365.242,
         "saint_agnes_eve": 365.242,
         "saint_agnes": 365.242,
@@ -158,6 +158,7 @@
         "immaculate_conception": 365.242,
         "our_lady_of_loreto": 365.242,
         "our_lady_of_guadalupe": 365.242,
+        "saint_lucia": 365.242,
         "saint_john_of_the_cross": 365.242,
         "winter_solstice": 365.242,
         "christmas_eve": 365.242,
