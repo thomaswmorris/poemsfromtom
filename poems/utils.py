@@ -79,6 +79,13 @@ def get_holiday(t=None):
     if yd == easter_yd + 60: return "corpus_christi"
     if yd == easter_yd + 68: return "sacred_heart"
 
+    # these are weird
+    if (month, weekday) == (5, 6) and (day > 7) and (get_utc_datetime(t - 14 * 86400).month == 4): return "mothers_day" # second sunday of may
+    if (month, weekday) == (5, 0) and (get_utc_datetime(t + 7 * 86400).month == 6): return "memorial_day" # last monday of may
+    if (month, weekday) == (6, 6) and (day > 14) and (get_utc_datetime(t - 21 * 86400).month == 5): return "fathers_day" # third sunday of june
+    if (month, weekday) == (9, 0) and (get_utc_datetime(t - 7 * 86400).month == 8): return "labor_day" # first monday of september
+    if (month, weekday) == (11, 3) and (day > 21) and (get_utc_datetime(t - 28 * 86400).month == 10): return "thanksgiving" # fourth thursday of november
+
     # these are on specific dates 
     if (month, day) == (1, 1):   return "new_years_day"
     if (month, day) == (1, 6):   return "epiphany"
@@ -133,6 +140,7 @@ def get_holiday(t=None):
     if (month, day) == (9, 15):  return "our_lady_of_sorrows"
     if (month, day) == (9, 19):  return "our_lady_of_la_salette"
     if (month, day) == (9, 21):  return "saint_matthew"
+    if (month, day) == (9, 23):  return "saint_padre_pio"
     if (month, day) == (9, 29):  return "michaelmas"
     if (month, day) == (9, 30):  return "saint_jerome"
 
@@ -169,13 +177,7 @@ def get_holiday(t=None):
     if (get_liturgy(t - 86400) != "advent") & (get_liturgy(t) == "advent"): return "advent_sunday"
     if get_holiday(t + 7 * 86400) == "advent_sunday": return "christ_the_king"
 
-    # these are weirder
-    if (month, weekday) == (5, 6) and (day > 7) and (get_utc_datetime(t - 14 * 86400).month == 4): return "mothers_day" # second sunday of may
-    if (month, weekday) == (5, 0) and (get_utc_datetime(t + 7 * 86400).month == 6): return "memorial_day" # last monday of may
-    if (month, weekday) == (6, 6) and (day > 14) and (get_utc_datetime(t - 21 * 86400).month == 5): return "fathers_day" # third sunday of june
-    if (month, weekday) == (9, 0) and (get_utc_datetime(t - 7 * 86400).month == 8): return "labor_day" # first monday of september
-    if (month, weekday) == (11, 3) and (day > 21) and (get_utc_datetime(t - 28 * 86400).month == 10): return "thanksgiving" # fourth thursday of november
-    
+
     # not important
     if yd == get_solstice_or_equinox_year_day(year, "spring"): return "spring_equinox"
     if yd == get_solstice_or_equinox_year_day(year, "summer"): return "summer_solstice"
