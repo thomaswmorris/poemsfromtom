@@ -103,6 +103,7 @@ def get_holiday(t=None):
     if (month, day) == (3, 19):  return "saint_joseph"
     if (month, day) == (3, 25):  return "annunciation"
 
+    if (month, day) == (4, 23):  return "saint_george"
     if (month, day) == (4, 25):  return "saint_mark"
     if (month, day) == (4, 29):  return "saint_catherine_of_siena"
 
