@@ -92,12 +92,6 @@ def get_holiday(t=None):
     elif (get_liturgy(t - 86400) != "advent") & (get_liturgy(t) == "advent"): return "advent_sunday"
     elif get_holiday(t + 7 * 86400) == "advent_sunday": return "christ_the_king"
 
-    # not important
-    elif yd == get_solstice_or_equinox_year_day(year, "spring"): return "spring_equinox"
-    elif yd == get_solstice_or_equinox_year_day(year, "summer"): return "summer_solstice"
-    elif yd == get_solstice_or_equinox_year_day(year, "autumn"): return "autumn_equinox"
-    elif yd == get_solstice_or_equinox_year_day(year, "winter"): return "winter_solstice"
-
     # these are on specific dates 
     elif (month, day) == (1, 1):   return "new_years_day"
     elif (month, day) == (1, 2):   return "saint_basil"
@@ -122,6 +116,7 @@ def get_holiday(t=None):
     elif (month, day) == (3, 19):  return "saint_joseph"
     elif (month, day) == (3, 25):  return "annunciation"
 
+    elif (month, day) == (4, 1):   return "april_fools"
     elif (month, day) == (4, 5):   return "saint_vincent_ferrer"
     elif (month, day) == (4, 11):  return "saint_stanislaus"
     elif (month, day) == (4, 21):  return "saint_anselm"
@@ -217,6 +212,13 @@ def get_holiday(t=None):
     elif (month, day) == (12, 28): return "holy_innocents"
     elif (month, day) == (12, 29): return "saint_thomas_becket"
     elif (month, day) == (12, 31): return "new_years_eve"
+
+    # not important
+    elif yd == get_solstice_or_equinox_year_day(year, "spring"): return "spring_equinox"
+    elif yd == get_solstice_or_equinox_year_day(year, "summer"): return "summer_solstice"
+    elif yd == get_solstice_or_equinox_year_day(year, "autumn"): return "autumn_equinox"
+    elif yd == get_solstice_or_equinox_year_day(year, "winter"): return "winter_solstice"
+
 
     return "none"
 
