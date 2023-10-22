@@ -29,13 +29,11 @@ when = ttime.time() if not test else ttime.time() + 365 * 86400 * np.random.unif
 
 context = poems.utils.get_context(when)
 
-FORCED_CONTEXTS = ["good_friday", "holy_saturday", "easter_sunday", "thanksgiving", "christmas_eve", "christmas_day"]
-
 # Choose a poem that meets the supplied conditions
 curated_poem = curator.get_poem(
                                 context=context, 
                                 weight_schemes=["context", "history"],
-                                forced_contexts=FORCED_CONTEXTS,
+                                forced_contexts=["good_friday", "holy_saturday", "easter_sunday", "halloween", "thanksgiving", "christmas_eve", "christmas_day"],
                                 verbose=True,
                                 very_verbose=test,
                                 )
