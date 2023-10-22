@@ -73,7 +73,7 @@ else:
 
     for index, entry in curator.history.iterrows():
 
-        daily_poems[str(index)] = {"author": entry.author, "poem": poems.db[entry.author]["poems"][entry.title]}
+        daily_poems[str(index)] = {"date": entry.date, "author": entry.author, "poem": poems.db[entry.author]["poems"][entry.title]}
 
     curator.write_to_repo(items={
                                  "data/poems/history-daily.csv" : curator.history.to_csv(), 
