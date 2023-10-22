@@ -79,12 +79,5 @@ else:
                                  "data/poems/history-daily.csv" : curator.history.to_csv(), 
                                  "data/poems/author-stats.csv"  : curator.stats.drop(columns=["days_since_last_sent"]).to_csv(),
                                  "docs/assets/scripts/data/daily-poems.js" : f"var dailyPoems = {json.dumps(daily_poems, indent=4, ensure_ascii=False)}",
-                                 "docs/assets/scripts/data/history.js" : f"var dailyHistory = {json.dumps(json.loads(curator.history.T.to_json()), indent=4, ensure_ascii=False)}",
                                  }, 
                                  verbose=True)
-    
-
-
-
-
-
