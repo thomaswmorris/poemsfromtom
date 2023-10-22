@@ -62,14 +62,23 @@ for name, email in zip(entries["name"], entries["email"]):
     t = threading.Thread(target=thread_process, args=(curated_poem, args.username, args.password, name, email, subject))
     t.start()
 
-if test:
+if False: #test:
     ...
     # curator.write_to_repo(items={"data/poems/history-test.csv" : curator.history.to_csv()}, verbose=True)
 
 else:
+
+    # to put on the website
+    daily_poems = {}
+
+    for index, entry in curator.history.iterrows():
+
+        daily_poems[str(index)] = {"author": entry.author, "poem": poems.db[entry.author]["poems"][entry.title]}
+
     curator.write_to_repo(items={
                                  "data/poems/history-daily.csv" : curator.history.to_csv(), 
                                  "data/poems/author-stats.csv"  : curator.stats.drop(columns=["days_since_last_sent"]).to_csv(),
+                                 "docs/assets/scripts/data/daily-poems.js" : f"var dailyPoems = {json.dumps(daily_poems, indent=4, ensure_ascii=False)}",
                                  "docs/assets/scripts/data/history.js" : f"var dailyHistory = {json.dumps(json.loads(curator.history.T.to_json()), indent=4, ensure_ascii=False)}",
                                  }, 
                                  verbose=True)

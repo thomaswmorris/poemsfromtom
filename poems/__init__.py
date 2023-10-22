@@ -16,7 +16,7 @@ class PoemNotFoundError(Exception):
 base, this_file = os.path.split(__file__)
 
 with open(f"{base}/poems.json", "r+") as f:
-    POEMS = json.load(f)
+    db = json.load(f)
 
 with open(f"{base}/weights.json", "r+") as f:
     CONTEXT_WEIGHTS = json.load(f)
@@ -115,7 +115,7 @@ Past poems can be found in the <a href="https://thomaswmorris.com/poems">archive
 </html>
 '''
 
-authors = {author:Author(**POEMS[author]["metadata"]) for author in POEMS.keys()}
+authors = {author:Author(**db[author]["metadata"]) for author in db.keys()}
 
 class Curator():
 
@@ -123,14 +123,14 @@ class Curator():
                         
         authors, titles, keywords, translators, lengths = [], [], [], [], []
         self.poems = pd.DataFrame(columns=["author", "title", "keywords", "translators", "likelihood", "word_count"])
-        for author in POEMS.keys():
-            for title in POEMS[author]["poems"].keys():
+        for author in db.keys():
+            for title in db[author]["poems"].keys():
                 authors.append(author)
                 titles.append(title)
-                metadata = POEMS[author]["poems"][title]["metadata"]
+                metadata = db[author]["poems"][title]["metadata"]
                 keywords.append(metadata["keywords"] if "keywords" in metadata.keys() else {})
                 translators.append(metadata["translator"] if "translator" in metadata.keys() else None)
-                lengths.append(len(POEMS[author]["poems"][title]["body"].split()))
+                lengths.append(len(db[author]["poems"][title]["body"].split()))
 
         self.poems.loc[:, "author"] = authors
         self.poems.loc[:, "title"] = titles
@@ -191,13 +191,13 @@ class Curator():
         if force_cols: pd.set_option("display.max_columns", None)
         self.stats = pd.DataFrame(columns=["name", "nationality","birth","death","n_poems","n_times_sent","days_since_last_sent"])
 
-        for author in POEMS.keys():
+        for author in db.keys():
 
-            name = POEMS[author]["metadata"]["name"]
-            birth = POEMS[author]["metadata"]["birth"]
-            death = POEMS[author]["metadata"]["death"]
-            nationality = POEMS[author]["metadata"]["nationality"]
-            n_poems = POEMS[author]["metadata"]["n_poems"]
+            name = db[author]["metadata"]["name"]
+            birth = db[author]["metadata"]["birth"]
+            death = db[author]["metadata"]["death"]
+            nationality = db[author]["metadata"]["nationality"]
+            n_poems = db[author]["metadata"]["n_poems"]
 
             elapsed = (ttime.time() - self.history["timestamp"][self.history.author==author].max()) / 86400 
             n_times_sent = (self.history["author"]==author).sum()
@@ -239,9 +239,9 @@ class Curator():
 
             # if the author AND the title are supplied, then we can end here (either in a return or an error)
             if title is not None: 
-                if title in POEMS[author]["poems"].keys():
-                    return Poem(author=Author(**POEMS[author]["metadata"]),
-                                **POEMS[author]["poems"][title],
+                if title in db[author]["poems"].keys():
+                    return Poem(author=Author(**db[author]["metadata"]),
+                                **db[author]["poems"][title],
                                 when=self.when)
                 else:
                     raise PoemNotFoundError(f"There is no poem \"{title}\" by \"{author}\" in the database.")
@@ -338,8 +338,8 @@ class Curator():
         if verbose: 
             print(f"chose poem \"{chosen_title}\" by {chosen_author}")
 
-        poem = Poem(author=Author(**POEMS[chosen_author]["metadata"]),
-                    **POEMS[chosen_author]["poems"][chosen_title],
+        poem = Poem(author=Author(**db[chosen_author]["metadata"]),
+                    **db[chosen_author]["poems"][chosen_title],
                     when=self.when)
 
         now = datetime.now(tz=pytz.utc)
