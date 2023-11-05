@@ -62,6 +62,9 @@ def get_holiday(t=None):
     yd = dt.timetuple().tm_yday
 
     year, month, day, weekday = dt.year, dt.month, dt.day, dt.weekday()
+
+    # how many of this weekday have there been in this month before?
+    weekday_count = int((day - 1) / 7)
     
     # these are easter things, which supersede all others
     easter_yd = easter(dt.year).timetuple().tm_yday 
@@ -79,14 +82,15 @@ def get_holiday(t=None):
     elif yd == easter_yd + 60: return "corpus_christi"
     elif yd == easter_yd + 68: return "sacred_heart_of_jesus"
     elif yd == easter_yd + 69: return "immaculate_heart_of_mary"
-
+    
+    elif (month, weekday, weekday_count) == (2, 0, 2):  return "presidents_day" # third monday of february
+    elif (month, weekday, weekday_count) == (5, 6, 1):  return "mothers_day" # second sunday of may
+    elif (month, weekday, weekday_count) == (6, 6, 2):  return "fathers_day" # third sunday of june
+    elif (month, weekday, weekday_count) == (9, 0, 0):  return "labor_day" # first monday of september
+    elif (month, weekday, weekday_count) == (11, 3, 3): return "thanksgiving" # fourth thursday of november
 
     # these are weird
-    elif (month, weekday) == (5, 6) and (day > 7) and (get_utc_datetime(t - 14 * 86400).month == 4): return "mothers_day" # second sunday of may
     elif (month, weekday) == (5, 0) and (get_utc_datetime(t + 7 * 86400).month == 6): return "memorial_day" # last monday of may
-    elif (month, weekday) == (6, 6) and (day > 14) and (get_utc_datetime(t - 21 * 86400).month == 5): return "fathers_day" # third sunday of june
-    elif (month, weekday) == (9, 0) and (get_utc_datetime(t - 7 * 86400).month == 8): return "labor_day" # first monday of september
-    elif (month, weekday) == (11, 3) and (day > 21) and (get_utc_datetime(t - 28 * 86400).month == 10): return "thanksgiving" # fourth thursday of november
 
     # these are weird
     elif (get_liturgy(t - 86400) != "advent") & (get_liturgy(t) == "advent"): return "advent_sunday"

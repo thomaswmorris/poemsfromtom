@@ -1,7 +1,7 @@
 poems
 -----
 
-All of the poems in here are good, or interesting. There are currently 6,766 poems by 418 poets.
+All of the poems in here are good, or interesting. There are currently 6,772 poems by 418 poets.
 
 
 usage
