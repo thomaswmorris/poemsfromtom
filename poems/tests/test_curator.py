@@ -8,4 +8,4 @@ def test_dates():
         poem = curator.get_poem(author=author, verbose=False)
         print(f'{author:>16}: {poem.author.dates}')
 
-    print(curator.poems)
+    print(poem.html_lines)

@@ -87,7 +87,22 @@ class Poem():
 
     @property
     def html_lines(self):
-        return utils.text_to_html_lines(self.body)
+        body_text = self.body.replace("--", "&#8212;") # convert emdashes
+        body_text = utils.add_italic_tags(body_text)
+
+        parsed_lines = []
+        for line in body_text.split("\n"):
+            if len(line) > 0:
+                parsed_lines.append(f'<div class="opus-line">{line.strip()}</div>')
+            else:
+                parsed_lines.append(f'<div class="opus-line-blank">&#8203;</div>')
+
+        if "translator" in self.metadata.keys():
+            parsed_lines.append(f'<div class="opus-line-blank">&#8203;</div>')
+            parsed_lines.append(f'<div class="opus-line-blank">&#8203;</div>')
+            parsed_lines.append(f'<div class="opus-line"><i>Translated by {self.metadata["translator"]}</i></div>')
+
+        return "\n".join(parsed_lines)
 
     @property        
     def header(self):
