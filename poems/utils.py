@@ -90,9 +90,8 @@ def get_holiday(t=None):
     elif (month, weekday, weekday_count) == (11, 3, 3): return "thanksgiving" # fourth thursday of november
 
     # these are weird
+    elif (month, weekday) == (1, 6) and (day > 6) and (day <= 13): return "baptism" # first sunday after epiphany
     elif (month, weekday) == (5, 0) and (get_utc_datetime(t + 7 * 86400).month == 6): return "memorial_day" # last monday of may
-
-    # these are weird
     elif (get_liturgy(t - 86400) != "advent") & (get_liturgy(t) == "advent"): return "advent_sunday"
     elif get_holiday(t + 7 * 86400) == "advent_sunday": return "christ_the_king"
 
