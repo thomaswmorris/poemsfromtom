@@ -61,6 +61,7 @@ for name, email in zip(entries["name"], entries["email"]):
 
     t = threading.Thread(target=thread_process, args=(curated_poem, args.username, args.password, name, email, subject))
     t.start()
+    ttime.sleep(1e0)
 
 if test:
     ...
