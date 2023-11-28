@@ -7,11 +7,11 @@ All of the poems in here are good, or interesting. There are currently 6,845 poe
 usage
 -----
 
-The ``poems`` package works with a ``Curator``, initialized as 
+The ``poemsfromtom`` package works with a ``Curator``, initialized as 
 
 .. code-block:: python
 
-    import poems
+    import poemsfromtom as poems
     
     curator = poems.Curator()
     

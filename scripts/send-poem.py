@@ -6,7 +6,7 @@ from datetime import datetime
 import argparse, sys, threading
 from io import StringIO
 sys.path.insert(0, "../poems")
-import poems
+import poemsfromtom
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--username", type=str, help="Email address from which to send the poem",default="")
@@ -18,7 +18,7 @@ parser.add_argument("--kind", type=str, help="What tag to write to the history w
 args = parser.parse_args()
 
 # Initialize the curator
-curator = poems.Curator()
+curator = poemsfromtom.Curator()
 curator.load_github_repo(github_repo_name=args.github_repo_name, github_token=args.github_token)
 
 test = (args.kind == "test")
@@ -27,7 +27,7 @@ curator.read_history(filename="data/poems/history-daily.csv", from_repo=True)
 
 when = ttime.time() if not test else ttime.time() + 365 * 86400 * np.random.uniform()
 
-context = poems.utils.get_context(when)
+context = poemsfromtom.utils.get_context(when)
 
 # Choose a poem that meets the supplied conditions
 curated_poem = curator.get_poem(
@@ -51,7 +51,7 @@ def thread_process(poem, username, password, name, email, subject):
     done, fails = False, 0
     while (not done) and (fails < 60):
         try:
-            poems.utils.send_email(username, password, poem.email_html, email, subject)
+            poemsfromtom.utils.send_email(username, password, poem.email_html, email, subject)
             a, b = email.split("@"); print(f"{datetime.now().isoformat()} | sent to {name:<18} | {a:>24} @ {b:<20}")
             done = True
         except Exception as e:
@@ -72,7 +72,7 @@ else:
     daily_poems = {}
 
     for index, entry in curator.history.iterrows():
-        daily_poems[str(index)] = {"date": entry.date, "author": entry.author, "poem": poems.db[entry.author]["poems"][entry.title]}
+        daily_poems[str(index)] = {"date": entry.date, "author": entry.author, "poem": poemsfromtom.db[entry.author]["poems"][entry.title]}
 
     curator.write_to_repo(items={
                                  "data/poems/history-daily.csv" : curator.history.to_csv(), 
