@@ -5,7 +5,7 @@ import pandas as pd
 from datetime import datetime
 import argparse, sys, threading
 from io import StringIO
-sys.path.insert(0, "../poems")
+sys.path.insert(0, "../poemsfromtom")
 import poemsfromtom
 
 parser = argparse.ArgumentParser()
