@@ -126,7 +126,7 @@ class Poem():
 </div>
 </section>
 <br>
-Past poems can be found in the <a href="https://thomaswmorris.com/poems">archive</a>.
+<a href="https://thomaswmorris.com/poems">archive</a>
 </html>
 '''
 
