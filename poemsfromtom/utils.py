@@ -68,7 +68,9 @@ def get_holiday(t=None):
     
     # these are easter things, which supersede all others
     easter_yd = easter(dt.year).timetuple().tm_yday 
-    if yd == easter_yd - 47: return "mardi_gras"
+
+    if yd == easter_yd - 63:   return "septuagesima"
+    elif yd == easter_yd - 47: return "mardi_gras"
     elif yd == easter_yd - 46: return "ash_wednesday"
     elif yd == easter_yd - 7:  return "palm_sunday"
     elif yd == easter_yd - 3:  return "holy_thursday"
@@ -325,11 +327,11 @@ def convert_to_html_lines(text):
     html_lines = []
     for line in text.split("\n"):
         if len(line) == 0:
-            html_lines.append('''<div class="opus-line-blank">&#8203</div>''')
+            html_lines.append('''<div class="poem-line-blank">&#8203</div>''')
         elif line.strip().strip("_")[0] in ["“", "‘", "’"]:
-            html_lines.append(f'''<div class="opus-line-punc-start">{line}</div>''')
+            html_lines.append(f'''<div class="poem-line-punc-start">{line}</div>''')
         else:
-            html_lines.append(f'''<div class="opus-line">{line}</div>''')
+            html_lines.append(f'''<div class="poem-line">{line}</div>''')
             
     return add_italic_tags("\n".join(html_lines))
 
@@ -343,8 +345,8 @@ def text_to_html_lines(text):
     parsed_lines = []
     for line in text.split("\n"):
         if len(line) > 0:
-            parsed_lines.append(f'<div class="opus-line">{line.strip()}</div>')
+            parsed_lines.append(f'<div class="poem-line">{line.strip()}</div>')
         else:
-            parsed_lines.append(f'<div class="opus-line-blank">&#8203;</div>')
+            parsed_lines.append(f'<div class="poem-line-blank">&#8203;</div>')
 
     return "\n".join(parsed_lines)

@@ -38,7 +38,11 @@ class Author():
     def dates(self) -> str:
 
         # this assumes no one born before Christ is still alive
-        if self.death == "": return f"(born {self.birth})"
+        if not self.death: 
+            if not self.birth:
+                return ""
+            else:
+                return f"(born {self.birth})"
 
         birth_is_circa = True if "~" in self.birth else False
         death_is_circa = True if "~" in self.death else False
@@ -93,14 +97,14 @@ class Poem():
         parsed_lines = []
         for line in body_text.split("\n"):
             if len(line) > 0:
-                parsed_lines.append(f'<div class="opus-line">{line.strip()}</div>')
+                parsed_lines.append(f'<div class="poem-line">{line.strip()}</div>')
             else:
-                parsed_lines.append(f'<div class="opus-line-blank">&#8203;</div>')
+                parsed_lines.append(f'<div class="poem-line-blank">&#8203;</div>')
 
         if "translator" in self.metadata.keys():
-            parsed_lines.append(f'<div class="opus-line-blank">&#8203;</div>')
-            parsed_lines.append(f'<div class="opus-line-blank">&#8203;</div>')
-            parsed_lines.append(f'<div class="opus-line"><i>Translated by {self.metadata["translator"]}</i></div>')
+            parsed_lines.append(f'<div class="poem-line-blank">&#8203;</div>')
+            parsed_lines.append(f'<div class="poem-line-blank">&#8203;</div>')
+            parsed_lines.append(f'<div class="poem-line"><i>Translated by {self.metadata["translator"]}</i></div>')
 
         return "\n".join(parsed_lines)
 
