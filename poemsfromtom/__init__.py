@@ -36,33 +36,7 @@ class Author():
 
     @property
     def dates(self) -> str:
-
-        # this assumes no one born before Christ is still alive
-        if not self.death: 
-            if not self.birth:
-                return ""
-            else:
-                return f"(born {self.birth})"
-
-        birth_is_circa = True if "~" in self.birth else False
-        death_is_circa = True if "~" in self.death else False
-        
-        b = int(self.birth.strip("~"))
-        d = int(self.death.strip("~"))
-
-        birth_string, death_string = str(abs(b)), str(abs(d))
-
-        birth_string = f'{"c. " if birth_is_circa else ""}{abs(b)}'
-        death_string = f'{"c. " if death_is_circa else ""}{abs(d)}'
-
-        if b < 0: 
-            birth_string += " BC"
-            if d < 0: 
-                death_string += " BC"
-            else: 
-                death_string += " AD"
-
-        return f"({birth_string} -- {death_string})"
+        return utils.dates_string(self.birth, self.death)
 
 @dataclass
 class Poem():

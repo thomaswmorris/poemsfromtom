@@ -23,6 +23,38 @@ def get_context(x=None):
             }
 
 
+def dates_string(birth, death):
+    """
+    Convert birth and death to a string.
+    """
+    # this assumes no one born before Christ is still alive
+    if not death: 
+        if not birth:
+            return ""
+        else:
+            return f"(born {birth})"
+
+    birth_is_circa = True if "~" in birth else False
+    death_is_circa = True if "~" in death else False
+    
+    b_numeric = int(birth.strip("~"))
+    d_numeric = int(death.strip("~"))
+
+    birth_string, death_string = str(abs(b_numeric)), str(abs(d_numeric))
+
+    birth_string = f'{"c. " if birth_is_circa else ""}{abs(b_numeric)}'
+    death_string = f'{"c. " if death_is_circa else ""}{abs(d_numeric)}'
+
+    if b_numeric < 0: 
+        birth_string += " BC"
+        if d_numeric < 0: 
+            death_string += " BC"
+        else: 
+            death_string += " AD"
+
+    return f"({birth_string} -- {death_string})"
+
+
 def get_utc_datetime(when=None):
     if type(when) == str: 
         when = datetime.fromisoformat(when).replace(tzinfo=pytz.utc).timestamp()
