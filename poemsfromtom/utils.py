@@ -23,6 +23,10 @@ def get_utc_datetime(when=None):
     when = when if when is not None else ttime.time()
     return datetime.fromtimestamp(when).astimezone(pytz.utc)
 
+def get_context_dict(when=None):
+    t = when if when is not None else ttime.time()
+    return Context(timestamp=t).to_dict()
+
 @dataclass
 class Context():
     timestamp: int
@@ -52,15 +56,24 @@ class Context():
 
     @property
     def month(self):
-        return MONTHS[self.datetime.month-1]
+        return MONTHS[self.datetime.month - 1]
 
     @property
     def day(self):
         return self.datetime.day
 
     def to_dict(self):
-        attrs = ['timestamp', 'ctime', 'season', 'liturgy', 'holiday', 'year', 'month', 'day', 'year_day', 'weekday', 'month_epoch']
-        return {attr:getattr(self, attr) for attr in attrs}
+        return  {'timestamp': self.timestamp, 
+                     'ctime': self.ctime, 
+                    'season': self.season, 
+                   'liturgy': self.liturgy, 
+                   'holiday': self.holiday, 
+                      'year': f'{self.year:04}',
+                     'month': f'{self.month:02}',
+                       'day': f'{self.day:02}',
+                  'year_day': self.year_day, 
+                   'weekday': self.weekday, 
+               'month_epoch': self.month_epoch}
 
 def dates_string(birth, death):
     '''

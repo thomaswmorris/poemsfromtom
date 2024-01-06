@@ -27,7 +27,7 @@ curator.read_history(filename="data/poems/history-daily.csv", from_repo=True)
 
 when = ttime.time() if not test else ttime.time() + 365 * 86400 * np.random.uniform()
 
-context = poemsfromtom.utils.Context(timestamp=when)
+context = poemsfromtom.utils.Context(timestamp=when).to_dict()
 
 # Choose a poem that meets the supplied conditions
 curated_poem = curator.get_poem(
