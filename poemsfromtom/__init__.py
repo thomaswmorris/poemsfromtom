@@ -9,6 +9,7 @@ from dataclasses import dataclass
 
 from datetime import datetime
 from . import utils
+from .utils import Context
 
 class PoemNotFoundError(Exception):
     pass
@@ -218,7 +219,8 @@ class Curator():
         self.poems = self.archive_poems.copy()
 
         if context is None:
-            context = utils.get_context()
+            context = Context.now().to_dict()
+            
 
         self.when = ttime.time() 
         if "timestamp" in context.keys():
