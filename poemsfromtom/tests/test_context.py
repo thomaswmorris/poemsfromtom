@@ -9,6 +9,8 @@ def test_holiday_context():
     context = poems.utils.Context(timestamp=t).to_dict()
     poem = curator.get_poem(context=context, forced_contexts=['holiday'], verbose=True)
 
+    print(poem.nice_fancy_date)
+
     assert poem.metadata['keywords']['holiday'] == 'easter_sunday'
 
 
@@ -20,6 +22,8 @@ def test_month_context():
     context = poems.utils.Context(timestamp=t).to_dict()
     poem = curator.get_poem(context=context, forced_contexts=['month'], verbose=True)
 
+    print(poem.nice_fancy_date)
+
     assert poem.metadata['keywords']['month'] == 'october'
 
 def test_liturgy_context():
@@ -29,5 +33,7 @@ def test_liturgy_context():
     curator = poems.Curator()
     context = poems.utils.Context(timestamp=t).to_dict()
     poem = curator.get_poem(context=context, forced_contexts=['liturgy'], verbose=True)
+
+    print(poem.nice_fancy_date)
 
     assert poem.metadata['keywords']['liturgy'] == 'lent'

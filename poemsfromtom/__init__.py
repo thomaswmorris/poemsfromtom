@@ -47,6 +47,10 @@ class Poem():
     body: str
     metadata: dict
     when: int
+    context: Context = None
+
+    def __post_init__(self):
+        self.context = Context(timestamp=self.when)
 
     @property
     def keywords(self) -> str:
@@ -62,7 +66,7 @@ class Poem():
 
     @property
     def nice_fancy_date(self):
-        return f"{utils.get_weekday(self.when).capitalize()} {utils.get_month(self.when).capitalize()} {self.date_time.day}, {self.date_time.year}"
+        return f"{self.context.weekday.capitalize()} {self.context.month.capitalize()} {int(self.context.day)}, {int(self.context.year)}"
 
     @property
     def html_lines(self):
