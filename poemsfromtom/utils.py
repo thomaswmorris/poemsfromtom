@@ -258,11 +258,11 @@ def convert_to_html_lines(text):
     html_lines = []
     for line in text.split('\n'):
         if len(line) == 0:
-            html_lines.append('''<div class='poem-line-blank'>&#8203</div>''')
+            html_lines.append('<div class="poem-line-blank">&#8203</div>')
         elif line.strip().strip('_')[0] in ['“', '‘', '’']:
-            html_lines.append(f'''<div class='poem-line-punc-start'>{line}</div>''')
+            html_lines.append(f'<div class="poem-line-punc-start">{line}</div>')
         else:
-            html_lines.append(f'''<div class='poem-line'>{line}</div>''')
+            html_lines.append(f'<div class="poem-line">{line}</div>')
             
     return add_italic_tags('\n'.join(html_lines))
 
