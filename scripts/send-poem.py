@@ -7,6 +7,7 @@ import argparse, sys, threading
 from io import StringIO
 sys.path.insert(0, "../poemsfromtom")
 import poemsfromtom
+import warnings
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--username", type=str, help="Email address from which to send the poem",default="")
@@ -63,20 +64,23 @@ for name, email in zip(entries["name"], entries["email"]):
     t.start()
     ttime.sleep(1e0)
 
+# don't record this in the history
 if test:
-    ...
-    # curator.write_to_repo(items={"data/poems/history-test.csv" : curator.history.to_csv()}, verbose=True)
+    curator.history.drop(index=curator.history.iloc[-1].name, inplace=True)
+    
+daily_poems = {}
 
-else:
-    # to put on the website
-    daily_poems = {}
+for index, entry in curator.history.iterrows():
+    try:
+        p = poemsfromtom.db[entry.author]["poems"][entry.title]
+        daily_poems[str(index)] = {"date": entry.date, "author": entry.author, "poem": p}
 
-    for index, entry in curator.history.iterrows():
-        daily_poems[str(index)] = {"date": entry.date, "author": entry.author, "poem": poemsfromtom.db[entry.author]["poems"][entry.title]}
+    except Exception as e:
+        warnings.warn(f"Could not find poem for entry {entry}")
 
-    curator.write_to_repo(items={
-                                 "data/poems/history-daily.csv" : curator.history.to_csv(), 
-                                 "data/poems/author-stats.csv"  : curator.stats.drop(columns=["days_since_last_sent"]).to_csv(),
-                                 "docs/assets/scripts/data/daily-poems.js" : f"var dailyPoems = {json.dumps(daily_poems, indent=4, ensure_ascii=False)}",
-                                 }, 
-                                 verbose=True)
+curator.write_to_repo(items={
+                                "data/poems/history-daily.csv" : curator.history.to_csv(), 
+                                "data/poems/author-stats.csv"  : curator.stats.drop(columns=["days_since_last_sent"]).to_csv(),
+                                "docs/assets/scripts/data/daily-poems.js" : f"var dailyPoems = {json.dumps(daily_poems, indent=4, ensure_ascii=False)}",
+                                }, 
+                                verbose=True)
