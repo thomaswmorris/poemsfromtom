@@ -90,7 +90,7 @@ dates:
     24: saint_bartholomew
     27: saint_monica
     28: saint_augustine
-    28: beheading_of_john_the_baptist
+    29: beheading_of_john_the_baptist
 
   9:
     3: saint_gregory_the_great
@@ -128,6 +128,7 @@ dates:
     15: saint_albert
     21: presentation_of_mary
     22: saint_cecilia
+    23: saint_clement
     30: saint_andrew
     
   12:
