@@ -1,4 +1,4 @@
-easter:
+easter_offset:
   -63: septuagesima
   -47: mardi_gras
   -46: ash_wednesday
@@ -16,7 +16,7 @@ easter:
   69:  immaculate_heart_of_mary
 
 dates:
-  1:
+  january:
     1: new_years_day
     2: saint_basil
     3: holy_name_of_jesus
@@ -28,21 +28,21 @@ dates:
     28: saint_thomas_aquinas
     31: saint_john_bosco
 
-  2:
+  february:
     2: candlemas
     11: our_lady_of_lourdes
     14: saint_valentine
     22: chair_of_peter
     29: leap_day
 
-  3:
+  march:
     7: saints_perpetua_and_felicity
     8: saint_john_of_god
     17: saint_patrick
     19: saint_joseph
     25: annunciation
 
-  4:
+  april:
     1: april_fools
     5: saint_vincent_ferrer
     11: saint_stanislaus
@@ -51,7 +51,7 @@ dates:
     25: saint_mark
     29: saint_catherine_of_siena
 
-  5:
+  may:
     1: may_day
     3: saints_philip_and_james
     13: our_lady_of_fatima
@@ -59,14 +59,14 @@ dates:
     26: saint_philip_neri
     31: visitation
 
-  6:
+  june:
     13: saint_anthony
     19: juneteenth
     23: saint_johns_eve
     24: saint_john_the_baptist
     29: saints_peter_and_paul
     
-  7:
+  july:
     1: saint_junipero_serra
     3: saint_thomas_the_apostle
     4: independence_day
@@ -79,7 +79,7 @@ dates:
     25: saint_james
     31: saint_ignatius_of_loyola
 
-  8:
+  august:
     1: lammas
     6: transfiguration
     8: saint_dominic
@@ -92,7 +92,7 @@ dates:
     28: saint_augustine
     29: beheading_of_john_the_baptist
 
-  9:
+  september:
     3: saint_gregory_the_great
     8: marymas
     12: holy_name_of_mary
@@ -105,7 +105,7 @@ dates:
     29: michaelmas
     30: saint_jerome
 
-  10:
+  october:
     1: saint_therese_of_lisieux
     2: guardian_angels
     4: saint_francis
@@ -118,7 +118,7 @@ dates:
     28: saints_simon_and_jude
     31: halloween
     
-  11:
+  november:
     1: all_saints
     2: all_souls
     3: saint_malachy
@@ -131,7 +131,7 @@ dates:
     23: saint_clement
     30: saint_andrew
     
-  12:
+  december:
     3: saint_francis_xavier
     6: saint_nicholas
     7: saint_ambrose
