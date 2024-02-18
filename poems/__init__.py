@@ -103,7 +103,7 @@ class Poem():
 
     @property        
     def html_description(self):
-        if self.author.name.lower() in ["anonymous"]:
+        if self.author.name.lower() in ["anonymous", "psalms", "solomon"]:
             return f'<div>{self.html_title}</div>'
         else:
             return f'<div>{self.html_title} by <a href="{self.author.link}">{self.author.name}</a> {self.author.dates.replace("--", "&ndash;")}</div>'
