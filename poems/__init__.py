@@ -23,7 +23,7 @@ with open(f"{base}/weights.json", "r+") as f:
 
 @dataclass
 class Author():
-    """Author data class"""
+    """Author dataclass"""
     name: str
     birth: str
     death: str
@@ -40,7 +40,7 @@ class Author():
 
 @dataclass
 class Poem():
-    """Poem data class"""
+    """Poem dataclass"""
     author: Author
     title: str
     body: str
@@ -111,9 +111,9 @@ class Poem():
     @property        
     def html_description(self):
         if self.author.name.lower() in ["anonymous", "psalms", "solomon"]:
-            return f'<div><i>{self.title}</i></div>'
+            return f'<div>{self.title}</div>'
         else:
-            return f'<div><i>{self.title}</i> by <a href="{self.author.link}">{self.author.name}</a> {self.author.dates.replace("--", "&ndash;")}</div>'
+            return f'<div>{self.title} by <a href="{self.author.link}">{self.author.name}</a> {self.author.dates.replace("--", "&ndash;")}</div>'
 
     @property        
     def header(self):
