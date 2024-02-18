@@ -31,18 +31,16 @@ when = ttime.time() if not test else ttime.time() + 365 * 86400 * np.random.unif
 context = poems.utils.Context(timestamp=when).to_dict()
 
 # Choose a poem that meets the supplied conditions
-curated_poem = curator.get_poem(
-                                context=context, 
-                                weight_schemes=["context", "history"],
-                                forced_contexts=["good_friday", "holy_saturday", "easter_sunday", "halloween", "thanksgiving", "christmas_eve", "christmas_day"],
-                                verbose=True,
-                                very_verbose=test,
-                                )
+poem = curator.get_poem(
+                        context=context, 
+                        weight_schemes=["context", "history"],
+                        forced_contexts=["good_friday", "holy_saturday", "easter_sunday", "halloween", "thanksgiving", "christmas_eve", "christmas_day"],
+                        verbose=True,
+                        very_verbose=test,
+                        )
 
-if test:
-    subject = f"(TEST) {curated_poem.nice_fancy_date}: {curated_poem.header} {curated_poem.keywords}"
-else:
-    subject = f"Poem of the Day: {curated_poem.header}"
+
+subject = poem.test_email_subject if test else poem.daily_email_subject
 
 contents = curator.repo.get_contents(args.listserv_filename, ref="master")
 entries  = pd.read_csv(StringIO(contents.decoded_content.decode()), index_col=0)
@@ -60,7 +58,7 @@ def thread_process(poem, username, password, name, email, subject):
 
 for name, email in zip(entries["name"], entries["email"]):
 
-    t = threading.Thread(target=thread_process, args=(curated_poem, args.username, args.password, name, email, subject))
+    t = threading.Thread(target=thread_process, args=(poem, args.username, args.password, name, email, subject))
     t.start()
     ttime.sleep(1e0)
 
@@ -79,8 +77,8 @@ for index, entry in curator.history.iterrows():
         warnings.warn(f"Could not find poem for entry {entry}")
 
 curator.write_to_repo(items={
-                                "data/poems/history-daily.csv" : curator.history.to_csv(), 
-                                "data/poems/author-stats.csv"  : curator.stats.drop(columns=["days_since_last_sent"]).to_csv(),
-                                "docs/assets/scripts/data/daily-poems.js" : f"var dailyPoems = {json.dumps(daily_poems, indent=4, ensure_ascii=False)}",
-                                }, 
-                                verbose=True)
+                            "data/poems/history-daily.csv" : curator.history.to_csv(), 
+                            "data/poems/author-stats.csv"  : curator.stats.drop(columns=["days_since_last_sent"]).to_csv(),
+                            "docs/assets/scripts/data/daily-poems.js" : f"var dailyPoems = {json.dumps(daily_poems, indent=4, ensure_ascii=False)}",
+                            }, 
+                            verbose=True)

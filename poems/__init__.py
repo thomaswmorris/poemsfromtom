@@ -67,16 +67,23 @@ class Poem():
         return self.metadata["keywords"] if "keywords" in self.metadata.keys() else {}
 
     @property
-    def html_title(self) -> str:
-        return re.sub("^from", "<i>from</i>", self.title)
+    def title_by_author(self):
+        if self.author.name:
+            return f"{self.title} by {self.author.name}"
+        else:
+            return f"{self.title}"
 
     @property
-    def date_time(self):
-        return datetime.fromtimestamp(self.when).replace(tzinfo=pytz.utc)
-
-    @property
-    def nice_fancy_date(self):
+    def date(self):
         return f"{self.context.weekday.capitalize()} {self.context.month.capitalize()} {int(self.context.day)}, {int(self.context.year)}"
+
+    @property
+    def test_email_subject(self):
+        return f"TEST ({self.date}): {self.header} {self.keywords}"
+
+    @property
+    def daily_email_subject(self):
+        return f"Poem of the Day: {self.title_by_author}"
 
     @property
     def html_lines(self):
@@ -99,14 +106,14 @@ class Poem():
 
     @property        
     def html_date(self):
-        return f'<div><i>{self.nice_fancy_date}</i></div>'
+        return f'<div><i>{self.date}</i></div>'
 
     @property        
     def html_description(self):
         if self.author.name.lower() in ["anonymous", "psalms", "solomon"]:
-            return f'<div>{self.html_title}</div>'
+            return f'<div><i>{self.title}</i></div>'
         else:
-            return f'<div>{self.html_title} by <a href="{self.author.link}">{self.author.name}</a> {self.author.dates.replace("--", "&ndash;")}</div>'
+            return f'<div><i>{self.title}</i> by <a href="{self.author.link}">{self.author.name}</a> {self.author.dates.replace("--", "&ndash;")}</div>'
 
     @property        
     def header(self):
