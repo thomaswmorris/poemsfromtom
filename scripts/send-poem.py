@@ -34,7 +34,7 @@ context = poems.utils.Context(timestamp=when).to_dict()
 poem = curator.get_poem(
                         context=context, 
                         weight_schemes=["context", "history"],
-                        forced_contexts=["good_friday", "holy_saturday", "easter_sunday", "halloween", "thanksgiving", "christmas_eve", "christmas_day"],
+                        forced_contexts=["holy_thursday", "good_friday", "holy_saturday", "easter_sunday", "christmas_eve", "christmas_day"],
                         verbose=True,
                         very_verbose=test,
                         )
