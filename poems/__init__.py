@@ -335,10 +335,10 @@ class Curator():
                         continue
 
                     if keyword == context[category]: 
-                        if category not in forced_contexts:
-                            multiplier = CONTEXT_WEIGHTS[category][keyword]  
+                        if keyword in forced_contexts:
+                            multiplier = 1e18
                         else:
-                            multiplier = 1e12
+                            multiplier = CONTEXT_WEIGHTS[category][keyword]  
                     else: 
                         multiplier = 0
 
