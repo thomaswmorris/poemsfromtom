@@ -5,10 +5,10 @@ import pandas as pd
 import github as gh
 from io import StringIO
 from operator import attrgetter
-from dataclasses import dataclass, fields
+from dataclasses import dataclass, fields, field
 from datetime import datetime
 from . import utils
-from .utils import Context
+from .utils import Context, HOLIDAYS, WEEKDAYS, MONTHS
 
 class PoemNotFoundError(Exception):
     pass
@@ -45,11 +45,21 @@ class Poem():
     title: str
     body: str
     metadata: dict
-    when: int
-    context: Context = None
+    context: dict = field(default_factory=dict)
+    timestamp: int = None
+
+    @classmethod
+    def from_catalog(cls, author, title, context=None):
+        return cls(author=Author(**db[author]["metadata"]), 
+                   **db[author]["poems"][title], context=context)
 
     def __post_init__(self):
-        self.context = Context(timestamp=self.when)
+
+        if self.timestamp is None:
+            self.timestamp = datetime.now(tz=pytz.utc).timestamp()
+
+        if self.context is None:
+            self.context = Context.now().to_dict()
 
     def __repr__(self):
         nodef_f_vals = (
@@ -75,32 +85,38 @@ class Poem():
 
     @property
     def date(self):
-        return f"{self.context.weekday.capitalize()} {self.context.month.capitalize()} {int(self.context.day)}, {int(self.context.year)}"
+        dt = datetime.fromtimestamp(self.timestamp, tz=pytz.utc)
+        return f"{WEEKDAYS[dt.weekday()].capitalize()} {MONTHS[dt.month-1].capitalize()} {int(dt.day)}, {int(dt.year)}"
 
     @property
     def test_email_subject(self):
-        return f"TEST ({self.date}): {self.header} {self.keywords}"
+        return f"TEST ({self.date}): {self.title_by_author} {self.keywords}"
 
     @property
     def daily_email_subject(self):
         return f"Poem of the Day: {self.title_by_author}"
 
     @property
-    def html_lines(self):
+    def html_body(self):
         body_text = self.body.replace("--", "&#8212;") # convert emdashes
         body_text = utils.add_italic_tags(body_text)
 
         parsed_lines = []
-        for line in body_text.split("\n"):
-            if len(line) > 0:
-                parsed_lines.append(f'<div class="poem-line">{line.strip()}</div>')
-            else:
-                parsed_lines.append(f'<div class="poem-line-blank">&#8203;</div>')
 
         if "translator" in self.metadata.keys():
-            parsed_lines.append(f'<div class="poem-line-blank">&#8203;</div>')
-            parsed_lines.append(f'<div class="poem-line-blank">&#8203;</div>')
             parsed_lines.append(f'<div class="poem-line"><i>Translated by {self.metadata["translator"]}</i></div>')
+            parsed_lines.append(f'<div class="poem-line-blank">&#8203;</div>')
+            parsed_lines.append(f'<div class="poem-line-blank">&#8203;</div>')
+
+        for line in body_text.split("\n"):
+            if len(line) == 0:
+                parsed_lines.append(f'<div class="poem-line-blank">&#8203;</div>')
+            elif line[:2] == "# ":
+                parsed_lines.append(f'<div class="poem-line-title">{line[2:]}</div>')
+            elif line[:2] == "> ":
+                parsed_lines.append(f'<div class="poem-line-dialogue">{line[2:]}</div>')
+            else:
+                parsed_lines.append(f'<div class="poem-line">{line.strip()}</div>')
 
         return "\n".join(parsed_lines)
 
@@ -115,11 +131,6 @@ class Poem():
         else:
             return f'<div>{self.title}</div>'
             
-
-    @property        
-    def header(self):
-        return f"{self.title} by {self.author.name}"
-
     @property
     def email_html(self):
         return f'''<!DOCTYPE html>
@@ -130,7 +141,7 @@ class Poem():
 {self.html_description}
 </div>
 <div>
-{self.html_lines}
+{self.html_body}
 </div>
 </section>
 <br>
@@ -145,7 +156,7 @@ class Curator():
     def __init__(self):
                         
         authors, titles, keywords, translators, lengths = [], [], [], [], []
-        self.poems = pd.DataFrame(columns=["author", "title", "keywords", "translators", "likelihood", "word_count"])
+        self.catalog = pd.DataFrame(columns=["author", "title", "keywords", "translator", "likelihood", "word_count"])
         for author in db.keys():
             for title in db[author]["poems"].keys():
                 authors.append(author)
@@ -155,15 +166,15 @@ class Curator():
                 translators.append(metadata["translator"] if "translator" in metadata.keys() else None)
                 lengths.append(len(db[author]["poems"][title]["body"].split()))
 
-        self.poems.loc[:, "author"] = authors
-        self.poems.loc[:, "title"] = titles
-        self.poems.loc[:, "keywords"] = keywords
-        self.poems.loc[:, "translators"] = translators
-        self.poems.loc[:, "likelihood"] = 1.
-        self.poems.loc[:, "word_count"] = lengths
+        self.catalog.loc[:, "author"] = authors
+        self.catalog.loc[:, "title"] = titles
+        self.catalog.loc[:, "keywords"] = keywords
+        self.catalog.loc[:, "translator"] = translators
+        self.catalog.loc[:, "likelihood"] = 1.
+        self.catalog.loc[:, "word_count"] = lengths
 
-        self.unique_authors = np.sort(np.unique(self.poems.author))
-        self.archive_poems  = self.poems.copy()
+        self.unique_authors = np.sort(np.unique(self.catalog.author))
+        self.archive_poems  = self.catalog.copy()
         self.history = None
 
     def load_github_repo(self, github_repo_name=None, github_token=None):
@@ -245,36 +256,32 @@ class Curator():
                 ):
 
         verbose = verbose or very_verbose
-        self.poems = self.archive_poems.copy()
+        self.catalog = self.archive_poems.copy()
 
         if context is None:
             context = Context.now().to_dict()
             
-
         self.when = ttime.time() 
         if "timestamp" in context.keys():
             self.when = context["timestamp"]
 
+        if author and title: 
+            if title in db[author]["poems"].keys():
+                return Poem.from_catalog(author=author, title=title, context=context)
+            else:
+                raise PoemNotFoundError(f"There is no poem \"{title}\" by \"{author}\" in the database.")
+
         # if author is supplied, get rid of poems not by that author
-        if author is not None: 
-            self.poems.loc[self.poems.author != author, "likelihood"] = 0
-            if not len(self.poems) > 0:
+        if author: 
+            self.catalog.loc[self.catalog.author != author, "likelihood"] = 0
+            if not len(self.catalog) > 0:
                 raise PoemNotFoundError(f"There are no poems by author \"{author}\" in the database.")
 
-            # if the author AND the title are supplied, then we can end here (either in a return or an error)
-            if title is not None: 
-                if title in db[author]["poems"].keys():
-                    return Poem(author=Author(**db[author]["metadata"]),
-                                **db[author]["poems"][title],
-                                when=self.when)
-                else:
-                    raise PoemNotFoundError(f"There is no poem \"{title}\" by \"{author}\" in the database.")
-
         # if JUST the title is supplied, do this (why would you ever do this? but we should support it anyway)
-        if title is not None: 
-            self.poems.loc[self.poems.title != title, "likelihood"] = 0
-            if not len(self.poems) > 0:
-                raise PoemNotFoundError(f"There are no poem \"{title}\" by any author in the database.")
+        if title: 
+            self.catalog.loc[self.catalog.title != title, "likelihood"] = 0
+            if not len(self.catalog) > 0:
+                raise PoemNotFoundError(f"There is no poem called \"{title}\" by any author in the database.")
 
         if "history" in weight_schemes:
             if not hasattr(self, "history"): 
@@ -282,8 +289,8 @@ class Curator():
 
             for _, entry in self.history.iterrows():
                 try:
-                    loc = self.poems.index[np.where((self.poems.author==entry.author)&(self.poems.title==entry.title))[0][0]]
-                    self.poems.drop(loc, inplace=True)
+                    loc = self.catalog.index[np.where((self.catalog.author==entry.author)&(self.catalog.title==entry.title))[0][0]]
+                    self.catalog.drop(loc, inplace=True)
                     #if verbose: print(f"removed {entry.title} by {entry.author}")
                 except:
                     print(f"error handling entry {entry}")
@@ -296,20 +303,20 @@ class Curator():
                 total_weight = days_since_last_sent_weight # * times_sent_weight
 
                 #if verbose: print(f"weighted {uauthor:<12} by {times_sent_weight:.03f} * {days_since_last_sent_weight:.03f} = {total_weight:.03f}")
-                self.poems.loc[uauthor==self.poems.author, "likelihood"] *= total_weight
+                self.catalog.loc[uauthor==self.catalog.author, "likelihood"] *= total_weight
 
             if verbose: print("applying \"history\" weighting scheme")
 
         if "author" in weight_schemes:
             for uauthor in self.unique_authors:
-                self.poems.loc[uauthor==self.poems.author, "likelihood"] /= np.sum(uauthor==self.poems.author)
+                self.catalog.loc[uauthor==self.catalog.author, "likelihood"] /= np.sum(uauthor==self.catalog.author)
             if verbose: print("applying \"author\" weighting scheme")
 
         if "remaining" in weight_schemes:
             for uauthor in self.unique_authors:
-                n = np.sum(uauthor == self.poems.author)
+                n = np.sum(uauthor == self.catalog.author)
                 if not n > 0: continue
-                self.poems.loc[uauthor == self.poems.author, "likelihood"] *= 1 + np.log(n)
+                self.catalog.loc[uauthor == self.catalog.author, "likelihood"] *= 1 + np.log(n)
             if verbose: print("applying \"remaining\" weighting scheme")
             
         if "context" in weight_schemes:
@@ -317,8 +324,8 @@ class Curator():
             if verbose: print(f"using context {context}")
             if verbose: print(f"forcing contexts {forced_contexts}")
 
-            exclude = np.array([kwdict["type"]=="exclude" if "type" in kwdict.keys() else False for kwdict in self.poems.keywords])
-            self.poems.loc[exclude, "likelihood"] = 0
+            exclude = np.array([kwdict["type"]=="exclude" if "type" in kwdict.keys() else False for kwdict in self.catalog.keywords])
+            self.catalog.loc[exclude, "likelihood"] = 0
 
             if verbose: print(f"omitting {exclude.sum()} poems")
 
@@ -330,7 +337,7 @@ class Curator():
                 if not category in context.keys(): 
                     continue
                 for keyword in CONTEXT_WEIGHTS[category].keys():
-                    has_keyword = np.array([keyword==kwdict[category] if category in kwdict.keys() else False for kwdict in self.poems.keywords])
+                    has_keyword = np.array([keyword==kwdict[category] if category in kwdict.keys() else False for kwdict in self.catalog.keywords])
                     if not has_keyword.sum() > 0: 
                         continue
 
@@ -346,25 +353,23 @@ class Curator():
                     # exclude that keyword when it is not that holiday. this translates well; if the holiday is 
                     # also a season, month, or liturgy, then we do not do anything
                     
-                    self.poems.loc[has_keyword, "likelihood"] *= multiplier
+                    self.catalog.loc[has_keyword, "likelihood"] *= multiplier
                     if very_verbose: print(f"weighted {int(has_keyword.sum()):>3} poems with {category} = {keyword} by {multiplier}")
 
-            if not self.poems["likelihood"].sum() > 0:
+            if not self.catalog["likelihood"].sum() > 0:
                 raise PoemNotFoundError(f"No poem with the given context")
 
-        self.poems["probability"] = self.poems.likelihood / self.poems.likelihood.sum()
+        self.catalog["probability"] = self.catalog.likelihood / self.catalog.likelihood.sum()
         if very_verbose: 
-            print(f"choosing from {len(self.poems)} poems; the 20 most likely are:")
-            print(self.poems.sort_values("probability", ascending=False)[["author","title","keywords","probability"]].iloc[:20])
-        chosen_loc = np.random.choice(self.poems.index, p=self.poems.probability)
-        chosen_author, chosen_title = self.poems.loc[chosen_loc, ["author", "title"]]
+            print(f"choosing from {len(self.catalog)} poems; the 20 most likely are:")
+            print(self.catalog.sort_values("probability", ascending=False)[["author","title","keywords","probability"]].iloc[:20])
+        chosen_loc = np.random.choice(self.catalog.index, p=self.catalog.probability)
+        chosen_author, chosen_title = self.catalog.loc[chosen_loc, ["author", "title"]]
         
         if verbose: 
             print(f"chose poem \"{chosen_title}\" by {chosen_author}")
 
-        poem = Poem(author=Author(**db[chosen_author]["metadata"]),
-                    **db[chosen_author]["poems"][chosen_title],
-                    when=self.when)
+        poem = Poem.from_catalog(author=chosen_author, title=chosen_title, context=context)
 
         now = datetime.now(tz=pytz.utc)
 

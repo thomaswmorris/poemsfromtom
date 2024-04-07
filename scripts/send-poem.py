@@ -70,8 +70,14 @@ daily_poems = {}
 
 for index, entry in curator.history.iterrows():
     try:
-        p = poems.db[entry.author]["poems"][entry.title]
-        daily_poems[str(index)] = {"date": entry.date, "author": entry.author, "poem": p}
+        p = curator.get_poem(author=entry.author, title=entry.title)
+        daily_poems[str(index)] = {
+                                   "date": entry.date, 
+                                   "author": p.author.name, 
+                                   "title": p.title,
+                                   "body": p.html_body,
+                                   "metadata": p.metadata
+                                   }
 
     except Exception as e:
         warnings.warn(f"Could not find poem for entry {entry}")

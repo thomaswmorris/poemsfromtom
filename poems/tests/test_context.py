@@ -7,7 +7,7 @@ def test_holiday_context():
 
     curator = poems.Curator()
     context = poems.utils.Context(timestamp=t).to_dict()
-    poem = curator.get_poem(context=context, forced_contexts=['holiday'], verbose=True)
+    poem = curator.get_poem(context=context, forced_contexts=['easter_sunday'], verbose=True)
 
     print(poem.date)
 
@@ -20,7 +20,7 @@ def test_month_context():
 
     curator = poems.Curator()
     context = poems.utils.Context(timestamp=t).to_dict()
-    poem = curator.get_poem(context=context, forced_contexts=['month'], verbose=True)
+    poem = curator.get_poem(context=context, forced_contexts=['october'], verbose=True)
 
     print(poem.date)
 
@@ -32,7 +32,7 @@ def test_liturgy_context():
 
     curator = poems.Curator()
     context = poems.utils.Context(timestamp=t).to_dict()
-    poem = curator.get_poem(context=context, forced_contexts=['liturgy'], verbose=True)
+    poem = curator.get_poem(context=context, forced_contexts=['lent'], verbose=True)
 
     print(poem.date)
 
