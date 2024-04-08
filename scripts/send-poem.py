@@ -67,10 +67,9 @@ if test:
     curator.history.drop(index=curator.history.iloc[-1].name, inplace=True)
     
 daily_poems = {}
-
 for index, entry in curator.history.iterrows():
     try:
-        p = curator.get_poem(author=entry.author, title=entry.title, when=entry.timestamp, verbose=True)
+        p = curator.get_poem(author=entry.author, title=entry.title, timestamp=entry.timestamp, verbose=True)
         daily_poems[str(index)] = {
                                    "date": p.date,
                                    "author": {

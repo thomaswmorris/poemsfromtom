@@ -77,9 +77,9 @@ class Poem():
     timestamp: int = None
 
     @classmethod
-    def from_catalog(cls, author, title, context=None):
+    def from_catalog(cls, author, title, context=None, timestamp=None):
         return cls(author=Author(**db[author]["metadata"]), 
-                   **db[author]["poems"][title], context=context)
+                   **db[author]["poems"][title], context=context, timestamp=timestamp)
 
     def __post_init__(self):
 
@@ -284,22 +284,24 @@ class Curator():
                 forced_contexts=[],
                 verbose=True,
                 very_verbose=False,
-                **kwargs,
+                timestamp=None,
                 ):
+
+        if timestamp is None:
+            timestamp = Context.now().timestamp
 
         verbose = verbose or very_verbose
         self.catalog = self.archive_poems.copy()
 
         if context is None:
-            context = Context.now().to_dict()
-            
-        self.when = ttime.time() 
+            context = Context(timestamp=timestamp).to_dict()
+        
         if "timestamp" in context.keys():
-            self.when = context["timestamp"]
+            timestamp = context["timestamp"]
 
         if author and title: 
             if title in db[author]["poems"].keys():
-                return Poem.from_catalog(author=author, title=title, context=context)
+                return Poem.from_catalog(author=author, title=title, context=context, timestamp=timestamp)
             else:
                 raise PoemNotFoundError(f"There is no poem \"{title}\" by \"{author}\" in the database.")
 
@@ -402,7 +404,7 @@ class Curator():
         if verbose: 
             print(f"chose poem \"{chosen_title}\" by {chosen_author}")
 
-        poem = Poem.from_catalog(author=chosen_author, title=chosen_title, context=context)
+        poem = Poem.from_catalog(author=chosen_author, title=chosen_title, context=context, timestamp=timestamp)
 
         now = datetime.now(tz=pytz.utc)
 
