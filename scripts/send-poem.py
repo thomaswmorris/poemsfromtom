@@ -70,7 +70,7 @@ daily_poems = {}
 
 for index, entry in curator.history.iterrows():
     try:
-        p = curator.get_poem(author=entry.author, title=entry.title, when=entry.timestamp)
+        p = curator.get_poem(author=entry.author, title=entry.title, when=entry.timestamp, verbose=True)
         daily_poems[str(index)] = {
                                    "date": entry.date,
                                    "author": {

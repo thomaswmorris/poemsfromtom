@@ -35,22 +35,22 @@ class Author():
     n_poems: str
 
     @property
-    def dates(birth, death):
+    def dates(self):
         """
         Convert birth and death to a string.
         """
         # this assumes no one born before Christ is still alive
-        if not death: 
-            if not birth:
+        if not self.death: 
+            if not self.birth:
                 return ""
             else:
-                return f"(born {birth})"
+                return f"(born {self.birth})"
 
-        birth_is_circa = True if "~" in birth else False
-        death_is_circa = True if "~" in death else False
+        birth_is_circa = True if "~" in self.birth else False
+        death_is_circa = True if "~" in self.death else False
         
-        b_numeric = int(birth.strip("~"))
-        d_numeric = int(death.strip("~"))
+        b_numeric = int(self.birth.strip("~"))
+        d_numeric = int(self.death.strip("~"))
 
         birth_string, death_string = str(abs(b_numeric)), str(abs(d_numeric))
 
@@ -318,7 +318,8 @@ class Curator():
             for _, entry in self.history.iterrows():
                 try:
                     loc = self.catalog.index[np.where((self.catalog.author==entry.author)&(self.catalog.title==entry.title))[0][0]]
-                    self.catalog.drop(loc, inplace=True)
+                    # self.catalog.drop(loc, inplace=True)
+                    self.catalog.loc[loc, "likelihood"] = 0
                     #if verbose: print(f"removed {entry.title} by {entry.author}")
                 except:
                     print(f"error handling entry {entry}")
