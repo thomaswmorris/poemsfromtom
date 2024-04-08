@@ -101,8 +101,12 @@ class Poem():
         return f"{self.__class__.__name__}({', '.join(nodef_f_repr)})"
 
     @property
-    def keywords(self) -> str:
-        return self.metadata["keywords"] if "keywords" in self.metadata.keys() else {}
+    def translator(self) -> str:
+        return self.metadata["translator"] if "translator" in self.metadata else None
+
+    @property
+    def keywords(self) -> dict:
+        return self.metadata["keywords"] if "keywords" in self.metadata else {}
 
     @property
     def title_by_author(self):
@@ -131,11 +135,6 @@ class Poem():
 
         parsed_lines = []
 
-        if "translator" in self.metadata.keys():
-            parsed_lines.append(f'<div class="poem-line"><i>Translated by {self.metadata["translator"]}</i></div>')
-            parsed_lines.append(f'<div class="poem-line-blank">&#8203;</div>')
-            parsed_lines.append(f'<div class="poem-line-blank">&#8203;</div>')
-
         for line in body_text.split("\n"):
             if len(line) == 0:
                 parsed_lines.append(f'<div class="poem-line-blank">&#8203;</div>')
@@ -152,28 +151,33 @@ class Poem():
     def html_date(self):
         return f'<div><i>{self.date}</i></div>'
 
-    @property        
+    @property
     def html_description(self):
+
         if self.author.name:
-            return f'<div>{self.title} by <a href="{self.author.link}">{self.author.name}</a> {self.author.dates.replace("--", "&ndash;")}</div>'
+            description = f'<div>{self.title} by <a href="{self.author.link}">{self.author.name}</a> {self.author.dates.replace("--", "&ndash;")}</div>'
         else:
-            return f'<div>{self.title}</div>'
+            description = f'<div>{self.title}</div>'
+
+        if "translator" in self.metadata:
+            description += f'\n<div><i>Translated by {self.translator}</i></div>'
+
+        return description
             
     @property
     def email_html(self):
         return f'''<!DOCTYPE html>
 <html lang="en">
-<section style="text-align: left; max-width: 800px; font-family: Baskerville;  font-size: 18px;">
-<div style="padding-bottom: 16px;">
-{self.html_date}
+<section style="text-align: left; max-width: 960px; font-family: Baskerville; font-size: 18px;">
+<section style="padding-bottom: 32px;">
 {self.html_description}
-</div>
-<div>
-{self.html_body}
-</div>
 </section>
-<br>
-<a href="https://thomaswmorris.com/poems">archive</a>
+<section style="padding-bottom: 32px;">
+{self.html_body}
+</section>
+<section>
+<a href="https://thomaswmorris.com/poems">daily poems archive</a>
+</section>
 </html>
 '''
 

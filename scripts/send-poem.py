@@ -72,11 +72,11 @@ for index, entry in curator.history.iterrows():
     try:
         p = curator.get_poem(author=entry.author, title=entry.title, when=entry.timestamp, verbose=True)
         daily_poems[str(index)] = {
-                                   "date": entry.date,
+                                   "date": p.date,
                                    "author": {
                                              "name": p.author.name,
                                              "link": p.author.link,
-                                             "dates": p.author.dates
+                                             "dates": p.author.dates.replace("--", "&ndash;")
                                              },
                                    "title": p.title,
                                    "body": p.html_body,
