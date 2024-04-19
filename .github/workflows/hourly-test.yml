@@ -18,7 +18,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install -v .
 
       - name: Curate a poem, and send it to the testserv
         run:

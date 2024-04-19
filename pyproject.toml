@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "poemsfromtom"
+description = "Poems"
+version = "1.0.0"
+readme = { file = "README.rst", content-type = "text/x-rst" }
+authors = [
+  { name = "Thomas W. Morris", email = "thomasmorris@princeton.edu" }
+]
+maintainers = [
+  { name = "Thomas W. Morris", email = "thomasmorris@princeton.edu" }
+]
+requires-python = ">=3.9"
+
+dependencies = [
+  "ephem",
+  "numpy",
+  "pandas",
+  "pyarrow",
+  "pygithub",
+  "pytz"
+]
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: BSD License",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+
+
+
+[project.urls]
+Homepage = "https://thomaswmorris.com/poems"
+
+[tool.hatch.build.targets.wheel]
+only-include = ["poems"]
+
+[tool.setuptools_scm]
+version_file = "poems/_version.py"
+
+[tool.black]
+line-length = 125
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+
+  # The following are specific to Black, you probably don't want those.
+  | blib2to3
+  | tests/data
+)/
+'''

@@ -1,6 +1,0 @@
-ephem
-numpy
-pandas
-pyarrow
-pygithub
-pytz
