@@ -45,10 +45,10 @@ class Author():
         death_string = f'{"c. " if death_is_circa else ""}{abs(d_numeric)}'
 
         if b_numeric < 0: 
-            birth_string += " BC"
             if d_numeric < 0: 
                 death_string += " BC"
             else: 
+                birth_string += " BC"
                 death_string += " AD"
 
         return f"({birth_string} -- {death_string})"
@@ -126,8 +126,12 @@ class Poem():
                 parsed_lines.append(f'<div class="poem-line-title">{line[2:]}</div>')
             elif line[:2] == "> ":
                 parsed_lines.append(f'<div class="poem-line-dialogue">{line[2:]}</div>')
-            elif line[0] in ["’", "‘", "“"]:
-                parsed_lines.append(f'<div class="poem-line-punc-start">{line}</div>')
+            # elif line[0] == "“":
+            #     parsed_lines.append(f'<div class="poem-line-double-quote-start">{line}</div>')
+            # elif line[0] == "‘":
+            #     parsed_lines.append(f'<div class="poem-line-single-quote-start">{line}</div>')
+            # elif line[0] == "’":
+            #     parsed_lines.append(f'<div class="poem-line-apostrophe-start">{line}</div>')
             else:
                 parsed_lines.append(f'<div class="poem-line">{line.strip()}</div>')
 

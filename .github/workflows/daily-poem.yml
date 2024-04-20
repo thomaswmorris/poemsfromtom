@@ -1,11 +1,11 @@
-name: Send the daily poem
+name: Poem of the day
 on:
   schedule:
     - cron: "0 11 * * *" # daily at 11:00 UTC (usually 06:00 EST)
 
 jobs:
   run_tests:
-    name: Send a daily poem at noon UTC
+    name: Send the poem of the day
     runs-on: ubuntu-latest
 
     defaults:
