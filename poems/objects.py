@@ -20,6 +20,7 @@ class Author():
     link: str
     favorite: bool
     n_poems: str
+    tags: list = field(default_factory=list)
 
     @property
     def dates(self):
