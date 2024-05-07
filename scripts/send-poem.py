@@ -27,11 +27,11 @@ curator.read_history(filename="data/poems/history-daily.csv", from_repo=True)
 
 when = ttime.time() if not test else ttime.time() + 365 * 86400 * np.random.uniform()
 
-context = poems.utils.Context(timestamp=when).to_dict()
+context = poems.objects.Context(timestamp=when).to_dict()
 
 # Choose a poem that meets the supplied conditions
 poem = curator.get_poem(
-                        context=context, 
+                        context=context,
                         weight_schemes=["context", "history"],
                         forced_contexts=["holy_thursday", "good_friday", "holy_saturday", "easter_sunday", "christmas_eve", "christmas_day"],
                         verbose=True,
@@ -69,17 +69,25 @@ daily_poems = {}
 for index, entry in curator.history.iterrows():
     try:
         p = curator.get_poem(author=entry.author, title=entry.title, timestamp=entry.timestamp, verbose=True)
-        daily_poems[str(index)] = {
-                                   "date": p.date,
-                                   "author": {
-                                             "name": p.author.name,
-                                             "link": p.author.link,
-                                             "dates": p.author.dates.replace("--", "&ndash;")
-                                             },
-                                   "title": p.title,
-                                   "body": p.html_body,
-                                   "metadata": p.metadata
-                                   }
+
+        packet = {
+                "date": p.context.pretty_date,
+                "author": {
+                            "name": p.author.name,
+                            "link": p.author.link,
+                            "dates": p.author.dates.replace("--", "&ndash;")
+                            },
+                "title": p.title,
+                "body": p.html_body,
+                }
+
+        if p.spacetime:
+            packet["spacetime"] = p.spacetime
+
+        if p.translator:
+            packet["translator"] = p.translator
+
+        daily_poems[str(index)] = packet
 
     except Exception as e:
         warnings.warn(f"Could not find poem for entry {entry}")

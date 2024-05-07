@@ -5,9 +5,7 @@ import pandas as pd
 import github as gh
 from io import StringIO
 from datetime import datetime
-from .utils import Context
-
-from .objects import Poem, Author
+from .objects import Poem, Author, Context
 
 class PoemNotFoundError(Exception):
     pass
@@ -22,8 +20,8 @@ with open(f"{here}/weights.json", "r+") as f:
 
 authors = {author:Author(**db[author]["metadata"]) for author in db.keys()}
 
-def _construct_poem(author, title, context=None, timestamp=None):
-    return Poem(author=Author(**db[author]["metadata"]), **db[author]["poems"][title], context=context, timestamp=timestamp)
+def _construct_poem(author, title, timestamp=None):
+    return Poem(author=Author(**db[author]["metadata"]), **db[author]["poems"][title], context=Context(timestamp=timestamp))
 
 class Curator():
 
@@ -78,7 +76,7 @@ class Curator():
 
         if author and title: 
             if title in db[author]["poems"].keys():
-                return _construct_poem(author=author, title=title, context=context, timestamp=timestamp)
+                return _construct_poem(author=author, title=title, timestamp=timestamp)
             else:
                 raise PoemNotFoundError(f"There is no poem \"{title}\" by \"{author}\" in the database.")
 
@@ -181,7 +179,7 @@ class Curator():
         if verbose: 
             print(f"chose poem \"{chosen_title}\" by {chosen_author}")
 
-        poem = _construct_poem(author=chosen_author, title=chosen_title, context=context, timestamp=timestamp)
+        poem = _construct_poem(author=chosen_author, title=chosen_title, timestamp=timestamp)
 
         now = datetime.now(tz=pytz.utc)
 

@@ -5,7 +5,63 @@ from dataclasses import dataclass, fields, field
 from datetime import datetime
 
 from . import utils
-from .utils import Context, WEEKDAYS, MONTHS
+from .utils import WEEKDAYS, MONTHS, timestamp_to_pretty_date, get_season, get_liturgy, get_holiday, get_month_epoch
+
+import time as ttime
+
+@dataclass
+class Context():
+    timestamp: int
+    ctime: str = ""
+    season: str = ""
+    liturgy: str = ""
+    holiday: str = ""
+
+    def __post_init__(self):
+
+        self.datetime    = datetime.fromtimestamp(self.timestamp).astimezone(pytz.utc)
+        self.ctime       = self.datetime.ctime()
+        self.season      = get_season(self.timestamp)
+        self.liturgy     = get_liturgy(self.timestamp)
+        self.holiday     = get_holiday(self.timestamp)
+        self.month_epoch = get_month_epoch(self.timestamp)
+        self.year_day    = self.datetime.timetuple().tm_yday
+        self.weekday     = WEEKDAYS[self.datetime.weekday()]
+        
+    @classmethod
+    def now(cls):
+        return cls(timestamp=int(ttime.time()))
+
+    @property
+    def year(self):
+        return self.datetime.year
+
+    @property
+    def month(self):
+        return MONTHS[self.datetime.month - 1]
+
+    @property
+    def day(self):
+        return self.datetime.day
+
+    @property
+    def pretty_date(self):
+        return timestamp_to_pretty_date(self.timestamp)
+
+    def to_dict(self):
+        return  {"timestamp": self.timestamp, 
+                     "ctime": self.ctime, 
+                    "season": self.season, 
+                   "liturgy": self.liturgy, 
+                   "holiday": self.holiday, 
+                      "year": f"{self.year:04}",
+                     "month": f"{self.month:02}",
+                       "day": f"{self.day:02}",
+                  "year_day": self.year_day, 
+                   "weekday": self.weekday, 
+               "month_epoch": self.month_epoch}
+
+
 
 @dataclass
 class Author():
@@ -61,27 +117,14 @@ class Poem():
     title: str
     body: str
     metadata: dict
-    context: dict = field(default_factory=dict)
-    timestamp: int = None
+    context: Context = None
 
     def __post_init__(self):
-
-        if self.timestamp is None:
-            self.timestamp = datetime.now(tz=pytz.utc).timestamp()
-
         if self.context is None:
-            self.context = Context.now().to_dict()
+            self.context = Context.now()
 
     def __repr__(self):
-        nodef_f_vals = (
-            (f.name, attrgetter(f.name)(self)) for f in fields(self) if f.name != "body"
-        )
-
-        nodef_f_repr = []
-        for name, value in nodef_f_vals:
-            nodef_f_repr.append(f"{name}={value}")
-
-        return f"{self.__class__.__name__}({', '.join(nodef_f_repr)})"
+        return f"{self.__class__.__name__}({self.title_by_author})"
 
     @property
     def translator(self) -> str:
@@ -99,19 +142,38 @@ class Poem():
             return f"{self.title}"
 
     @property
-    def date(self):
-        dt = datetime.fromtimestamp(self.timestamp, tz=pytz.utc)
-        return f"{WEEKDAYS[dt.weekday()].capitalize()} {MONTHS[dt.month-1].capitalize()} {int(dt.day)}, {int(dt.year)}"
+    def pretty_date(self):
+        if "date" not in self.metadata:
+            return None
+        year, m, day = [self.metadata["date"].get(attr) for attr in ["year", "month", "day"]]
+        x = ""
+        if m:
+            month = MONTHS[m-1].capitalize()
+            if day:
+                x += f"{month} {day}, "
+            else:
+                x += f"{month} "
+        if year:
+            x += f"{year}"
+
+        return x.strip()
+
+    @property
+    def spacetime(self):
+        parts = []
+        if "location" in self.metadata:
+            parts.append(self.metadata["location"])
+        if self.pretty_date:
+            parts.append(self.pretty_date)
+        return ". ".join(parts) or None
 
     @property
     def test_email_subject(self):
-        return f"TEST ({self.date}): {self.title_by_author} {self.keywords}"
+        return f"TEST ({self.pretty_date}): {self.title_by_author} {self.keywords}"
 
     @property
     def daily_email_subject(self):
         return f"Poem of the Day: {self.title_by_author}"
-
-
 
     @property
     def html_body(self):
@@ -140,7 +202,7 @@ class Poem():
 
     @property        
     def html_date(self):
-        return f'<div><i>{self.date}</i></div>'
+        return f'<div><i>{self.context.pretty_date}</i></div>'
 
     @property
     def html_description(self):
