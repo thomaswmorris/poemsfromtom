@@ -72,20 +72,11 @@ for index, entry in curator.history.iterrows():
 
         packet = {
                 "date": p.context.pretty_date,
-                "author": {
-                            "name": p.author.name,
-                            "link": p.author.link,
-                            "dates": p.author.dates.replace("--", "&ndash;")
-                            },
-                "title": p.title,
+                "description": p.html_description,
                 "body": p.html_body,
+                "translation": f"Translated by {p.translator}" if p.translator else "",
+                "spacetime": p.spacetime
                 }
-
-        if p.spacetime:
-            packet["spacetime"] = p.spacetime
-
-        if p.translator:
-            packet["translator"] = p.translator
 
         daily_poems[str(index)] = packet
 

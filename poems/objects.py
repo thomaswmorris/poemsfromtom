@@ -128,7 +128,7 @@ class Poem():
 
     @property
     def translator(self) -> str:
-        return self.metadata["translator"] if "translator" in self.metadata else None
+        return self.metadata["translator"] if "translator" in self.metadata else ""
 
     @property
     def keywords(self) -> dict:
@@ -144,7 +144,7 @@ class Poem():
     @property
     def pretty_date(self):
         if "date" not in self.metadata:
-            return None
+            return ""
         year, m, day = [self.metadata["date"].get(attr) for attr in ["year", "month", "day"]]
         x = ""
         if m:
@@ -165,7 +165,7 @@ class Poem():
             parts.append(self.metadata["location"])
         if self.pretty_date:
             parts.append(self.pretty_date)
-        return ". ".join(parts) or None
+        return ". ".join(parts) or ""
 
     @property
     def test_email_subject(self):
@@ -174,6 +174,16 @@ class Poem():
     @property
     def daily_email_subject(self):
         return f"Poem of the Day: {self.title_by_author}"
+
+    @property
+    def html_description(self):
+
+        if self.author.name:
+            description = f'{self.title} by <a href="{self.author.link}">{self.author.name}</a> {self.author.dates.replace("--", "&ndash;")}'
+        else:
+            description = self.title
+
+        return description
 
     @property
     def html_body(self):
@@ -200,12 +210,14 @@ class Poem():
 
         return "\n".join(parsed_lines)
 
-    @property        
-    def html_date(self):
-        return f'<div><i>{self.context.pretty_date}</i></div>'
+    # @property        
+    # def html_date(self):
+    #     return f'<div><i>{self.context.pretty_date}</i></div>'
+
+
 
     @property
-    def html_description(self):
+    def email_header(self):
 
         if self.author.name:
             description = f'<div>{self.title} by <a href="{self.author.link}">{self.author.name}</a> {self.author.dates.replace("--", "&ndash;")}</div>'
@@ -223,7 +235,7 @@ class Poem():
 <html lang="en">
 <section style="text-align: left; max-width: 960px; font-family: Baskerville; font-size: 18px;">
 <section style="padding-bottom: 32px;">
-{self.html_description}
+{self.email_header}
 </section>
 <section style="padding-bottom: 32px;">
 {self.html_body}
