@@ -161,15 +161,15 @@ class Poem():
     @property
     def spacetime(self):
         parts = []
-        if "location" in self.metadata:
-            parts.append(self.metadata["location"])
         if self.pretty_date:
             parts.append(self.pretty_date)
+        if "location" in self.metadata:
+            parts.append(self.metadata["location"])
         return ". ".join(parts) or ""
 
     @property
     def test_email_subject(self):
-        return f"TEST ({self.pretty_date}): {self.title_by_author} {self.keywords}"
+        return f"TEST ({self.context.pretty_date}): {self.title_by_author} {self.keywords}"
 
     @property
     def daily_email_subject(self):
