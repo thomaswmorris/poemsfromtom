@@ -1,0 +1,61 @@
+import json, os
+import numpy as np
+from .errors import AuthorNotFoundError, PoemNotFoundError
+from .catalog import Catalog
+
+here, this_file = os.path.split(__file__)
+
+with open(f"{here}/weights.json", "r+") as f:
+    CONTEXT_WEIGHTS = json.load(f)
+
+class Curator():
+
+    def __init__(self, filepath=f"{here}/poems.json"):
+
+        self.catalog = Catalog(filepath=filepath)
+                    
+    def get_poem(
+                self,
+                author=None,
+                title=None,
+                verbose=False,
+                very_verbose=False,
+                ):
+
+        verbose = verbose or very_verbose
+        mask = self.catalog.likelihood > 0
+
+        if author and title:
+            if author in self.catalog.data:
+                if title in self.catalog.data[author]["poems"]:
+                    return self.catalog.construct_poem(author=author, title=title)
+                else:
+                    raise PoemNotFoundError(f"There is no poem '{title}' by author '{author}' in the database.")
+            else: 
+                raise AuthorNotFoundError(f"There is no author '{author}' in the database.")
+        
+        # if author is supplied, get rid of poems not by that author
+        if author: 
+            mask &= self.catalog.author == author
+            if not mask.sum():
+                raise PoemNotFoundError(f"There are no poems by author '{author}' in the database.")
+
+        # if JUST the title is supplied, do this (why would you ever do this? but we should support it anyway)
+        if title: 
+            mask &= self.catalog.title == title
+            if not mask.sum():
+                raise PoemNotFoundError(f"There is no poem called '{title}' by any author in the database.")
+        
+        poems = self.catalog.df.loc[mask].copy()
+        poems["probability"] = poems.likelihood / poems.likelihood.sum()
+
+        if very_verbose: 
+            print(f"choosing from {len(poems)} poems; the 20 most likely are:")
+            print(poems.sort_values("probability", ascending=False)[["author", "title", "keywords", "probability"]].iloc[:20])
+        chosen_loc = np.random.choice(poems.index, p=poems.probability)
+        chosen_author, chosen_title = poems.loc[chosen_loc, ["author", "title"]]
+        
+        if verbose: 
+            print(f"chose poem '{chosen_title}' by {chosen_author}")
+
+        return self.catalog.construct_poem(author=chosen_author, title=chosen_title)

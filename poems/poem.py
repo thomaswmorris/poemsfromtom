@@ -1,71 +1,12 @@
-import pytz, re
-
-from operator import attrgetter
-from dataclasses import dataclass, fields, field
-from datetime import datetime
+from dataclasses import dataclass, field
 
 from . import utils
-from .utils import WEEKDAYS, MONTHS, timestamp_to_pretty_date, get_season, get_liturgy, get_holiday, get_month_epoch
-
-import time as ttime
-
-@dataclass
-class Context():
-    timestamp: int
-    ctime: str = ""
-    season: str = ""
-    liturgy: str = ""
-    holiday: str = ""
-
-    def __post_init__(self):
-
-        self.datetime    = datetime.fromtimestamp(self.timestamp).astimezone(pytz.utc)
-        self.ctime       = self.datetime.ctime()
-        self.season      = get_season(self.timestamp)
-        self.liturgy     = get_liturgy(self.timestamp)
-        self.holiday     = get_holiday(self.timestamp)
-        self.month_epoch = get_month_epoch(self.timestamp)
-        self.year_day    = self.datetime.timetuple().tm_yday
-        self.weekday     = WEEKDAYS[self.datetime.weekday()]
-        
-    @classmethod
-    def now(cls):
-        return cls(timestamp=int(ttime.time()))
-
-    @property
-    def year(self):
-        return self.datetime.year
-
-    @property
-    def month(self):
-        return MONTHS[self.datetime.month - 1]
-
-    @property
-    def day(self):
-        return self.datetime.day
-
-    @property
-    def pretty_date(self):
-        return timestamp_to_pretty_date(self.timestamp)
-
-    def to_dict(self):
-        return  {"timestamp": self.timestamp, 
-                     "ctime": self.ctime, 
-                    "season": self.season, 
-                   "liturgy": self.liturgy, 
-                   "holiday": self.holiday, 
-                      "year": f"{self.year:04}",
-                     "month": f"{self.month:02}",
-                       "day": f"{self.day:02}",
-                  "year_day": self.year_day, 
-                   "weekday": self.weekday, 
-               "month_epoch": self.month_epoch}
-
-
+from .context import Context
 
 @dataclass
 class Author():
     """Author dataclass"""
+    tag: str
     name: str
     birth: str
     death: str
@@ -113,6 +54,7 @@ class Author():
 @dataclass
 class Poem():
     """Poem dataclass"""
+    tag: str
     author: Author
     title: str
     body: str
