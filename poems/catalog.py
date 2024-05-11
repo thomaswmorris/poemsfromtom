@@ -70,7 +70,7 @@ class Catalog():
     def copy(self):
         return Catalog(filepath=self.filepath)
 
-    def apply_context(self, context: dict, forced=[]):
+    def apply_context(self, context: dict, forced=[], verbose=False):
 
         if self.contextual:
             raise RuntimeError("Already contextual!")
@@ -86,7 +86,12 @@ class Catalog():
                 mask = np.array([c==keyword for c in contexts[category]])
 
                 if keyword == context[category]: 
-                    multiplier = 1e18 if keyword in forced else CONTEXT_WEIGHTS[category][keyword]  
+                    if keyword in forced:
+                        if verbose:
+                            print(f"Forcing context '{keyword}'.")
+                            multiplier = 1e18 
+                    else:
+                        multiplier = CONTEXT_WEIGHTS[category][keyword]  
                 else: 
                     multiplier = 0
                 
@@ -95,7 +100,7 @@ class Catalog():
         self.contextual = True
 
     
-    def apply_history(self, history: DataFrame, latency: int = 30 * 86400):
+    def apply_history(self, history: DataFrame, latency: int = 60 * 86400, verbose: bool = False):
 
         timestamp = Context.now().timestamp
 
@@ -106,6 +111,7 @@ class Catalog():
         last_occurence = last_occurence.sort_values("timestamp")
 
         indices_to_drop = []
+        dropped_authors = []
 
         for _, entry in history.iterrows():
 
@@ -117,8 +123,12 @@ class Catalog():
             indices_to_drop.extend(res.index)
 
             if entry.timestamp > timestamp - latency:
+                if entry.author in dropped_authors:
+                    indices_to_drop.extend(self.df.loc[self.df.author == entry.author].index)
+                    dropped_authors.append(entry.author)
 
-                indices_to_drop.extend(self.df.loc[self.df.author == entry.author].index)
+        if verbose:
+            print(f"Dropped authors {dropped_authors}.")
 
         self.df.loc[indices_to_drop, "likelihood"] = 0
 

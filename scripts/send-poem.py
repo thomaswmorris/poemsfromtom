@@ -31,10 +31,12 @@ when = ttime.time() if not test else ttime.time() + random.uniform(low=0, high=3
 context = Context(timestamp=when)
 
 curator.catalog.apply_context(context.to_dict(), forced=["holy_thursday", "good_friday", "holy_saturday", "easter_sunday", "christmas_eve", "christmas_day"])
-curator.catalog.apply_history(history)
+curator.catalog.apply_history(history, verbose=True)
 
 # choose a poem 
 p = curator.get_poem(verbose=True, very_verbose=test)
+
+curator.catalog.reset()
 
 subject = p.test_email_subject if test else p.daily_email_subject
 
@@ -46,7 +48,6 @@ for index, entry in listserv.iterrows():
     t.start()
     ttime.sleep(1e0)
 
-# don't record this in the history
 if not test:
 
     index = len(history) + 1
@@ -59,7 +60,6 @@ if not test:
     history.loc[index, "title"] = p.tag,
     history.loc[index, "author"] = p.author.tag,
 
-    
 daily_poems = {}
 for index, entry in history.iterrows():
     try:
@@ -79,10 +79,10 @@ for index, entry in history.iterrows():
     except Exception as e:
         warnings.warn(f"Could not find poem for entry {entry}")
 
-utils.write_to_repo(repo, 
+utils.write_to_repo(repo,
                     items={
-                        "data/poems/history-daily.csv" : history.to_csv(), 
-                        "data/poems/author-stats.csv" : utils.make_author_stats(history).to_csv(),
-                        "docs/assets/scripts/data/daily-poems.js" : f"var dailyPoems = {json.dumps(daily_poems, indent=4, ensure_ascii=False)}",
+                        "data/poems/history-daily.csv": history.to_csv(), 
+                        "data/poems/author-stats.csv": utils.make_author_stats(history).to_csv(),
+                        "docs/assets/scripts/data/daily-poems.js": f"var dailyPoems = {json.dumps(daily_poems, indent=4, ensure_ascii=False)}",
                     }, 
                     verbose=True)

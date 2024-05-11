@@ -46,14 +46,14 @@ class Curator():
             if not mask.sum():
                 raise PoemNotFoundError(f"There is no poem called '{title}' by any author in the database.")
         
-        poems = self.catalog.df.loc[mask].copy()
-        poems["probability"] = poems.likelihood / poems.likelihood.sum()
+        self.catalog.df.loc[~mask, "likelihood"] = 0
+        self.catalog.df["probability"] = self.catalog.df.likelihood / self.catalog.df.likelihood.sum()
 
         if very_verbose: 
-            print(f"choosing from {len(poems)} poems; the 20 most likely are:")
-            print(poems.sort_values("probability", ascending=False)[["author", "title", "context", "probability"]].iloc[:20])
-        chosen_loc = np.random.choice(poems.index, p=poems.probability)
-        chosen_author, chosen_title = poems.loc[chosen_loc, ["author", "title"]]
+            print(f"choosing from {len(self.catalog.df)} poems; the 20 most likely are:")
+            print(self.catalog.df.sort_values("probability", ascending=False)[["author", "title", "context", "probability"]].iloc[:20])
+        chosen_loc = np.random.choice(self.catalog.df.index, p=self.catalog.df.probability)
+        chosen_author, chosen_title = self.catalog.df.loc[chosen_loc, ["author", "title"]]
         
         if verbose: 
             print(f"chose poem '{chosen_title}' by {chosen_author}")
