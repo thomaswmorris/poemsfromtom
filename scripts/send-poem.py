@@ -28,7 +28,7 @@ repo = utils.load_github_repo(github_repo_name=args.github_repo_name,
 history = utils.read_csv(repo=repo, filepath="data/poems/history-daily.csv")
 
 when = ttime.time() if not test else ttime.time() + random.uniform(low=0, high=365 * 86400)
-context = curator.objects.Context(timestamp=when).to_dict()
+context = Context(timestamp=when)
 
 curator.catalog.apply_context(context.to_dict(), forced=["holy_thursday", "good_friday", "holy_saturday", "easter_sunday", "christmas_eve", "christmas_day"])
 curator.catalog.apply_history(history)

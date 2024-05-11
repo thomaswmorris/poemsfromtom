@@ -51,7 +51,7 @@ class Curator():
 
         if very_verbose: 
             print(f"choosing from {len(poems)} poems; the 20 most likely are:")
-            print(poems.sort_values("probability", ascending=False)[["author", "title", "keywords", "probability"]].iloc[:20])
+            print(poems.sort_values("probability", ascending=False)[["author", "title", "context", "probability"]].iloc[:20])
         chosen_loc = np.random.choice(poems.index, p=poems.probability)
         chosen_author, chosen_title = poems.loc[chosen_loc, ["author", "title"]]
         

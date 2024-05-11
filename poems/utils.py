@@ -1,10 +1,8 @@
-import re, smtplib
+import re, pytz, smtplib, time
 
 import numpy as np
 import pandas as pd
 import github as gh
-import time
-
 
 from datetime import datetime
 from email.mime.multipart import MIMEMultipart
@@ -48,7 +46,7 @@ def write_to_repo(repo, items, branch="master", verbose=False):
 
         blob = repo.create_git_blob(content, "utf-8")
         elements.append(gh.InputGitTreeElement(path=filename, mode="100644", type="blob", sha=blob.sha))
-        if verbose: print(f"writing to {github_repo_name}/{filename}")
+        if verbose: print(f"writing to {filename}")
 
     head_sha   = repo.get_branch(branch).commit.sha
     base_tree  = repo.get_git_tree(sha=head_sha)
