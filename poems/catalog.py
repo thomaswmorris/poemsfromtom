@@ -100,7 +100,7 @@ class Catalog():
         self.contextual = True
 
     
-    def apply_history(self, history: DataFrame, latency: int = 60 * 86400, verbose: bool = False):
+    def apply_history(self, history: DataFrame, latency: int = 30 * 86400, verbose: bool = False):
 
         timestamp = Context.now().timestamp
 
@@ -123,7 +123,7 @@ class Catalog():
             indices_to_drop.extend(res.index)
 
             if entry.timestamp > timestamp - latency:
-                if entry.author in dropped_authors:
+                if entry.author not in dropped_authors:
                     indices_to_drop.extend(self.df.loc[self.df.author == entry.author].index)
                     dropped_authors.append(entry.author)
 
