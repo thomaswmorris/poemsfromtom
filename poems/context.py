@@ -50,6 +50,10 @@ class Context():
         return self.datetime.day
 
     @property
+    def isoformat(self):
+        return self.datetime.isoformat()
+
+    @property
     def pretty_date(self):
         return timestamp_to_pretty_date(self.timestamp)
 

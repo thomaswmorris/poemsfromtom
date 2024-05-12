@@ -70,21 +70,24 @@ def make_author_stats(history, catalog=None):
         if author not in entries:
 
             author_mask = history.author.values == author
-            days_since_last_sent = (timestamp - history.loc[author_mask, "timestamp"].max()) / 86400
+            timestamp_last_sent = history.loc[author_mask, "timestamp"].max()
+            isoformat_last_sent = datetime.fromtimestamp(timestamp_last_sent).astimezone(pytz.utc).isoformat()
+            days_since_last_sent = (timestamp - timestamp_last_sent) / 86400
 
             entries[author] = {
                 "n_times_sent": sum(author_mask),
+                "date_last_sent": isoformat_last_sent[:10],
                 "days_since_last_sent": int(days_since_last_sent),
             }
 
-    stats = pd.DataFrame(entries, dtype=int).T
+    stats = pd.DataFrame(entries).T
 
     if catalog:
 
         sort_kwargs["by"].append("n_poems")
         sort_kwargs["ascending"].append(False)
 
-        stats.insert(0, "n_poems", 0)
+        stats.insert(1, "n_poems", 0)
 
         for author in stats.index:
 

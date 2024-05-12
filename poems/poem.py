@@ -69,10 +69,6 @@ class Poem():
         return f"{self.__class__.__name__}({self.title_by_author})"
 
     @property
-    def translator(self) -> str:
-        return self.metadata["translator"] if "translator" in self.metadata else ""
-
-    @property
     def keywords(self) -> dict:
         return self.metadata["keywords"] if "keywords" in self.metadata else {}
 
@@ -108,6 +104,15 @@ class Poem():
         if "location" in self.metadata:
             parts.append(self.metadata["location"])
         return ". ".join(parts) or ""
+
+    @property
+    def translator(self) -> str:
+        return self.metadata.get("translator")
+
+    @property
+    def translation(self) -> str:
+        return f"Translated by {self.translator}" if self.translator is not None else ""
+
 
     @property
     def test_email_subject(self):

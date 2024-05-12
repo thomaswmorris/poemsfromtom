@@ -51,14 +51,14 @@ for index, entry in listserv.iterrows():
 if not test:
 
     index = len(history) + 1
-    now = datetime.now(tz=pytz.utc)
-    date, time = now.isoformat()[:19].split("T")
+    now = Context.now()
+    date, time = now.isoformat[:19].split("T")
 
-    history.loc[index, "date"] = date,
-    history.loc[index, "time"] = time,
-    history.loc[index, "timestamp"] = int(now.timestamp()),
-    history.loc[index, "title"] = p.tag,
-    history.loc[index, "author"] = p.author.tag,
+    history.loc[index, "date"] = date
+    history.loc[index, "time"] = time
+    history.loc[index, "timestamp"] = int(now.timestamp)
+    history.loc[index, "title"] = p.tag
+    history.loc[index, "author"] = p.author.tag
 
 daily_poems = {}
 for index, entry in history.iterrows():
@@ -71,7 +71,7 @@ for index, entry in history.iterrows():
                 "description": p.html_description,
                 "body": p.html_body,
                 "translation": f"Translated by {p.translator}" if p.translator else "",
-                "spacetime": p.spacetime
+                "spacetime": p.spacetime,
                 }
 
         daily_poems[str(index)] = packet
@@ -82,7 +82,7 @@ for index, entry in history.iterrows():
 utils.write_to_repo(repo,
                     items={
                         "data/poems/history-daily.csv": history.to_csv(), 
-                        "data/poems/author-stats.csv": utils.make_author_stats(history).to_csv(),
+                        "data/poems/author-stats.csv": utils.make_author_stats(history, catalog=curator.catalog).to_csv(),
                         "docs/assets/scripts/data/daily-poems.js": f"var dailyPoems = {json.dumps(daily_poems, indent=4, ensure_ascii=False)}",
                     }, 
                     verbose=True)

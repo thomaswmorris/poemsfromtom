@@ -2,6 +2,7 @@ import json, os
 import numpy as np
 from .errors import AuthorNotFoundError, PoemNotFoundError
 from .catalog import Catalog
+from .poem import Author, Poem
 
 here, this_file = os.path.split(__file__)
 
@@ -13,14 +14,28 @@ class Curator():
     def __init__(self, filepath=f"{here}/poems.json"):
 
         self.catalog = Catalog(filepath=filepath)
-                    
+
+
+    def get_author(self, author=None) -> Author:
+
+        all_authors = list(self.catalog.data.keys())
+
+        if author is None:
+            author = np.random.choice(all_authors)
+
+        if author in all_authors:
+            return Author(tag=author, **self.catalog.data[author]["metadata"])
+
+        raise ValueError(f"No author '{author}'.")
+
+                
     def get_poem(
                 self,
                 author=None,
                 title=None,
                 verbose=False,
                 very_verbose=False,
-                ):
+                ) -> Poem:
 
         verbose = verbose or very_verbose
         mask = self.catalog.likelihood > 0
