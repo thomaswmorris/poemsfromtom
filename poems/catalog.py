@@ -73,7 +73,7 @@ class Catalog():
     def apply_context(self, context: dict, forced=[], verbose=False):
 
         if self.contextual:
-            raise RuntimeError("Already contextual!")
+            self.reset()
 
         contexts = self.contexts
 
@@ -88,16 +88,18 @@ class Catalog():
                 if keyword == context[category]: 
                     if keyword in forced:
                         if verbose:
-                            print(f"Forcing context '{keyword}'.")
-                            multiplier = 1e18 
+                            print(f"Forcing context '{keyword}'")
+                        multiplier = 1e18
                     else:
-                        multiplier = CONTEXT_WEIGHTS[category][keyword]  
+                        multiplier = weight
                 else: 
                     multiplier = 0
                 
                 self.df.loc[mask, "likelihood"] *= multiplier
 
         self.contextual = True
+
+        self.df.loc[:, "probability"] = self.df.likelihood / self.df.likelihood.sum()
 
     
     def apply_history(self, history: DataFrame, latency: int = 30 * 86400, verbose: bool = False):

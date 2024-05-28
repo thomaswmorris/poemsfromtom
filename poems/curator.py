@@ -73,4 +73,6 @@ class Curator():
         if verbose: 
             print(f"chose poem '{chosen_title}' by {chosen_author}")
 
+        self.catalog.reset()
+
         return self.catalog.construct_poem(author=chosen_author, title=chosen_title)
