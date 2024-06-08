@@ -75,9 +75,9 @@ def make_author_stats(history, catalog=None):
             days_since_last_sent = (timestamp - timestamp_last_sent) / 86400
 
             entries[author] = {
-                "n_times_sent": sum(author_mask),
                 "date_last_sent": isoformat_last_sent[:10],
                 "days_since_last_sent": int(days_since_last_sent),
+                "n_times_sent": sum(author_mask),
             }
 
     stats = pd.DataFrame(entries).T
@@ -87,7 +87,7 @@ def make_author_stats(history, catalog=None):
         sort_kwargs["by"].append("n_poems")
         sort_kwargs["ascending"].append(False)
 
-        stats.insert(1, "n_poems", 0)
+        stats.insert(2, "n_poems", 0)
 
         for author in stats.index:
 
