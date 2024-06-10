@@ -35,10 +35,12 @@ curator.catalog.apply_history(history, verbose=True)
 
 # choose a poem 
 p = curator.get_poem(verbose=True, very_verbose=test)
-
 curator.catalog.reset()
 
-subject = p.test_email_subject if test else p.daily_email_subject
+if test:
+    subject = f"TEST ({context.pretty_date}): {p.title_by_author} context={p.keywords}"
+else:
+    subject = p.daily_email_subject
 
 listserv = utils.read_csv(repo=repo, filepath=args.listserv_filename)
 

@@ -61,7 +61,7 @@ class Catalog():
         self.contextual = False
 
     @property
-    def contexts(self):
+    def poem_contexts(self):
         c = {}
         for category in CONTEXT_WEIGHTS.keys():
             c[category] = [context.get(category, None) for context in self.df.context]
@@ -75,7 +75,7 @@ class Catalog():
         if self.contextual:
             self.reset()
 
-        contexts = self.contexts
+        poem_contexts = self.poem_contexts # of the catalog
 
         for category in CONTEXT_WEIGHTS.keys():
             if not category in context.keys(): 
@@ -83,7 +83,7 @@ class Catalog():
 
             for keyword, weight in CONTEXT_WEIGHTS[category].items():
 
-                mask = np.array([c==keyword for c in contexts[category]])
+                mask = np.array([c==keyword for c in poem_contexts[category]])
 
                 if keyword == context[category]: 
                     if keyword in forced:
