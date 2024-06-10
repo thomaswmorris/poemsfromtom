@@ -30,6 +30,8 @@ history = utils.read_csv(repo=repo, filepath="data/poems/history-daily.csv")
 when = ttime.time() if not test else ttime.time() + random.uniform(low=0, high=365 * 86400)
 context = Context(timestamp=when)
 
+print(f"using context {context.to_dict()}")
+
 curator.catalog.apply_context(context.to_dict(), forced=["holy_thursday", "good_friday", "holy_saturday", "easter_sunday", "christmas_eve", "christmas_day"])
 curator.catalog.apply_history(history, verbose=True)
 
@@ -45,13 +47,11 @@ else:
 listserv = utils.read_csv(repo=repo, filepath=args.listserv_filename)
 
 for index, entry in listserv.iterrows():
-
     t = threading.Thread(target=utils.email_thread, args=(p, args.username, args.password, entry["name"], entry["email"], subject))
     t.start()
     ttime.sleep(1e0)
 
 if not test:
-
     index = len(history) + 1
     now = Context.now()
     date, time = now.isoformat[:19].split("T")
