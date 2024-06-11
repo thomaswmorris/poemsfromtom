@@ -30,7 +30,7 @@ class Catalog():
             author_tags = author_metadata["tags"]
             for title, poem in author_data["poems"].items():
 
-                context_keywords = poem["metadata"].get("keywords", {})
+                context_keywords = poem["metadata"].get("context", {})
 
                 entries[index] = {
                                   "author": author, 

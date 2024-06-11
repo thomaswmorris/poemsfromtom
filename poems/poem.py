@@ -70,7 +70,7 @@ class Poem():
 
     @property
     def keywords(self) -> dict:
-        return self.metadata["keywords"] if "keywords" in self.metadata else {}
+        return self.metadata.get("context", {})
 
     @property
     def title_by_author(self):
