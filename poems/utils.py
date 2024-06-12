@@ -65,20 +65,20 @@ def make_author_stats(history, catalog=None):
 
     timestamp = time.time()
     
-    for author in np.unique(history.author):
+    for author in np.unique(catalog.author):
 
         if author not in entries:
 
             author_mask = history.author.values == author
-            timestamp_last_sent = history.loc[author_mask, "timestamp"].max()
-            isoformat_last_sent = datetime.fromtimestamp(timestamp_last_sent).astimezone(pytz.utc).isoformat()
-            days_since_last_sent = (timestamp - timestamp_last_sent) / 86400
+            entries[author] = {"n_times_sent": sum(author_mask)}
 
-            entries[author] = {
-                "date_last_sent": isoformat_last_sent[:10],
-                "days_since_last_sent": int(days_since_last_sent),
-                "n_times_sent": sum(author_mask),
-            }
+            if author_mask.sum():
+                timestamp_last_sent = history.loc[author_mask, "timestamp"].max()
+                isoformat_last_sent = datetime.fromtimestamp(timestamp_last_sent).astimezone(pytz.utc).isoformat()
+                days_since_last_sent = (timestamp - timestamp_last_sent) / 86400
+
+                entries[author]["date_last_sent"] = isoformat_last_sent[:10]
+                entries[author]["days_since_last_sent"] = int(days_since_last_sent)
 
     stats = pd.DataFrame(entries).T
 
