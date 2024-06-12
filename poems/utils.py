@@ -59,35 +59,31 @@ def write_to_repo(repo, items, branch="master", verbose=False):
 
 def make_author_stats(history, catalog=None):
 
-    sort_kwargs = {"by": ["n_times_sent", "days_since_last_sent"], "ascending": [False, True]}
-
-    entries = {}
+    sort_kwargs = {"by": ["n_times_sent", "n_poems", "days_since_last_sent"], "ascending": [False, True, False]}
 
     timestamp = time.time()
+
+    stats = pd.DataFrame(columns=["n_times_sent", "n_poems", "date_last_sent", "days_since_last_sent"], dtype="object")
     
-    for author in np.unique(catalog.author):
+    uauthors = np.unique(catalog.author if catalog else history.author)
 
-        if author not in entries:
+    for author in uauthors:
 
+        if author not in stats.index.values:
             author_mask = history.author.values == author
-            entries[author] = {"n_times_sent": sum(author_mask)}
+            stats.loc[author, "n_times_sent"] = sum(author_mask)
 
             if author_mask.sum():
                 timestamp_last_sent = history.loc[author_mask, "timestamp"].max()
                 isoformat_last_sent = datetime.fromtimestamp(timestamp_last_sent).astimezone(pytz.utc).isoformat()
                 days_since_last_sent = (timestamp - timestamp_last_sent) / 86400
-
-                entries[author]["date_last_sent"] = isoformat_last_sent[:10]
-                entries[author]["days_since_last_sent"] = int(days_since_last_sent)
-
-    stats = pd.DataFrame(entries).T
+                stats.loc[author,"date_last_sent"] = isoformat_last_sent[:10]
+                stats.loc[author,"days_since_last_sent"] = int(days_since_last_sent)
 
     if catalog:
 
         sort_kwargs["by"].append("n_poems")
         sort_kwargs["ascending"].append(False)
-
-        stats.insert(2, "n_poems", 0)
 
         for author in stats.index:
 
@@ -95,33 +91,6 @@ def make_author_stats(history, catalog=None):
 
     return stats.sort_values(**sort_kwargs)
 
-
-# def make_stats(self, order_by=None, ascending=True, force_rows=True, force_cols=True):
-
-#     if self.history is None: raise(Exception("No history has been loaded!"))
-#     if force_rows: pd.set_option("display.max_rows", None)
-#     if force_cols: pd.set_option("display.max_columns", None)
-#     self.stats = pd.DataFrame(columns=["name", "nationality","birth","death","n_poems","n_times_sent","days_since_last_sent"])
-
-#     for author in db.keys():
-
-#         name = db[author]["metadata"]["name"]
-#         birth = db[author]["metadata"]["birth"]
-#         death = db[author]["metadata"]["death"]
-#         nationality = db[author]["metadata"]["nationality"]
-#         n_poems = db[author]["metadata"]["n_poems"]
-
-#         elapsed = (ttime.time() - self.history["timestamp"][self.history.author==author].max()) / 86400 
-#         n_times_sent = (self.history["author"]==author).sum()
-        
-#         self.stats.loc[author] = name, nationality, birth, death, n_poems, n_times_sent, np.round(elapsed,1)
-        
-#     self.stats = self.stats.sort_values(by=["n_times_sent", "n_poems", "name"], ascending=False)
-
-#     if not order_by is None:
-#         self.stats = self.stats.sort_values(by=order_by, ascending=ascending)
-
-        
         
 
 def send_email(username, password, html, recipient, subject=""):
@@ -148,36 +117,3 @@ def add_italic_tags(text):
             section.replace("<i></i>", "")
         sections.append(section)
     return "".join(sections)
-
-# def convert_to_html_lines(text):
-#     """
-#     Converts to HTML italic format.
-#     """
-#     html_lines = []
-#     for line in text.split("\n"):
-#         if len(line) == 0:
-#             html_lines.append('<div class="poem-line-blank">&#8203</div>')
-#         elif line[:2] == "> ":
-#             html_lines.append(f'<div class="poem-line-title">{line}</div>')
-#         elif line.strip().strip("_")[0] in ["“", "‘", "’"]:
-#             html_lines.append(f'<div class="poem-line-punc-start">{line}</div>')
-#         else:
-#             html_lines.append(f'<div class="poem-line">{line}</div>')
-            
-#     return add_italic_tags("\n".join(html_lines))
-
-
-
-# def text_to_html_lines(text):
-
-#     text = text.replace("--", "&#8212;") # convert emdashes
-#     text = add_italic_tags(text)
-
-#     parsed_lines = []
-#     for line in text.split("\n"):
-#         if len(line) > 0:
-#             parsed_lines.append(f'<div class="poem-line">{line.strip()}</div>')
-#         else:
-#             parsed_lines.append(f'<div class="poem-line-blank">&#8203;</div>')
-
-#     return "\n".join(parsed_lines)
