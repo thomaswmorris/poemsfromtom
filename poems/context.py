@@ -188,7 +188,7 @@ def get_liturgy(t=ttime.time()):
         return "eastertide"
     if advent_sunday_year_day <= year_day < christmas_year_day: 
         return "advent"
-    return "ordinary time"
+    return "ordinary_time"
 
 def get_advent_sunday_year_day(year):
     christmas_year_day = datetime(year,12,25).timetuple().tm_yday 
