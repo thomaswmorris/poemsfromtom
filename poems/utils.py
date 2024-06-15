@@ -59,7 +59,7 @@ def write_to_repo(repo, items, branch="master", verbose=False):
 
 def make_author_stats(history, catalog=None):
 
-    sort_kwargs = {"by": ["n_times_sent", "n_poems", "days_since_last_sent"], "ascending": [False, True, False]}
+    sort_kwargs = {"by": ["n_times_sent", "n_poems", "days_since_last_sent"], "ascending": [False, False, False]}
 
     timestamp = time.time()
 
