@@ -16,6 +16,7 @@ parser.add_argument("--listserv_filename", type=str, help="Where to send the poe
 parser.add_argument("--github_repo_name", type=str, help="Which GH repository to load", default="")
 parser.add_argument("--github_token", type=str, help="GH token", default="")
 parser.add_argument("--kind", type=str, help="What tag to write to the history with", default="")
+parser.add_argument("--write_to_repo", type=bool, help="Should we update the repo", default=False)
 args = parser.parse_args()
 
 test = (args.kind == "test")
@@ -81,10 +82,12 @@ for index, entry in history.iterrows():
     except Exception as e:
         warnings.warn(f"Could not find poem for entry {entry}")
 
-utils.write_to_repo(repo,
-                    items={
-                        "data/poems/history-daily.csv": history.to_csv(), 
-                        "data/poems/author-stats.csv": utils.make_author_stats(history, catalog=curator.catalog).to_csv(),
-                        "docs/assets/scripts/data/daily-poems.js": f"var dailyPoems = {json.dumps(daily_poems, indent=4, ensure_ascii=False)}",
-                    }, 
-                    verbose=True)
+if args.write_to_repo:
+    
+    utils.write_to_repo(repo,
+                        items={
+                            "data/poems/history-daily.csv": history.to_csv(), 
+                            "data/poems/author-stats.csv": utils.make_author_stats(history, catalog=curator.catalog).to_csv(),
+                            "docs/assets/scripts/data/daily-poems.js": f"var dailyPoems = {json.dumps(daily_poems, indent=4, ensure_ascii=False)}",
+                        }, 
+                        verbose=True)

@@ -1,4 +1,3 @@
-# from .catalog import Catalog
-from .context import Context
+from .context import Context # noqa
 from .curator import Curator # noqa
-from .poem import Poem, Author
+from .poem import Poem, Author # noqa
