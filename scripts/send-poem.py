@@ -16,7 +16,7 @@ parser.add_argument("--listserv_filename", type=str, help="Where to send the poe
 parser.add_argument("--github_repo_name", type=str, help="Which GH repository to load", default="")
 parser.add_argument("--github_token", type=str, help="GH token", default="")
 parser.add_argument("--kind", type=str, help="What tag to write to the history with", default="")
-parser.add_argument("--write_to_repo", type=bool, help="Should we update the repo", default=False)
+parser.add_argument('--write_to_repo', action=argparse.BooleanOptionalAction)
 args = parser.parse_args()
 
 test = (args.kind == "test")
@@ -83,7 +83,6 @@ for index, entry in history.iterrows():
         warnings.warn(f"Could not find poem for entry {entry}")
 
 if args.write_to_repo:
-    
     utils.write_to_repo(repo,
                         items={
                             "data/poems/history-daily.csv": history.to_csv(), 

@@ -1,14 +1,13 @@
 import datetime, json, numpy, os, pandas, sys, yaml
 base, this_file = os.path.split(__file__)
 
-sys.path.append(f"/users/tom/repos/poemsfromtom/poems")
-import utils
+from poems import utils
 
-context_categories = [key for key in utils.get_context_dict(0).keys() if not key == "timestamp"]
+context_categories = [key for key in utils.Context(0).keys() if not key == "timestamp"]
 sample_times = numpy.arange(datetime.datetime(2000, 1, 1, 12).timestamp(), datetime.datetime(2100, 1, 1, 12).timestamp(), 86400)
 
-sampled_context_values = numpy.array([list(utils.get_context_dict(t).values()) for t in sample_times])
-sampled_context = pandas.DataFrame(sampled_context_values, columns=utils.get_context_dict().keys())
+sampled_context_values = numpy.array([list(utils.Context(t).values()) for t in sample_times])
+sampled_context = pandas.DataFrame(sampled_context_values, columns=utils.Context.now().keys())
 
 CONTEXT_MULTIPLIERS = {}
 for category in ['weekday', 'month', 'day', 'season', 'liturgy', 'holiday', 'month_epoch']:

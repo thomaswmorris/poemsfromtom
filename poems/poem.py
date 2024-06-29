@@ -134,11 +134,14 @@ class Poem():
         return f'''<!DOCTYPE html>
 <html lang="en">
 <section style="text-align: left; max-width: 960px; font-family: Baskerville; font-size: 18px;">
-<section style="padding-bottom: 32px;">
+<section id="header" style="padding-bottom: 32px;">
 {self.email_header}
 </section>
-<section style="padding-bottom: 32px;">
+<section id="body" style="padding-bottom: 32px;">
 {self.html_body}
+</section>
+<section id="footer" style="padding-bottom: 32px;">
+{self.spacetime}
 </section>
 <section>
 <a href="https://thomaswmorris.com/poems">daily poems archive</a>

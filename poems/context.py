@@ -126,6 +126,7 @@ def get_holiday(t=None):
             return "winter_solstice"
     
     christmas_day = datetime(dt.year,12,25)
+    christmas_day_weekday = WEEKDAYS[christmas_day.weekday()]
     advent_sunday_year_day = christmas_day.timetuple().tm_yday - (22 + christmas_day.weekday())   
 
     # these are relative to advent
@@ -154,6 +155,11 @@ def get_holiday(t=None):
         return "baptism" # first sunday after epiphany
     if (month, weekday) == ("may", "monday") and (get_utc_datetime(t + 7 * 86400).month == 6): 
         return "memorial_day" # last monday of may
+
+    if (year_day > christmas_day.timetuple().tm_yday) and (weekday == "sunday"): 
+        return "holy_family" # sunday after christmas
+    if (month, day) == ("december", 30) and christmas_day_weekday == "sunday":
+        return "holy_family" # if christmas is a sunday then december 30
 
     if day in HOLIDAYS["dates"][month].keys():
         return HOLIDAYS["dates"][month][day]
