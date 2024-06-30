@@ -39,7 +39,7 @@ class Poem():
         year, m, day = [self.metadata["date"].get(attr) for attr in ["year", "month", "day"]]
         x = ""
         if m:
-            month = MONTHS[m-1].capitalize()
+            month = m.capitalize()
             if day:
                 x += f"{month} {day}, "
             else:
@@ -52,11 +52,11 @@ class Poem():
     @property
     def spacetime(self):
         parts = []
-        if self.pretty_date:
-            parts.append(self.pretty_date)
         if "location" in self.metadata:
             parts.append(self.metadata["location"])
-        return ". ".join(parts) or ""
+        if self.pretty_date:
+            parts.append(self.pretty_date)
+        return ". ".join(parts)
 
     @property
     def translator(self) -> str:
