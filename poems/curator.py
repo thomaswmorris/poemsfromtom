@@ -65,8 +65,9 @@ class Curator():
         self.catalog.df["probability"] = self.catalog.df.likelihood / self.catalog.df.likelihood.sum()
 
         if very_verbose: 
-            print(f"choosing from {len(self.catalog.df)} poems; the 20 most likely are:")
-            print(self.catalog.df.sort_values("probability", ascending=False)[["author", "title", "context", "probability"]].iloc[:20])
+            catalog_summary = self.catalog.df.sort_values("probability", ascending=False)[["author", "title", "context", "probability"]]
+            print(f"choosing from {len(self.catalog.df)} poems; the most likely are:")
+            print(catalog_summary.iloc[:20].to_string())
         chosen_loc = np.random.choice(self.catalog.df.index, p=self.catalog.df.probability)
         chosen_author, chosen_title = self.catalog.df.loc[chosen_loc, ["author", "title"]]
         
