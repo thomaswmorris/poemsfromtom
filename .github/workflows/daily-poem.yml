@@ -2,6 +2,7 @@ name: Poem of the day
 on:
   schedule:
     - cron: "0 11 * * *" # daily at 11:00 UTC (usually 06:00 EST)
+  workflow_dispatch:
 
 jobs:
   run_tests:
