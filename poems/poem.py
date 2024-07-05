@@ -47,6 +47,9 @@ class Poem():
         if year:
             x += f"{year}"
 
+        if "approximate" in self.metadata["date"]:
+            x = f"circa {x}"
+
         return x.strip()
 
     @property
