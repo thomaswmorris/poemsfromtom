@@ -59,11 +59,11 @@ def write_to_repo(repo, items, branch="master", verbose=False):
 
 def make_author_stats(history, catalog=None):
 
-    sort_kwargs = {"by": ["n_times_sent", "n_poems", "days_since_last_sent"], "ascending": [False, False, False]}
+    sort_kwargs = {"by": ["n_times_sent", "n_poems", "date_last_sent"], "ascending": [False, False, False]}
 
     timestamp = time.time()
 
-    stats = pd.DataFrame(columns=["n_times_sent", "n_poems", "date_last_sent", "days_since_last_sent"], dtype="object")
+    stats = pd.DataFrame(columns=["n_times_sent", "n_poems", "date_last_sent"], dtype="object")
     
     uauthors = np.unique(catalog.author if catalog else history.author)
 
@@ -78,7 +78,7 @@ def make_author_stats(history, catalog=None):
                 isoformat_last_sent = datetime.fromtimestamp(timestamp_last_sent).astimezone(pytz.utc).isoformat()
                 days_since_last_sent = (timestamp - timestamp_last_sent) / 86400
                 stats.loc[author,"date_last_sent"] = isoformat_last_sent[:10]
-                stats.loc[author,"days_since_last_sent"] = int(np.round(days_since_last_sent))
+                # stats.loc[author,"days_since_last_sent"] = int(np.round(days_since_last_sent))
 
     if catalog:
 
