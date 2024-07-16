@@ -2,16 +2,18 @@ import numpy as np
 
 import json
 import os
+import pathlib
 import warnings
+import yaml
 
 from pandas import DataFrame
 from .context import Context
 from .poem import Poem, Author
+from .utils import make_author_stats
 
 here, this_file = os.path.split(__file__)
 
-with open(f"{here}/weights.json", "r+") as f:
-    CONTEXT_WEIGHTS = json.load(f)
+CONTEXT_WEIGHTS = yaml.safe_load(pathlib.Path(f"{here}/data/weights.yml").read_text())
 
 class Catalog():
 
@@ -88,7 +90,7 @@ class Catalog():
                 if keyword == context[category]: 
                     if keyword in forced:
                         if verbose:
-                            print(f"Forcing context '{keyword}'")
+                            print(f"FORCING CONTEXT: {category}='{keyword}'")
                         multiplier = 1e18
                     else:
                         multiplier = weight
@@ -102,9 +104,11 @@ class Catalog():
         self.df.loc[:, "probability"] = self.df.likelihood / self.df.likelihood.sum()
 
     
-    def apply_history(self, history: DataFrame, latency: int = 30 * 86400, verbose: bool = False):
+    def apply_history(self, history: DataFrame, cooldown: int = 30 * 86400, manage_attrition: bool = False, verbose: bool = False):
 
         timestamp = Context.now().timestamp
+
+        author_stats = make_author_stats(history, self)
 
         last_occurence = DataFrame(columns=["timestamp"], dtype=float)
         for index, entry in history.iterrows():
@@ -113,24 +117,35 @@ class Catalog():
         last_occurence = last_occurence.sort_values("timestamp")
 
         indices_to_drop = []
+        treated_authors = []
         dropped_authors = []
 
         for _, entry in history.iterrows():
 
-            res = self.df.loc[(self.df.author==entry.author) & (self.df.title==entry.title)]
+            author_mask = self.df.author == entry.author
+
+            res = self.df.loc[author_mask & (self.df.title==entry.title)]
 
             if not len(res):
                 warnings.warn(f"Could not remove poem '{entry.title}' by '{entry.author}'.")
 
             indices_to_drop.extend(res.index)
 
-            if entry.timestamp > timestamp - latency:
-                if entry.author not in dropped_authors:
-                    indices_to_drop.extend(self.df.loc[self.df.author == entry.author].index)
+            # apply to all poems by this author, if not done for this author yet:
+            if entry.author not in dropped_authors:
+
+                if entry.timestamp > timestamp - cooldown:
+                    indices_to_drop.extend(self.df.loc[author_mask].index)
                     dropped_authors.append(entry.author)
+
+            if manage_attrition:
+                if entry.author not in treated_authors:
+                    self.df.loc[author_mask, "likelihood"] *= 1 - author_stats.loc[entry.author, "attrition"]
+                    treated_authors.append(entry.author)
 
         if verbose:
             print(f"Dropped authors {dropped_authors}.")
+
 
         self.df.loc[indices_to_drop, "likelihood"] = 0
 

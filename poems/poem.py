@@ -59,7 +59,11 @@ class Poem():
             parts.append(self.metadata["location"])
         if self.pretty_date:
             parts.append(self.pretty_date)
-        return ". ".join(parts)
+        return "<i>" + ". ".join(parts) + "</i>"
+
+    @property
+    def language(self) -> str:
+        return self.metadata.get("language")
 
     @property
     def translator(self) -> str:
@@ -67,8 +71,7 @@ class Poem():
 
     @property
     def translation(self) -> str:
-        return f"Translated by {self.translator}" if self.translator is not None else ""
-
+        return f"Translated from the {self.language.capitalize()} by {self.translator}" if self.translator is not None else ""
 
     @property
     def test_email_subject(self):
@@ -111,24 +114,33 @@ class Poem():
             else:
                 parsed_lines.append(f'<div class="poem-line">{line.strip()}</div>')
 
-        return "\n".join(parsed_lines)
-
-    # @property        
-    # def html_date(self):
-    #     return f'<div><i>{self.context.pretty_date}</i></div>'
-
-
+        return "\n".join(['<div id="poem-text">', *parsed_lines, '</div>'])
 
     @property
-    def email_header(self):
+    def source(self):
+        name = self.metadata.get("source")
+        date = self.metadata.get("date")
+        if name:
+            source = f"From <i>{name}</i>" + (f" ({date['year']})" if date else "")
+            return source
+
+    @property
+    def html_footer(self):
+        if self.spacetime:
+            return f'<div id="poem-footer">{self.spacetime}.</div>'
+        if self.source:
+            return f'<div id="poem-footer">{self.source}.</div>'
+
+    @property
+    def html_header(self):
 
         if self.author.name:
-            description = f'<div>{self.title} by <a href="{self.author.link}">{self.author.name}</a> {self.author.dates.replace("--", "&ndash;")}</div>'
+            description = f'<div id="poem-description">{self.title} by <a href="{self.author.link}">{self.author.name}</a> {self.author.dates.replace("--", "&ndash;")}</div>'
         else:
-            description = f'<div>{self.title}</div>'
+            description = f'<div id="poem-description">{self.title}</div>'
 
         if "translator" in self.metadata:
-            description += f'\n<div><i>Translated by {self.translator}</i></div>'
+            description += f'\n<div id="poem-translation"><i>{self.translation}</i></div>'
 
         return description
             
@@ -138,13 +150,13 @@ class Poem():
 <html lang="en">
 <section style="text-align: left; max-width: 960px; font-family: Baskerville; font-size: 18px;">
 <section id="header" style="padding-bottom: 32px;">
-{self.email_header}
+{self.html_header}
 </section>
 <section id="body" style="padding-bottom: 32px;">
 {self.html_body}
 </section>
 <section id="footer" style="padding-bottom: 32px;">
-{self.spacetime}
+{self.html_footer}
 </section>
 <section>
 <a href="https://thomaswmorris.com/poems">daily poems archive</a>

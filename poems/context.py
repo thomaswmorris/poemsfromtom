@@ -8,7 +8,7 @@ import time as ttime
 
 here, this_filename = os.path.split(__file__)
 
-HOLIDAYS = yaml.safe_load(pathlib.Path(f"{here}/holidays.yml").read_text())
+HOLIDAYS = yaml.safe_load(pathlib.Path(f"{here}/data/holidays.yml").read_text())
 MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
 WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
@@ -63,9 +63,9 @@ class Context():
                     "season": self.season, 
                    "liturgy": self.liturgy, 
                    "holiday": self.holiday, 
-                      "year": f"{self.year:04}",
-                     "month": f"{self.month:02}",
-                       "day": f"{self.day:02}",
+                      "year": self.year,
+                     "month": self.month,
+                       "day": self.day,
                   "year_day": self.year_day, 
                    "weekday": self.weekday, 
                "month_epoch": self.month_epoch}

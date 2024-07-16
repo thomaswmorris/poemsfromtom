@@ -1,12 +1,13 @@
 from dataclasses import dataclass, field
+from datetime import datetime
 
 @dataclass
 class Author():
     """Author dataclass"""
     tag: str
     name: str
-    birth: str
-    death: str
+    birth: dict
+    death: dict
     gender: str
     religion: str
     nationality: str
@@ -27,24 +28,16 @@ class Author():
             if not self.birth:
                 return ""
             else:
-                return f"(born {self.birth})"
-
-        birth_is_circa = True if "~" in self.birth else False
-        death_is_circa = True if "~" in self.death else False
+                return f"(born {self.birth['year']})"
         
-        b_numeric = int(self.birth.strip("~"))
-        d_numeric = int(self.death.strip("~"))
+        birth_string = f"{'c. ' if 'circa' in self.birth else ''}{abs(self.birth['year'])}"
+        death_string = f"{'c. ' if 'circa' in self.death else ''}{abs(self.death['year'])}"
 
-        birth_string, death_string = str(abs(b_numeric)), str(abs(d_numeric))
-
-        birth_string = f'{"c. " if birth_is_circa else ""}{abs(b_numeric)}'
-        death_string = f'{"c. " if death_is_circa else ""}{abs(d_numeric)}'
-
-        if b_numeric < 0: 
-            if d_numeric < 0: 
+        if self.birth["year"] < 0: 
+            if self.death["year"] < 0: 
                 death_string += " BC"
             else: 
                 birth_string += " BC"
                 death_string += " AD"
 
-        return f"({birth_string} -- {death_string})"
+        return f"({birth_string} – {death_string})"

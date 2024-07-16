@@ -63,7 +63,7 @@ def make_author_stats(history, catalog=None):
 
     timestamp = time.time()
 
-    stats = pd.DataFrame(columns=["n_times_sent", "n_poems", "date_last_sent"], dtype="object")
+    stats = pd.DataFrame(columns=["n_times_sent", "n_poems", "attrition", "date_last_sent"], dtype="object")
     
     uauthors = np.unique(catalog.author if catalog else history.author)
 
@@ -76,7 +76,7 @@ def make_author_stats(history, catalog=None):
             if author_mask.sum():
                 timestamp_last_sent = history.loc[author_mask, "timestamp"].max()
                 isoformat_last_sent = datetime.fromtimestamp(timestamp_last_sent).astimezone(pytz.utc).isoformat()
-                days_since_last_sent = (timestamp - timestamp_last_sent) / 86400
+                # days_since_last_sent = (timestamp - timestamp_last_sent) / 86400
                 stats.loc[author,"date_last_sent"] = isoformat_last_sent[:10]
                 # stats.loc[author,"days_since_last_sent"] = int(np.round(days_since_last_sent))
 
@@ -88,6 +88,9 @@ def make_author_stats(history, catalog=None):
         for author in stats.index:
 
             stats.loc[author, "n_poems"] = catalog.data[author]["metadata"]["n_poems"]
+            attrition = stats.loc[author, "n_times_sent"] / stats.loc[author, "n_poems"]
+            stats.loc[author, "attrition"] = np.round(attrition, 3)
+
 
     return stats.sort_values(**sort_kwargs)
 

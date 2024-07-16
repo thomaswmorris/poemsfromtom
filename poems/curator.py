@@ -1,4 +1,4 @@
-import json, os
+import os, pathlib, yaml
 import numpy as np
 from .errors import AuthorNotFoundError, PoemNotFoundError
 from .catalog import Catalog
@@ -6,13 +6,9 @@ from .poem import Author, Poem
 
 here, this_file = os.path.split(__file__)
 
-with open(f"{here}/weights.json", "r+") as f:
-    CONTEXT_WEIGHTS = json.load(f)
-
 class Curator():
 
-    def __init__(self, filepath=f"{here}/poems.json"):
-
+    def __init__(self, filepath=f"{here}/data/poems.json"):
         self.catalog = Catalog(filepath=filepath)
 
 

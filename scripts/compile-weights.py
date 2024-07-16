@@ -1,26 +1,35 @@
-import datetime, json, numpy, os, pandas, sys, yaml
+import datetime, os, yaml
 base, this_file = os.path.split(__file__)
 
-from poems import utils
+import numpy as np
+import pandas as pd
 
-context_categories = [key for key in utils.Context(0).keys() if not key == "timestamp"]
-sample_times = numpy.arange(datetime.datetime(2000, 1, 1, 12).timestamp(), datetime.datetime(2100, 1, 1, 12).timestamp(), 86400)
+from datetime import datetime
+from poems.context import Context
 
-sampled_context_values = numpy.array([list(utils.Context(t).values()) for t in sample_times])
-sampled_context = pandas.DataFrame(sampled_context_values, columns=utils.Context.now().keys())
+context_categories = [key for key in Context(0).to_dict().keys() if not key == "timestamp"]
+sample_times = np.arange(datetime(2000, 1, 1, 12).timestamp(), datetime(2400, 1, 1, 12).timestamp(), 86400)
+
+sampled_context_values = np.array([list(Context(t).to_dict().values()) for t in sample_times])
+sampled_context = pd.DataFrame(sampled_context_values, columns=Context.now().to_dict().keys())
+
+for col in ["year", "day", "year_day"]:
+    sampled_context[col] = pd.to_numeric(sampled_context[col])
 
 CONTEXT_MULTIPLIERS = {}
 for category in ['weekday', 'month', 'day', 'season', 'liturgy', 'holiday', 'month_epoch']:
     CONTEXT_MULTIPLIERS[category] = {}
     sampled_keywords = sampled_context.loc[:, category]
 
-    ukws = numpy.unique(sampled_keywords)
+    ukws = np.unique(sampled_keywords)
     if category == "weekday":
-        sort = numpy.argsort([numpy.median(sampled_context.loc[sampled_keywords==kw, "year_day"].astype(int)[:7]) for kw in ukws])
+        sort = np.argsort([np.median(sampled_context.loc[sampled_keywords==kw, "year_day"].astype(int)[:7]) for kw in ukws])
     else:
-        sort = numpy.argsort([numpy.min(sampled_context.loc[sampled_keywords==kw, "year_day"].astype(int)) for kw in ukws])
+        sort = np.argsort([np.min(sampled_context.loc[sampled_keywords==kw, "year_day"].astype(int)) for kw in ukws])
     for keyword in ukws[sort]:
-        CONTEXT_MULTIPLIERS[category][keyword] = numpy.round(len(sampled_keywords) / numpy.sum(keyword==sampled_keywords), 3)
+        if not isinstance(keyword, str):
+            keyword = int(keyword)
+        CONTEXT_MULTIPLIERS[category][keyword] = float(np.round(len(sampled_keywords) / np.sum(keyword==sampled_keywords), 3))
 
-with open(f'/users/tom/repos/poemsfromtom/poems/weights.json', 'w+', encoding='utf8') as f:
-    json.dump(CONTEXT_MULTIPLIERS, f, indent=4, ensure_ascii=False)
+with open(f'/users/tom/poems/src/poems/data/weights.yml', 'w+', encoding='utf8') as f:
+    yaml.dump(CONTEXT_MULTIPLIERS, f, default_flow_style=False)
