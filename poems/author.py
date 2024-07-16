@@ -1,6 +1,20 @@
 from dataclasses import dataclass, field
 from datetime import datetime
 
+
+def date_to_string_parts(date, month_and_day=True):
+    parts = []
+    if month_and_day:
+        if "day" in date:
+            parts.append(str(date["day"]))
+        if "month" in date:
+            parts.append(date["month"].capitalize()[:3])
+        if "year" in date:
+            parts.append(str(abs(date["year"])))
+            if date["year"] < 0:
+                parts.append("BC")
+    return parts
+
 @dataclass
 class Author():
     """Author dataclass"""
@@ -18,26 +32,32 @@ class Author():
     n_poems: str
     tags: list = field(default_factory=list)
 
-    @property
-    def dates(self):
+    def dates(self, month_and_day=True):
         """
         Convert birth and death to a string.
         """
         # this assumes no one born before Christ is still alive
-        if not self.death: 
-            if not self.birth:
-                return ""
-            else:
-                return f"(born {self.birth['year']})"
-        
-        birth_string = f"{'c. ' if 'circa' in self.birth else ''}{abs(self.birth['year'])}"
-        death_string = f"{'c. ' if 'circa' in self.death else ''}{abs(self.death['year'])}"
 
-        if self.birth["year"] < 0: 
-            if self.death["year"] < 0: 
-                death_string += " BC"
-            else: 
-                birth_string += " BC"
-                death_string += " AD"
+        birth = self.birth or {}
+        death = self.death or {}
+        
+        birth_parts = date_to_string_parts(birth, month_and_day)
+        death_parts = date_to_string_parts(death, month_and_day)
+
+        if ("BC" in birth_parts) and ("BC" not in death_parts):
+            death_parts.insert(0, "AD")
+
+        if "circa" in birth:
+            birth_parts.insert(0, "c.")
+        if "circa" in death:
+            death_parts.insert(0, "c.")
+
+        birth_string = " ".join(birth_parts)
+        death_string = " ".join(death_parts)
+
+        if not death:
+            if not birth:
+                return ""
+            return f"(born {birth_string})"
 
         return f"({birth_string} – {death_string})"
