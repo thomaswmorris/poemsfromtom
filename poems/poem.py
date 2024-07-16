@@ -59,7 +59,7 @@ class Poem():
             parts.append(self.metadata["location"])
         if self.pretty_date:
             parts.append(self.pretty_date)
-        return "<i>" + ". ".join(parts) + "</i>"
+        return ". ".join(parts)
 
     @property
     def language(self) -> str:
@@ -114,7 +114,7 @@ class Poem():
             else:
                 parsed_lines.append(f'<div class="poem-line">{line.strip()}</div>')
 
-        return "\n".join(['<div id="poem-text">', *parsed_lines, '</div>'])
+        return "\n".join(parsed_lines)
 
     @property
     def source(self):
@@ -127,15 +127,17 @@ class Poem():
     @property
     def html_footer(self):
         if self.spacetime:
-            return f'<div id="poem-footer">{self.spacetime}.</div>'
-        if self.source:
-            return f'<div id="poem-footer">{self.source}.</div>'
+            return f'<i>{self.spacetime}.</i>'
+        # if self.source:
+        #     return f'<div id="poem-footer">{self.source}.</div>'
+        return ""
 
-    @property
-    def html_header(self):
+    def html_header(self, flag=True):
+
+        html_flag = f" {self.author.flag }" if flag else ""
 
         if self.author.name:
-            description = f'<div id="poem-description">{self.title} by <a href="{self.author.link}">{self.author.name}</a> {self.author.dates.replace("--", "&ndash;")}</div>'
+            description = f'<div id="poem-description">{self.title} by <a href="{self.author.link}">{self.author.name}</a>{html_flag} {self.author.dates.replace("--", "&ndash;")}</div>'
         else:
             description = f'<div id="poem-description">{self.title}</div>'
 
@@ -150,7 +152,7 @@ class Poem():
 <html lang="en">
 <section style="text-align: left; max-width: 960px; font-family: Baskerville; font-size: 18px;">
 <section id="header" style="padding-bottom: 32px;">
-{self.html_header}
+{self.html_header()}
 </section>
 <section id="body" style="padding-bottom: 32px;">
 {self.html_body}
