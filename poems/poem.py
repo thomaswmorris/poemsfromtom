@@ -34,9 +34,9 @@ class Poem():
 
     @property
     def pretty_date(self):
-        if "date" not in self.metadata:
+        if "time" not in self.metadata:
             return ""
-        year, m, day = [self.metadata["date"].get(attr) for attr in ["year", "month", "day"]]
+        year, m, day = [self.metadata["time"].get(attr) for attr in ["year", "month", "day"]]
         x = ""
         if m:
             month = m.capitalize()
@@ -47,7 +47,7 @@ class Poem():
         if year:
             x += f"{year}"
 
-        if "approximate" in self.metadata["date"]:
+        if "approximate" in self.metadata["time"]:
             x = f"circa {x}"
 
         return x.strip()
