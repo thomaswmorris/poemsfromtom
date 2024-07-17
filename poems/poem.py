@@ -62,6 +62,17 @@ class Poem():
         return ". ".join(parts)
 
     @property
+    def source(self):
+        parts = []
+        source = self.metadata.get("source")
+        if source:
+            parts.append(f"“{source['title']}”")
+            if "published" in source:
+                parts.append(f"({source['published']['year']})")
+            return " ".join(parts)
+        return ""
+
+    @property
     def language(self) -> str:
         return self.metadata.get("language")
 
@@ -81,17 +92,6 @@ class Poem():
     def daily_email_subject(self):
         return f"Poem of the Day: {self.title_by_author}"
 
-    @property
-    def html_description(self):
-
-        if self.author.name:
-            description = f'{self.title} by <a href="{self.author.link}">{self.author.name}</a> {self.author.dates.replace("--", "&ndash;")}'
-        else:
-            description = self.title
-
-        return description
-
-    @property
     def html_body(self):
         body_text = self.body.replace("--", "&#8212;") # convert emdashes
         body_text = utils.add_italic_tags(body_text)
@@ -116,28 +116,21 @@ class Poem():
 
         return "\n".join(parsed_lines)
 
-    @property
-    def source(self):
-        name = self.metadata.get("source")
-        date = self.metadata.get("date")
-        if name:
-            source = f"From <i>{name}</i>" + (f" ({date['year']})" if date else "")
-            return source
-
-    @property
-    def html_footer(self):
+    
+    def html_footer(self, archive_link=False):
+        parts = []
         if self.spacetime:
-            return f'<i>{self.spacetime}.</i>'
-        # if self.source:
-        #     return f'<div id="poem-footer">{self.source}.</div>'
-        return ""
+            parts.append(f'<i>{self.spacetime}.</i>')
+        if self.source:
+            parts.append(f'From <i>{self.source}</i>')
+        if archive_link:
+            parts.append('<a href="https://thomaswmorris.com/poems">daily poems archive</a>')
+        return "\n<br>".join(parts)
 
-    def html_header(self, flag=True):
-
+    def html_header(self, flag=True, month_and_day=True):
         html_flag = f" {self.author.flag }" if flag else ""
-
         if self.author.name:
-            description = f'<div id="poem-description">{self.title} by <a href="{self.author.link}">{self.author.name}</a>{html_flag} {self.author.dates.replace("--", "&ndash;")}</div>'
+            description = f'<div id="poem-description">{self.title} by <a href="{self.author.link}">{self.author.name}</a>{html_flag} {self.author.dates(month_and_day)}</div>'
         else:
             description = f'<div id="poem-description">{self.title}</div>'
 
@@ -152,16 +145,13 @@ class Poem():
 <html lang="en">
 <section style="text-align: left; max-width: 960px; font-family: Baskerville; font-size: 18px;">
 <section id="header" style="padding-bottom: 32px;">
-{self.html_header(flag=False)}
+{self.html_header(flag=False, month_and_day=False)}
 </section>
 <section id="body" style="padding-bottom: 32px;">
-{self.html_body}
+{self.html_body()}
 </section>
 <section id="footer" style="padding-bottom: 32px;">
-{self.html_footer}
-</section>
-<section>
-<a href="https://thomaswmorris.com/poems">daily poems archive</a>
+{self.html_footer(archive_link=True)}
 </section>
 </html>
 '''

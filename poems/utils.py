@@ -10,6 +10,19 @@ from email.mime.text import MIMEText
 from io import StringIO
 
 
+def date_to_string_parts(date, month_and_day=True):
+    parts = []
+    if month_and_day:
+        if "day" in date:
+            parts.append(str(date["day"]))
+        if "month" in date:
+            parts.append(date["month"].capitalize()[:3])
+    if "year" in date:
+        parts.append(str(abs(date["year"])))
+        if date["year"] < 0:
+            parts.append("BC")
+    return parts
+
 def email_thread(poem, username, password, name, email, subject):
     done, fails = False, 0
     while (not done) and (fails < 60):

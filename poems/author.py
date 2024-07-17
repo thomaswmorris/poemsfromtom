@@ -1,19 +1,5 @@
 from dataclasses import dataclass, field
-from datetime import datetime
-
-
-def date_to_string_parts(date, month_and_day=True):
-    parts = []
-    if month_and_day:
-        if "day" in date:
-            parts.append(str(date["day"]))
-        if "month" in date:
-            parts.append(date["month"].capitalize()[:3])
-        if "year" in date:
-            parts.append(str(abs(date["year"])))
-            if date["year"] < 0:
-                parts.append("BC")
-    return parts
+from .utils import date_to_string_parts
 
 @dataclass
 class Author():

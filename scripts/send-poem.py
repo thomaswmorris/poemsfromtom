@@ -72,8 +72,8 @@ for index, entry in history.iterrows():
         packet = {
                 "date": c.pretty_date,
                 "header": p.html_header(),
-                "body": p.html_body,
-                "footer": p.html_footer,
+                "body": p.html_body(),
+                "footer": p.html_footer(),
                 }
 
         daily_poems[str(index)] = packet
