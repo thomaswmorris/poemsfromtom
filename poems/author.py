@@ -20,30 +20,30 @@ class Author():
 
     def dates(self, month_and_day=True):
         """
-        Convert birth and death to a string.
+        Convert birth_date and death_date to a string.
         """
         # this assumes no one born before Christ is still alive
 
-        birth = self.birth or {}
-        death = self.death or {}
+        birth_date = (self.birth or {}).get("date", {})
+        death_date = (self.death or {}).get("date", {})
         
-        birth_parts = date_to_string_parts(birth, month_and_day)
-        death_parts = date_to_string_parts(death, month_and_day)
+        birth_date_parts = date_to_string_parts(birth_date, month_and_day)
+        death_date_parts = date_to_string_parts(death_date, month_and_day)
 
-        if ("BC" in birth_parts) and ("BC" not in death_parts):
-            death_parts.insert(0, "AD")
+        if ("BC" in birth_date_parts) and ("BC" not in death_date_parts):
+            death_date_parts.insert(0, "AD")
 
-        if "circa" in birth:
-            birth_parts.insert(0, "c.")
-        if "circa" in death:
-            death_parts.insert(0, "c.")
+        if "circa" in birth_date:
+            birth_date_parts.insert(0, "c.")
+        if "circa" in death_date:
+            death_date_parts.insert(0, "c.")
 
-        birth_string = " ".join(birth_parts)
-        death_string = " ".join(death_parts)
+        birth_date_string = " ".join(birth_date_parts)
+        death_date_string = " ".join(death_date_parts)
 
-        if not death:
-            if not birth:
+        if not death_date:
+            if not birth_date:
                 return ""
-            return f"(born {birth_string})"
+            return f"(born {birth_date_string})"
 
-        return f"({birth_string} – {death_string})"
+        return f"({birth_date_string} – {death_date_string})"
