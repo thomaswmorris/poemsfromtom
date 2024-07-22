@@ -66,7 +66,7 @@ class Poem():
         parts = []
         source = self.metadata.get("source")
         if source:
-            parts.append(f"“{source['title']}”")
+            parts.append(f"{source['title']}")
             if "published" in source:
                 parts.append(f"({source['published']['year']})")
             return " ".join(parts)
