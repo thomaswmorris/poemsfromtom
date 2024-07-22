@@ -4,18 +4,20 @@ from .utils import date_to_string_parts
 @dataclass
 class Author():
     """Author dataclass"""
-    tag: str
-    name: str
-    birth: dict
-    death: dict
-    gender: str
-    religion: str
-    nationality: str
-    language: str
-    flag: str
-    link: str
-    favorite: bool
-    n_poems: str
+    tag: str = None
+    name: str = None
+    birth: dict = field(default_factory=list)
+    death: dict = field(default_factory=list)
+    gender: str = None
+    college: str = None
+    movement: str = None
+    religion: str = None
+    nationality: str = None
+    language: str = None
+    flag: str = None
+    link: str = None
+    favorite: bool = False
+    n_poems: str = None
     tags: list = field(default_factory=list)
 
     def dates(self, month_and_day=True):
