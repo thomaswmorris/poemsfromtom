@@ -68,7 +68,11 @@ class Poem():
         if source:
             parts.append(f"{source['title']}")
             if "published" in source:
-                parts.append(f"({source['published']['year']})")
+                year = source['published']['year']
+                if source.get("type") in ["magazine"]:
+                    parts.append(f"({source['published']['month'].capitalize()} {year})")
+                else:
+                    parts.append(f"({year})")
             return " ".join(parts)
         return ""
 
@@ -128,7 +132,7 @@ class Poem():
         return "\n<br>".join(parts)
 
     def html_header(self, flag=True, month_and_day=True):
-        html_flag = f" {self.author.flag }" if flag else ""
+        html_flag = f" {self.author.flag or ''}" if flag else ""
         if self.author.name:
             description = f'<div id="poem-description">{self.title} by <a href="{self.author.link}">{self.author.name}</a>{html_flag} {self.author.dates(month_and_day)}</div>'
         else:
