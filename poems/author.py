@@ -9,7 +9,7 @@ class Author():
     birth: dict = field(default_factory=list)
     death: dict = field(default_factory=list)
     gender: str = None
-    college: str = None
+    education: str = None
     movement: str = None
     religion: str = None
     nationality: str = None

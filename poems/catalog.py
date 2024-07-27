@@ -34,11 +34,13 @@ class Catalog():
 
                 context_keywords = poem["metadata"].get("context", {})
 
+                poem_tags = [*author_tags, *context_keywords.values(), *poem["metadata"].get("tags", [])]
+
                 entries[index] = {
                                   "author": author, 
                                   "title": title,
                                   "context": context_keywords,
-                                  "tags": [*author_tags, *context_keywords.values()], 
+                                  "tags": poem_tags, 
                                   "date": poem["metadata"].get("date", None),
                                   "translator": poem["metadata"].get("translator", None),
                                   "word_count": len(poem["body"].split()),

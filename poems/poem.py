@@ -126,7 +126,7 @@ class Poem():
         if self.spacetime:
             parts.append(f'<i>{self.spacetime}.</i>')
         if self.source:
-            parts.append(f'From <i>{self.source}</i>')
+            parts.append(f'from <i>{self.source}</i>')
         if archive_link:
             parts.append('<a href="https://thomaswmorris.com/poems">daily poems archive</a>')
         return "\n<br>".join(parts)

@@ -100,7 +100,7 @@ def make_author_stats(history, catalog=None):
 
         for author in stats.index:
 
-            stats.loc[author, "n_poems"] = catalog.data[author]["metadata"]["n_poems"]
+            stats.loc[author, "n_poems"] = sum(catalog.author == author)
             attrition = stats.loc[author, "n_times_sent"] / stats.loc[author, "n_poems"]
             stats.loc[author, "attrition"] = np.round(attrition, 3)
 
