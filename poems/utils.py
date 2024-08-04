@@ -30,24 +30,24 @@ def date_to_string_parts(date, month_and_day=True):
 
 def email_thread(username: str, 
                  password: str, 
-                 email_subject: str, 
-                 email_content: str,
-                 recipient_address: str):
+                 subject: str, 
+                 content: str,
+                 recipient: str):
 
     done, fails = False, 0
     while (not done) and (fails < 60):
         try:
             send_email(username=username, 
                        password=password,
-                       subject=email_subject,
-                       content=email_content, 
-                       address=recipient_address)
-            a, b = recipient_address.split("@")
+                       subject=subject,
+                       content=content, 
+                       address=recipient)
+            a, b = recipient.split("@")
             print(f"{datetime.now().isoformat()} | {a:>24} @ {b:<20}")
             done = True
         except Exception as error:
             warnings.warn(error)
-            print(f"Encountered error for recipient {recipient_address}. Trying again in 60 seconds...")
+            print(f"Encountered error for recipient {recipient}. Trying again in 60 seconds...")
             fails += 1
             time.sleep(60)
             
