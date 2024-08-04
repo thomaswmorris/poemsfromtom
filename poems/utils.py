@@ -1,4 +1,8 @@
-import re, pytz, smtplib, time
+import re
+import pytz
+import smtplib
+import time
+import warnings
 
 import numpy as np
 import pandas as pd
@@ -23,17 +27,30 @@ def date_to_string_parts(date, month_and_day=True):
             parts.append("BC")
     return parts
 
-def email_thread(poem, username, password, name, email, subject):
+
+def email_thread(username: str, 
+                 password: str, 
+                 email_subject: str, 
+                 email_content: str,
+                 recipient_address: str):
+
     done, fails = False, 0
     while (not done) and (fails < 60):
         try:
-            send_email(username, password, poem.email_html, email, subject)
-            a, b = email.split("@"); print(f"{datetime.now().isoformat()} | sent to {name:<18} | {a:>24} @ {b:<20}")
+            send_email(username=username, 
+                       password=password,
+                       subject=email_subject,
+                       content=email_content, 
+                       address=recipient_address)
+            a, b = recipient_address.split("@")
+            print(f"{datetime.now().isoformat()} | {a:>24} @ {b:<20}")
             done = True
         except Exception as error:
-            print(f"{error}\nEncountered error, trying again...")
+            warnings.warn(error)
+            print(f"Encountered error for recipient {recipient_address}. Trying again in 60 seconds...")
             fails += 1
             time.sleep(60)
+            
 
 def load_github_repo(github_repo_name=None, github_token=None):
     return gh.Github(github_token).get_user().get_repo(github_repo_name)
@@ -109,18 +126,19 @@ def make_author_stats(history, catalog=None):
 
         
 
-def send_email(username, password, html, recipient, subject=""):
+def send_email(username, password, subject, content, recipient):
 
-        message = MIMEMultipart("alternative")
-        message["From"]    = username
-        message["To"]      = recipient
-        message["Subject"] = subject
-        message.attach(MIMEText(html, "html"))
-        
-        server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
-        server.login(username, password)
-        server.send_message(message)
-        server.quit()
+    message = MIMEMultipart("alternative")
+    message["From"]    = username
+    message["To"]      = recipient
+    message["Subject"] = subject
+    message.attach(MIMEText(content, "html"))
+
+    server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
+    server.login(username, password)
+    server.send_message(message)
+    server.quit()
+
 
 def add_italic_tags(text):
     """

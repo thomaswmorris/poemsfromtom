@@ -23,9 +23,8 @@ class Author():
     def dates(self, month_and_day=True):
         """
         Convert birth_date and death_date to a string.
-        """
-        # this assumes no one born before Christ is still alive
-
+        This assumes no one born before Christ is still alive
+        """ 
         birth_date = (self.birth or {}).get("date", {})
         death_date = (self.death or {}).get("date", {})
         

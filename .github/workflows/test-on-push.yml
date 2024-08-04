@@ -20,5 +20,5 @@ jobs:
 
       - name: Send poem to myself
         run:
-          python scripts/send-poem.py --kind "test" --username "poemsfromtom@gmail.com" --password ${{ secrets.PFT_PW }} --listserv_filename "data/poems/testserv.csv"
+          python scripts/send-poem.py --mode "test" --username "poemsfromtom@gmail.com" --password ${{ secrets.PFT_PW }} --listserv_filename "data/poems/testserv.csv"
           --github_repo_name "thomaswmorris.github.io" --github_token ${{ secrets.GH_TOKEN }} --write_to_repo

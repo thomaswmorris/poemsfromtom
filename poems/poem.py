@@ -86,15 +86,23 @@ class Poem():
 
     @property
     def translation(self) -> str:
-        return f"Translated from the {self.language.capitalize()} by {self.translator}" if self.translator is not None else ""
+        if self.language is None:
+            return None
+        if self.language.lower() == "english":
+            return None
+        else:
+            translation = f"Translated from the {self.language.capitalize()}"
+            if self.translator is not None:
+                translation += f" by {self.translator}"
+            return translation
 
-    @property
-    def test_email_subject(self):
-        return f"TEST ({self.context.pretty_date}): {self.title_by_author} {self.keywords}"
-
-    @property
-    def daily_email_subject(self):
-        return f"Poem of the Day: {self.title_by_author}"
+    def email_subject(self, mode="daily"):
+        if mode == "daily":
+            return f"Poem of the Day: {self.title_by_author}"
+        if mode == "test":
+            return f"TEST ({self.context.pretty_date}): {self.title_by_author} {self.keywords}"
+        else:
+            raise ValueError("'mode' must be one of ['daily', 'test'].")
 
     def html_body(self):
         body_text = self.body.replace("--", "&#8212;") # convert emdashes
@@ -132,16 +140,20 @@ class Poem():
         return "\n<br>".join(parts)
 
     def html_header(self, flag=True, month_and_day=True):
-        html_flag = f" {self.author.flag or ''}" if flag else ""
-        if self.author.name:
-            description = f'<div id="poem-description">{self.title} by <a href="{self.author.link}">{self.author.name}</a>{html_flag} {self.author.dates(month_and_day)}</div>'
+        if flag and self.author.flag:
+            html_flag = f' <span title="{", ".join(self.author.nationality)}">{self.author.flag}</span>'
         else:
-            description = f'<div id="poem-description">{self.title}</div>'
+            html_flag = ""
 
-        if "translator" in self.metadata:
-            description += f'\n<div id="poem-translation"><i>{self.translation}</i></div>'
+        if self.author.name:
+            header = f'<div id="poem-description">{self.title} by <a href="{self.author.link}">{self.author.name}</a>{html_flag} {self.author.dates(month_and_day)}</div>'
+        else:
+            header = f'<div id="poem-description">{self.title}</div>'
 
-        return description
+        if self.translation:
+            header += f'\n<div id="poem-translation"><i>{self.translation}</i></div>'
+
+        return header
             
     @property
     def email_html(self):

@@ -23,5 +23,5 @@ jobs:
 
       - name: Curate a poem, and send it to the listserv
         run:
-          python scripts/send-poem.py --kind "daily" --username "poemsfromtom@gmail.com" --password ${{ secrets.PFT_PW }} --listserv_filename "data/poems/listserv.csv"
+          python scripts/send-poem.py --mode "daily" --username "poemsfromtom@gmail.com" --password ${{ secrets.PFT_PW }} --listserv_filename "data/poems/listserv.csv"
           --github_repo_name "thomaswmorris.github.io" --github_token ${{ secrets.GH_TOKEN }} --write_to_repo
