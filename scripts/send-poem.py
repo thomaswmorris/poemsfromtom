@@ -50,16 +50,17 @@ for index, entry in listserv.iterrows():
     ttime.sleep(1e0)
 
 if args.write_to_repo:
-    
-    index = len(history) + 1
-    now = Context.now()
-    date, time = now.isoformat[:19].split("T")
 
-    history.loc[index, "date"] = date
-    history.loc[index, "time"] = time
-    history.loc[index, "timestamp"] = int(now.timestamp)
-    history.loc[index, "title"] = p.tag
-    history.loc[index, "author"] = p.author.tag
+    if args.mode == "daily":
+        index = len(history) + 1
+        now = Context.now()
+        date, time = now.isoformat[:19].split("T")
+
+        history.loc[index, "date"] = date
+        history.loc[index, "time"] = time
+        history.loc[index, "timestamp"] = int(now.timestamp)
+        history.loc[index, "title"] = p.tag
+        history.loc[index, "author"] = p.author.tag
 
     daily_poems = {}
     for index, entry in history.iterrows():
@@ -78,7 +79,6 @@ if args.write_to_repo:
 
         except Exception as e:
             warnings.warn(f"Could not find poem for entry {entry}")
-
 
     utils.write_to_repo(repo,
                         items={

@@ -41,7 +41,7 @@ def email_thread(username: str,
                        password=password,
                        subject=subject,
                        content=content, 
-                       address=recipient)
+                       recipient=recipient)
             a, b = recipient.split("@")
             print(f"{datetime.now().isoformat()} | {a:>24} @ {b:<20}")
             done = True
