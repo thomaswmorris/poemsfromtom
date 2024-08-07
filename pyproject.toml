@@ -21,7 +21,8 @@ dependencies = [
   "pandas",
   "pyarrow",
   "pygithub",
-  "pytz"
+  "pytz",
+  "unidecode",
 ]
 
 classifiers = [
