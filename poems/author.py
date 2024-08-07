@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from .utils import date_to_string_parts
+from .data import flags
 
 @dataclass
 class Author():
@@ -14,11 +15,30 @@ class Author():
     religion: str = None
     nationality: str = None
     language: str = None
-    flag: str = None
+    flags: str = None
     link: str = None
     favorite: bool = False
-    n_poems: str = None
     tags: list = field(default_factory=list)
+
+    def __post_init__(self):
+
+        self.flags = []
+        for key in self.nationality:
+            self.flags.append(flags.loc[key, "emoji"])
+
+
+    @property
+    def demonym(self):
+        return "-".join([flags.loc[key, "demonym"] for key in self.nationality])
+
+    @property
+    def html_flags(self):
+
+        html_flags = []
+        for key in self.nationality:
+            html_flags.append(flags.loc[key, "emoji"])
+        return "".join(html_flags)
+        
 
     def dates(self, month_and_day=True):
         """
@@ -34,9 +54,11 @@ class Author():
         if ("BC" in birth_date_parts) and ("BC" not in death_date_parts):
             death_date_parts.insert(0, "AD")
 
-        if "circa" in birth_date:
+        if birth_date.get("florit"):
+            birth_date_parts.insert(0, "fl.")
+        if birth_date.get("circa"):
             birth_date_parts.insert(0, "c.")
-        if "circa" in death_date:
+        if death_date.get("circa"):
             death_date_parts.insert(0, "c.")
 
         birth_date_string = " ".join(birth_date_parts)

@@ -11,7 +11,6 @@ class Curator():
     def __init__(self, filepath=f"{here}/data/poems.json"):
         self.catalog = Catalog(filepath=filepath)
 
-
     def get_author(self, author=None) -> Author:
 
         all_authors = list(self.catalog.data.keys())

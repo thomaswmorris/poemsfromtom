@@ -140,8 +140,8 @@ class Poem():
         return "\n<br>".join(parts)
 
     def html_header(self, flag=True, month_and_day=True):
-        if flag and self.author.flag:
-            html_flag = f' <span title="{", ".join(self.author.nationality)}">{self.author.flag}</span>'
+        if flag and self.author.html_flags:
+            html_flag = f' <span title="{self.author.demonym}">{self.author.html_flags}</span>'
         else:
             html_flag = ""
 

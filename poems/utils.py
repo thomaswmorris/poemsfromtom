@@ -4,15 +4,27 @@ import smtplib
 import time
 import warnings
 
+
 import numpy as np
 import pandas as pd
 import github as gh
 
 from datetime import datetime
+from unidecode import unidecode
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from io import StringIO
 
+
+
+def normalize_title(string):
+    title_key = string.lower()
+    for char in [".", ",", ":", ";", "!", "?", "‘", "’", "“", "”", 
+                 "/", "…", "(", ")"]:
+        title_key = title_key.replace(char, "")
+    for char in ["&", "+"]:
+        title_key = title_key.replace(char, "and")
+    return unidecode("-".join(title_key.split()))
 
 def date_to_string_parts(date, month_and_day=True):
     parts = []
