@@ -12,15 +12,16 @@ class Author():
     """Author dataclass"""
     tag: str = None
     name: str = None
-    birth: dict = field(default_factory=list)
-    death: dict = field(default_factory=list)
+    birth: dict = field(default_factory=dict)
+    death: dict = field(default_factory=dict)
     gender: str = None
-    education: str = None
-    movement: str = None
+    education: dict = field(default_factory=dict)
+    movement: list = field(default_factory=list)
     religion: str = None
-    nationality: str = None
-    language: str = None
-    flags: str = None
+    nationality: list = field(default_factory=list)
+    occupation: list = field(default_factory=list)
+    language: list = field(default_factory=list)
+    flags: list = field(default_factory=list)
     link: str = None
     favorite: bool = False
     tags: list = field(default_factory=list)
@@ -45,7 +46,6 @@ class Author():
         return f'<span title="{self.demonym}">{"".join(html_flags)}</span>'
     
     def html_description(self, name=True, flags=True, html=True):
-
         parts = []
         if not self.name:
             return ""
