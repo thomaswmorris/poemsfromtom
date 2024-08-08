@@ -1,6 +1,11 @@
+import os
+import pandas as pd
 from dataclasses import dataclass, field
+
 from .utils import date_to_string_parts
-from .data import flags
+
+here, this_filename = os.path.split(__file__)
+flags = pd.read_csv(f"{here}/data/flags.csv", index_col=0)
 
 @dataclass
 class Author():
@@ -26,47 +31,79 @@ class Author():
         for key in self.nationality:
             self.flags.append(flags.loc[key, "emoji"])
 
-
     @property
     def demonym(self):
         return "-".join([flags.loc[key, "demonym"] for key in self.nationality])
 
     @property
     def html_flags(self):
-
         html_flags = []
         for key in self.nationality:
-            html_flags.append(flags.loc[key, "emoji"])
-        return "".join(html_flags)
-        
+            html_flags.append(flags.loc[key, "html"])
+        if not html_flags:
+            return ""
+        return f'<span title="{self.demonym}">{"".join(html_flags)}</span>'
+    
+    def html_description(self, name=True, flags=True, html=True):
 
-    def dates(self, month_and_day=True):
+        parts = []
+        if not self.name:
+            return ""
+        if name:
+            if not self.name:
+                parts = [self.name]
+            if self.link:
+                parts = [f'<a href="{self.link}">{self.name}</a>']            
+        if flags and self.html_flags and html:
+            parts.append(self.html_flags)
+        parts.append(self.dates(html=html))
+
+        return " ".join(parts)
+
+    def birth_or_death_string(self, key, html=False):
+        if key not in ["birth", "death"]:
+            raise ValueError(f"'{key}' must be either 'birth' or 'death'.")
+        bd = getattr(self, key) or {}
+        date = bd.get("date", {})
+        s = " ".join(date_to_string_parts(date, month_and_day=True))
+        if html:
+            if bd.get("place"):
+                place = ", ".join(list(bd["place"].values()))
+                s = f'<span title="{place}">{s}</span>'
+        if date.get("circa"):
+            prefix = "c. " if not html else '<span title="circa">c. </span>'
+            s = prefix + s
+        if key == "birth":
+            if date.get("floruit"):
+                prefix = "fl. " if not html else '<a href="https://en.wikipedia.org/wiki/Floruit">fl.</a> '
+                s = prefix + s
+        return s
+    
+    def birth_string(self, html=False):
+        return self.birth_or_death_string("birth", html=html)
+    
+    def death_string(self, html=False):
+        return self.birth_or_death_string("death", html=html)
+    
+
+    def dates(self, html=False):
         """
-        Convert birth_date and death_date to a string.
         This assumes no one born before Christ is still alive
         """ 
-        birth_date = (self.birth or {}).get("date", {})
-        death_date = (self.death or {}).get("date", {})
-        
-        birth_date_parts = date_to_string_parts(birth_date, month_and_day)
-        death_date_parts = date_to_string_parts(death_date, month_and_day)
 
-        if ("BC" in birth_date_parts) and ("BC" not in death_date_parts):
-            death_date_parts.insert(0, "AD")
+        birth_string = self.birth_string(html=html)
+        death_string = self.death_string(html=html)
 
-        if birth_date.get("florit"):
-            birth_date_parts.insert(0, "fl.")
-        if birth_date.get("circa"):
-            birth_date_parts.insert(0, "c.")
-        if death_date.get("circa"):
-            death_date_parts.insert(0, "c.")
+        if ("BC" in birth_string) and ("BC" not in death_string):
+            death_string = "AD" + death_string
 
-        birth_date_string = " ".join(birth_date_parts)
-        death_date_string = " ".join(death_date_parts)
-
-        if not death_date:
-            if not birth_date:
+        if not death_string:
+            if not birth_string:
                 return ""
-            return f"(born {birth_date_string})"
+            return f"(born {birth_string})"
 
-        return f"({birth_date_string} – {death_date_string})"
+        return f"({birth_string} – {death_string})"
+
+
+
+
