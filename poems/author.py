@@ -10,7 +10,7 @@ flags = pd.read_csv(f"{here}/data/flags.csv", index_col=0)
 @dataclass
 class Author():
     """Author dataclass"""
-    tag: str = None
+    key: str = None
     name: str = None
     birth: dict = field(default_factory=dict)
     death: dict = field(default_factory=dict)

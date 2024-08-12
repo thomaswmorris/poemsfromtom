@@ -158,4 +158,4 @@ class Catalog():
         return self.df._repr_html_()
         
     def construct_poem(self, author, title):
-        return Poem(tag=title, author=Author(tag=author, **self.data[author]["metadata"]), **self.data[author]["poems"][title])
+        return Poem(key=title, author=Author(key=author, **self.data[author]["metadata"]), **self.data[author]["poems"][title])

@@ -7,7 +7,7 @@ from .context import Context, MONTHS
 @dataclass
 class Poem():
     """Poem dataclass"""
-    tag: str
+    key: str
     author: Author
     title: str
     body: str
@@ -21,6 +21,10 @@ class Poem():
     def __repr__(self):
         return f"{self.__class__.__name__}({self.title_by_author})"
 
+    @property
+    def tags(self) -> dict:
+        return self.metadata.get("tags", [])
+    
     @property
     def keywords(self) -> dict:
         return self.metadata.get("context", {})

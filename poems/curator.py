@@ -19,7 +19,7 @@ class Curator():
             author = np.random.choice(all_authors)
 
         if author in all_authors:
-            return Author(tag=author, **self.catalog.data[author]["metadata"])
+            return Author(key=author, **self.catalog.data[author]["metadata"])
 
         raise ValueError(f"No author '{author}'.")
 
