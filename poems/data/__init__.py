@@ -13,4 +13,4 @@ with open(f"{here}/poems.json", "r+") as f:
 
 authors = []
 for author_key, d in poems.items():
-    authors.append(Author(**d["metadata"]))
+    authors.append(Author(key=author_key, **d["metadata"]))

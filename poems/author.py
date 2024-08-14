@@ -1,6 +1,8 @@
 import os
+import numpy as np
 import pandas as pd
 from dataclasses import dataclass, field
+from datetime import datetime
 
 from .utils import date_to_string_parts
 
@@ -10,7 +12,7 @@ flags = pd.read_csv(f"{here}/data/flags.csv", index_col=0)
 @dataclass
 class Author():
     """Author dataclass"""
-    key: str = None
+    key: str
     name: str = None
     birth: dict = field(default_factory=dict)
     death: dict = field(default_factory=dict)
@@ -28,9 +30,23 @@ class Author():
 
     def __post_init__(self):
 
+        self.birth = self.birth or {}
+        self.death = self.death or {}
+
         self.flags = []
         for key in self.nationality:
             self.flags.append(flags.loc[key, "emoji"])
+
+    @property
+    def max_floruit(self):
+        if self.birth.get("date"):
+            start = self.birth["date"]["year"]
+            if self.death.get("date"):
+                end = self.death["date"]["year"]
+            else: 
+                end = datetime.now().year
+            return np.mean([start + 20, end])
+        return np.nan
 
     @property
     def demonym(self):

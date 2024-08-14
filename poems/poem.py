@@ -67,11 +67,13 @@ class Poem():
     def source(self, html=True):
         parts = []
         source = self.metadata.get("source")
+        
         if source:
+            html_title = utils.convert_title_to_html(source["title"])
             if "link" in source:
-                parts.append(f'<a href="{source["link"]}">{source["title"]}</a>')
+                parts.append(f'<a href="{source["link"]}">{html_title}</a>')
             else:
-                parts.append(f"{source['title']}")
+                parts.append(f"{html_title}")
             if "published" in source:
                 year = source['published']['year']
                 if source.get("type") in ["magazine"]:
@@ -153,7 +155,7 @@ class Poem():
         if self.spacetime(html=True):
             parts.append(f'<i>{self.spacetime(html=True)}.</i>')
         if self.source(html=True):
-            parts.append(f'from <i>{self.source(html=True)}</i>')
+            parts.append(f'from {self.source(html=True)}')
         if archive_link:
             parts.append('<a href="https://thomaswmorris.com/poems">daily poems archive</a>')
         return "\n<br>".join(parts)

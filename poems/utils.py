@@ -16,6 +16,15 @@ from email.mime.text import MIMEText
 from io import StringIO
 
 
+def convert_title_to_html(s):
+    match = re.compile(r"(?:\((.+)\))? *(.+)").match(s)
+    prefix, title = match.groups()
+    res = f"{prefix} <i>{title}</i>"
+    if prefix:
+        return f"{prefix} <i>{title}</i>"
+    else:
+        return f"<i>{title}</i>"
+    
 
 def normalize_title(string):
     title_key = string.lower()
