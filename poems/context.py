@@ -192,7 +192,7 @@ def get_liturgy(t=ttime.time()):
         return "triduum"
     if -39 < easter_year_day - dt.date().timetuple().tm_yday <= 0: 
         return "eastertide"
-    if datetime(dt.year,10,31).timetuple().tm_yday <= year_day < datetime(dt.year,11,2).timetuple().tm_yday: 
+    if datetime(dt.year,10,31).timetuple().tm_yday <= year_day <= datetime(dt.year,11,2).timetuple().tm_yday: 
         return "allhallowtide"
     if advent_sunday_year_day <= year_day < christmas_year_day: 
         return "advent"
