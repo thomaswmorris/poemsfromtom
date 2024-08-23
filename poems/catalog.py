@@ -65,6 +65,10 @@ class Catalog():
         self.contextual = False
 
     @property
+    def context(self):
+        return self._context if hasattr(self, "_context") else Context.now()
+    
+    @property
     def poem_contexts(self):
         c = {}
         for category in CONTEXT_WEIGHTS.keys():
@@ -74,22 +78,25 @@ class Catalog():
     def copy(self):
         return Catalog(filepath=self.filepath)
 
-    def apply_context(self, context: dict, forced=[], verbose=False):
+    def apply_context(self, context: Context, forced=[], verbose=False):
 
         if self.contextual:
             self.reset()
 
+        self._context = context
+        context_dict = context.to_dict()
+
         poem_contexts = self.poem_contexts # of the catalog
 
         for category in CONTEXT_WEIGHTS.keys():
-            if not category in context.keys(): 
+            if not category in context_dict.keys(): 
                 continue
 
             for keyword, weight in CONTEXT_WEIGHTS[category].items():
 
                 mask = np.array([c==keyword for c in poem_contexts[category]])
 
-                if keyword == context[category]: 
+                if keyword == context_dict[category]: 
                     if keyword in forced:
                         if verbose:
                             print(f"FORCING CONTEXT: {category}='{keyword}'")
@@ -158,4 +165,4 @@ class Catalog():
         return self.df._repr_html_()
         
     def construct_poem(self, author, title):
-        return Poem(key=title, author=Author(key=author, **self.data[author]["metadata"]), **self.data[author]["poems"][title])
+        return Poem(key=title, author=Author(key=author, **self.data[author]["metadata"]), context=self.context, **self.data[author]["poems"][title])

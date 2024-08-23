@@ -7,7 +7,7 @@ def test_holiday_context():
 
     curator = Curator()
     context = Context(timestamp=t)
-    curator.catalog.apply_context(context.to_dict(), forced=['easter_sunday'], verbose=True)
+    curator.catalog.apply_context(context, forced=['easter_sunday'], verbose=True)
     poem = curator.get_poem(verbose=True)
 
     assert poem.keywords['holiday'] == 'easter_sunday'
@@ -19,7 +19,7 @@ def test_month_context():
 
     curator = Curator()
     context = Context(timestamp=t)
-    curator.catalog.apply_context(context.to_dict(), forced=['october'], verbose=True)
+    curator.catalog.apply_context(context, forced=['october'], verbose=True)
     poem = curator.get_poem(verbose=True)
 
     assert poem.keywords['month'] == 'october'
@@ -30,7 +30,7 @@ def test_liturgy_context():
 
     curator = Curator()
     context = Context(timestamp=t)
-    curator.catalog.apply_context(context.to_dict(), forced=['lent'], verbose=True)
+    curator.catalog.apply_context(context, forced=['lent'], verbose=True)
     poem = curator.get_poem(verbose=True)
 
     assert poem.keywords['liturgy'] == 'lent'
