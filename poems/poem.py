@@ -88,8 +88,8 @@ class Poem():
         return self.metadata.get("language")
 
     @property
-    def translator(self) -> str:
-        return self.metadata.get("translator")
+    def translators(self) -> str:
+        return self.metadata.get("translators")
 
     @property
     def translation(self) -> str:
@@ -99,8 +99,9 @@ class Poem():
             return None
         else:
             translation = f"Translated from the {self.language.capitalize()}"
-            if self.translator is not None:
-                translation += f" by {self.translator}"
+            if self.translators is not None:
+                translator_string = " & ".join([", ".join(self.translators[:-1]), self.translators[-1]])
+                translation += f" by {translator_string}"
             return translation
 
     def email_subject(self, mode="daily"):

@@ -1,1 +1,1 @@
-All of the poems in here are good, or interesting. There are currently 8,821 poems in 42 languages by 571 authors from 54 countries.
+All of the poems in here are good, or interesting. There are currently 8,902 poems in 43 languages by 572 authors from 55 countries.

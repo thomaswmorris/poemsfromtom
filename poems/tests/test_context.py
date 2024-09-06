@@ -1,9 +1,10 @@
 from poems import Context, Curator
 from datetime import datetime
+import pytz
 
 def test_holiday_context():
 
-    t = datetime(2024, 3, 31).timestamp()
+    t = datetime(2024, 3, 31, tzinfo=pytz.utc).timestamp()
 
     curator = Curator()
     context = Context(timestamp=t)
@@ -15,7 +16,7 @@ def test_holiday_context():
 
 def test_month_context():
 
-    t = datetime(2024, 10, 15).timestamp()
+    t = datetime(2024, 10, 15, tzinfo=pytz.utc).timestamp()
 
     curator = Curator()
     context = Context(timestamp=t)
@@ -26,7 +27,7 @@ def test_month_context():
 
 def test_liturgy_context():
 
-    t = datetime(2024, 2, 15).timestamp()
+    t = datetime(2024, 2, 15, tzinfo=pytz.utc).timestamp()
 
     curator = Curator()
     context = Context(timestamp=t)
