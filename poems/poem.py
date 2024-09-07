@@ -99,9 +99,12 @@ class Poem():
             return None
         else:
             translation = f"Translated from the {self.language.capitalize()}"
-            if self.translators is not None:
-                translator_string = " & ".join([", ".join(self.translators[:-1]), self.translators[-1]])
-                translation += f" by {translator_string}"
+            translators_string = ""
+            if len(self.translators) > 0:
+                translators_string = self.translators[0]
+            if len(self.translators) > 1:
+                translators_string = " & ".join([", ".join(self.translators[:-1]), self.translators[-1]])
+            translation += f" by {translators_string}"
             return translation
 
     def email_subject(self, mode="daily"):
