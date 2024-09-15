@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 from . import utils
-from .author import Author
+from .objects import Author
 from .context import Context, MONTHS
 
 @dataclass

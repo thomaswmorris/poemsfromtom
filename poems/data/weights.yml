@@ -61,6 +61,7 @@ holiday:
   blessed_luke_belludi: 488.619
   blessed_mary_frances_schervier: 365.242
   blessed_michael_giedroyc: 377.512
+  blessed_michael_mcgivney: 365.242
   blessed_peter_gonzalez: 463.8
   blessed_pope_urban_v: 365.242
   blessed_rafal_chylinski: 427.184
@@ -410,7 +411,6 @@ holiday:
   saints_perpetua_and_felicity: 389.592
   saints_peter_and_paul: 389.592
   saints_philip_and_james: 373.65
-  saints_pontian_and_hippolytus: 365.242
   saints_sarbelius_and_barbea: 374.608
   saints_simon_and_jude: 365.242
   saints_timothy_and_titus: 378.49
@@ -428,10 +428,11 @@ holiday:
   winter_solstice: 365.242
 liturgy:
   advent: 14.605
+  allhallowtide: 121.748
   christmastide: 30.437
   eastertide: 9.612
   lent: 8.494
-  ordinary_time: 1.495
+  ordinary_time: 1.514
   triduum: 121.748
 month:
   april: 12.175
@@ -451,10 +452,11 @@ month_epoch:
   late: 2.916
   middle: 3.044
 season:
-  autumn: 4.059
-  spring: 3.944
-  summer: 3.897
-  winter: 4.107
+  autumn: 5.144
+  interseason: 8.908
+  spring: 5.073
+  summer: 3.97
+  winter: 4.093
 weekday:
   friday: 7.0
   monday: 7.0

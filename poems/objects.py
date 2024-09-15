@@ -9,6 +9,36 @@ from .utils import date_to_string_parts
 here, this_filename = os.path.split(__file__)
 flags = pd.read_csv(f"{here}/data/flags.csv", index_col=0)
 
+
+
+@dataclass
+class FuzzyTime():
+    """
+    This can be a specific date, but it can also be things like:
+    - December 1960
+    - Late Spring, 1923
+    - 1686
+    - July/August 1987 (like for a magazine issue)
+    """
+
+    year: int = None
+    month: int = None
+    month_epoch: str = None
+    day: int = None
+    season: str = None
+    season_epoch: str = None
+
+
+    @classmethod
+    def from_dict(cls, dict):
+        return cls(**dict)
+    
+    def to_dict(self):
+        ...
+
+
+
+
 @dataclass
 class Author():
     """Author dataclass"""

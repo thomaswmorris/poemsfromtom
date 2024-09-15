@@ -84,19 +84,46 @@ def timestamp_to_pretty_date(t):
     return f"{WEEKDAYS[dt.weekday()].capitalize()} {MONTHS[dt.month-1].capitalize()} {int(dt.day)}, {int(dt.year)}"
 
 
+# def get_season(t=None):
+#     dt = get_utc_datetime(t)
+#     year = dt.year
+#     year_day = dt.timetuple().tm_yday
+#     if year_day < get_solstice_or_equinox_year_day(year, "spring"):
+#         return "winter"
+#     if year_day < get_solstice_or_equinox_year_day(year, "summer"):
+#         return "spring"
+#     if year_day < get_solstice_or_equinox_year_day(year, "autumn"):
+#         return "summer"
+#     if year_day < get_solstice_or_equinox_year_day(year, "winter"):
+#         return "autumn"
+#     return "winter"
+
 def get_season(t=None):
     dt = get_utc_datetime(t)
     year = dt.year
-    year_dayay = dt.timetuple().tm_yday
-    if year_dayay < get_solstice_or_equinox_year_day(year, "spring"):
+    year_day = dt.timetuple().tm_yday
+
+    winter_start_yday = datetime(year, 12, 1).timetuple().tm_yday
+    winter_end_yday   = datetime(year, 3, 1).timetuple().tm_yday
+
+    spring_start_yday = datetime(year, 3, 21).timetuple().tm_yday
+    spring_end_yday   = datetime(year, 6, 1).timetuple().tm_yday
+
+    summer_start_yday = datetime(year, 6, 1).timetuple().tm_yday
+    summer_end_yday   = datetime(year, 9, 1).timetuple().tm_yday
+
+    autumn_start_yday = datetime(year, 9, 21).timetuple().tm_yday
+    autumn_end_yday   = datetime(year, 12, 1).timetuple().tm_yday
+
+    if (year_day < winter_end_yday) or (year_day > winter_start_yday):
         return "winter"
-    if year_dayay < get_solstice_or_equinox_year_day(year, "summer"):
+    if spring_start_yday <= year_day < spring_end_yday:
         return "spring"
-    if year_dayay < get_solstice_or_equinox_year_day(year, "autumn"):
+    if summer_start_yday <= year_day < summer_end_yday:
         return "summer"
-    if year_dayay < get_solstice_or_equinox_year_day(year, "winter"):
+    if autumn_start_yday <= year_day < autumn_end_yday:
         return "autumn"
-    return "winter"
+    return "interseason"
 
 
 def get_holiday(t=None):
