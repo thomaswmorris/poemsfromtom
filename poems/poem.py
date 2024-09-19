@@ -98,7 +98,7 @@ class Poem():
         if self.language.lower() == "english":
             return None
         else:
-            translation = f"Translated from the {self.language.capitalize()}"
+            translation = f"Translated from the {self.language}"
             if self.translators:
                 if len(self.translators) > 1:
                     translators_string = " & ".join([", ".join(self.translators[:-1]), self.translators[-1]])
