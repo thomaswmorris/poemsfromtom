@@ -56,6 +56,7 @@ class Author():
     flags: list = field(default_factory=list)
     link: str = None
     favorite: bool = False
+    saint: bool = False
     tags: list = field(default_factory=list)
 
     def __post_init__(self):
