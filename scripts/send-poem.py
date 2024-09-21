@@ -24,7 +24,7 @@ curator = Curator()
 repo = utils.load_github_repo(github_repo_name=args.github_repo_name, 
                               github_token=args.github_token)
 
-history = utils.read_csv(repo=repo, filepath="data/poems/history-daily.csv")
+history = utils.read_csv(repo=repo, filepath="poems/history-daily.csv")
 
 when = ttime.time() if args.mode == "daily" else ttime.time() + random.uniform(low=0, high=365 * 86400)
 context = Context(timestamp=when)
