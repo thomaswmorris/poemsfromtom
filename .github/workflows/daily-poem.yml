@@ -1,7 +1,7 @@
 name: Poem of the day
 on:
   schedule:
-    - cron: "0 11 * * *" # daily at 11:00 UTC (usually 06:00 EST)
+    - cron: "55 10 * * *" # daily at 10:55 UTC, so that it sends at 11 UTC (usually 06:00 AM EST)
   workflow_dispatch:
 
 jobs:

@@ -47,7 +47,7 @@ listserv = utils.read_csv(repo=repo, filepath=args.listserv_filename)
 for index, entry in listserv.iterrows():
     t = threading.Thread(target=utils.email_thread, kwargs={**thread_kwargs, "recipient": entry.email})
     t.start()
-    ttime.sleep(1e0)
+    ttime.sleep(5e-1)
 
 if args.write_to_repo:
 
