@@ -3,6 +3,9 @@ import numpy as np
 from .errors import AuthorNotFoundError, PoemNotFoundError
 from .catalog import Catalog
 from .poem import Author, Poem
+from .data import authors
+
+import pandas as pd
 
 here, this_file = os.path.split(__file__)
 
@@ -61,8 +64,26 @@ class Curator():
 
         if very_verbose: 
             catalog_summary = self.catalog.df.sort_values(["probability", "author"], ascending=[False, False])[["author", "title", "context", "probability"]]
+
+            author_summary_entries = {}
+            for author_index, entry in authors.iterrows():
+                author_mask = self.catalog.df.author == author_index
+                author_summary_entries[author_index] = {
+                    **entry.to_dict(),
+                    "n": author_mask.sum(),
+                    "probability": self.catalog.df.loc[author_mask, "probability"].sum().round(6)
+                }
+
+            author_summary = pd.DataFrame(author_summary_entries).T.sort_values(["probability"], ascending=[False])
+
             print(f"choosing from {len(self.catalog.df)} poems; the most likely are:")
             print(catalog_summary.iloc[:20].to_string())
+            print()
+
+            print(f"choosing from {len(author_summary)} authors; the most likely are:")
+            print(author_summary.iloc[:20].to_string())
+            print()
+
         chosen_loc = np.random.choice(self.catalog.df.index, p=self.catalog.df.probability)
         chosen_author, chosen_title = self.catalog.df.loc[chosen_loc, ["author", "title"]]
         
