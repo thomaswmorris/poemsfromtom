@@ -110,10 +110,10 @@ class Poem():
     def email_subject(self, mode="daily"):
         if mode == "daily":
             return f"Poem of the Day: {self.title_by_author}"
-        if mode == "test":
+        if mode in ["hourly-test", "push-test"]:
             return f"TEST ({self.context.pretty_date}): {self.title_by_author} {self.keywords}"
         else:
-            raise ValueError("'mode' must be one of ['daily', 'test'].")
+            raise ValueError("'mode' must be one of ['daily', 'hourly-test', 'push-test'].")
 
     def html_body(self):
         body_text = self.body.replace("--", "&#8212;") # convert emdashes
