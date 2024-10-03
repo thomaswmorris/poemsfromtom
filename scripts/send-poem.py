@@ -1,6 +1,6 @@
 import json
 import time as ttime
-from datetime import datetime
+import datetime
 import argparse, threading
 import warnings
 import pytz
@@ -57,6 +57,7 @@ else:
 
 wait_seconds = (start_time - now).seconds
 if wait_seconds < 600:
+    logger.info(f"Waiting {wait_seconds:.03f} seconds.")
     ttime.sleep(wait_seconds)
 
 now = Context.now()
