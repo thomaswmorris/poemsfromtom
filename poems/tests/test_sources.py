@@ -5,7 +5,6 @@ from poems import Curator
 test_titles = ["roads-go-ever-ever-on", "gods-acres", "sonnet-101"]
 
 def test_dates():
-    print()
     curator = Curator()
 
     for title in test_titles:

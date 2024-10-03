@@ -5,7 +5,6 @@ def test_curator():
     p = curator.get_poem(very_verbose=True)
 
 def test_dates():
-    print()
     curator = Curator()
     for author in ["bob-dylan", "t-s-eliot", "dante-alighieri", "horace", "ovid", "sappho", "anonymous"]:
         poem = curator.get_poem(author=author, verbose=False)
