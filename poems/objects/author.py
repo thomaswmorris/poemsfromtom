@@ -50,7 +50,7 @@ class Author:
             parts.append(html_flags)
 
         if html_dates:
-            parts.append(html_dates)
+            parts.append(f"({html_dates})")
 
         return " ".join(parts)
 
@@ -93,4 +93,4 @@ class Author:
             return ""
 
         else:
-            raise KeyError(f"No attribute '{attr}'.")
+            raise KeyError(f"No attribute '{attr}' in object {self.__repr__()}.")

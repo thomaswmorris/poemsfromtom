@@ -1,7 +1,6 @@
 from .context import Context # noqa
 from .curator import Curator # noqa
-from .poem import Poem # noqa
-from .objects import Author, Time # noqa
+from .objects import Poem, Author, Time # noqa
 
 import logging
 

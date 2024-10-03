@@ -7,7 +7,7 @@ import yaml
 
 from pandas import DataFrame
 from .context import Context
-from .poem import Poem, Author
+from .objects import Poem, Author
 from .utils import make_author_stats
 
 import logging

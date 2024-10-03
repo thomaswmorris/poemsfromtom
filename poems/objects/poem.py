@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 
-from . import utils
-from .objects import Author
-from .context import Context, MONTHS
+from .. import utils
+from . import Author
+from ..context import Context, MONTHS
 
 @dataclass
 class Poem():

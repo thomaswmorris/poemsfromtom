@@ -2,7 +2,7 @@ import os, pathlib, yaml
 import numpy as np
 from .errors import AuthorNotFoundError, PoemNotFoundError
 from .catalog import Catalog
-from .poem import Author, Poem
+from .objects import Author, Poem
 from .data import authors
 
 import pandas as pd
@@ -79,11 +79,8 @@ class Curator():
 
             author_summary = pd.DataFrame(author_summary_entries).T.sort_values(["probability"], ascending=[False])
 
-            logger.info(f"choosing from {len(self.catalog.df)} poems; the most likely are:")
-            logger.info(catalog_summary.iloc[:20].to_string())
-
-            logger.info(f"choosing from {len(author_summary)} authors; the most likely are:")
-            logger.info(author_summary.iloc[:20].to_string())
+            logger.info(f"choosing from {len(self.catalog.df)} poems; the most likely are:\n{catalog_summary.iloc[:20].to_string()}")
+            logger.info(f"choosing from {len(author_summary)} authors; the most likely are:\n{author_summary.iloc[:20].to_string()}")
 
         chosen_loc = np.random.choice(self.catalog.df.index, p=self.catalog.df.probability)
         chosen_author, chosen_title = self.catalog.df.loc[chosen_loc, ["author", "title"]]

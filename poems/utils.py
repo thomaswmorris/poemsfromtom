@@ -69,7 +69,7 @@ def email_thread(username: str,
                        content=content, 
                        recipient=recipient)
             a, b = recipient.split("@")
-            logger.info(f"Set email to {a:>24} @ {b:<20}")
+            logger.info(f"Sent email to {a:>24} @ {b:<20}")
             done = True
         except Exception as error:
             logger.warning(error)
