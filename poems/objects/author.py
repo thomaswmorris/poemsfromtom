@@ -57,24 +57,24 @@ class Author:
 
     @property
     def default_language(self):
-        languages = self.data.get("language", [])
+        languages = self.data.get("languages", [])
         if languages:
             return languages[-1]
         return None
 
     @property
-    def nationality(self):
-        return self.data.get("nationality", [])
+    def nationalities(self):
+        return self.data.get("nationalities", [])
     
     @property
     def demonym(self):
-        if self.nationality:
-            return "-".join([countries.loc[country, "demonym"] for country in self.nationality])
+        if self.nationalities:
+            return "-".join([countries.loc[country, "demonym"] for country in self.nationalities])
         return ""
     
     def flag_emojis(self, html=False):
-        if self.nationality:
-            emojis = [countries.loc[country, "emoji"] for country in self.nationality]
+        if self.nationalities:
+            emojis = [countries.loc[country, "emoji"] for country in self.nationalities]
             s = "".join(emojis)
             if html:
                 s = f'<span title="{self.demonym}">{s}</span>'
