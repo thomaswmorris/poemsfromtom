@@ -50,7 +50,7 @@ listserv = utils.read_csv(repo=repo, filepath=args.listserv_filename)
 
 delta = datetime.timedelta(hours=1)
 now = datetime.datetime.now()
-if args.mode == "daily":
+if args.mode in ["daily", "hourly-test"]:
     start_time = (now + datetime.timedelta(hours=1)).replace(microsecond=0, second=0, minute=0)
 else:
     start_time = (now + datetime.timedelta(minutes=1)).replace(microsecond=0, second=0)
@@ -65,7 +65,7 @@ now = Context.now()
 for index, entry in listserv.iterrows():
     t = threading.Thread(target=utils.email_thread, kwargs={**thread_kwargs, "recipient": entry.email})
     t.start()
-    ttime.sleep(1e-1)
+    ttime.sleep(5e-1)
 
 if args.write_to_repo:
 

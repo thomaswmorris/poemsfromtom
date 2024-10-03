@@ -1,7 +1,7 @@
 name: Hourly test
 on:
   schedule:
-    - cron: "58 0-9,11-23 * * *" # hourly, except at 12:00 UTC (07:00 EST)
+    - cron: "55 0-9,11-23 * * *" # hourly, except at 12:00 UTC (07:00 EST)
 
 jobs:
   run_tests:
@@ -22,5 +22,5 @@ jobs:
 
       - name: Curate a poem, and send it to the testserv
         run:
-          python scripts/send-poem.py --mode "test" --username "poemsfromtom@gmail.com" --password ${{ secrets.PFT_PW }} --listserv_filename "poems/testserv.csv"
+          python scripts/send-poem.py --mode "hourly-test" --username "poemsfromtom@gmail.com" --password ${{ secrets.PFT_PW }} --listserv_filename "poems/testserv.csv"
           --github_repo_name "thomaswmorris.github.io" --github_token ${{ secrets.GH_TOKEN }}
