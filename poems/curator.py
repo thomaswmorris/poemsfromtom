@@ -3,7 +3,7 @@ import numpy as np
 from .errors import AuthorNotFoundError, PoemNotFoundError
 from .catalog import Catalog
 from .poem import Author, Poem
-# from .data import authors
+from .data import authors
 
 import pandas as pd
 
