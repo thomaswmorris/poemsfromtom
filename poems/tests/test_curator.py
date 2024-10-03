@@ -1,7 +1,5 @@
 from poems import Curator
 
-
-
 def test_curator():
     curator = Curator()
     p = curator.get_poem(very_verbose=True)

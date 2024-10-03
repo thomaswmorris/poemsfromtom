@@ -32,7 +32,7 @@ history = utils.read_csv(repo=repo, filepath="poems/history-daily.csv")
 when = ttime.time() if args.mode == "daily" else ttime.time() + random.uniform(low=0, high=365 * 86400)
 context = Context(timestamp=when)
 
-print(f"using context {context.to_dict()}")
+logger.info(f"using context {context.to_dict()}")
 
 curator.catalog.apply_context(context, forced=["holy_thursday", "good_friday", "holy_saturday", "easter_sunday", "christmas_eve", "christmas_day"])
 curator.catalog.apply_history(history, verbose=True)
@@ -57,7 +57,7 @@ else:
 
 wait_seconds = (start_time - now).seconds
 if wait_seconds < 600:
-    logger.info(f"Waiting {wait_seconds:.03f} seconds.")
+    logger.info(f"Waiting {int(wait_seconds)} seconds.")
     ttime.sleep(wait_seconds)
 
 now = Context.now()
@@ -96,7 +96,7 @@ if args.write_to_repo:
             daily_poems[str(index)] = packet
 
         except Exception as e:
-            logger.warning(f"Could not find poem for entry {entry}")
+            logger.warning(f"Could not find poem for entry {entry.to_dict()}")
 
     utils.write_to_repo(repo,
                         items={

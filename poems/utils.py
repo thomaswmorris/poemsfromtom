@@ -69,11 +69,11 @@ def email_thread(username: str,
                        content=content, 
                        recipient=recipient)
             a, b = recipient.split("@")
-            print(f"{datetime.now().isoformat()} | {a:>24} @ {b:<20}")
+            logger.info(f"Set email to {a:>24} @ {b:<20}")
             done = True
         except Exception as error:
             logger.warning(error)
-            print(f"Encountered error for recipient {recipient}. Trying again in 60 seconds...")
+            logger.warning(f"Encountered error for recipient {recipient}. Trying again in 60 seconds...")
             fails += 1
             time.sleep(60)
             
@@ -102,7 +102,7 @@ def write_to_repo(repo, items, branch="master", verbose=False):
 
         blob = repo.create_git_blob(content, "utf-8")
         elements.append(gh.InputGitTreeElement(path=filename, mode="100644", type="blob", sha=blob.sha))
-        if verbose: print(f"writing to {filename}")
+        if verbose: logger.info(f"writing to {filename}")
 
     head_sha   = repo.get_branch(branch).commit.sha
     base_tree  = repo.get_git_tree(sha=head_sha)

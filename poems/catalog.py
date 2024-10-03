@@ -101,7 +101,7 @@ class Catalog():
                 if keyword == context_dict[category]: 
                     if keyword in forced:
                         if verbose:
-                            print(f"FORCING CONTEXT: {category}='{keyword}'")
+                            logger.info(f"FORCING CONTEXT: {category}='{keyword}'")
                         multiplier = 1e18
                     else:
                         multiplier = weight
@@ -155,7 +155,7 @@ class Catalog():
                     treated_authors.append(entry.author)
 
         if verbose:
-            print(f"Dropped authors {dropped_authors}.")
+            logger.info(f"Dropped authors {dropped_authors}.")
 
 
         self.df.loc[indices_to_drop, "likelihood"] = 0

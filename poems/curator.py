@@ -6,6 +6,9 @@ from .poem import Author, Poem
 from .data import authors
 
 import pandas as pd
+import logging
+
+logger = logging.getLogger("poems")
 
 here, this_file = os.path.split(__file__)
 
@@ -76,11 +79,11 @@ class Curator():
 
             author_summary = pd.DataFrame(author_summary_entries).T.sort_values(["probability"], ascending=[False])
 
-            print(f"choosing from {len(self.catalog.df)} poems; the most likely are:")
+            logger.info(f"choosing from {len(self.catalog.df)} poems; the most likely are:")
             print(catalog_summary.iloc[:20].to_string())
             print()
 
-            print(f"choosing from {len(author_summary)} authors; the most likely are:")
+            logger.info(f"choosing from {len(author_summary)} authors; the most likely are:")
             print(author_summary.iloc[:20].to_string())
             print()
 
@@ -88,7 +91,7 @@ class Curator():
         chosen_author, chosen_title = self.catalog.df.loc[chosen_loc, ["author", "title"]]
         
         if verbose: 
-            print(f"chose poem '{chosen_title}' by {chosen_author}")
+            logger.info(f"chose poem '{chosen_title}' by {chosen_author}")
 
         self.catalog.reset()
 
