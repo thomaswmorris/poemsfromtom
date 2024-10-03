@@ -3,13 +3,15 @@ import numpy as np
 import json
 import os
 import pathlib
-import warnings
 import yaml
 
 from pandas import DataFrame
 from .context import Context
 from .poem import Poem, Author
 from .utils import make_author_stats
+
+import logging
+logger = logging.getLogger("poems")
 
 here, this_file = os.path.split(__file__)
 
@@ -136,7 +138,7 @@ class Catalog():
             res = self.df.loc[author_mask & (self.df.title==entry.title)]
 
             if not len(res):
-                warnings.warn(f"Could not remove poem '{entry.title}' by '{entry.author}'.")
+                logger.warning(f"Could not remove poem '{entry.title}' by '{entry.author}'.")
 
             indices_to_drop.extend(res.index)
 
@@ -165,4 +167,4 @@ class Catalog():
         return self.df._repr_html_()
         
     def construct_poem(self, author, title):
-        return Poem(key=title, author=Author(key=author, **self.data[author]["metadata"]), context=self.context, **self.data[author]["poems"][title])
+        return Poem(key=title, author=Author(**self.data[author]["metadata"]), context=self.context, **self.data[author]["poems"][title])

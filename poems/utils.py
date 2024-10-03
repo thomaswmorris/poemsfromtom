@@ -15,6 +15,8 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from io import StringIO
 
+import logging
+logger = logging.getLogger("poems")
 
 def convert_title_to_html(s):
     match = re.compile(r"(?:\((.+)\))? *(.+)").match(s)
@@ -53,7 +55,10 @@ def email_thread(username: str,
                  password: str, 
                  subject: str, 
                  content: str,
-                 recipient: str):
+                 recipient: str,
+                 delay: float = 0):
+    
+    time.sleep(delay)
 
     done, fails = False, 0
     while (not done) and (fails < 60):
@@ -67,7 +72,7 @@ def email_thread(username: str,
             print(f"{datetime.now().isoformat()} | {a:>24} @ {b:<20}")
             done = True
         except Exception as error:
-            warnings.warn(error)
+            logger.warning(error)
             print(f"Encountered error for recipient {recipient}. Trying again in 60 seconds...")
             fails += 1
             time.sleep(60)

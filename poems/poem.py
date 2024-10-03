@@ -143,7 +143,7 @@ class Poem():
 
 
     def html_header(self, flags=True):
-        html_description = self.author.html_description(flags=flags, html=True)
+        html_description = self.author.html_description(flags=flags)
         if html_description:
             header = f'<div id="poem-description">{self.title} by {html_description}</div>'
         else:

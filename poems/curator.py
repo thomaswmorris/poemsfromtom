@@ -3,7 +3,7 @@ import numpy as np
 from .errors import AuthorNotFoundError, PoemNotFoundError
 from .catalog import Catalog
 from .poem import Author, Poem
-from .data import authors
+# from .data import authors
 
 import pandas as pd
 
@@ -22,7 +22,7 @@ class Curator():
             author = np.random.choice(all_authors)
 
         if author in all_authors:
-            return Author(key=author, **self.catalog.data[author]["metadata"])
+            return Author(**self.catalog.data[author]["metadata"])
 
         raise ValueError(f"No author '{author}'.")
 

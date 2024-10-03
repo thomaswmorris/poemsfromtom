@@ -106,16 +106,16 @@ def get_season(t=None):
     winter_start_yday = datetime(year, 12, 1).timetuple().tm_yday
     winter_end_yday   = datetime(year, 3, 1).timetuple().tm_yday
 
-    spring_start_yday = datetime(year, 3, 21).timetuple().tm_yday
+    spring_start_yday = datetime(year, 4, 1).timetuple().tm_yday
     spring_end_yday   = datetime(year, 6, 1).timetuple().tm_yday
 
     summer_start_yday = datetime(year, 6, 1).timetuple().tm_yday
     summer_end_yday   = datetime(year, 9, 1).timetuple().tm_yday
 
-    autumn_start_yday = datetime(year, 9, 21).timetuple().tm_yday
+    autumn_start_yday = datetime(year, 10, 1).timetuple().tm_yday
     autumn_end_yday   = datetime(year, 12, 1).timetuple().tm_yday
 
-    if (year_day < winter_end_yday) or (year_day > winter_start_yday):
+    if (year_day < winter_end_yday) or (year_day >= winter_start_yday):
         return "winter"
     if spring_start_yday <= year_day < spring_end_yday:
         return "spring"

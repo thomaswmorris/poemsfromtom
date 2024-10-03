@@ -9,6 +9,9 @@ from numpy import random
 from poems import Context, Curator
 from poems import utils
 
+import logging
+logger = logging.getLogger("poems")
+
 parser = argparse.ArgumentParser()
 parser.add_argument("--username", type=str, help="Email address from which to send the poem", default="")
 parser.add_argument("--password", type=str, help="Email password", default="")
@@ -44,16 +47,29 @@ thread_kwargs = {"username": args.username,
                  "content": p.email_html}
 
 listserv = utils.read_csv(repo=repo, filepath=args.listserv_filename)
+
+delta = datetime.timedelta(hours=1)
+now = datetime.datetime.now()
+if args.mode == "daily":
+    start_time = (now + datetime.timedelta(hours=1)).replace(microsecond=0, second=0, minute=0)
+else:
+    start_time = (now + datetime.timedelta(minutes=1)).replace(microsecond=0, second=0)
+
+wait_seconds = (start_time - now).seconds
+if wait_seconds < 600:
+    ttime.sleep(wait_seconds)
+
+now = Context.now()
+
 for index, entry in listserv.iterrows():
     t = threading.Thread(target=utils.email_thread, kwargs={**thread_kwargs, "recipient": entry.email})
     t.start()
-    ttime.sleep(5e-1)
+    ttime.sleep(1e-1)
 
 if args.write_to_repo:
 
     if args.mode == "daily":
         index = len(history) + 1
-        now = Context.now()
         date, time = now.isoformat[:19].split("T")
 
         history.loc[index, "date"] = date
@@ -79,7 +95,7 @@ if args.write_to_repo:
             daily_poems[str(index)] = packet
 
         except Exception as e:
-            warnings.warn(f"Could not find poem for entry {entry}")
+            logger.warning(f"Could not find poem for entry {entry}")
 
     utils.write_to_repo(repo,
                         items={

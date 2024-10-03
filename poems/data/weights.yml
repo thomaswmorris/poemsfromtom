@@ -452,11 +452,11 @@ month_epoch:
   late: 2.916
   middle: 3.044
 season:
-  autumn: 5.144
-  interseason: 8.908
-  spring: 5.073
+  autumn: 5.988
+  interseason: 5.988
+  spring: 5.988
   summer: 3.97
-  winter: 4.093
+  winter: 4.047
 weekday:
   friday: 7.0
   monday: 7.0
