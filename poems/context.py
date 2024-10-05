@@ -30,6 +30,7 @@ class Context():
         self.liturgy     = get_liturgy(self.timestamp)
         self.holiday     = get_holiday(self.timestamp)
         self.month_epoch = get_month_epoch(self.timestamp)
+        self.year_epoch  = get_year_epoch(self.timestamp)
         self.year_day    = self.datetime.timetuple().tm_yday
         self.weekday     = WEEKDAYS[self.datetime.weekday()]
         
@@ -64,11 +65,13 @@ class Context():
                    "liturgy": self.liturgy, 
                    "holiday": self.holiday, 
                       "year": self.year,
+                "year_epoch": self.year_epoch,
                      "month": self.month,
+               "month_epoch": self.month_epoch,
                        "day": self.day,
                   "year_day": self.year_day, 
                    "weekday": self.weekday, 
-               "month_epoch": self.month_epoch}
+               }
 
 
 def get_utc_datetime(when=None):
@@ -229,6 +232,11 @@ def get_advent_sunday_year_day(year):
     christmas_year_day = datetime(year,12,25).timetuple().tm_yday 
     return christmas_year_day - (22 + datetime(year,12,25).weekday())
 
+def get_year_epoch(t=None):
+    month = get_utc_datetime(t).month
+    if month < 5: return "early"
+    if month < 9: return "middle"
+    return "late"
 
 def get_month_epoch(t=None):
     dt = get_utc_datetime(t)

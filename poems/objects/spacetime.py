@@ -9,7 +9,7 @@ from collections.abc import Mapping
 
 def parse_time_string(s):
 
-    parser = re.compile(r"^(?:(?P<season_epoch>e|m|l)(?P<season>(Winter|Spring|Summer|Autumn)) +)?(?P<fuzzy>~)?(?P<year_epoch>e|m|l)?(?P<year>(/?-?\d+s?)+)(?:\.(?P<month_epoch>e|m|l)?(?P<month>(/?\d\d)+))?(?:\.(?P<day>(/?\d\d)+))?$", re.IGNORECASE) # noqa
+    parser = re.compile(r"^(?:(?P<season_epoch>e|m|l)?(?P<season>(Winter|Spring|Summer|Autumn)) +)?(?P<fuzzy>~)?(?P<year_epoch>e|m|l)?(?P<year>(/?-?\d+s?)+)(?:\.(?P<month_epoch>e|m|l)?(?P<month>(/?\d\d)+))?(?:\.(?P<day>(/?\d\d)+))?$", re.IGNORECASE) # noqa
     
     match = parser.search(s.strip())
 
@@ -53,10 +53,17 @@ class Time():
     - July/August 1987 (like for a magazine issue)
     """
 
-    
-
-    fields = ["year", "year_epoch", "season", "season_epoch", "month", "month_epoch", 
-              "day", "holiday", "fuzzy"]
+    fields = {
+              "year": str, 
+              "year_epoch": str, 
+              "season": str, 
+              "season_epoch": str, 
+              "month": str, 
+              "month_epoch": str, 
+              "day": int, 
+              "holiday": str, 
+              "fuzzy": bool, 
+            }
 
     def __init__(self, t):
 
@@ -126,10 +133,10 @@ class Time():
 
     def to_dict(self):
         d = {}
-        for field in self.fields:
+        for field, dtype in self.fields.items():
             v = getattr(self, field)
             if v is not None:
-                d[field] = v
+                d[field] = dtype(v)
         return d
 
 

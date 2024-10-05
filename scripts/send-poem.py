@@ -55,7 +55,7 @@ if args.mode in ["daily", "hourly-test"]:
 else:
     start_time = (now + datetime.timedelta(minutes=1)).replace(microsecond=0, second=0)
 
-wait_seconds = (start_time - now).seconds
+wait_seconds = (start_time - now).seconds + 1
 if wait_seconds < 600:
     logger.info(f"Waiting {int(wait_seconds)} seconds.")
     ttime.sleep(wait_seconds)

@@ -465,3 +465,7 @@ weekday:
   thursday: 7.0
   tuesday: 7.0
   wednesday: 7.0
+year_epoch:
+  early: 3.038
+  late: 2.994
+  middle: 2.969

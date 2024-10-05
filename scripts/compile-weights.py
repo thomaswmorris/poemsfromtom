@@ -17,7 +17,7 @@ for col in ["year", "day", "year_day"]:
     sampled_context[col] = pd.to_numeric(sampled_context[col])
 
 CONTEXT_MULTIPLIERS = {}
-for category in ['weekday', 'month', 'day', 'season', 'liturgy', 'holiday', 'month_epoch']:
+for category in ["weekday", "month", "day", "season", "liturgy", "holiday", "month_epoch", "year_epoch"]:
     CONTEXT_MULTIPLIERS[category] = {}
     sampled_keywords = sampled_context.loc[:, category]
 
@@ -31,5 +31,5 @@ for category in ['weekday', 'month', 'day', 'season', 'liturgy', 'holiday', 'mon
             keyword = int(keyword)
         CONTEXT_MULTIPLIERS[category][keyword] = float(np.round(len(sampled_keywords) / np.sum(keyword==sampled_keywords), 3))
 
-with open(f'/users/tom/poems/src/poems/data/weights.yml', 'w+', encoding='utf8') as f:
+with open(f"/users/tom/poems/src/poems/data/weights.yml", "w+", encoding="utf8") as f:
     yaml.dump(CONTEXT_MULTIPLIERS, f, default_flow_style=False)
