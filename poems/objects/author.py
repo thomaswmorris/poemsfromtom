@@ -59,7 +59,7 @@ class Author:
     def default_language(self):
         languages = self.data.get("languages", [])
         if languages:
-            return languages[-1]
+            return languages[0]
         return None
 
     @property
