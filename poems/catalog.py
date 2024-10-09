@@ -155,7 +155,7 @@ class Catalog():
                     treated_authors.append(entry.author)
 
         if verbose:
-            logger.info(f"Dropped authors {dropped_authors}.")
+            logger.info(f"Dropped authors {dropped_authors}")
 
 
         self.df.loc[indices_to_drop, "likelihood"] = 0
