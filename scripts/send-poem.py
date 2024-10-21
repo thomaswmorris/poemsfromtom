@@ -34,7 +34,7 @@ context = Context(timestamp=when)
 
 logger.info(f"using context {context.to_dict()}")
 
-curator.catalog.apply_context(context, forced=["holy_thursday", "good_friday", "holy_saturday", "easter_sunday", "christmas_eve", "christmas_day"])
+curator.catalog.apply_context(context, forced=["new_years_day", "holy_thursday", "good_friday", "holy_saturday", "easter_sunday", "christmas_eve", "christmas_day", "new_years_eve"])
 curator.catalog.apply_history(history, verbose=True)
 
 # choose a poem
