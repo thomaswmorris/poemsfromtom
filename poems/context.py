@@ -5,6 +5,7 @@ from dataclasses import dataclass
 from datetime import datetime
 
 import time as ttime
+import numpy as np
 
 here, this_filename = os.path.split(__file__)
 
@@ -36,7 +37,7 @@ class Context():
         
     @classmethod
     def now(cls):
-        return cls(timestamp=int(ttime.time()))
+        return cls(timestamp=np.round(ttime.time(), 6))
 
     @property
     def year(self):

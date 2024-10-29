@@ -78,7 +78,6 @@ if args.write_to_repo:
         history.loc[index, "timestamp"] = now.timestamp
         history.loc[index, "title"] = p.key
         history.loc[index, "author"] = p.author.key
-        history["timestamp"] = history["timestamp"].astype(int)
 
     daily_poems = {}
     for index, entry in history.iterrows():
