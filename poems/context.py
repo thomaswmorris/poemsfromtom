@@ -6,10 +6,13 @@ from datetime import datetime
 
 import time as ttime
 import numpy as np
+import pandas as pd
 
 here, this_filename = os.path.split(__file__)
 
-HOLIDAYS = yaml.safe_load(pathlib.Path(f"{here}/data/holidays.yml").read_text())
+holidays = pd.read_csv(f"/Users/tom/poems/src/poems/data/holidays.csv")
+forced_holidays = list(holidays.loc[holidays.forced].name.values)
+
 MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
 WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
@@ -17,11 +20,11 @@ WEEKDAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", 
 @dataclass
 class Context():
 
-    timestamp: int
+    timestamp: float
     ctime: str = ""
     season: str = ""
     liturgy: str = ""
-    holiday: str = ""
+    holidays: str = ""
 
     def __post_init__(self):
 
@@ -29,7 +32,7 @@ class Context():
         self.ctime       = self.datetime.ctime()
         self.season      = get_season(self.timestamp)
         self.liturgy     = get_liturgy(self.timestamp)
-        self.holiday     = get_holiday(self.timestamp)
+        self.holidays    = get_holidays(self.timestamp)
         self.month_epoch = get_month_epoch(self.timestamp)
         self.year_epoch  = get_year_epoch(self.timestamp)
         self.year_day    = self.datetime.timetuple().tm_yday
@@ -64,7 +67,7 @@ class Context():
                      "ctime": self.ctime, 
                     "season": self.season, 
                    "liturgy": self.liturgy, 
-                   "holiday": self.holiday, 
+                   "holiday": self.holidays, 
                       "year": self.year,
                 "year_epoch": self.year_epoch,
                      "month": self.month,
@@ -88,19 +91,6 @@ def timestamp_to_pretty_date(t):
     return f"{WEEKDAYS[dt.weekday()].capitalize()} {MONTHS[dt.month-1].capitalize()} {int(dt.day)}, {int(dt.year)}"
 
 
-# def get_season(t=None):
-#     dt = get_utc_datetime(t)
-#     year = dt.year
-#     year_day = dt.timetuple().tm_yday
-#     if year_day < get_solstice_or_equinox_year_day(year, "spring"):
-#         return "winter"
-#     if year_day < get_solstice_or_equinox_year_day(year, "summer"):
-#         return "spring"
-#     if year_day < get_solstice_or_equinox_year_day(year, "autumn"):
-#         return "summer"
-#     if year_day < get_solstice_or_equinox_year_day(year, "winter"):
-#         return "autumn"
-#     return "winter"
 
 def get_season(t=None):
     dt = get_utc_datetime(t)
@@ -130,73 +120,72 @@ def get_season(t=None):
     return "interseason"
 
 
-def get_holiday(t=None):
+def get_holidays(t=None):
+
+    res = []
 
     dt = get_utc_datetime(t)
     year_day = dt.timetuple().tm_yday
 
     year, month, day, weekday = dt.year, MONTHS[dt.month-1], dt.day, WEEKDAYS[dt.weekday()]
-
-    # these are relative to easter
     easter_offset = year_day - easter(dt.year).timetuple().tm_yday 
-    if easter_offset in HOLIDAYS["easter_offset"].keys():
-        return HOLIDAYS["easter_offset"][easter_offset]
+
+    mask = (holidays.month == month) & (holidays.day == day)
+    mask |= (holidays.easter_offset == easter_offset)
+
+    res.extend(holidays.loc[mask].name.values)
+
 
     # these shouldn't override anything important
     if month == "march":
         if year_day == get_solstice_or_equinox_year_day(year, "spring"):
-            return "spring_equinox"
+            res.append("spring_equinox")
     if month == "june":
         if year_day == get_solstice_or_equinox_year_day(year, "summer"):
-            return "summer_solstice"
+            res.append("summer_solstice")
     if month == "september":
         if year_day == get_solstice_or_equinox_year_day(year, "autumn"):
-            return "autumn_equinox"
+            res.append("autumn_equinox")
     if month == "december":
         if year_day == get_solstice_or_equinox_year_day(year, "winter"):
-            return "winter_solstice"
+            res.append("winter_solstice")
     
     christmas_day = datetime(dt.year,12,25)
-    christmas_day_weekday = WEEKDAYS[christmas_day.weekday()]
     advent_sunday_year_day = christmas_day.timetuple().tm_yday - (22 + christmas_day.weekday())   
 
     # these are relative to advent
     if year_day == advent_sunday_year_day: 
-        return "advent_sunday"
+        res.append("advent_sunday")
     if year_day == advent_sunday_year_day - 7: 
-        return "christ_the_king"
+        res.append("christ_the_king")
 
     # these are floating holidays
     weekday_count = int((day - 1) / 7) + 1
     if (month, weekday, weekday_count) == ("february", "monday", 3):  
-        return "presidents_day" 
+        res.append("presidents_day")
     if (month, weekday, weekday_count) == ("may", "sunday", 2):  
-        return "mothers_day"
+        res.append("mothers_day")
     if (month, weekday, weekday_count) == ("june", "sunday", 3):  
-        return "fathers_day"
+        res.append("fathers_day")
     if (month, weekday, weekday_count) == ("september", "monday", 1):  
-        return "labor_day"
+        res.append("labor_day")
     if (month, weekday, weekday_count) == ("october", "monday", 2):  
-        return "columbus_day"
+        res.append("columbus_day")
     if (month, weekday, weekday_count) == ("november", "thursday", 4): 
-        return "thanksgiving"
+        res.append("thanksgiving")
 
     # these are weird
     if (month, weekday) == ("january", "sunday") and (day > 6) and (day <= 13): 
-        return "baptism" # first sunday after epiphany
+        res.append("baptism") # first sunday after epiphany
     if (month, weekday) == ("may", "monday") and (get_utc_datetime(t + 7 * 86400).month == 6): 
-        return "memorial_day" # last monday of may
+        res.append("memorial_day") # last monday of may
 
     if (year_day > christmas_day.timetuple().tm_yday) and (weekday == "sunday"): 
-        return "holy_family" # sunday after christmas
-    if (month, day) == ("december", 30) and christmas_day_weekday == "sunday":
-        return "holy_family" # if christmas is a sunday then december 30
+        res.append("holy_family") # sunday after christmas
+    if (month, day) == ("december", 30) and christmas_day.weekday() == "sunday":
+        res.append("holy_family") # if christmas is a sunday then december 30
 
-    if day in HOLIDAYS["dates"][month].keys():
-        return HOLIDAYS["dates"][month][day]
-
-    return "none"
-
+    return res
 
 def get_solstice_or_equinox_year_day(year, season):
     if season == "spring":

@@ -98,7 +98,7 @@ class Catalog():
 
                 mask = np.array([c==keyword for c in poem_contexts[category]])
 
-                if keyword == context_dict[category]: 
+                if (keyword in context_dict[category] if category == "holiday" else keyword == context_dict[category]): 
                     if keyword in forced:
                         if verbose:
                             logger.info(f"FORCING CONTEXT: {category}='{keyword}'")

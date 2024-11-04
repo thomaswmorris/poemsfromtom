@@ -1,6 +1,23 @@
-from poems import Context, Curator
-from datetime import datetime
+from poems import Context, Curator, forced_holidays
+from datetime import datetime, timedelta
 import pytz
+
+from poems.context import holidays
+
+def test_liturgys():
+
+    t = datetime.now()
+
+    for _ in range(1000):
+
+        t += timedelta(days=1)
+
+        context = Context(timestamp=t.timestamp())
+
+        for holiday in context.holidays:
+            if holiday not in holidays.name.values:
+                raise ValueError(f"Bad holiday '{holiday}'.")
+
 
 def test_holiday_context():
 
@@ -8,7 +25,7 @@ def test_holiday_context():
 
     curator = Curator()
     context = Context(timestamp=t)
-    curator.catalog.apply_context(context, forced=['easter_sunday'], verbose=True)
+    curator.catalog.apply_context(context, forced=forced_holidays, verbose=True)
     poem = curator.get_poem(verbose=True)
 
     assert poem.keywords['holiday'] == 'easter_sunday'

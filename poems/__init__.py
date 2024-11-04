@@ -1,4 +1,4 @@
-from .context import Context # noqa
+from .context import Context, holidays, forced_holidays # noqa
 from .curator import Curator # noqa
 from .objects import Poem, Author, Time # noqa
 
