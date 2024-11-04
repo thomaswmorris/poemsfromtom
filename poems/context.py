@@ -10,7 +10,7 @@ import pandas as pd
 
 here, this_filename = os.path.split(__file__)
 
-holidays = pd.read_csv(f"/Users/tom/poems/src/poems/data/holidays.csv")
+holidays = pd.read_csv(f"{here}/data/holidays.csv")
 forced_holidays = list(holidays.loc[holidays.forced].name.values)
 
 MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
