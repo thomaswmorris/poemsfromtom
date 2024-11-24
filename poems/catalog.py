@@ -115,14 +115,14 @@ class Catalog():
         self.df.loc[:, "probability"] = self.df.likelihood / self.df.likelihood.sum()
 
     
-    def apply_history(self, history: DataFrame, cooldown: int = 30 * 86400, manage_attrition: bool = False, verbose: bool = False):
+    def apply_history(self, history: DataFrame, cooldown: int = 14 * 86400, manage_attrition: bool = False, verbose: bool = False):
 
         timestamp = Context.now().timestamp
 
         author_stats = make_author_stats(history, self)
 
         last_occurence = DataFrame(columns=["timestamp"], dtype=float)
-        for index, entry in history.iterrows():
+        for _, entry in history.iterrows():
             last_occurence.loc[entry.author, "timestamp"] = entry.timestamp
         
         last_occurence = last_occurence.sort_values("timestamp")
