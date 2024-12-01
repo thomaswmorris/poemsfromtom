@@ -65,23 +65,26 @@ class Poem():
         return ". ".join(parts)
 
     def source(self, html=True):
-        parts = []
         source = self.metadata.get("source")
         
-        if source:
-            html_title = utils.convert_title_to_html(source["title"])
-            if "link" in source:
-                parts.append(f'<a href="{source["link"]}">{html_title}</a>')
+        if source is None:
+            return ""
+
+        html_source = utils.convert_title_to_html(source["title"])
+
+        if "link" in source:
+            html_source = f'<a href="{source["link"]}">{html_source}</a>'
+
+        if "published" in source:
+            date = source['published']['year']
+            if source.get("type") in ["magazine"]:
+                if "month" in source['published']:
+                    date = f"{source['published']['month'].capitalize()} {date}"
+                html_source = f"Published in {html_source} ({date})"
             else:
-                parts.append(f"{html_title}")
-            if "published" in source:
-                year = source['published']['year']
-                if source.get("type") in ["magazine"]:
-                    parts.append(f"({source['published']['month'].capitalize()} {year})")
-                else:
-                    parts.append(f"({year})")
-            return " ".join(parts)
-        return ""
+                html_source = f"from {html_source} ({date})"    
+
+        return html_source
 
     @property
     def language(self) -> str:
@@ -159,7 +162,7 @@ class Poem():
         if self.spacetime(html=True):
             parts.append(f'<i>{self.spacetime(html=True)}.</i>')
         if self.source(html=True):
-            parts.append(f'from {self.source(html=True)}')
+            parts.append(f'{self.source(html=True)}')
         if archive_link:
             parts.append('<a href="https://thomaswmorris.com/poems">daily poems archive</a>')
         return "\n<br>".join(parts)
