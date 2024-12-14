@@ -79,8 +79,8 @@ class Curator():
 
             author_summary = pd.DataFrame(author_summary_entries).T.sort_values(["probability"], ascending=[False])
 
-            logger.info(f"choosing from {len(self.catalog.df)} poems; the most likely are:\n{catalog_summary.iloc[:30].to_string()}")
-            logger.info(f"choosing from {len(author_summary)} authors; the most likely are:\n{author_summary.iloc[:30].to_string()}")
+            logger.info(f"choosing from {(self.catalog.df.probability.values > 1e-6).sum()} poems; the most likely are:\n{catalog_summary.iloc[:30].to_string()}")
+            logger.info(f"choosing from {(author_summary.probability.values > 1e-6).sum()} authors; the most likely are:\n{author_summary.iloc[:30].to_string()}")
 
         chosen_loc = np.random.choice(self.catalog.df.index, p=self.catalog.df.probability)
         chosen_author, chosen_title = self.catalog.df.loc[chosen_loc, ["author", "title"]]
