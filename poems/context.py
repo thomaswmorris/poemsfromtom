@@ -158,6 +158,8 @@ def get_holidays(t=None):
         res.append("advent_sunday")
     if year_day == advent_sunday_year_day - 7: 
         res.append("christ_the_king")
+    if year_day == advent_sunday_year_day + 14: 
+        res.append("gaudate_sunday")
 
     # these are floating holidays
     weekday_count = int((day - 1) / 7) + 1
