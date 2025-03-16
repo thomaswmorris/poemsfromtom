@@ -100,5 +100,5 @@ if args.write_to_repo:
                             "poems/history-daily.csv": history.to_csv(), 
                             "poems/author-stats.csv": utils.make_author_stats(history, catalog=curator.catalog).to_csv(),
                             "docs/assets/scripts/data/daily-poems.js": f"var dailyPoems = {json.dumps(daily_poems, indent=4, ensure_ascii=False)}",
-                        }, 
+                        },
                         verbose=True)

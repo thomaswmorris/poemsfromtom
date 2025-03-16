@@ -39,7 +39,7 @@ classifiers = [
 
 
 [project.urls]
-Homepage = "https://thomaswmorris.com/poems"
+Homepage = "https://thomaswmorris.com/poetry/daily"
 
 [tool.hatch.build.targets.wheel]
 only-include = ["poems"]

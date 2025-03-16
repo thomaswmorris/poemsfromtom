@@ -164,7 +164,7 @@ class Poem():
         if self.source(html=True):
             parts.append(f'{self.source(html=True)}')
         if archive_link:
-            parts.append('<a href="https://thomaswmorris.com/poems">daily poems archive</a>')
+            parts.append('<a href="https://thomaswmorris.com/poetry/daily">daily poems archive</a>')
         return "\n<br>".join(parts)
             
     @property
