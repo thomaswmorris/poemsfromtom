@@ -103,7 +103,7 @@ def get_season(t=None):
     spring_start_yday = datetime(year, 4, 1).timetuple().tm_yday
     spring_end_yday   = datetime(year, 6, 1).timetuple().tm_yday
 
-    summer_start_yday = datetime(year, 6, 1).timetuple().tm_yday
+    summer_start_yday = datetime(year, 6, 21).timetuple().tm_yday
     summer_end_yday   = datetime(year, 9, 1).timetuple().tm_yday
 
     autumn_start_yday = datetime(year, 10, 1).timetuple().tm_yday

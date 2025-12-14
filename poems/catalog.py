@@ -115,7 +115,7 @@ class Catalog():
         self.df.loc[:, "probability"] = self.df.likelihood / self.df.likelihood.sum()
 
     
-    def apply_history(self, history: DataFrame, cooldown: int = 14 * 86400, manage_attrition: bool = False, verbose: bool = False):
+    def apply_history(self, history: DataFrame, cooldown: int = 7 * 86400, manage_attrition: bool = False, verbose: bool = False):
 
         timestamp = Context.now().timestamp
 
