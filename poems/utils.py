@@ -30,8 +30,10 @@ def convert_title_to_html(s):
 
 def normalize_title(string):
     title_key = string.lower()
-    for char in [".", ",", ":", ";", "!", "?", "‘", "’", "“", "”", 
+    for char in ["‘", "’", "“", "”", ".", ",", ":", ";", "!", "?", 
                  "/", "…", "(", ")"]:
+        if len(title_key) == 1:
+            break
         title_key = title_key.replace(char, "")
     for char in ["&", "+"]:
         title_key = title_key.replace(char, "and")
