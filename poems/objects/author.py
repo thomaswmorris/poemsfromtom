@@ -36,7 +36,7 @@ class Author:
             return ""
 
 
-    def html_description(self, flags=True):
+    def html_description(self, flags=True, link=True, dates=True):
 
         parts = []
 
@@ -44,12 +44,15 @@ class Author:
         html_dates = self.dates(html="place")
 
         if self.name:
-            parts.append(f'<a href="{self.link}">{self.name}</a>')
+            if link:
+                parts.append(f'<a href="{self.link}">{self.name}</a>')
+            else:
+                parts.append(self.name)
 
         if html_flags and flags:
             parts.append(html_flags)
 
-        if html_dates:
+        if html_dates and dates:
             parts.append(f"({html_dates})")
 
         return " ".join(parts)
