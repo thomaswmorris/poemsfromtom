@@ -16,6 +16,8 @@ class Author:
             if self.data.get(key) is not None:
                 self.data[key] = Spacetime(time=Time(self.data[key].get("time")), place=Place(self.data[key].get("place")))
 
+                
+
     def dates(self, abbreviate=True, html=False):
     
         has_birth = self.data.get("birth") is not None
