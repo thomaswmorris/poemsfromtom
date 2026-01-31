@@ -82,7 +82,7 @@ class Poem():
                     date = f"{source['published']['month'].capitalize()} {date}"
                 html_source = f"Published in {html_source} ({date})"
             else:
-                html_source = f"from {html_source} ({date})"    
+                html_source = f"From {html_source} ({date})"    
 
         return html_source
 
