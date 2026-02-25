@@ -364,9 +364,9 @@ saint_egwin,december,30.0,,feast,False
 
 septuagesima,,,-63.0,feast,False
 mardi_gras,,,-47.0,feast,False
-ash_wednesday,,,-46.0,feast,False
+ash_wednesday,,,-46.0,feast,True
 laetare_sunday,,,-21.0,feast,False
-palm_sunday,,,-7.0,feast,False
+palm_sunday,,,-7.0,feast,True
 holy_thursday,,,-3.0,triduum,True
 good_friday,,,-2.0,triduum,True
 holy_saturday,,,-1.0,triduum,True
@@ -381,16 +381,16 @@ immaculate_heart_of_mary,,,69.0,feast,False
 
 new_years_day,january,1.0,,solemnity,True
 halloween,october,31.0,,feast,True
-christmas_eve,december,24.0,,feast,False
-new_years_eve,december,31.0,,feast,False
+christmas_eve,december,24.0,,feast,True
+new_years_eve,december,31.0,,feast,True
 christ_the_king,,,,solemnity,True
 
 spring_equinox,,,,,False
 summer_solstice,,,,,False
 autumn_equinox,,,,,False
 winter_solstice,,,,,False
-advent_sunday,,,,,True
-christ_the_king,,,,,True
+advent_sunday,,,,,False
+christ_the_king,,,,,False
 presidents_day,,,,,False
 mothers_day,,,,,False
 fathers_day,,,,,False
