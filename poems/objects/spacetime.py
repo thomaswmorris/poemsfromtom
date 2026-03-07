@@ -9,7 +9,7 @@ from collections.abc import Mapping
 
 def parse_time_string(s):
 
-    parser = re.compile(r"^(?:(?P<season_epoch>e|m|l)?(?P<season>(Winter|Spring|Summer|Autumn)) +)?(?P<fuzzy>~)?(?P<year_epoch>e|m|l)?(?P<year>(/?-?\d+s?)+)(?:\.(?P<month_epoch>e|m|l)?(?P<month>(/?\d\d)+))?(?:\.(?P<day>(/?\d\d)+))?$", re.IGNORECASE) # noqa
+    parser = re.compile(r"^(?:(?P<season_epoch>e|m|l)?(?P<season>(Winter|Spring|Summer|Autumn|Fall)) +)?(?P<fuzzy>~)?(?P<year_epoch>e|m|l)?(?P<year>(/?-?\d+s?)+)(?:\.(?P<month_epoch>e|m|l)?(?P<month>(/?\d\d)+))?(?:\.(?P<day>(/?\d\d)+))?$", re.IGNORECASE) # noqa
     
     match = parser.search(s.strip())
 
