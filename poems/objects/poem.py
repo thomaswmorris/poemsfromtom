@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from .. import utils
 from . import Author
 from ..context import Context, MONTHS
+from ..objects import Time
 
 @dataclass
 class Poem():
@@ -75,14 +76,18 @@ class Poem():
         if "link" in source:
             html_source = f'<a href="{source["link"]}">{html_source}</a>'
 
+        if source.get("type") == "magazine":
+            html_source = f"Published in {html_source}"
+        else:
+            html_source = f"From {html_source}"
+
         if "published" in source:
-            date = source['published']['year']
-            if source.get("type") in ["magazine"]:
-                if "month" in source['published']:
-                    date = f"{source['published']['month'].capitalize()} {date}"
-                html_source = f"Published in {html_source} ({date})"
+            if source.get("type") == "magazine":
+                date_string = Time(source["published"]).string()
             else:
-                html_source = f"From {html_source} ({date})"    
+                date_string = Time({"year": source['published']['year']}).string()
+            
+            html_source = f"{html_source} ({date_string})"
 
         return html_source
 

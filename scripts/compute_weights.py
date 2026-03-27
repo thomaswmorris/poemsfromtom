@@ -8,7 +8,9 @@ from datetime import datetime
 from poems.context import Context
 
 here, this_file = os.path.split(__file__)
-sample_times = datetime(2021, 12, 21, 12).timestamp() + 86400 * np.arange(10000)
+sample_times = np.arange(datetime(2021, 12, 21, 12).timestamp(),
+                         datetime(2121, 12, 21, 12).timestamp(),
+                         86400)
 
 categories =  ["weekday", "month", "day", "season", "liturgy", "holiday", "month_epoch", "year_epoch"]
 COUNTS = {category:{} for category in categories}

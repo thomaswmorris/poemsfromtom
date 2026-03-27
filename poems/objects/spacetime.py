@@ -100,7 +100,7 @@ class Time():
 
     @property
     def numerical_year(self):
-        return int(self.year.strip("s"))
+        return int(self.year.split("/")[-1].strip("s"))
 
     @property
     def era(self):
@@ -153,10 +153,12 @@ class Time():
                 parts["month"] = self.month.capitalize()
                 if abbreviate:
                     parts["month"] = parts["month"][:3]
+        if self.season is not None:
+            parts["season"] = self.season.capitalize()
         if self.year_epoch is not None:
             parts["year_epoch"] = self.year_epoch.capitalize()
         if self.year is not None:
-            parts["year"] = str(abs(self.numerical_year))
+            parts["year"] = str(abs(self.numerical_year)) if "/" not in self.year else self.year
             if self.era == "BC":
                 parts["year"] = parts["year"] + " BC"
             elif specify_ad:

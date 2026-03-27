@@ -384,6 +384,7 @@ halloween,october,31.0,,feast,True
 christmas_eve,december,24.0,,feast,True
 new_years_eve,december,31.0,,feast,True
 christ_the_king,,,,solemnity,True
+gaudate_sunday,,,,solemnity,False
 
 spring_equinox,,,,,False
 summer_solstice,,,,,False
