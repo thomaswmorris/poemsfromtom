@@ -52,8 +52,8 @@ class Poem():
         if year:
             x += f"{year}"
 
-        if "approximate" in self.metadata["time"]:
-            x = f"circa {x}"
+        if "fuzzy" in self.metadata["time"]:
+            x = f"c. {x}"
 
         return x.strip()
 
