@@ -59,8 +59,8 @@ class Poem():
 
     def spacetime(self, html=True):
         parts = []
-        if "location" in self.metadata:
-            parts.append(self.metadata["location"])
+        if "place" in self.metadata:
+            parts.append(self.metadata["place"])
         if self.pretty_date:
             parts.append(self.pretty_date)
         return ". ".join(parts)
