@@ -135,7 +135,6 @@ def get_holidays(t=None):
 
     res.extend(holidays.loc[mask].name.values)
 
-
     # these shouldn't override anything important
     if month == "march":
         if year_day == get_solstice_or_equinox_year_day(year, "spring"):
