@@ -371,6 +371,7 @@ holy_thursday,,,-3.0,triduum,True
 good_friday,,,-2.0,triduum,True
 holy_saturday,,,-1.0,triduum,True
 easter_sunday,,,0.0,solemnity,True
+easter_monday,,,1.0,,True
 divine_mercy,,,7.0,feast,False
 ascension,,,39.0,solemnity,True
 pentecost,,,49.0,solemnity,True
