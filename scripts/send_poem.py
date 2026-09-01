@@ -90,7 +90,7 @@ if args.write_to_repo:
                     "footer": p.html_footer(),
                     }
 
-            daily_poems[str(index)] = packet
+            daily_poems[str(index + 1)] = packet
 
         except Exception as e:
             logger.warning(f"Could not find poem for entry {entry.to_dict()}")
