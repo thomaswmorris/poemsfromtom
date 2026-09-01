@@ -387,10 +387,10 @@ new_years_eve,december,31.0,,feast,True
 christ_the_king,,,,solemnity,True
 gaudate_sunday,,,,solemnity,False
 
-spring_equinox,,,,,False
-summer_solstice,,,,,False
-autumn_equinox,,,,,False
-winter_solstice,,,,,False
+spring_equinox,,,,,True
+summer_solstice,,,,,True
+autumn_equinox,,,,,True
+winter_solstice,,,,,True
 advent_sunday,,,,,False
 christ_the_king,,,,,False
 presidents_day,,,,,False

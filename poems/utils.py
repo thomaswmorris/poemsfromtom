@@ -29,15 +29,27 @@ def convert_title_to_html(s):
     
 
 def normalize_title(string):
-    title_key = string.lower()
-    for char in ["‘", "’", "“", "”", ".", ",", ":", ";", "!", "?", 
-                 "/", "…", "(", ")"]:
-        if len(title_key) == 1:
-            break
-        title_key = title_key.replace(char, "")
-    for char in ["&", "+"]:
-        title_key = title_key.replace(char, "and")
-    return unidecode("-".join(title_key.split()))
+
+    normalized_title = string.lower()
+
+    if len(normalized_title) > 1:
+
+        conversions = {
+            "+": "and",
+            "&": "and",
+        }
+
+        deletions = ["‘", "’", "“", "”", ".", ",", ":", ";", "!", "?", "/", "…", "(", ")", "--"]
+
+        for char in deletions:
+            normalized_title = normalized_title.replace(char, "")
+            if len(normalized_title) == 1:
+                break
+
+        for old_string, new_string in conversions.items():
+            normalized_title = normalized_title.replace(old_string, new_string)
+
+    return unidecode("-".join(normalized_title.split()))
 
 def date_to_string_parts(date, month_and_day=True):
     parts = []
@@ -90,9 +102,9 @@ def read_csv(filepath, repo=None):
     """
     if repo:
         csv_content = repo.get_contents(filepath, ref="master")
-        csv = pd.read_csv(StringIO(csv_content.decoded_content.decode()), index_col=0)
+        csv = pd.read_csv(StringIO(csv_content.decoded_content.decode()))
     else:         
-        csv = pd.read_csv(filepath, index_col=0)
+        csv = pd.read_csv(filepath)
 
     return csv
 
