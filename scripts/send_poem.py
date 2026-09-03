@@ -68,7 +68,7 @@ for index, entry in listserv.iterrows():
 if args.write_to_repo:
 
     if args.mode == "daily":
-        index = len(history) + 1
+        index = len(history)
         date, time = now.isoformat[:19].split("T")
 
         history.loc[index, "date"] = date
