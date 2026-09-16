@@ -54,7 +54,7 @@ else:
     start_time = (now + datetime.timedelta(minutes=1)).replace(microsecond=0, second=0)
 
 wait_seconds = (start_time - now).seconds + 1
-if wait_seconds < 600:
+if wait_seconds < 900:
     logger.info(f"Waiting {int(wait_seconds)} seconds.")
     ttime.sleep(wait_seconds)
 
