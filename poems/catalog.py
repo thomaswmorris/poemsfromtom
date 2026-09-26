@@ -5,7 +5,8 @@ import os
 import pathlib
 import yaml
 
-from pandas import DataFrame
+import pandas as pd
+
 from .context import Context
 from .objects import Poem, Author
 from .utils import make_author_stats
@@ -50,7 +51,7 @@ class Catalog():
 
                 index += 1
                 
-        self.df = DataFrame(entries).T
+        self.df = pd.DataFrame(entries).T
         self.df.loc[:, "likelihood"] = 1.0
         
         # self.authors = {author: Author(**self.data[author]["metadata"]) for author in self.data.keys()}
@@ -115,13 +116,13 @@ class Catalog():
         self.df.loc[:, "probability"] = self.df.likelihood / self.df.likelihood.sum()
 
     
-    def apply_history(self, history: DataFrame, cooldown: int = 14 * 86400, manage_attrition: bool = False, verbose: bool = False):
+    def apply_history(self, history: pd.DataFrame, cooldown: int = 14 * 86400, manage_attrition: bool = False, fail_on_not_found: bool = False, verbose: bool = False):
 
         timestamp = Context.now().timestamp
 
         author_stats = make_author_stats(history, self)
 
-        last_occurence = DataFrame(columns=["timestamp"], dtype=float)
+        last_occurence = pd.DataFrame(columns=["timestamp"], dtype=float)
         for _, entry in history.iterrows():
             last_occurence.loc[entry.author, "timestamp"] = entry.timestamp
         
@@ -131,6 +132,8 @@ class Catalog():
         treated_authors = []
         dropped_authors = []
 
+        not_found_list = []
+
         for _, entry in history.iterrows():
 
             author_mask = self.df.author == entry.author
@@ -138,7 +141,7 @@ class Catalog():
             res = self.df.loc[author_mask & (self.df.title==entry.title)]
 
             if not len(res):
-                logger.warning(f"Could not remove poem '{entry.title}' by '{entry.author}'.")
+                not_found_list.append(entry.to_dict())
 
             indices_to_drop.extend(res.index)
 
@@ -156,6 +159,13 @@ class Catalog():
 
         if verbose:
             logger.info(f"Dropped authors {dropped_authors}")
+
+        if not_found_list:
+
+            message = f"Could not remove poems:\n{pd.DataFrame(not_found_list).__repr__()}"
+            if fail_on_not_found:
+                raise RuntimeError(message)
+            logger.warning(message)
 
 
         self.df.loc[indices_to_drop, "likelihood"] = 0

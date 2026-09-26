@@ -37,17 +37,18 @@ def normalize_title(string):
         conversions = {
             "+": "and",
             "&": "and",
+            "--": "-",
         }
 
         deletions = ["‘", "’", "“", "”", ".", ",", ":", ";", "!", "?", "/", "…", "(", ")", "--"]
+
+        for old_string, new_string in conversions.items():
+            normalized_title = normalized_title.replace(old_string, new_string)
 
         for char in deletions:
             normalized_title = normalized_title.replace(char, "")
             if len(normalized_title) == 1:
                 break
-
-        for old_string, new_string in conversions.items():
-            normalized_title = normalized_title.replace(old_string, new_string)
 
     return unidecode("-".join(normalized_title.split()))
 

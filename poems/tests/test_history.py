@@ -7,4 +7,4 @@ def test_apply_history():
 
     curator = Curator()
     history = pd.read_csv(os.environ["POEMS_HISTORY_PATH"])
-    curator.catalog.apply_history(history, verbose=True)
+    curator.catalog.apply_history(history, verbose=True, fail_on_not_found=True)
