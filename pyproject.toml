@@ -17,6 +17,7 @@ requires-python = ">=3.9"
 
 dependencies = [
   "anytree",
+  "arrow",
   "ephem",
   "numpy",
   "pandas",
