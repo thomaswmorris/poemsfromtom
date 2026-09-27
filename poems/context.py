@@ -1,9 +1,9 @@
-import ephem, pathlib, pytz, os, yaml
+import ephem, pytz, os
 
 from dateutil.easter import easter
 from dataclasses import dataclass
-from datetime import datetime
 
+import arrow
 import time as ttime
 import numpy as np
 import pandas as pd
@@ -11,6 +11,7 @@ import pandas as pd
 here, this_filename = os.path.split(__file__)
 
 holidays = pd.read_csv(f"{here}/data/holidays.csv")
+
 forced_holidays = list(holidays.loc[holidays.forced].name.values)
 
 MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -28,7 +29,7 @@ class Context():
 
     def __post_init__(self):
 
-        self.datetime    = datetime.fromtimestamp(self.timestamp).astimezone(pytz.utc)
+        self.datetime    = arrow.get(self.timestamp).astimezone(pytz.utc)
         self.ctime       = self.datetime.ctime()
         self.season      = get_season(self.timestamp)
         self.liturgy     = get_liturgy(self.timestamp)
@@ -80,14 +81,14 @@ class Context():
 
 def get_utc_datetime(when=None):
     when = when if when is not None else ttime.time()
-    return datetime.fromtimestamp(when).astimezone(pytz.utc)
+    return arrow.get(when).to("UTC")
 
 def get_context_dict(when=None):
     t = when if when is not None else ttime.time()
     return Context(timestamp=t).to_dict()
 
 def timestamp_to_pretty_date(t):
-    dt = datetime.fromtimestamp(t, tz=pytz.utc)
+    dt = arrow.get(t).to("UTC")
     return f"{WEEKDAYS[dt.weekday()].capitalize()} {MONTHS[dt.month-1].capitalize()} {int(dt.day)}, {int(dt.year)}"
 
 
@@ -97,17 +98,17 @@ def get_season(t=None):
     year = dt.year
     year_day = dt.timetuple().tm_yday
 
-    winter_start_yday = datetime(year, 12, 1).timetuple().tm_yday
-    winter_end_yday   = datetime(year, 3, 1).timetuple().tm_yday
+    winter_start_yday = arrow.get(f"{year}-12-01").timetuple().tm_yday
+    winter_end_yday   = arrow.get(f"{year}-03-01").timetuple().tm_yday
 
-    spring_start_yday = datetime(year, 4, 1).timetuple().tm_yday
-    spring_end_yday   = datetime(year, 6, 1).timetuple().tm_yday
+    spring_start_yday = arrow.get(f"{year}-04-01").timetuple().tm_yday
+    spring_end_yday   = arrow.get(f"{year}-06-01").timetuple().tm_yday
 
-    summer_start_yday = datetime(year, 6, 21).timetuple().tm_yday
-    summer_end_yday   = datetime(year, 9, 1).timetuple().tm_yday
+    summer_start_yday = arrow.get(f"{year}-06-21").timetuple().tm_yday
+    summer_end_yday   = arrow.get(f"{year}-09-01").timetuple().tm_yday
 
-    autumn_start_yday = datetime(year, 10, 1).timetuple().tm_yday
-    autumn_end_yday   = datetime(year, 12, 1).timetuple().tm_yday
+    autumn_start_yday = arrow.get(f"{year}-10-01").timetuple().tm_yday
+    autumn_end_yday   = arrow.get(f"{year}-12-01").timetuple().tm_yday
 
     if (year_day < winter_end_yday) or (year_day >= winter_start_yday):
         return "winter"
@@ -149,7 +150,7 @@ def get_holidays(t=None):
         if year_day == get_solstice_or_equinox_year_day(year, "winter"):
             res.append("winter_solstice")
     
-    christmas_day = datetime(dt.year,12,25)
+    christmas_day = arrow.get(f"{dt.year}-12-25")
     advent_sunday_year_day = christmas_day.timetuple().tm_yday - (22 + christmas_day.weekday())   
 
     # these are relative to advent
@@ -202,8 +203,8 @@ def get_liturgy(t=ttime.time()):
     dt = get_utc_datetime(t)
     year_day = dt.timetuple().tm_yday
     easter_year_day = easter(dt.year).timetuple().tm_yday 
-    christmas_year_day = datetime(dt.year,12,25).timetuple().tm_yday
-    advent_sunday_year_day = christmas_year_day - (22 + datetime(dt.year,12,25).weekday())   
+    christmas_year_day = arrow.get(f"{dt.year}-12-25").timetuple().tm_yday
+    advent_sunday_year_day = christmas_year_day - (22 + arrow.get(f"{dt.year}-12-25").weekday())   
 
     if year_day <= 5 or year_day >= christmas_year_day: 
         return "christmastide"
@@ -213,15 +214,15 @@ def get_liturgy(t=ttime.time()):
         return "triduum"
     if -39 < easter_year_day - dt.date().timetuple().tm_yday <= 0: 
         return "eastertide"
-    if datetime(dt.year,10,31).timetuple().tm_yday <= year_day <= datetime(dt.year,11,2).timetuple().tm_yday: 
+    if arrow.get(f"{dt.year}-10-31").timetuple().tm_yday <= year_day <= arrow.get(f"{dt.year}-11-02").timetuple().tm_yday: 
         return "allhallowtide"
     if advent_sunday_year_day <= year_day < christmas_year_day: 
         return "advent"
     return "ordinary_time"
 
 def get_advent_sunday_year_day(year):
-    christmas_year_day = datetime(year,12,25).timetuple().tm_yday 
-    return christmas_year_day - (22 + datetime(year,12,25).weekday())
+    christmas_year_day = arrow.get(f"{year}-12-25-").timetuple().tm_yday 
+    return christmas_year_day - (22 + arrow.get(f"{year,12}-25").weekday())
 
 def get_year_epoch(t=None):
     month = get_utc_datetime(t).month

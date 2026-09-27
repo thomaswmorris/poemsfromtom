@@ -1,18 +1,18 @@
 from poems import Context, Curator, forced_holidays
-from datetime import datetime, timedelta
-import pytz
+from datetime import timedelta
+import arrow
 
 from poems.context import holidays
 
 def test_liturgys():
 
-    t = datetime.now()
+    t = arrow.get().timestamp()
 
     for _ in range(1000):
 
-        t += timedelta(days=1)
+        t += 86400
 
-        context = Context(timestamp=t.timestamp())
+        context = Context(timestamp=t)
 
         for holiday in context.holidays:
             if holiday not in holidays.name.values:
@@ -21,7 +21,7 @@ def test_liturgys():
 
 def test_holiday_context():
 
-    t = datetime(2024, 3, 31, tzinfo=pytz.utc).timestamp()
+    t = arrow.get(f"{2024}-03-31").timestamp()
 
     curator = Curator()
     context = Context(timestamp=t)
@@ -33,7 +33,7 @@ def test_holiday_context():
 
 def test_month_context():
 
-    t = datetime(2024, 10, 15, tzinfo=pytz.utc).timestamp()
+    t = arrow.get(f"{2024}-10-15").timestamp()
 
     curator = Curator()
     context = Context(timestamp=t)
@@ -44,7 +44,7 @@ def test_month_context():
 
 def test_liturgy_context():
 
-    t = datetime(2024, 2, 15, tzinfo=pytz.utc).timestamp()
+    t = arrow.get(f"{2024}-02-15").timestamp()
 
     curator = Curator()
     context = Context(timestamp=t)

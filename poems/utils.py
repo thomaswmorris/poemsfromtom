@@ -2,14 +2,13 @@ import re
 import pytz
 import smtplib
 import time
-import warnings
+import arrow
 
 
 import numpy as np
 import pandas as pd
 import github as gh
 
-from datetime import datetime
 from unidecode import unidecode
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -123,7 +122,7 @@ def write_to_repo(repo, items, branch="master", verbose=False):
     base_tree  = repo.get_git_tree(sha=head_sha)
     tree       = repo.create_git_tree(elements, base_tree)
     parent     = repo.get_git_commit(sha=head_sha) 
-    commit     = repo.create_git_commit(f"updated logs @ {datetime.now(tz=pytz.utc).isoformat()[:19]}", tree, [parent])
+    commit     = repo.create_git_commit(f"updated logs @ {arrow.get().to("UTC").isoformat()[:19]}", tree, [parent])
     master_ref = repo.get_git_ref(f"heads/{branch}")
     master_ref.edit(sha=commit.sha)
 
@@ -146,7 +145,7 @@ def make_author_stats(history, catalog=None):
 
             if author_mask.sum():
                 timestamp_last_sent = history.loc[author_mask, "timestamp"].max()
-                isoformat_last_sent = datetime.fromtimestamp(timestamp_last_sent).astimezone(pytz.utc).isoformat()
+                isoformat_last_sent = arrow.get(timestamp_last_sent).to("UTC").isoformat()
                 # days_since_last_sent = (timestamp - timestamp_last_sent) / 86400
                 stats.loc[author,"date_last_sent"] = isoformat_last_sent[:10]
                 # stats.loc[author,"days_since_last_sent"] = int(np.round(days_since_last_sent))
