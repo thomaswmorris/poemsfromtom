@@ -4,9 +4,9 @@ on:
     - cron: "55 0-9,11-23 * * *" # hourly, except at 12:00 UTC (07:00 EST)
 
 jobs:
-  run_tests:
+  send-test:
     name: Send a test poem every hour
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
 
     defaults:
       run:

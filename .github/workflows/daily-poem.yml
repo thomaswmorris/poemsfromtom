@@ -7,7 +7,7 @@ on:
 jobs:
   run_tests:
     name: Send the poem of the day
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
 
     defaults:
       run:
