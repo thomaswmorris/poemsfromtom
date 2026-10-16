@@ -21806,6 +21806,26 @@
                     ]
                 }
             },
+            "after-drinking-all-night-with-a-friend-we-go-out-in-a-boat-at-dawn-to-see-who-can-write-the-best-poem": {
+                "title": "“After Drinking All Night with a Friend, We Go Out in a Boat at Dawn to See Who Can Write the Best Poem”",
+                "body": "These pines, these fall oaks, these rocks,\nThis water dark and touched by wind--\nI am like you, you dark boat,\nDrifting over water fed by cool springs.\n\nBeneath the waters, since I was a boy,\nI have dreamt of strange and dark treasures,\nNot of gold, or strange stones, but the true\nGift, beneath the pale lakes of Minnesota.\n\nThis morning also, drifting in the dawn wind,\nI sense my hands, and my shoes, and this ink--\nDrifting, as all of this body drifts,\nAbove the clouds of the flesh and the stone.\n\nA few friendships, a few dawns, a few glimpses of grass,\nA few oars weathered by the snow and the heat,\nSo we drift toward shore, over cold waters,\nNo longer caring if we drift or go straight.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "season": "winter"
+                    }
+                }
+            },
             "after-long-busyness": {
                 "title": "“After Long Busyness”",
                 "body": "I start out for a walk at last after weeks at the desk.\nMoon gone, plowing underfoot, no stars, not a trace of light!\nSuppose a horse were galloping toward me in this open field?\nEvery day I did not spend in solitude was wasted.",
@@ -21818,14 +21838,41 @@
             },
             "after-working": {
                 "title": "“After Working”",
-                "body": "After many strange thoughts,\nThoughts of distant harbors, and new life,\nI came in and found the moonlight lying in the room.\n\nOutside it covers the trees like pure sound,\nThe sound of tower bells, or of water moving under the ice,\nThe sound the deaf hear through the bones of their heads.\n\nWe know the road; as the moonlight\nLifts everything, so in a night like this,\nThe road goes on ahead, it is all clear.",
+                "body": "# I.\n\nAfter many strange thoughts,\nThoughts of distant harbors, and new life,\nI came in and found the moonlight lying in the room.\n\n\n# II.\n\nOutside it covers the trees like pure sound,\nThe sound of tower bells, or of water moving under the ice,\nThe sound the deaf hear through the bones of their heads.\n\n\n# III.\n\nWe know the road; as the moonlight\nLifts everything, so in a night like this,\nThe road goes on ahead, it is all clear.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
                     "context": {
                         "season": "winter"
+                    }
+                }
+            },
+            "afternoon-sleep": {
+                "title": "“Afternoon Sleep”",
+                "body": "# I.\n\nI was descending from the mountains of sleep.\nAsleep I had gazed east over a sunny field,\nAnd sat on the running board of an old Model A.\nI awoke happy, for I had dreamt of my wife,\nAnd the loneliness hiding in grass and weeds\nThat lies near a man over thirty, and suddenly enters.\n\n\n# II.\n\nWhen Joe Sjolie grew tired, he sold his farm,\nEven his bachelor rocker, and did not come back.\nHe left his dog behind in the cob shed.\nThe dog refused to take food from strangers.\n\n\n# III.\n\nI drove out to that farm when I awoke;\nAlone on a hill, sheltered by trees.\nThe matted grass lay around the house.\nWhen I climbed the porch, the door was open,\nInside were old abandoned books,\nAnd instructions to Norwegian immigrants.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "season": "summer"
                     }
                 }
             },
@@ -21839,11 +21886,55 @@
                     ]
                 }
             },
-            "awakening": {
-                "title": "“Awakening”",
-                "body": "We are approaching sleep: the chestnut blossoms in the mind\nMingle with thoughts of pain\nAnd the long roots of barley, bitterness\nAs of the oak roots staining the waters dark\nIn Louisiana, the wet streets soaked with rain\nAnd sodden blossoms; out of this\nWe have come, a tunnel softly hurtling into darkness.\n\nThe storm is coming. The small farmhouse in Minnesota\nIs hardly strong enough for the wind.\nDarkness, darkness in grass, darkness in trees.\nEven the water in wells trembles.\nBodies give off darkness, and chrysanthemums\nAre dark, and horses, who are bearing great loads of hay\nTo the deep barns where the dark air is moving from corners.\n\nLincoln’s statue, and the traffic. From the long past\nInto the long present\nA bird, forgotten in these troubles, warbling,\nAs the great wheel turns around, grinding\nThe living in water.\nWashing, continual washing, in water now stained\nWith blossoms and rotting logs,\nCries, half-muffled, from beneath the earth, the living awakened\nat last like the dead.",
+            "approaching-winter": {
+                "title": "“Approaching Winter”",
+                "body": "# I.\n\nSeptember. Clouds. The first day for wearing jackets.\nThe corn is wandering in dark corridors,\nNear the well and the whisper of tombs.\n\n\n# II.\n\nI sit alone surrounded by dry corn,\nNear the second growth of the pigweeds,\nAnd hear the corn leaves scrape their feet on the wind.\n\n\n# III.\n\nFallen ears are lying on the dusty earth.\nThe useful ears will lie dry in cribs, but the others, missed\nBy the picker, will lie here touching the ground the whole winter.\n\n\n# IV.\n\nSnow will come, and cover the husks of the fallen ears\nWith flakes infinitely delicate, like jewels of a murdered Gothic prince\nWhich were lost centuries ago during a great battle.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "holiday": "autumn_equinox"
+                    }
+                }
+            },
+            "at-the-funeral-of-great-aunt-mary": {
+                "title": "“At the Funeral of Great-Aunt Mary”",
+                "body": "# I.\n\nHere we are, all dressed up to honor death!\nNo, it is not that;\nIt is to honor this old woman\nBorn in Bellingham.\n\n\n# II.\n\nThe church windows are open to the green trees.\nThe minister tells us that, being\nThe sons and daughters of God,\nWe rejoice at death, for we go\nTo the mansions prepared\nFrom the foundations of the world.\nImpossible. No one believes it.\n\n\n# III.\n\nOut on the bare, pioneer field,\nThe frail body must wait till dusk\nTo be lowered\nIn the hot and sandy earth.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ]
+                }
+            },
+            "awakening": {
+                "title": "“Awakening”",
+                "body": "We are approaching sleep: the chestnut blossoms in the mind\nMingle with thoughts of pain\nAnd the long roots of barley, bitterness\nAs of the oak roots staining the waters dark\nIn Louisiana, the wet streets soaked with rain\nAnd sodden blossoms, out of this\nWe have come, a tunnel softly hurtling into darkness.\n\nThe storm is coming. The small farmhouse in Minnesota\nIs hardly strong enough for the storm.\nDarkness, darkness in grass, darkness in trees.\nEven the water in wells trembles.\nBodies give off darkness, and chrysanthemums\nAre dark, and horses, who are bearing great loads of hay\nTo the deep barns where the dark air is moving from corners.\n\nLincoln’s statue, and the traffic. From the long past\nInto the long present\nA bird, forgotten in these pressures, warbling,\nAs the great wheel turns around, grinding\nThe living in water.\nWashing, continual washing, in water now stained\nWith blossoms and rotting logs,\nCries, half-muffled, from beneath the earth, the living awakened at last like the dead.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -21945,11 +22036,18 @@
                     }
                 }
             },
-            "clear-air-of-october": {
-                "title": "“Clear Air of October”",
+            "the-clear-air-of-october": {
+                "title": "“The Clear Air of October”",
                 "body": "I can see outdoors the gold wings without birds\nFlying around, and the wells of cold water\nWithout walls standing eighty feet up in the air,\nI can feel the crickets’ singing carrying them into the sky.\n\nI know these shadows are falling for hundreds of miles,\nCrossing lawns in tiny towns, and the doors of Catholic churches;\nI know the horse of darkness is riding fast to the east,\nCarrying a thin man with no coat.\n\nAnd I know the sun is sinking down great stairs,\nLike an executioner with a great blade walking into a cellar,\nAnd the gold animals, the lions, and the zebras, and the pheasants,\nAre waiting at the head of the stairs with robbers’ eyes.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -21988,6 +22086,26 @@
                     }
                 }
             },
+            "depression": {
+                "title": "“Depression”",
+                "body": "I felt my heart beat like an engine high in the air,\nLike those scaffolding engines standing only on planks;\nMy body hung about me like an old grain elevator,\nUseless, clogged, full of blackened wheat.\nMy body was sour, my life dishonest, and I fell asleep.\n\nI dreamt that men came toward me, carrying thin wires;\nI felt the wires pass in, like fire; they were old Tibetans,\nDressed in padded clothes, to keep out cold;\nThen three work gloves, lying fingers to fingers,\nIn a circle, came toward me, and I awoke.\n\nNow I want to go back among the dark roots;\nNow I want to see the day pulling its long wing;\nI want to see nothing more than two feet high;\nI want to see no one, I want to say nothing,\nI want to go down and rest in the black earth of silence.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "liturgy": "lent"
+                    }
+                }
+            },
             "a-dream-on-the-night-of-first-snow": {
                 "title": "“A Dream on the Night of First Snow”",
                 "body": "I woke from a furst-day-of-snow dream\nI dreamt I met a girl in an attic,\nwho talked of operas, intensely.\nSnow has bent the poplar over nearly to the ground,\nnew snowfall widens the plowing.\nOutside maple leaves floated on rainwater,\nyellow, matted, luminous.\nI found a salamander! and held him.\nWhen I put him down again,\nhe strode over a log\nwith such confidence, like a chessmaster,\nthe front leg first, then the hind\nleg, he rose up like a tractor climbing\nover a hump in the field\nand disappeared toward winter, a caravan going deeper into mountains,\ndogs pulling travois,\nfeathers fluttering on the lances of the arrogant men.",
@@ -22016,12 +22134,39 @@
             },
             "driving-through-ohio": {
                 "title": "“Driving through Ohio”",
-                "body": "We slept that night in Delaware, Ohio:\nA magnificent and sleepy country,\nOak country, sheep country, sod country\nWe slept in a huge white tourist home\nWith National Geographics on the table.\n\nNorth of Columbus there is a kind of torpid joy,\nThe slow and muddy river,\nThe white barns leaning into the ground,\nCottonwoods with their trunks painted white,\nAnd houses with small observatories on top,\nAs if Ohio were the widow’s coast, looking over\nThe dangerous Atlantic.\n\nNow we drive North past the white cemeteries\nSo rich in the morning air!\nAll morning I have felt the sense of death!\nI am full of love, and love this torpid land.\nSome day I will go back, and inhabit again\nThe sleepy ground where Harding was born.",
+                "body": "We slept that night in Delaware, Ohio:\nA magnificent and sleepy country,\nOak country, sheep country, sod country\nWe slept in a huge white tourist home\nWith National Geographics on the table.\n\nNorth of Columbus there is a kind of torpid joy,\nThe slow and muddy river,\nThe white barns leaning into the ground,\nCottonwoods with their trunks painted white,\nAnd houses with small observatories on top,\nAs if Ohio were the widow’s coast, looking over\nThe dangerous Atlantic.\n\nNow we drive North past the white cemeteries\nSo rich in the morning air!\nAll morning I have felt the sense of death!\nI am full of love, and love this torpid land.\nSome day I will go back, and inhabit again\nThe sleepy ground where Harding was born.\n\n\n\nAT THE FUNERAL OF GREAT-AUNT MARY",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
+                }
+            },
+            "driving-to-town-late-to-mail-a-letter": {
+                "title": "“Driving to Town Late to Mail a Letter”",
+                "body": "It is a cold and snowy night. The main street is deserted.\nThe only things moving are swirls of snow.\nAs I lift the mailbox door, I feel its cold iron.\nThere is a privacy I love in this snowy night.\nDriving around, I will waste more time.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "season": "winter"
+                    }
                 }
             },
             "driving-toward-the-lac-qui-parle-river": {
@@ -22029,6 +22174,13 @@
                 "body": "I am driving; it is dusk; Minnesota.\nThe stubble field catches the last growth of sun.\nThe soybeans are breathing on all sides.\nOld men are sitting before their houses on car seats\nIn the small towns. I am happy,\nThe moon rising above the turkey sheds.\n\nThe small world of the car\nPlunges through the deep fields of the night,\nOn the road from Willmar to Milan.\nThis solitude covered with iron\nMoves through the fields of night\nPenetrated by the noise of crickets.\n\nNearly to Milan, suddenly a small bridge,\nAnd water kneeling in the moonlight.\nIn small towns the houses are built right on the ground;\nThe lamplight falls on all fours on the grass.\nWhen I reach the river, the full moon covers it.\nA few people are talking, low, in a boat.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -22047,7 +22199,29 @@
                     ]
                 }
             },
-            "fall": {
+            "fall-i": {
+                "title": "“Fall”",
+                "body": "Because it is the first Sunday of pheasant season, men gather in the lights of cars to divide pheasants, and the chickens, huddling near their electricity, and in some slight fear of the dark, walk for the last time about their little hut, whose floor seems now so bare.\nThe dusk has come, a glow in the west, as if seen through the isinglass on old coal stoves, and the cows stand around the barn door; now the farmer looks up at the paling sky reminding him of death, and in the fields the bones of the corn rustle faintly in the last wind, and the half moon stands in the south.\nNow the lights from barn windows can be seen through bare trees.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "weekday": "sunday",
+                        "month": "october",
+                        "month_epoch": "late"
+                    }
+                }
+            },
+            "fall-ii": {
                 "title": "“Fall”",
                 "body": "From far out in the center of the naked lake\nA loon’s cry came--\nIt was the cry of someone who owned very little.",
                 "metadata": {
@@ -22091,6 +22265,27 @@
                     "tags": [
                         "American"
                     ]
+                }
+            },
+            "getting-up-early": {
+                "title": "“Getting Up Early”",
+                "body": "I am up early. The box-elder leaves have fallen.\nThe eastern sky is the color of March.\nThe sky has spread out over the world like water.\nThe bootlegger and his wife are still asleep.\n\nI saw the light first from the barn well.\nThe cold water fell into the night-chilled buckets,\nDeepening to the somber blue of the southern sky.\nOver the new trees, there was a strange light in the east.\n\nThe light was dawn. Like a man who has come home\nAfter seeing many dark rivers, and will soon go again,\nThe dawn stood there with a quiet gaze;\nOur eyes met through the top leaves of the young ash.\n\nDawn has come. The clouds floating in the east have turned white.\nThe fence posts have stopped being a part of the darkness.\nThe depth has disappeared from the puddles on the ground.\nI look up angrily at the light.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "month": "march",
+                        "month_epoch": "middle"
+                    }
                 }
             },
             "the-greek-ships": {
@@ -22138,6 +22333,13 @@
                 "body": "What is so strange about a tree alone in an open field?\nIt is a willow tree. I walk around and around it.\nMy body is strangely torn, and cannot leave it.\nAt last I sit down beneath it.\n\nIt is a willow tree alone in acres of dry corn.\nIts leaves are scattered around its trunk, and around me,\nBrown now, and speckled with delicate black.\nOnly the cornstalks now can make a noise.\n\nThe sun is cold, burning through the frosty distances of space.\nThe weeds are frozen to death long ago.\nWhen then do I love to watch\nThe sun moving on the chill skin of the branches?\n\nThe mind has shed leaves alone for years.\nIt stands apart with small creatures near its roots.\nI am happy in this ancient place,\nA spot easily caught sight of above the corn,\nIf I were a young animal ready to turn home at dusk.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -22163,12 +22365,40 @@
                 "title": "“Images Suggested by Medieval Music”",
                 "body": "_A thousand singing herons I saw passing\nFlying overhead, sounding a thousand voices\nExulting: Glory be in the heaven, etc._\n\nOnce more\nA child is born, and it has no father,\nAnd it is right to rejoice: our past life appears\nAs a wake behind us, and we plunge on into the sea of pain.\n\nI have felt this joy before, it is like the harsh grasses\nOn lonely beaches, this strange sweetness\nOf medieval music, a hoarse joy,\nLike birds’, or the joy of trackless seas,\nColumbus’ ships covered with ice,\nPalace children dancing among finely-worked gold:\n\nAs I listen, I am a ship, skirting\nA thousand harbors, as once, sailing off the coast of Crete,\nAnd turning in, we will find the steep climb from the harbor;\nThe voyage goes on. The joy of sailing and the open sea!",
                 "metadata": {
+                    "dedication": "For Margaret and Joseph Scheinin",
                     "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
                     "context": {
-                        "month": "october"
+                        "liturgy": "advent"
+                    }
+                }
+            },
+            "in-a-train": {
+                "title": "“In a Train”",
+                "body": "There has been a light snow.\nDark car tracks move in out of the darkness.\nI stare at the train window marked with soft dust.\nI have awakened at Missoula, Montana, utterly happy.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "season": "winter"
                     }
                 }
             },
@@ -22207,9 +22437,16 @@
             },
             "late-at-night-during-a-visit-of-friends": {
                 "title": "“Late at Night during a Visit of Friends”",
-                "body": "We spent all day fishing and talking.\nAt last, late at night, I sit at my desk alone.\nAnd rise and walk out in the summery night.\nA dark thing hopped near me in the grass.\n\nThe trees were breathing, the windmill slowly pumped.\nOver head the rain clouds that rained on Ortonville\nCovered half the stars.\nThe air was still cool from their rain.\n\nIt is very late.\nI am the only one awake.\nMen and women I love are sleeping nearby.\n\nThe human face shines as it speaks of things\nNear itself, thoughts full of dreams.\nThe human face shines like a dark sky\nAs it speaks of those things that oppress the living.",
+                "body": "# I.\n\nWe spent all day fishing and talking.\nAt last, late at night, I sit at my desk alone.\nAnd rise and walk out in the summery night.\nA dark thing hopped near me in the grass.\n\n\n# II.\n\nThe trees were breathing, the windmill slowly pumped.\nOver head the rain clouds that rained on Ortonville\nCovered half the stars.\nThe air was still cool from their rain.\n\n\n# III.\n\nIt is very late.\nI am the only one awake.\nMen and women I love are sleeping nearby.\n\n\n# IV.\n\nThe human face shines as it speaks of things\nNear itself, thoughts full of dreams.\nThe human face shines like a dark sky\nAs it speaks of those things that oppress the living.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -22220,12 +22457,40 @@
                 "body": "A silence hovers over the earth:\nThe grass lifts lightly in the heat\nLike the ancient wing of a bird.\nA horse gazes steadily at me.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
                     "context": {
                         "month": "may",
                         "month_epoch": "late"
+                    }
+                }
+            },
+            "laziness-and-silence": {
+                "title": "“Laziness and Silence”",
+                "body": "# I.\n\nOn a Saturday afternoon in the football season,\nI lie in a bed near the lake,\nAnd dream of moles with golden wings.\n\nWhile the depth of the water trembles on the ceiling,\nLike the tail of an enraged bird,\nI watch the dust floating above the bed, content.\n\nI think of ships leaving lonely harbors,\nDolphins playing far at sea,\nFish with the faces of old men come in from a blizzard.\n\n\n# II.\n\nA dream of moles with golden wings\nIs not so bad; it is like imagining\nWaterfalls of stone deep in mountains,\nOr a wing flying alone beneath the earth.\n\nI know that far out in the Minnesota lake\nFish are nosing the mouths of cold springs,\nWhose water causes ripples in the sleeping sand,\nLike a spirit moving in a body.\n\nIt is Saturday afternoon. Crowds are gathered,\nWarmed by the sun, and the pure air.\nI thought of this strange mole this morning,\nAfter sleeping all night by the lake.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "season": "autumn",
+                        "weekday": "saturday"
                     }
                 }
             },
@@ -22259,6 +22524,40 @@
                     ]
                 }
             },
+            "love-poem": {
+                "title": "“Love Poem”",
+                "body": "When we are in love, we love the grass,\nAnd the barns, and the lightpoles,\nAnd the small mainstreets abandoned all night.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ]
+                }
+            },
+            "a-man-writes-to-a-part-of-himself": {
+                "title": "“A Man Writes to a Part of Himself”",
+                "body": "What cave are you in, hiding, rained on?\nLike a wife, starving, without care,\nWater dripping from your head, bent\nOver ground corn …\n\nYou raise your face into the rain\nThat drives over the valley--\nForgive me, your husband,\nOn the streets of a distant city, laughing.\nWith many appointments,\nThough at night going also\nTo a bare room, a room of poverty,\nTo sleep among a bare pitcher and basin\nIn a room with no heat--\n\nWhich of us two then is the worse off?\nAnd how did this separation come about?",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ]
+                }
+            },
             "the-moose": {
                 "title": "“The Moose”",
                 "body": "The Arctic moose drinks at the tundra’s edge,\nswirling the watercress with his mouth.\nHow fresh the water is, the coolness of the far North.\nA light wind moves through the deep firs.",
@@ -22274,6 +22573,64 @@
                 "body": "Even in Marrakesh we still have to decide\nWhat morning is. During the night people\nWe hadn’t even met whispered in our ears\nThoughts that would have changed our lives,\nMight have, if we had heard them earlier.\nSo the dreamer never gives up. He’s come\nAcross the desert, ignoring the sun.\nHe’s waited for night. Down in the patio\nDawn has drawn the hotel cats away\nFrom their place under the folding chairs.\nA cat drinks from the pool--its long\nBlack tail points toward the desert.",
                 "metadata": {
                     "language": "English",
+                    "tags": [
+                        "American"
+                    ]
+                }
+            },
+            "night": {
+                "title": "“Night”",
+                "body": "# I.\n\nIf I think of a horse wandering about sleeplessly\nAll night on this short grass covered with moonlight,\nI feel a joy, as if I had thought\nOf a pirate ship ploughing through dark flowers.\n\n\n# II.\n\nThe box elders around us are full of joy,\nObeying what is beneath them.\nThe lilacs are sleeping, and the plants are sleeping,\nEven the wood made into a casket is asleep.\n\n\n# III.\n\nThe butterfly is carrying loam on his wings;\nThe toad is bearing tiny bits of granite in his skin;\nThe leaves at the crown of the tree are asleep\nLike the dark bits of earth at its root.\n\n\n# IV.\n\nAlive, we are like a sleek black water beetle,\nSkating across still water in any direction\nWe choose, and soon to be swallowed\nSuddenly from beneath.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "season": "spring"
+                    }
+                }
+            },
+            "old-boards": {
+                "title": "“Old Boards”",
+                "body": "# I.\n\nI love to see boards lying on the ground in early spring:\nThe ground beneath them is wet, and muddy--\nPerhaps covered with chicken tracks--\nAnd they are dry and eternal.\n\n\n# II.\n\nThis is the wood one sees on the decks of ocean ships,\nWood that carries us far from land,\nWith a dryness of something used for simple tasks,\nLike a horse’s tail.\n\n\n# III.\n\nThis wood is like a man who has a simple life,\nLiving through the spring and winter on the ship of his own desire.\nHe sits on dry wood surrounded by half-melted snow\nAs the rooster walks away springily over the dampened hay.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "month": "march",
+                        "month_epoch": "late"
+                    }
+                }
+            },
+            "on-the-ferry-across-chesapeake-bay": {
+                "title": "“On the Ferry Across Chesapeake Bay”",
+                "body": "On the orchard of the sea, far out are whitecaps,\nWater that answers questions no one has asked,\nSilent speakers of the grave’s rejoinders;\nHaving accomplished nothing, I am travelling somewhere else;\nO deep green sea, it is not for you\nThis smoking body ploughs toward death;\nIt is not for the strange blossoms of the sea\nI drag my thin legs across the Chesapeake Bay;\nThough perhaps by your motions the body heals;\nFor though on its road the body cannot march\nWith golden trumpets--it must march--\nAnd the sea gives up its answer as it falls into itself.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -22306,6 +22663,43 @@
                     ]
                 }
             },
+            "poem-against-the-british": {
+                "title": "“Poem Against the British”",
+                "body": "# I.\n\nThe wind through the box-elder trees\nIs like rides at dusk on a white horse,\nWars for your country, and fighting the British.\n\n\n# II.\n\nI wonder if Washington listened to the trees.\nAll morning I have been sitting in grass,\nHigher than my eyes, beneath trees,\nAnd listening upward, to the wind in leaves.\nSuddenly I realize there is one thing more:\nThere is also the wind through the high grass.\n\n\n# III.\n\nThere are palaces, boats, silence among white buildings,\nIced drinks on marble tops, among cool rooms;\nIt is good also to be poor, and listen to the wind.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "holiday": "independence_day"
+                    }
+                }
+            },
+            "poem-against-the-rich": {
+                "title": "“Poem Against the Rich”",
+                "body": "Each day I live, each day the sea of light\nRises, I seem to see\nThe tear inside the stone\nAs if my eyes were gazing beneath the earth.\nThe rich man in his red hat\nCannot hear\nThe weeping in the pueblos of the lily,\nOr the dark tears in the shacks of the corn.\nEach day the sea of light rises\nI hear the sad rustle of the darkened armies,\nWhere each man weeps, and the plaintive\nOrisons of the stones.\nThe stones bow as the saddened armies pass.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ]
+                }
+            },
             "poem-in-praise-of-solitude": {
                 "title": "“Poem in Praise of Solitude”",
                 "body": "In the deep fall, the body awakes,\nAnd we find lions on the sea-shore--\nNothing to fear.\nThe wind rises, the water is born,\nSpreading white tomb clothes on a rocky shore,\nDrawing us up\nFrom the bed of the land.\n\nWe did not come to remain whole.\nWe came to lose our leaves like the trees,\nThe trees that are broken\nAnd start again, drawing up from the great roots;\nLike mad poets captured by the Moors,\nMen who live out\nA second life.\n\nThat we should know of poverty and rags,\nThat we should taste the weed of Dillinger,\nAnd swim in the sea,\nNot always walking on dry land,\nAnd, dancing, fund in the trees a savior,\nA home in dark grass,\nAnd nourishment in death.",
@@ -22316,6 +22710,26 @@
                     ],
                     "context": {
                         "liturgy": "advent"
+                    }
+                }
+            },
+            "poem-in-three-parts": {
+                "title": "“Poem in Three Parts”",
+                "body": "# I.\n\nOh, on an early morning I think I shall live forever!\nI am wrapped in my joyful flesh,\nAs the grass is wrapped in its clouds of green.\n\n\n# II.\n\nRising from a bed, where I dreamt Of long rides past castles and hot coals, The sun lies happily on my knees;\nI have suffered and survived the night\nBathed in dark water, like any blade of grass.\n\n\n# III.\n\nThe strong leaves of the box-elder tree, Plunging in the wind, call us to disappear Into the wilds of the universe,\nWhere we shall sit at the foot of a plant, And live forever, like the dust.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "season": "summer"
                     }
                 }
             },
@@ -22349,6 +22763,46 @@
                     ]
                 }
             },
+            "remembering-in-oslo-the-old-picture-of-the-magna-carta": {
+                "title": "“Remembering in Oslo the Old Picture of the Magna Carta”",
+                "body": "The girl in a house dress, pushing open the window,\nIs also the fat king sitting under the oak tree,\nAnd the garbage men, thumping their cans, are\nCrows still cawing,\nAnd the nobles are offering the sheet to the king.\nOne thing is also another thing, and the doomed galleons,\nHung with trinkets, hove by the coast, and in the blossoms\nOf trees are still sailing on their long voyage from Spain;\nI too am still shocking grain, as I did as a boy, dog tired,\nAnd my great-grandfather steps on his ship.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "season": "spring"
+                    }
+                }
+            },
+            "return-to-solitude": {
+                "title": "“Return to Solitude”",
+                "body": "# I.\n\nIt is a moonlit, windy night.\nThe moon has pushed out the Milky Way.\nClouds are hardly alive, and the grass leaping.\nIt is the hour of return.\n\n\n# II.\n\nWe want to go back, to return to the sea,\nThe sea of solitary corridors,\nAnd halls of wild nights,\nExplosions of grief,\nDiving into the sea of death,\nLike the stars of the wheeling Bear.\n\n\n# III.\n\nWhat shall we find when we return?\nFriends changed, houses moved,\nTrees perhaps, with new leaves.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "season": "autumn"
+                    }
+                }
+            },
             "riderless-horses": {
                 "title": "“Riderless Horses”",
                 "body": "An owl on the dark waters\nAnd so many torches smoking\nBy mossy stone\nAnd horses that are seen riderless on moonlit nights\nA candle that flutters as a black hand\nReaches out\nAll of these mean\nA man with coins on his eyes\n\nThe vast waters\nThe cry of seagulls",
@@ -22369,6 +22823,26 @@
                     ]
                 }
             },
+            "september-night-with-an-old-horse": {
+                "title": "“September Night with an Old Horse”",
+                "body": "# I.\n\nTonight I rode through the cornfield in the moonlight!\nThe dying grass is still, waiting for winter,\nAnd the dark weeds are waiting, as if under water …\n\n\n# II.\n\nIn Arabia, the horses live in the tents,\nNear dark gold, and water, and tombs.\n\n\n# III.\n\nHow beautiful to walk out at midnight in the moonlight\nDreaming of animals.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "holiday": "autumn_equinox"
+                    }
+                }
+            },
             "shabistari-and-the-secret-garden": {
                 "title": "“Shabistari and the Secret Garden”",
                 "body": "I can’t stop praising Shabistari for bringing\nThe gnat’s and the elephant’s legs close to each other.\nNext I want Sunday to be brought closer to Monday.\n\nSuppose a bit of straw were able to marry the wind.\nHaven’t you noticed those good marriages when\nThe wind and the chaff go down the road together?\n\nWhen a poem takes me to that place where\nNo story ever happens twice, all I want\nIs a warm room, and a thousand years of thought.\n\nConrad said the dark swimmer did reach his ship.\nIf we sink into the suffering that’s right for us,\nOur dreams will have all that Adam and Eve wept for.\n\nAmazing things do happen. One morning Kierkegaard\nExplains exactly what ressentiment is\nAnd the mouse agrees to marry everyone in the room.\n\nRobert, those high spirits don’t prove you are\nA close friend of truth; but you have learned to drive\nYour buggy over the prairies of human sorrow.",
@@ -22379,16 +22853,64 @@
                     ]
                 }
             },
-            "snowfall-in-the-november-afternoon": {
-                "title": "“Snowfall in the November Afternoon”",
+            "silence": {
+                "title": "“Silence”",
+                "body": "The fall has come, clear as the eyes of chickens.\nStrange mufiled sounds come from the sea,\nSounds of muffled oarlocks,\nAnd swampings in lonely bays,\nSurf crashing on unchristened shores,\nAnd the wash of tiny snail shells in the wandering gravel.\n\nMy body also wanders among these doorposts and cars,\nCradling a pen, or walking down a stair\nHolding a cup in my hand,\nAnd not breaking into the pastures that lie in the sunlight.\nThis is the sloth of the man inside the body,\nThe sloth of the body lost among the wandering stones of kindness.\n\nSomething homeless is looking on the long roads--\nA dog lost since midnight, a small duck\nAmong the odorous reeds,\nOr a tiny box-elder bug searching for the window pane.\nEven the young sunlight is lost on the window pane,\nMoving at night like a diver among the bare branches silently lying on the floor.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "season": "autumn"
+                    }
+                }
+            },
+            "snowfall-in-the-afternoon": {
+                "title": "“Snowfall in the Afternoon”",
                 "body": "The grass is half-covered with snow.\nIt was the kind of snowfall that starts in late afternoon,\nAnd now the little houses of the grass are growing dark.\n\nIf I reached my hands down, near the earth,\nI could take handfulls of darkness!\nThat darkness was always there, which we never noticed.\n\nAs the snow grows heavier, the cornstalks fade farther away,\nAnd the barn moves nearer to the house.\nThe barn moves all alone in the growing storm.\n\nThe barn is full of corn, and moving toward us now\nLike a hulk blown toward us in a storm at sea;\nAll the sailors on deck have been blind for many years.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
                     "context": {
                         "month": "november"
+                    }
+                }
+            },
+            "solitude-late-at-night-in-the-woods": {
+                "title": "“Solitude Late at Night in the Woods”",
+                "body": "# I.\n\nThe body is like a November birch facing the full moon\nAnd reaching into the cold heavens.\nIn these trees there is no ambition, no sodden body, no leaves,\nNothing but bare trunks climbing like cold fire!\n\n\n# II.\n\nMy last walk in the trees has come. At dawn\nI must return to the trapped fields,\nTo the obedient earth.\nThe trees shall be reaching all the winter.\n\n\n# III.\n\nIt is a joy to walk in the bare woods.\nThe moonlight is not broken by the heavy leaves.\nThe leaves are down, and touching the soaked earth,\nGiving off the odor that partridges love.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "month": "november",
+                        "month_epoch": "middle"
                     }
                 }
             },
@@ -22403,6 +22925,83 @@
                     "context": {
                         "season": "winter"
                     }
+                }
+            },
+            "summer-1960-minnesota": {
+                "title": "“Summer, 1960, Minnesota”",
+                "body": "# I.\n\nAfter a drifting day, visiting the bridge near Louisberg,\nWith its hot muddy water flowing\nUnder the excited swallows,\nNow, at noon\nWe plunge through the hot beanfields,\nAnd the sturdy alfalfa fields, the farm groves\nLike heavy green smoke close to the ground.\n\n\n# II.\n\nInside me there is a confusion of swallows,\nBirds flying through the smoke,\nAnd horses galloping excitedly on fields of short grass.\n\n\n# III.\n\nYet, we are falling,\nFalling into the open mouths of darkness,\nInto the Congo as if into a river, Or as wheat into open mills.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "season": "summer"
+                    }
+                }
+            },
+            "sunset-at-a-lake": {
+                "title": "“Sunset at a Lake”",
+                "body": "The sun is sinking. Here on the pine-haunted bank, the mosquitoes fly around drowsily, and moss stands out as if it wanted to speak. Calm falls on the lake, which now seems heavier and inhospitable. Far out, rafts of ducks drift like closed eyes, and a thin line of silver caused by something invisible slowly moves toward shore in the viscous darkness under the southern bank. Only a few birds, the troubled ones, speak to the darkening roof of earth; small weeds stand abandoned, the clay is sending her gifts back to the center of the earth.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "season": "summer"
+                    }
+                }
+            },
+            "surprised-by-evening": {
+                "title": "“Surprised by Evening”",
+                "body": "There is unknown dust that is near us,\nWaves breaking on shores just over the hill,\nTrees full of birds that we have never seen,\nNets drawn down with dark fish.\n\nThe evening arrives; we look up and it is there,\nIt has come through the nets of the stars,\nThrough the tissues of the grass,\nWalking quietly over the asylums of the waters.\n\nThe day shall never end, we think:\nWe have hair that seems born for the daylight;\nBut, at last, the quiet waters of the night will rise,\nAnd our skin shall see far off, as it does under water.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "season": "summer"
+                    }
+                }
+            },
+            "taking-the-hands": {
+                "title": "“Taking the Hands”",
+                "body": "Taking the hands of someone you love,\nYou see they are delicate cages …\nTiny birds are singing\nIn the secluded prairies\nAnd in the deep valleys of the hand.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ]
                 }
             },
             "the-testament": {
@@ -22448,6 +23047,47 @@
                     }
                 }
             },
+            "thinking-of-wallace-stevens-on-the-first-snowy-day-in-december": {
+                "title": "“Thinking of Wallace Stevens on the First Snowy Day in December”",
+                "body": "This new snow seems to speak of virgins\nWith frail clothes made of gold,\nJust as the old snow shall whisper\nOf concierges in France.\n\nThe new dawn sings of beaches\nDazzling as sugar and clean as the clouds of Greece,\nJust as the exhausted dusk shall sing\nOf the waves on the western shore.\n\nThis new strength whispers of the darkness of death,\nOf the frail skiff lost in the giant cave,\nJust as in the boat nearing death you sang\nOf feathers and white snow.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "month": "december",
+                        "month_epoch": "early"
+                    }
+                }
+            },
+            "three-kinds-of-pleasures": {
+                "title": "“Three Kinds of Pleasures”",
+                "body": "# I.\n\nSometimes, riding in a car, in Wisconsin\nOr Illinois, you notice those dark telephone poles\nOne by one lift themselves out of the fence line\nAnd slowly leap on the gray sky--\nAnd past them, the snowy fields.\n\n\n# II.\n\nThe darkness drifts down like snow on the picked cornfields\nIn Wisconsin: and on these black trees\nScattered, one by one,\nThrough the winter fields--\nWe see stiff weeds and brownish stubble,\nAnd white snow left now only in the wheeltracks of the combine.\n\n\n# III.\n\nIt is a pleasure, also, to be driving\nToward Chicago, near dark,\nAnd see the lights in the barns.\nThe bare trees more dignified than ever,\nLike a fierce man on his deathbed,\nAnd the ditches along the road half full of a private snow.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "season": "winter"
+                    }
+                }
+            },
             "unanswered-letters": {
                 "title": "“Unanswered Letters”",
                 "body": "Strips of August sun come in through shutters.\nBaskets of unanswered letters lie on chairs.\nSome foolish man must live here.",
@@ -22461,11 +23101,38 @@
                     }
                 }
             },
+            "unrest": {
+                "title": "“Unrest”",
+                "body": "A strange unrest hovers over the nation:\nThis is the last dance, the wild tossing of Morgan’s seas,\nThe division of spoils. A lassitude\nEnters into the diamonds of the body.\nIn high school the explosion begins, the child is partly killed,\nWhen the fight is over, and the land and the sea ruined,\nTwo shapes inside us rise, and move away.\n\nBut the baboon whistles on the shores of death -\nClimbing and falling, tossing nuts and stones,\nHe gambols by the tree\nWhose branches hold the expanses of cold,\nThe planets whirling and the black sun, The cries of insects, and the tiny slaves In the prisons of bark:\nCharlemagne, we are approaching your islands!\n\nWe are returning now to the snowy trees,\nAnd the depth of the darkness buried in snow, through\nwhich you rode all night\nWith stiff hands; now the darkness is falling\nIn which we sleep and awake--a darkness in which\nThieves shudder, and the insane have a hunger for snow,\nIn which bankers dream of being buried by black stones,\nAnd businessmen fall on their knees in the dungeons of sleep.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "season": "autumn"
+                    }
+                }
+            },
             "waking-from-sleep": {
                 "title": "“Waking from Sleep”",
                 "body": "Inside the veins there are navies setting forth,\nTiny explosions at the waterlines,\nAnd seagulls weaving in the wind of the salty blood.\n\nIt is the morning. The country has slept the whole winter.\nWindow seats were covered with fur skins, the yard was full\nOf stiff dogs, and hands that clumsily held heavy books.\n\nNow we wake, and rise from bed, and eat breakfast!\nShouts rise from the harbor of the blood,\nMist, and masts rising, the knock of wooden tackle in the sunlight.\n\nNow we sing, and do tiny dances on the kitchen floor.\nOur whole body is like a harbor at dawn;\nWe know that our master has left us for the day.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -22527,6 +23194,13 @@
                 "body": "How strange to think of giving up all ambition!\nSuddenly I see with such clear eyes\nThe white flake of snow\nThat has just fallen in the horse’s mane!",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -22609,6 +23283,23 @@
                     ]
                 }
             },
+            "where-we-must-look-for-help": {
+                "title": "“Where We Must Look for Help”",
+                "body": "The dove returns: it found no resting place;\nIt was in flight all night above the shaken seas;\nBeneath ark eaves\nThe dove shall magnify the tiger’s bed;\nGive the dove peace.\nThe split-tail swallows leave the sill at dawn;\nAt dusk, blue swallows shall return.\nOn the third day the crow shall fly;\nThe crow, the crow, the spider-colored crow,\nThe crow shall find new mud to walk upon.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ]
+                }
+            },
             "why-we-dont-die": {
                 "title": "“Why We Don’t Die”",
                 "body": "In late September many voices\nTell you you will die.\nThat leaf says it, that coolness.\nAll of them are right.\n\nOur many souls--what\nCan they do about it?\nNothing. They’re already\nPart of the invisible.\n\nOur souls have been\nLonging to go home\nAnyway. “It’s late,” they say,\n“Lock the door, let’s go.”\n\nThe body doesn’t agree. It says\n“We buried a little iron\nBall under that tree.\nLet’s go get it.”",
@@ -22620,6 +23311,23 @@
                     "context": {
                         "holiday": "autumn_equinox"
                     }
+                }
+            },
+            "with-pale-women-in-maryland": {
+                "title": "“With Pale Women in Maryland”",
+                "body": "With pale women in Maryland,\nPassing the proud and tragic pastures,\nAnd stupefied with love\nAnd the stupendous burdens of the foreign trees,\nAs all before us lived, dazed\nWith overabundant love in the reach of the Chesapeake,\nPast the tobacco warehouse, through our dark lives\nLike those before, we move to the death we love\nWith pale women in Maryland.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Silence in the Snowy Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1962"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ]
                 }
             },
             "the-world-is-a-confusion-of-three-worlds": {
@@ -71982,7 +72690,7 @@
             },
             "sudden-fright": {
                 "title": "“Sudden Fright”",
-                "body": "When in summer in an easterly wind\nSeptember dust whirls and in the belated paper\neditorials are almost mystical,\n\nwhen the powers want to change beds\nand are allowed to beget openly\nnew instruments for control,\n\nwhen around footballs holiday makers camp\nand the playful glance of the nations\nmirrors weighty decisions,\n\nwhen columns of figures put one to sleep\nand through dreams a camouflaged enemy\nbreathes ans crawls nearer,\n\nwhen in conversations always the same word\nis backhandedly held in reserve\nand a match can strike terror,\n\nwhen from the backstroke position in swimming\nskyward only the sky seems to tower,\nfrightened people hurry back to the shore,\n\na sudden fright hangs in the air.",
+                "body": "When in summer in an easterly wind\nSeptember dust whirls and in the belated paper\neditorials are almost mystical,\n\nwhen the powers want to change beds\nand are allowed to beget openly\nnew instruments for control,\n\nwhen around footballs holiday makers camp\nand the playful glance of the nations\nmirrors weighty decisions,\n\nwhen columns of figures put one to sleep\nand through dreams a camouflaged enemy\nbreathes and crawls nearer,\n\nwhen in conversations always the same word\nis backhandedly held in reserve\nand a match can strike terror,\n\nwhen from the backstroke position in swimming\nskyward only the sky seems to tower,\nfrightened people hurry back to the shore,\n\na sudden fright hangs in the air.",
                 "metadata": {
                     "language": "German",
                     "translators": [
@@ -71992,7 +72700,8 @@
                         "German"
                     ],
                     "context": {
-                        "month": "september"
+                        "month": "september",
+                        "month_epoch": "early"
                     }
                 }
             },
@@ -140703,6 +141412,13 @@
                 "body": "Black lake, black boat, two black, cut-paper people.\nWhere do the black trees go that drink here?\nTheir shadows must cover Canada.\n\nA little light is filtering from the water flowers.\nTheir leaves do not wish us to hurry:\nThey are round and flat and full of dark advice.\n\nCold worlds shake from the oar.\nThe spirit of blackness is in us, it is in the fishes.\nA snag is lifting a valedictory, pale hand;\n\nStars open among the lilies.\nAre you not blinded by such expressionless sirens?\nThis is the silence of astounded souls.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Crossing the Water",
+                        "type": "book",
+                        "published": {
+                            "year": "1971"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -141938,6 +142654,13 @@
                 "body": "The wet dawn inks are doing their blue dissolve.\nOn their blotter of fog the trees\nSeem a botanical drawing.\nMemories growing, ring on ring,\nA series of weddings.\n\nKnowing neither abortions nor bitchery,\nTruer than women,\nThey seed so effortlessly!\nTasting the winds, that are footless,\nWaist-deep in history.\n\nFull of wings, otherworldliness.\nIn this, they are Ledas.\nO mother of leaves and sweetness\nWho are these pietas?\nThe shadows of ringdoves chanting, but chasing nothing.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Winter Trees",
+                        "type": "book",
+                        "published": {
+                            "year": "1971"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -189448,6 +190171,27 @@
             ]
         },
         "poems": {
+            "another-place": {
+                "title": "“Another Place”",
+                "body": "I walk\ninto what light\nthere is\n\nnot enough for blindness\nor clear sight\nof what is to come\n\nand I notice\nthe water\nthe single boat\nthe man standing\n\nhe is not someone I know\n\nthis is another place\nwhat light there is\nspreads like a net\nover nothing\n\nwhat is to come\nhas come to this\nbefore\n\nthis is the mirror\nin which pain is asleep\nthis is the country\nnobody visits",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "The Late Hour",
+                        "type": "book",
+                        "published": {
+                            "year": "1978"
+                        }
+                    },
+                    "tags": [
+                        "Canadian",
+                        "American"
+                    ],
+                    "context": {
+                        "liturgy": "advent"
+                    }
+                }
+            },
             "answers": {
                 "title": "“Answers”",
                 "body": "Why did you travel?\nBecause the house was cold.\nWhy did you travel?\nBecause it is what I have always done between sunset and sunrise.\nWhat did you wear?\nI wore a blue suit, a white shirt, yellow tie, and yellow socks.\nWhat did you wear?\nI wore nothing. A scarf of pain kept me warm.\nWho did you sleep with?\nI slept with a different woman each night.\nWho did you sleep with?\nI slept alone. I have always slept alone.\nWhy did you lie to me?\nI always thought I told the truth.\nWhy did you lie to me?\nBecause the truth lies like nothing else and I love the truth.\nWhy are you going?\nBecause nothing means much to me anymore.\nWhy are you going?\nI don’t know. I have never known.\nHow long shall I wait for you?\nDo not wait for me. I am tired and I want to lie down.\nAre you tired and do you want to lie down?\nYes, I am tired and I want to lie down.",
@@ -189457,6 +190201,27 @@
                         "Canadian",
                         "American"
                     ]
+                }
+            },
+            "coming-of-light": {
+                "title": "“Coming of Light”",
+                "body": "Even this late it happens:\nthe coming of love, the coming of light. \nYou wake and the candles are lit as if by themselves, \nstars gather, dreams pour into your pillows, \nsending up warm bouquets of air.\nEven this late the bones of the body shine \nand tomorrow’s dust flares into breath.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "The Late Hour",
+                        "type": "book",
+                        "published": {
+                            "year": "1978"
+                        }
+                    },
+                    "tags": [
+                        "Canadian",
+                        "American"
+                    ],
+                    "context": {
+                        "liturgy": "advent"
+                    }
                 }
             },
             "coming-to-this": {
@@ -189530,6 +190295,13 @@
                 "body": "Tell yourself\nas it gets cold and gray falls from the air\nthat you will go on\nwalking, hearing\nthe same tune no matter where\nyou find yourself--\ninside the dome of dark\nor under the cracking white\nof the moon’s gaze in a valley of snow.\n\nTonight as it gets cold\ntell yourself\nwhat you know which is nothing\nbut the tune your bones play\nas you keep going. And you will be able\nfor once to lie down under the small fire\nof winter stars.\n\nAnd if it happens that you cannot\ngo on or turn back and you find yourself\nwhere you will be at the end,\ntell yourself\nin that final flowing of cold through your limbs\nthat you love what you are.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "The Late Hour",
+                        "type": "book",
+                        "published": {
+                            "year": "1978"
+                        }
+                    },
                     "tags": [
                         "Canadian",
                         "American"
@@ -189544,6 +190316,13 @@
                 "body": "Someone was saying\nsomething about shadows covering the field, about\nhow things pass, how one sleeps towards morning\nand the morning goes.\n\nSomeone was saying\nhow the wind dies down but comes back,\nhow shells are the coffins of wind\nbut the weather continues.\n\nIt was a long night\nand someone said something about the moon shedding its white\non the cold field, that there was nothing ahead\nbut more of the same.\n\nSomeone mentioned\na city she had been in before the war, a room with two candles\nagainst a wall, someone dancing, someone watching.\nWe begin to believe\n\nthe night would not end.\nSomeone was saying the music was over and no one had noticed.\nThen someone said something about the planets, about the stars,\nhow small they were, how far away.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "The Late Hour",
+                        "type": "book",
+                        "published": {
+                            "year": "1978"
+                        }
+                    },
                     "tags": [
                         "Canadian",
                         "American"
@@ -189642,6 +190421,13 @@
                 "body": "It is all in the mind, you say, and has\nnothing to do with happiness. The coming of cold,\nthe coming of heat, the mind has all the time in the world.\nYou take my arm and say something will happen,\nsomething unusual for which we were always prepared,\nlike the sun arriving after a day in Asia,\nlike the moon departing after a night with us.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "The Late Hour",
+                        "type": "book",
+                        "published": {
+                            "year": "1978"
+                        }
+                    },
                     "tags": [
                         "Canadian",
                         "American"
