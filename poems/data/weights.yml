@@ -38,6 +38,7 @@ holiday:
   april_fools: 365.24
   archangels: 365.24
   ascension: 365.24
+  ascension_eve: 365.24
   ash_wednesday: 365.24
   assumption: 365.24
   autumn_equinox: 365.24
@@ -87,6 +88,7 @@ holiday:
   earth_day: 365.24
   easter_monday: 365.24
   easter_sunday: 365.24
+  easter_tuesday: 365.24
   edith_stein: 365.24
   epiphany: 365.24
   fathers_day: 365.24
@@ -97,9 +99,12 @@ holiday:
   holy_cross: 365.24
   holy_family: 429.69
   holy_innocents: 365.24
+  holy_monday: 365.24
   holy_name_of_mary: 365.24
   holy_saturday: 365.24
   holy_thursday: 365.24
+  holy_tuesday: 365.24
+  holy_wednesday: 365.24
   immaculate_conception: 365.24
   immaculate_heart_of_mary: 365.24
   independence_day: 365.24
@@ -127,9 +132,12 @@ holiday:
   palm_sunday: 365.24
   pedro_de_corpa_and_companions: 365.24
   pentecost: 365.24
+  pentecost_eve: 365.24
   presentation_of_the_blessed_virgin_mary: 365.24
   presidents_day: 365.24
+  quadragesima: 365.24
   queenship_of_mary: 365.24
+  quinquagesima: 365.24
   sacred_heart_of_jesus: 365.24
   saint_abban: 365.24
   saint_adrian_of_canterbury: 365.24
@@ -425,6 +433,7 @@ holiday:
   servant_of_god_joseph_perez: 365.24
   servant_of_god_orlando_catanii: 365.24
   servant_of_god_vico_necchi: 365.24
+  sexagesima: 365.24
   spring_equinox: 365.24
   summer_solstice: 365.24
   thanksgiving: 365.24
@@ -432,6 +441,8 @@ holiday:
   trinity_sunday: 365.24
   veterans_day: 365.24
   visitation: 365.24
+  whitsun_monday: 365.24
+  whitsun_tuesday: 365.24
   winter_solstice: 365.24
 liturgy:
   advent: 14.59

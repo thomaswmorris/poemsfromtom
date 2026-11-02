@@ -27939,7 +27939,7 @@
         },
         "poems": {
             "and-here-again-as-dusk-now-spreads": {
-                "title": "“And Here Again, as Dusk Now Spreads …”",
+                "title": "“And here again, as dusk now spreads …”",
                 "body": "And here again, as dusk now spreads,\nAloft and free in sky’s expanses\nThe birds’ formation sea-bound threads,\nAn arrow’s shade, its chain advances.\n\nThe dusk is limpid, steppe is hushed,\nThe reddening sunset now is blazing …\nThe sky by mute formation’s brushed,\nBirds’ gentle wings its crimson grazing.\n\nHow far away and high they fly!\nYou gaze--the blueness escalating\nAs deepness of the autumn sky\nAbove you is evaporating.\n\nThis distance now extends embrace--\nThe soul to give herself is willing,\nShe looses from the earth a trace\nOf anguished new bright thinking’s spilling.",
                 "metadata": {
                     "language": "Russian",
@@ -28047,7 +28047,7 @@
                 }
             },
             "an-even-hazy-hum-runs-through-the-glade": {
-                "title": "“An Even, Hazy Hum Runs through the Glade …”",
+                "title": "“An even, hazy hum runs through the glade …”",
                 "body": "An even, hazy hum runs through the glade,\nThe rustling leaves to laze and drowse incline …\nThe roosters faraway in sun-specked shade,\nTheir vernal tidings sing, in crows benign.\n\nA quiet, hazy hum runs through the glade …\nTo succor me and send my soul repose,\nI lie midst birch grove green, my worries fade,\nIn this enchanted realm where stillness flows.\n\nSo used I’ve come to live with grief and dole\nThat this clear lustrous day seems strange to me,\nAs if I needs must chide my self, my soul\nFor feeling joyful, light at heart and free.\n\nBut censure and rebuke on my smile fades …\nThe woods hum on, the lacy shadows laze,\nThe leaves’ bright hum dissolves, in flight abrades\nThe quiet rustle of bright childhood days.",
                 "metadata": {
                     "language": "Russian",
@@ -38593,7 +38593,11 @@
                     },
                     "tags": [
                         "American"
-                    ]
+                    ],
+                    "context": {
+                        "season": "autumn",
+                        "weekday": "sunday"
+                    }
                 }
             },
             "the-black-angel": {
@@ -38632,7 +38636,7 @@
             },
             "remembrance-of-things-future": {
                 "title": "“Remembrance of Things Future”",
-                "body": "# I.\n\nYou arrive in a new town.\nYour suitcase yawns. Your troubles\nUnpack themselves and dress up.\nA night on the town! Poor town.\nThe wallpaper reminds you\nOf a story or a poem\nYou started once in a room\nMuch like this room, this poem.\n\nYou will dial Room Service\nAnd order a fifth of gin.\nYou will drink an inch of it\nClear as cellophane, and laugh,\n\nHaving heard in the next room\nThe shuffle of playing cards.\nYou will knock. You will sit in.\nYou will fill your inside straights.\n\n\n# II.\n\n You are the tall dark stranger, and his ghost.\nYou will forgive. You will forget. Almost.\n\n\n# III.\n\nYou will apologize & apologize & apologize.\nYou are Henry James.\nYou are Japanese.\nTennessee is a string on your finger.\nTennessee is you with your pants down.\nAnd you own up to it.\n\nTennessee is a train coming in,\nAnd you lost in the steam of it,\nAnd the gray mail-bags falling.\n\nYou will come later, to the edge.\nYou will hone it. You will cut yourself.\nYou will apologize.\n\n\n# IV.\n\n If the violin attacks, if the mirror changes\nits spots, are the leopards to be left untuned?\nYou lay broad waking, the two of you, in a\nmotel in Phoenix. You will not be happy again, ever.\n\n\n # V.\n\nThere are those who dream of keys.\nThere are those who dream of locks.\nYou dream of neither. You are the key;\nYou are the lock. There is no turning.\n\nYou are like a good novelist.\nYour characters never open doors,\n\nNever close them. And when they speak,\nThey say thou, they say thee.\n\n\n# VI.\n\nIf your mother should live again in a dream,\nand turn and look at you, as she did so often,\nand should she, yes, whisper Shipwreck, you must answer, Cage.\n\n\n# VII.\n\nThis is the day you have been waiting for.\nThe morning should be set aside for thought:\nHunker down naked under such a hat\nAs one sees disappearing around corners,\nA broad black hat. Pretending to some boredom,\nBut only some, conjure the absolute.\nIt will seem under that brim that you get\nMoment by moment more and more immortal.\nThe grand confusions! Have you got them straight?\nNever mind. Evening is another story:\nYou, robed in shadow, all garlanded by light,\nA prince grown weary of posing for his portrait--\nYou nod and dream, and dream yourself complete,\nThis evening of the day you waited for.\n\n\n# VIII.\n\nOf your absence newly acquired,\nThe O of astonishment, the Q of death,\nNothing, they will say nothing.\nThey will say, The vineyard of his palm\n\nAnd on the shelf, gleaming, the brims\nthat leaned into and tasted his mouth.\n\nAll has been translated into amber.\nAll has been poured into your cups.\n\nAnd the tongue cried more, more.\nAnd the Tongue cried never enough.\n\n\n# IX.\n\nThe bear, the broom, the butterfly …\nThe bear is for misfortune.\nIt shambles toward you, ten feet tall,\nFor that is the exact height,\nAlways, of misfortune. Always.\n\nNew prospects ahead, the broom says,\nOr would say, if brooms spoke,\nBut all the broom does is go shush, shush\nSweeping the bear away, the bear away.\n\nThe butterfly says, much happiness,\nSays, Unexpected pleasure,\nAll in the tongue of the butterfly,\nWhich is the tongue of the future.",
+                "body": "# I.\n\nYou arrive in a new town.\nYour suitcase yawns. Your troubles\nUnpack themselves and dress up.\nA night on the town! Poor town.\nThe wallpaper reminds you\nOf a story or a poem\nYou started once in a room\nMuch like this room, this poem.\n\nYou will dial Room Service\nAnd order a fifth of gin.\nYou will drink an inch of it\nClear as cellophane, and laugh,\n\nHaving heard in the next room\nThe shuffle of playing cards.\nYou will knock. You will sit in.\nYou will fill your inside straights.\n\n\n# II.\n\n You are the tall dark stranger, and his ghost.\nYou will forgive. You will forget. Almost.\n\n\n# III.\n\nYou will apologize & apologize & apologize.\nYou are Henry James.\nYou are Japanese.\nTennessee is a string on your finger.\nTennessee is you with your pants down.\nAnd you own up to it.\n\nTennessee is a train coming in,\nAnd you lost in the steam of it,\nAnd the gray mail-bags falling.\n\nYou will come later, to the edge.\nYou will hone it. You will cut yourself.\nYou will apologize.\n\n\n# IV.\n\nIf the violin attacks, if the mirror changes\nits spots, are the leopards to be left untuned?\nYou lay broad waking, the two of you, in a\nmotel in Phoenix. You will not be happy again, ever.\n\n\n# V.\n\nThere are those who dream of keys.\nThere are those who dream of locks.\nYou dream of neither. You are the key;\nYou are the lock. There is no turning.\n\nYou are like a good novelist.\nYour characters never open doors,\n\nNever close them. And when they speak,\nThey say thou, they say thee.\n\n\n# VI.\n\nIf your mother should live again in a dream,\nand turn and look at you, as she did so often,\nand should she, yes, whisper Shipwreck, you must answer, Cage.\n\n\n# VII.\n\nThis is the day you have been waiting for.\nThe morning should be set aside for thought:\nHunker down naked under such a hat\nAs one sees disappearing around corners,\nA broad black hat. Pretending to some boredom,\nBut only some, conjure the absolute.\nIt will seem under that brim that you get\nMoment by moment more and more immortal.\nThe grand confusions! Have you got them straight?\nNever mind. Evening is another story:\nYou, robed in shadow, all garlanded by light,\nA prince grown weary of posing for his portrait--\nYou nod and dream, and dream yourself complete,\nThis evening of the day you waited for.\n\n\n# VIII.\n\nOf your absence newly acquired,\nThe O of astonishment, the Q of death,\nNothing, they will say nothing.\nThey will say, The vineyard of his palm\n\nAnd on the shelf, gleaming, the brims\nthat leaned into and tasted his mouth.\n\nAll has been translated into amber.\nAll has been poured into your cups.\n\nAnd the tongue cried more, more.\nAnd the Tongue cried never enough.\n\n\n# IX.\n\nThe bear, the broom, the butterfly …\nThe bear is for misfortune.\nIt shambles toward you, ten feet tall,\nFor that is the exact height,\nAlways, of misfortune. Always.\n\nNew prospects ahead, the broom says,\nOr would say, if brooms spoke,\nBut all the broom does is go shush, shush\nSweeping the bear away, the bear away.\n\nThe butterfly says, much happiness,\nSays, Unexpected pleasure,\nAll in the tongue of the butterfly,\nWhich is the tongue of the future.",
                 "metadata": {
                     "language": "English",
                     "source": {
@@ -141565,7 +141569,7 @@
             },
             "berck-plage": {
                 "title": "“Berck-Plage”",
-                "body": "# 1.\n\nThis is the sea, then, this great abeyance.\nHow the sun’s poultice draws on my inflammation.\n\nElectrifyingly-colored sherbets, scooped from the freeze\nBy pale girls, travel the air in scorched hands.\n\nWhy is it so quiet, what are they hiding?\nI have two legs, and I move smilingly..\n\nA sandy damper kills the vibrations;\nIt stretches for miles, the shrunk voices\n\nWaving and crutchless, half their old size.\nThe lines of the eye, scalded by these bald surfaces,\n\nBoomerang like anchored elastics, hurting the owner.\nIs it any wonder he puts on dark glasses?\n\nIs it any wonder he affects a black cassock?\nHere he comes now, among the mackerel gatherers\n\nWho wall up their backs against him.\nThey are handling the black and green lozenges like the parts of a body.\n\nThe sea, that crystallized these,\nCreeps away, many-snaked, with a long hiss of distress.\n\n\n# 2.\n\nThis black boot has no mercy for anybody.\nWhy should it, it is the hearse of a dad foot,\n\nThe high, dead, toeless foot of this priest\nWho plumbs the well of his book,\n\nThe bent print bulging before him like scenery.\nObscene bikinis hid in the dunes,\n\nBreasts and hips a confectioner’s sugar\nOf little crystals, titillating the light,\n\nWhile a green pool opens its eye,\nSick with what it has swallowed——\n\nLimbs, images, shrieks.  Behind the concrete bunkers\nTwo lovers unstick themselves.\n\nO white sea-crockery,\nWhat cupped sighs, what salt in the throat….\n\nAnd the onlooker, trembling,\nDrawn like a long material\n\nThrough a still virulence,\nAnd a weed, hairy as privates.\n\n\n# 3.\n\nOn the balconies of the hotel, things are glittering.\nThings, things——\n\nTubular steel wheelchairs, aluminum crutches.\nSuch salt-sweetness.  Why should I walk\n\nBeyond the breakwater, spotty with barnacles?\nI am not a nurse, white and attendant,\n\nI am not a smile.\nThese children are after something, with hooks and cries,\n\nAnd my heart too small to bandage their terrible faults.\nThis is the side of a man:  his red ribs,\n\nThe nerves bursting like trees, and this is the surgeon:\nOne mirrory eye——\n\nA facet of knowledge.\nOn a striped mattress in one room\n\nAn old man is vanishing.\nThere is no help in his weeping wife.\n\nWhere are the eye-stones, yellow and valuable,\nAnd the tongue, sapphire of ash.\n\n\n# 4.\n\nA wedding-cake face in a paper frill.\nHow superior he is now.\n\nIt is like possessing a saint.\nThe nurses in their wing-caps are no longer so beautiful;\n\nThey are browning, like touched gardenias.\nThe bed is rolled from the wall.\n\nThis is what it is to be complete.  It is horrible.\nIs he wearing pajamas or an evening suit\n\nUnder the glued sheet from which his powdery beak\nRises so whitely unbuffeted?\n\nThey propped his jaw with a book until it stiffened\nAnd folded his hands, that were shaking:  goodbye, goodbye.\n\nNow the washed sheets fly in the sun,\nThe pillow cases are sweetening.\n\nIt is a blessing, it is a blessing:\nThe long coffin of soap-colored oak,\n\nThe curious bearers and the raw date\nEngraving itself in silver with marvelous calm.\n\n\n# 5.\n\nThe gray sky lowers, the hills like a green sea\nRun fold upon fold far off, concealing their hollows,\n\nThe hollows in which rock the thoughts of the wife——\nBlunt, practical boats\n\nFull of dresses and hats and china and married daughters.\nIn the parlor of the stone house\n\nOne curtain is flickering from the open window,\nFlickering and pouring, a pitiful candle.\n\nThis is the tongue of the dead man:  remember, remember.\nHow far he is now, his actions\n\nAround him like living room furniture, like a décor.\nAs the pallors gather——\n\nThe pallors of hands and neighborly faces,\nThe elate pallors of flying iris.\n\nThey are flying off into nothing:  remember us.\nThe empty benches of memory look over stones,\n\nMarble facades with blue veins, and jelly-glassfuls of daffodils.\nIt is so beautiful up here:  it is a stopping place.\n\n\n# 6.\n\nThe natural fatness of these lime leaves!——\nPollarded green balls, the trees march to church.\n\nThe voice of the priest, in thin air,\nMeets the corpse at the gate,\n\nAddressing it, while the hills roll the notes of the dead bell;\nA glittler of wheat and crude earth.\n\nWhat is the name of that color?——\nOld blood of caked walls the sun heals,\n\nOld blood of limb stumps, burnt hearts.\nThe widow with her black pocketbook and three daughters,\n\nNecessary among the flowers,\nEnfolds her lace like fine linen,\n\nNot to be spread again.\nWhile a sky, wormy with put-by smiles,\n\nPasses cloud after cloud.\nAnd the bride flowers expend a freshness,\n\nAnd the soul is a bride\nIn a still place, and the groom is red and forgetful, he is featureless.\n\n# 7.\n\nBehind the glass of this car\nThe world purrs, shut-off and gentle.\n\nAnd I am dark-suited and still, a member of the party,\nGliding up in low gear behind the cart.\n\nAnd the priest is a vessel,\nA tarred fabric, sorry and dull,\n\nFollowing the coffin on its flowery cart like a beautiful woman,\nA crest of breasts, eyelids and lips\n\nStorming the hilltop.\nThen, from the barred yard, the children\n\nSmell the melt of shoe-blacking,\nTheir faces turning, wordless and slow,\n\nTheir eyes opening\nOn a wonderful thing——\n\nSix round black hats in the grass and a lozenge of wood,\nAnd a naked mouth, red and awkward.\n\nFor a minute the sky pours into the hole like plasma.\nThere is no hope, it is given up.",
+                "body": "# 1.\n\nThis is the sea, then, this great abeyance.\nHow the sun’s poultice draws on my inflammation.\n\nElectrifyingly-colored sherbets, scooped from the freeze\nBy pale girls, travel the air in scorched hands.\n\nWhy is it so quiet, what are they hiding?\nI have two legs, and I move smilingly …\n\nA sandy damper kills the vibrations;\nIt stretches for miles, the shrunk voices\n\nWaving and crutchless, half their old size.\nThe lines of the eye, scalded by these bald surfaces,\n\nBoomerang like anchored elastics, hurting the owner.\nIs it any wonder he puts on dark glasses?\n\nIs it any wonder he affects a black cassock?\nHere he comes now, among the mackerel gatherers\n\nWho wall up their backs against him.\nThey are handling the black and green lozenges like the parts of a body.\n\nThe sea, that crystallized these,\nCreeps away, many-snaked, with a long hiss of distress.\n\n\n# 2.\n\nThis black boot has no mercy for anybody.\nWhy should it, it is the hearse of a dad foot,\n\nThe high, dead, toeless foot of this priest\nWho plumbs the well of his book,\n\nThe bent print bulging before him like scenery.\nObscene bikinis hid in the dunes,\n\nBreasts and hips a confectioner’s sugar\nOf little crystals, titillating the light,\n\nWhile a green pool opens its eye,\nSick with what it has swallowed--\n\nLimbs, images, shrieks.  Behind the concrete bunkers\nTwo lovers unstick themselves.\n\nO white sea-crockery,\nWhat cupped sighs, what salt in the throat….\n\nAnd the onlooker, trembling,\nDrawn like a long material\n\nThrough a still virulence,\nAnd a weed, hairy as privates.\n\n\n# 3.\n\nOn the balconies of the hotel, things are glittering.\nThings, things--\n\nTubular steel wheelchairs, aluminum crutches.\nSuch salt-sweetness.  Why should I walk\n\nBeyond the breakwater, spotty with barnacles?\nI am not a nurse, white and attendant,\n\nI am not a smile.\nThese children are after something, with hooks and cries,\n\nAnd my heart too small to bandage their terrible faults.\nThis is the side of a man:  his red ribs,\n\nThe nerves bursting like trees, and this is the surgeon:\nOne mirrory eye--\n\nA facet of knowledge.\nOn a striped mattress in one room\n\nAn old man is vanishing.\nThere is no help in his weeping wife.\n\nWhere are the eye-stones, yellow and valuable,\nAnd the tongue, sapphire of ash.\n\n\n# 4.\n\nA wedding-cake face in a paper frill.\nHow superior he is now.\n\nIt is like possessing a saint.\nThe nurses in their wing-caps are no longer so beautiful;\n\nThey are browning, like touched gardenias.\nThe bed is rolled from the wall.\n\nThis is what it is to be complete.  It is horrible.\nIs he wearing pajamas or an evening suit\n\nUnder the glued sheet from which his powdery beak\nRises so whitely unbuffeted?\n\nThey propped his jaw with a book until it stiffened\nAnd folded his hands, that were shaking:  goodbye, goodbye.\n\nNow the washed sheets fly in the sun,\nThe pillow cases are sweetening.\n\nIt is a blessing, it is a blessing:\nThe long coffin of soap-colored oak,\n\nThe curious bearers and the raw date\nEngraving itself in silver with marvelous calm.\n\n\n# 5.\n\nThe gray sky lowers, the hills like a green sea\nRun fold upon fold far off, concealing their hollows,\n\nThe hollows in which rock the thoughts of the wife--\nBlunt, practical boats\n\nFull of dresses and hats and china and married daughters.\nIn the parlor of the stone house\n\nOne curtain is flickering from the open window,\nFlickering and pouring, a pitiful candle.\n\nThis is the tongue of the dead man:  remember, remember.\nHow far he is now, his actions\n\nAround him like living room furniture, like a décor.\nAs the pallors gather--\n\nThe pallors of hands and neighborly faces,\nThe elate pallors of flying iris.\n\nThey are flying off into nothing:  remember us.\nThe empty benches of memory look over stones,\n\nMarble facades with blue veins, and jelly-glassfuls of daffodils.\nIt is so beautiful up here:  it is a stopping place.\n\n\n# 6.\n\nThe natural fatness of these lime leaves!--\nPollarded green balls, the trees march to church.\n\nThe voice of the priest, in thin air,\nMeets the corpse at the gate,\n\nAddressing it, while the hills roll the notes of the dead bell;\nA glittler of wheat and crude earth.\n\nWhat is the name of that color?--\nOld blood of caked walls the sun heals,\n\nOld blood of limb stumps, burnt hearts.\nThe widow with her black pocketbook and three daughters,\n\nNecessary among the flowers,\nEnfolds her lace like fine linen,\n\nNot to be spread again.\nWhile a sky, wormy with put-by smiles,\n\nPasses cloud after cloud.\nAnd the bride flowers expend a freshness,\n\nAnd the soul is a bride\nIn a still place, and the groom is red and forgetful, he is featureless.\n\n# 7.\n\nBehind the glass of this car\nThe world purrs, shut-off and gentle.\n\nAnd I am dark-suited and still, a member of the party,\nGliding up in low gear behind the cart.\n\nAnd the priest is a vessel,\nA tarred fabric, sorry and dull,\n\nFollowing the coffin on its flowery cart like a beautiful woman,\nA crest of breasts, eyelids and lips\n\nStorming the hilltop.\nThen, from the barred yard, the children\n\nSmell the melt of shoe-blacking,\nTheir faces turning, wordless and slow,\n\nTheir eyes opening\nOn a wonderful thing--\n\nSix round black hats in the grass and a lozenge of wood,\nAnd a naked mouth, red and awkward.\n\nFor a minute the sky pours into the hole like plasma.\nThere is no hope, it is given up.",
                 "metadata": {
                     "language": "English",
                     "source": {
@@ -141710,7 +141714,7 @@
             },
             "the-couriers": {
                 "title": "“The Couriers”",
-                "body": "The word of a snail on the plate of a leaf?\nIt is not mine. Do not accept it.\n\nAcetic acid in a sealed tin?\nDo not accept it. It is not genuine.\n\nA ring of gold with the sun in it?\nLies. Lies and a grief.\n\nFrost on a leaf, the immaculate\nCauldron, talking and crackling\n\nAll to itself on the top of each\nOf nine black Alps.\n\nA disturbance in mirrors,\nThe sea shattering its grey one ——\n\nLove, love, my season.",
+                "body": "The word of a snail on the plate of a leaf?\nIt is not mine. Do not accept it.\n\nAcetic acid in a sealed tin?\nDo not accept it. It is not genuine.\n\nA ring of gold with the sun in it?\nLies. Lies and a grief.\n\nFrost on a leaf, the immaculate\nCauldron, talking and crackling\n\nAll to itself on the top of each\nOf nine black Alps.\n\nA disturbance in mirrors,\nThe sea shattering its grey one--\n\nLove, love, my season.",
                 "metadata": {
                     "language": "English",
                     "source": {
@@ -142537,7 +142541,7 @@
             },
             "the-night-dances": {
                 "title": "“The Night Dances”",
-                "body": "A smile fell in the grass.\nIrretrievable!\n\nAnd how will your night dances\nLose themselves. In mathematics?\n\nSuch pure leaps and spirals ——\nSurely they travel\n\nThe world forever, I shall not entirely\nSit emptied of beauties, the gift\n\nOf your small breath, the drenched grass\nSmell of your sleeps, lilies, lilies.\n\nTheir flesh bears no relation.\nCold folds of ego, the calla,\n\nAnd the tiger, embellishing itself ——\nSpots, and a spread of hot petals.\n\nThe comets\nHave such a space to cross,\n\nSuch coldness, forgetfulness.\nSo your gestures flake off ——\n\nWarm and human, then their pink light\nBleeding and peeling\n\nThrough the black amnesias of heaven.\nWhy am I given\n\nThese lamps, these planets\nFalling like blessings, like flakes\n\nSix sided, white\nOn my eyes, my lips, my hair\n\nTouching and melting.\nNowhere.",
+                "body": "A smile fell in the grass.\nIrretrievable!\n\nAnd how will your night dances\nLose themselves. In mathematics?\n\nSuch pure leaps and spirals--\nSurely they travel\n\nThe world forever, I shall not entirely\nSit emptied of beauties, the gift\n\nOf your small breath, the drenched grass\nSmell of your sleeps, lilies, lilies.\n\nTheir flesh bears no relation.\nCold folds of ego, the calla,\n\nAnd the tiger, embellishing itself--\nSpots, and a spread of hot petals.\n\nThe comets\nHave such a space to cross,\n\nSuch coldness, forgetfulness.\nSo your gestures flake off--\n\nWarm and human, then their pink light\nBleeding and peeling\n\nThrough the black amnesias of heaven.\nWhy am I given\n\nThese lamps, these planets\nFalling like blessings, like flakes\n\nSix sided, white\nOn my eyes, my lips, my hair\n\nTouching and melting.\nNowhere.",
                 "metadata": {
                     "language": "English",
                     "source": {
@@ -142716,7 +142720,7 @@
             },
             "sheep-in-fog": {
                 "title": "“Sheep in Fog”",
-                "body": "The hills step off into whiteness.\nPeople or stars\nRegard me sadly, I disappoint them.\n\nThe train leaves a line of breath.\nO slow\nHorse the color of rust,\n\nHooves, dolorous bells——\nAll morning the\nMorning has been blackening,\n\nA flower left out.\nMy bones hold a stillness, the far\nFields melt my heart.\n\nThey threaten\nTo let me through to a heaven\nStarless and fatherless, a dark water.",
+                "body": "The hills step off into whiteness.\nPeople or stars\nRegard me sadly, I disappoint them.\n\nThe train leaves a line of breath.\nO slow\nHorse the color of rust,\n\nHooves, dolorous bells--\nAll morning the\nMorning has been blackening,\n\nA flower left out.\nMy bones hold a stillness, the far\nFields melt my heart.\n\nThey threaten\nTo let me through to a heaven\nStarless and fatherless, a dark water.",
                 "metadata": {
                     "language": "English",
                     "source": {
@@ -159729,7 +159733,7 @@
             ]
         },
         "poems": {
-            "advent": {
+            "advent-i": {
                 "title": "“Advent”",
                 "body": "This Advent moon shines cold and clear,\n    These Advent nights are long;\nOur lamps have burned year after year,\n    And still their flame is strong.\n“Watchman, what of the night?” we cry,\n    Heart-sick with hope deferred:\n“No speaking signs are in the sky,”\n    Is still the watchman’s word.\n\nThe Porter watches at the gate,\n    The servants watch within;\nThe watch is long betimes and late,\n    The prize is slow to win.\n“Watchman, what of the night?” but still\n    His answer sounds the same:\n“No daybreak tops the utmost hill,\n    Nor pale our lamps of flame.”\n\nOne to another hear them speak,\n    The patient virgins wise:\n“Surely He is not far to seek,”--\n    “All night we watch and rise.”\n“The days are evil looking back,\n    The coming days are dim;\nYet count we not His promise slack,\n    But watch and wait for Him.”\n\nOne with another, soul with soul,\n    They kindle fire from fire:\n“Friends watch us who have touched the goal.”\n    “They urge us, come up higher.”\n“With them shall rest our waysore feet,\n    With them is built our home,\nWith Christ.” “They sweet, but He most sweet,\n    Sweeter than honeycomb.”\n\nThere no more parting, no more pain,\n    The distant ones brought near,\nThe lost so long are found again,\n    Long lost but longer dear:\nEye hath not seen, ear hath not heard,\n    Nor heart conceived that rest,\nWith them our good things long deferred,\n    With Jesus Christ our Best.\n\nWe weep because the night is long,\n    We laugh, for day shall rise,\nWe sing a slow contented song\n    And knock at Paradise.\nWeeping we hold Him fast Who wept\n    For us,--we hold Him fast;\nAnd will not let Him go except\n    He bless us first or last.\n\nWeeping we hold Him fast to-night;\n    We will not let Him go\nTill daybreak smite our wearied sight,\n    And summer smite the snow:\nThen figs shall bud, and dove with dove\n    Shall coo the livelong day;\nThen He shall say, “Arise, My love,\n    My fair one, come away.”",
                 "metadata": {
@@ -159739,6 +159743,46 @@
                         "type": "book",
                         "published": {
                             "year": "1862"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "advent_sunday"
+                    }
+                }
+            },
+            "advent-ii": {
+                "title": "“Advent”",
+                "body": "Earth grown old, yet still so green,\nDeep beneath her crust of cold\nNurses fire unfelt, unseen:\nEarth grown old.\n\nWe who live are quickly told:\nMillions more lie hid between\nInner swathings of her fold.\n\nWhen will fire break up her screen?\nWhen will life burst thro’ her mould?\nEarth, earth, earth, thy cold is keen,\nEarth grown old.\n\nSooner or later: yet at last\nThe Jordan must be past;\n\nIt may be he will overflow\nHis banks the day we go;\n\nIt may be that his cloven deep\nWill stand up on a heap.\n\nSooner or later: yet one day\nWe all must pass that way;\n\nEach man, each woman, humbled, pale,\nPass veiled within the veil;\n\nChild, parent, bride, companion,\nAlone, alone, alone.\n\nFor none a ransom can be paid,\nA suretyship be made:\n\nI, bent by mine own burden, must\nEnter my house of dust;\n\nI, rated to the full amount,\nMust render mine account.\n\nWhen earth and sea shall empty all\nTheir graves of great and small;\n\nWhen earth wrapped in a fiery flood\nShall no more hide her blood;\n\nWhen mysteries shall be revealed;\nAll secrets be unsealed;\n\nWhen things of night, when things of shame,\nShall find at last a name,\n\nPealed for a hissing and a curse\nThroughout the universe:\n\nThen Awful Judge, most Awful God,\nThen cause to bud Thy rod,\n\nTo bloom with blossoms, and to give\nAlmonds; yea, bid us live.\n\nI plead Thyself with Thee, I plead\nThee in our utter need:\n\nJesus, most Merciful of Men,\nShow mercy on us then;\n\nLord God of Mercy and of men,\nShow mercy on us then.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "liturgy": "advent"
+                    }
+                }
+            },
+            "advent-sunday": {
+                "title": "“Advent Sunday”",
+                "body": "Behold, the Bridegroom cometh: go ye out\nWith lighted lamps and garlands round about\nTo meet Him in a rapture with a shout.\n\nIt may be at the midnight, black as pitch,\nEarth shall cast up her poor, cast up her rich.\n\nIt may be at the crowing of the cock\nEarth shall upheave her depth, uproot her rock.\n\nFor lo, the Bridegroom fetcheth home the Bride:\nHis Hands are Hands she knows, she knows His Side.\n\nLike pure Rebekah at the appointed place,\nVeiled, she unveils her face to meet His Face.\n\nLike great Queen Esther in her triumphing,\nShe triumphs in the Presence of her King.\n\nHis Eyes are as a Dove’s, and she’s Dove-eyed;\nHe knows His lovely mirror, sister, Bride.\n\nHe speaks with Dove-voice of exceeding love,\nAnd she with love-voice of an answering Dove.\n\nBehold, the Bridegroom cometh: go we out\nWith lamps ablaze and garlands round about\nTo meet Him in a rapture with a shout.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
                         }
                     },
                     "tags": [
@@ -159806,7 +159850,7 @@
                     }
                 }
             },
-            "all-saints": {
+            "all-saints-i": {
                 "title": "“All Saints”",
                 "body": "They are flocking from the East\nAnd the West,\nThey are flocking from the North\nAnd the South,\nEvery moment setting forth\nFrom realm of snake or lion,\nSwamp or sand,\nIce or burning;\nGreatest and least,\nPalm in hand\nAnd praise in mouth,\nThey are flocking up the path\nTo their rest,\nUp the path that hath\nNo returning.\n\nUp the steeps of Zion\nThey are mounting,\nComing, coming,\nThrongs beyond man’s counting;\nWith a sound\nLike innumerable bees\nSwarming, humming\nWhere flowering trees\nMany-tinted,\nMany-scented,\nAll alike abound\nWith honey,--\nWith a swell\nLike a blast upswaying unrestrainable\nFrom a shadowed dell\nTo the hill-tops sunny,--\nWith a thunder\nLike the ocean when in strength\nBreadth and length\nIt sets to shore;\nMore and more\nWaves on waves redoubled pour\nLeaping flashing to the shore\n(Unlike the under\nDrain of ebb that loseth ground\nFor all its roar.)\n\nThey are thronging\nFrom the East and West,\nFrom the North and South,\nSaints are thronging, loving, longing,\nTo their land\nOf rest,\nPalm in hand\nAnd praise in mouth.",
                 "metadata": {
@@ -159816,6 +159860,46 @@
                         "type": "book",
                         "published": {
                             "year": "1881"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "all_saints"
+                    }
+                }
+            },
+            "all-saints-ii": {
+                "title": "“All Saints”",
+                "body": "As grains of sand, as stars, as drops of dew,\nNumbered and treasured by the Almighty Hand,\nThe Saints triumphant throng that holy land\nWhere all things and Jerusalem are new.\nWe know not half they sing or half they do,\nBut this we know, they rest and understand;\nWhile like a conflagration freshly fanned\nTheir love glows upward, outward, thro’ and thro’.\nLo! like a stream of incense launched on flame\nFresh Saints stream up from death to life above,\nTo shine among those others and rejoice:\nWhat matters tribulation whence they came?\nAll love and only love can find a voice\nWhere God makes glad His Saints, for God is Love.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "all_saints"
+                    }
+                }
+            },
+            "all-saints-martyrs": {
+                "title": "“All Saints: Martyrs”",
+                "body": "Once slain for Him who first was slain for them,\nNow made alive in Him for evermore,\nAll luminous and lovely in their gore\nWith no more buffeting winds or tides to stem\nThe Martyrs look for New Jerusalem;\nAnd cry “How long?” remembering all they bore,\n“How long?” with heart and eyes sent on before\nToward consummated throne and diadem.\n“How long?” White robes are given to their desire;\n“How long?” deep rest that is and is to be;\nWith a great promise of the oncoming host,\nLoves to their love and fires to flank their fire:\nSo rest they, worshipping incessantly\nOne God, the Father, Son, and Holy Ghost.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
                         }
                     },
                     "tags": [
@@ -159906,9 +159990,16 @@
             },
             "ascension-day": {
                 "title": "“Ascension Day”",
-                "body": "_“A Cloud received Him out of their sight.”_\n\nWhen Christ went up to Heaven the Apostles stayed\nGazing at Heaven with souls and wills on fire\nTheir hearts on flight along the track He made\nWinged by desire.\n\nTheir silence spake: “Lord why not follow Thee?\nHome is not home without Thy Blessed Face\nLife is not life. Remember Lord and see\nLook back embrace.”\n\n“Earth is one desert waste of banishment\nLife is one long-drawn anguish of decay.\nWhere Thou wert wont to go we also went:\nWhy not today?”\n\nNevertheless a cloud cut off their gaze:\nThey tarry to build up Jerusalem\nWatching for Him while thro’ the appointed days\nHe watches them.\n\nThey do His Will and doing it rejoice\nPatiently glad to spend and to be spent:\nStill He speaks to them still they hear His Voice\nAnd are content.\n\nFor as a cloud received Him from their sight\nSo with a cloud will He return ere long:\nTherefore they stand on guard by day by night\nStrenuous and strong.\n\nThey do they dare they beyond seven times seven\nForgive they cry God’s mighty word aloud:\nYet sometimes haply lift tired eyes to Heaven--\n“Is that His cloud?”",
+                "body": "_“A Cloud received Him out of their sight.”_\n\nWhen Christ went up to Heaven the Apostles stayed\nGazing at Heaven with souls and wills on fire,\nTheir hearts on flight along the track He made,\nWinged by desire.\n\nTheir silence spake: “Lord, why not follow Thee?\nHome is not home without Thy Blessed Face,\nLife is not life. Remember, Lord, and see,\nLook back, embrace.\n\n“Earth is one desert waste of banishment,\nLife is one long-drawn anguish of decay.\nWhere Thou wert wont to go we also went:\nWhy not to-day?”\n\nNevertheless a cloud cut off their gaze:\nThey tarry to build up Jerusalem,\nWatching for Him, while thro’ the appointed days\nHe watches them.\n\nThey do His Will, and doing it rejoice,\nPatiently glad to spend and to be spent:\nStill He speaks to them, still they hear His Voice\nAnd are content.\n\nFor as a cloud received Him from their sight,\nSo with a cloud will He return ere long:\nTherefore they stand on guard by day, by night,\nStrenuous and strong.\n\nThey do, they dare, they beyond seven times seven\nForgive, they cry God’s mighty word aloud:\nYet sometimes haply lift tired eyes to Heaven--\n“Is that His cloud?”",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
                     "tags": [
                         "English"
                     ],
@@ -159917,11 +160008,38 @@
                     }
                 }
             },
-            "ash-wednesday": {
-                "title": "“Ash Wednesday”",
-                "body": "I.\n\nMy God, my God, have mercy on my sin,\nFor it is great; and if I should begin\nTo tell it all, the day would be too small\nTo tell it in.\n\nMy God, Thou wilt have mercy on my sin\nFor Thy Love’s sake: yea, if I should begin\nTo tell This all, the day would be too small\nTo tell it in.\n\n\nII.\n\nGood Lord, today\nI scarce find breath to say:\nScourge, but receive me.\nFor stripes are hard to bear, but worse\nThy intolerable curse;\nSo do not leave me.\n\nGood Lord, lean down\nIn pity, tho’ Thou frown;\nSmite, but retrieve me:\nFor so Thou hold me up to stand\nAnd kiss Thy smiting hand,\nIt less will grieve me.",
+            "ascension-eve": {
+                "title": "“Ascension Eve”",
+                "body": "O Lord Almighty, Who hast formed us weak,\nWith us whom Thou hast formed deal fatherly;\nBe found of us whom Thou hast deigned to seek,\nBe found that we the more may seek for Thee;\nLord, speak and grant us ears to hear Thee speak\nLord, come to us and grant us eyes to see;\nLord, make us meek, for Thou Thyself art meek;\nLord, Thou art Love, fill us with charity.\nO Thou the Life of living and of dead,\nWho givest more the more Thyself hast given,\nSuffice us as Thy saints Thou hast sufficed;\nThat beautified, replenished, comforted,\nStill gazing off from earth and up at heaven\nWe may pursue Thy steps, Lord Jesus Christ.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "ascension_eve"
+                    }
+                }
+            },
+            "ash-wednesday": {
+                "title": "“Ash Wednesday”",
+                "body": "# I.\n\nMy God, my God, have mercy on my sin,\nFor it is great; and if I should begin\nTo tell it all, the day would be too small\nTo tell it in.\n\nMy God, Thou wilt have mercy on my sin\nFor Thy Love’s sake: yea, if I should begin\nTo tell This all, the day would be too small\nTo tell it in.\n\n\n# II.\n\nGood Lord, today\nI scarce find breath to say:\nScourge, but receive me.\nFor stripes are hard to bear, but worse\nThy intolerable curse;\nSo do not leave me.\n\nGood Lord, lean down\nIn pity, tho’ Thou frown;\nSmite, but retrieve me:\nFor so Thou hold me up to stand\nAnd kiss Thy smiting hand,\nIt less will grieve me.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
                     "time": {
                         "year": "1859",
                         "month": "march",
@@ -160317,6 +160435,66 @@
                     }
                 }
             },
+            "christmas-day": {
+                "title": "“Christmas Day”",
+                "body": "A baby is a harmless thing\nAnd wins our hearts with one accord,\nAnd Flower of Babies was their King,\nJesus Christ our Lord:\nLily of lilies He\nUpon His Mother’s knee;\nRose of roses, soon to be\nCrowned with thorns on leafless tree.\n\nA lamb is innocent and mild\nAnd merry on the soft green sod;\nAnd Jesus Christ, the Undefiled,\nIs the Lamb of God:\nOnly spotless He\nUpon His Mother’s knee;\nWhite and ruddy, soon to be\nSacrificed for you and me.\n\nNay, lamb is not so sweet a word,\nNor lily half so pure a name;\nAnother name our hearts hath stirred,\nKindling them to flame:\n“Jesus” certainly\nIs music and melody:\nHeart with heart in harmony\nCarol we and worship we.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "christmas_day"
+                    }
+                }
+            },
+            "christmas-eve": {
+                "title": "“Christmas Eve”",
+                "body": "Christmas hath a darkness\nBrighter than the blazing noon,\nChristmas hath a chillness\nWarmer than the heat of June,\nChristmas hath a beauty\nLovelier than the world can show:\nFor Christmas bringeth Jesus,\nBrought for us so low.\n\nEarth, strike up your music,\nBirds that sing and bells that ring;\nHeaven hath answering music\nFor all Angels soon to sing:\nEarth, put on your whitest\nBridal robe of spotless snow:\nFor Christmas bringeth Jesus,\nBrought for us so low.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "christmas_eve"
+                    }
+                }
+            },
+            "christmastide": {
+                "title": "“Christmastide”",
+                "body": "Love came down at Christmas,\nLove all lovely, Love Divine;\nLove was born at Christmas,\nStar and Angels gave the sign.\n\nWorship we the Godhead,\nLove Incarnate, Love Divine;\nWorship we our Jesus:\nBut wherewith for sacred sign?\n\nLove shall be our token,\nLove be yours and love be mine,\nLove to God and all men,\nLove for plea and gift and sign.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "liturgy": "christmastide"
+                    }
+                }
+            },
             "cobwebs": {
                 "title": "“Cobwebs”",
                 "body": "It is a land with neither night nor day,\nNor heat nor cold, nor any wind, nor rain,\nNor hills nor valleys; but one even plain\nStretches thro’ long unbroken miles away:\nWhile thro’ the sluggish air a twilight grey\nBroodeth; no moons or seasons wax and wane,\nNo ebb and flow are there among the main,\nNo bud-time no leaf-falling there for aye,\nNo ripple on the sea, no shifting sand,\nNo beat of wings to stir the stagnant space,\nAnd loveless sea: no trace of days before,\nNo guarded home, no time-worn restingplace\nNo future hope no fear forevermore.",
@@ -160388,6 +160566,26 @@
                     ],
                     "context": {
                         "liturgy": "lent"
+                    }
+                }
+            },
+            "conversion-of-st-paul": {
+                "title": "“Conversion of St. Paul”",
+                "body": "O blessed Paul elect to grace,\nArise and wash away thy sin,\nAnoint thy head and wash thy face,\nThy gracious course begin.\nTo start thee on thy outrunning race\nChrist shows the splendour of His Face:\nWhat will that Face of splendour be\nWhen at the goal He welcomes thee?\n\nIn weariness and painfulness St. Paul\nServed God and pleased Him: after-saints no less\nCan wait on and can please Him, one and all\nIn weariness and painfulness,\n\nBy faith and hope triumphant thro distress:\nNot with the rankling service of a thrall;\nBut even as loving children trust and bless.\n\nWeep and rejoice, answering their Father’s call,\nWork with tired hands, and forward upward press\nOn sore tired feet still rising when they fall,\nIn weariness and painfulness.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "conversion_of_saint_paul"
                     }
                 }
             },
@@ -160599,6 +160797,86 @@
                     }
                 }
             },
+            "easter-day": {
+                "title": "“Easter Day”",
+                "body": "Words cannot utter\nChrist His returning:\nMankind, keep jubilee,\nStrip off your mourning,\nCrown you with garlands,\nSet your lamps burning.\n\nSpeech is left speechless;\nSet you to singing,\nFling your hearts open wide,\nSet your bells ringing:\nChrist the Chief Reaper\nComes, His sheaf bringing.\n\nEarth wakes her song-birds,\nPuts on her flowers,\nLeads out her lambkins,\nBuilds up her bowers:\nThis is man’s spousal day,\nChrist’s day and ours.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "easter_sunday"
+                    }
+                }
+            },
+            "easter-even": {
+                "title": "“Easter Even”",
+                "body": "The tempest over and gone, the calm begun,\nLo, “it is finished” and the Strong Man sleeps:\nAll stars keep vigil watching for the sun,\nThe moon her vigil keeps.\n\nA garden full of silence and of dew\nBeside a virgin cave and entrance stone:\nSurely a garden full of Angels too,\nWondering, on watch, alone.\n\nThey who cry “Holy, Holy, Holy,” still\nVeiling their faces round God’s Throne above,\nMay well keep vigil on this heavenly hill\nAnd cry their cry of love,\n\nAdoring God in His new mystery\nOf Love more deep than bell, more strong than death;\nUntil the day break and the shadows flee,\nThe Shaking and the Breath.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "easter_sunday"
+                    }
+                }
+            },
+            "easter-monday": {
+                "title": "“Easter Monday”",
+                "body": "Out in the rain a world is growing green,\nOn half the trees quick buds are seen\nWhere glued-up buds have been.\nOut in the rain God’s Acre stretches green,\nIts harvest quick tho’ still unseen:\nFor there the Life hath been.\n\nIf Christ hath died His brethren well may die,\nSing in the gale of death, lay by\nThis life without a sigh:\nFor Christ hath died and good it is to die;\nTo sleep whenso He lays us by,\nThen wake without a sigh.\n\nYea, Christ hath died, yea, Christ is risen again:\nWherefore both life and death grow plain\nTo us who wax and wane;\nFor Christ Who rose shall die no more again:\nAmen: till He makes all things plain\nLet us wax on and wane.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "easter_monday"
+                    }
+                }
+            },
+            "easter-tuesday": {
+                "title": "“Easter Tuesday”",
+                "body": "“Together with my dead body shall they arise.”\n\nShall my dead body arise? then amen and yea\nOn track of a home beyond the uttermost skies\nTogether with my dead body shall they.\n\nWe know the way: thank God Who hath showed us the way!\nJesus Christ our Way to beautiful Paradise,\nJesus Christ the Same for ever, the Same to-day.\n\nFive Virgins replenish with oil their lamps, being wise,\nFive Virgins awaiting the Bridegroom watch and pray:\nAnd if I one day spring from my grave to the prize,\nTogether with my dead body shall they.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "easter_tuesday"
+                    }
+                }
+            },
             "echo": {
                 "title": "“Echo”",
                 "body": "Come to me in the silence of the night;\n    Come in the speaking silence of a dream;\nCome with soft rounded cheeks and eyes as bright\n    As sunlight on a stream;\n    Come back in tears,\nO memory, hope, love of finished years.\n\nO dream how sweet, too sweet, too bitter sweet,\n    Whose wakening should have been in Paradise,\nWhere souls brimful of love abide and meet;\n    Where thirsting longing eyes\n    Watch the slow door\nThat opening, letting in, lets out no more.\n\nYet come to me in dreams, that I may live\n    My very life again though cold in death:\nCome back to me in dreams, that I may give\n    Pulse for pulse, breath for breath:\n    Speak low, lean low,\nAs long ago, my love, how long ago!",
@@ -160614,6 +160892,26 @@
                     "tags": [
                         "English"
                     ]
+                }
+            },
+            "embertide": {
+                "title": "“Embertide”",
+                "body": "I saw a Saint.--How canst thou tell that he\nThou sawest was a Saint?--\nI saw one like to Christ so luminously\nBy patient deeds of love, his mortal taint\nSeemed made his groundwork for humility.\n\nAnd when he marked me downcast utterly\nWhere foul I sat and faint,\nThen more than ever Christ-like kindled he;\nAnd welcomed me as I had been a saint,\nTenderly stooping low to comfort me.\n\nChrist bade him, “Do thou likewise.” Wherefore he\nWaxed zealous to acquaint\nHis soul with sin and sorrow, if so be\nHe might retrieve some latent saint:--\n“Lo, I, with the child God hath given to me!”",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "ash_wednesday"
+                    }
                 }
             },
             "an-end": {
@@ -160658,6 +160956,13 @@
                 "body": "“Lord Babe, if Thou art He\nWe sought for patiently,\nWhere is Thy court?\nHither may prophecy and star resort;\nMen heed not their report.”--\n“Bow down and worship, righteous man:\nThis Infant of a span\nIs He man sought for since the world began!”--\n“Then, Lord, accept my gold, too base a thing\nFor Thee, of all kings King.”--\n\n“Lord Babe, despite Thy youth\nI hold Thee of a truth\nBoth Good and Great:\nBut wherefore dost Thou keep so mean a state,\nLow-lying desolate?”--\n“Bow down and worship, righteous seer:\nThe Lord our God is here\nApproachable, Who bids us all draw near.”--\n“Wherefore to Thee I offer frankincense,\nThou Sole Omnipotence.”--\n\n“But I have only brought\nMyrrh; no wise afterthought\nInstructed me\nTo gather pearls or gems, or choice to see\nCoral or ivory.”--\n“Not least thine offering proves thee wise:\nFor myrrh means sacrifice,\nAnd He that lives, this Same is He that dies.”--\n“Then here is myrrh: alas! yea, woe is me\nThat myrrh befitteth Thee.”--\n\nMyrrh, frankincense, and gold:\nAnd lo! from wintry fold\nGood-will doth bring\nA Lamb, the innocent likeness of this King\nWhom stars and seraphs sing:\nAnd lo! the bird of love, a Dove\nFlutters and coos above:\nAnd Dove and Lamb and Babe agree in love:--\nCome all mankind, come all creation hither,\nCome, worship Christ together.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
                     "tags": [
                         "English"
                     ],
@@ -160671,11 +160976,18 @@
                 "body": "Trembling before Thee we fall down to adore Thee,\nShamefaced and trembling we lift our eyes to Thee:\nO First and with the last! annul our ruined past,\nRebuild us to Thy glory, set us free\nFrom sin and from sorrow to fall down and worship Thee.\n\nFull of pity view us, stretch Thy sceptre to us,\nBid us live that we may give ourselves to Thee:\nO faithful Lord and True! stand up for us and do,\nMake us lovely, make us new, set us free--\nHeart and soul and spirit--to bring all and worship Thee.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
                     "tags": [
                         "English"
                     ],
                     "context": {
-                        "holiday": "epiphany"
+                        "liturgy": "christmastide"
                     }
                 }
             },
@@ -160747,6 +161059,47 @@
                     ],
                     "context": {
                         "season": "summer"
+                    }
+                }
+            },
+            "feast-of-the-annunciation": {
+                "title": "“Feast of the Annunciation”",
+                "body": "Whereto shall we liken this Blessed Mary Virgin,\nFruitful shoot from Jesse’s root graciously emerging?\nLily we might call her, but Christ alone is white;\nRose delicious, but that Jesus is the one Delight;\nFlower of women, but her Firstborn is mankind’s one flower:\nHe the Sun lights up all moons thro’ their radiant hour.\n“Blessed among women, highly favoured,” thus\nGlorious Gabriel hailed her, teaching words to us:\nWhom devoutly copying we too cry “All hail!”\nEchoing on the music of glorious Gabriel.\n\nHerself a rose, who bore the Rose,\nShe bore the Rose and felt its thorn.\nAll Loveliness new-born\nTook on her bosom its repose,\nAnd slept and woke there night and morn.\n\nLily herself, she bore the one\nFair Lily; sweeter, whiter, far\nThan she or others are:\nThe Sun of Righteousness her Son,\nShe was His morning star.\n\nShe gracious, He essential Grace,\nHe was the Fountain, she the rill:\nHer goodness to fulfil\nAnd gladness, with proportioned pace\nHe led her steps thro’ good and ill.\n\nChrist’s mirror she of grace and love,\nOf beauty and of life and death:\nBy hope and love and faith\nTransfigured to His Likeness, “Dove,\nSpouse, Sister, Mother,” Jesus saith.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "month": "march",
+                        "day": 25
+                    }
+                }
+            },
+            "feast-of-the-presentation": {
+                "title": "“Feast of the Presentation”",
+                "body": "O firstfruits of our grain,\nInfant and Lamb appointed to be slain,\nA Virgin and two doves were all Thy train,\nWith one old man for state,\nWhen Thou didst enter first Thy Father’s gate.\n\nSince then Thy train hath been\nFreeman and bondman, bishop, king and queen,\nWith flaming candles and with garlands green:\nOh happy all who wait\nOne day or thousand days around Thy gate.\n\nAnd these have offered Thee,\nBeside their hearts, great stores for charity,\nGold, frankincense and myrrh; if such may be\nFor savour or for state\nWithin the threshold of Thy golden gate.\n\nThen snowdrops and my heart\nI’ll bring, to find those blacker than Thou art:\nYet, loving Lord, accept us in good part;\nAnd give me grace to wait\nA bruised reed bowed low before Thy gate.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "candlemas"
                     }
                 }
             },
@@ -160922,8 +161275,28 @@
                     }
                 }
             },
-            "good-friday": {
-                "title": "“Good friday”",
+            "good-friday-evening": {
+                "title": "“Good Friday Evening”",
+                "body": "“Bring forth the Spear.”\n\nNo Cherub’s heart or hand for us might ache,\nNo Seraph’s heart of fire had half sufficed:\nThine own were pierced and broken for our sake,\nO Jesus Christ.\n\nTherefore we love Thee with our faint good-will,\nWe crave to love Thee not as heretofore.\nTo love Thee much, to love Thee more, and still\nMore and yet more.\n\n“A bundle of myrrh is my Well-beloved unto me.”\n\nThy Cross cruciferous doth flower in all\nAnd every cross, dear Lord, assigned to us:\nOurs lowly-statured crosses; Thine how tall,\nThy Cross cruciferous.\n\nThy Cross alone life-giving, glorious:\nFor love of Thine, souls love their own when small,\nEasy and light, or great and ponderous.\n\nSince deep calls deep, Lord, hearken when we call;\nWhen cross calls Cross racking and emulous:--\nRemember us with him who shared Thy gall,\nThy Cross cruciferous.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "good_friday"
+                    }
+                }
+            },
+            "good-friday-i": {
+                "title": "“Good Friday”",
                 "body": "Am I a stone and not a sheep\n    That I can stand, O Christ, beneath Thy Cross,\n    To number drop by drop Thy Blood’s slow loss,\nAnd yet not weep?\n\nNot so those women loved\n    Who with exceeding grief lamented Thee;\n    Not so fallen Peter weeping bitterly;\nNot so the thief was moved;\n\nNot so the Sun and Moon\n    Which hid their faces in a starless sky,\n    A horror of great darkness at broad noon,--\nI, only I.\n\nYet give not o’er,\n    But seek Thy sheep, true Shepherd of the flock;\nGreater than Moses, turn and look once more\n    And smite a rock.",
                 "metadata": {
                     "language": "English",
@@ -160932,6 +161305,46 @@
                         "type": "book",
                         "published": {
                             "year": "1866"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "good_friday"
+                    }
+                }
+            },
+            "good-friday-ii": {
+                "title": "“Good Friday”",
+                "body": "Lord Jesus Christ, grown faint upon the Cross,\nA sorrow beyond sorrow in Thy look,\nThe unutterable craving for my soul:\nThy love of me sufficed\nTo load upon Thee and make good my loss\nIn face of darkened heaven and earth that shook:--\nIn face of earth and heaven, take Thou my whole\nHeart, O Lord Jesus Christ.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "good_friday"
+                    }
+                }
+            },
+            "good-friday-morning": {
+                "title": "“Good Friday Morning”",
+                "body": "“Bearing His Cross.”\n\nUp Thy Hill of Sorrows\nThou all alone,\nJesus, man’s Redeemer,\nClimbing to a Throne:\nThro’ the world triumphant,\nThro’ the Church in pain,\nWhich think to look upon Thee\nNo more again.\n\nUpon my hill of sorrows\nI, Lord, with Thee,\nCheered, upheld, yea, carried,\nIf a need should be:\nCheered, upheld, yea, carried,\nNever left alone,\nCarried in Thy heart of hearts\nTo a throne.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
                         }
                     },
                     "tags": [
@@ -160999,6 +161412,26 @@
                     ]
                 }
             },
+            "holy-innocents": {
+                "title": "“Holy innocents”",
+                "body": "They scarcely waked before they slept,\nThey scarcely wept before they laughed;\nThey drank indeed death’s bitter draught,\nBut all its bitterest dregs were kept\nAnd drained by Mothers while they wept.\nFrom Heaven the speechless Infants speak:\nWeep not (they say), our Mothers dear,\nFor swords nor sorrows come not here.\nNow we are strong who were so weak,\nAnd all is ours we could not seek.\n\nWe bloom among the blooming flowers,\nWe sing among the singing birds;\nWisdom we have who wanted words:\nHere morning knows not evening hours,\nAll’s rainbow here without the showers.\n\nAnd softer than our Mother’s breast,\nAnd closer than our Mother’s arm,\nIs here the Love that keeps us warm\nAnd broods above our happy nest.\nDear Mothers, come: for Heaven is best.\n\nUnspotted lambs to follow the one Lamb,\nUnspotted doves to wait on the one Dove;\nTo whom Love saith, “Be with Me where I am,”\nAnd lo! their answer unto Love is love.\n\nFor tho’ I know not any note they know,\nNor know one word of all their song above,\nI know Love speaks to them, and even so\nI know the answer unto Love is love.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "holy_innocents"
+                    }
+                }
+            },
             "a-hope-carol": {
                 "title": "“A Hope Carol”",
                 "body": "A night was near, a day was near;\n    Between a day and night\nI heard sweet voices calling clear,\n        Calling me:\nI heard a whirr of wing on wing,\n    But could not see the sight;\nI long to see my birds that sing,--\n        I long to see.\n\nBelow the stars, beyond the moon,\n    Between the night and day,\nI heard a rising falling tune\n        Calling me:\nI long to see the pipes and strings\n    Whereon such minstrels play;\nI long to see each face that sings,--\n        I long to see.\n\nTo-day or may be not to-day,\n    To-night or not to-night;\nAll voices that command or pray,\n        Calling me,\nShall kindle in my soul such fire,\n    And in my eyes such light,\nThat I shall see that heart’s desire\n        I long to see.",
@@ -161054,6 +161487,26 @@
                     },
                     "context": {
                         "holiday": "immaculate_conception"
+                    }
+                }
+            },
+            "i-gave-a-sweet-smell": {
+                "title": "“I gave a sweet smell”",
+                "body": "Saints are like roses when they flush rarest,\nSaints are like lilies when they bloom fairest,\nSaints are like violets sweetest of their kind\nBear in mind\nThis to-day. Then to-morrow:\nAll like roses rarer than the rarest,\nAll like lilies fairer than the fairest,\nAll like violets sweeter than we know.\nBe it so.\nTo-morrow blots out sorrow.\n\nHark! the Alleluias of the great salvation\nStill beginning, never ending, still begin,\nThe thunder of an endless adoration:\nOpen ye the gates, that the righteous nation\nWhich have kept the truth may enter in.\n\nRoll ye back, ye pearls, on your twelvefold station:\nNo more deaths to die, no more fights to win!\nLift your heads, ye gates, that the righteous nation\nLed by the Great Captain of their sole salvation,\nHaving kept the truth, may enter in.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "all_saints"
                     }
                 }
             },
@@ -161253,6 +161706,26 @@
                     ],
                     "context": {
                         "liturgy": "advent"
+                    }
+                }
+            },
+            "lent": {
+                "title": "“Lent”",
+                "body": "It is good to be last not first,\nPending the present distress;\nIt is good to hunger and thirst,\nSo it be for righteousness.\nIt is good to spend and be spent,\nIt is good to watch and to pray:\nLife and Death make a goodly Lent\nSo it leads us to Easter Day.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "liturgy": "lent"
                     }
                 }
             },
@@ -161555,7 +162028,7 @@
                         "English"
                     ],
                     "context": {
-                        "liturgy": "lent"
+                        "holiday": "all_saints"
                     }
                 }
             },
@@ -161564,6 +162037,13 @@
                 "body": "Marvel of marvels, if I myself shall behold\nWith mine own eyes my King in His city of gold;\nWhere the least of lambs is spotless white in the fold,\nWhere the least and last of saints in spotless white is stoled,\nWhere the dimmest head beyond a moon is aureoled.\nO saints, my beloved, now mouldering to mould in the mould,\nShall I see you lift your heads, see your cerements unroll’d,\nSee with these very eyes? who now in darkness and cold\nTremble for the midnight cry, the rapture, the tale untold,--\nThe Bridegroom cometh, cometh, His Bride to enfold!\n\nCold it is, my beloved, since your funeral bell was toll’d:\nCold it is, O my King, how cold alone on the wold!",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "The Face of the Deep",
+                        "type": "book",
+                        "published": {
+                            "year": "1892"
+                        }
+                    },
                     "tags": [
                         "English"
                     ],
@@ -161604,6 +162084,26 @@
                     "tags": [
                         "English"
                     ]
+                }
+            },
+            "maundy-thursday": {
+                "title": "“Maundy Thursday”",
+                "body": "“And the Vine said … Should I leave my\nwine, which cheereth God and man, and\ngo to be promotes over the trees?”\n\nThe great Vine left its glory to reign as Forest King.\n“Nay,” quoth the lofty forest trees, “we will not have this thing;\nWe will not have this supple one enring us with its ring.\nLo, from immemorial time our might towers shadowing:\nNot we were born to curve and droop, not we to climb and cling:\nWe buffet back the buffeting wind, tough to its buffeting:\nWe screen great beasts, the wild fowl build in our heads and sing,\nEvery bird of every feather from off our tops takes wing:\nI a king, and thou a king, and what king shall be our king?”\n\nNevertheless the great Vine stooped to be the Forest King,\nWhile the forest swayed and murmured like seas that are tempesting:\nStooped and drooped with thousand tendrils in thirsty languishing;\nBowed to earth and lay on earth for earth’s replenishing;\nPut off sweetness, tasted bitterness, endured time’s fashioning;\nPut off life and put on death: and lo! it was all to bring\nAll its fellows down to a death which hath lost the sting,\nAll its fellows up to a life in endless triumphing,--\nI a king, and thou a king, and this King to be our King.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "holy_thursday"
+                    }
                 }
             },
             "may": {
@@ -161663,6 +162163,26 @@
                     ]
                 }
             },
+            "mid-lent": {
+                "title": "“Mid-Lent”",
+                "body": "Is any grieved or tired? Yea, by God’s Will:\nSurely God’s Will alone is good and best:\nO weary man, in weariness take rest,\nO hungry man, by hunger feast thy fill.\nDiscern thy good beneath a mask of ill,\nOr build of loneliness thy secret nest:\nAt noon take heart, being mindful of the west,\nAt night wake hope, for dawn advances still.\nAt night wake hope. Poor soul, in such sore need\nOf wakening and of girding up anew,\nHast thou that hope which fainting doth pursue?\nNo saint but hath pursued and hath been faint;\nBid love wake hope, for both thy steps shall speed,\nStill faint yet still pursuing, O thou saint.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "laetare_sunday"
+                    }
+                }
+            },
             "mirage": {
                 "title": "“Mirage”",
                 "body": "The hope I dreamed of was a dream,\n    Was but a dream; and now I wake\nExceeding comfortless, and worn, and old,\n    For a dream’s sake.\n\nI hang my harp upon a tree,\n    A weeping willow in a lake;\nI hang my silenced harp there, wrung and snapt\n    For a dream’s sake.\n\nLie still, lie still, my breaking heart;\n    My silent heart, lie still and break:\nLife, and the world, and mine own self, are changed\n    For a dream’s sake.",
@@ -161695,6 +162215,26 @@
                     "tags": [
                         "English"
                     ]
+                }
+            },
+            "monday-in-holy-week": {
+                "title": "“Monday in Holy Week”",
+                "body": "“The Voice of my Beloved.”\n\nOnce I ached for thy dear sake:\nWilt thou cause Me now to ache?\nOnce I bled for thee in pain:\nWilt thou rend My Heart again?\nCrown of thorns and shameful tree,\nBitter death I bore for thee,\nBore My Cross to carry thee,\nAnd wilt thou have nought of Me?",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "holy_monday"
+                    }
                 }
             },
             "monna-innominata": {
@@ -161985,6 +162525,46 @@
                     }
                 }
             },
+            "our-church-palms-are-budding-willow-twigs": {
+                "title": "“Our Church Palms Are Budding Willow Twigs”",
+                "body": "While Christ lay dead the widowed world\nWore willow green for hope undone:\nTill, when bright Easter dews impearled\nThe chilly burial earth,\nAll north and south, all east and west,\nFlushed rosy in the arising sun;\nHope laughed, and Faith resumed her rest,\nAnd Love remembered mirth.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "easter_sunday"
+                    }
+                }
+            },
+            "palm-sunday": {
+                "title": "“Palm Sunday”",
+                "body": "“He treadeth the winepress of the fierceness\nand wrath of Almighty God.”\n\nI lift mine eyes, and see\nThee, tender Lord, in pain upon the tree,\nAthirst for my sake and athirst for me.\n\n“Yea, look upon Me there,\nCompassed with thorns and bleeding everywhere,\nFor thy sake bearing all, and glad to bear.”\n\nI lift my heart to pray:\nThou Who didst love me all that darkened day,\nWilt Thou not love me to the end alway?\n\n“Yea, thee My wandering sheep,\nYea, thee My scarlet sinner slow to weep,\nCome to Me, I will love thee and will keep.”\n\nYet am I racked with fear:\nBehold the unending outer darkness drear,\nBehold the gulf unbridgeable and near!\n\n“Nay, fix thy heart, thine eyes,\nThy hope upon My boundless sacrifice:\nWill I lose lightly one so dear-bought prize?”\n\nAh, Lord; it is not Thou,\nThou that wilt fail; yet woe is me, for how\nShall I endure who half am failing now?\n\n“Nay, weld thy resolute will\nTo Mine: glance not aside for good or ill:\nI love thee; trust Me still and love Me still.”\n\nYet Thou Thyself hast said,\nWhen Thou shalt sift the living from the dead\nSome must depart shamed and uncomforted.\n\n“Judge not before that day:\nTrust Me with all thy heart, even tho’ I slay:\nTrust Me in love, trust on, love on, and pray.”",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "palm_sunday"
+                    }
+                }
+            },
             "paradise": {
                 "title": "“Paradise”",
                 "body": "Once in a dream I saw the flowers\n    That bud and bloom in Paradise;\n    More fair they are than waking eyes\nHave seen in all this world of ours.\nAnd faint the perfume-bearing rose,\n    And faint the lily on its stem,\nAnd faint the perfect violet\n    Compared with them.\n\nI heard the songs of Paradise:\n    Each bird sat singing in his place;\n    A tender song so full of grace\nIt soared like incense to the skies.\nEach bird sat singing to his mate\n    Soft-cooing notes among the trees:\nThe nightingale herself were cold\n    To such as these.\n\nI saw the fourfold River flow,\n    And deep it was, with golden sand;\n    It flowed between a mossy land\nWith murmured music grave and low.\nIt hath refreshment for all thirst,\n    For fainting spirits strength and rest;\nEarth holds not such a draught as this\n    From east to west.\n\nThe Tree of Life stood budding there,\n    Abundant with its twelvefold fruits;\n    Eternal sap sustains its roots,\nIts shadowing branches fill the air.\nIts leaves are healing for the world,\n    Its fruit the hungry world can feed,\nSweeter than honey to the taste,\n    And balm indeed.\n\nI saw the gate called Beautiful;\n    And looked, but scarce could look within;\n    I saw the golden streets begin,\nAnd outskirts of the glassy pool.\nOh harps, oh crowns of plenteous stars,\n    O green palm branches many-leaved--\nEye hath not seen, nor ear hath heard,\n    Nor heart conceived!\n\nI hope to see these things again,\n    But not as once in dreams by night;\n    To see them with my very sight,\nAnd touch and handle and attain:\nTo have all Heaven beneath my feet\n    For narrow way that once they trod;\nTo have my part with all the saints,\n    And with my God.",
@@ -162002,6 +162582,26 @@
                     ],
                     "context": {
                         "holiday": "all_saints"
+                    }
+                }
+            },
+            "passiontide": {
+                "title": "“Passiontide”",
+                "body": "It is the greatness of Thy love, dear Lord,\nthat we would celebrate\nWith sevenfold powers.\nOur love at best is cold and poor, at best unseemly\nfor Thy state,\nThis best of ours.\nCreatures that die, we yet are such as Thine own\nhands deigned to create:\nWe frail as flowers,\nWe bitter bondslaves ransomed at a price incomparably great\nTo grace Heaven’s bowers.\n\nThou callest: “Come at once”--and still Thou\ncallest us: “Come late, tho’ late”--\n(The moments fly)--\n“Come, every one that thirsteth, come”--“Come\nprove Me, knocking at My gate”--\n(Some souls draw nigh!)--\n“Come thou who waiting seekest Me”--“Come\nthou for whom I seek and wait”--\n(Why will we die?)--\n“Come and repent: come and amend: come joy\nthe joys unsatiate”--\n----(Christ passeth by …)--\nLord, pass not by--I come--and I--and I.\nAmen.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "palm_sunday"
                     }
                 }
             },
@@ -162163,6 +162763,43 @@
                     ]
                 }
             },
+            "the-purification-of-st-mary-the-virgin": {
+                "title": "“The Purification of St. Mary the Virgin”",
+                "body": "Purity born of a Maid:\nWas such a Virgin defiled?\nNay, by no shade of a shade.\nShe offered her gift of pure love,\nA dove with a fair fellow-dove.\nShe offered her Innocent Child\nThe Essence and Author of Love;\nThe Lamb that indwelt by the Dove\nWas spotless and holy and mild;\nMore pure than all other,\nMore pure than His Mother,\nHer God and Redeemer and Child.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
+            "quinquagesima": {
+                "title": "“Quinquagesima”",
+                "body": "Love is alone the worthy law of love:\nAll other laws have presupposed a taint:\nLove is the law from kindled saint to saint,\nFrom lamb to lamb, from dove to answering dove.\nLove is the motive of all things that move\nHarmonious by free will without constraint:\nLove learns and teaches: love shall man acquaint\nWith all he lacks, which all his lack is love.\nBecause Love is the fountain, I discern\nThe stream as love: for what but love should flow\nFrom fountain Love? not bitter from the sweet!\nI ignorant, have I laid claim to know?\nOh, teach me, Love, such knowledge as is meet\nFor one to know who is fain to love and learn.\n\nPiteous my rhyme is\nWhat while I muse of love and pain,\nOf love misspent, of love in vain,\nOf love that is not loved again:\nAnd is this all then?\nAs long as time is,\nLove loveth. Time is but a span,\nThe dalliance space of dying man:\nAnd is this all immortals can?\nThe gain were small then.\n\nLove loves for ever,\nAnd finds a sort of joy in pain,\nAnd gives with nought to take again,\nAnd loves too well to end in vain:\nIs the gain small then?\nLove laughs at “never,”\nOutlives our life, exceeds the span\nAppointed to mere mortal man:\nAll which love is and does and can\nIs all in all then.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "quinquagesima"
+                    }
+                }
+            },
             "remember": {
                 "title": "“Remember”",
                 "body": "Remember me when I am gone away,\n    Gone far away into the silent land;\n    When you can no more hold me by the hand,\nNor I half turn to go yet turning stay.\nRemember me when no more, day by day,\n    You tell me of our future that you planned:\n    Only remember me; you understand\nIt will be late to counsel then or pray.\nYet if you should forget me for a while\n    And afterwards remember, do not grieve:\n    For if the darkness and corruption leave\n    A vestige of the thoughts that once I had,\nBetter by far you should forget and smile\n    Than that you should remember and be sad.",
@@ -162207,6 +162844,23 @@
                         "type": "book",
                         "published": {
                             "year": "1881"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
+            "rogationtide": {
+                "title": "“Rogationtide”",
+                "body": "Who scatters tares shall reap no wheat,\nBut go hungry while others eat.\n\nWho sows the wind shall not reap grain;\nThe sown wind whirleth back again.\n\nWhat God opens must open be,\nTho’ man pile the sand of the sea.\n\nWhat God shuts is opened no more,\nTho’ man weary himself to find the door.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
                         }
                     },
                     "tags": [
@@ -162268,6 +162922,46 @@
                     ],
                     "context": {
                         "holiday": "all_souls"
+                    }
+                }
+            },
+            "septuagesima": {
+                "title": "“Septuagesima”",
+                "body": "_“So run that ye may obtain.”_\n\nOne step more, and the race is ended;\nOne word more, and the lesson’s done;\nOne toil more, and a long rest follows\nAt set of sun.\n\nWho would fail, for one step withholden?\nWho would fail, for one word unsaid?\nWho would fail, for a pause too early?\nSound sleep the dead.\n\nOne step more, and the goal receives us;\nOne word more, and life’s task is done;\nOne toil more, and the Cross is carried\nAnd sets the sun.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "septuagesima"
+                    }
+                }
+            },
+            "sexagesima": {
+                "title": "“Sexagesima”",
+                "body": "_“Cursed is the ground for thy sake.”_\n\nYet earth was very good in days of old,\nAnd earth is lovely still:\nStill for the sacred flock she spreads the fold,\nFor Sion rears the hill.\n\nMother she is, and cradle of our race,\nA depth where treasures lie,\nThe broad foundation of a holy place,\nMan’s step to scale the sky.\n\nShe spreads the harvest-field which Angels reap,\nAnd lo! the crop is white;\nShe spreads God’s Acre where the happy sleep\nAll night that is not night.\n\nEarth may not pass till heaven shall pass away,\nNor heaven may be renewed\nExcept with earth: and once more in that day\nEarth shall be very good.\n\nThat Eden of earth’s sunrise cannot vie\nWith Paradise beyond her sunset sky\nHidden on high.\n\nFour rivers watered Eden in her bliss,\nBut Paradise hath One which perfect is\nIn sweetnesses.\n\nEden had gold, but Paradise hath gold\nLike unto glass of splendours manifold\nTongue hath not told.\n\nEden had sun and moon to make her bright;\nBut Paradise hath God and Lamb for light,\nAnd hath no night.\n\nUnspotted innocence was Eden’s best;\nGreat Paradise shows God’s fulfilled behest,\nTriumph and rest.\n\nHail, Eve and Adam, source of death and shame!\nNew life has sprung from death, and Jesu’s Name\nClothes you with fame.\n\nHail Adam, and hail Eve! your children rise\nAnd call you blessed, in their glad surmise\nOf Paradise.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "sexagesima"
                     }
                 }
             },
@@ -162399,6 +163093,26 @@
                     ]
                 }
             },
+            "a-song-for-the-least-of-all-saints": {
+                "title": "“A song for the least of all saints”",
+                "body": "Love is the key of life and death,\nOf hidden heavenly mystery:\nOf all Christ is, of all He saith,\nLove is the key.\n\nAs three times to His Saint He saith,\nHe saith to me, He saith to thee,\nBreathing His Grace-conferring Breath:\n“Lovest thou Me?”\n\nAh, Lord, I have such feeble faith,\nSuch feeble hope to comfort me:\nBut love it is, is strong as death,\nAnd I love Thee.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "all_saints"
+                    }
+                }
+            },
             "songs-in-a-cornfield": {
                 "title": "“Songs in a cornfield”",
                 "body": "A song in a cornfield\n    Where corn begins to fall,\nWhere reapers are reaping,\n    Reaping one, reaping all.\nSing pretty Lettice,\n    Sing Rachel, sing May;\nOnly Marian cannot sing\n    While her sweetheart’s away.\n\nWhere is he gone to\n    And why does he stay?\nHe came across the green sea\n    But for a day,\nAcross the deep green sea\n    To help with the hay.\nHis hair was curly yellow\n    And his eyes were gray,\nHe laughed a merry laugh\n    And said a sweet say.\nWhere is he gone to\n    That he comes not home?\nTo-day or to-morrow\n    He surely will come.\nLet him haste to joy\n    Lest he lag for sorrow,\nFor one weeps to-day\n    Who’ll not weep to-morrow:\n\nTo-day she must weep\n    For gnawing sorrow,\nTo-night she may sleep\n    And not wake to-morrow.\n\nMay sang with Rachel\n    In the waxing warm weather,\nLettice sang with them,\n    They sang all together:--\n\n“Take the wheat in your arm\n    Whilst day is broad above,\nTake the wheat to your bosom,\n    But not a false false love.\n    Out in the fields\n    Summer heat gloweth,\n    Out in the fields\n    Summer wind bloweth,\n    Out in the fields\n    Summer friend showeth,\n    Out in the fields\n    Summer wheat groweth:\nBut in the winter\n    When summer heat is dead\nAnd summer wind has veered\n    And summer friend has fled,\nOnly summer wheat remaineth,\n    White cakes and bread.\nTake the wheat, clasp the wheat\n    That’s food for maid and dove;\n    Take the wheat to your bosom,\n        But not a false false love.”\n\nA silence of full noontide heat\n    Grew on them at their toil:\nThe farmer’s dog woke up from sleep,\n    The green snake hid her coil\nWhere grass stood thickest; bird and beast\n    Sought shadows as they could,\nThe reaping men and women paused\n    And sat down where they stood;\nThey ate and drank and were refreshed,\n    For rest from toil is good.\n\nWhile the reapers took their ease,\n    Their sickles lying by,\nRachel sang a second strain,\n    And singing seemed to sigh:--\n\n    “There goes the swallow,--\n    Could we but follow!\n        Hasty swallow stay,\n        Point us out the way;\nLook back swallow, turn back swallow, stop swallow.”\n\n    “There went the swallow,--\n    Too late to follow:\n        Lost our note of way,\n        Lost our chance to-day;\nGood by swallow, sunny swallow, wise swallow.”\n\n    “After the swallow\n    All sweet things follow:\n        All things go their way,\n        Only we must stay,\nMust not follow: good by swallow, good swallow.”\n\nThen listless Marian raised her head\n    Among the nodding sheaves;\nHer voice was sweeter than that voice;\n    She sang like one who grieves:\nHer voice was sweeter than its wont\n    Among the nodding sheaves;\nAll wondered while they heard her sing\n    Like one who hopes and grieves:--\n\n    “Deeper than the hail can smite,\n    Deeper than the frost can bite,\n    Deep asleep through day and night,\n    Our delight.”\n\n    “Now thy sleep no pang can break,\n    No to-morrow bid thee wake,\n    Not our sobs who sit and ache\n    For thy sake.”\n\n    “Is it dark or light below?\n    O, but is it cold like snow?\n    Dost thou feel the green things grow\n    Fast or slow?”\n\n    “Is it warm or cold beneath,\n    O, but is it cold like death?\n    Cold like death, without a breath,\n    Cold like death?”\n\n    If he comes to-day\n    He will find her weeping;\n    If he comes to-morrow\n    He will find her sleeping;\n    If he comes the next day\n    He’ll not find her at all,\n    He may tear his curling hair,\n    Beat his breast and call.",
@@ -162456,6 +163170,126 @@
                     }
                 }
             },
+            "st-barnabas": {
+                "title": "“St. Barnabas”",
+                "body": "“Now when we had discovered Cyprus, we left it on the left band.”\n--Acts xxi. 3.\n\n“We sailed under Cyprus, because the winds were contrary.”\n--Acts xxvii. 4.\n\nSt. Barnabas, with John his sister’s son,\nSet sail for Cyprus; leaving in their wake\nThat chosen Vessel, who for Jesus’ sake\nProclaimed the Gentiles and the Jews at one.\nDivided while united, each must run\nHis mighty course not hell should overtake;\nAnd pressing toward the mark must own the ache\nOf love, and sigh for heaven not yet begun.\nFor saints in life-long exile yearn to touch\nWarm human hands, and commune face to face;\nBut these we know not ever met again:\nYet once St. Paul at distance overmuch\nJust sighted Cyprus; and once more in vain\nNeared it and passed;--not there his landing place.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "saint_barnabas"
+                    }
+                }
+            },
+            "st-bartholomew": {
+                "title": "“St. Bartholomew”",
+                "body": "He bore an agony whereof the name\nHath turned his fellows pale:\nBut what if God should call us to the same,\nShould call, and we should fail?\n\nNor earth nor sea could swallow up our shame,\nNor darkness draw a veil:\nFor he endured that agony whose name\nHath made his fellows quail.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "saint_bartholomew"
+                    }
+                }
+            },
+            "st-john-apostle": {
+                "title": "“St. John, Apostle”",
+                "body": "Earth cannot bar flame from ascending,\nHell cannot bind light from descending,\nDeath cannot finish life never ending.\n\nEagle and sun gaze at each other,\nEagle at sun, brother at Brother,\nLoving in peace and joy one another.\n\nO St. John, with chains for thy wages,\nStrong thy rock where the storm-blast rages,\nRock of refuge, the Rock of Ages.\n\nRome hath passed with her awful voice,\nEarth is passing with all her joys,\nHeaven shall pass away with a noise.\n\nSo from us all follies that please us,\nSo from us all falsehoods that ease us,--\nOnly all saints abide with their Jesus.\n\nJesus, in love looking down hither,\nJesus, by love draw us up thither,\nThat we in Thee may abide together.\n\n“Beloved, let us love one another,” says St. John,\nEagle of eagles calling from above:\nWords of strong nourishment for life to feed upon,\n“Beloved, let us love.”\n\nVoice of an eagle, yea, Voice of the Dove:\nIf we may love, winter is past and gone;\nPublish we, praise we, for lo! it is enough.\n\nMore sunny than sunshine that ever yet shone,\nSweetener of the bitter, smoother of the rough,\nHighest lesson of all lessons for all to con,\n“Beloved, let us love.”",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "saint_john_the_apostle"
+                    }
+                }
+            },
+            "st-mark": {
+                "title": "“St. Mark”",
+                "body": "Once like a broken bow Mark sprang aside:\nYet grace recalled him to a worthier course,\nTo feeble hands and knees increasing force,\nTill God was magnified.\n\nAnd now a strong Evangelist, St. Mark\nHath for his sign a Lion in his strength;\nAnd thro’ the stormy water’s breadth and length\nHe helps to steer God’s Ark.\n\nThus calls he sinners to be penitents,\nHe kindles penitents to high desire,\nHe mounts before them to the sphere of saints,\nAnd bids them come up higher.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "saint_mark"
+                    }
+                }
+            },
+            "st-michael-and-all-angels": {
+                "title": "“St. Michael and All Angels”",
+                "body": "_“He that excel in strength.”_\n\nService and strength, God’s Angels and Archangels;\nHis Seraphs fires, and lamps His Cherubim:\nGlory to God from highest and from lowest,\nGlory to God in everlasting hymn\nFrom all His creatures.\n\nPrinces that serve, and Powers that work His pleasure,\nHeights that soar to’ard Him, Depths that sink to’ard Him;\nFlames fire out-flaming, chill beside His Essence;\nInsight all-probing, save where scant and dim\nTo’ard its Creator.\n\nSacred and free exultant in God’s pleasure,\nHis Will their solace, thus they wait on Him;\nAnd shout their shout of ecstasy eternal,\nAnd trim their splendours that they burn not dim\nTo’ard their Creator.\n\nWherefore with Angels, wherefore with Archangels,\nWith lofty Cherubs, loftier Seraphim,\nWe laud and magnify our God Almighty,\nAnd veil our faces rendering love to Him\nWith all His creatures.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "michaelmas"
+                    }
+                }
+            },
+            "st-peter": {
+                "title": "“St. Peter”",
+                "body": "“Launch out into the deep,” Christ spake of old\nTo Peter: and he launched into the deep;\nStrengthened should tempest wake which lay asleep,\nStrengthened to suffer heat or suffer cold.\nThus, in Christ’s Prescience: patient to behold\nA fall, a rise, a scaling Heaven’s high steep;\nPrescience of Love, which deigned to overleap\nThe mire of human errors manifold.\n\nLord, Lover of Thy Peter, and of him\nBeloved with craving of a humbled heart\nWhich eighteen hundred years have satisfied;\nHath he his throne among Thy Seraphim\nWho love? or sits he on a throne apart,\nUnique, near Thee, to love Thee human-eyed?\n\nSt. Peter once: “Lord, dost Thou wash my feet?”--\nMuch more I say: Lord, dost Thou stand and knock\nAt my closed heart more rugged than a rock,\nBolted and barred, for Thy soft touch unmeet,\nNor garnished nor in any wise made sweet?\nOwls roost within and dancing satyrs mock.\nLord, I have heard the crowing of the cock\nAnd have not wept: ah, Lord, Thou knowest it.\nYet still I hear Thee knocking, still I hear:\n“Open to Me, look on Me eye to eye,\nThat I may wring thy heart and make it whole;\nAnd teach thee love because I hold thee dear,\nAnd sup with thee in gladness soul with soul,\nAnd sup with thee in glory by and by.”\n\nI followed Thee, my God, I followed Thee\nTo see the end:\nI turned back flying from Gethsemane,\nTurned back on flying steps to see\nThy Face, my God, my Friend.\n\nEven fleeing from Thee my heart clave to Thee:\nI turned perforce\nConstrained, yea chained by love which maketh free;\nI turned perforce, and silently\nFollowed along Thy course.\n\nLord, didst Thou know that I was following Thee?\nI weak and small\nYet Thy true lover, mean tho’ I must be,\nSinning and sorrowing--didst Thou see?\nO Lord, Thou sawest all.\n\nI thought I had been strong to die for Thee;\nI disbelieved\nThy word of warning spoken patiently:\nMy heart cried, “That be far from me,”\nTill Thy bruised heart I grieved.\n\nOnce I had urged: “Lord, this be far from Thee:”--\nRebel to light,\nIt needed first that Thou shouldst die for me\nOr ever I could plumb and see\nLove’s lovely depth and height.\n\nAlas that I should trust myself, not Thee;\nNot trust Thy word:\nI faithless slumberer in Gethsemane,\nBlinded and rash; who instantly\nPut trust, but in a sword.\n\nAh Lord, if even at the last in Thee\nI had put faith,\nI might even at the last have counselled me,\nAnd not have heaped up cruelty\nTo sting Thee in Thy death.\n\nAlas for me, who bore to think on Thee\nAnd yet to lie:\nWhile Thou, O Lord, didst bear to look on me\nGoaded by fear to blasphemy,\nAnd break my heart and die.\n\nNo balm I find in Gilead, yet in Thee\nNailed to Thy palm\nI find a balm that wrings and comforts me:\nBalm wrung from Thee by agony,\nMy balm, mine only balm.\n\nOh blessed John who standeth close to Thee,\nWith Magdalene,\nAnd Thine own Mother praying silently,\nYea, blessed above women she,\nNow blessed even as then.\n\nAnd blessed the scorned thief who hangs by Thee,\nWhose thirsting mouth\nThirsts for Thee more than water, whose eyes see,\nWhose lips confess in ecstasy\nNor feel their parching drouth.\n\nLike as the hart the water-brooks I Thee\nDesire, my hands\nI stretch to Thee; O kind Lord, pity me:\nLord, I have wept, wept bitterly,\nI driest of dry lands.\n\nLord, I am standing far far off from Thee;\nYet is my heart\nHanging with Thee upon the accursed tree;\nThe nails, the thorns, pierce Thee and me:\nMy God, I claim my part.\n\nScarce in Thy throne and kingdom; yet with Thee\nIn shame, in loss,\nIn Thy forsaking, in Thine agony:\nLove crucified, behold even me,\nMe also bear Thy cross.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "saints_peter_and_paul"
+                    }
+                }
+            },
             "summer": {
                 "title": "“Summer”",
                 "body": "Winter is cold-hearted,\n    Spring is yea and nay,\nAutumn is a weathercock\n    Blown every way:\nSummer days for me\n    When every leaf is on its tree;\n\nWhen Robin’s not a beggar,\n    And Jenny Wren’s a bride,\nAnd larks hang singing, singing, singing,\n    Over the wheat-fields wide,\n    And anchored lilies ride,\nAnd the pendulum spider\n    Swings from side to side,\n\nAnd blue-black beetles transact business,\n    And gnats fly in a host,\nAnd furry caterpillars hasten\n    That no time be lost,\nAnd moths grow fat and thrive,\nAnd ladybirds arrive.\n\nBefore green apples blush,\n    Before green nuts embrown,\nWhy, one day in the country\n    Is worth a month in town;\n    Is worth a day and a year\nOf the dusty, musty, lag-last fashion\n    That days drone elsewhere.",
@@ -162493,6 +163327,26 @@
                     ],
                     "context": {
                         "season": "summer"
+                    }
+                }
+            },
+            "sunday-before-advent": {
+                "title": "“Sunday before advent”",
+                "body": "The end of all things is at hand. We all\nStand in the balance trembling as we stand;\nOr if not trembling, tottering to a fall.\nThe end of all things is at hand.\n\nO hearts of men, covet the unending land!\nO hearts of men, covet the musical,\nSweet, never-ending waters of that strand!\nWhile Earth shows poor, a slippery rolling ball,\nAnd Hell looms vast, a gulf unplumbed, unspanned,\nAnd Heaven flings wide its gates to great and small,\nThe end of all things is at hand.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "christ_the_king"
                     }
                 }
             },
@@ -162779,6 +163633,46 @@
                     }
                 }
             },
+            "trinity-sunday": {
+                "title": "“Trinity Sunday”",
+                "body": "My God, Thyself being Love Thy heart is love,\nAnd love Thy Will and love Thy Word to us,\nWhether Thou show us depths calamitous\nOr heights and flights of rapturous peace above.\nO Christ the Lamb, O Holy Ghost the Dove,\nReveal the Almighty Father unto us;\nThat we may tread Thy courts felicitous,\nLoving Who loves us, for our God is Love.\nLo, if our God be Love thro’ heaven’s long day,\nLove is He thro’ our mortal pilgrimage,\nLove was He thro’ all aeons that are told.\nWe change, but Thou remainest; for Thine age\nIs, Was, and Is to come, nor new nor old;\nWe change, but Thou remainest; yea and yea!",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "trinity_sunday"
+                    }
+                }
+            },
+            "tuesday-in-holy-week": {
+                "title": "“Tuesday in Holy Week”",
+                "body": "By Thy long-drawn anguish to atone,\nJesus Christ, show mercy on Thine own:\nJesus Christ, show mercy and atone\nNot for other sake except Thine own.\n\nThou Who thirsting on the Cross didst see\nAll mankind and all I love and me,\nStill from Heaven look down in love and see\nAll mankind and all I love and me.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "holy_tuesday"
+                    }
+                }
+            },
             "twice": {
                 "title": "“Twice”",
                 "body": "I took my heart in my hand\n    (O my love, O my love),\nI said: Let me fall or stand,\n    Let me live or die,\nBut this once hear me speak\n    (O my love, O my love);\nYet a woman’s words are weak:\n    You should speak, not I.\n\nYou took my heart in your hand\n    With a friendly smile,\nWith a critical eye you scanned,\n    Then set it down,\nAnd said: It is still unripe,\n    Better wait awhile;\nWait while the skylarks pipe,\n    Till the corn grows brown.\n\nAs you set it down it broke,--\n    Broke, but I did not wince;\nI smiled at the speech you spoke,\n    At your judgment that I heard:\nBut I have not often smiled\n    Since then, nor questioned since,\nNor cared for corn-flowers wild,\n    Nor sung with the singing bird.\n\nI take my heart in my hand,\n    O my God, O my God,\nMy broken heart in my hand:\n    Thou hast seen, judge Thou.\nMy hope was written on sand,\n    O my God, O my God;\nNow let Thy judgment stand,--\n    Yea, judge me now.\n\nThis contemned of a man,\n    This marred one heedless day,\nThis heart take Thou to scan\n    Both within and without:\nRefine with fire its gold,\n    Purge Thou its dross away,--\nYea, hold it in Thy hold,\n    Whence none can pluck it out.\n\nI take my heart in my hand,--\n    I shall not die, but live,--\nBefore Thy face I stand;\n    I, for Thou callest such:\nAll that I have I bring,\n    All that I am I give,\nSmile Thou and I shall sing,\n    But shall not question much.",
@@ -162944,6 +163838,110 @@
                     }
                 }
             },
+            "vigil-of-all-saints": {
+                "title": "“Vigil of All Saints”",
+                "body": "Up, my drowsing eyes!\nUp, my sinking heart!\nUp to Jesus Christ arise!\nClaim your part\nIn all raptures of the skies.\n\nYet a little while,\nYet a little way,\nSaints shall reap and rest and smile\nAll the day.\nUp! let’s trudge another mile.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "halloween"
+                    }
+                }
+            },
+            "vigil-of-st-bartholomew": {
+                "title": "“Vigil of St. Bartholomew”",
+                "body": "Lord, to Thine own grant watchful hearts and eyes;\nHearts strung to prayer, awake while eyelids sleep;\nEyes patient till the end to watch and weep.\nSo will sleep nourish power to wake and rise\nWith Virgins who keep vigil and are wise,\nTo sow among all sowers who shall reap,\nFrom out man’s deep to call Thy vaster deep,\nAnd tread the uphill track to Paradise.\nSweet souls! so patient that they make no moan,\nSo calm on journey that they seem at rest,\nSo rapt in prayer that half they dwell in heaven\nThankful for all withheld and all things given;\nSo lit by love that Christ shines manifest\nTransfiguring their aspects to His own.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "month": "august",
+                        "day": 23
+                    }
+                }
+            },
+            "vigil-of-st-peter": {
+                "title": "“Vigil of St. Peter”",
+                "body": "O Jesu, gone so far apart\nOnly my heart can follow Thee,\nThat look which pierced St. Peter’s heart\nTurn now on me.\n\nThou who dost search me thro’ and thro’\nAnd mark the crooked ways I went,\nLook on me, Lord, and make me too\nThy penitent.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "month": "june",
+                        "day": 28
+                    }
+                }
+            },
+            "vigil-of-the-annunciation": {
+                "title": "“Vigil of the Annunciation”",
+                "body": "All weareth, all wasteth,\nAll flitteth, all hasteth,\nAll of flesh and time:--\nSound, sweet heavenly chime,\nRing in the unutterable eternal prime.\n\nMan hopeth, man feareth,\nMan droopeth:--Christ cheereth,\nCompassing release,\nComforting with peace,\nPromising rest where strife and anguish cease.\n\nSaints waking, saints sleeping,\nRest well in safe keeping;\nWell they rest to-day\nWhile they watch and pray,--\nBut their to-morrow’s rest what tongue shall say?",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "month": "march",
+                        "day": 24
+                    }
+                }
+            },
+            "vigil-of-the-presentation": {
+                "title": "“Vigil of the Presentation”",
+                "body": "Long and dark the nights, dim and short the days,\nMounting weary heights on our weary ways,\nThee our God we praise.\nScaling heavenly heights by unearthly ways,\nThee our God we praise all our nights and days,\nThee our God we praise.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "month": "february",
+                        "day": 1
+                    }
+                }
+            },
             "weary-in-well-doing": {
                 "title": "“Weary in Well-Doing”",
                 "body": "I would have gone; God bade me stay:\n    I would have worked; God bade me rest.\nHe broke my will from day to day,\n    He read my yearnings unexpressed,\n    And said them nay.\n\nNow I would stay; God bids me go:\n    Now I would rest; God bids me work.\nHe breaks my heart tossed to and fro,\n    My soul is wrung with doubts that lurk\n    And vex it so.\n\nI go, Lord, where Thou sendest me;\n    Day after day I plod and moil:\nBut, Christ my God, when will it be\n    That I may let alone my toil\n    And rest with Thee?",
@@ -162961,6 +163959,26 @@
                     ],
                     "context": {
                         "liturgy": "lent"
+                    }
+                }
+            },
+            "wednesday-in-holy-week": {
+                "title": "“Wednesday in Holy Week”",
+                "body": "Man’s life is death. Yet Christ endured to live,\nPreaching and teaching, toiling to and fro,\nFew men accepting what He yearned to give,\nFew men with eyes to know\nHis Face, that Face of Love He stooped to show.\n\nMan’s death is life. For Christ endured to die\nIn slow unuttered weariness of pain,\nA curse and an astonishment, passed by,\nPointed at, mocked again\nBy men for whom He shed His Blood--in vain?",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "holy_wednesday"
                     }
                 }
             },
@@ -163016,6 +164034,86 @@
                     "tags": [
                         "English"
                     ]
+                }
+            },
+            "whitsun-day": {
+                "title": "“Whitsun Day”",
+                "body": "At sound as of rushing wind, and sight as of fire,\nLo! flesh and blood made spirit and fiery flame,\nAmbassadors in Christ’s and the Father’s Name,\nTo woo back a world’s desire.\n\nThese men chose death for their life and shame for their boast,\nFor fear courage, for doubt intuition of faith,\nChose love that is strong as death and stronger than death\nIn the power of the Holy Ghost.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "pentecost"
+                    }
+                }
+            },
+            "whitsun-eve": {
+                "title": "“Whitsun Eve”",
+                "body": "“As many as I love.”--Ah, Lord, Who lovest all,\nIf thus it is with Thee why sit remote above,\nBeholding from afar, stumbling and marred and small,\nSo many Thou dost love?\n\nWhom sin and sorrow make their worn reluctant thrall;\nWho fain would flee away but lack the wings of dove;\nWho long for love and rest; who look to Thee, and call\nTo Thee for rest and love.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "pentecost_eve"
+                    }
+                }
+            },
+            "whitsun-monday": {
+                "title": "“Whitsun Monday”",
+                "body": "_“A pure River of Water of Life.”_\n\nWe know not a voice of that River,\nIf vocal or silent it be,\nWhere for ever and ever and ever\nIt flows to no sea.\n\nMore deep than the seas is that River,\nMore full than their manifold tides,\nWhere for ever and ever and ever\nIt flows and abides.\n\nPure gold is the bed of that River\n(The gold of that land is the best),\nWhere for ever and ever and ever\nIt flows on at rest.\n\nOh goodly the banks of that River,\nOh goodly the fruits that they bear,\nWhere for ever and ever and ever\nIt flows and is fair.\n\nFor lo! on each bank of that River\nThe Tree of Life life-giving grows,\nWhere for ever and ever and ever\nThe Pure River flows.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "whitsun_monday"
+                    }
+                }
+            },
+            "whitsun-tuesday": {
+                "title": "“Whitsun Tuesday”",
+                "body": "Lord Jesus Christ, our Wisdom and our Rest,\nWho wisely dost reveal and wisely hide,\nGrant us such grace in wisdom to abide\nAccording to Thy Will whose Will is best.\nContented with Thine uttermost behest,\nToo sweet for envy and too high for pride;\nAll simple-souled, dove-hearted and dove-eyed,\nSoft-voiced, and satisfied in humble nest.\nWondering at the bounty of Thy Love\nWhich gives us wings of silver and of gold;\nWings folded close, yet ready to unfold\nWhen Thou shalt say, “Winter is past and gone:”\nWhen Thou shalt say, “Spouse, sister, love and dove,\nCome hither, sit with Me upon My Throne.”",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Verses",
+                        "type": "book",
+                        "published": {
+                            "year": "1894"
+                        }
+                    },
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "whitsun_tuesday"
+                    }
                 }
             },
             "who-shall-deliver-me": {
@@ -209000,6 +210098,189 @@
             }
         }
     },
+    "allen-upward": {
+        "metadata": {
+            "key": "allen-upward",
+            "name": "Allen Upward",
+            "birth": {
+                "time": {
+                    "year": "1863",
+                    "month": "september",
+                    "day": 20
+                },
+                "place": {
+                    "first": "Worcester",
+                    "second": "Worcestershire",
+                    "country": "England"
+                }
+            },
+            "death": {
+                "time": {
+                    "year": "1926",
+                    "month": "november",
+                    "day": 17
+                },
+                "place": {
+                    "first": "Wimborne",
+                    "second": "Dorset",
+                    "country": "England"
+                }
+            },
+            "gender": "male",
+            "nationalities": [
+                "united-kingdom"
+            ],
+            "languages": [
+                "English"
+            ],
+            "link": "https://en.wikipedia.org/wiki/Miguel_de_Unamuno",
+            "favorite": false,
+            "tags": [
+                "British"
+            ]
+        },
+        "poems": {
+            "the-bitter-purple-willows": {
+                "title": "“The Bitter Purple Willows”",
+                "body": "Meditating on the glory of illustrious lineage I lifted up my eyes and beheld the bitter purple willows growing round the tombs of the exalted Mings.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Scented Leaves from a Chinese Jar",
+                        "type": "book",
+                        "published": {
+                            "year": "1914"
+                        }
+                    },
+                    "tags": [
+                        "British"
+                    ]
+                }
+            },
+            "the-gold-fish": {
+                "title": "“The Gold Fish”",
+                "body": "Like a breath from hoarded musk,\nLike the golden fins that move\nWhere the tank’s green shadows part--\nLiving flames out of the dusk--\nAre the lightning throbs of love\nIn the passionate lover’s heart.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Scented Leaves from a Chinese Jar",
+                        "type": "book",
+                        "published": {
+                            "year": "1914"
+                        }
+                    },
+                    "tags": [
+                        "British"
+                    ]
+                }
+            },
+            "the-intoxicated-poet": {
+                "title": "“The Intoxicated Poet”",
+                "body": "A poet, having taken the bridle off his tongue, spoke thus: “More fragrant than the heliotrope, which blooms all the year round, better than vermilion letters on tablets of sendal, are thy kisses, thou shy one!”",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Scented Leaves from a Chinese Jar",
+                        "type": "book",
+                        "published": {
+                            "year": "1914"
+                        }
+                    },
+                    "tags": [
+                        "British"
+                    ]
+                }
+            },
+            "the-jonquils": {
+                "title": "“The Jonquils”",
+                "body": "I have heard that a certain princess, when she found that she had been married by a demon, wove a wreath of jonquils and sent it to the lover of former days.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Scented Leaves from a Chinese Jar",
+                        "type": "book",
+                        "published": {
+                            "year": "1914"
+                        }
+                    },
+                    "tags": [
+                        "British"
+                    ]
+                }
+            },
+            "the-mermaid": {
+                "title": "“The Mermaid”",
+                "body": "The sailor boy who leant over the side of the Junk of Many Pearls, and combed the green tresses of the sea with his ivory fingers, believing that he had heard the voice of a mermaid, cast his body down between the waves.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Scented Leaves from a Chinese Jar",
+                        "type": "book",
+                        "published": {
+                            "year": "1914"
+                        }
+                    },
+                    "tags": [
+                        "British"
+                    ]
+                }
+            },
+            "the-milky-way": {
+                "title": "“The Milky Way”",
+                "body": "My mother taught me that every night a procession of junks carrying lanterns moves silently across the sky, and the water sprinkled from their paddles falls to the earth in the form of dew. I no longer believe that the stars are junks carrying lanterns, no longer that the dew is shaken from their oars.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Scented Leaves from a Chinese Jar",
+                        "type": "book",
+                        "published": {
+                            "year": "1914"
+                        }
+                    },
+                    "tags": [
+                        "British"
+                    ]
+                }
+            },
+            "the-sea-shell": {
+                "title": "“The Sea-Shell”",
+                "body": "To the passionate lover, whose sighs come back to him on every breeze, all the world is like a murmuring sea-shell.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Scented Leaves from a Chinese Jar",
+                        "type": "book",
+                        "published": {
+                            "year": "1914"
+                        }
+                    },
+                    "tags": [
+                        "British"
+                    ]
+                }
+            },
+            "the-swallow-tower": {
+                "title": "“The Swallow Tower”",
+                "body": "Amid a landscape flickering with poplars, and netted by a silver stream, the Swallow Tower stands in the haunts of the sun. The winds out of the four quarters of heaven come to sigh around it, the clouds forsake the zenith to bathe it with continuous kisses. Against its sun-worn walls a sea of orchards breaks in white foam; and from the battlements the birds that flit below are seen like fishes in a green moat. The windows of the Tower stand open day and night; the winged Guests come when they please, and hold communication with the unknown Keeper of the Tower.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Scented Leaves from a Chinese Jar",
+                        "type": "book",
+                        "published": {
+                            "year": "1914"
+                        }
+                    },
+                    "tags": [
+                        "British"
+                    ],
+                    "context": {
+                        "season": "summer"
+                    }
+                }
+            }
+        }
+    },
     "cesar-vallejo": {
         "metadata": {
             "key": "cesar-vallejo",
@@ -217887,7 +219168,7 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "I Am the Bitter Name”",
+                        "title": "I Am the Bitter Name",
                         "type": "book",
                         "published": {
                             "year": "1972"
@@ -217904,7 +219185,7 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "I Am the Bitter Name”",
+                        "title": "I Am the Bitter Name",
                         "type": "book",
                         "published": {
                             "year": "1972"
@@ -218053,7 +219334,7 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "I Am the Bitter Name”",
+                        "title": "I Am the Bitter Name",
                         "type": "book",
                         "published": {
                             "year": "1972"
@@ -218184,7 +219465,7 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "I Am the Bitter Name”",
+                        "title": "I Am the Bitter Name",
                         "type": "book",
                         "published": {
                             "year": "1972"
