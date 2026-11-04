@@ -98170,16 +98170,16 @@
             ]
         },
         "poems": {
-            "all-of-roses": {
-                "title": "“All of Roses”",
-                "body": "# I.\n\nBy the Isar, in the twilight\nWe were wandering and singing;\nBy the Isar, in the evening\nWe climbed the huntsman’s ladder and sat swinging\nIn the fir-tree overlooking the marshes;\nWhile river met with river, and the ringing\nOf their pale-green glacier-water filled the evening.\n\nBy the Isar, in the twilight\nWe found our warm wild roses\nHanging red at the river; and simmering\nFrogs were singing, and over the river closes\nWas scent of roses, and glimmering\nIn the twilight, our kisses across the roses\nMet, and her face, and my face, were roses.\n\n\n# II.\n\nWhen she rises in the morning\nI linger to watch her.\nShe stands in silhouette against the window,\nAnd the sunbeams catch her\nGlistening white on the shoulders;\n    While down her sides, the mellow\n    Golden shadow glows, and her breasts\n    Swing like full-blown yellow\n    _Gloire de Dijon_ roses.\n\nShe drips herself with water,\nAnd her shoulders\nGlisten as silver, they crumple up\nLike wet and shaken roses, and I listen\nFor the rustling of their white, unfolding petals.\n    In the window full of sunlight\n    She stirs her golden shadow,\n    And flashes all herself as sun-bright\n    As if roses fought with roses.\n\n\n# III.\n\nJust a few of the roses we gathered from the Isar\nAre fallen, and their mauve-red petals on the cloth\nFloat like boats on a river, waiting\nFor a fairy-wind to wake them from their sloth.\n\nShe laughs at me across the table, saying\nShe loves me; and I blow a little boat\nRocking down the shoals between the tea-cups\nAnd so kiss-beladen that it scarce can float.\n\n\n# IV.\n\nNow like a rose come tip-toe out of bud\nI see the woman’s soul steal in her eyes,\nAnd wide in ecstasy I sit and watch\nThe unknown flower issued magic-wise.\n\nAnd day by day out of the envious bud\nMy treasure softly slips uncurled,\nAnd day by day my happiness vibrates\nIn wide and wider circles round the world.",
+            "all-souls": {
+                "title": "“All Souls”",
+                "body": "They are chanting now the service of All the Dead\nAnd the village folk outside in the burying ground\nListen--except those who strive with their dead,\nReaching out in anguish, yet unable quite to touch them:\nThose villagers isolated at the grave\nWhere the candles burn in the daylight, and the painted wreaths\nAre propped on end, there, where the mystery starts.\n\nThe naked candles burn on every grave.\nOn your grave, in England, the weeds grow.\n\nBut I am your naked candle burning,\nAnd that is not your grave, in England,\nThe world is your grave.\nAnd my naked body standing on your grave\nUpright towards heaven is burning off to you\nIts flame of life, now and always, till the end.\n\nIt is my offering to you; every day is All Souls’ Day.\n\nI forget you, have forgotten you.\nI am busy only at my burning,\nI am busy only at my life.\nBut my feet are on your grave, planted.\nAnd when I lift my face, it is a flame that goes up\nTo the other world, where you are now.\nBut I am not concerned with you.\n    I have forgotten you.\n\nI am a naked candle burning on your grave.",
                 "metadata": {
                     "language": "English",
                     "tags": [
                         "English"
                     ],
                     "context": {
-                        "season": "spring"
+                        "holiday": "all_souls"
                     }
                 }
             },
@@ -98218,6 +98218,20 @@
                     }
                 }
             },
+            "and-oh-that-the-man-i-am-might-cease-to-be": {
+                "title": "“And Oh--That the Man I Am Might Cease to Be”",
+                "body": "No, now I wish the sunshine would stop,\nand the white shining houses, and the gay red flowers on the balconies\nand the bluish mountains beyond, would be crushed out\nbetween two valves of darkness;\nthe darkness falling, the darkness rising, with muffled sound\nobliterating everything.\n\nI wish that whatever props up the walls of light\nwould fall, and darkness would come hurling heavily down,\nand it would be thick black dark for ever.\nNot sleep, which is grey with dreams,\nnor death, which quivers with birth,\nbut heavy, sealing darkness, silence, all immovable.\n\nWhat is sleep?\nIt goes over me, like a shadow over a hill,\nbut it does not alter me, nor help me.\nAnd death would ache still, I am sure;\nit would be lambent, uneasy.\nI wish it would be completely dark everywhere,\ninside me, and out, heavily dark utterly.",
+                "metadata": {
+                    "place": "Wolfratshausen",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "spring"
+                    }
+                }
+            },
             "apprehension": {
                 "title": "“Apprehension”",
                 "body": "And all hours long, the town\n  Roars like a beast in a cave\nThat is wounded there\nAnd like to drown;\n  While days rush, wave after wave\nOn its lair.\n\nAn invisible woe unseals\n  The flood, so it passes beyond\nAll bounds: the great old city\nRecumbent roars as it feels\n  The foamy paw of the pond\nReach from immensity.\n\nBut all that it can do\n  Now, as the tide rises,\nIs to listen and hear the grim\nWaves crash like thunder through\n  The splintered streets, hear noises\nRoll hollow in the interim.",
@@ -98234,6 +98248,19 @@
                     "tags": [
                         "English"
                     ]
+                }
+            },
+            "autumn-rain": {
+                "title": "“Autumn rain”",
+                "body": "The plane leaves\nfall black and wet\non the lawn;\n\nThe cloud sheaves\nin heaven’s fields set\ndroop and are drawn\n\nin falling seeds of rain;\nthe seed of heaven\non my face\n\nfalling--I hear again\nlike echoes even\nthat softly pace\n\nHeaven’s muffled floor,\nthe winds that tread\nout all the grain\n\nof tears, the store\nharvested\nin the sheaves of pain\n\ncaught up aloft:\nthe sheaves of dead\nmen that are slain\n\nnow winnowed soft\non the floor of heaven;\nmanna invisible\n\nof all the pain\nhere to us given;\nfinely divisible\nfalling as rain.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "autumn"
+                    }
                 }
             },
             "autumn-sunshine": {
@@ -98255,6 +98282,27 @@
                     "context": {
                         "season": "autumn"
                     }
+                }
+            },
+            "a-bad-beginning": {
+                "title": "“A Bad Beginning”",
+                "body": "The yellow sun steps over the mountain-top\nAnd falters a few short steps across the lake--\nAre you awake?\n\nSee, glittering on the milk-blue, morning lake\nThey are laying the golden racing-track of the sun;\nThe day has begun.\n\nThe sun is in my eyes, I must get up.\nI want to go, there’s a gold road blazes before\nMy breast--which is so sore.\n\nWhat?--your throat is bruised, bruised with my kisses?\nAh, but if I am cruel what then are you?\nI am bruised right through.\n\nWhat if I love you!--This misery\nOf your dissatisfaction and misprision\nStupefies me.\n\nAh yes, your open arms! Ah yes, ah yes,\nYou would take me to your breast!--But no,\nYou should come to mine,\nIt were better so.\n\nHere I am--get up and come to me!\nNot as a visitor either, nor a sweet\nAnd winsome child of innocence; nor\nAs an insolent mistress telling my pulse’s beat.\n\nCome to me like a woman coming home\nTo the man who is her husband, all the rest\nSubordinate to this, that he and she\nAre joined together for ever, as is best.\n\nBehind me on the lake I hear the steamer drumming\nFrom Austria. There lies the world, and here\nAm I. Which way are you coming?",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
+            "ballad-of-a-wilful-woman": {
+                "title": "“Ballad of a Wilful Woman”",
+                "body": "# _First Part_\n\nUpon her plodding palfrey\nWith a heavy child at her breast\nAnd Joseph holding the bridle\nThey mount to the last hill-crest.\n\nDissatisfied and weary\nShe sees the blade of the sea\nDividing earth and heaven\nIn a glitter of ecstasy.\n\nSudden a dark-faced stranger\nWith his back to the sun, holds out\nHis arms; so she lights from her palfrey\nAnd turns her round about.\n\nShe has given the child to Joseph,\nGone down to the flashing shore;\nAnd Joseph, shading his eyes with his hand,\nStands watching evermore.\n\n\n# _Second Part_\n\nThe sea in the stones is singing,\nA woman binds her hair\nWith yellow, frail sea-poppies,\nThat shine as her fingers stir.\n\nWhile a naked man comes swiftly\nLike a spurt of white foam rent\nFrom the crest of a falling breaker,\nOver the poppies sent.\n\nHe puts his surf-wet fingers\nOver her startled eyes,\nAnd asks if she sees the land, the land,\nThe land of her glad surmise.\n\n\n# _Third Part_\n\nAgain in her blue, blue mantle\nRiding at Joseph’s side,\nShe says, “I went to Cythera,\nAnd woe betide!”\n\nHer heart is a swinging cradle\nThat holds the perfect child,\nBut the shade on her forehead ill becomes\nA mother mild.\n\nSo on with the slow, mean journey\nIn the pride of humility;\nTill they halt at a cliff on the edge of the land\nOver a sullen sea.\n\nWhile Joseph pitches the sleep-tent\nShe goes far down to the shore\nTo where a man in a heaving boat\nWaits with a lifted oar.\n\n\n# _Fourth Part_\n\nThey dwelt in a huge, hoarse sea-cave\nAnd looked far down the dark\nWhere an archway torn and glittering\nShone like a huge sea-spark.\n\nHe said: “Do you see the spirits\nCrowding the bright doorway?”\nHe said: “Do you hear them whispering?”\nHe said: “Do you catch what they say?”\n\n\n# _Fifth Part_\n\nThen Joseph, grey with waiting,\nHis dark eyes full of pain,\nHeard: “I have been to Patmos;\nGive me the child again.”\n\nNow on with the hopeless journey\nLooking bleak ahead she rode,\nAnd the man and the child of no more account\nThan the earth the palfrey trode.\n\nTill a beggar spoke to Joseph,\nBut looked into her eyes;\nSo she turned, and said to her husband:\n“I give, whoever denies.”\n\n\n# _Sixth Part_\n\nShe gave on the open heather\nBeneath bare judgment stars,\nAnd she dreamed of her children and Joseph,\nAnd the isles, and her men, and her scars.\n\nAnd she woke to distil the berries\nThe beggar had gathered at night,\nWhence he drew the curious liquors\nHe held in delight.\n\nHe gave her no crown of flowers,\nNo child and no palfrey slow,\nOnly led her through harsh, hard places\nWhere strange winds blow.\n\nShe follows his restless wanderings\nTill night when, by the fire’s red stain,\nHer face is bent in the bitter steam\nThat comes from the flowers of pain.\n\nThen merciless and ruthless\nHe takes the flame-wild drops\nTo the town, and tries to sell them\nWith the market-crops.\n\nSo she follows the cruel journey\nThat ends not anywhere,\nAnd dreams, as she stirs the mixing-pot,\nShe is brewing hope from despair.",
+                "metadata": {
+                    "place": "Trier",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
                 }
             },
             "bats": {
@@ -98283,6 +98331,19 @@
                     "tags": [
                         "English"
                     ]
+                }
+            },
+            "birth-night": {
+                "title": "“Birth Night”",
+                "body": "This fireglow is a red womb\nIn the night, where you’re folded up\nOn your doom.\n\nAnd the ugly, brutal years\nAre dissolving out of you,\nAnd the stagnant tears.\n\nI the great vein that leads\nFrom the night to the source of you,\nWhich the sweet blood feeds.\n\nNew phase in the germ of you;\nNew sunny streams of blood\nWashing you through.\n\nYou are born again of me.\nI, Adam, from the veins of me\nThe Eve that is to be.\n\nWhat has been long ago\nGrows dimmer, we both forget,\nWe no longer know.\n\nYou are lovely, your face is soft\nLike a flower in bud\nOn a mountain croft.\n\nThis is Noël for me.\nTo-night is a woman born\nOf the man in me.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "christmas_eve"
+                    }
                 }
             },
             "birthday": {
@@ -98314,6 +98375,16 @@
                     "context": {
                         "liturgy": "lent"
                     }
+                }
+            },
+            "both-sides-of-the-medal": {
+                "title": "“Both Sides of the Medal”",
+                "body": "And because you love me\nthink you you do not hate me?\nHa, since you love me\nto ecstasy\nit follows you hate me to ecstasy.\n\nBecause when you hear me\ngo down the road outside the house\nyou must come to the window to watch me go,\ndo you think it is pure worship?\n\nBecause, when I sit in the room,\nhere, in my own house,\nand you want to enlarge yourself with this friend of mine,\nsuch a friend as he is,\nyet you cannot get beyond your awareness of me\nyou are held back by my being in the same world with you,\ndo you think it is bliss alone?\nsheer harmony?\n\nNo doubt if I were dead, you must\nreach into death after me,\nbut would not your hate reach even more madly than your love?\nyour impassioned, unfinished hate?\n\nSince you have a passion for me,\nas I for you,\ndoes not that passion stand in your way like a Balaam’s ass?\nand am I not Balaam’s ass\ngolden-mouthed occasionally?\nBut mostly, do you not detest my bray?\n\nSince you are confined in the orbit of me\ndo you not loathe the confinement?\nIs not even the beauty and peace of an orbit\nan intolerable prison to you,\nas it is to everybody?\n\nBut we will learn to submit\neach of us to the balanced, eternal orbit\nwherein we circle on our fate\nin strange conjunction.\n\nWhat is chaos, my love?\nIt is not freedom.\nA disarray of falling stars coming to nought.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
                 }
             },
             "bread-upon-the-waters": {
@@ -98414,6 +98485,21 @@
                     }
                 }
             },
+            "craving-for-spring": {
+                "title": "“Craving for Spring”",
+                "body": "I wish it were spring in the world.\n\nLet it be spring!\nCome, bubbling, surging tide of sap!\nCome, rush of creation!\nCome, life! surge through this mass of mortification!\nCome, sweep away these exquisite, ghastly first-flowers,\nwhich are rather last-flowers!\nCome, thaw down their cool portentousness, dissolve them:\nsnowdrops, straight, death-veined exhalations of white and purple crocuses,\nflowers of the penumbra, issue of corruption, nourished in mortification,\njets of exquisite finality;\nCome, spring, make havoc of them!\n\nI trample on the snowdrops, it gives me pleasure to tread down the jonquils,\nto destroy the chill Lent lilies;\nfor I am sick of them, their faint-bloodedness,\nslow-blooded, icy-fleshed, portentous.\n\nI want the fine, kindling wine-sap of spring,\ngold, and of inconceivably fine, quintessential brightness,\nrare almost as beams, yet overwhelmingly potent,\nstrong like the greatest force of world-balancing.\n\nThis is the same that picks up the harvest of wheat\nand rocks it, tons of grain, on the ripening wind;\nthe same that dangles the globe-shaped pleiads of fruit\ntemptingly in mid-air, between a playful thumb and finger;\noh, and suddenly, from out of nowhere, whirls the pear-bloom,\nupon us, and apple- and almond- and apricot- and quince-blossom,\nstorms and cumulus clouds of all imaginable blossom\nabout our bewildered faces,\nthough we do not worship.\n\nI wish it were spring\ncunningly blowing on the fallen sparks, odds and ends of the old, scattered fire,\nand kindling shapely little conflagrations\ncurious long-legged foals, and wide-eared calves, and naked sparrow-bubs.\n\nI wish that spring\nwould start the thundering traffic of feet\nnew feet on the earth, beating with impatience.\n\nI wish it were spring, thundering\ndelicate, tender spring.\nI wish these brittle, frost-lovely flowers of passionate, mysterious corruption\nwere not yet to come still more from the still-flickering discontent.\n\nOh, in the spring, the bluebell bows him down for very exuberance,\nexulting with secret warm excess,\nbowed down with his inner magnificence!\n\nOh, yes, the gush of spring is strong enough\nto toss the globe of earth like a ball on a water-jet\ndancing sportfully;\nas you see a tiny celluloid ball tossing on a squint of water\nfor men to shoot at, penny-a-time, in a booth at a fair.\n\nThe gush of spring is strong enough\nto play with the globe of earth like a ball on a fountain;\nAt the same time it opens the tiny hands of the hazel\nwith such infinite patience.\n\nThe power of the rising, golden, all-creative sap could take the earth\nand heave it off among the stars, into the invisible;\nthe same sets the throstle at sunset on a bough\nsinging against the blackbird;\ncomes out in the hesitating tremor of the primrose,\nand betrays its candour in the round white strawberry flower,\nis dignified in the foxglove, like a Red-Indian brave.\n\nAh come, come quickly, spring!\nCome and lift us towards our culmination, we myriads;\nwe who have never flowered, like patient cactuses.\nCome and lift us to our end, to blossom, bring us to our summer\nwe who are winter-weary in the winter of the world.\nCome making the chaffinch nests hollow and cosy,\ncome and soften the willow buds till they are puffed and furred,\nthen blow them over with gold.\nCome and cajole the gawky colt’s-foot flowers.\n\nCome quickly, and vindicate us\nagainst too much death.\nCome quickly, and stir the rotten globe of the world from within,\nburst it with germination, with world anew.\nCome now, to us, your adherents, who cannot flower from the ice.\nAll the world gleams with the lilies of Death the Unconquerable,\nbut come, give us our turn.\nEnough of the virgins and lilies, of passionate, suffocating perfume of corruption,\nno more narcissus perfume, lily harlots, the blades of sensation\npiercing the flesh to blossom of death.\nHave done, have done with this shuddering, delicious business\nof thrilling ruin in the flesh, of pungent passion, of rare, death-edged ecstasy.\nGive us our turn, give us a chance, let our hour strike,\nO soon, soon!\n\nLet the darkness turn violet with rich dawn.\nLet the darkness be warmed, warmed through to a ruddy violet,\nincipient purpling towards summer in the world of the heart of man.\n\nAre the violets already here!\nShow me! I tremble so much to hear it, that even now\non the threshold of spring, I fear I shall die.\nShow me the violets that are out.\n\nOh, if it be true, and the living darkness of the blood of man is purpling with violets,\nif the violets are coming out from under the rack of men, winter-rotten and fallen\nwe shall have spring.\nPray not to die on this Pisgah blossoming with violets.\nPray to live through.\n\nIf you catch a whiff of violets from the darkness of the shadow of man\nit will be spring in the world,\nit will be spring in the world of the living;\nwonderment organising itself, heralding itself with the violets,\nstirring of new seasons.\n\nAh, do not let me die on the brink of such anticipation!\nWorse, let me not deceive myself.",
+                "metadata": {
+                    "place": "Zennor",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "liturgy": "lent",
+                        "season": "winter"
+                    }
+                }
+            },
             "cruelty-and-love": {
                 "title": "“Cruelty and Love”",
                 "body": "What large, dark hands are those at the window\nLifted, grasping the golden light\nWhich weaves its way through the creeper leaves\nTo my heart’s delight?\n\nAh, only the leaves! But in the west,\nIn the west I see a redness come\nOver the evening’s burning breast--\n--’Tis the wound of love goes home!\n\nThe woodbine creeps abroad\nCalling low to her lover:\nThe sun-lit flirt who all the day\nHas poised above her lips in play\nAnd stolen kisses, shallow and gay\nOf pollen, now has gone away\n--She woos the moth with her sweet, low word,\nAnd when above her his broad wings hover\nThen her bright breast she will uncover\nAnd yield her honey-drop to her lover.\n\nInto the yellow, evening glow\nSaunters a man from the farm below,\nLeans, and looks in at the low-built shed\nWhere hangs the swallow’s marriage bed.\nThe bird lies warm against the wall.\nShe glances quick her startled eyes\nTowards him, then she turns away\nHer small head, making warm display\nOf red upon the throat. His terrors sway\nHer out of the nest’s warm, busy ball,\nWhose plaintive cry is heard as she flies\nIn one blue stoop from out the sties\nInto the evening’s empty hall.\n\nOh, water-hen, beside the rushes\nHide your quaint, unfading blushes,\nStill your quick tail, and lie as dead,\nTill the distance folds over his ominous tread.\n\nThe rabbit presses back her ears,\nTurns back her liquid, anguished eyes\nAnd crouches low: then with wild spring\nSpurts from the terror of his oncoming\nTo be choked back, the wire ring\nHer frantic effort throttling:\nPiteous brown ball of quivering fears!\n\nAh soon in his large, hard hands she dies,\nAnd swings all loose to the swing of his walk.\nYet calm and kindly are his eyes\nAnd ready to open in brown surprise\nShould I not answer to his talk\nOr should he my tears surmise.\n\nI hear his hand on the latch, and rise from my chair\nWatching the door open: he flashes bare\nHis strong teeth in a smile, and flashes his eyes\nIn a smile like triumph upon me; then careless-wise\nHe flings the rabbit soft on the table board\nAnd comes towards me: ah, the uplifted sword\nOf his hand against my bosom, and oh, the broad\nBlade of his hand that raises my face to applaud\nHis coming: he raises up my face to him\nAnd caresses my mouth with his fingers, which still smell grim\nOf the rabbit’s fur! God, I am caught in a snare!\nI know not what fine wire is round my throat,\nI only know I let him finger there\nMy pulse of life, letting him nose like a stoat\nWho sniffs with joy before he drinks the blood:\nAnd down his mouth comes to my mouth, and down\nHis dark bright eyes descend like a fiery hood\nUpon my mind: his mouth meets mine, and a flood\nOf sweet fire sweeps across me, so I drown\nWithin him, die, and find death good.",
@@ -98458,9 +98544,61 @@
                     }
                 }
             },
+            "december-night": {
+                "title": "“December Night”",
+                "body": "Take off your cloak and your hat\nAnd your shoes, and draw up at my hearth\nWhere never woman sat.\n\nI have made the fire up bright;\nLet us leave the rest in the dark\nAnd sit by firelight.\n\nThe wine is warm in the hearth;\nThe flickers come and go.\nI will warm your feet with kisses\nUntil they glow.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "month": "december",
+                        "month_epoch": "middle"
+                    }
+                }
+            },
+            "a-doe-at-evening": {
+                "title": "“A Doe at Evening”",
+                "body": "As I went through the marshes\na doe sprang out of the corn\nand flashed up the hill-side\nleaving her fawn.\n\nOn the sky-line\nshe moved round to watch,\nshe pricked a fine black blotch\non the sky.\n\nI looked at her\nand felt her watching;\nI became a strange being.\nStill, I had my right to be there with her,\n\nHer nimble shadow trotting\nalong the sky-line, she\nput back her fine, level-balanced head.\nAnd I knew her.\n\nAh yes, being male, is not my head hard-balanced, antlered?\nAre not my haunches light?\nHas she not fled on the same wind with me?\nDoes not my fear cover her fear?",
+                "metadata": {
+                    "place": "Irschenhausen",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "winter"
+                    }
+                }
+            },
             "don-juan": {
                 "title": "“Don Juan”",
-                "body": "It is Isis the mystery\nMust be in love with me.\n\nHere this round ball of earth,\nWhere all the mountains sit\nSolemn in groups,\nAnd the bright rivers flit\nRound them for girth:\n\nHere the trees and troops\nDarken the shining grass;\nAnd many bright people pass\nLike plunder from heaven:\nMany bright people pass\nPlundered from heaven.\n\nBut what of the mistresses,\nWhat the beloved seven?\n--They were but witnesses,\nI was just driven.\n\nWhere is there peace for me?\nIt is Isis the mystery\nMust be in love with me.",
+                "body": "It is Isis the mystery\nMust be in love with me.\n\nHere this round ball of earth\nWhere all the mountains sit\nSolemn in groups,\nAnd the bright rivers flit\nRound them for girth.\n\nHere the trees and troops\nDarken the shining grass,\nAnd many people pass\nPlundered from heaven,\nMany bright people pass,\nPlunder from heaven.\n\nWhat of the mistresses\nWhat the beloved seven?\n--They were but witnesses,\nI was just driven.\n\nWhere is there peace for me?\nIsis the mystery\nMust be in love with me.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
+            "elegy": {
+                "title": "“Elegy”",
+                "body": "The sun immense and rosy\nMust have sunk and become extinct\nThe night you closed your eyes for ever against me.\n\nGrey days, and wan, dree dawnings\nSince then, with fritter of flowers--\nDay wearies me with its ostentation and fawnings.\n\nStill, you left me the nights,\nThe great dark glittery window,\nThe bubble hemming this empty existence with\n   lights.\n\nStill in the vast hollow\nLike a breath in a bubble spinning\nBrushing the stars, goes my soul, that skims the\n   bounds like a swallow!\n\nI can look through\nThe film of the bubble night, to where you are.\nThrough the film I can almost touch you.",
+                "metadata": {
+                    "place": "Eastwood",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "winter"
+                    }
+                }
+            },
+            "elysium": {
+                "title": "“Elysium”",
+                "body": "I have found a place of loneliness\nLonelier than Lyonesse\nLovelier than Paradise;\n\nFull of sweet stillness\nThat no noise can transgress\nNever a lamp distress.\n\nThe full moon sank in state.\nI saw her stand and wait\nFor her watchers to shut the gate.\n\nThen I found myself in a wonderland\nAll of shadow and of bland\nSilence hard to understand.\n\nI waited therefore; then I knew\nThe presence of the flowers that grew\nNoiseless, their wonder noiseless blew.\n\nAnd flashing kingfishers that flew\nIn sightless beauty, and the few\nShadows the passing wild-beast threw.\n\nAnd Eve approaching over the ground\nUnheard and subtle, never a sound\nTo let me know that I was found.\n\nInvisible the hands of Eve\nUpon me travelling to reeve\nMe from the matrix, to relieve\n\nMe from the rest! Ah terribly\nBetween the body of life and me\nHer hands slid in and set me free.\n\nAh, with a fearful, strange detection\nShe found the source of my subjection\nTo the All, and severed the connection.\n\nDelivered helpless and amazed\nFrom the womb of the All, I am waiting, dazed\nFor memory to be erased.\n\nThen I shall know the Elysium\nThat lies outside the monstrous womb\nOf time from out of which I come.",
                 "metadata": {
                     "language": "English",
                     "tags": [
@@ -98543,14 +98681,28 @@
             },
             "fireflies-in-the-corn": {
                 "title": "“Fireflies in the Corn”",
-                "body": "_A woman taunts her lover._\n\nLook at the little darlings in the corn!\nThe rye is taller than you, who think yourself\nSo high and mighty: look how its heads are borne\nDark and proud on the sky, like a number of knights\nPassing with spears and pennants and manly scorn.\n\nAnd always likely!--Oh, if I could ride\nWith my head held high-serene. against the sky\nDo you think I’d have a creature like you at my side\nWith your gloom and your doubt that you love me? O darling rye,\nHow I adore you for your simple pride!\n\nAnd those bright fireflies wafting in between\nAnd over the swaying cornstalks, just above\nAll their dark-feathered helmets, like little green\nStars come low and wandering here for love\nOf this dark earth, and wandering all serene.\n\nHow I adore you, you happy things, you dears\nRiding the air and carrying all the time\nYour little lanterns behind you: it cheers\nMy heart to see you settling and trying to climb\nThe corn-stalks, tipping with fire their spears.\n\nAll over the corn’s dim motion, against the blue\nDark sky of night, the wandering glitter, the swarm\nOf questing brilliant things:--you joy, you true\nSpirit of careless joy: ah, how I warm\nMy poor and perished soul at the joy of you!\n\n\n_The man answers and she mocks._\n\nYou’re a fool, woman. I love you, and you know I do!\n--Lord, take his love away, it makes him whine.\nAnd I give you everything that you want me to.\n--Lord, dear Lord, do you think he ever _can_ shine?",
+                "body": "_She speaks:_\n\nLook at the little darlings in the corn!\n   The rye is taller than you, who think yourself\nSo high and mighty: look how the heads are borne\n    Dark and proud on the sky, like a number of knights\nPassing with spears and pennants and manly scorn.\n\nKnights indeed!--much knight I know will ride\n   With his head held high-serene against the sky!\nLimping and following rather at my side\n   Moaning for me to love him!--Oh darling rye\nHow I adore you for your simple pride!\n\nAnd the dear, dear fireflies wafting in between\n   And over the swaying corn-stalks, just above\nAll the dark-feathered helmets, like little green\n   Stars come low and wandering here for love\nOf these dark knights, shedding their delicate sheen!\n\nI thank you I do, you happy creatures, you dears\n   Riding the air, and carrying all the time\nYour little lanterns behind you! Ah, it cheers\n   My soul to see you settling and trying to climb\nThe corn-stalks, tipping with fire the spears.\n\nAll over the dim corn’s motion, against the blue\n   Dark sky of night, a wandering glitter, a swarm\nOf questing brilliant souls going out with their true\n   Proud knights to battle! Sweet, how I warm\nMy poor, my perished soul with the sight of you!",
                 "metadata": {
                     "language": "English",
                     "tags": [
                         "English"
                     ],
                     "context": {
-                        "month": "september"
+                        "season": "summer"
+                    }
+                }
+            },
+            "first-morning": {
+                "title": "“First Morning”",
+                "body": "The night was a failure but why not--?\n\nIn the darkness\n   with the pale dawn seething at the window\n   through the black frame\n   I could not be free,\n   not free myself from the past, those others--\n   and our love was a confusion,\n   there was a horror,\n   you recoiled away from me.\n\nNow, in the morning\nAs we sit in the sunshine on the seat by the little shrine,\nAnd look at the mountain-walls,\nWalls of blue shadow,\nAnd see so near at our feet in the meadow\nMyriads of dandelion pappus\nBubbles ravelled in the dark green grass\nHeld still beneath the sunshine--\n\nIt is enough, you are near--\nThe mountains are balanced,\nThe dandelion seeds stay half-submerged in the grass;\nYou and I together\nWe hold them proud and blithe\nOn our love.\nThey stand upright on our love,\nEverything starts from us,\nWe are the source.",
+                "metadata": {
+                    "place": "Beuerberg",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "spring"
                     }
                 }
             },
@@ -98596,6 +98748,55 @@
                     }
                 }
             },
+            "forsaken-and-forlorn": {
+                "title": "“Forsaken and Forlorn”",
+                "body": "The house is silent, it is late at night, I am alone.\n               From the balcony\n          I can hear the Isar moan,\n               Can see the white\nRift of the river eerily, between the pines, under\n          a sky of stone.\n\nSome fireflies drift through the middle air\n               Tinily.\n          I wonder where\nEnds this darkness that annihilates me.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
+            "frohnleichnam": {
+                "title": "“Frohnleichnam”",
+                "body": "You have come your way, I have come my way;\nYou have stepped across your people, carelessly, hurting them all;\nI have stepped across my people, and hurt them in spite of my care.\n\nBut steadily, surely, and notwithstanding\nWe have come our ways and met at last\nHere in this upper room.\n\nHere the balcony\nOverhangs the street where the bullock-wagons slowly\nGo by with their loads of green and silver birch-trees\nFor the feast of Corpus Christi.\n\nHere from the balcony\nWe look over the growing wheat, where the jade-green river\nGoes between the pine-woods,\nOver and beyond to where the many mountains\nStand in their blueness, flashing with snow and the morning.\n\nI have done; a quiver of exultation goes through me, like the first\nBreeze of the morning through a narrow white birch.\nYou glow at last like the mountain tops when they catch\nDay and make magic in heaven.\n\nAt last I can throw away world without end, and meet you\nUnsheathed and naked and narrow and white;\nAt last you can throw immortality off, and I see you\nGlistening with all the moment and all your beauty.\n\nShameless and callous I love you;\nOut of indifference I love you;\nOut of mockery we dance together,\nOut of the sunshine into the shadow,\nPassing across the shadow into the sunlight,\nOut of sunlight to shadow.\n\nAs we dance\nYour eyes take all of me in as a communication;\nAs we dance\nI see you, ah, in full!\nOnly to dance together in triumph of being together\nTwo white ones, sharp, vindicated,\nShining and touching,\nIs heaven of our own, sheer with repudiation.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "corpus_christi"
+                    }
+                }
+            },
+            "frost-flowers": {
+                "title": "“Frost Flowers”",
+                "body": "It is not long since, here among all these folk\nin London, I should have held myself\nof no account whatever,\nbut should have stood aside and made them way\nthinking that they, perhaps,\nhad more right than I--for who was I?\n\nNow I see them just the same, and watch them.\nBut of what account do I hold them?\n\nEspecially the young women. I look at them\nas they dart and flash\nbefore the shops, like wagtails on the edge of a pool.\n\nIf I pass them close, or any man,\nlike sharp, slim wagtails they flash a little aside\npretending to avoid us; yet all the time\ncalculating.\n\nThey think that we adore them--alas, would it were true!\n\nProbably they think all men adore them,\nhowsoever they pass by.\n\nWhat is it, that, from their faces fresh as spring,\nsuch fair, fresh, alert, first-flower faces,\nlike lavender crocuses, snowdrops, like Roman hyacinths,\nscyllas and yellow-haired hellebore, jonquils, dim anemones,\neven the sulphur auriculas,\nflowers that come first from the darkness, and feel cold to the touch,\nflowers scentless or pungent, ammoniacal almost;\nwhat is it, that, from the faces of the fair young women\ncomes like a pungent scent, a vibration beneath\nthat startles me, alarms me, stirs up a repulsion?\n\nThey are the issue of acrid winter, these first-flower young women;\ntheir scent is lacerating and repellant,\nit smells of burning snow, of hot-ache,\nof earth, winter-pressed, strangled in corruption;\nit is the scent of the fiery-cold dregs of corruption,\nwhen destruction soaks through the mortified, decomposing earth,\nand the last fires of dissolution burn in the bosom of the ground.\n\nThey are the flowers of ice-vivid mortification,\nthaw-cold, ice-corrupt blossoms,\nwith a loveliness I loathe;\nfor what kind of ice-rotten, hot-aching heart must they need to root in!",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "winter"
+                    }
+                }
+            },
+            "giorno-dei-morti": {
+                "title": "“Giorno dei Morti”",
+                "body": "Along the avenue of cypresses\nAll in their scarlet cloaks, and surplices\nOf linen go the chanting choristers,\nThe priests in gold and black, the villagers …\n\nAnd all along the path to the cemetery\nThe round dark heads of men crowd silently,\nAnd black-scarved faces of women-folk, wistfully\nWatch at the banner of death, and the mystery.\n\nAnd at the foot of a grave a father stands\nWith sunken head, and forgotten, folded hands;\nAnd at the foot of a grave a mother kneels\nWith pale shut face, nor either hears nor feels\n\nThe coming of the chanting choristers\nBetween the avenue of cypresses,\nThe silence of the many villagers,\nThe candle-flames beside the surplices.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "all_souls"
+                    }
+                }
+            },
             "gipsy": {
                 "title": "“Gipsy”",
                 "body": "I, the man with the red scarf,\n   Will give thee what I have, this last week’s earnings.\nTake them, and buy thee a silver ring\n   And wed me, to ease my yearnings.\n\nFor the rest, when thou art wedded\n   I’ll wet my brow for thee\nWith sweat, I’ll enter a house for thy sake,\n   Thou shalt shut doors on me.",
@@ -98614,16 +98815,31 @@
                     ]
                 }
             },
-            "green": {
-                "title": "“Green”",
-                "body": "The dawn was apple-green,\nThe sky was green wine held up in the sun,\nThe moon was a golden petal between.\n\nShe opened her eyes, and green\nThey shone, clear like flowers undone,\nFor the first time, now for the first time seen.",
+            "gloire-de-dijon": {
+                "title": "“Gloire de dijon”",
+                "body": "When she rises in the morning\nI linger to watch her;\nShe spreads the bath-cloth underneath the window\nAnd the sunbeams catch her\nGlistening white on the shoulders,\nWhile down her sides the mellow\nGolden shadow glows as\nShe stoops to the sponge, and her swung breasts\nSway like full-blown yellow\nGloire de Dijon roses.\n\nShe drips herself with water, and her shoulders\nGlisten as silver, they crumple up\nLike wet and falling roses, and I listen\nFor the sluicing of their rain-dishevelled petals.\nIn the window full of sunlight\nConcentrates her golden shadow\nFold on fold, until it glows as\nMellow as the glory roses.",
                 "metadata": {
+                    "place": "Icking",
                     "language": "English",
                     "tags": [
                         "English"
                     ],
                     "context": {
-                        "season": "spring"
+                        "season": "summer"
+                    }
+                }
+            },
+            "green": {
+                "title": "“Green”",
+                "body": "The dawn was apple-green,\nThe sky was green wine held up in the sun,\nThe moon was a golden petal between.\n\nShe opened her eyes, and green\nThey shone, clear like flowers undone\nFor the first time, now for the first time seen.",
+                "metadata": {
+                    "place": "Icking",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "summer"
                     }
                 }
             },
@@ -98679,6 +98895,33 @@
                     }
                 }
             },
+            "history": {
+                "title": "“History”",
+                "body": "The listless beauty of the hour\nWhen snow fell on the apple trees\nAnd the wood-ash gathered in the fire\nAnd we faced our first miseries.\n\nThen the sweeping sunshine of noon\nWhen the mountains like chariot cars\nWere ranked to blue battle--and you and I\nCounted our scars.\n\nAnd then in a strange, grey hour\nWe lay mouth to mouth, with your face\nUnder mine like a star on the lake,\nAnd I covered the earth, and all space.\n\nThe silent, drifting hours\nOf morn after morn\nAnd night drifting up to the night\nYet no pathway worn.\n\nYour life, and mine, my love\nPassing on and on, the hate\nFusing closer and closer with love\nTill at length they mate.",
+                "metadata": {
+                    "place": "The Cearne",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "winter"
+                    }
+                }
+            },
+            "humiliation": {
+                "title": "“Humiliation”",
+                "body": "I have been so innerly proud, and so long alone,\nDo not leave me, or I shall break.\nDo not leave me.\n\nWhat should I do if you were gone again\nSo soon?\nWhat should I look for?\nWhere should I go?\nWhat should I be, I myself,\n“I”?\nWhat would it mean, this\nI?\n\nDo not leave me.\n\nWhat should I think of death?\nIf I died, it would not be you:\nIt would be simply the same\nLack of you.\nThe same want, life or death,\nUnfulfilment,\nThe same insanity of space\nYou not there for me.\n\nThink, I daren’t die\nFor fear of the lack in death.\nAnd I daren’t live.\n\nUnless there were a morphine or a drug.\n\nI would bear the pain.\nBut always, strong, unremitting\nIt would make me not me.\nThe thing with my body that would go on living\nWould not be me.\nNeither life nor death could help.\n\nThink, I couldn’t look towards death\nNor towards the future:\nOnly not look.\nOnly myself\nStand still and bind and blind myself.\n\nGod, that I have no choice!\nThat my own fulfilment is up against me\nTimelessly!\nThe burden of self-accomplishment!\nThe charge of fulfilment!\nAnd God, that she is _necessary!_\n_Necessary,_ and I have no choice!\n\nDo not leave me.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "liturgy": "lent"
+                    }
+                }
+            },
             "hyde-park-at-night-before-the-war": {
                 "title": "“Hyde Park at Night, Before the War”",
                 "body": "_Clerks_.\n\nWe have shut the doors behind us, and the velvet flowers of night\nLean about us scattering their pollen grains of golden light.\n\nNow at last we lift our faces, and our faces come aflower\nTo the night that takes us willing, liberates us to the hour.\n\nNow at last the ink and dudgeon passes from our fervent eyes\nAnd out of the chambered weariness wanders a spirit abroad on its enterprise.\n\n  Not too near and not too far\n  Out of the stress of the crowd\n  Music screams as elephants scream\n  When they lift their trunks and scream aloud\n  For joy of the night when masters are\n    Asleep and adream.\n\n  So here I hide in the Shalimar\n  With a wanton princess slender and proud,\n  And we swoon with kisses, swoon till we seem\n  Two streaming peacocks gone in a cloud\n  Of golden dust, with star after star\n    On our stream.",
@@ -98692,6 +98935,29 @@
                             "month": "october"
                         }
                     },
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
+            "hymn-to-priapus": {
+                "title": "“Hymn to Priapus”",
+                "body": "My love lies underground\nWith her face upturned to mine,\nAnd her mouth unclosed in a last long kiss\nThat ended her life and mine.\n\nI dance at the Christmas party\nUnder the mistletoe\nAlong with a ripe, slack country lass\nJostling to and fro.\n\nThe big, soft country lass,\nLike a loose sheaf of wheat\nSlipped through my arms on the threshing floor\nAt my feet.\n\nThe warm, soft country lass,\nSweet as an armful of wheat\nAt threshing-time broken, was broken\nFor me, and ah, it was sweet!\n\nNow I am going home\nFulfilled and alone,\nI see the great Orion standing\nLooking down.\n\nHe’s the star of my first beloved\nLove-making.\nThe witness of all that bitter-sweet\nHeart-aching.\n\nNow he sees this as well,\nThis last commission.\nNor do I get any look\nOf admonition.\n\nHe can add the reckoning up\nI suppose, between now and then,\nHaving walked himself in the thorny, difficult\nWays of men.\n\nHe has done as I have done\nNo doubt:\nRemembered and forgotten\nTurn and about.\n\nMy love lies underground\nWith her face upturned to mine,\nAnd her mouth unclosed in the last long kiss\nThat ended her life and mine.\n\nShe fares in the stark immortal\nFields of death;\nI in these goodly, frozen\nFields beneath.\n\nSomething in me remembers\nAnd will not forget.\nThe stream of my life in the darkness\nDeathward set!\n\nAnd something in me has forgotten,\nHas ceased to care.\nDesire comes up, and contentment\nIs debonair.\n\nI, who am worn and careful,\nHow much do I care?\nHow is it I grin then, and chuckle\nOver despair?\n\nGrief, grief, I suppose and sufficient\nGrief makes us free\nTo be faithless and faithful together\nAs we have to be.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "liturgy": "advent"
+                    }
+                }
+            },
+            "i-am-like-a-rose": {
+                "title": "“I Am Like a Rose”",
+                "body": "I am myself at last; now I achieve\nMy very self. I, with the wonder mellow,\nFull of fine warmth, I issue forth in clear\nAnd single me, perfected from my fellow.\n\nHere I am all myself. No rose-bush heaving\nIts limpid sap to culmination, has brought\nItself more sheer and naked out of the green\nIn stark-clear roses, than I to myself am brought.",
+                "metadata": {
+                    "language": "English",
                     "tags": [
                         "English"
                     ]
@@ -98719,6 +98985,19 @@
                     }
                 }
             },
+            "in-the-dark": {
+                "title": "“In the Dark”",
+                "body": "A blotch of pallor stirs beneath the high\nSquare picture-dusk, the window of dark sky.\n\nA sound subdued in the darkness: tears!\nAs if a bird in difficulty up the valley steers.\n\n“Why have you gone to the window? Why don’t you sleep?\nHow you have wakened me! But why, why do you weep?”\n\n_“I am afraid of you, I am afraid, afraid!\nThere is something in you destroys me--!”_\n\n“You have dreamed and are not awake, come here to me.”\n_“No, I have wakened. It is you, you are cruel to me!”_\n\n“My dear!”--_“Yes, yes, you are cruel to me. You cast\nA shadow over my breasts that will kill me at last.”_\n\n“Come!”--_“No, I’m a thing of life. I give\nYou armfuls of sunshine, and you won’t let me live.”_\n\n“Nay, I’m too sleepy!”--_“Ah, you are horrible;\nYou stand before me like ghosts, like a darkness upright.”_\n\n“I!”--_“How can you treat me so, and love me?\nMy feet have no hold, you take the sky from above me.”_\n\n“My dear, the night is soft and eternal, no doubt\nYou love it!”--_“It is dark, it kills me, I am put out.”_\n\n“My dear, when you cross the street in the sun- shine, surely\nYour own small night goes with you. Why treat it so poorly?”\n\n_“No, no, I dance in the sun, I’m a thing of life--”_\n“Even then it is dark behind you. Turn round, my wife.”\n\n_“No, how cruel you are, you people the sunshine\nWith shadows!”_--“With yours I people the sunshine, yours and mine--”\n\n“In the darkness we all are gone, we are gone with the trees\nAnd the restless river;--we are lost and gone with all these.”\n\n_“But I am myself, I have nothing to do with these.”_\n“Come back to bed, let us sleep on our mysteries.\n\n“Come to me here, and lay your body by mine,\nAnd I will be all the shadow, you the shine.\n\n“Come, you are cold, the night has frightened you.\nHark at the river! It pants as it hurries through\n\n“The pine-woods. How I love them so, in their mystery of not-to-be.”\n_“--But let me be myself, not a river or a tree.”_\n\n“Kiss me! How cold you are!--Your little breasts\nAre bubbles of ice. Kiss me!--You know how it rests\n\n“One to be quenched, to be given up, to be gone in the dark;\nTo be blown out, to let night dowse the spark.\n\n“But never mind, my love. Nothing matters, save sleep;\nSave you, and me, and sleep; all the rest will keep.”",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "winter"
+                    }
+                }
+            },
             "intime": {
                 "title": "“Intime”",
                 "body": "Returning I find her just the same\nAt just the same old delicate game.\n\nStill she says: “Nay loose no flame\nTo lick me up and do me harm!\nBe all yourself!--for oh the charm\nOf your heart of fire in which I look!\nOh better there than in any book\nGlow and enact the dramas and dreams\nI love for ever!--there it seems\nYou are lovelier than life itself till desire\nComes licking through the bars of your lips\nAnd over my face the stray fire slips\nLeaving a burn and an ugly smart\nThat will have the oil of illusion. Oh heart\nOf fire and beauty loose no more\nYour reptile flames of lust; ah store\nYour passion in the basket of your soul\nBe all yourself one bonny burning coal\nThat stays with steady joy of its own fire.\nBut do not seek to take me by desire.\nOh do not seek to thrust on me your fire!\nFor in the firing all my porcelain\nOf flesh does crackle and shiver and break in pain\nMy ivory and marble black with stain\nMy veil of sensitive mystery rent in twain\nMy altars sullied I bereft remain\nA priestess execrable taken in vain--”\n\n                        So the refrain\nSings itself over and so the game\nRe-starts itself wherein I am kept\nLike a glowing brazier faintly blue of flame\nSo that the delicate love-adept\nCan warm her hands and invite her soul\nSprinkling incense and salt of words\nAnd kisses pale and sipping the toll\nOf incense-smoke that rises like birds.\n\nYet I’ve forgotten in playing this game\nThings I have known that shall have no name;\nForgetting the place from which I came\nI watch her ward away the flame\nYet warm herself at the fire--then blame\nMe that I flicker in the basket;\nMe that I glow not with content\nTo have my substance so subtly spent;\nMe that I interrupt her game.\nI ought to be proud that she should ask it\nOf me to be her fire-opal--.\n\n                        It is well\nSince I am here for so short a spell\nNot to interrupt her?--Why should I\nBreak in by making any reply!",
@@ -98737,9 +99016,29 @@
                     ]
                 }
             },
+            "lady-wife": {
+                "title": "“Lady Wife”",
+                "body": "Ah yes, I know you well, a sojourner\n    At the hearth;\nI know right well the marriage ring you wear,\n    And what it’s worth.\n\nThe angels came to Abraham, and they stayed\n    In his house awhile;\nSo you to mine, I imagine; yes, happily\n    Condescend to be vile.\n\nI see you all the time, you bird-blithe, lovely\n    Angel in disguise.\nI see right well how I ought to be grateful,\n    Smitten with reverent surprise.\n\nListen, I have no use\n    For so rare a visit;\nMine is a common devil’s\n    Requisite.\n\nRise up and go, I have no use for you\n    And your blithe, glad mien.\nNo angels here, for me no goddesses,\n    Nor any Queen.\n\nPut ashes on your head, put sackcloth on\n    And learn to serve.\nYou have fed me with your sweetness, now I am sick,\n    As I deserve.\n\nQueens, ladies, angels, women rare,\n    I have had enough.\nPut sackcloth on, be crowned with powdery ash,\n    Be common stuff.\n\nAnd serve now woman, serve, as a woman should,\n    Implicitly.\nSince I must serve and struggle with the imminent\n    Mystery.\n\nServe then, I tell you, add your strength to mine\n    Take on this doom.\nWhat are you by yourself, do you think, and what\n    The mere fruit of your womb?\n\nWhat is the fruit of your womb then, you mother,\n      you queen,\n    When it falls to the ground?\nIs it more than the apples of Sodom you scorn so, the men\n   Who abound?\n\nBring forth the sons of your womb then, and put them\n    Into the fire\nOf Sodom that covers the earth; bring them forth\n    From the womb of your precious desire.\n\nYou woman most holy, you mother, you being beyond\n    Question or diminution,\nAdd yourself up, and your seed, to the nought\n    Of your last solution.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
             "last-words-to-miriam": {
                 "title": "“Last Words to Miriam”",
                 "body": "Yours is the shame and sorrow,\nBut the disgrace is mine;\nYour love was dark and thorough,\nMine was the love of the sun for a flower\nHe creates with his shine.\n\nI was diligent to explore you,\nBlossom you stalk by stalk,\nTill my fire of creation bore you\nShrivelling down in the final dour\nAnguish--then I suffered a balk.\n\nI knew your pain, and it broke\nMy fine, craftsman’s nerve;\nYour body quailed at my stroke,\nAnd my courage failed to give you the last\nFine torture you did deserve.\n\nYou are shapely, you are adorned,\nBut opaque and dull in the flesh,\nWho, had I but pierced with the thorned\nFire-threshing anguish, were fused and cast\nIn a lovely illumined mesh.\n\nLike a painted window: the best\nSuffering burnt through your flesh,\nUndrossed it and left it blest\nWith a quivering sweet wisdom of grace: but now\nWho shall take you afresh?\n\nNow who will burn you free\nFrom your body’s terrors and dross,\nSince the fire has failed in me?\nWhat man will stoop in your flesh to plough\nThe shrieking cross?\n\nA mute, nearly beautiful thing\nIs your face, that fills me with shame\nAs I see it hardening,\nWarping the perfect image of God,\nAnd darkening my eternal fame.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
+            "loggerheads": {
+                "title": "“Loggerheads”",
+                "body": "Please yourself how you have it.\nTake my words, and fling\nThem down on the counter roundly;\nSee if they ring.\n\nSift my looks and expressions,\nAnd see what proportion there is\nOf sand in my doubtful sugar\nOf verities.\n\nHave a real stock-taking\nOf my manly breast;\nFind out if I’m sound or bankrupt,\nOr a poor thing at best.\n\nFor I am quite indifferent\nTo your dubious state,\nAs to whether you’ve found a fortune\nIn me, or a flea-bitten fate.\n\nMake a good investigation\nOf all that is there,\nAnd then, if it’s worth it, be grateful--\nIf not then despair.\n\nIf despair is our portion\nThen let us despair.\nLet us make for the weeping willow.\nI don’t care.",
                 "metadata": {
                     "language": "English",
                     "tags": [
@@ -98778,10 +99077,11 @@
                     ]
                 }
             },
-            "moonrise": {
-                "title": "“Moonrise”",
-                "body": "And who has seen the moon, who has not seen\nHer rise from out the chamber of the deep\nFlushed and grand and naked, as from the chamber\nOf finished bridegroom, seen her rise and throw\nConfession of delight upon the wave,\nLittering the waves with her own superscription\nOf bliss, till all her lambent beauty shakes towards us\nSpread out and known at last: and we are sure\nThat beauty is a thing beyond the grave,\nThat perfect, bright experience never falls\nTo nothingness, and time will dim the moon\nSooner than our full consummation here\nIn this odd life will tarnish or pass away.",
+            "manifesto": {
+                "title": "“Manifesto”",
+                "body": "# I.\n\nA woman has given me strength and affluence.\nAdmitted!\n\nAll the rocking wheat of Canada, ripening now,\nhas not so much of strength as the body of one woman\nsweet in ear, nor so much to give\nthough it feed nations.\n\nHunger is the very Satan.\nThe fear of hunger is Moloch, Belial, the horrible God.\nIt is a fearful thing to be dominated by the fear of hunger.\n\nNot bread alone, not the belly nor the thirsty throat.\nI have never yet been smitten through the belly, with the lack of bread,\nno, nor even milk and honey.\n\nThe fear of the want of these things seems to be quite left out of me.\nFor so much, I thank the good generations of mankind.\n\n\n# II.\n\nAnd the sweet, constant, balanced heat\nof the suave sensitive body, the hunger for this\nhas never seized me and terrified me.\nHere again, man has been good in his legacy to us, in these two primary instances.\n\n\n# III.\n\nThen the dumb, aching, bitter, helpless need,\nthe pining to be initiated,\nto have access to the knowledge that the great dead\nhave opened up for us, to know, to satisfy\nthe great and dominant hunger of the mind;\nman’s sweetest harvest of the centuries, sweet, printed books,\nbright, glancing, exquisite corn of many a stubborn\nglebe in the upturned darkness;\nI thank mankind with passionate heart\nthat I just escaped the hunger for these,\nthat they were given when I needed them,\nbecause I am the son of man.\n\nI have eaten, and drunk, and warmed and clothed my body,\nI have been taught the language of understanding,\nI have chosen among the bright and marvellous books,\nlike any prince, such stores of the world’s supply\nwere open to me, in the wisdom and goodness of man.\nSo far, so good.\nWise, good provision that makes the heart swell with love!\n\n\n# IV.\n\nBut then came another hunger\nvery deep, and ravening;\nthe very body’s body crying out\nwith a hunger more frightening, more profound\nthan stomach or throat or even the mind;\nredder than death, more clamorous.\n\nThe hunger for the woman. Alas,\nit is so deep a Moloch, ruthless and strong,\n’tis like the unutterable name of the dread Lord,\nnot to be spoken aloud.\nYet there it is, the hunger which comes upon us,\nwhich we must learn to satisfy with pure, real satisfaction;\nor perish, there is no alternative.\n\nI thought it was woman, indiscriminate woman,\nmere female adjunct of what I was.\nAh, that was torment hard enough\nand a thing to be afraid of,\na threatening, torturing, phallic Moloch.\n\nA woman fed that hunger in me at last.\nWhat many women cannot give, one woman can;\nso I have known it.\n\nShe stood before me like riches that were mine.\nEven then, in the dark, I was tortured, ravening, unfree,\nAshamed, and shameful, and vicious.\nA man is so terrified of strong hunger;\nand this terror is the root of all cruelty.\nShe loved me, and stood before me, looking to me.\nHow could I look, when I was mad? I looked sideways, furtively,\nbeing mad with voracious desire.\n\n\n# V.\n\nThis comes right at last.\nWhen a man is rich, he loses at last the hunger fear.\nI lost at last the fierceness that fears it will starve.\nI could put my face at last between her breasts\nand know that they were given for ever\nthat I should never starve\nnever perish;\nI had eaten of the bread that satisfies\nand my body’s body was appeased,\nthere was peace and richness,\nfulfilment.\n\nLet them praise desire who will,\nbut only fulfilment will do,\nreal fulfilment, nothing short.\nIt is our ratification\nour heaven, as a matter of fact.\nImmortality, the heaven, is only a projection of this strange but actual fulfilment,\nhere in the flesh.\n\nSo, another hunger was supplied,\nand for this I have to thank one woman,\nnot mankind, for mankind would have prevented me;\nbut one woman,\nand these are my red-letter thanksgivings.\n\n\n# VI.\n\nTo be, or not to be, is still the question.\nThis ache for being is the ultimate hunger.\nAnd for myself, I can say “almost, almost, oh, very nearly.”\nYet something remains.\nSomething shall not always remain.\nFor the main already is fulfilment.\n\nWhat remains in me, is to be known even as I know.\nI know her now: or perhaps, I know my own limitation against her.\n\nPlunging as I have done, over, over the brink\nI have dropped at last headlong into nought, plunging upon sheer hard extinction;\nI have come, as it were, not to know,\ndied, as it were; ceased from knowing; surpassed myself.\nWhat can I say more, except that I know what it is\nto surpass myself?\n\nIt is a kind of death which is not death.\nIt is going a little beyond the bounds.\nHow can one speak, where there is a dumbness on one’s mouth?\nI suppose, ultimately she is all beyond me,\nshe is all not-me, ultimately.\nIt is that that one comes to.\nA curious agony, and a relief, when I touch that which is not me in any sense,\nit wounds me to death with my own not-being; definite, inviolable limitation,\nand something beyond, quite beyond, if you understand what that means.\nIt is the major part of being, this having surpassed oneself,\nthis having touched the edge of the beyond, and perished, yet not perished.\n\n\n# VII.\n\nI want her though, to take the same from me.\nShe touches me as if I were herself, her own.\nShe has not realized yet, that fearful thing, that I am the other,\nshe thinks we are all of one piece.\nIt is painfully untrue.\n\nI want her to touch me at last, ah, on the root and quick of my darkness\nand perish on me, as I have perished on her.\n\nThen, we shall be two and distinct, we shall have each our separate being.\nAnd that will be pure existence, real liberty.\nTill then, we are confused, a mixture, unresolved, unextricated one from the other.\nIt is in pure, unutterable resolvedness, distinction of being, that one is free,\nnot in mixing, merging, not in similarity.\nWhen she has put her hand on my secret, darkest sources, the darkest outgoings,\nwhen it has struck home to her, like a death, “this is _him!_”\nshe has no part in it, no part whatever,\nit is the terrible _other_,\nwhen she knows the fearful _other flesh_, ah, darkness unfathomable and fearful, contiguous and concrete,\nwhen she is slain against me, and lies in a heap like one outside the house,\nwhen she passes away as I have passed away\nbeing pressed up against the _other_,\nthen I shall be glad, I shall not be confused with her,\nI shall be cleared, distinct, single as if burnished in silver,\nhaving no adherence, no adhesion anywhere,\none clear, burnished, isolated being, unique,\nand she also, pure, isolated, complete,\ntwo of us, unutterably distinguished, and in unutterable conjunction.\n\nThen we shall be free, freer than angels, ah, perfect.\n\n\n# VIII.\n\nAfter that, there will only remain that all men detach themselves and become unique,\nthat we are all detached, moving in freedom more than the angels,\nconditioned only by our own pure single being,\nhaving no laws but the laws of our own being.\n\nEvery human being will then be like a flower, untrammelled.\nEvery movement will be direct.\nOnly to be will be such delight, we cover our faces when we think of it\nlest our faces betray us to some untimely fiend.\n\nEvery man himself, and therefore, a surpassing singleness of mankind.\nThe blazing tiger will spring upon the deer, undimmed,\nthe hen will nestle over her chickens,\nwe shall love, we shall hate,\nbut it will be like music, sheer utterance,\nissuing straight out of the unknown,\nthe lightning and the rainbow appearing in us unbidden, unchecked,\nlike ambassadors.\n\n   We shall not look before and after.\n   We shall _be_, _now_.\n   We shall know in full.\n   We, the mystic NOW.",
                 "metadata": {
+                    "place": "Zennor",
                     "language": "English",
                     "tags": [
                         "English"
@@ -98789,6 +99089,38 @@
                     "context": {
                         "season": "summer"
                     }
+                }
+            },
+            "martyr-a-la-mode": {
+                "title": "“Martyr à la Mode”",
+                "body": "Ah God, life, law, so many names you keep,\nYou great, you patient Effort, and you Sleep\nThat does inform this various dream of living,\nYou sleep stretched out for ever, ever giving\nUs out as dreams, you august Sleep\nCoursed round by rhythmic movement of all time,\n\nThe constellations, your great heart, the sun\nFierily pulsing, unable to refrain;\nSince you, vast, outstretched, wordless Sleep\nPermit of no beyond, ah you, whose dreams\nWe are, and body of sleep, let it never be said\nI quailed at my appointed function, turned poltroon\n\nFor when at night, from out the full surcharge\nOf a day’s experience, sleep does slowly draw\nThe harvest, the spent action to itself;\nLeaves me unburdened to begin again;\nAt night, I say, when I am gone in sleep,\nDoes my slow heart rebel, do my dead hands\nComplain of what the day has had them do?\n\nNever let it be said I was poltroon\nAt this my task of living, this my dream,\nThis me which rises from the dark of sleep\nIn white flesh robed to drape another dream,\nAs lightning comes all white and trembling\nFrom out the cloud of sleep, looks round about\nOne moment, sees, and swift its dream is over,\nIn one rich drip it sinks to another sleep,\nAnd sleep thereby is one more dream enrichened.\n\nIf so the Vast, the God, the Sleep that still grows richer\nHave said that I, this mote in the body of sleep\nMust in my transiency pass all through pain,\nMust be a dream of grief, must like a crude\nDull meteorite flash only into light\nWhen tearing through the anguish of this life,\nStill in full flight extinct, shall I then turn\nPoltroon, and beg the silent, outspread God\nTo alter my one speck of doom, when round me burns\nThe whole great conflagration of all life,\nLapped like a body close upon a sleep,\nHiding and covering in the eternal Sleep\nWithin the immense and toilsome life-time, heaved\nWith ache of dreams that body forth the Sleep?\n\nShall I, less than the least red grain of flesh\nWithin my body, cry out to the dreaming soul\nThat slowly labours in a vast travail,\nTo halt the heart, divert the streaming flow\nThat carries moons along, and spare the stress\nThat crushes me to an unseen atom of fire?\n\nWhen pain and all\nAnd grief are but the same last wonder, Sleep\nRising to dream in me a small keen dream\nOf sudden anguish, sudden over and spent--",
+                "metadata": {
+                    "place": "Croydon",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
+            "misery": {
+                "title": "“Misery”",
+                "body": "Out of this oubliette between the mountains\nfive valleys go, five passes like gates;\nthree of them black in shadow, two of them bright\nwith distant sunshine;\nand sunshine fills one high valley bed,\ngreen grass shining, and little white houses\nlike quartz crystals,\nlittle, but distinct a way off.\n\nWhy don’t I go?\nWhy do I crawl about this pot, this oubliette,\nstupidly?\nWhy don’t I go?\n\nBut where?\nIf I come to a pine-wood, I can’t say\nNow I am arrived!\nWhat are so many straight trees to me!",
+                "metadata": {
+                    "place": "Sterzing",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
+            "moonrise": {
+                "title": "“Moonrise”",
+                "body": "And who has seen the moon, who has not seen\nHer rise from out the chamber of the deep,\nFlushed and grand and naked, as from the chamber\nOf finished bridegroom, seen her rise and throw\nConfession of delight upon the wave,\nLittering the waves with her own superscription\nOf bliss, till all her lambent beauty shakes towards us\nSpread out and known at last, and we are sure\nThat beauty is a thing beyond the grave,\nThat perfect, bright experience never falls\nTo nothingness, and time will dim the moon\nSooner than our full consummation here\nIn this odd life will tarnish or pass away.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
                 }
             },
             "mosquito": {
@@ -98832,6 +99164,20 @@
                     ]
                 }
             },
+            "mutilation": {
+                "title": "“Mutilation”",
+                "body": "A thick mist-sheet lies over the broken wheat.\nI walk up to my neck in mist, holding my mouth up.\nAcross there, a discoloured moon burns itself out.\n\nI hold the night in horror;\nI dare not turn round.\n\nTo-night I have left her alone.\nThey would have it I have left her for ever.\n\nOh my God, how it aches\nWhere she is cut off from me!\n\nPerhaps she will go back to England.\nPerhaps she will go back,\nPerhaps we are parted for ever.\n\nIf I go on walking through the whole breadth of Germany\nI come to the North Sea, or the Baltic.\n\nOver there is Russia--Austria, Switzerland, France, in a circle!\nI here in the undermist on the Bavarian road.\n\nIt aches in me.\nWhat is England or France, far off,\nBut a name she might take?\nI don’t mind this continent stretching, the sea far away;\nIt aches in me for her\nLike the agony of limbs cut off and aching;\nNot even longing,\nIt is only agony.\n\nA cripple!\nOh God, to be mutilated!\nTo be a cripple!\n\nAnd if I never see her again?\n\nI think, if they told me so\nI could convulse the heavens with my horror.\nI think I could alter the frame of things in my agony.\nI think I could break the System with my heart.\nI think, in my convulsion, the skies would break.\n\nShe too suffers.\nBut who could compel her, if she chose me against them all?\nShe has not chosen me finally, she suspends her choice.\nNight folk, Tuatha De Danaan, dark Gods, govern her sleep,\nMagnificent ghosts of the darkness, carry off her decision in sleep,\nLeave her no choice, make her lapse me-ward, make her,\nOh Gods of the living Darkness, powers of Night.",
+                "metadata": {
+                    "place": "Wolfratshausen",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "autumn"
+                    }
+                }
+            },
             "narcissus": {
                 "title": "“Narcissus”",
                 "body": "Where the minnows trace\nA glinting web quick hid in the gloom of the brook\nWhen I think of the place\nAnd remember the small lad lying intent to look\nThrough the shadowy face\nAt the little fish thread-threading the watery nook--\n\nIt seems to me\nThe woman you are should be nixie there is a pool\nWhere we ought to be.\nYou undine-clear and pearly soullessly cool\nAnd waterly\nThe pool for my limbs to fathom my soul’s last school.\n\nNarcissus\nVentured so long ago in the deeps of reflection.\nIllyssus\nBroke the bounds and beyond!--Dim recollection\nOf fishes\nSoundlessly moving in heaven’s other direction!\n\nBe\nUndine towards the waters moving back;\nFor me\nA pool! Put off the soul you’ve got oh lack\nYour human self immortal; take the watery track.",
@@ -98868,6 +99214,43 @@
                     ]
                 }
             },
+            "new-heaven-and-earth": {
+                "title": "“New Heaven and Earth”",
+                "body": "# I.\n\nAnd so I cross into another world\nshyly and in homage linger for an invitation\nfrom this unknown that I would trespass on.\n\nI am very glad, and all alone in the world,\nall alone, and very glad, in a new world\nwhere I am disembarked at last.\n\nI could cry with joy, because I am in the new world, just ventured in.\nI could cry with joy, and quite freely, there is nobody to know.\n\nAnd whosoever the unknown people of this unknown world may be\nthey will never understand my weeping for joy to be adventuring among them\nbecause it will still be a gesture of the old world I am making\nwhich they will not understand, because it is quite, quite foreign to them.\n\n\n# II.\n\nI was so weary of the world\nI was so sick of it\neverything was tainted with myself,\nskies, trees, flowers, birds, water,\npeople, houses, streets, vehicles, machines,\nnations, armies, war, peace-talking,\nwork, recreation, governing, anarchy,\nit was all tainted with myself, I knew it all to start with\nbecause it was all myself.\n\nWhen I gathered flowers, I knew it was myself plucking my own flowering.\nWhen I went in a train, I knew it was myself travelling by my own invention.\nWhen I heard the cannon of the war, I listened with my own ears to my own destruction.\nWhen I saw the torn dead, I knew it was my own torn dead body.\nIt was all me, I had done it all in my own flesh.\n\n\n# III.\n\nI shall never forget the maniacal horror of it all in the end\nwhen everything was me, I knew it all already, I anticipated it all in my soul\nbecause I was the author and the result\nI was the God and the creation at once;\ncreator, I looked at my creation;\ncreated, I looked at myself, the creator:\nit was a maniacal horror in the end.\n\nI was a lover, I kissed the woman I loved,\nand God of horror, I was kissing also myself.\nI was a father and a begetter of children,\nand oh, oh horror, I was begetting and conceiving\nin my own body.\n\n\n# IV.\n\nAt last came death, sufficiency of death,\nand that at last relieved me, I died.\nI buried my beloved; it was good, I buried myself and was gone.\nWar came, and every hand raised to murder;\nvery good, very good, every hand raised to murder!\nVery good, very good, I am a murderer!\nIt is good, I can murder and murder, and see them fall\nthe mutilated, horror-struck youths, a multitude\none on another, and then in clusters together\nsmashed, all oozing with blood, and burned in heaps\ngoing up in a foetid smoke to get rid of them\nthe murdered bodies of youths and men in heaps\nand heaps and heaps and horrible reeking heaps\ntill it is almost enough, till I am reduced perhaps;\nthousands and thousands of gaping, hideous foul dead\nthat are youths and men and me\nbeing burned with oil, and consumed in corrupt thick smoke, that rolls\nand taints and blackens the sky, till at last it is dark, dark as night, or death, or hell\nand I am dead, and trodden to nought in the smoke-sodden tomb;\ndead and trodden to nought in the sour black earth\nof the tomb; dead and trodden to nought, trodden to nought.\n\n\n# V.\n\nGod, but it is good to have died and been trodden out\ntrodden to nought in sour, dead earth\nquite to nought\nabsolutely to nothing\nnothing\nnothing\nnothing.\n\nFor when it is quite, quite nothing, then it is everything.\nWhen I am trodden quite out, quite, quite out\nevery vestige gone, then I am here\nrisen, and setting my foot on another world\nrisen, accomplishing a resurrection\nrisen, not born again, but risen, body the same as before,\nnew beyond knowledge of newness, alive beyond life\nproud beyond inkling or furthest conception of pride\nliving where life was never yet dreamed of, nor hinted at\nhere, in the other world, still terrestrial\nmyself, the same as before, yet unaccountably new.\n\n\n# VI.\n\nI, in the sour black tomb, trodden to absolute death\nI put out my hand in the night, one night, and my hand\ntouched that which was verily not me\nverily it was not me.\nWhere I had been was a sudden blaze\na sudden flaring blaze!\nSo I put my hand out further, a little further\nand I felt that which was not I,\nit verily was not I\nit was the unknown.\n\nHa, I was a blaze leaping up!\nI was a tiger bursting into sunlight.\nI was greedy, I was mad for the unknown.\nI, new-risen, resurrected, starved from the tomb\nstarved from a life of devouring always myself\nnow here was I, new-awakened, with my hand stretching out\nand touching the unknown, the real unknown, the unknown unknown.\n\nMy God, but I can only say\nI touch, I feel the unknown!\nI am the first comer!\nCortes, Pisarro, Columbus, Cabot, they are nothing, nothing!\nI am the first comer!\nI am the discoverer!\nI have found the other world!\n\nThe unknown, the unknown!\nI am thrown upon the shore.\nI am covering myself with the sand.\nI am filling my mouth with the earth.\nI am burrowing my body into the soil.\nThe unknown, the new world!\n\n\n# VII.\n\nIt was the flank of my wife\nI touched with my hand, I clutched with my hand\nrising, new-awakened from the tomb!\nIt was the flank of my wife\nwhom I married years ago\nat whose side I have lain for over a thousand nights\nand all that previous while, she was I, she\nwas I;\nI touched her, it was I who touched and I who was touched.\n\nYet rising from the tomb, from the black oblivion\nstretching out my hand, my hand flung like a drowned man’s hand on a rock,\nI touched her flank and knew I was carried by the current in death\nover to the new world, and was climbing out on the shore,\nrisen, not to the old world, the old, changeless I, the old life,\nwakened not to the old knowledge\nbut to a new earth, a new I, a new knowledge, a new world of time.\n\nAh no, I cannot tell you what it is, the new world\nI cannot tell you the mad, astounded rapture of its discovery.\nI shall be mad with delight before I have done,\nand whosoever comes after will find me in the new world\na madman in rapture.\n\n\n# VIII.\n\nGreen streams that flow from the innermost continent of the new world,\nwhat are they?\nGreen and illumined and travelling for ever\ndissolved with the mystery of the innermost heart of the continent\nmystery beyond knowledge or endurance, so sumptuous\nout of the well-heads of the new world.--\nThe other, she too has strange green eyes!\nWhite sands and fruits unknown and perfumes that never\ncan blow across the dark seas to our usual world!\nAnd land that beats with a pulse!\nAnd valleys that draw close in love!\nAnd strange ways where I fall into oblivion of uttermost living!--\nAlso she who is the other has strange-mounded breasts and strange sheer slopes, and white levels.\n\nSightless and strong oblivion in utter life takes possession of me!\nThe unknown, strong current of life supreme\ndrowns me and sweeps me away and holds me down\nto the sources of mystery, in the depths,\nextinguishes there my risen resurrected life\nand kindles it further at the core of utter mystery.",
+                "metadata": {
+                    "place": "Greatham",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
+            "new-year's-night": {
+                "title": "“New Year's Night”",
+                "body": "Now you are mine, to-night at last I say it;\nYou’re a dove I have bought for sacrifice,\nAnd to-night I slay it.\n\nHere in my arms my naked sacrifice!\nDeath, do you hear, in my arms I am bringing\nMy offering, bought at great price.\n\nShe’s a silvery dove worth more than all I’ve got.\nNow I offer her up to the ancient, inexorable God,\nWho knows me not.\n\nLook, she’s a wonderful dove, without blemish or spot!\nI sacrifice all in her, my last of the world,\nPride, strength, all the lot.\n\nAll, all on the altar! And death swooping down\nLike a falcon. ’Tis God has taken the victim;\nI have won my renown.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "new_years_eve"
+                    }
+                }
+            },
+            "new-years-eve": {
+                "title": "“New Year’s Eve”",
+                "body": "There are only two things now,\nThe great black night scooped out\nAnd this fire-glow.\n\nThis fire-glow, the core,\nAnd we the two ripe pips\nThat are held in store.\n\nListen, the darkness rings\nAs it circulates round our fire.\nTake off your things.\n\nYour shoulders, your bruised throat\nYour breasts, your nakedness!\nThis fiery coat!\n\nAs the darkness flickers and dips,\nAs the firelight falls and leaps\nFrom your feet to your lips!",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "new_years_eve"
+                    }
+                }
+            },
             "next-morning": {
                 "title": "“Next Morning”",
                 "body": "How have I wandered here to this vaulted room\nIn the house of life?--the floor was ruffled with gold\nLast evening, and she who was softly in bloom,\nGlimmered as flowers that in perfume at twilight unfold\n\nFor the flush of the night; whereas now the gloom\nOf every dirty, must-besprinkled mould,\nAnd damp old web of misery’s heirloom\nDeadens this day’s grey-dropping arras-fold.\n\nAnd what is this that floats on the undermist\nOf the mirror towards the dusty grate, as if feeling\nUnsightly its way to the warmth?--this thing with a list\nTo the left? this ghost like a candle swealing?\n\nPale-blurred, with two round black drops, as if it missed\nItself among everything else, here hungrily stealing\nUpon me!--my own reflection!--explicit gist\nOf my presence there in the mirror that leans from the ceiling!\n\nThen will somebody square this shade with the being I know\nI was last night, when my soul rang clear as a bell\nAnd happy as rain in summer? Why should it be so?\nWhat is there gone against me, why am I in hell?",
@@ -98886,6 +99269,19 @@
                     ],
                     "context": {
                         "season": "autumn"
+                    }
+                }
+            },
+            "nonentity": {
+                "title": "“Nonentity”",
+                "body": "The stars that open and shut\nFall on my shallow breast\nLike stars on a pool.\n\nThe soft wind, blowing cool\nLaps little crest after crest\nOf ripples across my breast.\n\nAnd dark grass under my feet\nSeems to dabble in me\nLike grass in a brook.\n\nOh, and it is sweet\nTo be all these things, not to be\nAny more myself.\n\nFor look,\nI am weary of myself!",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "summer"
                     }
                 }
             },
@@ -98959,6 +99355,31 @@
                     ]
                 }
             },
+            "on-the-balcony": {
+                "title": "“On the balcony”",
+                "body": "In front of the sombre mountains, a faint, lost ribbon of rainbow;\nAnd between us and it, the thunder;\nAnd down below in the green wheat, the labourers\nStand like dark stumps, still in the green wheat.\n\nYou are near to me, and your naked feet in their sandals,\nAnd through the scent of the balcony’s naked timber\nI distinguish the scent of your hair: so now the limber\nLightning falls from heaven.\n\nAdown the pale-green glacier river floats\nA dark boat through the gloom--and whither?\nThe thunder roars. But still we have each other!\nThe naked lightnings in the heavens dither\nAnd disappear--what have we but each other?\nThe boat has gone.",
+                "metadata": {
+                    "place": "Icking",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "summer"
+                    }
+                }
+            },
+            "one-woman-to-all-women": {
+                "title": "“One Woman to All Women”",
+                "body": "I don’t care whether I am beautiful to you\n        You other women.\nNothing of me that you see is my own;\nA man balances, bone unto bone\nBalances, everything thrown\n        In the scale, you other women.\n\nYou may look and say to yourselves, I do\n        Not show like the rest.\nMy face may not please you, nor my stature; yet if you knew\nHow happy I am, how my heart in the wind rings true\nLike a bell that is chiming, each stroke as a stroke falls due,\n        You other women:\n\nYou would draw your mirror towards you, you would wish\n        To be different.\nThere’s the beauty you cannot see, myself and him\nBalanced in glorious equilibrium,\nThe swinging beauty of equilibrium,\n        You other women.\n\nThere’s this other beauty, the way of the stars\n        You straggling women.\nIf you knew how I swerve in peace, in the equipoise\nWith the man, if you knew how my flesh enjoys\nThe swinging bliss no shattering ever destroys\n        You other women:\n\nYou would envy me, you would think me wonderful\n        Beyond compare;\nYou would weep to be lapsing on such harmony\nAs carries me, you would wonder aloud that he\nWho is so strange should correspond with me\n        Everywhere.\n\nYou see he is different, he is dangerous,\n        Without pity or love.\nAnd yet how his separate being liberates me\nAnd gives me peace! You cannot see\nHow the stars are moving in surety\n        Exquisite, high above.\n\nWe move without knowing, we sleep, and we travel on,\n        You other women.\nAnd this is beauty to me, to be lifted and gone\nIn a motion human inhuman, two and one\nEncompassed, and many reduced to none,\n        You other women.",
+                "metadata": {
+                    "place": "Kensington",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
             "palimpsest-of-twilight": {
                 "title": "“Palimpsest of Twilight”",
                 "body": "Darkness comes out of the earth\n  And swallows dip into the pallor of the west;\nFrom the hay comes the clamour of children’s mirth;\n  Wanes the old palimpsest.\n\nThe night-stock oozes scent,\n  And a moon-blue moth goes flittering by:\nAll that the worldly day has meant\n  Wastes like a lie.\n\nThe children have forsaken their play;\n  A single star in a veil of light\nGlimmers: litter of day\n  Is gone from sight.",
@@ -98975,6 +99396,19 @@
                     "tags": [
                         "English"
                     ]
+                }
+            },
+            "paradise-re-entered": {
+                "title": "“Paradise Re-entered”",
+                "body": "Through the strait gate of passion,\nBetween the bickering fire\nWhere flames of fierce love tremble\nOn the body of fierce desire:\n\nTo the intoxication,\nThe mind, fused down like a bead,\nFlees in its agitation\nThe flames’ stiff speed:\n\nAt last to calm incandescence,\nBurned clean by remorseless hate,\nNow, at the day’s renascence\nWe approach the gate.\n\nNow, from the darkened spaces\nOf fear, and of frightened faces,\nDeath, in our awful embraces\nApproached and passed by;\n\nWe near the flame-burnt porches\nWhere the brands of the angels, like torches\nWhirl,--in these perilous marches\nPausing to sigh;\n\nWe look back on the withering roses,\nThe stars, in their sun-dimmed closes,\nWhere ’twas given us to repose us\nSure on our sanctity;\n\nBeautiful, candid lovers,\nBurnt out of our earthy covers,\nWe might have nestled like plovers\nIn the fields of eternity.\n\nThere, sure in sinless being,\nAll-seen, and then all-seeing,\nIn us life unto death agreeing,\nWe might have lain.\n\nBut we storm the angel-guarded\nGates of the long-discarded,\nGarden, which God has hoarded\nAgainst our pain.\n\nThe Lord of Hosts, and the Devil\nAre left on Eternity’s level\nField, and as victors we travel\nTo Eden home.\n\nBack beyond good and evil\nReturn we. Eve dishevel\nYour hair for the bliss-drenched revel\nOn our primal loam.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "liturgy": "eastertide"
+                    }
                 }
             },
             "parliament-hill-in-the-evening": {
@@ -99023,7 +99457,7 @@
             },
             "people": {
                 "title": "“People”",
-                "body": "The great gold apples of night\nHang from the street’s long bough\nDripping their light\nOn the faces that drift below,\nOn the faces that drift and blow\nDown the night-time, out of sight\nIn the wind’s sad sough.\n\nThe ripeness of these apples of night\nDistilling over me\nMakes sickening the white\nGhost-flux of faces that hie\nThem endlessly, endlessly by\nWithout meaning or reason why\nThey ever should be.",
+                "body": "The great gold apples of night\nHang from the street’s long bough\n        Dripping their light\nOn the faces that drift below,\nOn the faces that drift and blow\nDown the night-time, out of sight\n        In the wind’s sad sough.\n\nThe ripeness of these apples of night\nDistilling over me\n        Makes sickening the white\nGhost-flux of faces that hie\nThem endlessly, endlessly by\nWithout meaning or reason why\n        They ever should be.",
                 "metadata": {
                     "language": "English",
                     "tags": [
@@ -99102,6 +99536,32 @@
                     ]
                 }
             },
+            "quite-forsaken": {
+                "title": "“Quite Forsaken”",
+                "body": "What pain, to wake and miss you!\n  To wake with a tightened heart,\nAnd mouth reaching forward to kiss you!\n\nThis then at last is the dawn, and the bell\n  Clanging at the farm! Such bewilderment\nComes with the sight of the room, I cannot tell.\n\nIt is raining. Down the half-obscure road\n  Four labourers pass with their scythes\nDejectedly;--a huntsman goes by with his load:\n\nA gun, and a bunched-up deer, its four little feet\n  Clustered dead.--And this is the dawn\nFor which I wanted the night to retreat!",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "winter"
+                    }
+                }
+            },
+            "rabbit-snared-in-the-night": {
+                "title": "“Rabbit Snared in the Night”",
+                "body": "Why do you spurt and sprottle\nlike that, bunny?\nWhy should I want to throttle\nyou, bunny?\n\nYes, bunch yourself between\nmy knees and lie still.\nLie on me with a hot, plumb, live weight,\nheavy as a stone, passive,\nyet hot, waiting.\n\nWhat are you waiting for?\nWhat are you waiting for?\nWhat is the hot, plumb weight of your desire on me?\nYou have a hot, unthinkable desire of me, bunny.\n\nWhat is that spark\nglittering at me on the unutterable darkness\nof your eye, bunny?\nThe finest splinter of a spark\nthat you throw off, straight on the tinder of my nerves!\n\nIt sets up a strange fire,\na soft, most unwarrantable burning\na bale-fire mounting, mounting up in me.\n\n’Tis not of me, bunny.\nIt was you engendered it,\nwith that fine, demoniacal spark\nyou jetted off your eye at me.\n\n_I_ did not want it,\nthis furnace, this draught-maddened fire\nwhich mounts up my arms\nmaking them swell with turgid, ungovernable strength.\n\n’Twas not _I_ that wished it,\nthat my fingers should turn into these flames\navid and terrible\nthat they are at this moment.\n\nIt must have been _your_ inbreathing, gaping desire\nthat drew this red gush in me;\nI must be reciprocating _your_ vacuous, hideous passion.\n\nIt must be the want in you\nthat has drawn this terrible draught of white fire\nup my veins as up a chimney.\n\nIt must be you who desire\nthis intermingling of the black and monstrous fingers of Moloch\nin the blood-jets of your throat.\n\nCome, you shall have your desire,\nsince already I am implicated with you\nin your strange lust.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "liturgy": "lent"
+                    }
+                }
+            },
             "reading-a-letter": {
                 "title": "“Reading a Letter”",
                 "body": "She sits on the recreation ground\nUnder an oak whose yellow buds dot the pale blue sky.\nThe young grass twinkles in the wind and the sound\nOf the wind in the knotted buds in a canopy.\n\nSo sitting under the knotted canopy\nOf the wind she is lifted and carried away as in a balloon\nAcross the insensible void till she stoops to see\nThe sandy desert beneath her the dreary platoon.\n\nShe knows the waste all dry beneath her in one place\nStirring with earth-coloured life ever turning and stirring.\nBut never the motion has a human face\nNor sound save intermittent machinery whirring.\n\nAnd so again on the recreation ground\nShe alights a stranger wondering unused to the scene;\nSuffering at sight of the children playing around\nHurt at the chalk-coloured tulips and the evening-green.",
@@ -99123,6 +99583,43 @@
                     }
                 }
             },
+            "river-roses": {
+                "title": "“River Roses”",
+                "body": "By the Isar, in the twilight\nWe were wandering and singing,\nBy the Isar, in the evening\nWe climbed the huntsman’s ladder and sat swinging\nIn the fir-tree overlooking the marshes,\nWhile river met with river, and the ringing\nOf their pale-green glacier water filled the evening.\n\nBy the Isar, in the twilight\nWe found the dark wild roses\nHanging red at the river; and simmering\nFrogs were singing, and over the river closes\nWas savour of ice and of roses; and glimmering\nFear was abroad. We whispered: “No one knows us.\nLet it be as the snake disposes\nHere in this simmering marsh.”",
+                "metadata": {
+                    "place": "Kloster Schaeftlarn",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "summer"
+                    }
+                }
+            },
+            "rose-of-all-the-world": {
+                "title": "“Rose of All the World”",
+                "body": "I am here myself; as though this heave of effort\nAt starting other life, fulfilled my own:\nRose-leaves that whirl in colour round a core\nOf seed-specks kindled lately and softly blown\n\nBy all the blood of the rose-bush into being--\nStrange, that the urgent will in me, to set\nMy mouth on hers in kisses, and so softly\nTo bring together two strange sparks, beget\n\nAnother life from our lives, so should send\nThe innermost fire of my own dim soul outspinning\nAnd whirling in blossom of flame and being upon me!\nThat my completion of manhood should be the beginning\n\nAnother life from mine! For so it looks.\nThe seed is purpose, blossom accident.\nThe seed is all in all, the blossom lent\nTo crown the triumph of this new descent.\n\nIs that it, woman? Does it strike you so?\nThe Great Breath blowing a tiny seed of fire\nFans out your petals for excess of flame,\nTill all your being smokes with fine desire?\n\nOr are we kindled, you and I, to be\nOne rose of wonderment upon the tree\nOf perfect life, and is our possible seed\nBut the residuum of the ecstasy?\n\nHow will you have it?--the rose is all in all,\nOr the ripe rose-fruits of the luscious fall?\nThe sharp begetting, or the child begot?\nOur consummation matters, or does it not?\n\nTo me it seems the seed is just left over\nFrom the red rose-flowers’ fiery transience;\nJust orts and slarts; berries that smoulder in the bush\nWhich burnt just now with marvellous immanence.\n\nBlossom, my darling, blossom, be a rose\nOf roses unchidden and purposeless; a rose\nFor rosiness only, without an ulterior motive;\nFor me it is more than enough if the flower unclose.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "spring"
+                    }
+                }
+            },
+            "roses-on-the-breakfast-table": {
+                "title": "“Roses on the Breakfast Table”",
+                "body": "Just a few of the roses we gathered from the Isar\nAre fallen, and their mauve-red petals on the cloth\nFloat like boats on a river, while other\nRoses are ready to fall, reluctant and loth.\n\nShe laughs at me across the table, saying\nI am beautiful. I look at the rumpled young roses\nAnd suddenly realise, in them as in me,\nHow lovely the present is that this day discloses.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
             "school-on-the-outskirts": {
                 "title": "“School on the Outskirts”",
                 "body": "How different, in the middle of snows, the great school rises red!\n  A red rock silent and shadowless, clung round with clusters of shouting lads,\nSome few dark-cleaving the doorway, souls that cling as the souls of the dead\n  In stupor persist at the gates of life, obstinate dark monads.\n\nThis new red rock in a waste of white rises against the day\n  With shelter now, and with blandishment, since the winds have had their way\nAnd laid the desert horrific of silence and snow on the world of mankind,\n  School now is the rock in this weary land the winter burns and makes blind.",
@@ -99142,6 +99639,17 @@
                     "context": {
                         "season": "winter"
                     }
+                }
+            },
+            "the-sea": {
+                "title": "“The Sea”",
+                "body": "You, you are all unloving, loveless, you;\nRestless and lonely, shaken by your own moods,\nYou are celibate and single, scorning a comrade even,\nThreshing your own passions with no woman for the threshing-floor,\nFinishing your dreams for your own sake only,\nPlaying your great game around the world, alone,\nWithout playmate, or helpmate, having no one to cherish,\nNo one to comfort, and refusing any comforter.\n\nNot like the earth, the spouse all full of increase\nMoiled over with the rearing of her many-mouthed young;\nYou are single, you are fruitless, phosphorescent, cold and callous,\nNaked of worship, of love or of adornment,\nScorning the panacea even of labour,\nSworn to a high and splendid purposelessness\nOf brooding and delighting in the secret of life’s goings,\nSea, only you are free, sophisticated.\n\nYou who toil not, you who spin not,\nSurely but for you and your like, toiling\nWere not worth while, nor spinning worth the effort!\n\nYou who take the moon as in a sieve, and sift\nHer flake by flake and spread her meaning out;\nYou who roll the stars like jewels in your palm,\nSo that they seem to utter themselves aloud;\nYou who steep from out the days their colour,\nReveal the universal tint that dyes\nTheir web; who shadow the sun’s great gestures and expressions\nSo that he seems a stranger in his passing;\nWho voice the dumb night fittingly;\nSea, you shadow of all things, now mock us to death with your shadowing.",
+                "metadata": {
+                    "place": "Bournemouth",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
                 }
             },
             "service-of-all-the-souls": {
@@ -99170,6 +99678,30 @@
                             "month": "october"
                         }
                     },
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
+            "she-looks-back": {
+                "title": "“She Looks Back”",
+                "body": "The pale bubbles\nThe lovely pale-gold bubbles of the globe-flowers\nIn a great swarm clotted and single\nWent rolling in the dusk towards the river\nTo where the sunset hung its wan gold cloths;\nAnd you stood alone, watching them go,\nAnd that mother-love like a demon drew you from me\nTowards England.\n\nAlong the road, after nightfall,\nAlong the glamorous birch-tree avenue\nAcross the river levels\nWe went in silence, and you staring to England.\n\nSo then there shone within the jungle darkness\nOf the long, lush under-grass, a glow-worm’s sudden\nGreen lantern of pure light, a little, intense, fusing triumph,\nWhite and haloed with fire-mist, down in the tangled darkness.\n\nThen you put your hand in mine again, kissed me, and we struggled to be together.\nAnd the little electric flashes went with us, in the grass,\nTiny lighthouses, little souls of lanterns, courage burst into an explosion of green light\nEverywhere down in the grass, where darkness was ravelled in darkness.\n\nStill, the kiss was a touch of bitterness on my mouth\nLike salt, burning in.\nAnd my hand withered in your hand.\nFor you were straining with a wild heart, back, back again,\nBack to those children you had left behind, to all the æons of the past.\nAnd I was here in the under-dusk of the Isar.\n\nAt home, we leaned in the bedroom window\nOf the old Bavarian Gasthaus,\nAnd the frogs in the pool beyond thrilled with exuberance,\nLike a boiling pot the pond crackled with happiness,\nLike a rattle a child spins round for joy, the night rattled\nWith the extravagance of the frogs,\nAnd you leaned your cheek on mine,\nAnd I suffered it, wanting to sympathise.\n\nAt last, as you stood, your white gown falling from your breasts,\nYou looked into my eyes, and said: “But this is joy!”\nI acquiesced again.\nBut the shadow of lying was in your eyes,\nThe mother in you, fierce as a murderess, glaring to England,\nYearning towards England, towards your young children,\nInsisting upon your motherhood, devastating.\n\nStill, the joy was there also, you spoke truly,\nThe joy was not to be driven off so easily;\nStronger than fear or destructive mother-love, it stood flickering;\nThe frogs helped also, whirring away.\nYet how I have learned to know that look in your eyes\nOf horrid sorrow!\nHow I know that glitter of salt, dry, sterile, sharp, corrosive salt!\nNot tears, but white sharp brine\nMaking hideous your eyes.\n\nI have seen it, felt it in my mouth, my throat, my chest, my belly,\nBurning of powerful salt, burning, eating through my defenceless nakedness.\nI have been thrust into white, sharp crystals,\nWrithing, twisting, superpenetrated.\n\nAh, Lot’s Wife, Lot’s Wife!\nThe pillar of salt, the whirling, horrible column of salt, like a waterspout\nThat has enveloped me!\nSnow of salt, white, burning, eating salt\nIn which I have writhed.\n\nLot’s Wife!--Not Wife, but Mother.\nI have learned to curse your motherhood,\nYou pillar of salt accursed.\nI have cursed motherhood because of you,\nAccursed, base motherhood!\n\nI long for the time to come, when the curse against you will have gone out of my heart.\nBut it has not gone yet.\nNevertheless, once, the frogs, the globe-flowers of Bavaria, the glow-worms\nGave me sweet lymph against the salt-burns,\nThere is a kindness in the very rain.\n\nTherefore, even in the hour of my deepest, passionate malediction\nI try to remember it is also well between us.\nThat you are with me in the end.\nThat you never look quite back; nine-tenths, ah, more\nYou look round over your shoulder;\nBut never quite back.\n\nNevertheless the curse against you is still in my heart\nLike a deep, deep burn.\nThe curse against all mothers.\nAll mothers who fortify themselves in motherhood, devastating the vision.\nThey are accursed, and the curse is not taken off\nIt burns within me like a deep, old burn,\nAnd oh, I wish it was better.",
+                "metadata": {
+                    "place": "Beuerberg",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "liturgy": "lent"
+                    }
+                }
+            },
+            "she-said-as-well-to-me": {
+                "title": "“She said as well to me …”",
+                "body": "She said as well to me: “Why are you ashamed?\nThat little bit of your chest that shows between\nthe gap of your shirt, why cover it up?\nWhy shouldn’t your legs and your good strong thighs\nbe rough and hairy?--I’m glad they are like that.\nYou are shy, you silly, you silly shy thing.\nMen are the shyest creatures, they never will come\nout of their covers. Like any snake\nslipping into its bed of dead leaves, you hurry into your clothes.\nAnd I love you so! Straight and clean and all of a piece is the body of a man,\nsuch an instrument, a spade, like a spear, or an oar,\nsuch a joy to me--”\nSo she laid her hands and pressed them down my sides,\nso that I began to wonder over myself, and what I was.\n\nShe said to me: “What an instrument, your body!\nsingle and perfectly distinct from everything else!\nWhat a tool in the hands of the Lord!\nOnly God could have brought it to its shape.\nIt feels as if his handgrasp, wearing you\nhad polished you and hollowed you,\nhollowed this groove in your sides, grasped you under the breasts\nand brought you to the very quick of your form,\nsubtler than an old, soft-worn fiddle-bow.\n\n“When I was a child, I loved my father’s riding-whip\nthat he used so often.\nI loved to handle it, it seemed like a near part of him.\nSo I did his pens, and the jasper seal on his desk.\nSomething seemed to surge through me when I touched them.\n\n“So it is with you, but here\nThe joy I feel!\nGod knows what I feel, but it is joy!\nLook, you are clean and fine and singled out!\nI admire you so, you are beautiful: this clean sweep of your sides, this firmness, this hard mould!\nI would die rather than have it injured with one scar.\nI wish I could grip you like the fist of the Lord, and have you--”\n\nSo she said, and I wondered,\nfeeling trammelled and hurt.\nIt did not make me free.\n\nNow I say to her: “No tool, no instrument, no God!\nDon’t touch me and appreciate me.\nIt is an infamy.\nYou would think twice before you touched a weasel on a fence\nas it lifts its straight white throat.\nYour hand would not be so flig and easy.\nNor the adder we saw asleep with her head on her shoulder,\ncurled up in the sunshine like a princess;\nwhen she lifted her head in delicate, startled wonder\nyou did not stretch forward to caress her\nthough she looked rarely beautiful\nand a miracle as she glided delicately away, with such dignity.\nAnd the young bull in the field, with his wrinkled, sad face,\nyou are afraid if he rises to his feet,\nthough he is all wistful and pathetic, like a monolith, arrested, static.\n\n“Is there nothing in me to make you hesitate?\nI tell you there is all these.\nAnd why should you overlook them in me?--”",
+                "metadata": {
+                    "language": "English",
                     "tags": [
                         "English"
                     ]
@@ -99214,6 +99746,68 @@
                     }
                 }
             },
+            "sinners": {
+                "title": "“Sinners”",
+                "body": "The big mountains sit still in the afternoon light\n   Shadows in their lap;\nThe bees roll round in the wild-thyme with delight.\n\nWe sitting here among the cranberries\n   So still in the gap\nOf rock, distilling our memories\n\nAre sinners! Strange! The bee that blunders\n   Against me goes off with a laugh.\nA squirrel cocks his head on the fence, and wonders\n\nWhat about sin?--For, it seems\n   The mountains have\nNo shadow of us on their snowy forehead of dreams\n\nAs they ought to have. They rise above us\n   Dreaming\nFor ever. One even might think that they love us.\n\n  _Little red cranberries cheek to cheek,\n   Two great dragon-flies wrestling;\n   You, with your forehead nestling\n   Against me, and bright peak shining to peak--_\n\nThere’s a love-song for you!--Ah, if only\n   There were no teeming\nSwarms of mankind in the world, and we were less lonely!",
+                "metadata": {
+                    "place": "Mayrhofen",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "summer"
+                    }
+                }
+            },
+            "song-of-a-man-who-has-come-through": {
+                "title": "“Song of a Man Who Has Come Through”",
+                "body": "Not I, not I, but the wind that blows through me!\nA fine wind is blowing the new direction of Time.\nIf only I let it bear me, carry me, if only it carry me!\nIf only I am sensitive, subtle, oh, delicate, a winged gift!\nIf only, most lovely of all, I yield myself and am borrowed\nBy the fine, fine wind that takes its course through the chaos of the world\nLike a fine, an exquisite chisel, a wedge-blade inserted;\nIf only I am keen and hard like the sheer tip of a wedge\nDriven by invisible blows,\nThe rock will split, we shall come at the wonder, we shall find the Hesperides.\n\nOh, for the wonder that bubbles into my soul,\nI would be a good fountain, a good well-head,\nWould blur no whisper, spoil no expression.\n\n   What is the knocking?\n   What is the knocking at the door in the night?\n   It is somebody wants to do us harm.\n\n   No, no, it is the three strange angels.\n   Admit them, admit them.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
+            "song-of-a-man-who-is-not-loved": {
+                "title": "“Song of a Man Who is Not Loved”",
+                "body": "The space of the world is immense, before me and around me;\nIf I turn quickly, I am terrified, feeling space surround me;\nLike a man in a boat on very clear, deep water, space frightens and confounds me.\n\nI see myself isolated in the universe, and wonder\nWhat effect I can have. My hands wave under\nThe heavens like specks of dust that are floating asunder.\n\nI hold myself up, and feel a big wind blowing\nMe like a gadfly into the dusk, without my know- ing\nWhither or why or even how I am going.\n\nSo much there is outside me, so infinitely\nSmall am I, what matter if minutely\nI beat my way, to be lost immediately?\n\nHow shall I flatter myself that I can do\nAnything in such immensity? I am too\nLittle to count in the wind that drifts me through.",
+                "metadata": {
+                    "place": "Glashütte",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "winter"
+                    }
+                }
+            },
+            "spring-morning": {
+                "title": "“Spring Morning”",
+                "body": "Ah, through the open door\nIs there an almond tree\nAflame with blossom!\n   --Let us fight no more.\n\nAmong the pink and blue\nOf the sky and the almond flowers\nA sparrow flutters.\n   --We have come through,\n\nIt is really spring!--See,\nWhen he thinks himself alone\nHow he bullies the flowers.\n   --Ah, you and me\n\nHow happy we’ll be!--See him\nHe clouts the tufts of flowers\nIn his impudence.\n   --But, did you dream\n\nIt would be so bitter? Never mind\nIt is finished, the spring is here.\nAnd we’re going to be summer-happy\n   And summer-kind.\n\nWe have died, we have slain and been slain,\nWe are not our old selves any more.\nI feel new and eager\n   To start again.\n\nIt is gorgeous to live and forget.\nAnd to feel quite new.\nSee the bird in the flowers?--he’s making\n   A rare to-do!\n\nHe thinks the whole blue sky\nIs much less than the bit of blue egg\nHe’s got in his nest--we’ll be happy\n   You and I, I and you.\n\nWith nothing to fight any more--\nIn each other, at least.\nSee, how gorgeous the world is\n   Outside the door!",
+                "metadata": {
+                    "place": "San Gaudenzio",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "spring"
+                    }
+                }
+            },
+            "street-lamps": {
+                "title": "“Street Lamps”",
+                "body": "Gold, with an innermost speck\nOf silver, singing afloat\n    Beneath the night,\nLike balls of thistle-down\nWandering up and down\nOver the whispering town\n    Seeking where to alight!\n\nSlowly, above the street\nAbove the ebb of feet\n    Drifting in flight;\nStill, in the purple distance\nThe gold of their strange persistence\nAs they cross and part and meet\n    And pass out of sight!\n\nThe seed-ball of the sun\nIs broken at last, and done\n    Is the orb of day.\nNow to the separate ends\nSeed after day-seed wends\n    A separate way.\n\nNo sun will ever rise\nAgain on the wonted skies\n    In the midst of the spheres.\nThe globe of the day, over-ripe,\nIs shattered at last beneath the stripe\nOf the wind, and its oneness veers\n    Out myriad-wise.\n\nSeed after seed after seed\nDrifts over the town, in its need\n    To sink and have done;\nTo settle at last in the dark,\nTo bury its weary spark\n    Where the end is begun.\n\nDarkness, and depth of sleep,\nNothing to know or to weep\n    Where the seed sinks in\nTo the earth of the under-night\nWhere all is silent, quite\nStill, and the darknesses steep\n    Out all the sin.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
             "suburbs-on-a-hazy-day": {
                 "title": "“Suburbs on a Hazy Day”",
                 "body": "O stiffly shapen houses that change not,\n  What conjuror’s cloth was thrown across you, and raised\nTo show you thus transfigured, changed,\n  Your stuff all gone, your menace almost rased?\n\nSuch resolute shapes, so harshly set\n  In hollow blocks and cubes deformed, and heaped\nIn void and null profusion, how is this?\n  In what strong _aqua regia_ now are you steeped?\n\nThat you lose the brick-stuff out of you\n  And hover like a presentment, fading faint\nAnd vanquished, evaporate away\n  To leave but only the merest possible taint!",
@@ -99230,6 +99824,20 @@
                     "tags": [
                         "English"
                     ]
+                }
+            },
+            "sunday-afternoon-in-italy": {
+                "title": "“Sunday Afternoon in Italy”",
+                "body": "The man and the maid go side by side\nWith an interval of space between;\nAnd his hands are awkward and want to hide,\nShe braves it out since she must be seen.\n\nWhen some one passes he drops his head\nShading his face in his black felt hat,\nWhile the hard girl hardens; nothing is said,\nThere is nothing to wonder or cavil at.\n\nAlone on the open road again\nWith the mountain snows across the lake\nFlushing the afternoon, they are uncomfortable,\nThe loneliness daunts them, their stiff throats ache.\n\nAnd he sighs with relief when she parts from him;\nHer proud head held in its black silk scarf\nGone under the archway, home, he can join\nThe men that lounge in a group on the wharf.\n\nHis evening is a flame of wine\nAmong the eager, cordial men.\nAnd she with her women hot and hard\nMoves at her ease again.\n\n_She is marked, she is singled out\n    For the fire:\nThe brand is upon him, look--you,\n    Of desire.\n\nThey are chosen, ah, they are fated\n    For the fight!\nChampion her, all you women! Men, menfolk\n    Hold him your light!\n\nNourish her, train her, harden her\n    Women all!\nFold him, be good to him, cherish him\n    Men, ere he fall.\n\nWomen, another champion!\n    This, men, is yours!\nWreathe and enlap and anoint them\n    Behind separate doors._",
+                "metadata": {
+                    "place": "Gargnano",
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "winter"
+                    }
                 }
             },
             "tarantella": {
@@ -99352,6 +99960,39 @@
                     }
                 }
             },
+            "valentine's-night": {
+                "title": "“Valentine's Night”",
+                "body": "You shadow and flame,\nYou interchange,\nYou death in the game!\n\nNow I gather you up,\nNow I put you back\nLike a poppy in its cup.\n\nAnd so, you are a maid\nAgain, my darling, but new,\nUnafraid.\n\nMy love, my blossom, a child\nAlmost! The flower in the bud\nAgain, undefiled.\n\nAnd yet, a woman, knowing\nAll, good, evil, both\nIn one blossom blowing.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "holiday": "saint_valentine"
+                    }
+                }
+            },
+            "wedlock": {
+                "title": "“Wedlock”",
+                "body": "# I.\n\nCome, my little one, closer up against me,\nCreep right up, with your round head pushed in my breast.\n\nHow I love all of you! Do you feel me wrap you\nUp with myself and my warmth, like a flame round the wick?\n\nAnd how I am not at all, except a flame that mounts off you.\nWhere I touch you, I flame into being;--but is it me, or you?\n\nThat round head pushed in my chest, like a nut in its socket,\nAnd I the swift bracts that sheathe it: those breasts, those thighs and knees,\n\nThose shoulders so warm and smooth: I feel that I\nAm a sunlight upon them, that shines them into being.\n\nBut how lovely to be you! Creep closer in, that I am more.\nI spread over you! How lovely, your round head, your arms,\n\nYour breasts, your knees and feet! I feel that we\nAre a bonfire of oneness, me flame flung leaping round you,\nYou the core of the fire, crept into me.\n\n\n# II.\n\nAnd oh, my little one, you whom I enfold,\nHow quaveringly I depend on you, to keep me alive,\nLike a flame on a wick!\n\nI, the man who enfolds you and holds you close,\nHow my soul cleaves to your bosom as I clasp you,\nThe very quick of my being!\n\nSuppose you didn’t want me! I should sink down\nLike a light that has no sustenance\nAnd sinks low.\n\nCherish me, my tiny one, cherish me who enfold you.\nNourish me, and endue me, I am only of you,\nI am your issue.\n\nHow full and big like a robust, happy flame\nWhen I enfold you, and you creep into me,\nAnd my life is fierce at its quick\nWhere it comes off you!\n\n\n# III.\n\nMy little one, my big one,\nMy bird, my brown sparrow in my breast.\nMy squirrel clutching in to me;\nMy pigeon, my little one, so warm\nSo close, breathing so still.\n\nMy little one, my big one,\nI, who am so fierce and strong, enfolding you,\nIf you start away from my breast, and leave me,\nHow suddenly I shall go down into nothing\nLike a flame that falls of a sudden.\n\nAnd you will be before me, tall and towering,\nAnd I shall be wavering uncertain\nLike a sunken flame that grasps for support.\n\n\n# IV.\n\nBut now I am full and strong and certain\nWith you there firm at the core of me\nKeeping me.\n\nHow sure I feel, how warm and strong and happy\nFor the future! How sure the future is within me;\nI am like a seed with a perfect flower enclosed.\n\nI wonder what it will be,\nWhat will come forth of us.\nWhat flower, my love?\n\nNo matter, I am so happy,\nI feel like a firm, rich, healthy root,\nRejoicing in what is to come.\n\nHow I depend on you utterly\nMy little one, my big one!\nHow everything that will be, will not be of me,\nNor of either of us,\nBut of both of us.\n\n\n# V.\n\nAnd think, there will something come forth from us.\nWe two, folded so small together,\nThere will something come forth from us.\nChildren, acts, utterance\nPerhaps only happiness.\n\nPerhaps only happiness will come forth from us.\nOld sorrow, and new happiness.\nOnly that one newness.\n\nBut that is all I want.\nAnd I am sure of that.\nWe are sure of that.\n\n\n# VI.\n\nAnd yet all the while you are you, you are not me.\nAnd I am I, I am never you.\nHow awfully distinct and far off from each other’s being we are!\n\nYet I am glad.\nI am so glad there is always you beyond my scope,\nSomething that stands over,\nSomething I shall never be,\nThat I shall always wonder over, and wait for,\nLook for like the breath of life as long as I live,\nStill waiting for you, however old you are, and I am,\nI shall always wonder over you, and look for you.\n\nAnd you will always be with me.\nI shall never cease to be filled with newness,\nHaving you near me.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
+            "why-does-she-weep": {
+                "title": "“Why Does She Weep?”",
+                "body": "Hush then\nwhy do you cry?\nIt’s you and me\nthe same as before.\n\nIf you hear a rustle\nit’s only a rabbit\ngone back to his hole\nin a bustle.\n\nIf something stirs in the branches\noverhead, it will be a squirrel moving\nuneasily, disturbed by the stress\nof our loving.\n\nWhy should you cry then?\nAre you afraid of God\nin the dark?\n\nI’m not afraid of God.\nLet him come forth.\nIf he is hiding in the cover\nlet him come forth.\n\nNow in the cool of the day\nit is we who walk in the trees\nand call to God “Where art thou?”\nAnd it is he who hides.\n\nWhy do you cry?\nMy heart is bitter.\nLet God come forth to justify\nhimself now.\n\nWhy do you cry?\nIs it Wehmut, ist dir weh?\nWeep then, yea\nfor the abomination of our old righteousness,\n\nWe have done wrong\nmany times;\nbut this time we begin to do right.\n\nWeep then, weep\nfor the abomination of our past righteousness.\nGod will keep\nhidden, he won’t come forth.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
+                }
+            },
             "the-wild-common": {
                 "title": "“The Wild Common”",
                 "body": "The quick sparks on the gorse bushes are leaping,\nLittle jets of sunlight-texture imitating flame;\nAbove them, exultant, the peewits are sweeping:\nThey are lords of the desolate wastes of sadness their screamings proclaim.\n\nRabbits, handfuls of brown earth, lie\nLow-rounded on the mournful grass they have bitten down to the quick.\nAre they asleep?--Are they alive?--Now see, when I\nMove my arms the hill bursts and heaves under their spurting kick.\n\nThe common flaunts bravely; but below, from the rushes\nCrowds of glittering king-cups surge to challenge the blossoming bushes;\nThere the lazy streamlet pushes\nIts curious course mildly; here it wakes again, leaps, laughs, and gushes.\n\nInto a deep pond, an old sheep-dip,\nDark, overgrown with willows, cool, with the brook ebbing through so slow,\nNaked on the steep, soft lip\nOf the bank I stand watching my own white shadow quivering to and fro.\n\nWhat if the gorse flowers shrivelled and kissing were lost?\nWithout the pulsing waters, where were the marigolds and the songs of the brook!\nIf my veins and my breasts with love embossed\nWithered, my insolent soul would be gone like flowers that the hot wind took.\n\nSo my soul like a passionate woman turns,\nFilled with remorseful terror to the man she scorned, and her love\nFor myself in my own eyes’ laughter burns,\nRuns ecstatic over the pliant folds rippling down to my belly from the breast-lights above.\n\nOver my sunlit skin the warm, clinging air,\nRich with the songs of seven larks singing at once, goes kissing me glad.\nAnd the soul of the wind and my blood compare\nTheir wandering happiness, and the wind, wasted in liberty, drifts on and is sad.\n\nOh but the water loves me and folds me,\nPlays with me, sways me, lifts me and sinks me as though it were living blood,\nBlood of a heaving woman who holds me,\nOwning my supple body a rare glad thing, supremely good.",
@@ -99360,6 +100001,19 @@
                     "tags": [
                         "English"
                     ]
+                }
+            },
+            "winter-dawn": {
+                "title": "“Winter Dawn”",
+                "body": "Green star Sirius\nDribbling over the lake;\nThe stars have gone so far on their road,\nYet we’re awake!\n\nWithout a sound\nThe new young year comes in\nAnd is half-way over the lake.\nWe must begin\n\nAgain. This love so full\nOf hate has hurt us so,\nWe lie side by side\nMoored--but no,\n\nLet me get up\nAnd wash quite clean\nOf this hate.--\nSo green\n\nThe great star goes!\nI am washed quite clean,\nQuite clean of it all.\nBut e’en\n\nSo cold, so cold and clean\nNow the hate is gone!\nIt is all no good,\nI am chilled to the bone\n\nNow the hate is gone;\nThere is nothing left;\nI am pure like bone,\nOf all feeling bereft.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "winter"
+                    }
                 }
             },
             "winter-in-the-boulevard": {
@@ -99381,6 +100035,29 @@
                     "context": {
                         "season": "winter"
                     }
+                }
+            },
+            "a-young-wife": {
+                "title": "“A young wife”",
+                "body": "The pain of loving you\nIs almost more than I can bear.\n\nI walk in fear of you.\nThe darkness starts up where\nYou stand, and the night comes through\nYour eyes when you look at me.\n\nAh never before did I see\nThe shadows that live in the sun!\n\nNow every tall glad tree\nTurns round its back to the sun\nAnd looks down on the ground, to see\nThe shadow it used to shun.\n\nAt the foot of each glowing thing\nA night lies looking up.\n\nOh, and I want to sing\nAnd dance, but I can’t lift up\nMy eyes from the shadows: dark\nThey lie spilt round the cup.\n\nWhat is it?--Hark\nThe faint fine seethe in the air!\n\nLike the seething sound in a shell!\nIt is death still seething where\nThe wild-flower shakes its bell\nAnd the sky lark twinkles blue--\n\nThe pain of loving you\nIs almost more than I can bear.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ],
+                    "context": {
+                        "season": "spring"
+                    }
+                }
+            },
+            "a-youth-mowing": {
+                "title": "“A Youth Mowing”",
+                "body": "There are four men mowing down by the Isar;\nI can hear the swish of the scythe-strokes, four\nSharp breaths taken: yea, and I\nAm sorry for what’s in store.\n\nThe first man out of the four that’s mowing\nIs mine, I claim him once and for all;\nThough it’s sorry I am, on his young feet, knowing\nNone of the trouble he’s led to stall.\n\nAs he sees me bringing the dinner, he lifts\nHis head as proud as a deer that looks\nShoulder-deep out of the corn; and wipes\nHis scythe-blade bright, unhooks\n\nThe scythe-stone and over the stubble to me.\nLad, thou hast gotten a child in me,\nLaddie, a man thou’lt ha’e to be,\nYea, though I’m sorry for thee.",
+                "metadata": {
+                    "language": "English",
+                    "tags": [
+                        "English"
+                    ]
                 }
             }
         }
@@ -152311,11 +152988,19 @@
                 "body": "Savor of love is thick on the April air,\nThe blunted boughs dispose their lacy bloom,\nAnd many sorry steeds dismissed to pasture\nToss their old forelocks, flourish heavy heels.\nWhere is there any unpersuaded poet\nSo angry still against the wrongs of winter\nWhich caused the dainty earth to droop and die,\nSo vengeant for his vine and summer song,\nAs to decline the good releasing thaw?\nPoets have temperature and follow seasons,\nAnd covenants go out at equinox.\n\nThe champions! For Heaven, riding high\nAbove the icy death, considered truly;\n“My agate icy work, I thought it fair;\nYet I have lacked that pretty lift of praise\nThat mounted once from these emaciate minstrels.\nThey will not sing, and duty drops away\nAnd I must turn and make a soft amend!”\nAt once he showered April down, until\nThe bleak twigs bloom again; and soon, I swear,\nHe shall receive his praise.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
                     "context": {
-                        "month": "april"
+                        "month": "april",
+                        "month_epoch": "middle"
                     }
                 }
             },
@@ -152324,11 +153009,19 @@
                 "body": "So he took her as anointed\nIn the part he had appointed,\nShe was lips for smiling faintly,\nEyes to look and level quaintly,\nLength of limb and splendors of the bust\nWhich he honored as he must.\n\nQueen of women playing model,\nPure of brow but brain not idle,\nSitting in her silence meetly,\nLet her adjective be stately;\nSo he thought his art would manage right\nIn the honest Northern light.\n\nBut he fashioned it too coldly,\nApril broke-and-entered boldly,\nThinking how to suit the season’s\nOdor, savor, heats and treasons:\nPainter! do not stoop and play the host\nLest the man come uppermost.\n\nYet he knew that he was altered\nWhen the perfect woman faltered,\nLanguish in her softly speaking,\nAnguish, even, in her looking:\nAll the art had fled his fingertips\nSo he bent and kissed her lips.\n\nHe and Venus took their pleasure,\nThen he turned upon his treasure,\nTook and trampled it with loathing,\nFlung it over cliffs to nothing;\nGlittering in the sunlight while it fell\nLike a lovely shattered shell.\n\nStrict the silence that came onward\nAs they trod the foothill downward,\nOne more mocking noon of April,\nMischief always is in April;\nStill she touched his fingers cold as ice\nAnd recited, “It was nice.”",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Chills and Fever",
+                        "type": "book",
+                        "published": {
+                            "year": "1924"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
                     "context": {
-                        "month": "april"
+                        "month": "april",
+                        "month_epoch": "middle"
                     }
                 }
             },
@@ -152337,6 +153030,13 @@
                 "body": "The wind went cold as the day went old,\nAnd I went very sad,\nTill I saw something by the road\nThat brought me round and glad.\n\nThe keen wind nipped me northerly\nAnd bent me back almost,\nAnd I was the worst discouraged man\nAbroad on any boast,\n\nThe road was rocks and wilderness\nAnd never a sign of a town,\nIt tapered up a wicked hill,\nI tried to curse it down,\n\nBut like an undefeated man\nI mounted, slow and hard:\nAnd round the top was a little house\nWith a woman in the yard.\n\nShe was a housewife in her yard,\nTending her husband’s place;\nThe broom was busy in her hand,\nThe goodness in her face.\n\nShe brushed the yard, she brushed the step,\nShe made the leaves to spin,\nTidying up her husband’s place\nOutside as well as in.\n\nI knew no woman and no house\nAnd night was just ahead;\nYet I went cheerful down the hill\nRested and warmed and fed.\n\nFor some man had a woman there\nTo keep his board and bed;\n“I have seen women by these bad roads,\nThank God for that,” I said.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -152373,6 +153073,13 @@
                 "body": "A great green spread of meadow land,\n(Must rest his weight on an ample base),\nA secret water moving on,\nA clean blue air for his breathing-space,\nA pair of willows bending down\nIn double witness to his grace,\nAnd on the rock his sinner sprawls\nAnd looks the Strong One face to face.\n\nThe sinner’s mocking tongue is dry,\nWonder is on that mighty jeerer,\nHe loves, and he never loved before,\nHe wants the glowing sky no nearer,\nHe likes the willows to be two,\nHe would not have the water clearer,\nHe thinks that God is perfect once:\nHeaven, rejoice! a new God-fearer.\n\nAnd now each quiet thing awakes\nAnd dances madly, wavers, dips;\nThese are God’s motions on the air,\nHis Pulse for the sinner’s finger-tips,\nHis arrows shot across the blue,\nHis love-words dropping from his lips,\nAnd who ever heard such whisperings,\nWho ever saw such fellowships?",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -152396,6 +153103,13 @@
                 "body": "I heard a story of a sailing man.\nHe was a surly sort of mariner,\nHe used to swear at all the seven seas,\nAnd rode them dauntless up and down the earth.\n\nBut when he sickened of the windy wash,\nHe took to wife a proper village woman\nAnd put her in a precious little house;\nAnd there he weathered many winter seasons,\nKnocking the ashes neatly from his pipe\nUpon the tended hearth.\n\nAnd only when he went upon the moors,\nAnd felt the sting and censure of the winds,\nAnd tasted of the salt blown in from sea,\nThen only would he curse the marriage morning,\nAnd swear he’d not go skulking back again\nTo sit that hearth like any broken ass\nWhose running time was over.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -152406,6 +153120,13 @@
                 "body": "The country farmer has his joys\nOf little city girls and boys\nWhen brother Thomas brings his brood\nOf motherless brats in Christmas mood\nTo try our country air and food.\nAnd O what splendid pies and cakes\nTheir pleased and pretty grandma makes!\nAnd O what squeals and stomach-aches!\n\nPoor Thomas shepherds him a flock\nOf city souls as hard as rock,\nAnd though they will not fill his larder\nHe only preaches Christ the harder.\nBut Ann, though seven years my niece,\nIs still a pagan little piece,\nAnd as she often hints to me\nShe hates the sound of piety.\nFair Inez is my ancient setter\nWho lies by the fire when we will let her:\nAlas, this amiable dog\nHeard all the bitter dialogue\nThat passed between my niece and brother\nMisunderstanding one another.\n\n\n> _Ann:_\n\nFather, what will there be for me\nTo-morrow on the Christmas tree?\nHave you told Santa what to bring,\nMy pony, my doll, and everything?\n\n\n> _Thomas:_\n\nMy daughter, Santa will know best\nWhat to bring you, and what the rest.\nBut father and his little girl\nAnd everybody in the world\nShould dwell to-night on higher things,\nFor hark! the herald angel sings,\nAnd in a manger poor and lowly\nLies little Jesus, high and holy.\n\n\n> _Ann:_\n\nFather, don’t talk of little Jesus,\nYou’re only doing it to tease us,\nIt isn’t nearly time for bed,\nAnd I want to know what Santa said.\n\n\n> _Thomas:_\n\nJesus is better than any toys\nFor little sinning girls and boys,\nFor Jesus saves, but sin destroys.\n\nAnd O, it gives him sad surprise,\nThere must be tears in Jesus’ eyes,\nWhen little girls with bad behavior\nForget to own their Lord and Savior.\n\n\n> _Ann:_\n\nI didn’t, you know it isn’t true!\nI say my prayers, I always do,\nI know about Jesus very well,\nAnd God the Father, Heaven, and Hell.\nO please don’t say it any more,\nYou’ve said it so many times before,\nBut tell me all about Santa instead,\nAnd about the horns on his reindeer’s head,\nAnd what he will bring me on his sled.\n\n\n> _Thomas:_\n\nThis night he was born on earth for us,\nAnd can my daughter mock him thus,\nAnd care more for her worldly pleasures\nThan Jesus’ love and heavenly treasures?\nFor Jesus didn’t like to be\nSo crowned with thorns and nailed to tree,\nBut there was a sinful world to free,\nAnd out he went to Gethsemane--\n\n\n> _Ann:_\n\nAnd left the twelve and went apart--\nO father, I know it off by heart,\nPlease, father, please don’t finish it out,\nThere’s so much else to talk about!\nI ask about Santa, and there you go,\nAnd now you’re spoiling my Christmas so,\nAnd you are the wickedest man I know!\n\n\nDisgraceful scenes require the curtain,\nBut lest the moral be uncertain,\nI briefly bring the good report\nThat valiant Thomas held the fort,\nAnd wicked Ann was quite defeated,\nIn vain denied, in vain entreated,\nIn vain she wailed, in vain she wept,\nAnd said a briny prayer, and slept.\nWhile Inez, who had been perplexed\nTo see good kinsfolk so much vexed,\nWhen peace descended on the twain,\nLay down beside the fire again.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -152419,6 +153140,13 @@
                 "body": "“My son,” the stranger thus began,\nAnd drew me to the window side,\n“Now here are beauties better than\nYou ever have dreamed, or ever can.\nBut yet beware!” he cried.\n\nA tidy citizen was he\nAlthough a dismal daffy one.\n“See this one pose and pout for me\nAnd march around magnificently.\nBut I’m immune, my son.”\n\n“Observe how ripe the lady’s lips,\nHow Titianesque the mop of hair,\nAnd where the great white shoulder dips\nBeneath its gauzy half-eclipse,\nYou well may stare and stare.”\n\n“When I was young I said as you\nAre saying in your sapphic youth,”\n\n“That ah! such lips were certain cue,\nAnd look! her bosom’s rhythm too,\nIt signified her truth;”\n\n“Her broad brow meant intelligence\nAnd something better than a bone,\nHer body’s curves were spirit’s tents,\nHer fresh young skin was innocence\nInstead of meat that shone.”\n\n“I wish the moralists would thresh\n(Indeed the thing is very droll)\nGod’s oldest joke, forever fresh:\nThe fact that in the finest flesh\nThere isn’t any soul.”",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -152429,6 +153157,13 @@
                 "body": "Conrad, Conrad, aren’t you old\nTo sit so late in your mouldy garden?\nAnd I think Conrad knows it well,\nNursing his knees, too rheumy and cold\nTo warm the wraith of a Forest of Arden.\n\nNeuralgia in the back of his neck,\nHis lungs filling with such miasma,\nHis feet dipping in leafage and muck:\nConrad! you’ve forgotten asthma.\n\nConrad’s house has thick red walls,\nThe log on Conrad’s hearth is blazing,\nSlippers and pipe and tea are served,\nButter and toast are meant for pleasing!\nStill Conrad’s back is not uncurved\nAnd here’s an autumn on him, teasing.\n\nAutumn days in our section\nAre the most used-up thing on earth\n(Or in the waters under the earth)\nHaving no more color nor predilection\nThan cornstalks too wet for the fire,\nA ribbon rotting on the byre,\nA man’s face as weathered as straw\nBy the summer’s flare and winter’s flaw.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Chills and Fever",
+                        "type": "book",
+                        "published": {
+                            "year": "1924"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -152442,6 +153177,13 @@
                 "body": "When hurrying home on a rainy night\nAnd hearing tree-tops rubbed and tossed,\nAnd seeing never a friendly star\nAnd feeling your way when paths are crossed:\nStop fast and turn three times around\nAnd try the logic of the lost.\n\nWhere is the heavenly light you dreamed?\nWhere is your hearth and glowing ash?\nWhere is your love by the mellow moon?\nHere is not even a lightning-flash,\nAnd in a place no worse than this\nLost men shall wail and teeth shall gnash.\n\nLightning is quick and perilous,\nThe dawn comes on too slow and pale,\nYour love brings only a yellow lamp,\nYet of these lights one shall avail:\nThe dark shall break for one of these,\nI’ve never known this thing to fail.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -152458,10 +153200,17 @@
                 }
             },
             "dumb-bells": {
-                "title": "“Dumb-Bells”",
+                "title": "“Dumb-bells”",
                 "body": "Dumb-bells left, dumb-bells right,\nSwing them hard, grip them tight!\nThirty fat men of the town\nMust sweat their filthy paunches down.\nDripping sweat and pumping blood\nThey try to make themselves like God.\n\nOne and two, three and four,\nCleave the air and smite the floor!\nFive and six, seven and eight,\nLegs apart, shoulders straight!\nThirty fat men grunt and puff,\nThirty bellies plead, Enough!\n\nDumb-bells up, dumb-bells down,\nDumb-bells front, dumb-bells ground!\nThirty’s God has just the girth\nTo pull the levers of the earth,\nThey made him sinewy and lean\nAnd washed him glittering white and clean.\n\nDumb-bells in, dumb-bells out,\nCount by fours and face about!\nPut by dumb-bells for to-day,\nWash the stinking sweat away\nAnd go out clean. But come again;\nWorship’s every night at ten.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -152495,6 +153244,13 @@
                 "body": "Four sisters sitting in one house,\nI said, these roses on a stem\nWith bosoms bare. But wayfaring\nI went and ravished one of them.\n\nSo one was taken. But the three,\nThey spread their petals just the same,\nThey turned no decent pale for grief,\nThey drew no fragrance back for shame.\n\nThe canker is on roses too!\nI cried, and lifted up the rod\nAnd scourged them bleeding to the ground.\nAll, all are sinners unto God.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -152505,6 +153261,30 @@
                 "body": "I viewed him well, the visible fat fool,\nAnd yet I took him in; for I contended,\nFriends are not sent in order of our choosing,\nThey come unsuited like the gifts of God.\nI would not do a perfidy to friendship,\nI let him past the private inner gate\nAnd made him be at home among my treasures\nLike my true friend.\n\nNow I am ground with a grim torture daily\nThat I have been befriended by a fool.\nHe forages at will upon my garden,\nHe noses all its pretty secrets out,\nAnd still the fool finds nothing to his liking.\nMeeting a modest velveteen affair,\nPeevish he hangs his sad and silly head:\n“Alas! such unsubstantial gaudy goods!”\nThus he meets pansies; meeting zinnias,\nHe nearly faints at such a rioting:\n“Alas! what fruit will these red wantons bear?”\n\nAnd not a perfume spills upon the air\nBut his malicious nose suspects a poison,\nAs he goes browsing like an ancient ass,\nAn old distempered ass.\n\nI’d almost rather be a friendless man\nAnd have my house my own. The prying fool\nAsks me the queerest idiotic questions:\n“O friend, is this the harvest of your hands?\nHow will you stand before the lord of harvests?\nThese are the gardens of your idleness;\nWhere is the vineyard, friend?”",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ]
+                }
+            },
+            "geometry": {
+                "title": "“Geometry”",
+                "body": "My window looks upon a wood\nThat stands as tangled as it stood\nWhen God was centuries too young\nTo care how right he worked, or wrong,\nHis patterns in obedient trees,\nUnprofited by the centuries\nHe still plants on as crazily\nAs in his drivelling infancy.\n\nPoor little elms beneath the oak!\nThey thrash their arms around and poke\nAt tyrant throats, and try to stand\nStraight up, like owners of the land;\nFor they expect the vainest things,\nAnd even the boniest have their flings.\n\nHickory shoots unnumbered rise,\nSallow and wasting themselves in sighs,\nChildren begot at a criminal rate\nIn the sight of a God that is profligate.\nThe oak-trees tower over all,\nThey seem to rise above the brawl,\nThey seem but just observe the hoax,\nThey are obscured by other oaks!\nThey laugh the weaklings out of mind,\nAnd fight forever with their kind.\n\nFor oaks are spindling too, and bent,\nAnd only strong by accident;\nAnd if there is a single tree\nOf half the size it ought to be,\nIt need not give him thanks for that,\nHe did not plan its habitat.\n\nWhen tree-tops go to pushing so,\nThere’s every evil thing below;\nThere s clammy fungus everywhere,\nAnd poison waving on the air,\nA plague of insects from the pool\nTo sting some ever-trusting fool,\nSerpents issuing from the foot\nOf oak-trees rotten at the root,\nOwls and frogs and whippoorwills,\nCackling of all sorts of ills.\n\nImagine what a pretty thing\nThe slightest landscape-gardening\nHad made of God’s neglected wood!\nI’m glad man has the hardihood\nTo tamper with creation’s plan\nAnd shape it worthier of man.\nImagine woods and sun-swept spaces,\nShadows and lights in proper places,\nTrees just touching friendly-wise,\nBees and flowers and butterflies.\n\nAn easy thing to improve on God,\nSimply the knowing of even from odd,\nSimply to count and then dispose\nIn patterns everybody knows,\nSimply to follow curve and line\nIn geometrical design.\n\nGardeners only cut their trees\nFor nobler regularities.\nBut from my window I have seen\nThe noblest patch of quivering green\nLashed till it never quivered again.\nGod had a fit of temper then,\nAnd spat shrill wind and lightning out\nAt twinges of some godly gout.\n\nBut as for me, I keep indoors\nWhenever he starts his awful roars.\nWhat can one hope of a crazy God\nBut lashings from an aimless rod?",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -152515,9 +153295,19 @@
                 "body": "Who is it beams the merriest\nAt killing a man, the laughing one?\nYou are the one I nominate,\nGod of the rivers of Babylon.\n\nA hundred times I’ve taken the mules\nAnd started early through the lane,\nAnd come to the broken gate and looked,\nAnd there my partner was again,\nSitting on top of a sorrel horse\nAnd picking the burrs from its matted mane,\nSaying he thought he’d help me work\nThat field of corn before the rain;\nAnd I never spoke of the dollar a day,\nIt’s no use causing hired men pain,\nBut slipped it into his hand at dark\nWhile he undid the coupling chain;\nAnd whistled a gospel tune, and knew\nHe’d join in strong on the refrain.\n\nFor I would pitch the treble high,\n“Down at the cross where my Savior died,”\nAnd then he rolled along the bass,\n“There did I bury my sin and pride.”\n\nSinful pride of a hired man!\nOut of a hired woman born!\nI’m thinking now how he was saved\nOne day while plowing in the corn.\nWe plowed that steamy morning through,\nI with the mule whose side was torn,\nAnd keeping an eye on the mule I saw\nThat the sun looked high and the man looked worn;\nI would take him home to dinner with me,\nAnd there! my father’s dinner horn.\n\nThe sun blazed after dinner so\nWe sat a while by the maple trees,\nThinking of mother’s pickles and pies\nAnd smoking a friendly pipe at ease.\nI broached a point of piety,\nFor pious men are quick to tease:\nWas it really true John dipped his crowd\nDown in the muddy Jordan’s lees?\n\nAnd couldn’t the Baptists backslide too\nIf only they went on Methodist sprees?\nAnd finally back to the field we went,\nThe corn was well above my knees,\nThe weeds were more than ankle high,\nAnd dangerous customers were these.\nWe went to work in the heat again,\nI hoped we’d get a bit of breeze\nAnd thought the hired man was used\nTo God’s most blazing cruelties.\n\nSundays, the hired man would pray\nTo live in the sunshine of his face;\nNow here was answer come complete,\nRather an overdose of grace!\n\nHe fell in the furrow, an honest place\nAnd an easy place for a man to fall.\nHis horse went marching blindly on\nIn a beautiful dream of a great fat stall.\nAnd God shone on in merry mood,\nFor it was a foolish kind of sprawl,\nAnd I found a hulk of heaving meat\nThat wouldn’t answer me at all\nAnd a fresh breeze made the young corn dance\nTo a bright green, glorious carnival.\n\nAnd really, is it not a gift\nTo smile and be divinely gay,\nTo rise above a circumstance\nAnd smile distressing scenes away?\n\nBut this was a thing that I had said,\nI was so forward and untamed:\n“I will not worship wickedness\nThough it be God’s--I am ashamed!\nFor all his mercies God be thanked\nBut for his tyrannies be blamed!\nHe shall not have my love alone,\nWith loathing too his name is named.”\n\nI caught him up with all my strength\nAnd with a silly stumbling tread\nI dragged him over the soft brown dirt\nAnd dumped him down beside the shed.\n\nI thought of the prayers the fool had prayed\nTo his God, and I was seeing red,\nWhen all of a sudden he gave a heave\nAnd then with shuddering--vomited!\nAnd God, who had just received full thanks\nFor all his kindly daily bread,\n\nNow called it back again--perhaps\nTo see that his birds of the air were fed.\nNot mother’s dainty dinner now,\nA rather horrible mess instead,\nYet all of it God required of him\nBefore the fool was duly dead.\n\nEven of deaths there is a choice,\nI’ve seen you give a good one, God,\nBut he in his vomit laid him down,\nDenied the decency of blood.\n\nIf silence from the dead, I swore,\nThere shall be cursing from the quick!\nBut I began to vomit too,\nCursing and vomit ever so thick;\nThe dead lay down, and I did too,\nTwo ashy idiots: take your pick!\nA little lower than angels he made us,\n(Hear his excellent rhetoric),\nA credit we were to him, half of us dead,\nThe other half of us lying sick.\n\nThe little clouds came Sunday-dressed\nTo do a holy reverence,\nThe young corn smelled its sweetest too,\nAnd made him goodly frankincense,\nThe thrushes offered music up,\nChoired in the wood beyond the fence.\n\nAnd while his praises filled the earth\nA solitary crow sailed by,\nAnd while the whole creation sang\nHe cawed--not knowing how to sigh.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
-                    ]
+                    ],
+                    "context": {
+                        "season": "summer"
+                    }
                 }
             },
             "the-ingrate": {
@@ -152525,9 +153315,19 @@
                 "body": "By night we looked across my field,\nThe tasseled corn was fine to see,\nThe moon was yellow on the rows\nAnd seemed so wonderful to me,\nThat with an old provincial pride\nI praised my moonlit Tennessee,\nAnd thought my poor befriended man\nWould never dare to disagree.\n\nHe was a frosty Russian man\nAnd wore a bushy Russian beard;\nHe had two furtive faded eyes\nThat some old horror once had seared;\nI wondered if they ever would\nForget the horrors they had feared;\nYet when I praised my pleasant field\nThis stupid fellow almost jeered.\n\n“Your moon shines very well, my friend,\nYour fields are good enough, I know;\nAt home our fields in the winter-time\nWere always white, and shining so!\nOur nights went beautiful like day,\nAnd bitter cold our winds would blow;\nAnd I remember how it looked,\nDear God, my country of the snow!”",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
-                    ]
+                    ],
+                    "context": {
+                        "season": "winter"
+                    }
                 }
             },
             "janet-walking": {
@@ -152545,6 +153345,13 @@
                 "body": "I sat in a friendly company\nAnd wagged my wicked tongue so well,\nMy friends were listening close to hear\nThe wickedest tales that I could tell.\nFor many a fond youth waits, I said,\nOn many a worthless damozel;\nBut every trusting fool shall learn\nTo wish them heartily in hell.\n\nAnd when your name was spoken too,\nI did not change, I did not start,\nAnd when they only praised and loved,\nI still could play my secret part,\nCursing and lies upon my tongue,\nAnd songs and shouting in my heart.\n\nBut when you came and looked at me,\nYou tried my poor pretence too much.\nO love, do you know the secret now\nOf one who would not tell nor touch?\nMust I confess before the pack\nOf babblers, idiots, and such?\n\nDo they not hear the burst of bells,\nPealing at every step you make?\nAre not their eyelids winking too,\nFeeling your sudden brightness break?\nO too much glory shut with us!\nO walls too narrow and opaque!\nO come into the night with me\nAnd let me speak, for Jesus’ sake.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -152555,6 +153362,13 @@
                 "body": "“How many goodly creatures are there here!”\nMiranda doted on the sight of seamen,\nThe very casual adventurers\nWho took a flood as quickly as a calm,\nAnd kept their blue eyes blue to any weather.\nThis was the famous manliness of men;\nAnd when she saw it on the dirty strangers,\nShe clapped her pretty hands in sudden joy:\n“O brave new world!”",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -152573,11 +153387,35 @@
                     }
                 }
             },
+            "moonlight": {
+                "title": "“Moonlight”",
+                "body": "He feigned a fine indifference\nTo be so prodigal of light,\nKnowing his piteous twisted things\nWould lose the crooked marks of spite\nWhen only moonbeams fit the dusk\nAnd made his wicked world seem right.\n\nBut we forget so soon the shame,\nConceiving sweetness if we can\nHeaven the citadel itself\nIllumined on the lunar plan;\nAnd I the chief of sinners, I\nThe middlemost Victorian!\n\nNow I shall ride the misty lake\nWith my own love, and speak so low\nThat not a fishy thing shall hear\nThe secrets passing to and fro\nAmid the moonlight poetries.\nO moonshine, how unman us so?",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ]
+                }
+            },
             "morning": {
                 "title": "“Morning”",
                 "body": "The skies were jaded, while the famous sun\nSlack of his office to confute the fogs\nLay sick abed; but I, inured to duty,\nSat for my food. Three hours each day we souls,\nWho might be angels but are fastened down\nWith bodies, most infuriating freight,\nSit fattening these frames and skeletons\nWith filthy food, which they must cast away\nBefore they feed again.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -152598,6 +153436,13 @@
                 "body": "My good old father tucked his head,\n(His face the color of gingerbread)\nOver the table my mother had spread,\nAnd folded his leathery hands and said:\n\n“We thank thee, Lord, for this thy grace,\nAnd all thy bounties to the race;\nTurn not away from us thy face\nTill we come to our final resting-place.”\n\nThese were the words of the old elect,\nOr others to the same effect.\n\nI love my father’s piety,\nI know he’s grateful as can be,\nA man that’s nearly seventy\nAnd past his taste for cookery.\nBut I am not so old as he,\nAnd when I see in front of me\nThings that I like uncommonly,\n\n(Cornfield beans my specialty,\nWhen every pod spills two or three),\nThen I forget the thou and thee\nAnd pray with total fervency:\n\nThank you, good Lord, for dinner-time!\nGladly I come from the sweat and grime\nTo play in your Christian pantomime.\n\nI wash the black dust from my face,\nI sit again in a Christian’s place,\nI hear the ancient Christian’s grace.\n\nMy thanks for clean fresh napkin first,\nWith faint red stain where the fruit-jar burst.\n\nThanks for a platter with kind blue roses,\nFor mother’s centerpiece and posies,\nA touch of art right under our noses.\n\nMother, I’ll thank you for tumbler now\nOf morning’s milk from our Jersey cow.\n\nAnd father, thanks for a generous yam,\nAnd a helping of home-cured country ham,\n(He knows how fond of it I am.)\n\nFor none can cure them as can he,\nAnd he won’t tell his recipe,\nBut God was behind it, it seems to me.\n\nThank God who made the garden grow,\nWho took upon himself to know\nThat we loved vegetables so.\nI served his plan with rake and hoe,\nAnd mother, boiling, baking, slow\nTo her favorite tune of Old Black Joe,\nPredestined many an age ago.\n\nPearly corn still on the cob,\nMy teeth are aching for that job.\n\nTomatoes, one would fill a dish,\nPotatoes, mealy as one could wish.\n\nCornfield beans and cucumbers,\nAnd yellow yams for sweeteners.\n\nPickles between for stepping-stones,\nAnd plenty of cornmeal bread in pones.\n\nSunday the preacher droned a lot\nAbout a certain whether or not:\n\nIs God the universal friend,\nAnd if men pray can he attend\nTo each man’s individual end?\n\nThey pray for individual things,\nGive thanks for little happenings,\nBut isn’t his sweep of mighty wings\nMeant more for businesses of kings\nThan pulling small men’s petty strings?\n\nHe’s infinite, and all of that,\nThe setting sun his habitat,\nThe heavens they hold by his fiat,\nThe glorious year that God begat;\nAnd what is creeping man to that,\nO preacher, valiant democrat?\n\n“The greatest of all, his sympathy,\nHis kindness, reaching down to me.”\n\nLike mother, he finds it his greatest joy\nTo have big dinners for his boy.\n\nShe understands him like a book,\nIn fact, he helps my mother cook,\nAnd slips to the dining-room door to look;\n\nAnd when we are at our noon-day meal,\nHe laughs to think how fine we feel.\n\nAn extra fork is by my plate,\nI nearly noticed it too late!\n\nMother, you’re keeping a secret back!\nI see the pie-pan through the crack,\nIncrusted thick in gold and black.\n\nThere’s no telling what that secret pair\nHave cooked for me in the kitchen there,\n\nThere’s no telling what that pie can be,\nBut tell me that it’s blackberry!\n\nAs long as I keep topside the sod,\nI’ll love you always, mother and God.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -152608,6 +153453,13 @@
                 "body": "There’s a patch of trees at the edge of the field,\nAnd a brown little house that is kept so warm,\nAnd a woman waiting by the hearth\nWho still keeps most of a woman’s charm.\n\nShe traffics in her woman’s goods\nAnd is my woman of affairs.\nYet not so fast, my moral men,\nNovember’s most poetic airs\nAre heavy with old lovers’ tales,\nHow hearths are holy with their prayers,\nHow women give their fragrance up\nAnd give their love to the man that dares.\nNow who goes heedless hearing that?\nAt last we trade, we laissez-faires.\n\nO moralizers, it is hard\nWhen I am not a candidate\nFor holy wedlock’s offices,\nThat mother has picked me out a mate,\n\nAnd couldn’t have made a sorrier choice\nThan that same Smiley’s daughter Kate,\nWho prays for the sinners of the town\nAnd never comes to meeting late,\nWho sings soprano in the choir\nAnd swallows Christian doctrine straight.\nOf all the girls deliver me\nFrom the girl you haven’t the heart to hate!\nPiety: O what a hideous thing!\nAnd thirty-odd pounds she’s underweight.\n\nThe winds of late November droop\n(Poor little failures) very low,\nAs up and down the farm they pass,\nPass up and down, and to and fro,\nAnd look for a home they are not to find,\nFor they were homeless years ago …\n\nBut years ago I knew a girl,\nBeautiful, fit for a Grand Vizier’s,\nA girl with laughing on her lips\nAnd in her eyes the quickest tears,\nAnd low of speech, as when one finds\nA mother cooing to her dears.\nI took the note into my heart,\nAnd so did other cavaliers.\n\nIf God had heard my prayer then,\nThe good folk couldn’t point and say\nAs mother says they’re pointing now:\nBehold, one stands in the sinners’ way!\nThe stiffest sceptic bends his neck\nAnd stands on no more vain parley\nIf such as she would have him come,\nWorship with her in the Baptist way,\nAccept the fables as he can,\nA Jewish God, a Passion Play;\nAnd such a lover never comes\nTo fondling dirty drabs for pay.\nBut God had another man for her,\nHe cannot answer all that pray.\n\nNovember winds are weak and cold,\nThey lie at last beneath the blue\nAnd sleep in the fields as cold as they.\nI know but one good thing to do,\nSo hearken, all ye mutineers:\nEvery man to his rendezvous!\n\nMy woman waits by the hearth, I say,\nAnd what is a scarlet woman to you?\nHer sins are scarlet if you will,\nHer lips are hardly of that hue,\n\nAnd many a time I’ve seen her sit\nBeside the hearth an hour or two,\nAnd set the pot upon the fire\nAnd wait until she’s spoken to.\nA hateful owl is roosting near\nWho mocks my woman, Hoo, Hoo, Hoo,\nBut the pot sings back just as shrill as it can,\nAnd the angry fire-log crashes through;\nAnd there the woman waits and I,\nponder the ways of God--and rue!",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -152617,11 +153469,35 @@
                     }
                 }
             },
-            "ones-who-reject-christ": {
-                "title": "“Ones Who Reject Christ”",
-                "body": "There’s farmers and there’s farmers,\nThere’s many a field and field,\nBut none of the farmers round about\nCan haul such harvest-wagons out\nAs I from an acre’s yield.\n\nThere’s plenty and plenty of farmers\nThat leave the ground by the fence,\nThinking it’s nice if a patch of roses\nShould scratch out the hay and tickle their noses\nWith nice little wild-rose scents.\n\nI’m not like other farmers,\nI make my farming pay;\nI never go in for sentiment,\nAnd seeing that roses yield no rent\nI cut the stuff away.\n\nA very good thing for farmers\nIf they would learn my way;\nFor crops are all that a good field grows,\nAnd nothing is worse than a sniff of rose\nIn the good strong smell of hay.",
+            "one-who-rejected-christ": {
+                "title": "“One Who Rejected Christ”",
+                "body": "There’s farmers and there’s farmers.\nThere’s many a field and field\nBut none of the farmers round about\nCan haul such harvest-wagons out\nAs I from an acre’s yield\n\nThere’s plenty and plenty of farmers\nThat leave the ground by the fence,\nThinking it’s nice if a patch of roses\nShould scratch out the hay and tickle their noses\nWith nice little wild-rose scents.\n\nI’m not like other farmers\nI make my farming pay;\nI never go in for sentiment\nAnd seeing that roses yield no rent\nI cut the stuff away\n\nA very good thing for farmers\nIf they would learn my way;\nFor crops are all that a good field grows,\nAnd nothing is worse than a sniff of rose\nIn the good strong smell of hay.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ]
+                }
+            },
+            "overtures": {
+                "title": "“Overtures”",
+                "body": "My dear and I, we disagreed\nWhen we had been much time together.\nFor when will lovers learn to sail\nFrom sailing always in good weather?\n\nShe said a hateful little word\nBetween the pages of the book.\nI bubbled with a noble rage,\nI bruised her with a dreadful look,\n\nAnd thanked her kindly for the word\nOf such a little silly thing;\nIndeed I loved my poet then\nBeyond my dear, or anything.\n\nAnd she, the proud girl, swept away,\nHow swift and scornfully she went!\nAnd I the frightened lover stayed,\nAnd have not had one hour’s content\n\nUntil to-day; until I knew\nThat I was loved again, again;\nThen hazard how this thing befell,\nBrother of women and of men?\n\n_“Perhaps a gallant gentleman\nAccomplished it, who saw you bleed;\nPerhaps she wrote upon the book\nA riddling thing that you could read;\n\n“Perhaps she crept to you, and cried,\nAnd took upon her all the blame.”_\nO no, do proud girls creep and cry?\n_“Perhaps she whispered you your name.”_\n\nO no, she walked alone, and I\nWas walking in the rainy wood,\nAnd saw her drooping by the tree,\nAnd saw my work of widowhood.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -152647,11 +153523,35 @@
                     ]
                 }
             },
+            "the-power-of-god": {
+                "title": "“The Power of God”",
+                "body": "If the power of God were mine, and the ample turn,\nI never could dwell in my law, which is ’stablished and stern,\n\nBut my pity would plague me still! In the fare of my state\nI would summon my ministers often to reprobate:\n\n“Do ye see them walk on the unwaked streets of the town?\nAre they not of my handmaidens, burdened and bending down?\n\n“It is not yet day, and my tale of the stars not told,\nBut already they bear of their burdens, and tremble of cold.\n\n“Do ye heed not her, ye stony and reconciled,\nOne gathering sticks for a fire, who is heavy with child?\n\n“And one was so heavy with sleep that she watched not, and slept\nTill it nearly was dawn, and then she arose and wept.\n\n“Previsal I made, and the burning of quenchless gold,\nYet still they bedevil my kingdom, the dark and the cold.\n\n“There is labor appointed, I know not if it shall cease,\nYet anon cometh night, and my daughters shall lie in peace.\n\n“What avoideth my glory of firmaments keeping the way,\nIf the poor soft flesh must trouble before the day?\n\n“Or spectacular stars, as they race to encircuit the deep,\nIf my littlest people is driven, and needeth sleep?\n\n“For my absolute heaven is high, and nothing dependeth,\nYet it twitcheth my heart, when weeping of women ascendeth.\n\n“Then arrange ye again how the people’s task be done,\nThere shall no woman toil till they see my sign of the sun.”",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ]
+                }
+            },
             "prayer": {
                 "title": "“Prayer”",
                 "body": "She would not keep at home, the foolish woman,\nShe would not mind her precious girls and boys,\nShe had to go, for it was Sunday morning,\nDown the hot road and to the barren pew\nAnd there abuse her superannuate knees\nTo make a prayer.\n\nShe had a huge petition on her bosom--\nA heavy weight for such a lean old thing--\nHer youngest boy made merry in the village\nAnd had not entered into the communion;\nAnd having labored with him long for nothing\nShe meant to ask of God to save him yet.\nThank God she asked that favor!\n\nThe manner of it echoes still in Heaven.\nBefore she dared to utter her desire\nThe strange old woman made approach to God\nWith many a low obeisance and abasement,\nAs having done so many things she ought not,\n\nAnd left undone so many things she ought,\nAnd being altogether very wicked;\nShe testified she had not kept his temple,\nWhich was her heart, all swept and white and ready;\nShe testified it--O the shameless woman,\nThe spotless housekeeper!\n\nNow God sat beaming on his burnished throne\nAnd swept creation with appraising eye,\nFinding, I fear, not all was free from blemish,\nYet keeping his magnificent composure;\nBut wearing certain necessary airs,\nTo suit with such incumbency of court,\nHe still at heart was quite a gentleman;\nFor when he saw that aged lady drooping\nAnd wearying her bones with genuflections\nFor her unworthiness, he fell ashamed\nTo think how hard it went with holy women\nTo ease their poor predicaments by prayer:\nThere on his heaven, and heard of all the hosts,\nHe groaned, he made a mighty face so wry\nThat several seraphin forgot their harping\nAnd scolded thus: “O what a wicked woman,\nTo shrew his splendid features out of shape!”",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -152673,11 +153573,18 @@
                     }
                 }
             },
-            "resurrection": {
-                "title": "“Resurrection”",
+            "the-resurrection": {
+                "title": "“The Resurrection”",
                 "body": "Long, long before men die I sometimes read\nTheir stoic backs as plain as graveyard stones,\nAn epitaph of poor dead men indeed.\nI never pass those old and crooked bones,\nRidden far down with burden and with age,\nStopping the headlong highway till they lean\nAside in honor of my equipage,\nBut I am sick and shamed that Heaven has been\nSo clumsy with the inelastic clay!\n“What pretty piece of hope then have you spun,\nMy old defeated traveler,” I say,\n“That keeps you marching on? For I have none.\nI have looked often and I have not found\nOld men bowed low who ever rose up sound.”",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -152688,6 +153595,47 @@
                 "body": "I entered dutiful, God knows,\nThe room in which I was to sit\nWith dreary unbelieving books.\nIt was surprising, I suppose,\nTo find such happy change in it:\nThere stood a most celestial rose\nAnd looked the flower that my love looks\nWho, where she turns her smiling face\nMakes heavy earth a hopeful place.\n\nI blessed the heart that wished me well\nWhen I had been bereft of much,\nAnd brought such word of beauty back.\nI went like one escaping hell\nTo drink its fragrance and to touch,\nAnd stroked, O ludicrous to tell!\nA horrid thing of bric-a-brac,\nA make-believe, a mockery,\nAnd nothing that a rose should be.\n\nRed real roses keep a thorn,\nAnd save their loveliness a while\nAnd in their perfect date unfold.\nBut you, beyond all women born,\nHave spent so easily your smile,\nThat I am not the less forlorn\nNor these ironic walls less cold,\nBecause it smiles, the chilly rose,\nAs you are smiling, I suppose.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ]
+                }
+            },
+            "the-school": {
+                "title": "“The School”",
+                "body": "I was not drowsy though the scholars droned.\nHearing the music that they made of Greek,\nWhenever Helen’s unforgotten face\nSent other young men whisking off to war;\nHearing much mention of the hecatombs,\nAnd Pericles, and fishes that were purple,\nTemples in white, and trees that they named olive;\nAnd thinking always of proud Athens shining\nUpon her hill, that slanted to her sea:\n\nEquipped with Grecian thoughts, how could I live\nAmong my father’s folk? My father’s house\nWas narrow and his fields were nauseous.\nI kicked his clods for being common dirt,\nWorthy a world which never could be Greek;\nCursed the paternity that planted me\nOne green leaf in a wilderness of autumn;\nAnd wept, as fitting such a fruitful spirit\nSealed in a yellow tomb.\n\nThe Lord preserves his saints for Christian uses.\nHe sent a pair of providential eyes.\nThey would have sat in any witless head,\nAlthough I deemed them deep as classic seas,\nAs strange as any woman written smiling,\nAnd much more near; the merest modern eyes,\nThe first my Athens faced; and yet her lamp,\nIt flickered rather low.\n\nThen he commanded me to scrutiny\nAs to a fingered thing of no great matter,\nA circumstantial sorry little coin.\nA friendly thing, I owned, to lie so warm\nAgainst the side of any friendless man;\nAnd in the hand--O if the happy hand\nAccommodate the cunning rounded scepter,\nThen is dominion seated in that palm,\nAnd coveting is seated in men’s eyes.\nMake haste, my hands, about your own inclosures!\nAnd what were dead Greek empires to me then?\nDishonored, by Apollo, and forgot.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ]
+                }
+            },
+            "sickness": {
+                "title": "“Sickness”",
+                "body": "The toughest carcass in the town\nFell sick at last and took to bed,\nAnd on that bed God waited him\nWith cool, cool hands for his frantic head,\nAnd while the fever did its dance\nThey talked, and a good thing was said:\n“See, I am not that Scriptural!\nA lesser, kinder God instead.”\n\nFever must run its course, and God\nCould not do much for the countryman.\nAt least he saved him certain dreams:\n“I die! O save me if you can,\nI am a bruised, a beaten slave,\nI march in a blistering caravan,\nThey dash a stone upon my head--\nAh no, but that is God’s white hand.”\n\nGod plucked him back, and plucked him back,\nAnd did his best to smoothe the pain.\nThe sick man said it was good to know\nThat God was true, if prayer was vain.\n“O God, I weary of this night,\nWhen will you bring the dawn again?”\nThe night must run its course, but God\nWas weary too with watching-strain.\n\nA cluck of tuneless silly birds,\nA guilty gray, and it was dawn.\nThe sick man thumped across the floor\nAnd slid the curtain that was drawn:\n“O pale wet dawn! O let it shine\nLustrous and gold on the good green lawn!\nThe lustre, Lord!” Alas, God knows\nWhen sad conclusions are foregone.\n\nThe sick man leant upon his Lord,\nOn that imperfect break of day,\n“Now, Lord, I die: is there no word,\nNo countervail that God can say?”\nNo word. But tight upon his arm,\nWas God, and drew not once away\nUntil his punctual destiny.\nTo whom could God repair to pray?\n\nNow God be thanked by dying men\nWho comrades them in times like these,\nWho dreads to see the doom come down\nOn these black midnight canopies\nAnd on this poisonous glare of dawns.\nThe whole world crumples in disease,\nBut God is pitying to the end,\nAnd gives an office to my knees.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -152698,6 +153646,13 @@
                 "body": "The shine of many city streets\nConfuses any countryman;\nIt flickers here and flashes there,\nIt goes as soon as it began,\nIt beckons many ways at once\nFor him to follow if he can.\n\nUnder the lamp a woman stands,\nThe lamps are shining equal well,\nBut in her eyes are other lights,\nAnd lights plus other lights will tell:\nHe loves the brightness of that street\nWhich is the shining street to hell.\n\nThere’s light enough, and strong enough,\nTo lighten every pleasant park;\nI’m sorry lights are held so cheap,\nI’d rather there were not a spark\nThan choose those shining ways for joy\nAnd have them lead me into dark.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -152708,6 +153663,13 @@
                 "body": "I know you are not cruel,\nAnd you would not willingly hurt anything in the world.\nThere is kindness in your eyes,\nThere could not very well be more of it in eyes\nAlready brimful of the sky.\nI thought you would some day begin to love me,\nBut now I doubt it badly;\nIt is no man-rival I am afraid of,\nIt is God.\n\nThe meadows are very wide and green,\nAnd the big field of wheat is solid gold,\nOr a little darker than gold.\nTwo people never sat like us by a fence of cedar rails\nOn a still evening\nAnd looked at such fat fields.\nTo me it is beautiful enough,\nI am stirred,\n\nI say grand and wonderful, and grow adjectival,\nBut to you\nIt is God.\n\nCropping the clover are several spotted cows.\nThey too are kind and gentle,\nAnd they stop and look round at me now and then\nAs if they would say:\n“How good of you to come to see us!\nPlease pardon us if we seem indifferent,\nBut we have not much time to talk with you now,\nAnd really nothing to say.”\nThen they make their bow,\nStill kind and calm,\nAnd go their way again\nTowards the sunset.\nI suppose they are going to God.\n\nYour eyes are not regarding me,\nNor the four-leaf clovers I picked for you,\n(With a prayer and a gentle squeeze for each of them),\nNor are they fretting over dress, and shoes,\nAnd image in the little glass,\nRestlessly,\nLike the eyes of other girls.\n\nYou are looking away over yonder\nTo where the crooked rail-fence gets to the top\nOf the yellow hill\nAnd drops out of sight\nInto space.\nIs that infinity that catches it?\nAnd do you catch it too in your thoughts?\nI know that look;\nI have not seen it on another girl;\nAnd it terrifies me,\nFor I cannot tell what it means,\nBut I think\nIt has something to do with God.\n\nWe are a mile from home,\nAnd soon it will be getting dark,\nAnd the big farm-bell will be ringing out for supper.\nWe had better start for the house.\nRover!\nO here he is, waiting.\nHe has chased the rabbits and run after the birds\nA thousand miles or so,\nAnd now he is hungry and tired.\nBut he is a southern gentleman\n\nAnd will not whimper once\nThough you kept him waiting forever.\nHe knows his mistress’ eyes as well as I,\nAnd when to be silent and respectful.\nI will try to be as patient as Rover,\nAnd we will be comrades and wait,\nUnquestioningly,\nTill this lady we love\nAnd her strange eyes\nCome home from God.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -152718,11 +153680,38 @@
                 "body": "In dog-days plowmen quit their toil,\nAnd frog-ponds in the meadow boil,\nAnd grasses on the upland broil,\nAnd all the coiling things uncoil,\nAnd eggs and meats and Christians spoil.\n\nA mile away the valley breaks\n(So all good valleys do) and makes\nA cool green water for hot heads’ sakes,\nAnd sundry sullen dog-days’ aches.\n\nThe swimmer’s body is white and clean,\nIt is washed by a water of deepest green\nThe color of leaves in a starlight scene,\nAnd it is as white as the stars between.\n\nBut the swimmer’s soul is a thing possessed,\nHis soul is naked as his breast,\nRemembers not its east and west,\nAnd ponders this way, I have guessed:\n\nI have no home in the cruel heat\nOn alien soil that blisters feet.\nThis water is my native seat,\nAnd more than ever cool and sweet,\nSo long by forfeiture escheat.\n\nO my forgiving element!\nI gash you to my heart’s content\nAnd never need be penitent,\nSo light you float me when breath is spent\nAnd close again where my rude way went.\n\nAnd now you close above my head,\nAnd I lie low in a soft green bed\nThat dog-days never have visited.\n“By the sweat of thy face shalt thou eat bread:”\nThe garden’s curse is at last unsaid\n\nWhat do I need of senses five?\nWhy eat, or drink, or sweat, or wive?\nWhat do we strive for when we strive?\nWhat do we live for when alive?\n\nAnd what if I do not rise again,\nNever to goad a heated brain\nTo hotter excesses of joy and pain?\n\nWhy should it be against the grain\nTo lie so cold and still and sane?\n\nWater-bugs play shimmer-shimmer,\nNaked body’s just a glimmer,\nWatch ticks every second grimmer:\nCome to the top, O wicked swimmer!",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
                     "context": {
                         "month": "august"
+                    }
+                }
+            },
+            "under-the-locusts": {
+                "title": "“Under the Locusts”",
+                "body": "What do the old men say,\nSitting out of the sun?\nMany strange and common things,\nAnd so would any one.\n\nLocust trees are sorry shade,\nThey are good enough;\nLocust trees are sweet in spring\nFor trees so old and tough.\n\nDick’s a sturdy little lad\nYonder throwing stones;\nAgues and rheumatic pains\nWill fiddle on his bones.\n\nGrinny Bob is out again\nBegging for a dime;\nNiggers haven’t any souls,\nGrinning all the time.\n\nJenny and Will go arm in arm.\nHe’s a lucky fellow;\nJenny’s checks are pink as rose,\nHer mother’s cheeks are yellow.\n\nWar is on, the paper says,\nWounds and enemies;\nNow young gallivanting bucks\nWill know what trouble is.\n\nParson’s coming up the hill,\nMeaning mighty well;\nThinks he’s preached the doubters down.\nAnd old men never tell.   \t\t\t\t\t\t",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ],
+                    "context": {
+                        "season": "spring"
                     }
                 }
             },
@@ -152737,6 +153726,40 @@
                     "context": {
                         "season": "winter"
                     }
+                }
+            },
+            "worship": {
+                "title": "“Worship”",
+                "body": "I KNOW a quite religious man\nWho utters praises when he can.\n\nNow I find God in bard and book,\nIn school and temple, bird and brook.\n\nBut he says God is sweetest of all\nDiscovered in a drinking-hall.\n\nFor God requires no costly wine\nBut comes on the foam of a crockery stein.\n\nAnd when that foam is on the lips,\nBegin then God’s good fellowships.\n\nCathedrals, synagogues, and kirks\nMay go to the devil, and all their works.\n\nAnd as for Christian charity,\nIt’s made out of hilarity.\n\nHe gives the beggar all his dimes,\nForgives his brother seven times.\n\n“I love the rain,” says thirsty clod;\nSo this religious man of God.\n\nFor God has come, and is it odd\nHe praises all the works of God?\n\n“For God has come, and there’s no sorrow,”\nHe sings all night--will he sing to-morrow?",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ]
+                }
+            },
+            "wrestling": {
+                "title": "“Wrestling”",
+                "body": "At last came threshing-time, the manly season.\nWe kept the thresher thundering by daylight,\nAnd rested all the sweeter after dark,\nTelling of tales, and washing in the river.\nBut one there was, some twenty miles a stranger,\nWho boasted that he was a mighty wrestler\nAnd had not met that valiant pair of shoulders\nThat he could not put down.\n\nWe had a champion there. He looked and listened,\nHe measured off his man, he made his mind up,\nAnd thus he brought great honor to his county:\n“My friend, I’ve heard you bragging, heard you braying,\nAnd now I say, for God’s sake come and wrestle.”\nAnd thus appealed, the other came, for God’s sake,\nAnd they did wrestle.\n\nThey sprang, they gripped, they strained and rocked and twisted,\nThey pounded much good sod to dust and powder,\nThey ripped the garments off each other vainly\nAnd showed us many naked bulging muscles,\nAnd still were even.\n\nBut while the tide of battle ran so equal,\nI heard a sound, I took it for a voice,\nI almost saw it, spitting out a passage\nBetween the haggard jaws of my poor hero,\nThe voice as of a man almost despairing,\nHoping again though all his hopes had failed:\n“By God, I’ll have you down in one more minute!”\nAnd it was as he said; for in a minute\nHe had him down, by God.",
+                "metadata": {
+                    "language": "English",
+                    "source": {
+                        "title": "Poems about God",
+                        "type": "book",
+                        "published": {
+                            "year": "1919"
+                        }
+                    },
+                    "tags": [
+                        "American"
+                    ]
                 }
             }
         }
