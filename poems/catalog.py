@@ -105,7 +105,7 @@ class Catalog():
                             logger.info(f"FORCING CONTEXT: {category}='{keyword}'")
                         multiplier = 1e18
                     else:
-                        multiplier = 1.5 * weight # increase a little bit so we aren't stuck with a bunch at the end
+                        multiplier = 2 * weight # double the relative probability so we aren't stuck with a bunch at the end
                 else: 
                     multiplier = 0
                 
