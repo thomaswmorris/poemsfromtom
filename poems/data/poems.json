@@ -39470,12 +39470,24 @@
             "name": "Pablo Antonio Cuadra",
             "birth": {
                 "time": {
-                    "year": "1912"
+                    "year": "1912",
+                    "month": "november",
+                    "day": 4
+                },
+                "place": {
+                    "first": "Managua",
+                    "country": "Nicaragua"
                 }
             },
             "death": {
                 "time": {
-                    "year": "2002"
+                    "year": "2002",
+                    "month": "january",
+                    "day": 2
+                },
+                "place": {
+                    "first": "Managua",
+                    "country": "Nicaragua"
                 }
             },
             "gender": "male",
@@ -44698,12 +44710,20 @@
             "name": "Olive Custance",
             "birth": {
                 "time": {
-                    "year": "1874"
+                    "year": "1874",
+                    "month": "february",
+                    "day": 7
+                },
+                "place": {
+                    "second": "London",
+                    "country": "England"
                 }
             },
             "death": {
                 "time": {
-                    "year": "1944"
+                    "year": "1944",
+                    "month": "february",
+                    "day": 12
                 }
             },
             "gender": "female",
@@ -45132,12 +45152,25 @@
             "name": "Rubén Darío",
             "birth": {
                 "time": {
-                    "year": "1867"
+                    "year": "1867",
+                    "month": "january",
+                    "day": 18
+                },
+                "place": {
+                    "first": "Metapa",
+                    "second": "Matagalpa",
+                    "country": "Nicaragua"
                 }
             },
             "death": {
                 "time": {
-                    "year": "1916"
+                    "year": "1916",
+                    "month": "february",
+                    "day": 6
+                },
+                "place": {
+                    "first": "León",
+                    "country": "Nicaragua"
                 }
             },
             "gender": "male",
@@ -46365,12 +46398,26 @@
             "name": "C. J. Dennis",
             "birth": {
                 "time": {
-                    "year": "1876"
+                    "year": "1876",
+                    "month": "september",
+                    "day": 7
+                },
+                "place": {
+                    "first": "Auburn",
+                    "second": "South Australia",
+                    "country": "Australia"
                 }
             },
             "death": {
                 "time": {
-                    "year": "1938"
+                    "year": "1938",
+                    "month": "june",
+                    "day": 22
+                },
+                "place": {
+                    "first": "Melbourne",
+                    "second": "Victoria",
+                    "country": "Australia"
                 }
             },
             "gender": "male",
@@ -46405,12 +46452,26 @@
             "name": "Gavrila Derzhavin",
             "birth": {
                 "time": {
-                    "year": "1743"
+                    "year": "1743",
+                    "month": "july",
+                    "day": 14
+                },
+                "place": {
+                    "first": "Laishevsky Uyezd",
+                    "second": "Kazan Governorate",
+                    "country": "Russian Empire"
                 }
             },
             "death": {
                 "time": {
-                    "year": "1816"
+                    "year": "1816",
+                    "month": "july",
+                    "day": 20
+                },
+                "place": {
+                    "first": "Zvanka Manor",
+                    "second": "Novgorod Governorate",
+                    "country": "Russian Empire"
                 }
             },
             "gender": "male",
@@ -71794,6 +71855,13 @@
                 "body": "I am the Angel with the Broken Wing,\nThe one large statue in this quiet room.\nThe staff finds me too fierce, and so they shut\nFaith’s ardor in this air-conditioned tomb.\n\nThe docents praise my elegant design\nAbove the chatter of the gallery.\nPerhaps I am a masterpiece of sorts--\nThe perfect emblem of futility.\n\nMendoza carved me for a country church.\n(His name’s forgotten now except by me.)\nI stood beside a gilded altar where\nThe hopeless offered God their misery.\n\nI heard their women whispering at my feet--\nPrayers for the lost, the dying, and the dead.\nTheir candles stretched my shadow up the wall,\nAnd I became the hunger that they fed.\n\nI broke my left wing in the Revolution\n(Even a saint can savor irony)\nWhen troops were sent to vandalize the chapel.\nThey hit me once--almost apologetically.\n\nFor even the godless feel something in a church,\nA twinge of hope, fear? Who knows what it is?\nA trembling unaccounted by their laws,\nAn ancient memory they can’t dismiss.\n\nThere are so many things I must tell God!\nThe howling of the dammed can’t reach so high.\nBut I stand like a dead thing nailed to a perch,\nA crippled saint against a painted sky.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Pity the Beautiful",
+                        "type": "book",
+                        "published": {
+                            "year": "2012"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -71804,6 +71872,13 @@
                 "body": "I can imagine someone who found\nthese fields unbearable, who climbed\nthe hillside in the heat, cursing the dust,\ncracking the brittle weeds underfoot,\nwishing a few more trees for shade.\n\nAn Easterner especially, who would scorn\nthe meagerness of summer, the dry\ntwisted shapes of black elm,\nscrub oak, and chaparral, a landscape\nAugust has already drained of green.\n\nOne who would hurry over the clinging\nthistle, foxtail, golden poppy,\nknowing everything was just a weed,\nunable to conceive that these trees\nand sparse brown bushes were alive.\n\nAnd hate the bright stillness of the noon\nwithout wind, without motion,\nthe only other living thing\na hawk, hungry for prey, suspended\nin the blinding, sunlit blue.\n\nAnd yet how gentle it seems to someone\nraised in a landscape short of rain--\nthe skyline of a hill broken by no more\ntrees than one can count, the grass,\nthe empty sky, the wish for water.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "The Gods of Winter",
+                        "type": "book",
+                        "published": {
+                            "year": "1982"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -71814,9 +71889,16 @@
             },
             "cuckoos": {
                 "title": "“Cuckoos”",
-                "body": "I heard them only once. Climbing in the mountains,\nI stopped to rest a moment on a ledge\nand listen to the river distantly below--\nwhen suddenly they began to call each other\nback and forth from trees across the valley,\ninvisible in pinetops but bright and clear\nlike the ring of crystal against crystal.\nI didn’t move but lay there wondering\nwhat they were like, amazed that folklore\nhad made their cry the omen of betrayal.\n\nSo now, reading how the Chinese took their call\nto mean _Pu ju kuei, pu ju kuei_--\n_Come home again, you must come home again_--\nI understand at last what they were telling me\nnot then, back in that high, green valley,\nbut here this evening in the memory of it\nreturned by these birds that I have never seen",
+                "body": "I heard them only once. Climbing in the mountains,\nI stopped to rest a moment on a ledge\nand listen to the river distantly below--\nwhen suddenly they began to call each other\nback and forth from trees across the valley,\ninvisible in pinetops but bright and clear\nlike the ring of crystal against crystal.\nI didn’t move but lay there wondering\nwhat they were like, amazed that folklore\nhad made their cry the omen of betrayal.\n\nSo now, reading how the Chinese took their call\nto mean _Pu ju kuei, pu ju kuei_--\n_Come home again, you must come home again_--\nI understand at last what they were telling me\nnot then, back in that high, green valley,\nbut here this evening in the memory of it\nreturned by these birds that I have never seen.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "The Gods of Winter",
+                        "type": "book",
+                        "published": {
+                            "year": "1982"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -71830,6 +71912,13 @@
                 "body": "“We’re going,” they said, “to the end of the world.”\nSo they stopped the car where the river curled,\nAnd we scrambled down beneath the bridge\nOn the gravel track of a narrow ridge.\n\nWe tramped for miles on a wooded walk\nWhere dog-hobble grew on its twisted stalk.\nThen we stopped to rest on the pine-needle floor\nWhile two ospreys watched from an oak by the shore.\n\nWe came to a bend, where the river grew wide\nAnd green mountains rose on the opposite side.\nMy guides moved back. I stood alone,\nAs the current streaked over smooth flat stone.\n\nShelf by stone shelf the river fell.\nThe white water goosetailed with eddying swell.\nFaster and louder the current dropped\nTill it reached a cliff, and the trail stopped.\n\nI stood at the edge where the mist ascended,\nMy journey done where the world ended.\nI looked downstream. There was nothing but sky,\nThe sound of the water, and the water’s reply.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Interrogations at Noon",
+                        "type": "book",
+                        "published": {
+                            "year": "2001"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -71840,6 +71929,13 @@
                 "body": "The dead say little in their letters\nthey haven’t said before.\nWe find no secrets, and yet\nhow different every sentence sounds\nheard across the years.\n\nMy father breaks my heart\nsimply by being so young and handsome.\nHe’s half my age, with jet-black hair.\nLook at him in his navy uniform\ngrinning beside his dive-bomber.\n\n_Come back, Dad!_ I want to shout.\nHe says he misses all of us\n(though I haven’t yet been born).\nHe writes from places I never knew he saw,\nand everyone he mentions now is dead.\n\nThere is a large, long photograph\ncurled like a diploma--a banquet sixty years ago.\nMy parents sit uncomfortably\namong tables of dark-suited strangers.\nThe mildewed paper reeks of regret.\n\nI wonder what song the band was playing,\njust out of frame, as the photographer\narranged your smiles. A waltz? A foxtrot?\n_Get out there on the floor and dance!\nYou don’t have forever._\n\nWhat does it cost to send a postcard\nto the underworld? I’ll buy\na penny stamp from World War II\nand mail it downtown at the old post office\njust as the courthouse clock strikes twelve.\n\nSurely the ghost of some postal worker\nstill makes his nightly rounds, his routine\ntoo tedious for him to notice when it ended.\nHe works so slowly he moves back in time\ncarrying our dead letters to their lost addresses.\n\nIt’s silly to get sentimental.\nThe dead have moved on. So should we.\nBut isn’t it equally simple-minded to miss\nthe special expertise of the departed\nin clarifying our long-term plans?\n\nThey never let us forget that the line\nbetween them and us is only temporary.\n_Get out there and dance!_ the letters shout\nadding, Love always. _Can’t wait to get home!_\nAnd soon we will be. _See you there._",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Pity the Beautiful",
+                        "type": "book",
+                        "published": {
+                            "year": "2012"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -71850,6 +71946,13 @@
                 "body": "California night. The Devil’s wind,\nthe Santa Ana, blows in from the east,\nraging through the canyon like a drunk\nscreaming in a bar. The air tastes like\n\na stubbed-out cigarette. But why complain?\nThe weather’s fine as long as you don’t breathe.\nJust lean back on the sweat-stained furniture,\nlights turned out, windows shut against the storm,\nand count your blessings. Another sleepless night,\n\nwhen every wrinkle in the bedsheet scratches\nlike a dry razor on a sunburned cheek,\nwhen even ten-year whiskey tastes like sand,\nand quiet women in the kitchen run\ntheir fingers on the edges of a knife\nand eye their husbands’ necks. I wish them luck.\n\nTonight it seems that if I took the coins\nout of my pocket and tossed them in the air\nthey’d stay a moment glistening like a net\nslowly falling through dark water. I remember\n\nthe headlights of the cars parked on the beach,\nthe narrow beams dissolving on the dark\nsurface of the lake, voices arguing\nabout the forms, the crackling radio,\nthe sheeted body lying on the sand,\nthe trawling net still damp beside it. No,\nshe wasn’t beautiful--but at that age\nwhen youth itself becomes a kind of beauty--\n“Taking good care of your clients, Marlowe?”\n\nRelentlessly the wind blows on. Next door\ncatching a scent, the dogs begin to howl.\nLean, furious, raw-eyed from the storm,\npacks of coyotes come down from the hills\nwhere there is nothing left to hunt.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "The Gods of Winter",
+                        "type": "book",
+                        "published": {
+                            "year": "1982"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -71863,6 +71966,13 @@
                 "body": "If ever we see those gardens again,\nThe summer will be gone--at least our summer.\nSome other mockingbird will concertize\nAmong the mulberries, and other vines\nWill climb the high brick wall to disappear.\n\nHow many footpaths crossed the old estate--\nThe gracious acreage of a grander age--\nSo many trees to kiss or argue under,\nAnd greenery enough for any mood.\nWhat pleasure to be sad in such surroundings.\n\nAt least in retrospect. For even sorrow\nSeems bearable when studied at a distance,\nAnd if we speak of private suffering,\nThe pain becomes part of a well-turned tale\nDescribing someone else who shares our name.\n\nStill, thinking of you, I sometimes play a game.\nWhat if we had walked a different path one day,\nWould some small incident have nudged us elsewhere\nThe way a pebble tossed into a brook\nMight change the course a hundred miles downstream?\n\nThe trick is making memory a blessing,\nTo learn by loss the cool subtraction of desire,\nOf wanting nothing more than what has been,\nTo know the past forever lost, yet seeing\nBehind the wall a garden still in blossom.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Interrogations at Noon",
+                        "type": "book",
+                        "published": {
+                            "year": "2001"
+                        }
+                    },
                     "tags": [
                         "American"
                     ],
@@ -71876,6 +71986,13 @@
                 "body": "I think of you standing on the sloping deck\nas the freighter pulls away from the coast of China,\nthe last lights of Asia disappearing in the fog,\nand the engine’s drone dissolving in the old\nmonotony of waves slapping up against the hull.\n\nLeaning on the rails, looking eastward to America\nacross the empty weeks of ocean,\nhow carefully you must have planned your life,\nso much of it already wasted on the sea.\nthe vast country of your homelessness.\n\nMacao. Vladivostak. Singapore.\nDante read by shiplamp on the bridge.\nThe names of fellow seamen lost in war.\nThese memories will die with you,\nbut tonight they rise up burning in your mind\n\ninterweaving like gulls crying in the wake,\nlike currents on a chart, like gulfweed\nswirling in a star-soaked sea, and interchangeable\nas all the words for night--_la notte, noche, Nacht, nuit,_\neach sound half-foreign, half-familiar, like America.\n\nFor now you know that mainland best from dreams.\nYour dead mother turning toward you slowly,\nalways on the edge of words, yet always\nsilent as the suffering madonna of a shrine.\nOr your father pounding his fist against the wall.\n\nThere are so many ways to waste a life.\nWhy choose between these icons of unhappiness,\nwhen there is the undisguised illusion of the sea,\nthe comfort of old books and solitude to fill\nthe long night watch, the endless argument of waves?\n\nBreathe in that dark and tangible air, for in a few weeks\nyou will be dead, burned beyond recognition,\nleft as a headstone in the unfamiliar earth\nwith no one to ask, neither wife nor children,\nwhy your thin ashes have been buried here\n\nand not scattered on the shifting grey Pacific.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "The Gods of Winter",
+                        "type": "book",
+                        "published": {
+                            "year": "1989"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -71886,9 +72003,19 @@
                 "body": "All afternoon my brothers and I have worked in the orchard,\nDigging this hole, laying you into it, carefully packing the soil.\nRain blackened the horizon, but cold winds kept it over the Pacific,\nAnd the sky above us stayed the dull gray\nOf an old year coming to an end.\n\nIn Sicily a father plants a tree to celebrate his first son’s birth--\nAn olive or a fig tree--a sign that the earth has one more life to bear.\nI would have done the same, proudly laying new stock into my father’s orchard,\nA green sapling rising among the twisted apple boughs,\nA promise of new fruit in other autumns.\n\nBut today we kneel in the cold planting you, our native giant,\nDefying the practical custom of our fathers,\nWrapping in your roots a lock of hair, a piece of an infant’s birth cord,\nAll that remains above earth of a first-born son,\nA few stray atoms brought back to the elements.\n\nWe will give you what we can--our labor and our soil,\nWater drawn from the earth when the skies fail,\nNights scented with the ocean fog, days softened by the circuit of bees.\nWe plant you in the corner of the grove, bathed in western light,\nA slender shoot against the sunset.\n\nAnd when our family is no more, all of his unborn brothers dead,\nEvery niece and nephew scattered, the house torn down,\nHis mother’s beauty ashes in the air,\nI want you to stand among strangers, all young and ephemeral to you,\nSilently keeping the secret of your birth.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "The Gods of Winter",
+                        "type": "book",
+                        "published": {
+                            "year": "1989"
+                        }
+                    },
                     "tags": [
                         "American"
-                    ]
+                    ],
+                    "context": {
+                        "season": "winter"
+                    }
                 }
             },
             "rough-country": {
@@ -71896,6 +72023,13 @@
                 "body": "Give me a landscape made of obstacles,\nof steep hills and jutting glacial rock,\nwhere the low-running streams are quick to flood\nthe grassy fields and bottomlands. A place\n\nno engineers can master--where the roads\nmust twist like tendrils up the mountainside\non narrow cliffs where boulders block the way.\nWhere tall black trunks of lightning-scalded pine\npush through the tangled woods to make a roost\nfor hawks and swarming crows. And sharp inclines\n\nwhere twisting through the thorn-thick underbrush,\nscratched and exhausted, one turns suddenly\nto find an unexpected waterfall,\nnot half a mile from the nearest road,\na spot so hard to reach that no one comes--\na hiding place, a shrine for dragonflies\nand nesting jays, a sign that there is still\none piece of property that won’t be owned.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "The Gods of Winter",
+                        "type": "book",
+                        "published": {
+                            "year": "1989"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -71906,6 +72040,13 @@
                 "body": "Speaking of love was difficult at first.\nWe groped for those lost, untarnished words\nThat parents never traded casually at home,\nThe radio had not devalued.\nHow little there seemed left to us.\n\nSo, speaking of love, we chose\nThe harsh and level language of denial\nKnowing only what we did not wish to say,\nChoosing silence in our terror of a lie.\nFor surely love existed before words.\n\nBut silence can become its own cliché,\nAnd bodies lie as skillfully as words,\nSo one by one we spoke the easy lines\nThe other had resisted but desired,\nTrusting that love renewed their innocence.\n\nWas it then that words become unstuck?\nThat _star_ no longer seemed enough for star?\nOur borrowed speech demanded love so pure\nAnd so beyond our power that we saw\nHow words were only forms of our regret.\n\nAnd so at last we speak again of love,\nNow that there is nothing left unsaid,\nSurrendering our voices to the past,\nWhich has betrayed us. Each of us alone,\nObsessed by memory, befriended by desire,\n\nWith no words left to summon back our love.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "The Gods of Winter",
+                        "type": "book",
+                        "published": {
+                            "year": "1989"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -71916,6 +72057,13 @@
                 "body": "# I.\n\nSo this is where the children come to die,\nhidden on the hospital’s highest floor.\nThey wear their bandages like uniforms\nand pull their iv rigs along the hall\nwith slow and careful steps. Or bald and pale,\nthey lie in bright pajamas on their beds,\nwatching another world on a screen.\n\nThe mothers spend their nights inside the ward,\nsleeping on chairs that fold out into beds,\ntoo small to lie in comfort. Soon they slip\nbeside their children, as if they might mesh\nthose small bruised bodies back into their flesh.\nInstinctively they feel that love so strong\nprotects a child. Each morning proves them wrong.\n\nNo one chooses to be here. We play the parts\nthat we are given--horrible as they are.\nWe try to play them well, whatever that means.\nWe need to talk, though talking breaks our hearts.\nThe doctors come and go like oracles,\ntheir manner cool, omniscient, and oblique.\nThere is a word that no one ever speaks.\n\n\n# II.\n\nI put this poem aside twelve years ago\nbecause I could not bear remembering\nthe faces it evoked, and every line\nseemed--still seems--so inadequate and grim.\n\nWhat right had I, whose son had walked away,\nto speak for those who died? And I’ll admit\nI wanted to forget. I’d lost one child\nand couldn’t bear to watch another die.\n\nNot just the silent boy who shared our room,\nbut even the bird-thin figures dimly glimpsed\nshuffling deliberately, disjointedly\nlike ancient soldiers after a parade.\n\nWhatever strength the task required I lacked.\nNo well-stitched words could suture shut these wounds.\nAnd so I stopped …\nBut there are poems we do not choose to write.\n\n\n# III.\n\nThe children visit me, not just in dream,\nappearing suddenly, silently--\ninsistent, unprovoked, unwelcome.\n\nThey’ve taken off their milky bandages\nto show the raw, red lesions they still bear.\nRisen they are healed but not made whole.\n\nA few I recognize, untouched by years.\nI cannot name them--their faces pale and gray\nlike ashes fallen from a distant fire.\n\nWhat use am I to them, almost a stranger?\nI cannot wake them from their satin beds.\nWhy do they seek me? They never speak.\n\nAnd vagrant sorrow cannot bless the dead.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "Pity the Beautiful",
+                        "type": "book",
+                        "published": {
+                            "year": "2012"
+                        }
+                    },
                     "tags": [
                         "American"
                     ]
@@ -71926,9 +72074,19 @@
                 "body": "Looking for something in the Sunday paper,\nI flipped by accident through _Local Weddings_,\nYet missed the photograph until I saw\nYour name among the headings.\n\nAnd there you were, looking almost unchanged,\nYour hair still long, though now long out of style,\nAnd you still wore that stiff and serious look\nYou called a smile.\n\nI felt as though we sat there face to face.\nMy stomach tightened. I read the item through.\nIt said too much about both families,\nToo little about you.\n\nFinished at last, I threw the paper down,\nStung by jealousy, my mind aflame,\nHating this man, this stranger whom you loved,\nThis printed name.\n\nAnd yet I clipped it out to put away\nInside a book like something I might use,\nA scrap I knew I wouldn’t read again\nYet couldn’t bear to lose.",
                 "metadata": {
                     "language": "English",
+                    "source": {
+                        "title": "The Gods of Winter",
+                        "type": "book",
+                        "published": {
+                            "year": "1982"
+                        }
+                    },
                     "tags": [
                         "American"
-                    ]
+                    ],
+                    "context": {
+                        "weekday": "sunday"
+                    }
                 }
             }
         }
@@ -73502,12 +73660,26 @@
             "name": "Thomas Gray",
             "birth": {
                 "time": {
-                    "year": "1716"
+                    "year": "1716",
+                    "month": "december",
+                    "day": 26
+                },
+                "place": {
+                    "first": "Cornhill",
+                    "second": "London",
+                    "country": "England"
                 }
             },
             "death": {
                 "time": {
-                    "year": "1771"
+                    "year": "1771",
+                    "month": "july",
+                    "day": 30
+                },
+                "place": {
+                    "first": "Cambridge",
+                    "second": "Cambridgeshire",
+                    "country": "England"
                 }
             },
             "gender": "male",
@@ -74080,12 +74252,26 @@
             "name": "Thom Gunn",
             "birth": {
                 "time": {
-                    "year": "1929"
+                    "year": "1929",
+                    "month": "august",
+                    "day": 29
+                },
+                "place": {
+                    "first": "Gravesend",
+                    "second": "Kent",
+                    "country": "England"
                 }
             },
             "death": {
                 "time": {
-                    "year": "2004"
+                    "year": "2004",
+                    "month": "april",
+                    "day": 25
+                },
+                "place": {
+                    "first": "San Francisco",
+                    "second": "California",
+                    "country": "United States"
                 }
             },
             "gender": "male",
@@ -78361,6 +78547,26 @@
                     ]
                 }
             },
+            "altar": {
+                "title": "“Altar”",
+                "body": "The elements went in front: water carrying silt\nthe teary-eyed earth quick and gluttonous fire\nthen gentle dragons of air tossing their manes\nopened the procession for flowers young plants\nand so the artist’s chisel praised the grass Green\nflame inhuman like a flame thrown from a ship\nthe grass which comes when history is fulfilled\nand is itseif a chapter of silence\n\na clatter of sacrificial beasts blesses moist Tellus\nthey go fleshly and bright their necks carry heat\ntheir brows marked with horns oblivious of fate\nthey falter and fall astonished at their own blood\nThey cry out to you elements animals led the way\nthe skies will part and God address you as lightning\nyou humanity low and so very deserving of scorn\nyet carried high on the back of the earthly species\n\nhere the bas-relief breaks off--imagine if you can\nmaybe the sacrifice didn’t please the immortal gods\nor moisture foe of endurance effaced human forms\n\nit kept a sandal a chip of the goddess of Irony’s foot\nand folds of a garment from which a lovely gesture\nof raised arms can easily be read and that’s truly all\nno hands playing on the horns of sacrificial animals\n\nyou do not know what word or casual form of yours\na stone wrinkle will hold--not what you think is you\nnor if they will choose blood and bone or an eyelash\nto lay in the gracious earth where statues are ripening",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
             "an-answer": {
                 "title": "“An Answer”",
                 "body": "This will be a night in deep snow\nwhich has the power to muffle steps\nin deep shadow transforming\nbodies to two puddles of darkness\nwe lie holding our breath\nand even the slightest whisper of thought\n\nif we are not tracked down by wolves\nand the man in a Russian sheepskin who swings\nquick-firing death on his chest\nwe must spring and run\nin the clapping of short dry salvos\nto that other longed-for shore\n\nthe earth is the same everywhere\nwisdom teaches everywhere the man\nweeps with white tears\nmothers rock their children\nthe moon rises\nand builds a white house for us\n\nthis will be night after hard reality\na conspiracy of the imagination\nit has a taste of bread and lightness of vodka\nbut the choice to remain here\nis confirmed by every dream about palm trees\n\nthe dream is interrupted suddenly by the arrival of three\ntall men of rubber and iron\nthey will check your name your fear\norder you to go downstairs\nthey won’t allow you to take anything\nbut the compassionate face of the janitor\n\nHellenic Roman Medieval\nEast Indian Elizabethan Italian\nperhaps above all French\na bit of Weimar and Versailles\nwe carry so many homelands\non the shoulders of a single earth\n\nbut the only one guarded\nby the most singular number\nis here where they will trample you into the ground\nor with boldly ringing spade\nmake a large pit for your longing",
@@ -78386,9 +78592,19 @@
             },
             "architecture": {
                 "title": "“Architecture”",
-                "body": "Over a delicate arch--\nan eyebrow of stone--\n\non the unruffled forehead\nof a wall\n\nin joyful and open windows\nwhere there are faces instead of geraniums\n\nwhere rigorous rectangles\nborder a dreaming perspective\n\nwhere a stream awakened by an ornament\nflows on a quiet field of surfaces\n\nmovement meets stillness a line meets a shout\ntrembling uncertainty simple clarity\n\nyou are there\narchitecture\nart of fantasy and stone\n\nthere you reside beauty\nover an arch\nlight as a sigh\n\non a wall\npale from altitude\n\nand a window\ntearful with a pane of glass\n\na fugitive from apparent forms\nI proclaim your motionless dance",
+                "body": "Over a light arch--\na brow of stone\n\non a wall’s\nuntroubled forehead\n\nin the windows joyous and open\nwith faces instead of geraniums\n\nwhere there are perfect squares\nnext to a dreaming perspective\n\nwhere an ornament wakes a stream\nin a tranquil field of level surfaces\n\nmotion with stillness a line with a cry\ntrembling uncertainty simple clarity\n\nthere you are\narchitecture\nart of fancy and stone\n\nthere you dwell beauty\nover an arch light\nas a sigh\n\non a wall\npale with its height\n\nin a window\nwith tears of glass\n\nI the exile of self-evident forms\nproclaim your motionless dance",
                 "metadata": {
                     "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
                     "tags": [
                         "Polish"
                     ]
@@ -78400,14 +78616,34 @@
                 "metadata": {
                     "language": "Polish",
                     "source": {
-                        "title": "Elegy for the Departed",
+                        "title": "Chord of Light",
                         "type": "book",
                         "published": {
-                            "year": "1990"
+                            "year": "1956"
                         }
                     },
                     "translators": [
-                        "John Carpenter"
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "arion": {
+                "title": "“Arion”",
+                "body": "This is he--Arion--\nthe Grecian Caruso\nconcertmaster of the ancient world\nexpensive as a necklace\nor rather as a constellation\nsinging\nto the ocean billows and traders in silks\nto the tyrants and mule herders\nThe crowns blacken on the tyrants’ heads\nand the sellers of onion cakes\nfor the first time err in their figures to their own disadvantage\n\nWhat Arion is singing about\nnobody here could say exactly\nthe essential thing is that he restores world harmony\nthe sea gently rocks the land\nfire talks to water without hatred\nin the shadow of one hexameter lie down\nwolves and roedeer goshawks and doves\nand the child goes to sleep on the lion’s mane\nas in a cradle\nLook how the animals are smiling\nPeople are living on white flowers\nand everything is just as good\nas it was in the beginning\n\nThis is he--Arion\nexpensive and multiple\ncause of giddiness\nstanding in a blizzard of images\nhe has eight fingers like an octave\nand he sings\n\nUntil from the blue in the west\nunravel the luminous threads of saffron",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
                     ],
                     "tags": [
                         "Polish"
@@ -78420,14 +78656,54 @@
                 "metadata": {
                     "language": "Polish",
                     "source": {
-                        "title": "Elegy for the Departed",
+                        "title": "Chord of Light",
                         "type": "book",
                         "published": {
-                            "year": "1990"
+                            "year": "1956"
                         }
                     },
                     "translators": [
-                        "John Carpenter"
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "chord": {
+                "title": "“Chord”",
+                "body": "Birds leave behind\nshadows in a nest\n\nso leave your lamp\ninstrument and book\n\nlet us go to a hill\nwhere air grows\n\nI will point out\nthe absent star\n\ntender rootlets\nburied by turf\n\nsprings of cloud\nrising unsullied\n\na wind lends its mouth\nso that we might sing\n\nwe’ll knit our brow\nWe won’t say a word\n\nclouds have haloes\njust like the saints\n\nwe have black pebbles\nwhere eyes should be\n\na good memory cures\nthe scar a loss leaves\n\nradiance may descend\ndown our bent backs\n\nverily verily I say unto you\ngreat is the abyss\nbetween us\nand the light",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "the-cultivation-of-philosophy": {
+                "title": "“The Cultivation of Philosophy”",
+                "body": "I sowed the idea of infinity\nin the unruffled soil\nof a wooden stool\nyou see how nicely it grows\n--says a philosopher rubbing his hands\n\n    And indeed it grows\n    like a beanstalk\n    Another three or four\n    seasons of infinity\n    and it will outgrow\n    even his head\n\nI also knocked together a cylinder\n--says the philosopher\nat the top of the cylinder a pendulum\nI am sure you see where this is going\nthe cylinder is space\nthe pendulum is time\ntick-tick-tick\n--says the philosopher and laughing loudly\nhe flutters his little hands\n\nfinally I came up with the word existence\na hard and colorless word\nyou gather warm leaves with quick hands a long time\nyou have to trample images\ncall a sunset a phenomenon\nto discover under all of this\nthe dead white\nphilosopher’s stone\n\nwe now expect\nthe philosopher to weep over this wisdom of his\nbut he doesn’t weep\nexistence after all will not be moved\nspace will not melt\nand time will not stand still in its insensate course\n\nAn hourglass bursts\nin rough hands\nand level space\nis storied by the eye\n\nobediently ordered\ncones spheres cubes\nshapes from which\na mutinous body fled\n\n--lie there like broken\npots their contents evaporated--\n\noptimistic spheres\na ray of astrology\nblocks of atoms\n\non an avenue of wise dialogues\nthe philosophers are wandering\nwith the neat steps of surveyors\nconfusing the absolute counting\n\nbelow a given number\n3 perhaps or maybe 1\nthe universe freezes\nand cools--\n\nin an air heavy as glass\nfettered elements sleep\n\nfire earth and water\nobviated by reason",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
                     ],
                     "tags": [
                         "Polish"
@@ -78439,6 +78715,16 @@
                 "body": "> _Daedalus says:_\nGo on sonny but remember that you are walking and not flying\nthe wings are just an ornament and you are stepping on a meadow\nthat warm gust is just the humid earth of summer\nand that cold one is a brook\nthe sky is full of leaves and small animals\n\n\n> _Icarus says:_\nThe eyes like two stones return straight to earth\nand see a farmer who knocks asunder oily till\na grub which wiggles in a furrow\nbad grub which cuts the bond of a plant with the earth\n\n\n> _Daedalus says:_\nSonny this is not true The Cosmos is merely light\nand earth is a bowl of shadows. Look as here colors play\ndust rises from above the sea smoke rises to the sky\nof noblest atoms a rainbow sets itself now\n\n\n> _Icarus says:_\nArms hurt father from this beating at vacuum\nlegs are getting numb and miss thorns and sharp stones\nI cannot keep looking at the sun as you do father\nI sunken whole in the dark rays of the earth\n\n\n> _Description of the catastrophe:_\nNow Icarus falls down head first\nthe last frame of him is a glimpse of a heal childlike small\nbeing swallowed by the devouring sea\nUp above the father cries out the name\nwhich no longer belongs to a neck or a head\nbut only to a remembrance\n\n\n> _Commentary:_\nHe was so young did not understand that wings are just a metaphor\na bit of wax and feathers and a contempt for the laws of gravitation\nI cannot hold a body at an elevation of a great many feet\nThe essence of the matter is in having our hearts\nwhich are coursed by heavy blood\nfill with air\nand this very thing Icarus did not want to accept\n\nlet us pray",
                 "metadata": {
                     "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
                     "tags": [
                         "Polish"
                     ],
@@ -78547,6 +78833,30 @@
                     ]
                 }
             },
+            "farewell-to-september": {
+                "title": "“Farewell to September”",
+                "body": "The days were the color of amaranth\nshining like the lance of an uhlan\n\nOver the megaphones was sung\nan anachronistic ballad\nabout Poles and bayonets\n\nA tenor struck like a riding-whip\nand after every verse\na list was published of live torpedoes\n\nWho _nota bene_\nthrough six years of war\nwere to smuggle lard--\npitiful unexploded bombs\n\nThe commander raised his eyebrows\nlike a mace\nand chanted: not one button\n\nThe buttons mocked:\nWe shan’t give we shan’t give the boys\nsewn flatly on to the heath",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ],
+                    "context": {
+                        "month": "september",
+                        "day": 30
+                    }
+                }
+            },
             "five-men": {
                 "title": "“Five Men”",
                 "body": "# 1.\n\nThey take them out in the morning\nto the stone courtyard\nand put them against the wall\n\nfive men\ntwo of them very young\nthe others middle-aged\n\nnothing more\ncan be said about them\n\n\n# 2.\n\nwhen the platoon\nlevel their guns\neverything suddenly appears\nin the garish light\nof obviousness\n\nthe yellow wall\nthe cold blue\nthe black wire on the wall\ninstead of a horizon\n\n that is the moment\nwhen the five senses rebel\nthey would gladly escape\nlike rats from a sinking ship\n\nbefore the bullet reaches its destination\nthe eye will perceive the flight of the projectile\nthe ear record the steely rustle\n\nthe nostrils will be filled with biting smoke\na petal of blood will brush the palate\nthe touch will shrink and then slacken\n\nnow they lie on the ground\ncovered up to their eyes with shadow\nthe platoon walks away\ntheir buttonstraps\nand steel helmets\nare more alive\nthen those lying beside the wall\n\n\n# 3.\n\nI did not learn this today\nI knew it before yesterday\n\n so why have I been writing\nunimportant poems on flowers\n\n what did the five talk of\nthe night before the execution\n\n of prophetic dreams\nof an escapade in a brothel\nof automobile parts\nof a sea voyage\nof how when he had spades\nhe ought not to have opened\nof how vodka is best\nafter wine you get a headache\nof girls\nof fruits\nof life\n\nthus one can use in poetry\nnames of Greek shepherds\none can attempt to catch the color of morning sky\nwrite of love\nand also\nonce again\nin dead earnest\noffer to the betrayed world\na rose",
@@ -78558,6 +78868,46 @@
                     "translators": [
                         "Czesław Miłoz",
                         "Peter Dale Scott"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "fortune-telling": {
+                "title": "“Fortune-Telling”",
+                "body": "All the lines descend into the valley of the palm\ninto a hollow where bubbles a small spring of fate\nHere is the life line Look it races like an arrow\nthe horizon of five fingers brightened by its stream\nwhich surges forth overthrowing obstacles\nand nothing is more beautiful more powerful\nthan this striving forward\n\nHow helpless compared to it is the line of fidelity\nlike a cry in the night a river in the desert\nconceived in the sand and perishing in the sand\nMaybe deeper under the skin it continues further parts\nthe tissue of muscles and enters the arteries\nso that we might meet at night our dead\ndown inside where memory and blood\nflow in mineshafts wells chambers\nfull of dark names\n\nThis hill was not here--after all I remember\nthere was a nest of tenderness as round as if\na hot tear of lead had fallen on my hand\nAfter all I remember hair the shadow of a cheek\nfrail fingers and the weight of a sleeping head\n\nWho destroyed the nest who heaped up\nthe mound of indifference which was not here\n\nWhy do you press your palm to your eyes\nWe tell fortunes Who are we to know",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "fragment-of-a-greek-vase": {
+                "title": "“Fragment of a Greek Vase",
+                "body": "In the foreground you see\na youth’s handsome body\n\nhis beard leans on his chest\none knee is pulled up\nhis arm like a dead branch\n\nhe has closed his eyes\nhe disavows even Eos\n\nher fingers plunged in the air\nher hair flying loose\nand the contours of her robes\nmake three circles of sorrow\n\nhe has closed his eyes\nhe disavows his bronze armor\n\nhis fine helmet\nadorned with blood and a black crest\nhis broken shield\nand spear\n\nhe has closed his eyes\nhe disavows the world\n\nleaves hang in the quiet air\na branch quivers with the shadows of birds flying off\nand only the cricket hidden\nin Memnon’s still living hair\nspeaks persuasively\nin praise of life",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
                     ],
                     "tags": [
                         "Polish"
@@ -78589,6 +78939,16 @@
                 "body": "A home above the year’s seasons\nhome of children animals and apples\na square of empty space\nunder an absent star\n\nhome was the telescope of childhood\nthe skin of emotion\na sister’s cheek\nbranch of a tree\n\nthe cheek was extinguished by flame\nthe branch crossed out by a shell\nover the powdery ash of the nest\na song of homeless infantry\n\nhome is the die of emotion\nhome is the cube of childhood\n\nthe wing of a burned sister\n\nleaf of a dead tree",
                 "metadata": {
                     "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
                     "tags": [
                         "Polish"
                     ],
@@ -78625,6 +78985,29 @@
                     "tags": [
                         "Polish"
                     ]
+                }
+            },
+            "inscription": {
+                "title": "“Inscription”",
+                "body": "You look at my hands\nthey are weak--you say--as flowers\n\nyou look at my mouth\ntoo small to utter: the world\n\n--let us sway on a moment’s stem\nlet us drink the wind\nlet us watch our eyes setting\nthe lilies that fester smell sweetest\nthe shape of ruins dulls the senses\n\nthere’s a flame in me that thinks\nand a wind for fire and for sails\n\nMy hands are impatient\nI can\nsculpt a friend’s\nhead out of air\n\nI recite a poem I’d like\nto translate into Sanskrit\nor a pyramid:\n\nwhen the stars’ source dies\nwe will light up the nights\n\nwhen wind turns to stone\nwe will churn up the air",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ],
+                    "context": {
+                        "season": "spring"
+                    }
                 }
             },
             "a-knocker": {
@@ -78677,6 +79060,69 @@
                     ]
                 }
             },
+            "lines-of-a-pantheist": {
+                "title": "“Lines of a Pantheist”",
+                "body": "Destroy me star\n--says the poet--\npierce me with distance’s arrow\n\ndrink me source\n--says a drinker--\nto the dregs drink me to nullity\n\nlet sharp eyes deliver me\nto devouring landscapes\n\nwords meant to save the body\nmay they bring me precipices\n\na star will sink its root in my forehead\nthe source will lend my face humanity\n\n    and you’ll awaken silent\n    in the palms of stillness\n    at the heart of the thing",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "look": {
+                "title": "“Look”",
+                "body": "The cold blue sky like a stone on which angels\nsublime and quite unearthly sharpen their wings\nmoving on rungs of radiance on crags of shadow\nthey gradually sink into the imaginary heavens\nbut in another moment they emerge even paler\non the other side of the sky the other side of the eye\nDon’t say that it’s not true that there are no angels\nyou immersed in the pool of your indolent body\nyou who see everything in the color of your eyes\nand stand sated with world at your lashes edge",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "mama": {
+                "title": "“Mama”",
+                "body": "I thought:\nshe’ll never change\n\nshe’ll always be waiting\nin her white dress\nwith her blue eyes\non the threshold of every door\n\nshe’ll always be smiling\nputting on that necklace\n\nuntil quite suddenly\nthe thread snapped\nnow the pearls winter\nin the floor’s cracks\n\nmama likes coffee\na warm tile\npeace and quiet\n\nshe sits\nadjusts her glasses\non her pointy nose\nshe reads my poem\nand shakes her gray head at it\n\nhe who dropped from her lap\nbites his lip and says nothing\nso it’s a gloomy conversation\nunder the lamp sweet source\n\n    oh sorrow not to be borne\n    at what well does he drink\n    on what paths does he err\n    son so far from my dreams\n\n    I fed him on my sweet milk\n    yet his unrest consumes him\n    my warm blood bathed him\n    his hands are cold and rough\n\nfar from your gaze\npierced by blind love\nolitude is easier to bear\n\na week later\nin a chilly room\nmy throat tight\nI read her letter\n\nin this letter\neach character stands apart\nlike a loving heart",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ],
+                    "context": {
+                        "holiday": "mothers_day"
+                    }
+                }
+            },
             "the-monster-of-mr-cogito": {
                 "title": "“The Monster of Mr Cogito”",
                 "body": "# 1.\n\nLucky Saint George\nfrom his knight’s saddle\ncould exactly evaluate\nthe strength and movements of the dragon\n\nthe first principle of strategy\nis to assess the enemy accurately\n\nMr Cogito\nis in a worse position\nhe sits in the low\nsaddle of a valley\ncovered with thick fog\n\nthrough fog it is impossible to perceive\nfiery eyes\ngreedy claws\njaws\n\nthrough fog\none sees only\nthe shimmering of nothingness\n\nthe monster of Mr Cogito\nhas no measurements\nit is difficult to describe\nescapes definition\n\nit is like an immense depression\nspread out over the country\n\nit can’t be pierced\nwith a pen\n\nwith an argument\nor spear\n\nwere it not for its suffocating weight\nand the death it sends down\none would think\nit is the hallucination\nof a sick imagination\n  but it exists\nfor certain it exists\n\nlike carbon monoxide it fills\nhouses temples markets\n\npoisons wells\ndestroys the structures of the mind\ncovers bread with mould\n\nthe proof of the existence of the monster\nis its victims\n\nit is not direct proof\nbut sufficient\n\n\n# 2.\n\nreasonable people say\nwe can live together\nwith the monster\n\nwe only have to avoid\nsudden movements\nsudden speech\n\nif there is a threat assume\nthe form of a rock or a leaf\n\nlisten to wise Nature\nrecommending mimicry\n\nthat we breathe shallowly\npretend we aren’t there\n\n\nMr Cogito however\ndoes not want a life of make-believe\nhe would like to fight\nwith the monster\non firm ground\n\nso he walks out at dawn\ninto a sleepy suburb\ncarefully equipped\nwith a long sharp object\n\nhe calls to the monster\non the empty streets\nhe offends the monster\nprovokes the monster\n\nlike a bold skirmisher\nof an army that doesn’t exist\n\nhe calls--\ncome out contemptible coward\n\nthrough the fog\none sees only\nthe huge snout of nothingness\n\nMr Cogito wants to enter\nthe uneven battle\nit ought to happen\npossibly soon\n\nbefore there is\na fall from inertia\nan ordinary death without glory\nsuffocation from formlessness",
@@ -78699,9 +79145,39 @@
             },
             "mr-cogito-and-the-imagination": {
                 "title": "“Mr Cogito And The Imagination”",
-                "body": "1.\n\nMr Cogito never trusted\ntricks of the imagination\n\nthe piano at the top of the Alps\nplayed false concerts for him\n\nhe didn’t appreciate labyrinths\nthe Sphinx filled him with loathing\n\nhe lived in a house with no basement\nwithout mirrors or dialectics\n\njungles of tangled images\nwere not his home\n\nhe would rarely soar\non the wings of a metaphor\nand then he fell like Icarus\ninto the embrace of the Great Mother\n\nhe adored tautologies\nexplanations\nidem per idem\n\nthat a bird is a bird\nslavery means slavery\na knife is a knife\ndeath remains death\n\nhe loved\nthe flat horizon\na straight line\nthe gravity of the earth\n\n\n2.\n\nMr Cogito will be numbered\namong the species minores\n\nhe will accept indifferently the verdict\nof future scholars of the letter\n\nhe used the imagination\nfor entirely different purposes\n\nhe wanted to make it\nan instrument of compassion\n\nhe wanted to understand to the very end\n\n--Pascal’s night\n--the nature of a diamond\n--the melancholy of the prophets\n--Achilles’ wrath\n--the madness of those who kill\n--the dreams of Mary Stuart\n--Neanderthal fear\n--the despair of the last Aztecs\n--Nietzsche’s long death throes\n--the joy of the painter of Lascaux\n--the rise and fall of an oak\n--the rise and fall of Rome\n\nand so to bring the dead back to life\nto preserve the covenant\n\nMr Cogito’s imagination\nhas the motion of a pendulum\n\nit crosses with precision\nfrom suffering to suffering\n\nthere is no place in it\nfor the artificial fires of poetry\n\nhe would like to remain faithful\nto uncertain clarity",
+                "body": "# 1.\n\nMr Cogito never trusted\ntricks of the imagination\n\nthe piano at the top of the Alps\nplayed false concerts for him\n\nhe didn’t appreciate labyrinths\nthe Sphinx filled him with loathing\n\nhe lived in a house with no basement\nwithout mirrors or dialectics\n\njungles of tangled images\nwere not his home\n\nhe would rarely soar\non the wings of a metaphor\nand then he fell like Icarus\ninto the embrace of the Great Mother\n\nhe adored tautologies\nexplanations\nidem per idem\n\nthat a bird is a bird\nslavery means slavery\na knife is a knife\ndeath remains death\n\nhe loved\nthe flat horizon\na straight line\nthe gravity of the earth\n\n\n# 2.\n\nMr Cogito will be numbered\namong the species minores\n\nhe will accept indifferently the verdict\nof future scholars of the letter\n\nhe used the imagination\nfor entirely different purposes\n\nhe wanted to make it\nan instrument of compassion\n\nhe wanted to understand to the very end\n\n--Pascal’s night\n--the nature of a diamond\n--the melancholy of the prophets\n--Achilles’ wrath\n--the madness of those who kill\n--the dreams of Mary Stuart\n--Neanderthal fear\n--the despair of the last Aztecs\n--Nietzsche’s long death throes\n--the joy of the painter of Lascaux\n--the rise and fall of an oak\n--the rise and fall of Rome\n\nand so to bring the dead back to life\nto preserve the covenant\n\nMr Cogito’s imagination\nhas the motion of a pendulum\n\nit crosses with precision\nfrom suffering to suffering\n\nthere is no place in it\nfor the artificial fires of poetry\n\nhe would like to remain faithful\nto uncertain clarity",
                 "metadata": {
                     "language": "Polish",
+                    "source": {
+                        "title": "Mr. Cogito",
+                        "type": "book",
+                        "published": {
+                            "year": "1974"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "my-father": {
+                "title": "“My Father”",
+                "body": "My father liked Anatole France\nand smoked Macedonian tobacco\nwith its blue clouds of fragrance\nhe savored a smile on narrow lips\nand back in those far away times\nwhen he sat leaning over a book\nI used to say: father is Sinbad\nat times it’s bitter for him with us\n\nupon which he set off On a carpet\non the four winds Anxious we ran\nafter him in atlases but we lost him\nIn the end he’d come back take off\nhis odor put his slippers on again\nthe jangling of keys in his pockets\nand days like drops like heavy drops\nand time passes changing nothing\n\none holiday the net curtains down\nhe stepped through a windowpane\nand didn’t return I don’t know if he\nclosed his eyes in grief or never\nturned to look at us Once in a foreign\nmagazine I saw a photograph of him\nhe is now the governor of an island\nwhere palm trees and liberalism grow",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
                     "tags": [
                         "Polish"
                     ]
@@ -78721,6 +79197,26 @@
                     },
                     "translators": [
                         "John Carpenter"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "nike-who-hesitates": {
+                "title": "“Nike Who Hesitates”",
+                "body": "Nike is most beautiful at the moment\nwhen she hesitates\nher right hand beautiful as a command\nrests against the air\nbut her wings tremble\n\nFor she sees\na solitary youth\nhe goes down the long tracks\nof a war chariot\non a gray road in a gray landscape\nof rocks and scattered juniper bushes\n\nthat youth will perish soon\nright now the scale containing his fate\nabruptly falls\ntoward the earth\n\nNike would terribly like\nto go up\nand kiss him on the forehead\n\nbut she is afraid\nthat he who has never known\nthe sweetness of caresses\nhaving tasted it\nmight run off like the others\nduring the battle\n\nThus Nike hesitates\nand at last decides\nto remain in the position\nwhich sculptors taught her\nbeing mightily ashamed of that flash of emotion\n\nshe understands\nthat tomorrow at dawn\nthis boy must be found\nwith an open breast\nclosed eyes\nand the acid obol of his country\nunder his numb tongue",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
                     ],
                     "tags": [
                         "Polish"
@@ -78757,6 +79253,53 @@
                     ]
                 }
             },
+            "on-a-rose": {
+                "title": "“On a Rose”",
+                "body": "# 1\n\nSweetness bears a flower’s name\n\nSpherical gardens tremble\nsuspended over the earth\na sigh turns its head away\na wind’s face at the fence\ngrass is spread out below\nthe season of anticipation\nthe coming will snuff out\nodors it will open colors\n\nthe trees build a cupola\nof green tranquillity\nthe rose is calling you\na blown butterfly pines\nafter you threads burst\ninstant follows instant\nO rosebud green larva\nunfold\n\nSweetness bears the name: rose\n\nan explosion--\npurple’s standardbearers\nemerge from the interior\nand the countless ranks\ntrumpeters of fragrance\non long butterfly-horns\nproclaim the fulfillment\n\n\n# 2\n\nthe intricate coronations\ncloister gardens orisons\ngold-packed ceremonies\n\nand flaming candlesticks\ntriple towers of silence\nlight rays broken on high\nthe depths--\n\nO source of heaven on earth\nO constellations of petals\n\n…\n\ndo not ask what a rose is A bird may render it to you\nfragrance kills thought a light brushing erases a face\nO color of desire\nO color of weeping lids\nheavy round sweetness\nredness torn to the heart\n\n\n# 3\n\na rose bows its head\nas if it had shoulders\n\nleans against the wind\nthe wind goes off alone\n\nit cannot speak the word\nit cannot speak the word\n\nthe more the rose dies\nthe harder to say: rose",
+                "metadata": {
+                    "dedication": "To Tadeusz Chrzanowski",
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ],
+                    "context": {
+                        "season": "spring"
+                    }
+                }
+            },
+            "on-troy": {
+                "title": "“On Troy”",
+                "body": "# 1\n\nO Troy Troy\nan archeologist\nwill stir your ash with his hand\nand a fire greater than the Iliad\non seven strings--\n\ntwo few strings\nwe need a chorus\na sea of laments\nmountains’ clamor\na rain of stones\n\n--how to lead out\npeople from the ruins\nhow to lead out\na chorus from a poem\n\nthinks a poet perfect\nas a pillar of salt\neminently mute\n--Song escapes whole\nIt escaped whole\non a wing of fire\ninto the pure sky\n\nOver the ruins the moon rises\nO Troy Troy\nThe city is silent\n\nThe poet grapples with his own shadow\nThe poet cries like a bird in a wilderness\n\nThe moon repeats its landscape\nsmooth metal smouldering ash\n\n\n# 2\n\nThey went down gorges of former streets\nas if across a red sea of charred wreckage\n\nand the wind blew up the red dust\nfaithfully painting the city as it set\n\nThey went down gorges of former streets\nhungrily breathing into the frozen dawn\n\nand they said: long years will pass\nbefore the first house stands here\n\nthey went down gorges of former streets\nthey thought they would find some trace\n\n    on a harmonica\n    a cripple plays a tune\n    about willows’ braids\n    about a girl\n\nthe poet says nothing\nrain is coming down",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ],
+                    "context": {
+                        "season": "winter"
+                    }
+                }
+            },
             "our-fear": {
                 "title": "“Our Fear”",
                 "body": "Our fear\ndoes not wear a night shirt\ndoes not have owl’s eyes\ndoes not lift a casket lid\ndoes not extinguish a candle\n\ndoes not have a dead man’s face either\n\nour fear\nis a scrap of paper\nfound in a pocket\n“warn Wójcik\nthe place on Dluga Street is hot”\n\nour fear\ndoes not rise on the wings of the tempest\ndoes not sit on a church tower\nit is down-to-earth\n\nit has the shape\nof a bundle made in haste\nwith warm clothing\nprovisions\nand arms\n\nour fear\ndoes not have the face of a dead man\nthe dead are gentle to us\nwe carry them on our shoulders\nsleep under the same blanket\n\nclose their eyes\nadjust their lips\npick a dry spot\nand bury them\n\nnot too deep\nnot too shallow",
@@ -78764,6 +79307,27 @@
                     "language": "Polish",
                     "tags": [
                         "Polish"
+                    ]
+                }
+            },
+            "a-parable-of-king-midas": {
+                "title": "“A Parable of King Midas”",
+                "body": "At last golden deer\nquietly sleep in the glades\n\nand mountain goats as well\ntheir heads on a stone\n\naurochs unicorns squirrels\nin general all game\npredatory or gentle\nand also all birds\n\nKING MIDAS DOES NOT HUNT\n\nonce he got it into his head\nto lay his hands on a Silenus\n\nThree days he chased him\ntill at last he caught him\nhit him with his fist\nbetween the eyes and asked:\n--what is best for man?\n\nThe Silenus neighed\nand said:\n--to be nothing\n--to die\n\nKing Midas returns to his palace\nbut gets no pleasure  from the heart of a wise Silenus\nstewed in wine\nhe paces pulls at his beard and asks old men\n--how many days does the ant live\n--why does the dog howl before a death\n--how high would a mountain be\npiled from the bones\nof all past animals and humans\n\nThen he summoned a man\nwho painted on red vases\nwith a black quail feather\nnuptials parades and hunts\nwho asked by Midas\nwhy he set down the life of shadows\nanswered:\n--because the neck of a horse galloping\nis beautiful\nand dresses of young girls playing ball\nare like a stream alive and inimitable\n\nLet me sit down beside you\nentreats the painter of vases\nwe will talk about people\nwho in deadly earnest\ngive to the earth\none grain and gather ten\nwho repair a sandal and a republic\ncount stars and obols\nwrite poems and lean down\nto pick up from the sand a lost clover\n\nWe will drink a little\nand philosophize a little\nand perhaps we both\nwho are made of blood and illusion\nwill finally free ourselves\nfrom the oppressive levity of appearance",
+                "metadata": {
+                    "tags": [
+                        "favorite",
+                        "Polish"
+                    ],
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
                     ]
                 }
             },
@@ -78796,6 +79360,36 @@
                 "body": "Lord\nThank you for creating the world beautiful and of such variety\nAnd also for allowing me in your inexhaustible goodness\nTo visit places which were not the scene of my daily torments\n\n--for lying at night near a well in a square in Tarquinia while the swaying\nbronze declared from the tower your wrath and forgiveness\n\nand a little donkey on the island of Corcyra sang to mi from\nits incredible bellowing lungs the landscape’s melancholy\n\nand in the very ugly city of Manchester I came across\nvery good and sensible people\n\nnature reiterated her wise tautologies the forest was\nforest the sea was sea and rock was rock\n\nstars orbited and things were as they should be--Jovis omnia plena\n\n--forgive me thinking only of myself when the life of\nothers cruel and irreversible turned round me like the huge\nastrological clock in the church at Beauvais\n\nfor being too cowardly and stupid because I did not understand\nso many things\n\nand also forgive me for not fighting for the happiness of\npoor and vanquished nations and for seeing only moonrise and museums\n--thank you for the works created to glorify you which\nhave shared with me part of there mystery so that in gross conceit\n\nI concluded that Duccio Van Eyck Bellini painted for me too\n\nand likewise the Acropolis which I had never fully understood\npatiently revealed to me its mutilated flesh\n\n--I pray that you do not forget to reward the white-haired old\nman who brought me fruit from his garden in the bay of the island of Ithaca\n\nand also the teacher Miss Hellen on the isle of Mull whose\nhospitality was Greek or Christian and who ordered light\nto be placed in the window facing Holy Iona so that human\nlights might greet one another\n\nand furthermore all those who had shown me the way and said\nkato kyrie kato\n\nand that you should have in your care the Mother from Spoleto\nSpiridion from Paxos and the good student from Berlin who\ngot me out of a tight spot and later, when I unexpectedly\nran into him in Arizona, drove me to Grand Canyon which\nis like a hundred thousand cathedrals standing on their heads\n\n--grant O Lord that I may forget my foolish and very weary\npersecutors when the sun sets into the vast uncharted\nIonian sea\n\nthat I may comprehend other men other tongues other suffering\nand that I be not stubborn because my limitations are\nwithout limits\n\nand above all that I be humble, that is, one who sees\none who drinks at the spring\n\nthank you O Lord for creating a world very beautiful and varied\n\nand if this is Your temptation I am tempted for ever\nand without forgiveness",
                 "metadata": {
                     "language": "Polish",
+                    "source": {
+                        "title": "Mr. Cogito",
+                        "type": "book",
+                        "published": {
+                            "year": "1974"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "priest": {
+                "title": "“Priest”",
+                "body": "_to the worshippers of deceased religions_\n\nA priest whose deity\ndescended to earth\n\nIn a half-ruined temple\nrevealed its human face\n\nI impotent priest\nwho lifting up my hands\nknow that from this neither rain nor locust\nneither harvest nor thunderstorm\n\n--I am repeating a dried-out verse\nwith the same incantation\nof rapture\n\nA neck growing to martyrdom\nis struck by the flat of a jeering hand\n\nMy holy dance before the altar\nis seen only by a shadow\nwith the gestures of a street-urchin\n\n--And nonetheless\nI raise up eyes and hands\nI raise up song\n\nAnd know that the sacrificial smoke\ndrifting into a cold sky\nbraids a pigtail for a deity\nwithout a head",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
                     "tags": [
                         "Polish"
                     ]
@@ -78806,6 +79400,26 @@
                 "body": "When my older brother\ncame back from war\nhe had on his forehead a little silver star\nand under the star\nan abyss\n\na splinter of shrapnel\nhit him at Verdun\nor perhaps at Grünwald\n(he’d forgotten the details)\n\nhe used to talk much\nin many languages\nbut he liked most of all\nthe language of history\n\nuntil losing breath\nhe commanded his dead pals to run\nRoland Kowaski Hannibal\n\nhe shouted\nthat this was the last crusade\nthat Carthage soon would fall\nand then sobbing confessed\nthat Napoleon did not like him\n\nwe looked at him\ngetting paler and paler\nabandoned by his senses\nhe turned slowly into a monument\n\ninto musical shells of ears\nentered a stone forest\nand the skin of his face\nwas secured\nwith the blind dry\nbuttons of eyes\n\nnothing was left him\nbut touch\n\nwhat stories\nhe told with his hands\nin the right he had romances\nin the left soldier’s memories\n\nthey took my brother\nand carried him out of town\nhe returns every fall\nslim and very quiet\nhe does not want to come in\nhe knocks at the window for me\n\nwe walk together in the streets\nand he recites to me\nimprobable tales\ntouching my face\nwith blind fingers of rain",
                 "metadata": {
                     "language": "Polish",
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "red-cloud": {
+                "title": "“Red Cloud”",
+                "body": "A red cloud of dust\nsummoned that fire\nthe setting of a city\nover earth’s horizon\n\njust one more wall\none more brick chorale\nhas to be knocked down\nto remove the painful scar\nbetween the eye\nand recollection\n\nwith milky coffee rustling papers\nthe morning workers\nblew warmth into dawn and rain\nresounding in flumes of dead air\n\nwith a steel cable\na swollen silence\nthey fish out the contraband\nfrom space cleared of rubble\n\na cloud of red dust descends\nthe desert passing overhead\nat the height of razed floors\nframeless windows appear\n\nwhen the last steep slope\nis toppled\nand brick plainsong falls\nnothing will ruin dreams\n\n    of the city that was\n    the city that will be\n    the city that is not",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
                     "tags": [
                         "Polish"
                     ]
@@ -78871,20 +79485,144 @@
                     ]
                 }
             },
+            "the-salt-of-the-earth": {
+                "title": "“The Salt of the Earth”",
+                "body": "There goes a woman\nher shawl dappled as a meadow\nclasping a paper bag\nagainst her chest\n\nthis takes place\nat twelve noon\nin the loveliest part of town\n\nhere tourists are shown\nthe park with the swan\nthe villas with gardens\nperspectives and roses\n\nThere goes a woman\nwith a bulging bundle\n--mother what are you cradling\n\nnow she’s tripped\nand sugar crystals\ntip out of the bag\n\nthe woman bends down\nan expression in her eye\nno painter of broken jugs\ncould ever convey\n\nher dark hand grabs\nthe spilled treasures\nand she pours back\nbright drops and dust\n\nHow\nlong\nshe\n\nstays\ndown on her knees\nas if she wished to gather\nthe sweetness of the earth\ndown to the very last grain",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ],
+                    "context": {
+                        "season": "summer"
+                    }
+                }
+            },
+            "stool": {
+                "title": "“Stool”",
+                "body": "In the end one cannot keep this love concealed\ntiny quadruped with oaken legs\nO skin coarse and fresh beyond expression\neveryday object eyeless but with a face\non which the wrinkles of the grain mark a ripe judgment\ngray little mule most patient of mules\nits hair has fallen out from too much fasting\nand only a tuft of wooden bristle\ncan my hand feel when I stroke it in the morning\n\n--Do you know my darling they were charlatans\nwho said: the hand lies the eye\nlies when it touches shapes that are empty--\n\nthey were bad people envious of things\nthey wanted to trap the world with the bait of denial\n\nhow to express to you my gratitude wonder\nyou come always to the call of the eye\nwith great immobility explaining by dumb-signs\nto a sorry intellect: we are genuine\nAt last the fidelity of things opens our eyes",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "testament": {
+                "title": "“Testament”",
+                "body": "I bequeath to the four elements\nall I had in my brief possession\n\nto fire--thought\nmay fire flourish\n\nto the earth I loved too much\nmy body that fruitless kernel\n\nand to the air words and hands\nand longing superfluous things\n\nall that remains\na drop of water\nlet it go between\nthe earth and sky\n\nlet it be transparent rain\nfrost’s fern snow’s petal\n\nlet he who never made heaven\nreturn faithfully like pure dew\n\nto the vale of tears of my earth\nslowly crumbling the firm soil\n\nsoon I’ll give back to four elements\nall that I had in my brief possession\n\n--I won’t return to a source of peace",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
             "three-poems-by-heart": {
                 "title": "“Three Poems by Heart”",
                 "body": "# I.\n\nI can’t find the title\nof a memory about you\nwith a hand torn from darkness\nI step on fragments of faces\n\nsoft friendly profiles\nfrozen into a hard contour\n\ncircling above my head\nempty as a forehead of air\na man’s silhouette of black paper\n\n\n# II.\n\nliving--despite\nliving--against\nI reproach myself for the sin of forgetfulness\n\nyou left an embrace like a superfluous sweater\na look like a question\n\nour hands won’t transmit the shape of your hands\nwe squander them touching ordinary things\n\ncalm as a mirror\nnot mildewed with breath\nthe eyes will send back the question\n\nevery day I renew my sight\nevery day my touch grows\ntickled by the proximity of so many things\n\nlife bubbles over like blood\nShadows gently melt\nlet us not allow the dead to be killed--\n\nperhaps a cloud will transmit remembrance--\na worn profile of Roman coins\n\n\n# III.\n\nthe women on our street\nwere plain and good\nthey patiently carried from the markets\nbouquets of nourishing vegetables\n\nthe children on our street\nscourge of cats\n\nthe pigeons--\n\nsoftly gray\n\na Poet’s statue was in the park\nchildren would roll their hoops\nand colorful shouts\nbirds sat on the Poet’s hand\nread his silence\n\non summer evenings wives\nwaited patiently for lips\nsmelling of familiar tobacco\n\nwomen could not answer\ntheir children: will he return\nwhen the city was setting\nthey put the fire out with hands\npressing their eyes\n\nthe children on our street\nhad a difficult death\npigeons fell lightly\nlike shot down air\n\nnow the lips of the Poet\nform an empty horizon\nbirds children and wives cannot live\nin the city’s funereal shells\nin cold eiderdowns of ashes\n\nthe city stands over water\nsmooth as the memory of a mirror\nit reflects in the water from the bottom\n\nand flies to a high star\nwhere a distant fire is burning\nlike a page of the Iliad",
                 "metadata": {
                     "language": "Polish",
                     "source": {
-                        "title": "Elegy for the Departed",
+                        "title": "Chord of Light",
                         "type": "book",
                         "published": {
-                            "year": "1990"
+                            "year": "1956"
                         }
                     },
                     "translators": [
-                        "John Carpenter"
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "to-apollo": {
+                "title": "“To Apollo”",
+                "body": "# 1\n\nHe went in a rustle of stone robes\nhe cast a shadow a glow of laurels\n\nhis breaths were light as a statue’s\nbut his movements like a flower’s\n\nrapt by the sound of his own song\nhe raised a lyre to the height of silence\n\nimmersed in himself\nhis pupils white as a stream\n\nstone\nfrom his sandals\nto the ribbons in his hair\n\n    I imagined your fingers\n    had faith in your eyes\n    the unstrung instrument\n    the arms without hands\n\n    give me back\n    youth’s shout\n    arms held out\n    and my head\n    in an immense crest of delight\n\n    give me back my hope\n    speechless white head\n\nsilence--\n    a fissured neck\nsilence--\n    a broken song\n\n\n# 2\n\nI slow diver won’t touch\nthe rock bottom of youth\n\nnow I fish out only\nsalty broken torsos\n\nApollo appears to me in dreams\nwith the face of a fallen Persian\n\npoetry’s auguries are false\nit all happened differently\n\n    the epic’s fire was different\n    the city’s fire was different\n\n    heroes did not return from the expedition\n    there were no heroes\n    the unworthy survived\n\n    I am seeking a statue\n    drowned in my youth\n\nonly an empty pedestal remains--\nthe trace of a hand seeking a form",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "to-athena": {
+                "title": "“To Athena”",
+                "body": "Through owlish darkness\nyour eyes\n\nabove a pointed helmet\nyour wisdom\n\n    carried\n    by thought weightless as an arrow\n    we run through the gates of light\n    from brightness into blindness\n\n    carried\n    on a swooning shoulder\n    we salute you\n    with bodies on a shield of shadow\n\n    when the head falls on the chest\n    bury your fingers in our hair\n    carry us high\n\n    lift your sharp and striking shape\n    just an instant\n    from under the bird’s third eyelid\n\n    let your goodness destroy us\n    let cruel pity be our undoing\n\nin the empty body\nopened by a spear\npour the oil\nof gentle radiance\n\ntear from the eyes\nthe eyelids’ scales\n\nlet them look",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "to-marcus-aurelius": {
+                "title": "“To Marcus Aurelius”",
+                "body": "Good night Marcus put out the light\nand shut the book For overhead\nis raised a gold alarm of stars\nheaven is talking some foreign tongue\nthis the barbarian cry of fear\nyour Latin cannot understand\nTerror continuous dark terror\nagainst the fragile human land\n\nbegins to beat It’s winning Hear\nits roar The unrelenting stream\nof elements will drown your prose\nuntil the world’s four walls go down\nAs for us?--to tremble in the air\nblow in the ashes stir the ether\ngnaw our fingers seek vain words\ndrag off the fallen shades behind us\n\nWell Marcus better hang up your peace\ngive me your hand across the dark\nLet it tremble when the blind world\nbeats on senses five like a failing lyre\nTraitors--universe and astronomy\nreckoning of stars wisdom of grass\nand your greatness too immense\nand Marcus my defenseless tears",
+                "metadata": {
+                    "dedication": "To Professor Henryk Elzenberg",
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
                     ],
                     "tags": [
                         "Polish"
@@ -78896,6 +79634,26 @@
                 "body": "In my sleep it rips through\nmy meagre skin\nthrows off the red bandage of the flesh\nand goes strolling through the room\nmy monument a little incomplete\n\none can be prodigal\nwith tears and blood\nwhat will endure here the longest\nmust be thoughtfully provided for\n\nbetter (than with a priest’s dry finger\nto the rains which drip from a cloud of sand)\nto give one’s monument to the academey\n\nthey will prop it up in a glass display case\nand in Latin they will pray before\nthe little altar made from an os frontalis\n\nthey will reckon the bones and surfaces\nthey will not forget not overlook\n\nhappily I will give my color of eyes\npattern of nails and curve of eyelids\nI the perfectly objective\nmade from white crystals of anatomy\n\ncan for thoughts\nheart cage\nbony pile\nand two shins\n\nyou my little monument not quite complete",
                 "metadata": {
                     "language": "Polish",
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "to-the-fallen-poets": {
+                "title": "“To the Fallen Poets”",
+                "body": "The singer’s lips are welded fast\nhe mouths the night with his eyes\nunder a horizon’s malevolent cast\nwhere the song ends dusk arrives\nand sky’s shade covers the earth\n\nAs pilots snore in stacks of stars\nyou go hiding papers a silly sheaf\nshedding mosaics made of words\nMetaphors mock you as you flee\ninto a spray of righteous bullets\n\nYour vain words are a shadow’s echo\nnd a wind in empty stanzas’ rooms\nNot for you to hallow fire with song\nyou wither scattering to no purpose\nthe languid flowers of pierced hands\n\n# _Envoi_\n\nSilent one receive A shrieking bullet\nlodged in his arm so he fled surprise\nGrass will cover this mound of poems\nunder the malevolent cast of horizons\nyour silence will drink to the dregs",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
                     "tags": [
                         "Polish"
                     ]
@@ -78921,6 +79679,26 @@
                     ]
                 }
             },
+            "trembles-and-heaves": {
+                "title": "“Trembles and Heaves”",
+                "body": "The vast space of little planets\nwhich consumes me like a sea\ntrembles and heaves with unrest\n\nsecond hands trapped in pulses\nlike mill wheels in warm blood\ntrundle along the fleeting year\n\nthe mute needle calls northward\nover a swift stream of dark water\nunder transient clouds and skies\n\n    bury nearing death in a wrinkle\n    you can’t stop it with your brow\n    a desert drains mind and blood\n\nfrom atoms points hairs comets\nI construct my difficult infinity\nunder the mockeries of Aquilos\nI build ports for frail endurance",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
             "the-trial": {
                 "title": "“The Trial”",
                 "body": "During his great speech the prosecutor\nkept piercing me with his yellow index finger\nI’m afraid I didn’t appear self-assured\nunintentionally I put on a mask of fear and depravity\nlike a rat caught in a trap an informer a fratricide\nthe reporters were dancing a war dance\nslowly I burned at a stake of magnesia\n\nall of this took place in a small stifling room\nthe floor creaked plaster fell from the ceiling\nI counted knots in the boards holes in the wall faces\nthe faces were alike almost identical\npolicemen the tribunal witnesses the audience\nthey belonged to the party of those without any pity\nand even my defender smiling pleasantly\nwas an honorary member of the firing squad\n\nin the first row sat an old fat woman\ndressed up as my mother with a theatrical gesture she raised\na handkerchief to her dirty eyes but didn’t cry\nit must have lasted a long time I don’t know even how long\nthe red blood of the sunset was rising in the gowns of the judges\n\nthe real trial went on in my cells\nthey certainly knew the verdict earlier\nafter a short rebellion they capitulated and started to die one after the other\nI looked in amazement at my wax fingers\n\nI didn’t speak the last word and yet\nfor so many years I was composing the final speech\nto God to the court of the world to the conscience\nto the dead rather than the living\nroused to my feet by the guards\nI managed only to blink and then\nthe room burst out in healthy laughter\nmy adoptive mother laughed also\nthe gavel banged and this really was the end\n\nbut what happened after that--death by a noose\nor perhaps a punishment generously chained to a dungeon\nI’m afraid there is a third dark solution\nbeyond the limits of time the senses and reason\n\ntherefore when I wake I don’t open my eyes\nI clench my fingers don’t lift my head\nbreathe lightly because truly I don’t know\nhow many minutes of air I still have left",
@@ -78941,11 +79719,92 @@
                     ]
                 }
             },
+            "troubles-of-a-minor-creator": {
+                "title": "“Troubles of a Minor Creator”",
+                "body": "# 1\n\nWhelp of the empty realms\nof a still unfinished world\nI wear my hands to the bone\nlaboring over the beginning\n\nWith a pilgrim’s foot I tamped\nearth fragile as dandelion fluff\n\nwith an eyelid’s double-beat\nI consolidated the heavens\nand with insane imagination\nmade them a shade of blue\n\nI cried out when real touch\n confirmed an image of rock\nand I won’t forget the time\nI tore my skin on hawthorn\n\nI stored names of plants of beasts\nin a chink I dug out with a finger\nthen lying in the grass I admired\nthe fern’s shape the peacock’s tail\n\nin the end I wished to take rest\nin a wave’s shade on white rock\nI wrote a natural history\na complete guide to the species\nfrom a salt grain to the moon\nfrom amoeba to angel\n\nThis is for you dear posterity\nso your light dreams\nwill not be crushed by stones\nwhen night ravages the world again\n\n\n# 2\n\nYou cannot pass on the knowledge\nyours is the ear and yours the touch\neach of us must build from scratch\nhis own infinity his own beginning\n\nthe hardest is to cross the abyss\nthat yawns beyond a fingernail\nto discover with a daring hand\na strange world’s lips and eyes\n\n    --it’s good for small planets\n    washed by gentle blood\n    eyes closed--\n\n    if you put trust in your five senses\n    the world contracts into a hazelnut\n\n    if you believe impetuous thoughts\n    you will go on big telescope stilts\n    far away into the certain darkness\n\n    this must in fact be your destiny\n    to be made without ready forms\n    as one who knows and forgets\n\nit’s not for you to dream of a moment\nwhen the head will be a constant star\nnot with a hand but with bundled rays\nyou will greet an earth already extinct",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "two-drops": {
+                "title": "“Two Drops”",
+                "body": "_No time to grieve for roses, when the forests are burning._\n    --Juliusz Slowacki\n\nThe forests were on fire--\nthey however\nwreathed their necks with their hands\nlike bouquets of roses\n\nPeople ran to the shelters--\nhe said his wife had hair\nin whose depths one could hide\n\nCovered by one blanket\nthey whispered shameless words\nthe litany of those who love\n\nWhen it got very bad\nthey leapt into each other’s eyes\nand shut them firmly\n\nSo firmly they did not feel the flames\nwhen they came up to the eyelashes\n\nTo the end they were brave\nTo the end they were faithful\nTo the end they were similar\nlike two drops\nstuck at the edge of a face",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "warsaw": {
+                "title": "“Warsaw”",
+                "body": "That wall\nthat last view\ndo not exist\n\nlime on houses and tombs\nlime on memory\n\nthe last echo of a salute\nshaped into a stone slab\nand a concise inscription\nchiseled in calm antiqua\n\n    before the invasion of the living\n    the dead descend deeper\n    farther down\n\n    they wail at night in pipes of grief\n    they emerge cautiously\n    drop by drop\n\n    they light up one more time\n    at the striking of any match\n\nand above ground there is peace\nstone slabs and lime on memory\n\nwhere the avenue of the living\nintersects with the new world\nunder a proudly clicking heel\nthe cemetery like a molehill\ngathers those who request\na hillock of friable earth\na slight sign from above",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
             "wasp": {
                 "title": "“Wasp”",
                 "body": "When the honey, fruit and flowery tablecloth were whisked from the table in one sweep, it flew of with a start. Entangled in the suffocating smoke of the curtains, it buzzed for a long time. At last it reached the window. It beat its weakening body repeatedly against the cold, solid air of the pane. In the last flutter of its wings drowsed the faith that the body’s unrest can awaken a wind carrying us to longed-for worlds.\nYou who stood under the window of your beloved, who saw your happiness in a shop window--do you know how to take away the sting of this death?",
                 "metadata": {
                     "language": "Polish",
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "wawel": {
+                "title": "“Wawel”",
+                "body": "He who likened you to a marble edifice\nsurely had a patriotic cataract in his eye\n\nO Pericles\nyour column must be embarrassed\na simple shadow warheads’ pomp\nthe harmony of outstretched arms\n\nand here’s a comic brick farrago\na royal apple of the Renaissance\nin a setting of Austrian barracks\n\nmaybe only at night in a fever\nin a frenzy of woe a barbarian\nwho from crosses and gallows\nlearned how mass is balanced\n\nand maybe only under a moon\nwhen the angels leave the altar\nto ride roughshod over dreams\n\nand only then\n--an Acropolis\n\n    An Acropolis for the dispossessed\n    and mercy mercy for those who lie",
+                "metadata": {
+                    "dedication": "To Jerzy Turowiez",
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
                     "tags": [
                         "Polish"
                     ]
@@ -78969,6 +79828,49 @@
                     "tags": [
                         "Polish"
                     ]
+                }
+            },
+            "white-eyes": {
+                "title": "“White Eyes”",
+                "body": "Blood lives the longest\nit surges and craves air\n\ntranslucence congealing\nloosens the pulse’s knot\n\nat dusk the mercury column rises\nat dawn mold covers the mouth\n\ncloser and closer\ntemples sinking\neyelids subdued\n\nwhite eyes burn no lights\nbroken triangle of fingers\nbreath taken from silence\n\n    the mother screams\n    rends a numb name",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ]
+                }
+            },
+            "winter-garden": {
+                "title": "“Winter Garden”",
+                "body": "Eyelids fell like leaves the tenderness of glances crumbled\nthe stifled throats of springs still trembled under the earth\nfinally the bird’s voice fell silent the last crevice in a rock\nand down amid the lowest plants unrest froze like a lizard\n\nplumb lines of trees on the horizon’s scales\na slanting ray fell on an earth come to a halt\nThe window is shut The winter garden froze\nEyes are teary little clouds form at the mouth\n\n--what shepherd led the trees off Who played\nto reconcile everything hand branch and skies\na phorminx sure as a dead woman’s shoulders\ncarried by a northern Orpheus\n\na patter of angelic feet over our heads\nsnow falls like wings shedding scales\nquietness is a perfect line which brings\nearth level with the constellation Libra\n\nbuds of glances for winter orchards--may love not wound us\na clutch of hair for cruel destiny--may it burn in the pure air",
+                "metadata": {
+                    "language": "Polish",
+                    "source": {
+                        "title": "Chord of Light",
+                        "type": "book",
+                        "published": {
+                            "year": "1956"
+                        }
+                    },
+                    "translators": [
+                        "Alissa Valles"
+                    ],
+                    "tags": [
+                        "Polish"
+                    ],
+                    "context": {
+                        "season": "winter"
+                    }
                 }
             }
         }
@@ -101191,7 +102093,7 @@
             },
             "sigh-no-more": {
                 "title": "“Sigh No More”",
-                "body": "The cuckoo and the coo-dove’s ceaseless calling,\n               Calling,\nOf a meaningless monotony is palling\nAll my morning’s pleasure in the sun-fleck-scattered wood.\nMay-blossom and blue bird’s-eye flowers falling,\n               Falling\nIn a litter through the elm-tree shade are scrawling\nMessages of true-love down the dust of the high- road.\nI do not like to hear the gentle grieving,\n               Grieving\nOf the she-dove in the blossom, still believing\nLove will yet again return to her and make all good.\n\nWhen I know that there must ever be deceiving,\n               Deceiving\nOf the mournful constant heart, that while she’s weaving\nHer woes, her lover woos and sings within another wood.\n\nOh, boisterous the cuckoo shouts, forestalling,\n               Stalling\nA progress down the intricate enthralling\nBy-paths where the wanton-headed flowers doff their hood.\n\nAnd like a laughter leads me onward, heaving,\n               Heaving\nA sigh among the shadows, thus retrieving\nA decent short regret for that which once was very good.",
+                "body": "The cuckoo and the coo-dove’s ceaseless calling,\n               Calling,\nOf a meaningless monotony is palling\nAll my morning’s pleasure in the sun-fleck-scattered wood.\nMay-blossom and blue bird’s-eye flowers falling,\n               Falling\nIn a litter through the elm-tree shade are scrawling\nMessages of true-love down the dust of the high-road.\nI do not like to hear the gentle grieving,\n               Grieving\nOf the she-dove in the blossom, still believing\nLove will yet again return to her and make all good.\n\nWhen I know that there must ever be deceiving,\n               Deceiving\nOf the mournful constant heart, that while she’s weaving\nHer woes, her lover woos and sings within another wood.\n\nOh, boisterous the cuckoo shouts, forestalling,\n               Stalling\nA progress down the intricate enthralling\nBy-paths where the wanton-headed flowers doff their hood.\n\nAnd like a laughter leads me onward, heaving,\n               Heaving\nA sigh among the shadows, thus retrieving\nA decent short regret for that which once was very good.",
                 "metadata": {
                     "language": "English",
                     "source": {
@@ -117268,8 +118170,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1897"
@@ -117285,8 +118190,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1917"
@@ -117302,8 +118210,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1913"
@@ -117319,8 +118230,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "tags": [
                         "Canadian"
@@ -117333,8 +118247,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1895"
@@ -117353,8 +118270,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1894"
@@ -117370,8 +118290,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1897"
@@ -117387,8 +118310,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1915",
@@ -117410,8 +118336,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1897"
@@ -117427,8 +118356,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1913"
@@ -117444,8 +118376,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1907"
@@ -117464,8 +118399,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1896"
@@ -117481,8 +118419,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1905"
@@ -117501,8 +118442,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1896"
@@ -117518,8 +118462,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1894"
@@ -117538,8 +118485,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1894"
@@ -117558,8 +118508,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1896"
@@ -117578,8 +118531,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1915"
@@ -117598,8 +118554,11 @@
                 "metadata": {
                     "language": "English",
                     "source": {
-                        "title": "In Flanders Fields and Other Poems",
-                        "type": "book"
+                        "title": "In Flanders Fields",
+                        "type": "book",
+                        "published": {
+                            "year": "1918"
+                        }
                     },
                     "time": {
                         "year": "1907"
@@ -161518,7 +162477,7 @@
             },
             "on-the-way": {
                 "title": "“On the Way”",
-                "body": "(Philadelphia, 1794)\n\nNote.-- The following imaginary dialogue between Alexander Hamilton\nand Aaron Burr, which is not based upon any specific incident\nin American history, may be supposed to have occurred a few months previous\nto Hamilton’s retirement from Washington’s Cabinet in 1795\nand a few years before the political ingenuities of Burr --\nwho has been characterized, without much exaggeration,\nas the inventor of American politics--began to be conspicuously formidable\nto the Federalists. These activities on the part of Burr resulted,\nas the reader will remember, in the Burr-Jefferson tie for the Presidency\nin 1800, and finally in the Burr-Hamilton duel at Weehawken in 1804.\n\n\n\n> _Burr:_\n\nHamilton, if he rides you down, remember\nThat I was here to speak, and so to save\nYour fabric from catastrophe. That’s good;\nFor I perceive that you observe him also.\nA President, a-riding of his horse,\nMay dust a General and be forgiven;\nBut why be dusted--when we’re all alike,\nAll equal, and all happy. Here he comes --\nAnd there he goes. And we, by your new patent,\nWould seem to be two kings here by the wayside,\nWith our two hats off to his Excellency.\nWhy not his Majesty, and done with it?\nForgive me if I shook your meditation,\nBut you that weld our credit should have eyes\nTo see what’s coming. Bury me first if -I- do.\n\n\n> _Hamilton:_\n\nThere’s always in some pocket of your brain\nA care for me; wherefore my gratitude\nFor your attention is commensurate\nWith your concern. Yes, Burr, we are two kings;\nWe are as royal as two ditch-diggers;\nBut owe me not your sceptre. These are the days\nWhen first a few seem all; but if we live,\nWe may again be seen to be the few\nThat we have always been. These are the days\nWhen men forget the stars, and are forgotten.\n\n\n> _Burr:_\n\nBut why forget them?  They’re the same that winked\nUpon the world when Alcibiades\nCut off his dog’s tail to induce distinction.\nThere are dogs yet, and Alcibiades\nIs not forgotten.\n\n\n> _Hamilton:_\n\n                   Yes, there are dogs enough,\nGod knows; and I can hear them in my dreams.\n\n\n> _Burr:_\n\nNever a doubt. But what you hear the most\nIs your new music, something out of tune\nWith your intention. How in the name of Cain,\nI seem to hear you ask, are men to dance,\nWhen all men are musicians. Tell me that,\nI hear you saying, and I’ll tell you the name\nOf Samson’s mother. But why shroud yourself\nBefore the coffin comes?  For all you know,\nThe tree that is to fall for your last house\nIs now a sapling. You may have to wait\nSo long as to be sorry; though I doubt it,\nFor you are not at home in your new Eden\nWhere chilly whispers of a likely frost\nAccumulate already in the air.\nI think a touch of ermine, Hamilton,\nWould be for you in your autumnal mood\nA pleasant sort of warmth along the shoulders.\n\n\n> _Hamilton:_\n\nIf so it is you think, you may as well\nGive over thinking. We are done with ermine.\nWhat I fear most is not the multitude,\nBut those who are to loop it with a string\nThat has one end in France and one end here.\nI’m not so fortified with observation\nThat I could swear that more than half a score\nAmong us who see lightning see that ruin\nIs not the work of thunder. Since the world\nWas ordered, there was never a long pause\nFor caution between doing and undoing.\n\n\n> _Burr:_\n\nGo on, sir; my attention is a trap\nSet for the catching of all compliments\nTo Monticello, and all else abroad\nThat has a name or an identity.\n\n\n> _Hamilton:_\n\nI leave to you the names--there are too many;\nYet one there is to sift and hold apart,\nAs now I see. There comes at last a glimmer\nThat is not always clouded, or too late.\nBut I was near and young, and had the reins\nTo play with while he manned a team so raw\nThat only God knows where the end had been\nOf all that riding without Washington.\nThere was a nation in the man who passed us,\nIf there was not a world. I may have driven\nSince then some restive horses, and alone,\nAnd through a splashing of abundant mud;\nBut he who made the dust that sets you on\nTo coughing, made the road. Now it seems dry,\nAnd in a measure safe.\n\n\n> _Burr:_\n\n                        Here’s a new tune\nFrom Hamilton. Has your caution all at once,\nAnd over night, grown till it wrecks the cradle?\nI have forgotten what my father said\nWhen I was born, but there’s a rustling of it\nAmong my memories, and it makes a noise\nAbout as loud as all that I have held\nAnd fondled heretofore of your same caution.\nBut that’s affairs, not feelings. If our friends\nGuessed half we say of them, our enemies\nWould itch in our friends’ jackets. Howsoever,\nThe world is of a sudden on its head,\nAnd all are spilled--unless you cling alone\nWith Washington. Ask Adams about that.\n\n\n> _Hamilton:_\n\nWe’ll not ask Adams about anything.\nWe fish for lizards when we choose to ask\nFor what we know already is not coming,\nAnd we must eat the answer. Where’s the use\nOf asking when this man says everything,\nWith all his tongues of silence?\n\n\n> _Burr:_\n\n                                  I dare say.\nI dare say, but I won’t. One of those tongues\nI’ll borrow for the nonce. He’ll never miss it.\nWe mean his Western Majesty, King George.\n\n\n> _Hamilton:_\n\nI mean the man who rode by on his horse.\nI’ll beg of you the meed of your indulgence\nIf I should say this planet may have done\nA deal of weary whirling when at last,\nIf ever, Time shall aggregate again\nA majesty like his that has no name.\n\n\n> _Burr:_\n\nThen you concede his Majesty?  That’s good,\nAnd what of yours?  Here are two majesties.\nFavor the Left a little, Hamilton,\nOr you’ll be floundering in the ditch that waits\nFor riders who forget where they are riding.\nIf we and France, as you anticipate,\nMust eat each other, what Caesar, if not yourself,\nDo you see for the master of the feast?\nThere may be a place waiting on your head\nFor laurel thick as Nero’s. You don’t know.\nI have not crossed your glory, though I might\nIf I saw thrones at auction.\n\n\n> _Hamilton:_\n\n                              Yes, you might.\nIf war is on the way, I shall be--here;\nAnd I’ve no vision of your distant heels.\n\n\n> _Burr:_\n\nI see that I shall take an inference\nTo bed with me to-night to keep me warm.\nI thank you, Hamilton, and I approve\nYour fealty to the aggregated greatness\nOf him you lean on while he leans on you.\n\n\n> _Hamilton:_\n\nThis easy phrasing is a game of yours\nThat you may win to lose. I beg your pardon,\nBut you that have the sight will not employ\nThe will to see with it. If you did so,\nThere might be fewer ditches dug for others\nIn your perspective; and there might be fewer\nContemporary motes of prejudice\nBetween you and the man who made the dust.\nCall him a genius or a gentleman,\nA prophet or a builder, or what not,\nBut hold your disposition off the balance,\nAnd weigh him in the light. Once (I believe\nI tell you nothing new to your surmise,\nOr to the tongues of towns and villages)\nI nourished with an adolescent fancy --\nSurely forgivable to you, my friend --\nAn innocent and amiable conviction\nThat I was, by the grace of honest fortune,\nA savior at his elbow through the war,\nWhere I might have observed, more than I did,\nPatience and wholesome passion. I was there,\nAnd for such honor I gave nothing worse\nThan some advice at which he may have smiled.\nI must have given a modicum besides,\nOr the rough interval between those days\nAnd these would never have made for me my friends,\nOr enemies. I should be something somewhere --\nI say not what--but I should not be here\nIf he had not been there. Possibly, too,\nYou might not--or that Quaker with his cane.\n\n\n> _Burr:_\n\nPossibly, too, I should. When the Almighty\nRides a white horse, I fancy we shall know it.\n\n\n> _Hamilton:_\n\nIt was a man, Burr, that was in my mind;\nNo god, or ghost, or demon--only a man:\nA man whose occupation is the need\nOf those who would not feel it if it bit them;\nAnd one who shapes an age while he endures\nThe pin pricks of inferiorities;\nA cautious man, because he is but one;\nA lonely man, because he is a thousand.\nNo marvel you are slow to find in him\nThe genius that is one spark or is nothing:\nHis genius is a flame that he must hold\nSo far above the common heads of men\nThat they may view him only through the mist\nOf their defect, and wonder what he is.\nIt seems to me the mystery that is in him\nThat makes him only more to me a man\nThan any other I have ever known.\n\n\n> _Burr:_\n\nI grant you that his worship is a man.\nI’m not so much at home with mysteries,\nMay be, as you--so leave him with his fire:\nGod knows that I shall never put it out.\nHe has not made a cripple of himself\nIn his pursuit of me, though I have heard\nHis condescension honors me with parts.\nParts make a whole, if we’ve enough of them;\nAnd once I figured a sufficiency\nTo be at least an atom in the annals\nOf your republic. But I must have erred.\n\n\n> _Hamilton:_\n\nYou smile as if your spirit lived at ease\nWith error. I should not have named it so,\nFailing assent from you; nor, if I did,\nShould I be so complacent in my skill\nTo comb the tangled language of the people\nAs to be sure of anything in these days.\nPut that much in account with modesty.\n\n\n> _Burr:_\n\nWhat in the name of Ahab, Hamilton,\nHave you, in the last region of your dreaming,\nTo do with “people”?  You may be the devil\nIn your dead-reckoning of what reefs and shoals\nAre waiting on the progress of our ship\nUnless you steer it, but you’ll find it irksome\nAlone there in the stern; and some warm day\nThere’ll be an inland music in the rigging,\nAnd afterwards on deck. I’m not affined\nOr favored overmuch at Monticello,\nBut there’s a mighty swarming of new bees\nAbout the premises, and all have wings.\nIf you hear something buzzing before long,\nBe thoughtful how you strike, remembering also\nThere was a fellow Naboth had a vineyard,\nAnd Ahab cut his hair off and went softly.\n\n\n> _Hamilton:_\n\nI don’t remember that he cut his hair off.\n\n\n> _Burr:_\n\nSomehow I rather fancy that he did.\nIf so, it’s in the Book; and if not so,\nHe did the rest, and did it handsomely.\n\n\n> _Hamilton:_\n\nCommend yourself to Ahab and his ways\nIf they inveigle you to emulation;\nBut where, if I may ask it, are you tending\nWith your invidious wielding of the Scriptures?\nYou call to mind an eminent archangel\nWho fell to make him famous. Would you fall\nSo far as he, to be so far remembered?\n\n\n> _Burr:_\n\nBefore I fall or rise, or am an angel,\nI shall acquaint myself a little further\nWith our new land’s new language, which is not --\nPeace to your dreams--an idiom to your liking.\nI’m wondering if a man may always know\nHow old a man may be at thirty-seven;\nI wonder likewise if a prettier time\nCould be decreed for a good man to vanish\nThan about now for you, before you fade,\nAnd even your friends are seeing that you have had\nYour cup too full for longer mortal triumph.\nWell, you have had enough, and had it young;\nAnd the old wine is nearer to the lees\nThan you are to the work that you are doing.\n\n\n> _Hamilton:_\n\nWhen does this philological excursion\nInto new lands and languages begin?\n\n\n> _Burr:_\n\nAnon--that is, already. Only Fortune\nGave me this afternoon the benefaction\nOf your blue back, which I for love pursued,\nAnd in pursuing may have saved your life --\nAlso the world a pounding piece of news:\nHamilton bites the dust of Washington,\nOr rather of his horse. For you alone,\nOr for your fame, I’d wish it might have been so.\n\n\n> _Hamilton:_\n\nNot every man among us has a friend\nSo jealous for the other’s fame. How long\nAre you to diagnose the doubtful case\nOf Demos--and what for?  Have you a sword\nFor some new Damocles?  If it’s for me,\nI have lost all official appetite,\nAnd shall have faded, after January,\nInto the law. I’m going to New York.\n\n\n> _Burr:_\n\nNo matter where you are, one of these days\nI shall come back to you and tell you something.\nThis Demos, I have heard, has in his wrist\nA pulse that no two doctors have as yet\nCounted and found the same, and in his mouth\nA tongue that has the like alacrity\nFor saying or not for saying what most it is\nThat pullulates in his ignoble mind.\nOne of these days I shall appear again,\nTo tell you more of him and his opinions;\nI shall not be so long out of your sight,\nOr take myself so far, that I may not,\nLike Alcibiades, come back again.\nHe went away to Phrygia, and fared ill.\n\n\n> _Hamilton:_\n\nThere’s an example in Themistocles:\nHe went away to Persia, and fared well.\n\n\n> _Burr:_\n\nSo?  Must I go so far?  And if so, why so?\nI had not planned it so. Is this the road\nI take?  If so, farewell.\n\n\n> _Hamilton:_\n\n                           Quite so. Farewell.",
+                "body": "(Philadelphia, 1794)\n\n_Note.--The following imaginary dialogue between Alexander Hamilton and Aaron Burr, which is not based upon any specific incident in American history, may be supposed to have occurred a few months previous to Hamilton’s retirement from Washington’s Cabinet in 1795 and a few years before the political ingenuities of Burr--who has been characterized, without much exaggeration, as the inventor of American politics--began to be conspicuously formidable to the Federalists. These activities on the part of Burr resulted, as the reader will remember, in the Burr-Jefferson tie for the Presidency in 1800, and finally in the Burr-Hamilton duel at Weehawken in 1804._\n\n> _Burr:_\n\nHamilton, if he rides you down, remember\nThat I was here to speak, and so to save\nYour fabric from catastrophe. That’s good;\nFor I perceive that you observe him also.\nA President, a-riding of his horse,\nMay dust a General and be forgiven;\nBut why be dusted--when we’re all alike,\nAll equal, and all happy. Here he comes --\nAnd there he goes. And we, by your new patent,\nWould seem to be two kings here by the wayside,\nWith our two hats off to his Excellency.\nWhy not his Majesty, and done with it?\nForgive me if I shook your meditation,\nBut you that weld our credit should have eyes\nTo see what’s coming. Bury me first if -I- do.\n\n\n> _Hamilton:_\n\nThere’s always in some pocket of your brain\nA care for me; wherefore my gratitude\nFor your attention is commensurate\nWith your concern. Yes, Burr, we are two kings;\nWe are as royal as two ditch-diggers;\nBut owe me not your sceptre. These are the days\nWhen first a few seem all; but if we live,\nWe may again be seen to be the few\nThat we have always been. These are the days\nWhen men forget the stars, and are forgotten.\n\n\n> _Burr:_\n\nBut why forget them?  They’re the same that winked\nUpon the world when Alcibiades\nCut off his dog’s tail to induce distinction.\nThere are dogs yet, and Alcibiades\nIs not forgotten.\n\n\n> _Hamilton:_\n\n                   Yes, there are dogs enough,\nGod knows; and I can hear them in my dreams.\n\n\n> _Burr:_\n\nNever a doubt. But what you hear the most\nIs your new music, something out of tune\nWith your intention. How in the name of Cain,\nI seem to hear you ask, are men to dance,\nWhen all men are musicians. Tell me that,\nI hear you saying, and I’ll tell you the name\nOf Samson’s mother. But why shroud yourself\nBefore the coffin comes?  For all you know,\nThe tree that is to fall for your last house\nIs now a sapling. You may have to wait\nSo long as to be sorry; though I doubt it,\nFor you are not at home in your new Eden\nWhere chilly whispers of a likely frost\nAccumulate already in the air.\nI think a touch of ermine, Hamilton,\nWould be for you in your autumnal mood\nA pleasant sort of warmth along the shoulders.\n\n\n> _Hamilton:_\n\nIf so it is you think, you may as well\nGive over thinking. We are done with ermine.\nWhat I fear most is not the multitude,\nBut those who are to loop it with a string\nThat has one end in France and one end here.\nI’m not so fortified with observation\nThat I could swear that more than half a score\nAmong us who see lightning see that ruin\nIs not the work of thunder. Since the world\nWas ordered, there was never a long pause\nFor caution between doing and undoing.\n\n\n> _Burr:_\n\nGo on, sir; my attention is a trap\nSet for the catching of all compliments\nTo Monticello, and all else abroad\nThat has a name or an identity.\n\n\n> _Hamilton:_\n\nI leave to you the names--there are too many;\nYet one there is to sift and hold apart,\nAs now I see. There comes at last a glimmer\nThat is not always clouded, or too late.\nBut I was near and young, and had the reins\nTo play with while he manned a team so raw\nThat only God knows where the end had been\nOf all that riding without Washington.\nThere was a nation in the man who passed us,\nIf there was not a world. I may have driven\nSince then some restive horses, and alone,\nAnd through a splashing of abundant mud;\nBut he who made the dust that sets you on\nTo coughing, made the road. Now it seems dry,\nAnd in a measure safe.\n\n\n> _Burr:_\n\n                        Here’s a new tune\nFrom Hamilton. Has your caution all at once,\nAnd over night, grown till it wrecks the cradle?\nI have forgotten what my father said\nWhen I was born, but there’s a rustling of it\nAmong my memories, and it makes a noise\nAbout as loud as all that I have held\nAnd fondled heretofore of your same caution.\nBut that’s affairs, not feelings. If our friends\nGuessed half we say of them, our enemies\nWould itch in our friends’ jackets. Howsoever,\nThe world is of a sudden on its head,\nAnd all are spilled--unless you cling alone\nWith Washington. Ask Adams about that.\n\n\n> _Hamilton:_\n\nWe’ll not ask Adams about anything.\nWe fish for lizards when we choose to ask\nFor what we know already is not coming,\nAnd we must eat the answer. Where’s the use\nOf asking when this man says everything,\nWith all his tongues of silence?\n\n\n> _Burr:_\n\n                                  I dare say.\nI dare say, but I won’t. One of those tongues\nI’ll borrow for the nonce. He’ll never miss it.\nWe mean his Western Majesty, King George.\n\n\n> _Hamilton:_\n\nI mean the man who rode by on his horse.\nI’ll beg of you the meed of your indulgence\nIf I should say this planet may have done\nA deal of weary whirling when at last,\nIf ever, Time shall aggregate again\nA majesty like his that has no name.\n\n\n> _Burr:_\n\nThen you concede his Majesty?  That’s good,\nAnd what of yours?  Here are two majesties.\nFavor the Left a little, Hamilton,\nOr you’ll be floundering in the ditch that waits\nFor riders who forget where they are riding.\nIf we and France, as you anticipate,\nMust eat each other, what Caesar, if not yourself,\nDo you see for the master of the feast?\nThere may be a place waiting on your head\nFor laurel thick as Nero’s. You don’t know.\nI have not crossed your glory, though I might\nIf I saw thrones at auction.\n\n\n> _Hamilton:_\n\n                              Yes, you might.\nIf war is on the way, I shall be--here;\nAnd I’ve no vision of your distant heels.\n\n\n> _Burr:_\n\nI see that I shall take an inference\nTo bed with me to-night to keep me warm.\nI thank you, Hamilton, and I approve\nYour fealty to the aggregated greatness\nOf him you lean on while he leans on you.\n\n\n> _Hamilton:_\n\nThis easy phrasing is a game of yours\nThat you may win to lose. I beg your pardon,\nBut you that have the sight will not employ\nThe will to see with it. If you did so,\nThere might be fewer ditches dug for others\nIn your perspective; and there might be fewer\nContemporary motes of prejudice\nBetween you and the man who made the dust.\nCall him a genius or a gentleman,\nA prophet or a builder, or what not,\nBut hold your disposition off the balance,\nAnd weigh him in the light. Once (I believe\nI tell you nothing new to your surmise,\nOr to the tongues of towns and villages)\nI nourished with an adolescent fancy --\nSurely forgivable to you, my friend --\nAn innocent and amiable conviction\nThat I was, by the grace of honest fortune,\nA savior at his elbow through the war,\nWhere I might have observed, more than I did,\nPatience and wholesome passion. I was there,\nAnd for such honor I gave nothing worse\nThan some advice at which he may have smiled.\nI must have given a modicum besides,\nOr the rough interval between those days\nAnd these would never have made for me my friends,\nOr enemies. I should be something somewhere --\nI say not what--but I should not be here\nIf he had not been there. Possibly, too,\nYou might not--or that Quaker with his cane.\n\n\n> _Burr:_\n\nPossibly, too, I should. When the Almighty\nRides a white horse, I fancy we shall know it.\n\n\n> _Hamilton:_\n\nIt was a man, Burr, that was in my mind;\nNo god, or ghost, or demon--only a man:\nA man whose occupation is the need\nOf those who would not feel it if it bit them;\nAnd one who shapes an age while he endures\nThe pin pricks of inferiorities;\nA cautious man, because he is but one;\nA lonely man, because he is a thousand.\nNo marvel you are slow to find in him\nThe genius that is one spark or is nothing:\nHis genius is a flame that he must hold\nSo far above the common heads of men\nThat they may view him only through the mist\nOf their defect, and wonder what he is.\nIt seems to me the mystery that is in him\nThat makes him only more to me a man\nThan any other I have ever known.\n\n\n> _Burr:_\n\nI grant you that his worship is a man.\nI’m not so much at home with mysteries,\nMay be, as you--so leave him with his fire:\nGod knows that I shall never put it out.\nHe has not made a cripple of himself\nIn his pursuit of me, though I have heard\nHis condescension honors me with parts.\nParts make a whole, if we’ve enough of them;\nAnd once I figured a sufficiency\nTo be at least an atom in the annals\nOf your republic. But I must have erred.\n\n\n> _Hamilton:_\n\nYou smile as if your spirit lived at ease\nWith error. I should not have named it so,\nFailing assent from you; nor, if I did,\nShould I be so complacent in my skill\nTo comb the tangled language of the people\nAs to be sure of anything in these days.\nPut that much in account with modesty.\n\n\n> _Burr:_\n\nWhat in the name of Ahab, Hamilton,\nHave you, in the last region of your dreaming,\nTo do with “people”?  You may be the devil\nIn your dead-reckoning of what reefs and shoals\nAre waiting on the progress of our ship\nUnless you steer it, but you’ll find it irksome\nAlone there in the stern; and some warm day\nThere’ll be an inland music in the rigging,\nAnd afterwards on deck. I’m not affined\nOr favored overmuch at Monticello,\nBut there’s a mighty swarming of new bees\nAbout the premises, and all have wings.\nIf you hear something buzzing before long,\nBe thoughtful how you strike, remembering also\nThere was a fellow Naboth had a vineyard,\nAnd Ahab cut his hair off and went softly.\n\n\n> _Hamilton:_\n\nI don’t remember that he cut his hair off.\n\n\n> _Burr:_\n\nSomehow I rather fancy that he did.\nIf so, it’s in the Book; and if not so,\nHe did the rest, and did it handsomely.\n\n\n> _Hamilton:_\n\nCommend yourself to Ahab and his ways\nIf they inveigle you to emulation;\nBut where, if I may ask it, are you tending\nWith your invidious wielding of the Scriptures?\nYou call to mind an eminent archangel\nWho fell to make him famous. Would you fall\nSo far as he, to be so far remembered?\n\n\n> _Burr:_\n\nBefore I fall or rise, or am an angel,\nI shall acquaint myself a little further\nWith our new land’s new language, which is not --\nPeace to your dreams--an idiom to your liking.\nI’m wondering if a man may always know\nHow old a man may be at thirty-seven;\nI wonder likewise if a prettier time\nCould be decreed for a good man to vanish\nThan about now for you, before you fade,\nAnd even your friends are seeing that you have had\nYour cup too full for longer mortal triumph.\nWell, you have had enough, and had it young;\nAnd the old wine is nearer to the lees\nThan you are to the work that you are doing.\n\n\n> _Hamilton:_\n\nWhen does this philological excursion\nInto new lands and languages begin?\n\n\n> _Burr:_\n\nAnon--that is, already. Only Fortune\nGave me this afternoon the benefaction\nOf your blue back, which I for love pursued,\nAnd in pursuing may have saved your life --\nAlso the world a pounding piece of news:\nHamilton bites the dust of Washington,\nOr rather of his horse. For you alone,\nOr for your fame, I’d wish it might have been so.\n\n\n> _Hamilton:_\n\nNot every man among us has a friend\nSo jealous for the other’s fame. How long\nAre you to diagnose the doubtful case\nOf Demos--and what for?  Have you a sword\nFor some new Damocles?  If it’s for me,\nI have lost all official appetite,\nAnd shall have faded, after January,\nInto the law. I’m going to New York.\n\n\n> _Burr:_\n\nNo matter where you are, one of these days\nI shall come back to you and tell you something.\nThis Demos, I have heard, has in his wrist\nA pulse that no two doctors have as yet\nCounted and found the same, and in his mouth\nA tongue that has the like alacrity\nFor saying or not for saying what most it is\nThat pullulates in his ignoble mind.\nOne of these days I shall appear again,\nTo tell you more of him and his opinions;\nI shall not be so long out of your sight,\nOr take myself so far, that I may not,\nLike Alcibiades, come back again.\nHe went away to Phrygia, and fared ill.\n\n\n> _Hamilton:_\n\nThere’s an example in Themistocles:\nHe went away to Persia, and fared well.\n\n\n> _Burr:_\n\nSo?  Must I go so far?  And if so, why so?\nI had not planned it so. Is this the road\nI take?  If so, farewell.\n\n\n> _Hamilton:_\n\n                           Quite so. Farewell.",
                 "metadata": {
                     "language": "English",
                     "source": {
@@ -180470,7 +181429,7 @@
             },
             "ode-to-the-west-wind": {
                 "title": "“Ode to the West Wind”",
-                "body": "# I.\n\nO wild West Wind, thou breath of Autumn’s being,\nThou, from whose unseen presence the leaves dead\nAre driven, like ghosts from an enchanter fleeing,\n\nYellow, and black, and pale, and hectic red,\nPestilence-stricken multitudes: 0 thou,\nWho chariotest to their dark wintry bed\n\nThe wingèd seeds, where they lie cold and low,\nEach like a corpse within its grave, until\nThine azure sister of the Spring shall blow\n\nHer clarion o’er the dreaming earth, and fill\n(Driving sweet buds like flocks to feed in air)\nWith living hues and odours plain and hill:\n\nWild Spirit, which art moving everywhere;\nDestroyer and Preserver; hear, O hear!\n\n\n# II.\n\nThou on whose stream, ’mid the steep sky’s commotion,\nLoose clouds like Earth’s decaying leaves are shed,\nShook from the tangled boughs of Heaven and Ocean,\n\nAngels of rain and lightning: there are spread\nOn the blue surface of thine airy surge,\nLike the bright hair uplifted from the head\n\nOf some fierce Maenad, even from the dim verge\nOf the horizon to the zenith’s height,\nThe locks of the approaching storm. Thou dirge\n\nOf the dying year, to which this closing night\nWill be the dome of a vast sepulchre\nVaulted with all thy congregated might\n\nOf vapours, from whose solid atmosphere\nBlack rain, and fire, and hail will burst: O hear!\n\n\n# III.\n\nThou who didst waken from his summer dreams\nThe blue Mediterranean, where he lay,\nLulled by the coil of his crystalline streams,\n\nBeside a pumice isle in Baiae’s bay,\nAnd saw in sleep old palaces and towers\nQuivering within the wave’s intenser day,\n\nAll overgrown with azure moss and flowers\nSo sweet, the sense faints picturing them! Thou\nFor whose path the Atlantic’s level powers\n\nCleave themselves into chasms, while far below\nThe sea-blooms and the oozy woods which wear\nThe sapless foliage of the ocean, know\n\nThy voice, and suddenly grow grey with fear,\nAnd tremble and despoil themselves: O hear!\n\n\n# IV.\n\nIf I were a dead leaf thou mightest bear;\nIf I were a swift cloud to fly with thee;\nA wave to pant beneath thy power, and share\n\nThe impulse of thy strength, only less free\nThan thou, O Uncontrollable! If even\nI were as in my boyhood, and could be\n\nThe comrade of thy wanderings over Heaven,\nAs then, when to outstrip thy skiey speed\nScarce seemed a vision; I would ne’er have striven\n\nAs thus with thee in prayer in my sore need.\nOh! lift me as a wave, a leaf, a cloud!\nI fall upon the thorns of life! I bleed!\n\nA heavy weight of hours has chained and bowed\nOne too like thee: tameless, and swift, and proud.\n\n\n# V.\n\nMake me thy lyre, even as the forest is:\nWhat if my leaves are falling like its own!\nThe tumult of thy mighty harmonies\n\nWill take from both a deep, autumnal tone,\nSweet though in sadness. Be thou, Spirit fierce,\nMy spirit! Be thou me, impetuous one!\n\nDrive my dead thoughts over the universe\nLike withered leaves to quicken a new birth!\nAnd, by the incantation of this verse,\n\nScatter, as from an unextinguished hearth\nAshes and sparks, my words among mankind!\nBe through my lips to unawakened Earth\n\nThe trumpet of a prophecy! O Wind,\nIf Winter comes, can Spring be far behind?",
+                "body": "# I.\n\nO wild West Wind, thou breath of Autumn’s being,\nThou, from whose unseen presence the leaves dead\nAre driven, like ghosts from an enchanter fleeing,\n\nYellow, and black, and pale, and hectic red,\nPestilence-stricken multitudes: O thou,\nWho chariotest to their dark wintry bed\n\nThe wingèd seeds, where they lie cold and low,\nEach like a corpse within its grave, until\nThine azure sister of the Spring shall blow\n\nHer clarion o’er the dreaming earth, and fill\n(Driving sweet buds like flocks to feed in air)\nWith living hues and odours plain and hill:\n\nWild Spirit, which art moving everywhere;\nDestroyer and Preserver; hear, O hear!\n\n\n# II.\n\nThou on whose stream, ’mid the steep sky’s commotion,\nLoose clouds like Earth’s decaying leaves are shed,\nShook from the tangled boughs of Heaven and Ocean,\n\nAngels of rain and lightning: there are spread\nOn the blue surface of thine airy surge,\nLike the bright hair uplifted from the head\n\nOf some fierce Maenad, even from the dim verge\nOf the horizon to the zenith’s height,\nThe locks of the approaching storm. Thou dirge\n\nOf the dying year, to which this closing night\nWill be the dome of a vast sepulchre\nVaulted with all thy congregated might\n\nOf vapours, from whose solid atmosphere\nBlack rain, and fire, and hail will burst: O hear!\n\n\n# III.\n\nThou who didst waken from his summer dreams\nThe blue Mediterranean, where he lay,\nLulled by the coil of his crystalline streams,\n\nBeside a pumice isle in Baiae’s bay,\nAnd saw in sleep old palaces and towers\nQuivering within the wave’s intenser day,\n\nAll overgrown with azure moss and flowers\nSo sweet, the sense faints picturing them! Thou\nFor whose path the Atlantic’s level powers\n\nCleave themselves into chasms, while far below\nThe sea-blooms and the oozy woods which wear\nThe sapless foliage of the ocean, know\n\nThy voice, and suddenly grow grey with fear,\nAnd tremble and despoil themselves: O hear!\n\n\n# IV.\n\nIf I were a dead leaf thou mightest bear;\nIf I were a swift cloud to fly with thee;\nA wave to pant beneath thy power, and share\n\nThe impulse of thy strength, only less free\nThan thou, O Uncontrollable! If even\nI were as in my boyhood, and could be\n\nThe comrade of thy wanderings over Heaven,\nAs then, when to outstrip thy skiey speed\nScarce seemed a vision; I would ne’er have striven\n\nAs thus with thee in prayer in my sore need.\nOh! lift me as a wave, a leaf, a cloud!\nI fall upon the thorns of life! I bleed!\n\nA heavy weight of hours has chained and bowed\nOne too like thee: tameless, and swift, and proud.\n\n\n# V.\n\nMake me thy lyre, even as the forest is:\nWhat if my leaves are falling like its own!\nThe tumult of thy mighty harmonies\n\nWill take from both a deep, autumnal tone,\nSweet though in sadness. Be thou, Spirit fierce,\nMy spirit! Be thou me, impetuous one!\n\nDrive my dead thoughts over the universe\nLike withered leaves to quicken a new birth!\nAnd, by the incantation of this verse,\n\nScatter, as from an unextinguished hearth\nAshes and sparks, my words among mankind!\nBe through my lips to unawakened Earth\n\nThe trumpet of a prophecy! O Wind,\nIf Winter comes, can Spring be far behind?",
                 "metadata": {
                     "language": "English",
                     "time": {
@@ -213348,6 +214307,13 @@
                 "body": "And if after so many words,\nthe word doesn’t survive!\nIf after the wings of birds,\nthe standing bird doesn’t survive!\nIt would be better, honestly,\nto consume everything and be done with it!\n\nTo have been born in order to live off our death!\nTo lift ourselves up by our own disasters\nfrom the sky to the earth,\nwatching for the right moment to blot out\nour darkness with our shadow!\nIt would be better, frankly,\nto consume everything and to hell with it!\n\nAnd if after so much history, we succumb\nnot to eternity\nbut to these simple things,\nlike sitting at home or settling in to think!\nAnd if we then discovered\nall of a sudden that we’re living--to judge\nby the height of the stars--off a comb\nand the stains on a handkerchief!\nIt would be better, honestly,\nto consume everything, of course!\n\nThey’ll say that we have\nin one eye a lot of grief\nand in the other eye, too, a lot of grief\nand in both, wherever they look, a lot of grief …\nSo … _It’s clear!_ So … _Not a word!_",
                 "metadata": {
                     "language": "Spanish",
+                    "source": {
+                        "title": "Poemas Humanas",
+                        "type": "book",
+                        "published": {
+                            "year": "1940"
+                        }
+                    },
                     "translators": [
                         "Dave Bonta"
                     ],
@@ -213427,6 +214393,13 @@
                 "body": "What time are the big people\ngoing to come back?\nBlind Santiago is striking six\nand already it’s very dark.\n\nMother said that she wouldn’t be delayed\n\nAguedita, Nativa, Miguel,\nbe careful of going over there, where\ndoubled-up griefs whimpering their memories\nhave just gone\ntoward the quiet poultry-yard, where\nthe hens are still getting settled,\nwho have been startled so much.\n\nWe’d better just stay here.\nMother said that she wouldn’t be delayed.\n\nAnd we shouldn’t be sad. Let’s go see\nthe boats--mine is prettier than anybody’s!--\nwe were playing with them the whole blessed day,\nwithout fighting among ourselves, as it should be:\nthey stayed behind in the puddle, all ready,\nloaded with pleasant things for tomorrow.\n\nLet’s wait like this, obedient\nand helpless, for the homecoming, the apologies\nof the big people, who are always the first\nto abandon the rest of us in the house--\nas if we couldn’t get away too!\n\nAguedita, Nativa, Miguel?\nI am calling, I am feeling around for you in the darkness.\nDon’t leave me behind by myself,\nto be locked in all alone.",
                 "metadata": {
                     "language": "Spanish",
+                    "source": {
+                        "title": "Poemas Humanas",
+                        "type": "book",
+                        "published": {
+                            "year": "1940"
+                        }
+                    },
                     "translators": [
                         "James Wright"
                     ],
@@ -213479,11 +214452,18 @@
             },
             "black-stone-on-top-of-a-white-stone": {
                 "title": "“Black Stone on Top of a White Stone”",
-                "body": "I shall die in Paris, in a rainstorm,\nOn a day I already remember.\nI shall die in Paris--it does not bother me--\nDoubtless on a Thursday, like today, in autumn.\n\nIt shall be a Thursday, because today, Thursday\nAs I put down these lines, I have set my shoulders\nTo the evil. Never like today have I turned,\nAnd headed my whole journey to the ways where I am alone.\n\nCésar Vallejo is dead. They struck him,\nAll of them, though he did nothing to them,\nThey hit him hard with a stick and hard also\nWith the end of a rope. Witnesses are: the Thursdays,\nThe shoulder bones, the loneliness, the rain, and the roads …",
+                "body": "I will die in Paris, on a rainy day,\non some day I can already remember.\nI will die in Paris--and I don’t step aside--\nperhaps on a Thursday, as today is Thursday, in autumn.\n\nIt will be a Thursday, because today, Thursday, setting down\nthese lines, I have put my upper arm bones on\nwrong, and never so much as today have I found myself\nwith all the road ahead of me, alone.\n\nCésar Vallejo is dead. Everyone beat him\nalthough he never does anything to them;\nthey beat him hard with a stick and hard also\n\nwith a rope. These are the witnesses:\nthe Thursdays, and the bones of my arms,\nthe solitude, and the rain, and the roads …",
                 "metadata": {
                     "language": "Spanish",
+                    "source": {
+                        "title": "Poemas Humanas",
+                        "type": "book",
+                        "published": {
+                            "year": "1940"
+                        }
+                    },
                     "translators": [
-                        "Rebecca Seiferle"
+                        "Robert Bly"
                     ],
                     "tags": [
                         "Peruvian"
@@ -213989,6 +214969,13 @@
                 "body": "It was Sunday in the clear ears of my ass,\nOf my Peruvian ass in Peru (pardon the sadness)\nMore than ever today is it eleven in my personal experience\nExperience of a single eye, nailed in the middle of the breast.\nOf a single asininity, nailed in the middle of my breast,\nOf a single hecatomb nailed in the middle of my breast.\n\nSo I see the portraits of the summits of my country\n(Rich in asses, sons of asses, a bowing acquaintance with their parents),\nWhile they turned now already painted with belief.\nHorizontal summits of my griefs.\n\nIn his statue, like a sword,\nVoltaire folds his cape and looks at the pediment,\nBut the sun enters me and frightens a growing number\nOf inorganic bodies from my incisors.\n\nAnd then I dream seventeen\nIn a greenish stone.\nCraggy numeral I have forgotten,\nSound of years in the needle noise of my arm,\nRain and sun in Europe and the way I cough! 1 live!\nHow my hair hurts me perceiving the weekly centuries!\nAnd how my microbe cycle,\nI mean my tremulous, patriotic haircomb.",
                 "metadata": {
                     "language": "Spanish",
+                    "source": {
+                        "title": "Poemas Humanas",
+                        "type": "book",
+                        "published": {
+                            "year": "1940"
+                        }
+                    },
                     "translators": [
                         "H. R. Hays"
                     ],
@@ -214101,6 +215088,13 @@
                 "body": "When the battle was over,\nAnd the fighter was dead, a man came toward him\nAnd said to him: “Do not die; I love you so!”\nBut the corpse, how sad! went on dying.\n\nAnd two came near, and repeated it.\n“Do not leave us! Courage! Return to life!”\nBut the corpse, how sad! went on dying.\n\nTwenty arrived, a hundred, a thousand, five hundred thousand,\nShouting: “So much love, and it can do nothing against death!”\nBut the corpse, how sad! went on dying.\n\nMillions of persons stood around him,\nAll with the same request: “Stay here, brother!”\nBut the corpse, how sad! went on dying.\n\nThen all the men on the earth\nStood around him; the corpse looked at them sadly, deeply moved;\nHe sat up slowly,\nPut his arms around the furst man; started to walk …",
                 "metadata": {
                     "language": "Spanish",
+                    "source": {
+                        "title": "Poemas Humanas",
+                        "type": "book",
+                        "published": {
+                            "year": "1940"
+                        }
+                    },
                     "translators": [
                         "Robert Bly"
                     ],
@@ -214139,6 +215133,13 @@
                 "body": "The miners went forth from the mine,\nMounting its future ruins.\nAttacking its health with gunshots.\nAnd fashioning its function of the mind,\nWith their voices they closed\nThe cavern shaped like a profound symptom.\n\nTheir corrosive powder was something to see!\nTheir oxides of height were something to hear!\nWedges of mouths, anvils of mouths, instruments of mouths.\n(It is tremendous!)\n\nThe order of their tombs.\nTheir plastic persuasions, their choral responses,\nBeat at the foot of igneous misfortunes\nAnd the sad and saddened knew an airy yellowness\nInfused\nWith finished metal, with metalloid small and pale.\n\nSkulled with labour,\nAnd shod with rodent leather,\nShod with infinite paths\nAnd eyes of physical weeping,\nCreators of profundity,\nThey know, in the intermittent sky of the mine lift,\nHow to descend looking upward.\nHow to rise looking downward.\n\nPraise the ancient play of their nature,\nTheir sleepless organs, their rustic saliva!\nLet grass grow, the lichen and the frog, in their adverbs!\nIron plush in their nuptial blankets!\nWomen, through and through, their women!\nMuch joy is theirs!\nThey are something portentous, the miners,\nMounting its future ruins,\nFashioning its function of the mind\nAnd with their voices opening\nThe cavern shaped like a profound symptom!\nPraise their yellow nature,\nTheir magic lantern,\nIts cubes and its rhomboids, its plastic misfortunes.\nAnd their large eyes with six optic nerves\nAnd their children who play in the church\nAnd their silent, childlike fathers!\nSalud, O creators of profundity!",
                 "metadata": {
                     "language": "Spanish",
+                    "source": {
+                        "title": "Poemas Humanas",
+                        "type": "book",
+                        "published": {
+                            "year": "1940"
+                        }
+                    },
                     "translators": [
                         "H. R. Hays"
                     ],
@@ -214325,6 +215326,13 @@
                 "body": "From all of this I am the only one who leaves.\nFrom this bench I go away, from my pants,\nfrom my great situation, from my actions,\nfrom my number split side to side,\nfrom all of this I am the only one who leaves.\n\nFrom the Champs Elysées or as the strange\nalley of the Moon makes a turn,\nmy death goes away, my cradle leaves,\nand, surrounded by people, alone, cut loose,\nmy human resemblance turns around\nand dispatches its shadows one by one.\n\nAnd I move away from everything, since everything\nremains to create my alibi:\nmy shoe, its eyelet, as well as its mud\nand even the bend in the elbow\nof my own buttoned shirt.",
                 "metadata": {
                     "language": "Spanish",
+                    "source": {
+                        "title": "Poemas Humanas",
+                        "type": "book",
+                        "published": {
+                            "year": "1940"
+                        }
+                    },
                     "tags": [
                         "Peruvian"
                     ]
@@ -214377,6 +215385,13 @@
                 "body": "I know there is a person\nWho looks for me day and night inside her hand,\nand coming upon me, every minute, in her shoes.\nDoesn’t she know that the night is buried\nwith spurs behind the kitchen?\n\nI know there is someone composed of my pieces,\nwhom I complete when my waist goes\ngalloping in her precise little stone.\nDoesn’t she know that money once out for her likeness\nnever returns to her trunk?\n\nI know the day,\nbut the sun has escaped from me;\nI know the universal act she performed in her bed\nwith some other woman’s bravery and warm water,\nwhose shallow recurrence is a mine.\nIs it possible this being is so small\neven her own feet walk on her that way?\n\nA cat is the border between us two,\nright there beside her bowl of water.\nI see her on the corners, her dress--once\nan inquiring palm tree--opens and closes …\nWhat can she do but change her style weeping?\n\nBut she does look and look for me. This is a real story!",
                 "metadata": {
                     "language": "Spanish",
+                    "source": {
+                        "title": "Poemas Humanas",
+                        "type": "book",
+                        "published": {
+                            "year": "1940"
+                        }
+                    },
                     "translators": [
                         "Robert Bly"
                     ],
@@ -214597,6 +215612,13 @@
                 "body": "Today I like life much less,\nBut I always enjoy living: I used to say so.\nI almost touched the part of my everything and restrained myself\nWith a pull at my tongue behind every word.\n\nToday I feel my chin as I hold it in\nAnd in these momentary trousers I say to myself:\nSo much life and never!\nSo many years and always my weeks!\nMy ancestors buried with their stone\nAnd their sad last breath that still isn’t over;\nBrothers upright in body, my brothers,\nAnd, finally, my stationary being and in a waistcoat.\n\nI enjoy life enormously\nBut immediately\nWith my beloved death and my coffee\nAnd seeing the leafy chestnuts of Paris\nAnd saying:\nThat is an eye, this is a forehead … and repeating\nSo much life and the tune never fails me!\nSo many years and always, always, always!\n\nI said waistcoat, I said\nEverything, part, anxiety, I said almost to keep from weeping.\nFor it is true that I suffered in the hospital over there\nAnd it is good and bad to have looked\nMy organism up and down.\n\nI always used to enjoy living, even though it were of the belly\nBecause as I have been saying and I repeat it,\nSo much life and never! And so many years,\nAnd always, much always, always, always!",
                 "metadata": {
                     "language": "Spanish",
+                    "source": {
+                        "title": "Poemas Humanas",
+                        "type": "book",
+                        "published": {
+                            "year": "1940"
+                        }
+                    },
                     "translators": [
                         "H. R. Hays"
                     ],
@@ -214624,6 +215646,108 @@
             "trilce-i": {
                 "title": "“Trilce I”",
                 "body": "Who’s making all that racket, and not even letting\nthe islands that linger make a will.\n\nA little more consideration\nas it will be late, early,\nand easier to assay\nthe guano, the simple fecapital ponk\na brackish gannet\ntoasts unintentionally,\nin the insular heart, to each hyaloid\nsquall.\n\nA little more consideration,\nand liquid muck, six in the evening\nOF THE MOST GRANDIOSE B-FLATS\nAnd the peninsula raises up\nfrom behind, muzziled, imperturbable\non the fatal balance line.",
+                "metadata": {
+                    "language": "Spanish",
+                    "source": {
+                        "title": "Trilce",
+                        "type": "book",
+                        "published": {
+                            "year": "1922"
+                        }
+                    },
+                    "tags": [
+                        "Peruvian"
+                    ]
+                }
+            },
+            "trilce-ii": {
+                "title": "“Trilce II”",
+                "body": "Time Time.\n\n    Noon dammed up in night damp.\nBored pump in the cell block bailing out\ntime time time time.\n\nWas Was.\n\n    Cocks song on scratching in vain.\nMouth of the bright day that conjugates\nwas  was  was  was.\n\n*\n\nTomorrow Tomorrow.\n\n    The repose in being still warm.\nThe present thinks keep me for\ntomorrow  tomorrow  tomorrow  tomorrow.\n\nName Name.\n\n    What call all that stands our end on hAIR?\nIt’s called Thesame as suffers\nname name name namE.",
+                "metadata": {
+                    "language": "Spanish",
+                    "source": {
+                        "title": "Trilce",
+                        "type": "book",
+                        "published": {
+                            "year": "1922"
+                        }
+                    },
+                    "tags": [
+                        "Peruvian"
+                    ]
+                }
+            },
+            "trilce-iii": {
+                "title": "“Trilce III”",
+                "body": "The grown-ups\n--when are they coming back?\nBlind Santiago is ringing six o’clock,\nand it’s already pretty dark.\n\n*\n\nMother said she wouldn’t be late.\n\n*\n\n    Aguedita, Nativa, Miguel,\nbe careful going around there, where\nstooped souls in torment\nhave just passed twanging their memories,\ntoward the silent barnyard, and where\nthe hens still getting settled,\nhad been so frightened.\nWe’d better stay right here.\nMother said she wouldn’t be late.\n\n*\n\n    We shouldn’t fret. Let’s keep looking at\nthe boats--mine’s the nicest of all!--\nthat we play with the whole day long,\nwithout fighting, how it should be:\nthey’ve stayed on the well water, ready,\nloaded with candy for tomorrow.\n\n    So let’s wait, obedient and with no\nother choice, for the return, the apologies\nof the grown-ups always in front\nleaving us the little ones at home,\nas if we too couldn’t\n\ngo away.\n\n    Aguedita, Nativa, Miguel?\nI call out, I grope in the dark.\nThey can’t have left me all alone,\nthe only prisoner can’t be me.",
+                "metadata": {
+                    "language": "Spanish",
+                    "source": {
+                        "title": "Trilce",
+                        "type": "book",
+                        "published": {
+                            "year": "1922"
+                        }
+                    },
+                    "tags": [
+                        "Peruvian"
+                    ]
+                }
+            },
+            "trilce-iv": {
+                "title": "“Trilce IV”",
+                "body": "Two carts grind against the hammers\nuntil trifurca lachrymals,\nwhen we never did anything to them.\nTo that other one yes, unloved,\nembitternessed under an exposed shelter\nby the first one, and over tough aljid\nspiritive                   ordeals.\n\n*\n\n*\n*\n*\n\n*\n\n    I stretched out as a third part,\nbut the evening--nuthin to ddo about it\nrings around in my head, furiously\nnot wanting to dose itself into a mother. It is the rings.\nIt is the nuptial tropics already champed.\nThe parting, best of all,\nbreaks into Crucible.\n\n        That one that nothing had\ndiscolored. Side to side to destiny and cries\nand cries. The whole song\nsquared by three silences.\n\nHeat. Ovary. Almost transparency.\nAll has been cried out.    Has been completely waked\nin deep left.",
+                "metadata": {
+                    "language": "Spanish",
+                    "source": {
+                        "title": "Trilce",
+                        "type": "book",
+                        "published": {
+                            "year": "1922"
+                        }
+                    },
+                    "tags": [
+                        "Peruvian"
+                    ]
+                }
+            },
+            "trilce-v": {
+                "title": "“Trilce V”",
+                "body": "Dicotyledonous group. From it petrels\noverture, propensities for trinity,\nfinales that begin, ohs of ayes\nbelieved to be rhinestoned with heterogeneity.\nGroup of two cotyledons!\n\n*\n\n    Let’s see. That one could be without being more.\nLet’s see. Don’t let it transcend outward,\nand think as if it’s not being listened to,\nand chrome and not be seen.\nAnd not glise on the great collapse.\n\n*\n\n    The created voice rebels and doesn’t want\nto be meshwork, or amour.\nLet the newlyweds be newlyweds in eternity.\nSo don’t strike 1, which will echo into infinity.\nAnd don’t strike 0, which will be so still,\nuntil it wakes the 1 and makes it stand.\nAh bicardiac group.",
+                "metadata": {
+                    "language": "Spanish",
+                    "source": {
+                        "title": "Trilce",
+                        "type": "book",
+                        "published": {
+                            "year": "1922"
+                        }
+                    },
+                    "tags": [
+                        "Peruvian"
+                    ]
+                }
+            },
+            "trilce-vi": {
+                "title": "“Trilce VI”",
+                "body": "The suit I wore tomorrow\nmy laundress has not laundered it:\nshe used to launder it in her Otilian veins,\nin the gush of her heart, and today I don’t\nhave to wonder if I left\nthe suit muddy with injustice.\n\n*\n\n    Now that there’s no one who goes to the waters,\nthe linen for feathering\nfledges in my underlining, and all the things\non the nightstand from so much what’ll become of me,\nall don’t feel mine\nat my side.\n\n    They remained her property,\nlustred, sealed with her olive-skinned goodness.\n\n*\n\nAnd if only I knew she’d come back;\nand if only I knew what morning she’d come in\nto hand me my laundered clothes, my own that\nlaundress of the soul. What morning she’d come in\nsatisfied, tawny berry of handiwork, happy\nto prove that yes she does know, that yes she can\n\n*\n\n    HOW COULD SHE NOT!\nblue and iron all the chaoses.",
+                "metadata": {
+                    "language": "Spanish",
+                    "source": {
+                        "title": "Trilce",
+                        "type": "book",
+                        "published": {
+                            "year": "1922"
+                        }
+                    },
+                    "tags": [
+                        "Peruvian"
+                    ]
+                }
+            },
+            "trilce-vii": {
+                "title": "“Trilce VII”",
+                "body": "",
                 "metadata": {
                     "language": "Spanish",
                     "source": {
@@ -214758,6 +215882,13 @@
                 "body": "I emerge from between my teeth, sniffing,\nCrying out, pushing,\nDropping my trousers …\nMy stomach empty, my guts empty,\nPoverty pulls me out from between my own teeth,\nCaught on a sliver by the cuff of my shirt.\n\nA stone to sit on,\nCan’t I even have that now?\nEven that stone, the woman who gives birth stumbles on,\nMother of the lamb, the cause, the root,\nCan’t I even have that now?\nAt least the other one\nThat passed through my soul stooping.\nAt least\nThe limestone, the bad one (humble ocean)\nOr the one not even useful to throw at a man,\nLet me have that one now!\n\nAt least the one you find by chance and only in an insult,\nLet me have that one now!\nAt least the twisted and crowned one in which\nBut once, the tread of clear conscience resounds.\nOr at least that other which is hurled in a suitable curve\nWill fall by itself\nIn declaration of inmost truth.\nLet me have that one now!\n\nA crumb of bread, can’t I even have that now?\nNo more do I have to be what I always have to be.\nBut give me\nA stone on which to sit,\nBut give me\nPlease, a crust of bread on which to sit,\nBut give me,\nIn Spanish,\nSomething, at least to drink, to eat, to live, to rest me,\nAnd afterwards I will go on …\nI discover a strange shape, my shirt is very ragged\nAnd dirty\nAnd still I have nothing,\nThis is horrible.",
                 "metadata": {
                     "language": "Spanish",
+                    "source": {
+                        "title": "Poemas Humanas",
+                        "type": "book",
+                        "published": {
+                            "year": "1940"
+                        }
+                    },
                     "translators": [
                         "H. R. Hays"
                     ],
